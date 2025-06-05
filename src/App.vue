@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="container">
+    1
   </div>
 </template>
 
@@ -8,11 +9,7 @@
 </script>
 
 <style scoped>
-@import 'normalize.css';
-
-#app {
-  /** 让字体可以抗锯齿，字体更清晰 */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container {
+  font-size: 20px;
 }
 </style>

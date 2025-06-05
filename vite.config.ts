@@ -1,5 +1,6 @@
 import path from 'node:path';
 import vue from '@vitejs/plugin-vue';
+import postCssPxToRem from 'postcss-pxtorem';
 import AutoImport from 'unplugin-auto-import/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import Components from 'unplugin-vue-components/vite';
@@ -21,6 +22,18 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve('./src')
+    }
+  },
+  css: {
+    postcss: {
+      plugins: [
+        postCssPxToRem({
+          rootValue: 37.5,
+          propList: ['*'],
+          selectorBlackList: ['.norem'],
+          mediaQuery: true
+        })
+      ]
     }
   },
   server: {
