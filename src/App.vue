@@ -8,8 +8,4 @@
 
 </script>
 
-<style scoped>
-.container {
-  font-size: 20px;
-}
-</style>
+<style scoped></style>
