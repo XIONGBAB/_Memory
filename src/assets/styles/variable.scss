@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Playpen+Sans:wght@100;200;500&family=Shalimar&display=swap');
+
+// Primary color
+$primary-base: #409eff;
+$success-base: #67c23a;
+$warning-base: #e6a23c;
+$error-base: #f56c6c;
+$info-base: #909399;
+
+// text primary
+$text-primary: #303133;
+$text-regular: #606266;
+$text-secondary: #909399;
+$text-placeholder: #c0c4cc;
+$text-color-h: #4d4d4d;
+$text-color-p: #969696;
+
+// padding base
+$padding-base: 30px;
+
+//border color
+$border-color-base: #dcdfe6;
+$border-color-light: #e4e7ed;
+$border-color-lighter: #ebeef5;
+$border-color-extra-light: #f2f6fc;
+$border-color-gray: #c0c4cc;
+$border-color-white: white;
+
+//background color
+$bg-color-base: #ffffff;
+$bg-color-light-gray: #f0f0f3;
+
+// font family 'Roboto'，'Playpen Sans'， "Merienda",'Shalimar','Arial', serif ;
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family-code: 'SFono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$font-family-mer: "Merienda", 'Arial', serif;
+$font-family-rob: 'Roboto', 'Arial', serif;
+$font-family-sha: 'Shalimar', 'Arial', serif;
+
+// font size
+$font-size-base: 14px;
+$font-size-small: 12px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+$font-size-extra-large: 20px;
+$font-size-max: 28px;
+
+// border radius
+$border-radius-base: 4px;
+$border-radius-small: 2px;
+$border-radius-large: 8px;
+$border-radius-circle: 50%;
+$border-radius-bg: 20px;
+
+// border line
+$border-bg-line: rgb(219, 219, 219);
+
+// transition
+$transition-base: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+$transition-all: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// box shadow
+$box-shadow-base: 0 2px 4px 0 rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.04);
+$box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.12);
+
+// mixin
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin ellipsis-more() {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

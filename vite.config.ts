@@ -9,6 +9,7 @@ import VueSetupExtend from 'vite-plugin-vue-setup-extend';
 
 // https://vite.dev/config/
 export default defineConfig({
+
   plugins: [
     vue(),
     VueSetupExtend(),
@@ -21,10 +22,16 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': path.resolve('./src')
+      '@': path.resolve(__dirname, './src')
     }
   },
   css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/assets/styles/variable.scss" as *;`
+      }
+    },
+
     postcss: {
       plugins: [
         postCssPxToRem({
@@ -39,10 +46,10 @@ export default defineConfig({
   server: {
     open: true,
     host: '0.0.0.0',
-    port: 3000, // 端口号
+    port: 8000, // 端口号
     proxy: {
-      '/api': 'http://localhost:8000',
-      '/imgs': 'http://localhost:8000'
+      '/api': 'http://localhost:3000',
+      '/imgs': 'http://localhost:3000'
     }
   }
 });

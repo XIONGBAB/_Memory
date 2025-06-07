@@ -1,11 +1,9 @@
 <template>
-  <div class="container">
-    1
-  </div>
+  <HomePage />
 </template>
 
 <script setup lang="ts">
-
+import HomePage from '@/views/HomePage/index.vue';
 </script>
 
 <style scoped></style>
