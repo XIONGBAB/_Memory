@@ -1,11 +1,16 @@
+@media screen and (min-width:750px) {
+  html {
+    font-size: 75px !important;
+  }
+}
+
 body {
   font-family: $font-family;
   background-color: $bg-color-base;
   font-size: $font-size-base;
 }
 
-@media screen and (min-width:750px) {
-  html {
-    font-size: 75px !important;
-  }
+.container {
+  width: calc(100vw - var(--scrollbar-width));
+  height: calc(100vw - var(--scrollbar-height));
 }

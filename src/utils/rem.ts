@@ -1,5 +1,5 @@
 const MAX_WIDTH = 1920;
-const MOBILE_WIDTH = 375;
+const MOBILE_WIDTH = 750;
 
 function setRem() {
   const clientWidth = Math.min(document.documentElement.clientWidth, MAX_WIDTH);

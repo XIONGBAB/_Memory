@@ -20,14 +20,18 @@
     "@element-plus/icons-vue": "^2.3.1",
     "axios": "^1.9.0",
     "element-plus": "^2.9.11",
+    "nprogress": "^0.2.0",
+    "pinia": "^3.0.3",
     "sanitize.css": "^13.0.0",
     "vant": "^4.9.19",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.3",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@types/nprogress": "^0.2.3",
     "@types/postcss-pxtorem": "^6.1.0",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
@@ -37,7 +41,6 @@
     "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-prettier": "^5.4.1",
     "husky": "^8.0.0",
-    "postcss": "^8.5.4",
     "postcss-html": "^1.8.0",
     "postcss-pxtorem": "^6.1.0",
     "postcss-scss": "^4.0.9",

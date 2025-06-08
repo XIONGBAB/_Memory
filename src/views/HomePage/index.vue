@@ -13,10 +13,14 @@
           </div>
           <div class="home-main-bg-b5-3"></div>
           <div class="home-main-bg-b5-4">
-            <h1>Hi, I'm XIONGBAB.</h1>
-            <p>I am an amateur developer and learning programming is my hobby. At present, I have learned HTML, CSS,
+            <h1 @click="goToHome">
+              Hi, I'm XIONGBAB.
+            </h1>
+            <p>
+              I am an amateur developer and learning programming is my hobby. At present, I have learned HTML, CSS,
               Javascript, and Vue3, but of course, this is still in the learning stage. If you can, you can provide me
-              with some guidance on optimization on the website I have written. Thank you!</p>
+              with some guidance on optimization on the website I have written. Thank you!
+            </p>
           </div>
         </div>
         <div class="home-main-bg-b6"></div>
@@ -40,7 +44,13 @@
 </template>
 
 <script setup lang='ts' name='HomePage'>
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+function goToHome() {
+  router.push('/doc');
+}
 </script>
 
 <style scoped lang='scss'>
@@ -162,7 +172,7 @@
         font-family: $font-family-mer;
         color: $text-color-h;
         margin: 0;
-
+        cursor: pointer;
       }
 
       p {
@@ -244,12 +254,13 @@
   .home-main-dev {
     display: flex;
     align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
 
     i {
       width: 60px;
       border-bottom: 1px solid $border-bg-line;
       margin-right: 20px;
-
     }
   }
 
@@ -259,8 +270,11 @@
     width: 100px;
     margin-left: 20px;
 
+    cursor: pointer;
+
     p {
       margin-left: 10px;
+      padding-bottom: 2px;
     }
   }
 }

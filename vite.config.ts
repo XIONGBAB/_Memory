@@ -31,7 +31,6 @@ export default defineConfig({
         additionalData: `@use "@/assets/styles/variable.scss" as *;`
       }
     },
-
     postcss: {
       plugins: [
         postCssPxToRem({
