@@ -1,0 +1,101 @@
+@use './variable.scss' as *;
+
+// media screen
+@media screen and (min-width:750px) {
+  html {
+    font-size: 75px !important;
+  }
+};
+
+// :root
+:root {
+  --scrollbar-width: 6px;
+  --scrollbar-height: 6px;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $bg-color-base;
+  font-size: $font-size-base;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+}
+
+.scroll-container {
+  width: calc(100vw - var(--scrollbar-width));
+  height: calc(100vw - var(--scrollbar-height));
+}
+
+// mixin
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@mixin ellipsis-more() {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+// scroll
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: auto;
+  min-height: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 204, 204);
+  border-radius:  10px;
+  transition: all 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color: rgb(178, 178, 178);
+}
+
+.scroll {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(204, 204, 204);
+    border-radius: .2667rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: rgb(178, 178, 178);
+  }
+}
+
