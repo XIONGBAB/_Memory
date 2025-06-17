@@ -1,5 +1,7 @@
 <template>
-  <div>data</div>
+  <div>
+    <el-empty description="暂无数据" image-size="260" />
+  </div>
 </template>
 
 <script setup lang='ts' name='DataPage'>

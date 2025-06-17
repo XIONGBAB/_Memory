@@ -1,16 +1,15 @@
 <template>
-  <div class="contentMain">
-    <router-view v-slot="{ Component }">
-      <transition name="fade">
-        <component :is="Component" />
-      </transition>
-    </router-view>
-  </div>
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <script setup lang="ts" name="ContentMain"></script>
 
 <style scoped lang="scss">
+// transition
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s ease-in-out;

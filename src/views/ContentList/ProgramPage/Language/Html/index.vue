@@ -1,7 +1,5 @@
 <template>
-  <card-container>
-    1
-  </card-container>
+  <CardContainer />
 </template>
 
 <script setup lang="ts" name="HtmlPage">
@@ -91,4 +89,6 @@
 // ]);
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>

@@ -54,8 +54,8 @@
 <script setup lang='ts' name='AsideMenu'>
 import { onMounted, ref } from 'vue';
 
-import MenuTree from '@/components/MenuTree/index.vue';
 import useMenuStore from '@/store/modules/menu';
+import MenuTree from '@/views/DocumentPage/MenuTree/index.vue';
 
 const menuStore = useMenuStore();
 
@@ -158,6 +158,7 @@ onMounted(() => {
   flex: 1;
   overflow: hidden;
   border-radius: $bd-radius-base;
+  margin: 10px 0;
   .aside-collapse-menu {
     height: 100%;
     border: none;
@@ -171,7 +172,6 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   color: $text-aside-gray;
-  margin-top: 10px;
   transition: all 0.3s;
   cursor: pointer;
   &:hover {

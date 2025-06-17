@@ -1,8 +1,7 @@
 import type { App, Component } from 'vue';
+import CardContainer from '@/components/CardContainer/index.vue';
 
-import AsideMenu from '@/components/AsideMenu/index.vue';
-
-const components: { [name: string]: Component } = { AsideMenu };
+const components: { [name: string]: Component } = { CardContainer };
 export default {
   install(app: App) {
     Object.keys(components).forEach((key: string) => {
