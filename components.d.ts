@@ -9,14 +9,14 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AsideMenu: typeof import('./src/components/AsideMenu/index.vue')['default']
-    AsidePage: typeof import('./src/components/AsidePage/index.vue')['default']
+    ContentMain: typeof import('./src/components/ContentMain/index.vue')['default']
     ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElLink: typeof import('element-plus/es')['ElLink']
     ElMenu: typeof import('element-plus/es')['ElMenu']
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
-    Layout: typeof import('./src/components/Layout/index.vue')['default']
-    Menu: typeof import('./src/components/menu/index.vue')['default']
     MenuTree: typeof import('./src/components/MenuTree/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

@@ -1,9 +1,12 @@
 <template>
   <div class="aside-menu">
     <div class="aside-menu-top">
-      <img class="aside-menu-top-logo" />
+      <svg
+        t="1750147474497" class="icon aside-menu-top-logo" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="13340" width="36" height="36"
+      ><path d="M896 234.666667V298.666667c0 11.946667-9.386667 21.333333-21.333333 21.333333S853.333333 310.613333 853.333333 298.666667V213.333333h-59.733333c-37.546667 0-68.266667-30.72-68.266667-68.266666V85.333333H170.666667c-23.466667 0-42.666667 19.2-42.666667 42.666667v768c0 23.466667 19.2 42.666667 42.666667 42.666667h533.333333c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H170.666667c-46.933333 0-85.333333-38.4-85.333334-85.333333V128c0-46.933333 38.4-85.333333 85.333334-85.333333h582.826666L896 184.32V234.666667z" fill="" p-id="13341" /><path d="M661.333333 341.333333h-384c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333h384c11.946667 0 21.333333 9.386667 21.333334 21.333333s-9.386667 21.333333-21.333334 21.333333z m-384 85.333334h341.333334c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-341.333334c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z m0 128h170.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-170.666667c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z" fill="" p-id="13342" /><path d="M960 810.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v85.333334h106.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v21.333334c0 11.946667-9.386667 21.333333-21.333333 21.333333s-21.333333-9.386667-21.333333-21.333333v-322.133334c-72.106667-10.24-128-72.106667-128-147.2 0-82.346667 66.986667-149.333333 149.333333-149.333333s149.333333 66.986667 149.333333 149.333333c0 75.093333-55.893333 136.96-128 147.2V810.666667h106.666667z m-26.88-277.333334a101.12 101.12 0 0 0-101.546667-101.12c-55.893333 0-101.546667 45.226667-101.546666 101.12s45.226667 101.546667 101.546666 101.546667a101.802667 101.802667 0 0 0 101.546667-101.546667z" fill="#CC8752" p-id="13343" /></svg>
       <div class="aside-menu-top-title">
-        <h2>XIONGBAB</h2>
+        <h2>XIONGBAB丶</h2>
         <p>A rookie who can write code</p>
       </div>
     </div>
@@ -37,8 +40,8 @@
       </el-autocomplete>
     </div>
     <div class="aside-collapse scroll">
-      <el-menu default-active="/data" unique-opened class="el-menu-vertical-demo" :collapse="isCollapse">
-        <MenuTree :menu-list="menuStore.menuRoutes" />
+      <el-menu default-active="/data" unique-opened class="el-menu-vertical-demo aside-collapse-menu">
+        <MenuTree :menuList="menuStore.menuRoutes" />
       </el-menu>
     </div>
     <div class="aside-footer">
@@ -53,6 +56,8 @@ import { onMounted, ref } from 'vue';
 
 import MenuTree from '@/components/MenuTree/index.vue';
 import useMenuStore from '@/store/modules/menu';
+
+const menuStore = useMenuStore();
 
 // #region search start
 const state = ref('');
@@ -123,13 +128,10 @@ onMounted(() => {
   justify-content: center;
   width: 100%;
   .aside-menu-top-logo {
-    width: 40px;
-    min-width: 40px;
-    min-height: 40px;
+    width: 36px;
+    min-width: 20px;
+    min-height: 20px;
     height: 40px;
-    border-radius: 50%;
-    background: url('@/assets/images/avatar.png') no-repeat center;
-    background-size: cover;
     margin-right: 10px;
   }
   .aside-menu-top-title {
@@ -147,10 +149,19 @@ onMounted(() => {
       font-family: $font-family-ari;
     }
   }
-
-  .aside-search {
-    width: 100%;
-    flex: 0 0 40px;
+}
+.aside-search {
+  width: 100%;
+  flex: 0 0 40px;
+}
+.aside-collapse {
+  flex: 1;
+  overflow: hidden;
+  border-radius: $bd-radius-base;
+  .aside-collapse-menu {
+    height: 100%;
+    border: none;
+    overflow-y: auto;
   }
 }
 .aside-footer {
@@ -159,8 +170,14 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: $bd-test;
   color: $text-aside-gray;
+  margin-top: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    background: #e6e6e6;
+    border: $bd-radius-base;
+  }
   .el-icon {
     font-size: 18px;
   }
@@ -170,10 +187,9 @@ onMounted(() => {
     font-size: 14px;
   }
 }
-
 // #region search start
 :deep(.el-autocomplete) {
-  --el-border-radius-base: 0.48rem;
+  --el-border-radius-base: 18px;
 }
 .circular {
   display: inline;

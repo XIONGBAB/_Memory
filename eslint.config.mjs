@@ -1,4 +1,4 @@
-import antfu from '@antfu/eslint-config'
+import antfu from '@antfu/eslint-config';
 
 export default antfu(
   {
@@ -18,46 +18,47 @@ export default antfu(
       '**/node_modules/**',
       'pnpm-lock.yaml',
       '**/pnpm-lock.yaml/**',
-      '**/*.d.ts',
+      '**/*.d.ts'
     ],
     formatters: { css: true, html: true },
     vue: true,
     typescript: true,
     stylistic: {
-      indent: 2, 
-      quotes: 'single', 
-      semi: true, 
+      indent: 2,
+      quotes: 'single',
+      semi: true
     },
 
     rules: {
-      'no-unused-vars': 'error', 
-      'no-undef': 'off', 
-      'no-console': 'warn', 
-      'antfu/if-newline': 'off', 
-      'style/comma-dangle': ['error', 'never'], 
-      'vue/max-attributes-per-line': ['error', { 
-        singleline: { 
-          max: 5,
+      'no-unused-vars': 'error',
+      'no-undef': 'off',
+      'no-console': 'warn',
+      'antfu/if-newline': 'off',
+      'style/comma-dangle': ['error', 'never'],
+      'vue/attribute-hyphenation': 'off',
+      'vue/max-attributes-per-line': ['error', {
+        singleline: {
+          max: 5
         },
-        multiline: { 
-          max: 5,
-        },
+        multiline: {
+          max: 5
+        }
       }],
-      'vue/block-order': ['error', { 
-        order: ['docs', 'template', 'script', 'style'],
+      'vue/block-order': ['error', {
+        order: ['docs', 'template', 'script', 'style']
       }],
       'vue/html-self-closing': ['error', {
         html: {
           normal: 'never',
           void: 'always',
-          component: 'always',
+          component: 'always'
         },
         svg: 'always',
-        math: 'always',
+        math: 'always'
       }],
       'vue/singleline-html-element-content-newline': ['error', {
-        externalIgnores: ['div,span'],
-      }],
-    },
-  },
-)
+        externalIgnores: ['div,span']
+      }]
+    }
+  }
+);
