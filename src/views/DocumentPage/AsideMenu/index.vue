@@ -43,7 +43,7 @@
       </el-autocomplete>
     </div>
     <div class="aside-collapse scroll">
-      <el-menu default-active="/data" unique-opened :collapse="isCollapse" class="el-menu-vertical-demo aside-collapse-menu">
+      <el-menu default-active="/frames" unique-opened :collapse="isCollapse" class="el-menu-vertical-demo aside-collapse-menu">
         <MenuTree :menuList="menuStore.menuRoutes" />
       </el-menu>
     </div>

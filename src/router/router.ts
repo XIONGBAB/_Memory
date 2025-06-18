@@ -30,25 +30,29 @@ export const constantRoute: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/doc',
-    component: () => import('@/views/DocumentPage/index.vue'),
-    name: 'document',
-    redirect: '/data',
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
+    name: 'Any',
     meta: {
-      title: 'Layout',
-      icon: 'Plus'
-    },
+      title: '任意路由',
+      hidden: true
+    }
+  },
+  {
+    path: '/data',
+    component: () => import('@/views/DocumentPage/index.vue'),
     children: [
       {
         path: '/data',
+        name: 'Data',
         component: () => import('@/views/ContentList/DataPage/index.vue'),
-        name: 'data',
         meta: {
           title: 'Data',
           icon: 'Coin'
         }
       }
     ]
+
   },
   {
     path: '/program',
@@ -131,21 +135,19 @@ export const constantRoute: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/classify',
+    path: '/link',
     component: () => import('@/views/DocumentPage/index.vue'),
-    name: 'classify',
-    meta: {
-      title: 'Classify',
-      icon: 'Star'
-    }
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    redirect: '/404',
-    name: 'Any',
-    meta: {
-      title: '任意路由',
-      hidden: true
-    }
+    children: [
+      {
+        path: '/link',
+        name: 'Link',
+        component: () => import('@/views/ContentList/LinkPage/index.vue'),
+        meta: {
+          title: 'Link',
+          icon: 'Link'
+        }
+      }
+    ]
   }
+
 ];

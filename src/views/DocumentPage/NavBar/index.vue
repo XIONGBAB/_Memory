@@ -12,9 +12,24 @@
       </div>
     </div>
     <div class="dov-nav-information">
-      <el-avatar class="user-logo" src="https://sns-avatar-qc.xhscdn.com/avatar/64689321979140ca8214df1b.jpg?imageView2/2/w/540/format/webp|imageMogr2/strip2" @error="errorHandler">
-        <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png" />
-      </el-avatar>
+      <el-popover class="box-item" content="Error" placement="bottom">
+        <template #reference>
+          <el-avatar class="user-logo" src="https://sns-avatar-qc.xhscdn.com/avatar/64689321979140ca8214df1b.jpg?imageView2/2/w/540/format/webp|imageMogr2/strip2" @error="errorHandler">
+            <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png" />
+          </el-avatar>
+        </template>
+        <template #default>
+          <div class="user-name">
+            个人主页
+          </div>
+          <div class="user-name">
+            帐号设置
+          </div>
+          <div class="user-name">
+            退出登录
+          </div>
+        </template>
+      </el-popover>
       <div class="user-name">
         Admin
       </div>

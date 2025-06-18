@@ -3,7 +3,7 @@
     <div class="doc-nav">
       <NavBar />
     </div>
-    <div class="doc-layout">
+    <div class="doc-layout" :class="{ 'doc-layout-active': isCollapseWidth }">
       <div class="doc-aside">
         <AsideMenu @send-is-collapse="getIsCollapse" />
       </div>
@@ -22,15 +22,10 @@ import AsideMenu from '@/views/DocumentPage/AsideMenu/index.vue';
 import ContentMain from '@/views/DocumentPage/ContentMain/index.vue';
 import NavBar from '@/views/DocumentPage/NavBar/index.vue';
 
-const isCollapseWidth = ref<string>();
+const isCollapseWidth = ref();
 
 function getIsCollapse(data: boolean) {
-  if (data) {
-    isCollapseWidth.value = '240px';
-  }
-  else {
-    isCollapseWidth.value = '84px';
-  }
+  isCollapseWidth.value = !data;
 }
 </script>
 
@@ -40,11 +35,15 @@ function getIsCollapse(data: boolean) {
   display: flex;
   flex-direction: column;
 }
+
+.container .doc-layout-active {
+  grid-template-columns: 84px 1fr;
+}
 .doc-layout {
   flex: 1;
   display: grid;
   grid-template-rows: repeat(24, 1fr);
-  grid-template-columns: v-bind(isCollapseWidth) 1fr;
+  grid-template-columns: 240px 1fr;
   overflow: hidden;
   transition: $transition-all;
   .doc-aside {
