@@ -1,5 +1,5 @@
 <template>
-  <div class="aside-menu">
+  <div class="aside-menu" :class="{ 'aside-menu-active': isCollapse }">
     <div class="aside-menu-top">
       <svg
         t="1750147474497" class="icon aside-menu-top-logo" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +8,9 @@
       <div class="aside-menu-top-title">
         <h2>XIONGBAB丶</h2>
         <p>A rookie who can write code</p>
+      </div>
+      <div class="nav-toggle" :class="{ 'nav-toggle-active': isCollapse }" @click="changeMenu">
+        <el-icon><ArrowRight /></el-icon>
       </div>
     </div>
     <div class="aside-search">
@@ -40,7 +43,7 @@
       </el-autocomplete>
     </div>
     <div class="aside-collapse scroll">
-      <el-menu default-active="/data" unique-opened class="el-menu-vertical-demo aside-collapse-menu">
+      <el-menu default-active="/data" unique-opened :collapse="isCollapse" class="el-menu-vertical-demo aside-collapse-menu">
         <MenuTree :menuList="menuStore.menuRoutes" />
       </el-menu>
     </div>
@@ -53,20 +56,28 @@
 
 <script setup lang='ts' name='AsideMenu'>
 import { onMounted, ref } from 'vue';
-
 import useMenuStore from '@/store/modules/menu';
-import MenuTree from '@/views/DocumentPage/MenuTree/index.vue';
+import MenuTree from '@/views/DocumentPage/AsideMenu/MenuTree/index.vue';
+
+// #region btn click change width start
+const $emit = defineEmits(['sendIsCollapse']);
 
 const menuStore = useMenuStore();
 
+const isCollapse = ref(false);
+function changeMenu() {
+  $emit('sendIsCollapse', isCollapse.value);
+  isCollapse.value = !isCollapse.value;
+}
+
+// #endregion btn click change width end
+
 // #region search start
 const state = ref('');
-
 interface LinkItem {
   value: string;
   link: string;
 }
-
 const links = ref<LinkItem[]>([]);
 function loadAll() {
   return [
@@ -79,7 +90,6 @@ function querySearchAsync(queryString: string, cb: (arg: any) => void) {
   const results = queryString
     ? links.value.filter(createFilter(queryString))
     : links.value;
-
   clearTimeout(timeout);
   timeout = setTimeout(() => {
     cb(results);
@@ -92,11 +102,9 @@ function createFilter(queryString: string) {
     );
   };
 }
-
 function handleSelect(item: Record<string, any>) {
   console.log(item);
 }
-
 // #endregion search end
 
 onMounted(() => {
@@ -112,6 +120,7 @@ onMounted(() => {
   left: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 240px;
   height: 100vh;
   padding: 10px;
@@ -119,8 +128,36 @@ onMounted(() => {
   border-right: 1px solid $bd-color-light;
   box-shadow: 2px 0 5px rgba(145, 145, 145, 0.12);
   z-index: 1;
+  transition: width 0.35s ease;
+}
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 219px;
+  min-height: auto;
+}
+.aside-menu-active {
+  width: 84px;
+  .aside-menu-top {
+    .aside-menu-top-title {
+      opacity: 0;
+      width: 0;
+    }
+  }
+  .aside-footer {
+    span {
+      display: none;
+    }
+  }
+  :deep(.el-input__prefix-inner) {
+    padding-left: 10px;
+    transition: padding $transition-base;
+  }
+  :deep(.el-input__inner) {
+    padding-left: 8px;
+    transition: padding $transition-base;
+  }
 }
 .aside-menu-top {
+  position: relative;
   width: 100%;
   flex: 0 0 80px;
   display: flex;
@@ -138,6 +175,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     @include ellipsis();
+    transition: all 0.3s ease-in-out;
     h2 {
       margin: 0;
       font-family: $font-family-pla;
@@ -149,10 +187,31 @@ onMounted(() => {
       font-family: $font-family-ari;
     }
   }
+  .nav-toggle {
+    position: absolute;
+    right: -24px;
+    top: 70px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(245, 245, 245);
+    border-radius: 50%;
+    border: 1px solid rgb(226, 226, 226);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .nav-toggle-active {
+    transform: rotate(180deg);
+  }
 }
+
 .aside-search {
   width: 100%;
   flex: 0 0 40px;
+  margin-top: 20px;
+  transition: $transition-all;
 }
 .aside-collapse {
   flex: 1;
@@ -182,9 +241,10 @@ onMounted(() => {
     font-size: 18px;
   }
   span {
-    margin-left: 10px;
+    white-space: nowrap;
     color: $text-aside-gray;
     font-size: 14px;
+    padding: 0 0 3px 10px;
   }
 }
 // #region search start
