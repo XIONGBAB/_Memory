@@ -1,5 +1,5 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import { constantRoute } from './router';
+import { createRouter, createWebHashHistory } from "vue-router";
+import { constantRoute } from "./router";
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -8,9 +8,9 @@ const router = createRouter({
     // 滚动行为
     return {
       left: 0,
-      top: 0
+      top: 0,
     };
-  }
+  },
 });
 
 // 路由导航守卫

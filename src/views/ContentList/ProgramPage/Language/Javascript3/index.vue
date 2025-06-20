@@ -2,15 +2,28 @@
   <card-container title="javascript" :data="data">
     <template #svg>
       <svg
-        width="40" height="40" t="1699148574627" class="icon" viewBox="0 0 1024 1024"
-        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8149"
+        width="40"
+        height="40"
+        t="1699148574627"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="8149"
       >
         <path d="M64 64h896v896H64z" fill="#F5DE19" p-id="8150" />
-        <path d="M665.888 764a91.712 91.712 0 0 0 83.2 51.2c34.88 0 57.184-17.44 57.184-41.6 0-28.8-22.912-39.104-61.312-55.904l-21.056-9.024c-60.8-25.888-101.12-58.304-101.12-126.848 0-63.136 48-111.232 123.296-111.232a124.448 124.448 0 0 1 119.744 67.424L800 580.096A57.248 57.248 0 0 0 745.952 544a36.64 36.64 0 0 0-40.288 36.096c0 25.248 15.648 35.488 51.776 51.2l21.056 9.024c71.552 30.688 112 61.952 112 132.256 0 75.808-59.552 117.344-139.52 117.344a161.76 161.76 0 0 1-153.44-86.112z m-297.44 7.296c13.216 23.456 25.248 43.296 54.176 43.296 27.648 0 45.12-10.816 45.12-52.896v-286.304h84.192v287.424c0 87.168-51.2 126.848-125.728 126.848a130.72 130.72 0 0 1-126.304-76.8z" fill="" p-id="8151" />
+        <path
+          d="M665.888 764a91.712 91.712 0 0 0 83.2 51.2c34.88 0 57.184-17.44 57.184-41.6 0-28.8-22.912-39.104-61.312-55.904l-21.056-9.024c-60.8-25.888-101.12-58.304-101.12-126.848 0-63.136 48-111.232 123.296-111.232a124.448 124.448 0 0 1 119.744 67.424L800 580.096A57.248 57.248 0 0 0 745.952 544a36.64 36.64 0 0 0-40.288 36.096c0 25.248 15.648 35.488 51.776 51.2l21.056 9.024c71.552 30.688 112 61.952 112 132.256 0 75.808-59.552 117.344-139.52 117.344a161.76 161.76 0 0 1-153.44-86.112z m-297.44 7.296c13.216 23.456 25.248 43.296 54.176 43.296 27.648 0 45.12-10.816 45.12-52.896v-286.304h84.192v287.424c0 87.168-51.2 126.848-125.728 126.848a130.72 130.72 0 0 1-126.304-76.8z"
+          fill=""
+          p-id="8151"
+        />
       </svg>
     </template>
     <template #describe>
-      <p>JavaScript最初是由Netscape的工程师布兰登·艾奇（Brendan Eich）在1995年设计的，最初命名为LiveScript，但为了利用当时流行的Java语言的市场效应，它被改名为JavaScript。</p>
+      <p>
+        JavaScript最初是由Netscape的工程师布兰登·艾奇（Brendan
+        Eich）在1995年设计的，最初命名为LiveScript，但为了利用当时流行的Java语言的市场效应，它被改名为JavaScript。
+      </p>
     </template>
     <template #content>
       <el-card id="part1" shadow="hover">
@@ -19,7 +32,8 @@
           <p>网页特效 （PC端网页特效 元素偏移量offset系列）</p>
           <ol>
             <li>
-              offset概述： offset翻译过来就是偏移量，我们使用offset系列相关属性可以动态的得到该元素的位置（偏移）、大小等。
+              offset概述：
+              offset翻译过来就是偏移量，我们使用offset系列相关属性可以动态的得到该元素的位置（偏移）、大小等。
               <ul>
                 <li>获得元素距离带有定位父元素的位置</li>
                 <li>获得元素自身的大小（宽度高度）</li>
@@ -229,7 +243,8 @@
           <p>元素可视区 client</p>
           <ul>
             <li>
-              client翻译过来就是客户端，我们使用client系列的相关属性来获取元素可视区的相关信息。通过client系列的相关属性 可以动态的得到该元素的边框大小、元素小等。
+              client翻译过来就是客户端，我们使用client系列的相关属性来获取元素可视区的相关信息。通过client系列的相关属性
+              可以动态的得到该元素的边框大小、元素小等。
               <pre><code class="language-js line-numbers">  var div = document.querySelector(div);
 
   div.clientTop     /* 返回元素上边框的大小 */
@@ -242,7 +257,10 @@
           </ul>
           <p>淘宝flexible.js (源码分析)</p>
           <ul>
-            <li>立即执行函数 ( function () {} )() 或者 ( function() {} () ) //第二个小括号可以看做调用函数，可以传值</li>
+            <li>
+              立即执行函数 ( function () {} )() 或者 ( function() {} () )
+              //第二个小括号可以看做调用函数，可以传值
+            </li>
             <li>
               主要作用：创建一个独立的作用域 , 不需要调用，立马能够自己执行
               <pre><code class="language-js line-numbers">  (function(a, b) {
@@ -276,9 +294,15 @@
                 <li>前进后退按钮</li>
               </ol>
             </li>
-            <li>但是火狐中，有个特点，有个往返缓存”，这个缓存中不仅保存着页面数据，还保存了DOM和JavaScript的状态； 实际上是将整个页面都保存在了内存里。 所以此时后退按钮不能刷新页面。</li>
             <li>
-              此时可以使用pageshow事件来触发。，这个事件在页面显示时间触发，无论页面是否来自缓存。在重新加载页面中， pageshow会在load事件触发后触发；根据事件对象中的persisted来判断是否是缓存中的页面触发的pageshow事件， 注意这个事件给window添加
+              但是火狐中，有个特点，有个往返缓存”，这个缓存中不仅保存着页面数据，还保存了DOM和JavaScript的状态；
+              实际上是将整个页面都保存在了内存里。
+              所以此时后退按钮不能刷新页面。
+            </li>
+            <li>
+              此时可以使用pageshow事件来触发。，这个事件在页面显示时间触发，无论页面是否来自缓存。在重新加载页面中，
+              pageshow会在load事件触发后触发；根据事件对象中的persisted来判断是否是缓存中的页面触发的pageshow事件，
+              注意这个事件给window添加
               <pre><code class="language-js line-numbers">  (function flexible(window, document) {
     var docEl = document.documentElement
         // dpr 物理像素比，pc端是1 ，移动端是2
@@ -331,7 +355,8 @@
           <p>元素scroll</p>
           <ul>
             <li>
-              scroll 翻译过来就是滚动的，我们使用scroll系列的相关属性可以动态的得到该元素的大小、滚动距离等。
+              scroll
+              翻译过来就是滚动的，我们使用scroll系列的相关属性可以动态的得到该元素的大小、滚动距离等。
               <pre><code class="language-js line-numbers">  div.scrollTop            /* 返回被卷去的上侧距离，返回数值不带单位 */
   div.scrollLeft           /* 返回被卷去的左侧距离，返回数值不带单位 */
   div.scrollWidth          /* 返回自身实际的宽度，不含边框，返回数值不带单位 */
@@ -343,10 +368,18 @@
                 <li>原先侧边栏是绝对定位</li>
                 <li>当页面滚动到一定位置，侧边栏改为固定定位</li>
                 <li>页面继续滚动，会让返回顶部显示出来</li>
-                <li>需要用到页面滚动事件scroll 因为是页面滚动，所以事件源是document</li>
+                <li>
+                  需要用到页面滚动事件scroll
+                  因为是页面滚动，所以事件源是document
+                </li>
                 <li>滚动到某个位置，就是判断页面被卷去的上部值。</li>
-                <li>页面被卷去的头部：可以通过window.pageYOffset获得如果是被卷去的左侧 window.pageXOffset</li>
-                <li>注意，元素被卷去的头部是element.scrollTop，如果是页面被卷去的头部则是window.pageYoffset</li>
+                <li>
+                  页面被卷去的头部：可以通过window.pageYOffset获得如果是被卷去的左侧
+                  window.pageXOffset
+                </li>
+                <li>
+                  注意，元素被卷去的头部是element.scrollTop，如果是页面被卷去的头部则是window.pageYoffset
+                </li>
               </ol>
               <pre><code class="language-html line-numbers">  &lt;div class="slider-bar"&gt;
     &lt;span class="goBack"&gt;返回顶部&lt;/span&gt;
@@ -406,10 +439,19 @@
   }
               </code></pre>
                 </li>
-                <li>scrollHeight - scrollTop == clientHeight // 满足这个条件，说明垂直滚动条已经拉到底了</li>
+                <li>
+                  scrollHeight - scrollTop == clientHeight //
+                  满足这个条件，说明垂直滚动条已经拉到底了
+                </li>
                 <li>滚动事件 onscroll // 会在滚动条滚动的时候触发</li>
-                <li>Chrome认为浏览器的滚动条属于body的，可以通过 document.body.scrollTop来获取</li>
-                <li>而火狐等浏览器认为浏览器的滚动条属于html的，可以通过document.documentElement.scrollTop 来获取</li>
+                <li>
+                  Chrome认为浏览器的滚动条属于body的，可以通过
+                  document.body.scrollTop来获取
+                </li>
+                <li>
+                  而火狐等浏览器认为浏览器的滚动条属于html的，可以通过document.documentElement.scrollTop
+                  来获取
+                </li>
                 <li>
                   处理兼容性 ：
                   <pre><code class="language-js line-numbers">  var a = document.body.scrollTop || document.documentElement.scrollTop </code></pre>
@@ -520,7 +562,10 @@
             <li>
               动画函数给不同元素记录不同定时器
               <ol>
-                <li>如果多个元素都使用这个动画函数，每次都要var声明定时器。我们可以给不同的元素使用不同的定时器 （自己专门用自己的定时器）。</li>
+                <li>
+                  如果多个元素都使用这个动画函数，每次都要var声明定时器。我们可以给不同的元素使用不同的定时器
+                  （自己专门用自己的定时器）。
+                </li>
                 <li>
                   核心原理：利用JS是一门动态语言，可以很方便的给当前对象添加属性。
                   <pre><code class="language-html line-numbers">  &lt;div&gt;&lt;/div&gt;
@@ -575,7 +620,8 @@
               </ol>
             </li>
             <li>
-              缓动动画： 缓动动画就是让元素运动速度有所变化，最常见的是让速度慢慢停下来
+              缓动动画：
+              缓动动画就是让元素运动速度有所变化，最常见的是让速度慢慢停下来
               <pre><code class="language-html line-numbers"> /* 匀速动画：
       匀速动画就是 盒子当前的位置 + 固定的值 10
     缓动动画：
@@ -669,7 +715,10 @@
             <li>
               动画函数封装到单独JS 文件里面
               <ol>
-                <li>因为以后经常使用这个动画函数，可以单独封装到一个 js 文件里面，使用的时候引用这个 js 文件即可。</li>
+                <li>
+                  因为以后经常使用这个动画函数，可以单独封装到一个 js
+                  文件里面，使用的时候引用这个 js 文件即可。
+                </li>
                 <li>新建一个 animate.js</li>
               </ol>
               <pre><code class="language-js line-numbers">  function animate(obj, target, callback) {
@@ -735,26 +784,41 @@
           </ul>
           <p>网页轮播图</p>
           <ol>
-            <li>轮播图也称为焦点图，是网页中比较常见的网页特效。盒子已经固定大小了，如果此时加浮动， 会没有效果，需要手动修改ul 的宽度 %</li>
+            <li>
+              轮播图也称为焦点图，是网页中比较常见的网页特效。盒子已经固定大小了，如果此时加浮动，
+              会没有效果，需要手动修改ul 的宽度 %
+            </li>
             <li>
               框架
               <ul>
-                <li>大盒子装着轮播图，里面有左箭头和右箭头，底下定位三个小圆点</li>
-                <li>放个ul ，ul 下装了三个li ，ul宽度需要超过能装下li 的宽度，才能浮动起来</li>
+                <li>
+                  大盒子装着轮播图，里面有左箭头和右箭头，底下定位三个小圆点
+                </li>
+                <li>
+                  放个ul ，ul 下装了三个li ，ul宽度需要超过能装下li
+                  的宽度，才能浮动起来
+                </li>
               </ul>
             </li>
             <li>
               需求
               <ul>
                 <li>鼠标放上 才会显示左右箭头，鼠标离开，影藏左右箭头</li>
-                <li>鼠标点击，切换（移动）图片 ，小圆点也要进行切换，并且点击小圆点可以实现切换效果</li>
-                <li>鼠标离开，轮播图会自动播放，鼠标经过，停止轮播，切换手动</li>
+                <li>
+                  鼠标点击，切换（移动）图片
+                  ，小圆点也要进行切换，并且点击小圆点可以实现切换效果
+                </li>
+                <li>
+                  鼠标离开，轮播图会自动播放，鼠标经过，停止轮播，切换手动
+                </li>
               </ul>
             </li>
             <li>
               分析
               <ul>
-                <li>因为js较多，我们单独新建文件夹，再新建文件，引入页面中。</li>
+                <li>
+                  因为js较多，我们单独新建文件夹，再新建文件，引入页面中。
+                </li>
                 <li>
                   此时需要添加 load 事件。
                   <pre><code class="language-js line-numbers">  window.addEventListener('load', function() {})</code></pre>
@@ -762,7 +826,10 @@
                 <li>左右箭头 display显示影藏</li>
                 <li>动态生成小圆圈</li>
                 <li>核心思路：小圆圈的个数要跟图片张数一致</li>
-                <li>所以首先先得到ul 里面图片的张数（图片放入li 里面，所以就是 li 的个数）</li>
+                <li>
+                  所以首先先得到ul 里面图片的张数（图片放入li 里面，所以就是 li
+                  的个数）
+                </li>
                 <li>利用循环动态生成小圆圈（这个小圆圈要放入ol里面）</li>
                 <li>创建节点 createElement（' li '）</li>
                 <li>插入节点ol.appendChild（ li ）</li>
@@ -771,23 +838,42 @@
                 <li>点击当前小圆圈，就添加current类</li>
                 <li>其余的小圆圈就移除这个current类</li>
                 <li>点击小圆圈滚动图片</li>
-                <li>此时用到animate动画函数，将s文件引入（注意，因为index.js依赖animate.js所以，animatejs要写到index.js上面）</li>
+                <li>
+                  此时用到animate动画函数，将s文件引入（注意，因为index.js依赖animate.js所以，animatejs要写到index.js上面）
+                </li>
                 <li>使用动画函数的前提，该元素必须有定位</li>
                 <li>注意是u山移动而不是小li</li>
-                <li>滚动图片的核心算法：点击某个小圆圈，就让图片滚动 小圆圈的索引号 x 图片的宽度 = ul 移动负值距离</li>
-                <li>此时需要知道小圆圈的索引号，我们可以在生成小圆圈的时候，给它设置一个自定义属性，点击的时候获取这个自定义属</li>
+                <li>
+                  滚动图片的核心算法：点击某个小圆圈，就让图片滚动
+                  小圆圈的索引号 x 图片的宽度 = ul 移动负值距离
+                </li>
+                <li>
+                  此时需要知道小圆圈的索引号，我们可以在生成小圆圈的时候，给它设置一个自定义属性，点击的时候获取这个自定义属
+                </li>
                 <li>点击右侧按钮一次，就让图片滚动一张。</li>
-                <li>声明一个变量num，点击一次，自增1，让这个变量乘以图片宽度，就是ul的滚动距离。</li>
-                <li>因为li 加了定位，所以脱离文档流，左右箭头层级需要提高（z-index）</li>
+                <li>
+                  声明一个变量num，点击一次，自增1，让这个变量乘以图片宽度，就是ul的滚动距离。
+                </li>
+                <li>
+                  因为li
+                  加了定位，所以脱离文档流，左右箭头层级需要提高（z-index）
+                </li>
                 <li>图片无缝滚动原理</li>
                 <li>把ul第一个li复制一份，放到ul的最后面</li>
-                <li>当图片滚动到克隆的最后一张图片时，让u山快速的、不做动画的跳到最左侧：left为0</li>
+                <li>
+                  当图片滚动到克隆的最后一张图片时，让u山快速的、不做动画的跳到最左侧：left为0
+                </li>
                 <li>同时num赋值为0，可以从新开始滚动图片了</li>
                 <li>代码进行 克隆第一张图片</li>
-                <li>克隆ul第一个li cloneNode（）加true深克隆复制里面的子节点false浅克隆</li>
+                <li>
+                  克隆ul第一个li
+                  cloneNode（）加true深克隆复制里面的子节点false浅克隆
+                </li>
                 <li>添加到u山最后面appendChild</li>
                 <li>点击右侧按钮，小圆圈跟随变化</li>
-                <li>最简单的做法是再声明一个变量circle，每次点击自增1，注意，左侧按钮也需要这个变量，因此要声明全局变量。</li>
+                <li>
+                  最简单的做法是再声明一个变量circle，每次点击自增1，注意，左侧按钮也需要这个变量，因此要声明全局变量。
+                </li>
                 <li>自动播放功能</li>
                 <li>添加一个定时器</li>
                 <li>自动播放轮播图，实际就类似于点击了右侧按钮</li>
@@ -1007,8 +1093,12 @@
           <p>节流阀</p>
           <ul>
             <li>防止轮播图按钮连续点击造成播放过快</li>
-            <li>节流阀目的：当上一个函数动画内容执行完毕，再去执行下一个函数动画，让事件无法连续触发。</li>
-            <li>核心实现思路：利用回调函数，添加一个变量来控制，锁住函数和解锁函数。</li>
+            <li>
+              节流阀目的：当上一个函数动画内容执行完毕，再去执行下一个函数动画，让事件无法连续触发。
+            </li>
+            <li>
+              核心实现思路：利用回调函数，添加一个变量来控制，锁住函数和解锁函数。
+            </li>
             <li>
               开始设置一个变量var flag=true；
               <ol>
@@ -1019,11 +1109,18 @@
             <li>
               返回顶部
               <ol>
-                <li>Window. scroll (x , y) 要到达网页的坐标， X Y的值不跟单位</li>
+                <li>
+                  Window. scroll (x , y) 要到达网页的坐标， X Y的值不跟单位
+                </li>
                 <li>带有动画的返回顶部</li>
                 <li>此时可以继续使用我们封装的动画函数</li>
-                <li>只需要把所有的left相关的值改为跟页面垂直滚动距离相关就可以了</li>
-                <li>页面滚动了多少，可以通过window.pagerOffset得到 ，而不是 offsetTop</li>
+                <li>
+                  只需要把所有的left相关的值改为跟页面垂直滚动距离相关就可以了
+                </li>
+                <li>
+                  页面滚动了多少，可以通过window.pagerOffset得到 ，而不是
+                  offsetTop
+                </li>
                 <li>最后是页面滚动，使用window.scroll（x .y）</li>
               </ol>
             </li>
@@ -1090,9 +1187,13 @@
           </ul>
           <p>移动端网页特效</p>
           <ul>
-            <li>移动端浏览器兼容性较好，我们不需要考虑以前JS的兼容性问题，可以放心的使用原生JS书写效果， 但是移动端也有自己独特的地方。比如触屏事件touch（也称触摸事件），Android和IOS都有。</li>
             <li>
-              touch对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。角触屏事件可响应用户手指 （或角触控笔）对屏幕或者触控板操作。
+              移动端浏览器兼容性较好，我们不需要考虑以前JS的兼容性问题，可以放心的使用原生JS书写效果，
+              但是移动端也有自己独特的地方。比如触屏事件touch（也称触摸事件），Android和IOS都有。
+            </li>
+            <li>
+              touch对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。角触屏事件可响应用户手指
+              （或角触控笔）对屏幕或者触控板操作。
               <pre><code class="language-js line-numbers">  // touchstart           手指触摸到一个DOM元素时触发
   // touchmove            手指在一个DOM元素上滑动时触发
   // touchend             手指从一个DOM元素上移开时触发
@@ -1125,9 +1226,16 @@
               移动端拖动元素
               <ol>
                 <li>touchstart、touchmove、touchend可以实现拖动元素</li>
-                <li>但是拖动元素需要当前手指的坐标值我们可以使用 targetTouches[0]里面的pageX和pageY</li>
-                <li>移动端拖动的原理：手指移动中，计算出手指移动的距离。然后用盒子原来的位置+手指移动的距离</li>
-                <li>手指移动的距离：手指滑动中的位置减去手指刚开始触摸的位置</li>
+                <li>
+                  但是拖动元素需要当前手指的坐标值我们可以使用
+                  targetTouches[0]里面的pageX和pageY
+                </li>
+                <li>
+                  移动端拖动的原理：手指移动中，计算出手指移动的距离。然后用盒子原来的位置+手指移动的距离
+                </li>
+                <li>
+                  手指移动的距离：手指滑动中的位置减去手指刚开始触摸的位置
+                </li>
               </ol>
               <pre><code class="language-html line-numbers"> /* 拖动元素三步曲：
       触摸元素touchstart：获取手指初始坐标，同时获得盒子原来的位置
@@ -1169,9 +1277,12 @@
         <div class="ls-cot">
           <p>classList 属性</p>
           <ul>
-            <li>classList属性是HTML5新增的一个属性，返回元素的类名。但是ie10以上版本支持。</li>
             <li>
-              该属性用于在元素中添加，移除及切换CSS类。有以下方法添加类： 注意，类名不用加点 .
+              classList属性是HTML5新增的一个属性，返回元素的类名。但是ie10以上版本支持。
+            </li>
+            <li>
+              该属性用于在元素中添加，移除及切换CSS类。有以下方法添加类：
+              注意，类名不用加点 .
               <pre><code class="language-js line-numbers">  // 添加类：
   element.classlist.add('类名');
 
@@ -1195,10 +1306,17 @@
               <ol>
                 <li>可以自动播放图片</li>
                 <li>手指可以拖动播放轮播图</li>
-                <li>结构： 和pc 端不一样，因为左拉会显示最后一张也就是第三张图片所以需要克隆两张， 1 和 3，3放在最前面，1放在最后面</li>
+                <li>
+                  结构： 和pc
+                  端不一样，因为左拉会显示最后一张也就是第三张图片所以需要克隆两张，
+                  1 和 3，3放在最前面，1放在最后面
+                </li>
               </ol>
             </li>
-            <li>注意轮播图中，最左边图片3如果不走自身宽度的负值，那么会直接显示第三张的图片，所以要先走自身的宽度， 注意是负值，这样一打开才是正确的图1</li>
+            <li>
+              注意轮播图中，最左边图片3如果不走自身宽度的负值，那么会直接显示第三张的图片，所以要先走自身的宽度，
+              注意是负值，这样一打开才是正确的图1
+            </li>
             <li>
               因为图片的宽度是铺满的，所以让ul走屏幕的宽度就可以了。-100%
               <pre><code class="language-css line-numbers">  .focus ul {
@@ -1215,15 +1333,21 @@
                 <li>移动端移动，可以使用translate移动</li>
                 <li>想要图片优雅的移动，请添加过渡效果</li>
                 <li>自动播放功能-无缝滚动</li>
-                <li>注意，我们判断条件是要等到图片滚动完毕再去判断，就是过渡完成后判断</li>
+                <li>
+                  注意，我们判断条件是要等到图片滚动完毕再去判断，就是过渡完成后判断
+                </li>
                 <li>此时需要添加检测过渡完成事件 transitionend</li>
-                <li>判断条件：如果索引号等于3说明走到最后一张图片，此时索引号要复原为0</li>
+                <li>
+                  判断条件：如果索引号等于3说明走到最后一张图片，此时索引号要复原为0
+                </li>
                 <li>此时图片，去掉过渡效果，然后移动</li>
                 <li>如果索引号小于0，说明是倒着走，索引号等于2</li>
                 <li>小圆点跟随变化效果</li>
                 <li>把ol里面li带有current类名的选出来去掉类名 remove</li>
                 <li>让当前索引号的 li 加上current add</li>
-                <li>但是，是等着过渡结束之后变化，所以这个写到transitionend事件里面</li>
+                <li>
+                  但是，是等着过渡结束之后变化，所以这个写到transitionend事件里面
+                </li>
                 <li>手指滑动轮播图</li>
                 <li>本质就是u山跟随手指移动，简单说就是移动端拖动元素</li>
                 <li>触摸元素touchstart：获取手指初始坐标</li>
@@ -1361,7 +1485,8 @@
           <p>返回顶部</p>
           <ul>
             <li>
-              这里 Window.scroll（X， Y） Y值可以自定义，做锚点用很方便 X Y 是不跟单位的
+              这里 Window.scroll（X， Y） Y值可以自定义，做锚点用很方便 X Y
+              是不跟单位的
               <pre><code class="language-js line-numbers">  goBack.addEventListener('click',function(){
     window.scroll(0,0);
   });</code></pre>
@@ -1371,7 +1496,9 @@
               <ol>
                 <li>带有动画的返回顶部</li>
                 <li>此时可以继续使用我们封装的动画函数</li>
-                <li>只需要把所有的left相关的值改为跟页面垂直滚动距离相关就可以了</li>
+                <li>
+                  只需要把所有的left相关的值改为跟页面垂直滚动距离相关就可以了
+                </li>
                 <li>页面滚动了多少，可以通过 window.pageYOffset 得到</li>
               </ol>
               <pre><code class="language-js line-numbers">  goBack.addEventListener('click',function(){
@@ -1395,7 +1522,10 @@
           </ul>
           <p>click 延时300mm 解决方案</p>
           <ol>
-            <li>动端click事件会有300ms的延时，原因是移动端屏幕双击会缩放（double tap to zoom）页面。</li>
+            <li>
+              动端click事件会有300ms的延时，原因是移动端屏幕双击会缩放（double
+              tap to zoom）页面。
+            </li>
             <li>
               解决方案1：
               <ul>
@@ -1408,7 +1538,9 @@
                   <ol>
                     <li>当我们手指触摸屏幕，记录当前角触摸时间</li>
                     <li>当我们手指离开屏幕，用离开的时间减去触摸的时间</li>
-                    <li>如果时间小于150ms，并且没有滑动过屏幕，那么我们就定义为点击</li>
+                    <li>
+                      如果时间小于150ms，并且没有滑动过屏幕，那么我们就定义为点击
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  // 封装tap,解决click 300ms延时
   function tap(obj, callback) {
@@ -1432,19 +1564,33 @@
   tap(div, function () {/* 执行代码 */});</code></pre>
                 </li>
                 <li>使用插件。fastClick插件解决300ms延迟。</li>
-                <li>JS插件是js文件，它遵循一定规范编程，方便程序展示效果，拥有特定功能且方便调用。如轮播图和瀑布流插件。</li>
-                <li>特点：它一般是为了解决某个问题而专门存在，其功能单一，并且比较小。我们以前写的 animate.js 也算一个最简单的插件</li>
+                <li>
+                  JS插件是js文件，它遵循一定规范编程，方便程序展示效果，拥有特定功能且方便调用。如轮播图和瀑布流插件。
+                </li>
+                <li>
+                  特点：它一般是为了解决某个问题而专门存在，其功能单一，并且比较小。我们以前写的
+                  animate.js 也算一个最简单的插件
+                </li>
                 <li>fastClick插件解决300ms延迟。使用延时</li>
                 <li>
                   GitHub官网地址：
-                  <el-link type="primary" icon="Link" target="_blank" href="https://github.com/ftlabs/fastclick/lib/fastclick.js">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="https://github.com/ftlabs/fastclick/lib/fastclick.js"
+                  >
                     https://github.com/ftlabs/fastclick/lib/fastclick.js
                   </el-link>
                   <ol>
-                    <li>打开网址，进入项目，找到文件，复制里面的封装函数代码</li>
+                    <li>
+                      打开网址，进入项目，找到文件，复制里面的封装函数代码
+                    </li>
                     <li>新建fastClick.js文件.粘贴代码</li>
                     <li>引入js 文件，调用</li>
-                    <li>因为多个立即函数，所以函数前面加个分号，确保其他函数没有加分号</li>
+                    <li>
+                      因为多个立即函数，所以函数前面加个分号，确保其他函数没有加分号
+                    </li>
                   </ol>
                   <pre><code class="language-html line-numbers">  ;(function() { // 添加处理程序  });     // 结尾记得也加上
 
@@ -1474,12 +1620,23 @@
               <ul>
                 <li>
                   Swiper插件的使用 中文官网地址：
-                  <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="https://www.swiper.com.cn/"
+                  >
                     https://www.swiper.com.cn/
                   </el-link>
                   <ol>
-                    <li>进入官网，导航栏上点击 获取Swiper里的下载，然后下载最新的文档就可以了</li>
-                    <li>下载完Swiper，解压出来，打开 demos文件夹，找到你想要的轮播图名称，打开</li>
+                    <li>
+                      进入官网，导航栏上点击
+                      获取Swiper里的下载，然后下载最新的文档就可以了
+                    </li>
+                    <li>
+                      下载完Swiper，解压出来，打开
+                      demos文件夹，找到你想要的轮播图名称，打开
+                    </li>
                     <li>右键查看源码，复制:</li>
                   </ol>
                   <pre><code class="language-js line-numbers">  // 引入css文件
@@ -1505,7 +1662,12 @@
           <ul>
             <li>
               官网地址：
-              <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="https://www.swiper.com.cn/"
+              >
                 https://www.swiper.com.cn/
               </el-link>
               <ol>
@@ -1524,10 +1686,22 @@
             <li>
               不懂可以点击 API文档进行swiper查询代码
               <ol>
-                <li>&gt; 点击获取Swiper &gt; 下载Swiper &gt; 点击版本自动会下载 &gt; 得到swiper-6.6.2</li>
-                <li>&gt; 解压压缩包 &gt; package &gt; 复制 swiper-bundle.min.js + swiper-bundle.min.css 到项目下</li>
-                <li>&gt; 然后点击 &gt; 在线演示 &gt; 选择想要的样式 &gt; 点击在新窗口打开 &gt; F12拷贝代码</li>
-                <li>注意：在项目里面先引入css文件，然后在尾部引入js文件，最后拷贝代码 和 css样式代码</li>
+                <li>
+                  &gt; 点击获取Swiper &gt; 下载Swiper &gt; 点击版本自动会下载
+                  &gt; 得到swiper-6.6.2
+                </li>
+                <li>
+                  &gt; 解压压缩包 &gt; package &gt; 复制 swiper-bundle.min.js +
+                  swiper-bundle.min.css 到项目下
+                </li>
+                <li>
+                  &gt; 然后点击 &gt; 在线演示 &gt; 选择想要的样式 &gt;
+                  点击在新窗口打开 &gt; F12拷贝代码
+                </li>
+                <li>
+                  注意：在项目里面先引入css文件，然后在尾部引入js文件，最后拷贝代码
+                  和 css样式代码
+                </li>
               </ol>
             </li>
           </ul>
@@ -1535,14 +1709,24 @@
           <ol>
             <li>
               superSlide：
-              <el-link type="primary" icon="Link" target="_blank" href="http://www.superslide2.com/">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="http://www.superslide2.com/"
+              >
                 http://www.superslide2.com/
               </el-link>
               // 移动端点击touchSlide
             </li>
             <li>
               iScroll：
-              <el-link type="primary" icon="Link" target="_blank" href="https://github.com/cubiq/iscroll">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="https://github.com/cubiq/iscroll"
+              >
                 https://github.com/cubiq/iscroll
               </el-link>
               <ul>
@@ -1561,8 +1745,12 @@
             <li>
               移动端视频插件zy.media.js
               <ul>
-                <li>H5给我们提供了video标签，但是浏览器的支持情况不同，不同的视频格式文件，我们可以通过source解决。</li>
-                <li>但是外观样式，还有暂停，播放，全屏等功能我们只能自己写代码解决。这个时候我们可以使用插件方式来制作。</li>
+                <li>
+                  H5给我们提供了video标签，但是浏览器的支持情况不同，不同的视频格式文件，我们可以通过source解决。
+                </li>
+                <li>
+                  但是外观样式，还有暂停，播放，全屏等功能我们只能自己写代码解决。这个时候我们可以使用插件方式来制作。
+                </li>
               </ul>
               <pre><code class="language-html line-numbers">  // 1、先引入 zy.media.css  和 zy.media.js
   &lt;link rel="stylesheet" href="zy.media.min.css"&gt;
@@ -1589,8 +1777,13 @@
           </ol>
           <p>框架概述</p>
           <ul>
-            <li>框架，顾名思义就是一套架构，它会基于自身的特点向用户提供一套较为完整的解决方案。框架的控制权在框架本身，使用者要按照框架所规定的某种规范进行开发。插件一般是为了解决某个问题而专门存在，其功能单一，并且比较小。</li>
-            <li>前端常用的框架有 Bootstrap、Vue、Angular、React等。既能开发PC端，也能开发移动端</li>
+            <li>
+              框架，顾名思义就是一套架构，它会基于自身的特点向用户提供一套较为完整的解决方案。框架的控制权在框架本身，使用者要按照框架所规定的某种规范进行开发。插件一般是为了解决某个问题而专门存在，其功能单一，并且比较小。
+            </li>
+            <li>
+              前端常用的框架有
+              Bootstrap、Vue、Angular、React等。既能开发PC端，也能开发移动端
+            </li>
             <li>前端常用的移动端插件有swiper、superSlide、iScroll等。</li>
             <li>框架：大而全，一整套解决方案</li>
             <li>
@@ -1599,10 +1792,16 @@
                 <li>Bootstrap</li>
                 <li>
                   BootCss3:
-                  <el-link type="primary" icon="Link" target="_blank" href="https://v3.bootcss.com/">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="https://v3.bootcss.com/"
+                  >
                     https://v3.bootcss.com/
                   </el-link>
-                  javascript 插件 依赖于jQuery，所以需要引入 jQuery.min.js，再引入min.js文件
+                  javascript 插件 依赖于jQuery，所以需要引入
+                  jQuery.min.js，再引入min.js文件
                 </li>
               </ol>
             </li>
@@ -1614,7 +1813,9 @@
         <div class="ls-cot">
           <p>重点</p>
           <ul>
-            <li>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，HTML5规范提出了相关解决方案。</li>
+            <li>
+              随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，HTML5规范提出了相关解决方案。
+            </li>
             <li>
               特性:
               <ol>
@@ -1714,7 +1915,9 @@
           <p>JSON</p>
           <ul>
             <li>JavaScript Object Notation JS对象表示法</li>
-            <li>JSON和JS对象的格式一样，只不过JSON字符串中的属性名必须加双引号其他的和JS语法一致</li>
+            <li>
+              JSON和JS对象的格式一样，只不过JSON字符串中的属性名必须加双引号其他的和JS语法一致
+            </li>
             <li>
               JSON分类：
               <ol>
@@ -1773,9 +1976,14 @@
             <li>
               判断
               <ul>
-                <li>typeof ： 返回数据类型的字符串表达, 不能区别 null 与Object 和 Object与Array</li>
+                <li>
+                  typeof ： 返回数据类型的字符串表达, 不能区别 null 与Object 和
+                  Object与Array
+                </li>
                 <li>instanceof： 判断对象的具体类型</li>
-                <li>===: 可以判断undefined ，null （全等的时候尽量用三个等号）</li>
+                <li>
+                  ===: 可以判断undefined ，null （全等的时候尽量用三个等号）
+                </li>
               </ul>
             </li>
             <li>
@@ -1832,7 +2040,10 @@
               什么是内存？
               <ul>
                 <li>用来可存储数据的空间（临时的）</li>
-                <li>内存产生和死亡 ： 内存条（电路板）==&gt;通电==&gt;产生内存空间==&gt;存储数据==&gt;处理数据==&gt;断电==>数据消失</li>
+                <li>
+                  内存产生和死亡 ：
+                  内存条（电路板）==&gt;通电==&gt;产生内存空间==&gt;存储数据==&gt;处理数据==&gt;断电==>数据消失
+                </li>
                 <li>
                   一个小内存的2个数据
                   <ol>
@@ -1852,7 +2063,9 @@
             <li>
               什么是变量？
               <ul>
-                <li>可变化的量（常亮是不可变化的），由变量名和变量值组成，作为标识，变量值就是内存中保存的数据</li>
+                <li>
+                  可变化的量（常亮是不可变化的），由变量名和变量值组成，作为标识，变量值就是内存中保存的数据
+                </li>
                 <li>每个变量都对应的一块小内存，变量名用来查找对应的内存</li>
               </ul>
             </li>
@@ -1866,8 +2079,12 @@
             <li>
               关于引用变量赋值问题？
               <ul>
-                <li>2个引用变量指向同一个对象，通过一个变量修改对象内部数据，另一个变量看到的是修改之后的数据</li>
-                <li>2个引用变量指向同一个对象，让其中一个引用变量指向另一个对象，另一个引用变量依然指向前一个对象</li>
+                <li>
+                  2个引用变量指向同一个对象，通过一个变量修改对象内部数据，另一个变量看到的是修改之后的数据
+                </li>
+                <li>
+                  2个引用变量指向同一个对象，让其中一个引用变量指向另一个对象，另一个引用变量依然指向前一个对象
+                </li>
               </ul>
             </li>
             <li>
@@ -1996,13 +2213,17 @@
               IIFE - immediately- Invoked Function Expression
               <ul>
                 <li>理解：立即执行函数表达式</li>
-                <li>作用：匿名函数自调用 。 影藏实现不会污染外部（全局）命名空间</li>
+                <li>
+                  作用：匿名函数自调用 。 影藏实现不会污染外部（全局）命名空间
+                </li>
               </ul>
             </li>
             <li>
               什么是this？
               <ul>
-                <li>任何函数本质上都是通过某个对象来调用的，如果没有指定就是window</li>
+                <li>
+                  任何函数本质上都是通过某个对象来调用的，如果没有指定就是window
+                </li>
                 <li>所有函数内部都有一个变量this</li>
                 <li>它的值是调用函数的当前对象</li>
               </ul>
@@ -2022,14 +2243,18 @@
                 <li>
                   函数的prototype 属性
                   <ol>
-                    <li>每个函数都有一个prototype属性，它默认指向一个Object空对象（即称为：原型对象）</li>
+                    <li>
+                      每个函数都有一个prototype属性，它默认指向一个Object空对象（即称为：原型对象）
+                    </li>
                     <li>原型对象中有一个constructor，它指向函数对象</li>
                   </ol>
                 </li>
                 <li>
                   给原型对象添加属性（一般都是方法）
                   <ol>
-                    <li>作用：函数的所有实例对象自动拥有原型中的属性（方法）</li>
+                    <li>
+                      作用：函数的所有实例对象自动拥有原型中的属性（方法）
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  // 1 、每个函数function都有一个prototype，即显示原型属性，默认只想一个空的Object对象
   console.log ( Fn. prototype)
@@ -2059,7 +2284,9 @@
             <li>
               如何产生闭包？
               <ul>
-                <li>当一个嵌套的内部（子）函数引用了嵌套的外部（父）函数的变量（函数）是，就产生了闭包</li>
+                <li>
+                  当一个嵌套的内部（子）函数引用了嵌套的外部（父）函数的变量（函数）是，就产生了闭包
+                </li>
               </ul>
             </li>
             <li>
@@ -2200,7 +2427,16 @@
           </ul>
           <p>解决防盗链OOS</p>
           <ul>
-            <li>先说说防盗链的原理，http 协议中，如果从一个网页跳到另一个网页，http 头字段里面会带个 Referer。这里的Referer是由于历史原因导致了拼写错误 后来也就一直沿用。图片服务器通过检测 Referer 是否来自规定域名，来进行防盗链。如果盗用网站是 https 的 protocol，而图片链接是 http 的话，则从 https 向 http 发起的请求会因为安全性的规定，而不带 referer，从而实现防盗链的绕过。官方输出图片的时候，判断了来源(Referer)，就是从哪个网站访问这个图片，如果是你的网站去加载这个图片，那么Referer就是：你的网站地址；你网站地址，肯定没在官方的白名单内，所以就看不到图片了。因此，若不发送Referer，也就是没有来源。那么官方那边，就认为是从浏览器直接访问的，所以就能加载正常的图片了。</li>
+            <li>
+              先说说防盗链的原理，http
+              协议中，如果从一个网页跳到另一个网页，http 头字段里面会带个
+              Referer。这里的Referer是由于历史原因导致了拼写错误
+              后来也就一直沿用。图片服务器通过检测 Referer
+              是否来自规定域名，来进行防盗链。如果盗用网站是 https 的
+              protocol，而图片链接是 http 的话，则从 https 向 http
+              发起的请求会因为安全性的规定，而不带
+              referer，从而实现防盗链的绕过。官方输出图片的时候，判断了来源(Referer)，就是从哪个网站访问这个图片，如果是你的网站去加载这个图片，那么Referer就是：你的网站地址；你网站地址，肯定没在官方的白名单内，所以就看不到图片了。因此，若不发送Referer，也就是没有来源。那么官方那边，就认为是从浏览器直接访问的，所以就能加载正常的图片了。
+            </li>
             <li>
               解决方案：
               <pre><code class="language-js line-numbers">  &lt;meta name="referrer" content="never"&gt;</code></pre>
@@ -2213,11 +2449,21 @@
         <div class="ls-cot">
           <p>ECMA</p>
           <ul>
-            <li>ECMA （European Computer Manufacturers Association）中文名称为欧洲计算机制造商协会，这个组织的目标是评估、开发和认可电信和计算机标准。1994年后该组织改名为Ecma国际。</li>
-            <li>ECMAScript 是由Ecma国际通过ECMA-262标准化的脚本程序设计语言。</li>
+            <li>
+              ECMA （European Computer Manufacturers
+              Association）中文名称为欧洲计算机制造商协会，这个组织的目标是评估、开发和认可电信和计算机标准。1994年后该组织改名为Ecma国际。
+            </li>
+            <li>
+              ECMAScript 是由Ecma国际通过ECMA-262标准化的脚本程序设计语言。
+            </li>
             <li>
               ECMA-262历史版本
-              <el-link type="primary" icon="Link" target="_blank" href="http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm"
+              >
                 http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm
               </el-link>
             </li>
@@ -2225,12 +2471,20 @@
           </ul>
           <p>谁在维护ECMA-262</p>
           <ul>
-            <li>TC39（Technical Committee39）是推进ECMAScript发展的员会。其会员都是公司（其中主要是浏览器厂商，有苹果、谷歌、微软、因特尔等）。TC39定期召开会议，会议由会员公司的代表与特邀专家出席</li>
+            <li>
+              TC39（Technical
+              Committee39）是推进ECMAScript发展的员会。其会员都是公司（其中主要是浏览器厂商，有苹果、谷歌、微软、因特尔等）。TC39定期召开会议，会议由会员公司的代表与特邀专家出席
+            </li>
           </ul>
           <p>ES6兼容性</p>
           <ul>
             <li>
-              <el-link type="primary" icon="Link" target="_blank" href="http:/kangax.github.io/compat-table/es6/">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="http:/kangax.github.io/compat-table/es6/"
+              >
                 http:/kangax.github.io/compat-table/es6/
               </el-link>
               可查看兼容性
@@ -2249,7 +2503,8 @@
               <ol>
                 <li>变量不能重复声明，和var 不一样，不用担心被污染</li>
                 <li>
-                  块级作用域 全局 函数 eval ，不止{} ,还有if else while for 里的作用域有效
+                  块级作用域 全局 函数 eval ，不止{} ,还有if else while for
+                  里的作用域有效
                   <pre><code class="language-js line-numbers">  {
     let a = '块级作用域 '
   }</code></pre>
@@ -2275,7 +2530,10 @@
             <li>
               值不能修改的量 称之为常量，const
               <ol>
-                <li>一定要赋初始值 ，不能 const a; 会报错 // index.html:27 Uncaught SyntaxError: Missing initializer in const declaration</li>
+                <li>
+                  一定要赋初始值 ，不能 const a; 会报错 // index.html:27
+                  Uncaught SyntaxError: Missing initializer in const declaration
+                </li>
                 <li>常量使用大写（潜规则） const A = '大写';</li>
                 <li>
                   常量不能修改
@@ -2292,7 +2550,10 @@
               </ol>
             </li>
           </ul>
-          <p>结构赋值 (ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值，这杯称为结构赋值)</p>
+          <p>
+            结构赋值
+            (ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值，这杯称为结构赋值)
+          </p>
           <pre><code class="language-js line-numbers">  // 数组结构
   const A = ['小白', '小黑', '小黄'];
   let [bai, hei, huang] = A;   // 这样操作，相当于把数组对应的值传给变量 ，声明并赋值 bai hei huang
@@ -2306,7 +2567,8 @@
           <p>模版字符串</p>
           <ul>
             <li>
-              ES6 引入新的声明字符串的方法 [ `` ] , ' ' , " " `(反引号，左上角数字1左边的符号)
+              ES6 引入新的声明字符串的方法 [ `` ] , ' ' , " "
+              `(反引号，左上角数字1左边的符号)
               <ol>
                 <li>例子 let a = `我是字符串，被反引号包裹着`;</li>
               </ol>
@@ -2344,8 +2606,12 @@
             <li>
               startsWith() endsWith()
               <ol>
-                <li>startsWith()：表示参数字符串是否在原字符串的头部，返回布尔值</li>
-                <li>endsWith()：表示参数字符串是否在原字符串的尾部，返回布尔值</li>
+                <li>
+                  startsWith()：表示参数字符串是否在原字符串的头部，返回布尔值
+                </li>
+                <li>
+                  endsWith()：表示参数字符串是否在原字符串的尾部，返回布尔值
+                </li>
               </ol>
               <pre><code class="language-js line-numbers">  let str = "start end!"
   let a = str.startsWith('s');     // 判断字符串中是否以s 开头
@@ -2363,7 +2629,9 @@
           </ul>
           <p>简化对象写法</p>
           <ul>
-            <li>ES6 允许在大括号里面，直接写入变量和函数，作为对象的属性和方法</li>
+            <li>
+              ES6 允许在大括号里面，直接写入变量和函数，作为对象的属性和方法
+            </li>
             <li>
               例子：
               <pre><code class="language-js line-numbers">  let a = '1';
@@ -2397,7 +2665,8 @@
               特性：
               <ol>
                 <li>
-                  this 是静态的，不像之前一样是动态。this 始终是指向函数声明时所在作用域下的this 的值
+                  this 是静态的，不像之前一样是动态。this
+                  始终是指向函数声明时所在作用域下的this 的值
                   <pre><code class="language-js line-numbers">  function getName() {
     console.log(this.name);
   }
@@ -2486,7 +2755,9 @@
             <li>
               总结：
               <ol>
-                <li>箭头函数适合与this无关的回调函数，定时器，数组的方法回调</li>
+                <li>
+                  箭头函数适合与this无关的回调函数，定时器，数组的方法回调
+                </li>
                 <li>箭头函数不适合与 this 有关的回调，事件回调，对象的方法</li>
               </ol>
             </li>
@@ -2536,7 +2807,8 @@
               </ol>
             </li>
             <li>
-              ES6 引入 rest 参数，用于获取函数的实参，用来代替 arguments，rest参数 一定要放最后，否则报错
+              ES6 引入 rest 参数，用于获取函数的实参，用来代替
+              arguments，rest参数 一定要放最后，否则报错
               <pre><code class="language-js line-numbers">  function get() {
     console.log(arguments);         // 是以对象方式管理  1，2，3，4，5
   }
@@ -2622,13 +2894,19 @@
           </ul>
           <p>Symbol 基本使用</p>
           <ul>
-            <li>ES6 引入了一种新的原始数据类型Symbol，表示独一无二的值。它是JavaScript 语言的第七种数据类型，是一种类似于字符串的数据类型。</li>
+            <li>
+              ES6
+              引入了一种新的原始数据类型Symbol，表示独一无二的值。它是JavaScript
+              语言的第七种数据类型，是一种类似于字符串的数据类型。
+            </li>
             <li>
               Symbol特点
               <ol>
                 <li>Symbol的值是唯一的，用来解决命名冲突的问题</li>
                 <li>Symbol值不能与其他数据进行运算</li>
-                <li>Symbol定义的对象属性不能使用for..in循环遍历，但是可以使用Reflect.ownkeys来获取对象的所有键名</li>
+                <li>
+                  Symbol定义的对象属性不能使用for..in循环遍历，但是可以使用Reflect.ownkeys来获取对象的所有键名
+                </li>
               </ol>
             </li>
             <li>
@@ -2692,7 +2970,9 @@
           </ul>
           <p>迭代器</p>
           <ul>
-            <li>迭代器（iterator）是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构</li>
+            <li>
+              迭代器（iterator）是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构
+            </li>
             <li>只要部署iterator 接口，就可以完成遍历操作。</li>
             <li>iterator 接口就是对象里的一个属性</li>
             <li>
@@ -2707,7 +2987,8 @@
   }</code></pre>
             </li>
             <li>
-              ES6创造了一种新的遍历命令for..of循环，iterator 接口主要供for..of 消费
+              ES6创造了一种新的遍历命令for..of循环，iterator 接口主要供for..of
+              消费
               <pre><code class="language-js line-numbers">  let arr = ['a', 'b', 'c']
   for (let v of arr) {       // 为什么数组能使用for of 遍历，因为其原型对象中有  Symbol()属性
       console.log(v);        // a b c  键值
@@ -2733,10 +3014,20 @@
               工作原理
               <ol>
                 <li>创建一个指针对象，指向当前数据结构的起始位置</li>
-                <li>第一次调用对象的next方法，指针自动指向数据结构的第一个成员，并返回结果 return next方法</li>
-                <li>接下来不断调用next方法，指针一直往后移动，直到指向最后一个成员</li>
-                <li>每调用next方法返回一个包含value和done属性的对象，done 是一个完成时，true 代表遍历完成</li>
-                <li>与for in 不同， for in 保存的是键名，而for of 保存的是健值</li>
+                <li>
+                  第一次调用对象的next方法，指针自动指向数据结构的第一个成员，并返回结果
+                  return next方法
+                </li>
+                <li>
+                  接下来不断调用next方法，指针一直往后移动，直到指向最后一个成员
+                </li>
+                <li>
+                  每调用next方法返回一个包含value和done属性的对象，done
+                  是一个完成时，true 代表遍历完成
+                </li>
+                <li>
+                  与for in 不同， for in 保存的是键名，而for of 保存的是健值
+                </li>
                 <li>注：需要自定义遍历数据的时候，要想到迭代器。</li>
               </ol>
               <pre><code class="language-js line-numbers">  // 需求 ，循环遍历出  name的数组元素
@@ -2776,7 +3067,9 @@
           </ul>
           <p>生成器</p>
           <ul>
-            <li>生成器函数是ES6提供的一种异步编程解决方案，语法行为与传统函数完全不同</li>
+            <li>
+              生成器函数是ES6提供的一种异步编程解决方案，语法行为与传统函数完全不同
+            </li>
             <li>生成器其实就是一个特殊的函数</li>
             <li>
               异步编程，纯回调函数
@@ -3071,7 +3364,8 @@
           <ul>
             <li>set 与map 是一样的，但是set存储的是唯一值，不允许重复</li>
             <li>
-              ES6提供了新的数据结构Set（集合）。它类似于数组，但成员的值都是唯一的，集合实现了iterator接口，所以可以使用 [扩展运算符] 和[for..of..]进行遍历，集合的属性和方法：
+              ES6提供了新的数据结构Set（集合）。它类似于数组，但成员的值都是唯一的，集合实现了iterator接口，所以可以使用
+              [扩展运算符] 和[for..of..]进行遍历，集合的属性和方法：
               <ol>
                 <li>size 返回集合的元素个数 相当于 length</li>
                 <li>add 增加一个新元素，返回当前集合 add(‘需要添加的元素’);</li>
@@ -3140,7 +3434,9 @@
               Set 数据结构
               <ol>
                 <li>set 中的数据不允许重复，添加不进去</li>
-                <li>ES6提供了新的数据结构Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。</li>
+                <li>
+                  ES6提供了新的数据结构Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
+                </li>
                 <li>
                   Set 本身是一个构造函数，用来生成set数据结构
                   <pre><code class="language-js line-numbers">  let data = new Set();
@@ -3181,7 +3477,9 @@
           </ul>
           <p>Map</p>
           <ul>
-            <li>ES6提供了Map数据结构。它类似于对象，也是键值对的集合。但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。Map也实现了iterator接口，所以可以使用[扩展运算符]和for..of...进行遍历。Map的属性和方法：</li>
+            <li>
+              ES6提供了Map数据结构。它类似于对象，也是键值对的集合。但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。Map也实现了iterator接口，所以可以使用[扩展运算符]和for..of...进行遍历。Map的属性和方法：
+            </li>
             <li>
               const m = new Map() 创建需要用new关键字
               <ol>
@@ -3196,7 +3494,9 @@
           </ul>
           <p>class 类</p>
           <ul>
-            <li>ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。</li>
+            <li>
+              ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。
+            </li>
             <li>
               代码：
               <pre><code class="language-js line-numbers">  // 1. class 声明类
@@ -3483,7 +3783,9 @@
   console.log(school);</code></pre>
           <p>ES6模块化</p>
           <ol>
-            <li>模块化是指将一个大的程序文件，拆分成许多小的文件，然后将小文件组合起来。</li>
+            <li>
+              模块化是指将一个大的程序文件，拆分成许多小的文件，然后将小文件组合起来。
+            </li>
             <li>
               ES6提模块化的优势有以下几点：
               <ul>
@@ -3595,7 +3897,8 @@
   &lt;script&gt; src="./js/All.js" type="module"&gt;&lt;/script&gt;</code></pre>
                 </li>
                 <li>
-                  为了兼容性，需要引入插件来把es6 转换成兼容性 es5的代码，然后对打包好的js 文件进行引入就可以了
+                  为了兼容性，需要引入插件来把es6 转换成兼容性
+                  es5的代码，然后对打包好的js 文件进行引入就可以了
                   <pre><code class="language-js line-numbers">  /* 安装工具
       abel-cli 命令行
       babel-preset-env 预设包，能够转换ES5语法
@@ -3635,7 +3938,9 @@
             <li>
               Array.prototype.includes
               <ol>
-                <li>includes方法用来检测数组中是否包含某个元素，返回布尔类型值</li>
+                <li>
+                  includes方法用来检测数组中是否包含某个元素，返回布尔类型值
+                </li>
               </ol>
               <pre><code class="language-js line-numbers">  const arr = [1, 2, 3, 4, 5, 6];
   console.log(arr.includes(0));     // false  indexOf 只会返回1 -1 ，这个则会判断有没有
@@ -3658,13 +3963,17 @@
               <ol>
                 <li>await必须写在async函数中 ,但是async 里可以没有await</li>
                 <li>await右侧的表达式一般为promise对象</li>
-                <li>await返回的是promise成功的值4.await的promise失败了，就会抛出异常,需要通过try..catch捕获处理</li>
+                <li>
+                  await返回的是promise成功的值4.await的promise失败了，就会抛出异常,需要通过try..catch捕获处理
+                </li>
               </ol>
             </li>
           </ul>
           <p>对象扩展</p>
           <ul>
-            <li>Rest参数与spread扩展运算符在ES6中已经引入，不过ES6中只针对于数组，在·ES9·中为对象提供了像数组一样的rest参数和扩展运算符</li>
+            <li>
+              Rest参数与spread扩展运算符在ES6中已经引入，不过ES6中只针对于数组，在·ES9·中为对象提供了像数组一样的rest参数和扩展运算符
+            </li>
           </ul>
           <p>正则扩展</p>
           <ul>
@@ -3746,7 +4055,10 @@
           <p>可选链操作符</p>
           <p>动态import</p>
           <ul>
-            <li>import 返回的结果是一个 Promise 对象，成功的值就是暴露出来的模块对象</li>
+            <li>
+              import 返回的结果是一个 Promise
+              对象，成功的值就是暴露出来的模块对象
+            </li>
           </ul>
           <p>BigInt</p>
           <pre><code class="language-js line-numbers">  // 大整形，但是BigInt（'转换对象不能是浮点数'）
@@ -3786,13 +4098,28 @@
   &lt;svg&gt;&lt;/svg&gt;  </code></pre>
           <p>svg 底层语法</p>
           <ul>
-            <li>width属性和height属性，制定了SVG图像在HTML元素中所占据的宽度和高度。除了相对单位也可以采用绝对单位</li>
-            <li>（单位：像素）。如果不指定这两个属性， SVG图像默认大小是300像素（宽）*150像素（高）。</li>
+            <li>
+              width属性和height属性，制定了SVG图像在HTML元素中所占据的宽度和高度。除了相对单位也可以采用绝对单位
+            </li>
+            <li>
+              （单位：像素）。如果不指定这两个属性，
+              SVG图像默认大小是300像素（宽）*150像素（高）。
+            </li>
             <li>如果只想展示SVG图像的一部分I就要指定viewBox属性。</li>
-            <li>viewBox属性的值有四个数字，分别是左上角的横坐标和纵坐标、视口的高魔和宽度。上面代码中，SVG图像是100像素宽*100像素高，</li>
-            <li>viewBox属性指定视口从（50，50）这个点开始。所以，实际看到的是右下角的四分之一圆。</li>
-            <li>注意，视口必须适配所在的空间。上面代码中，视口的大小是5050，由于SVG图像的大小是100100，所以视口会放大去适配SVG图像的 大小，即放大了四倍。</li>
-            <li>如果不指定width属性和height属性，只指定viewBox属性，则相当于只给到定SVG图像的长宽比。这时，SVG图像的默认大小将等于所在 的HTML元素的大小。</li>
+            <li>
+              viewBox属性的值有四个数字，分别是左上角的横坐标和纵坐标、视口的高魔和宽度。上面代码中，SVG图像是100像素宽*100像素高，
+            </li>
+            <li>
+              viewBox属性指定视口从（50，50）这个点开始。所以，实际看到的是右下角的四分之一圆。
+            </li>
+            <li>
+              注意，视口必须适配所在的空间。上面代码中，视口的大小是5050，由于SVG图像的大小是100100，所以视口会放大去适配SVG图像的
+              大小，即放大了四倍。
+            </li>
+            <li>
+              如果不指定width属性和height属性，只指定viewBox属性，则相当于只给到定SVG图像的长宽比。这时，SVG图像的默认大小将等于所在
+              的HTML元素的大小。
+            </li>
             <li>
               代码
               <pre><code class="language-html line-numbers">  &lt;!-- 设置矢量图的宽高 填充颜色 切出大小 --&gt;
@@ -3958,7 +4285,12 @@
             </li>
             <li>
               可以使用封装好的库:
-              <el-link type="primary" icon="Link" target="_blank" href="https://echarts.apache.org/zh/index.html">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="https://echarts.apache.org/zh/index.html"
+              >
                 https://echarts.apache.org/zh/index.html
               </el-link>
               <ol>
@@ -3967,19 +4299,34 @@
                   <ol>
                     <li>
                       Staticfile CDN（国内）:
-                      <el-link type="primary" icon="Link" target="_blank" href="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"
+                      >
                         https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js
                       </el-link>
                     </li>
                     <li>
                       jsDelivr：
-                      <el-link type="primary" icon="Link" target="_blank" href="https://cdn.jsdelivr.net/npm/echarts@4.3.0/dist/echarts.min.js">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://cdn.jsdelivr.net/npm/echarts@4.3.0/dist/echarts.min.js"
+                      >
                         https://cdn.jsdelivr.net/npm/echarts@4.3.0/dist/echarts.min.js
                       </el-link>
                     </li>
                     <li>
                       cdnjs:
-                      <el-link type="primary" icon="Link" target="_blank" href="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.min.js">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.min.js"
+                      >
                         https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.min.js
                       </el-link>
                     </li>
@@ -3993,7 +4340,9 @@
   &lt;/body&gt;</code></pre>
                 </li>
                 <li>
-                  【完整写法】然后就可以通过 echarts.init 方法初始化一个 echarts 实例并通过 setOption 方法生成一个简单的柱状图，下面是完整代码。
+                  【完整写法】然后就可以通过 echarts.init 方法初始化一个 echarts
+                  实例并通过 setOption
+                  方法生成一个简单的柱状图，下面是完整代码。
                   <pre><code class="language-html line-numbers">  &lt;!DOCTYPE html&gt;
   &lt;html&gt;
     &lt;head&gt;
@@ -4031,8 +4380,15 @@
               模版引入方法
               <ol>
                 <li>引入js 或者 cdn</li>
-                <li>创建一个DOM容器 id= main 并设置宽高，也可以用js来控制宽高，官方文档有写</li>
-                <li>写script， 初始化容器（官网下载模版，复制option配置项），并配置，最后 显示</li>
+                <li>
+                  创建一个DOM容器 id= main
+                  并设置宽高，也可以用js来控制宽高，官方文档有写
+                </li>
+                <li>
+                  写script，
+                  初始化容器（官网下载模版，复制option配置项），并配置，最后
+                  显示
+                </li>
               </ol>
               <pre><code class="language-html line-numbers">  &lt;!DOCTYPE html&gt;
   &lt;html lang="en"&gt;
@@ -4067,15 +4423,15 @@
 </template>
 
 <script setup lang="ts" name="Javascript3Page">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: '网页效果' },
-  { id: 2, h2: '其他拓展' },
-  { id: 3, h2: '本地存储' },
-  { id: 4, h2: '高级js' },
-  { id: 5, h2: 'ES6' },
-  { id: 6, h2: 'SVG' }
+  { id: 1, h2: "网页效果" },
+  { id: 2, h2: "其他拓展" },
+  { id: 3, h2: "本地存储" },
+  { id: 4, h2: "高级js" },
+  { id: 5, h2: "ES6" },
+  { id: 6, h2: "SVG" },
 ]);
 </script>
 

@@ -2,8 +2,14 @@
   <card-container title="jQuery" :data="data">
     <template #svg>
       <svg
-        width="40" height="40" t="1699148394151" class="icon" viewBox="0 0 1024 1024"
-        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5368"
+        width="40"
+        height="40"
+        t="1699148394151"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="5368"
       >
         <path
           d="M121.3 283.3c-79.3 113.9-69.5 262-8.8 383 1.4 2.9 2.9 5.7 4.4 8.5 0.9 1.9 1.8 3.7 2.9 5.6 0.5 1 1.1 2.1 1.8 3.1l3 5.7 5.9 9.9c1.1 1.8 2.1 3.6 3.4 5.5 2 3.5 4.5 7 6.6 10.5 1 1.5 1.9 2.9 2.9 4.4 4.1 6.5 8 11.9 12 17.1l-0.4-0.6c2.9 4 5.8 7.9 9 11.8 1 1.4 2.1 2.8 3.2 4.3l8.3 10.1c1 1.1 2 2.5 3.1 3.7 3.7 4.4 7.5 8.7 11.4 13 0 0.1 0.1 0.1 0.2 0.3 4.8 6.1 10 11.5 15.7 16.3l0.2 0.1c3 3.1 6 6.1 9.2 9.1l3.8 3.6c4.1 3.9 8.3 7.8 12.7 11.5 0.1 0 0.1 0.1 0.2 0.1l2.1 1.9c3.8 3.3 7.6 6.6 11.6 9.7l4.7 3.9c3.2 2.5 6.5 5 9.7 7.5l5.1 3.9c3.5 2.6 7.2 5.2 10.7 7.7 1.3 0.9 2.6 1.9 3.9 2.7l1.1 0.9 10.5 6.9 4.5 3c5.5 3.5 11 6.8 16.4 10.1 1.6 0.8 3.1 1.7 4.6 2.5 4 2.3 8.2 4.7 12.3 6.8 2.2 1.3 4.6 2.4 6.9 3.5 2.8 1.6 5.7 3.1 8.7 4.7 0.7 0.2 1.5 0.5 2.2 0.9h-0.1c1.2 0.6 2.4 1.1 3.6 1.8 4.5 2.2 9.2 4.4 14 6.5 0.9 0.4 1.9 0.8 2.8 1.3 5.4 2.4 10.8 4.6 16.3 6.8 1.3 0.4 2.6 1 3.9 1.5 5 1.9 10.2 3.8 15.3 5.7l1.9 0.7c5.7 1.9 11.3 3.8 17.1 5.6 1.3 0.4 2.7 0.9 4.1 1.2 5.9 1.8 11.7 3.9 17.7 5.1 383.1 69.8 494.5-230.3 494.5-230.3C844.2 824 678.2 856.1 521 820.4c-5.8-1.3-11.7-3.2-17.5-4.9-8.3-2.4-16.6-5-24.7-7.8l3.5 1.1-2.3-0.9c-5.1-1.7-10-3.6-14.9-5.5-1.2-0.5-2.4-1-3.7-1.4l-0.4-0.1c-5.5-2.2-10.8-4.5-16.1-6.8-1.1-0.4-2.1-0.9-3.3-1.3-6.3-2.7-12.5-5.6-18.6-8.6l5.2 2.3c-1.4-0.6-2.6-1.2-3.9-1.9-3.5-1.7-7-3.5-10.4-5.3-2.6-1.2-5.2-2.6-7.7-4l0.8 0.4c-4.2-2.2-8.4-4.7-12.7-7-1.3-0.9-2.7-1.7-4.2-2.5-6.3-3.7-12.6-7.5-18.7-11.5l2.4 1.4c-1.6-1-3.1-2-4.6-3.1l0.2 0.2c-4.2-2.6-8.3-5.3-12.3-8.1l0.7 0.5c-1.3-0.9-2.5-1.8-3.8-2.7-4.8-3.3-8.3-5.9-11.9-8.6l0.9 0.6c-1.6-1.3-3.2-2.5-4.9-3.7-3.3-2.6-6.6-5-9.9-7.8l-4.4-3.5c-4.9-3.9-8.9-7.4-12.9-10.9l0.4 0.4c-0.4-0.4-0.9-0.8-1.3-1.1l-13-11.8-3.7-3.5c-3.1-3.1-6.2-6.1-9.3-9.2l-3.6-3.7c-3.9-3.8-7.6-7.8-11.3-11.8l-0.2-0.3-0.6-0.6c-4-4.4-7.8-8.8-11.7-13.2-1-1.1-1.9-2.4-3-3.6l-8.4-10.3c-3.8-4.8-7.5-9.7-11.2-14.6l-1.5-2.1c-87.2-119.1-118.7-283.3-49-418.1l-62.2 77.8z"
@@ -15,11 +21,19 @@
           fill="#0769AD"
           p-id="5370"
         />
-        <path d="M574.1 115.7C540.2 165.4 537 227.2 560.3 282c24.8 58.3 75.5 104 134.6 125.7 2.4 0.9 4.8 1.7 7.3 2.6l3.3 1c3.4 1.1 6.9 2.4 10.4 3.1 163.4 31.5 207.6-83.9 219.5-100.8-38.9 55.9-104.2 69.3-184.2 49.8-7-1.7-13.8-3.8-20.5-6.4l1.2 0.4c-8.3-2.9-16.5-6.3-24.4-10.1l1.4 0.6c-14.4-7-28.2-15.4-40.9-25.1l0.6 0.4c-71.7-54.3-116.1-158-69.3-242.4l-25.2 34.9z" fill="#0769AD" p-id="5371" />
+        <path
+          d="M574.1 115.7C540.2 165.4 537 227.2 560.3 282c24.8 58.3 75.5 104 134.6 125.7 2.4 0.9 4.8 1.7 7.3 2.6l3.3 1c3.4 1.1 6.9 2.4 10.4 3.1 163.4 31.5 207.6-83.9 219.5-100.8-38.9 55.9-104.2 69.3-184.2 49.8-7-1.7-13.8-3.8-20.5-6.4l1.2 0.4c-8.3-2.9-16.5-6.3-24.4-10.1l1.4 0.6c-14.4-7-28.2-15.4-40.9-25.1l0.6 0.4c-71.7-54.3-116.1-158-69.3-242.4l-25.2 34.9z"
+          fill="#0769AD"
+          p-id="5371"
+        />
       </svg>
     </template>
     <template #describe>
-      <p>jQuery是一个在现代Web开发中广泛应用的JavaScript库，它以其简洁的语法和丰富的功能极大地提高了开发效率.其设计宗旨是“Write Less, Do More”（写得更少，做得更多），即倡导开发者用更少的代码实现更多的功能。</p>
+      <p>
+        jQuery是一个在现代Web开发中广泛应用的JavaScript库，它以其简洁的语法和丰富的功能极大地提高了开发效率.其设计宗旨是“Write
+        Less, Do
+        More”（写得更少，做得更多），即倡导开发者用更少的代码实现更多的功能。
+      </p>
     </template>
     <template #content>
       <el-card id="part1" shadow="hover">
@@ -30,19 +44,27 @@
             <li>
               仓库
               <ol>
-                <li>可以把很多东西放到这个仓库里面。找东西只需要到仓库里面查找到就可以了。</li>
+                <li>
+                  可以把很多东西放到这个仓库里面。找东西只需要到仓库里面查找到就可以了。
+                </li>
               </ol>
             </li>
             <li>
               JavaScript库：
               <ol>
-                <li>即library，是一个封装好的特定的集合（方法和函数）。从封装一大堆函数的角度理解库，就是在这个库中， 封装了很多预先定义好的函数在里面，比如动画animate、hide、show，比如获取元素等。</li>
+                <li>
+                  即library，是一个封装好的特定的集合（方法和函数）。从封装一大堆函数的角度理解库，就是在这个库中，
+                  封装了很多预先定义好的函数在里面，比如动画animate、hide、show，比如获取元素等。
+                </li>
               </ol>
             </li>
             <li>
               简单理解：
               <ol>
-                <li>就是一个JS文件，里面对我们原生js代码进行了封装，存放到里面。这样我们可以快速高效的使用这些封装好 的功能了。比如jQuery，就是为了快速方便的操作DOM，里面基本都是函数（方法）。</li>
+                <li>
+                  就是一个JS文件，里面对我们原生js代码进行了封装，存放到里面。这样我们可以快速高效的使用这些封装好
+                  的功能了。比如jQuery，就是为了快速方便的操作DOM，里面基本都是函数（方法）。
+                </li>
               </ol>
             </li>
             <li>
@@ -59,7 +81,11 @@
           </ul>
           <p>jQuery的概念</p>
           <ul>
-            <li>jQuery 是一个快速、简洁的JavaScript库，其设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。 j 就是JavaScript；Query查询；意思就是查询js，把js中的DOM操作做了封装，我们可以快速的查询使用里面的功能。jQuery封装了JavaScript常用的功能代码，优化了DOM操作、事件处理、动画设计和Ajax交互。学习jQuery本质：就是学习调用这些函数（方法）。jQuery出现的目的是加快前端人员的开发速度，我们可以非常方便的调用和使用它，从而提高开发效率。</li>
+            <li>
+              jQuery 是一个快速、简洁的JavaScript库，其设计的宗旨是“write
+              Less，Do More”，即倡导写更少的代码，做更多的事情。 j
+              就是JavaScript；Query查询；意思就是查询js，把js中的DOM操作做了封装，我们可以快速的查询使用里面的功能。jQuery封装了JavaScript常用的功能代码，优化了DOM操作、事件处理、动画设计和Ajax交互。学习jQuery本质：就是学习调用这些函数（方法）。jQuery出现的目的是加快前端人员的开发速度，我们可以非常方便的调用和使用它，从而提高开发效率。
+            </li>
             <li>
               特点：
               <ol>
@@ -67,7 +93,10 @@
                 <li>跨浏览器兼容。基本兼容现在主流的浏览器</li>
                 <li>链式编程、隐式迭代</li>
                 <li>对事件、样式、动画支持，大大简化了DOM操作</li>
-                <li>支持插件扩展开发。有着丰富的第三方的插件，例如： 树形菜单、日期控件、轮播图等</li>
+                <li>
+                  支持插件扩展开发。有着丰富的第三方的插件，例如：
+                  树形菜单、日期控件、轮播图等
+                </li>
                 <li>免费、开源</li>
               </ol>
             </li>
@@ -76,13 +105,23 @@
           <ul>
             <li>
               下载官网：
-              <el-link type="primary" icon="Link" target="_blank" href="https://jquery.com/">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="https://jquery.com/"
+              >
                 https://jquery.com/
               </el-link>
             </li>
             <li>
               各个版本的下载：
-              <el-link type="primary" icon="Link" target="_blank" href="https://code.jquery.com/">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="https://code.jquery.com/"
+              >
                 https://code.jquery.com/
               </el-link>
             </li>
@@ -97,8 +136,15 @@
             <li>
               下载最新版本
               <ol>
-                <li>For help when upgrading jQuery, please see the upgrade guide most relevant to your version. We also recommend using the jQuery Migrate plugin.</li>
-                <li>Download the compressed, production jQuery 3.6.0 压缩版本工作中使用压缩版本，复制出来新建jQuery.min.js 粘贴</li>
+                <li>
+                  For help when upgrading jQuery, please see the upgrade guide
+                  most relevant to your version. We also recommend using the
+                  jQuery Migrate plugin.
+                </li>
+                <li>
+                  Download the compressed, production jQuery 3.6.0
+                  压缩版本工作中使用压缩版本，复制出来新建jQuery.min.js 粘贴
+                </li>
               </ol>
             </li>
           </ul>
@@ -109,7 +155,11 @@
         <div class="ls-cot">
           <p>前言</p>
           <ol>
-            <li>引入jQuery文件（也要注意如果在代码上面使用，需要 load页面加载完再使用， 或者写在代码下面，再或者使用jQuery入口函数）</li>
+            <li>
+              引入jQuery文件（也要注意如果在代码上面使用，需要
+              load页面加载完再使用，
+              或者写在代码下面，再或者使用jQuery入口函数）
+            </li>
             <li>
               jQuery入口函数，两种方式
               <pre><code class="language-js line-numbers">  $(function () {
@@ -119,16 +169,28 @@
       // ... 此处是页面DOM加载完成的入口      方法2
   }) </code></pre>
             </li>
-            <li>等着DOM结构渲染完毕即可执行内部代码，不必等到所有外部资源加载完成，jQuery帮我们完成了封装。</li>
-            <li>相当于原生js中的DOMContentLoaded。等待主要的页面元素加载完成</li>
-            <li>不同于原生js中的load事件，是等页面文档、外部的js文件、CSS文件、图片加载完毕后，才执行内部代码。</li>
+            <li>
+              等着DOM结构渲染完毕即可执行内部代码，不必等到所有外部资源加载完成，jQuery帮我们完成了封装。
+            </li>
+            <li>
+              相当于原生js中的DOMContentLoaded。等待主要的页面元素加载完成
+            </li>
+            <li>
+              不同于原生js中的load事件，是等页面文档、外部的js文件、CSS文件、图片加载完毕后，才执行内部代码。
+            </li>
             <li>更推荐使用第一种方式。</li>
           </ol>
           <p>jQuery的顶级对象 $</p>
           <ul>
             <li>自执行函数</li>
-            <li>$ 是jQuery的别称，在代码中可以使用jQuery代替$，但一般为了方便，通常都直接使用$。</li>
-            <li>$ 是jQuery的顶级对象，相当于原生JavaScript中的window。把元素利用$包装成jQuery对象，就可以调用jQuery的方法。</li>
+            <li>
+              $
+              是jQuery的别称，在代码中可以使用jQuery代替$，但一般为了方便，通常都直接使用$。
+            </li>
+            <li>
+              $
+              是jQuery的顶级对象，相当于原生JavaScript中的window。把元素利用$包装成jQuery对象，就可以调用jQuery的方法。
+            </li>
           </ul>
         </div>
       </el-card>
@@ -146,7 +208,8 @@
               <pre><code class="language-js line-numbers">  var div = $("div");</code></pre>
             </li>
             <li>
-              jQuery 对象只能使用jQuery方法，DoM对象则使用原生的Javascript 属性和方法
+              jQuery 对象只能使用jQuery方法，DoM对象则使用原生的Javascript
+              属性和方法
               <ol>
                 <li>DOM 对象： div. style .display = ' none '; // 影藏</li>
                 <li>jQuery对象： $ ( ' div' ) .hide () ; // 影藏</li>
@@ -155,18 +218,29 @@
             <li>
               js和jQuery获取的对象是不一样的，log输出
               <ol>
-                <li>原生js， console.dir ( 'div' ); //获取到的是DOM对象 ，里面有很多的属性和方法</li>
-                <li>jquery, console.dir ( $ ( 'div' ) ); //获取到的是jQuery对象，是一个伪数组存储形式</li>
-                <li>注意：DOM对象只能是原生js使用，属性和方法，jQuery对象也只能使用jQuery方法，不能互通，需要转换</li>
+                <li>
+                  原生js， console.dir ( 'div' ); //获取到的是DOM对象
+                  ，里面有很多的属性和方法
+                </li>
+                <li>
+                  jquery, console.dir ( $ ( 'div' ) );
+                  //获取到的是jQuery对象，是一个伪数组存储形式
+                </li>
+                <li>
+                  注意：DOM对象只能是原生js使用，属性和方法，jQuery对象也只能使用jQuery方法，不能互通，需要转换
+                </li>
               </ol>
             </li>
             <li>
               jQuery 对象和 DOM 对象
               <ol>
                 <li>DOM对象与jQuery对象之间是可以相互转换的。</li>
-                <li>因为原生js比jQuery更大，原生的一些属性和方法jQuery没有给我们封装.要想使用这些属性和方法需要把jQuery对象转换为DO对象才能使用。</li>
                 <li>
-                  DOM对象转换为jQuery对象：$（DOM对象），注意先获取DOM对象，然后再转换为jQuery对象，（）里不要加 ' ' 引号 ！
+                  因为原生js比jQuery更大，原生的一些属性和方法jQuery没有给我们封装.要想使用这些属性和方法需要把jQuery对象转换为DO对象才能使用。
+                </li>
+                <li>
+                  DOM对象转换为jQuery对象：$（DOM对象），注意先获取DOM对象，然后再转换为jQuery对象，（）里不要加
+                  ' ' 引号 ！
                   <pre><code class="language-js line-numbers">  var div = document.querySelector( 'div' ); // DOM获取完，执行转换
   $ ( div) ;                                 // 原生js已经获取元素了，所以不要加引号，不要加引号</code></pre>
                 </li>
@@ -177,7 +251,9 @@
   $('video')[index] .play() ;           // index是索引号，如果视频只有一个就索引号为 [0] ，用[ ]
   $('video').get(index).play();         // index是索引号，如果视频只有一个就索引号为 （0）.用（）</code></pre>
                 </li>
-                <li>jQuery转换为DOM对象，就是利用数组形式，加上索引号就可以实现转换，第二种方法是获取索引号，也可以转换</li>
+                <li>
+                  jQuery转换为DOM对象，就是利用数组形式，加上索引号就可以实现转换，第二种方法是获取索引号，也可以转换
+                </li>
               </ol>
             </li>
           </ul>
@@ -188,7 +264,9 @@
         <div class="ls-cot">
           <p>jQuery选择器</p>
           <ul>
-            <li>原生JS获取元素方式很多，很杂，而且兼容性情况不一致，因此jQuery给我们做了封装，使获取元素统一标准。</li>
+            <li>
+              原生JS获取元素方式很多，很杂，而且兼容性情况不一致，因此jQuery给我们做了封装，使获取元素统一标准。
+            </li>
             <li>
               $（“选择器”） // 里面选择器直接写CSS选择器即可，但是要加引号
               <pre><code class="language-js line-numbers">  // 里面选择器直接写CSS选择器即可，但是要加引号
@@ -272,15 +350,22 @@
             <li>
               为什么css(); 里只写了一个属性和值，页面中的div，全部变化？
               <ul>
-                <li>因为：隐式迭代（重要）。遍历内部DOM元素（伪数组形式存储）的过程就叫做隐式迭代。</li>
-                <li>简单理解：给匹配到的所有元素进行循环遍历，执行相应的方法，而不用我们再进行循环，简化我们的操作，方便我们调用。</li>
+                <li>
+                  因为：隐式迭代（重要）。遍历内部DOM元素（伪数组形式存储）的过程就叫做隐式迭代。
+                </li>
+                <li>
+                  简单理解：给匹配到的所有元素进行循环遍历，执行相应的方法，而不用我们再进行循环，简化我们的操作，方便我们调用。
+                </li>
                 <li>
                   分析：
                   <ol>
                     <li>获取所有匹配的div</li>
                     <li>在内部隐秘的遍历循环操作</li>
                     <li>给每个元素都添加css 方法</li>
-                    <li>注意，只有在需要在相同操作的时候才能用，不同的操作需要使用筛选选择器方法 :eq();</li>
+                    <li>
+                      注意，只有在需要在相同操作的时候才能用，不同的操作需要使用筛选选择器方法
+                      :eq();
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  $(function () {
       $('div' ).css('background-color', 'pink');
@@ -380,7 +465,8 @@
           <p>前言</p>
           <ul>
             <li>
-              jQuery样式操作： jQuery可以使用css方法来修改简单元素样式；也可以操作类，修改多个样式
+              jQuery样式操作：
+              jQuery可以使用css方法来修改简单元素样式；也可以操作类，修改多个样式
               <ol>
                 <li>
                   参数只写属性名，则是返回属性值，是带有单位的字符串
@@ -479,7 +565,10 @@
           <p>类操作与className区别</p>
           <ul>
             <li>原生JS中className会覆盖元素原先里面的类名。</li>
-            <li>jQuery里面类操作只是对指定类进行操作，不影响原先的类名。相当于追加 , addClass</li>
+            <li>
+              jQuery里面类操作只是对指定类进行操作，不影响原先的类名。相当于追加
+              , addClass
+            </li>
           </ul>
         </div>
       </el-card>
@@ -526,7 +615,9 @@
               上面的效果，代码都跟以下显示影藏一样的写法，代码规范和意思都一样
               <ul>
                 <li>
-                  注意1： 在淡入淡出中，fadeTo() 是改变透明度的，这个透明度是必须要写的，取值0~1 之间，速度也是要写 fadeTo([speed] , opacity, [easing] , [fn])
+                  注意1： 在淡入淡出中，fadeTo()
+                  是改变透明度的，这个透明度是必须要写的，取值0~1
+                  之间，速度也是要写 fadeTo([speed] , opacity, [easing] , [fn])
                   <pre><code class="language-html line-numbers">  &lt;head&gt;
       &lt;style&gt;
           * { padding: 0; margin: 0; }
@@ -558,12 +649,21 @@
   &lt;/script&gt;</code></pre>
                 </li>
                 <li>
-                  注意2：animate 自定义动画参数为4个，语法: animate(params, [speed] , [easing] , [fn])
+                  注意2：animate 自定义动画参数为4个，语法: animate(params,
+                  [speed] , [easing] , [fn])
                   <ol>
-                    <li>params：想要更改的样式属性，以对象形式传递，必须写。属性名可以不用带引号，如果是复合属性则需要采取驼峰命名法borderLeft。其余参数都可以省略。</li>
-                    <li>speed：三种预定速度之一的字符串（“slow"，"normal"，“fast”）或表示动画时长的毫秒数值（如：1000）。</li>
-                    <li>easing:（Optional）用来指定切换效果，默认是“swing”，可用参数"linear”，匀速。</li>
-                    <li>fn：回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+                    <li>
+                      params：想要更改的样式属性，以对象形式传递，必须写。属性名可以不用带引号，如果是复合属性则需要采取驼峰命名法borderLeft。其余参数都可以省略。
+                    </li>
+                    <li>
+                      speed：三种预定速度之一的字符串（“slow"，"normal"，“fast”）或表示动画时长的毫秒数值（如：1000）。
+                    </li>
+                    <li>
+                      easing:（Optional）用来指定切换效果，默认是“swing”，可用参数"linear”，匀速。
+                    </li>
+                    <li>
+                      fn：回调函数，在动画完成时执行的函数，每个元素执行一次。
+                    </li>
                     <li>添加动画，盒子必须要加定位</li>
                   </ol>
                   <pre><code class="language-js line-numbers">  $("button").click(function(){
@@ -587,9 +687,15 @@
               显示参数
               <ul>
                 <li>参数都可以省略，无动画直接显示。</li>
-                <li>speed：三种预定速度之一的字符串（“slow"，"normal"，“fast”）或表示动画时长的毫秒数值（如：1000）。</li>
-                <li>easing:（Optional）用来指定切换效果，默认是“swing”，可用参数"linear”，匀速。</li>
-                <li>fn：回调函数，在动画完成时执行的函数，每个元素执行一次。</li>
+                <li>
+                  speed：三种预定速度之一的字符串（“slow"，"normal"，“fast”）或表示动画时长的毫秒数值（如：1000）。
+                </li>
+                <li>
+                  easing:（Optional）用来指定切换效果，默认是“swing”，可用参数"linear”，匀速。
+                </li>
+                <li>
+                  fn：回调函数，在动画完成时执行的函数，每个元素执行一次。
+                </li>
               </ul>
             </li>
           </ol>
@@ -671,7 +777,10 @@
             <li>
               click事件
               <ol>
-                <li>单击事件，类似于PC端的click，但在移动端中，连续click的触发有200ms ~ 300ms的延迟</li>
+                <li>
+                  单击事件，类似于PC端的click，但在移动端中，连续click的触发有200ms
+                  ~ 300ms的延迟
+                </li>
               </ol>
             </li>
             <li>
@@ -680,11 +789,15 @@
                 <li>touchstart： 手指触摸到屏幕会触发</li>
                 <li>touchmove： 当手指在屏幕上移动时，会触发</li>
                 <li>touchend： 当手指离开屏幕时，会触发</li>
-                <li>touchcancel： 可由系统进行的触发，比如手指触摸屏幕的时候，突然alert一下，或者系统中其他打断了touch的行为，可以触发</li>
+                <li>
+                  touchcancel：
+                  可由系统进行的触发，比如手指触摸屏幕的时候，突然alert一下，或者系统中其他打断了touch的行为，可以触发
+                </li>
               </ol>
             </li>
             <li>
-              tap类事件: 触碰事件，我目前还不知道它和touch的区别，一般用于代替click事件
+              tap类事件:
+              触碰事件，我目前还不知道它和touch的区别，一般用于代替click事件
               <ol>
                 <li>tap: 手指碰一下屏幕会触发</li>
                 <li>longTap: 手指长按屏幕会触发</li>
@@ -710,7 +823,9 @@
         <div class="ls-cot">
           <p>代码</p>
           <ul>
-            <li>动画或者效果队列一旦触发就会执行，如果多次触发，就造成多个动画或者效果排队执行。</li>
+            <li>
+              动画或者效果队列一旦触发就会执行，如果多次触发，就造成多个动画或者效果排队执行。
+            </li>
             <li>停止排队stop ( )</li>
           </ul>
           <pre><code class="language-js line-numbers">  $("div").hover(function () {
@@ -726,7 +841,10 @@
           <p>案例：手风琴效果</p>
           <ul>
             <li>布局：大盒子包含着 li ，宽224px 大图，宽69px 小图</li>
-            <li>每个图片有一个大图片和一个小图片 ，小图片采用定位形式，定到左边，因为是可以点击，所以用&lt;a&gt;包裹</li>
+            <li>
+              每个图片有一个大图片和一个小图片
+              ，小图片采用定位形式，定到左边，因为是可以点击，所以用&lt;a&gt;包裹
+            </li>
             <li>一开始小图片是看得见的，大图片是用display：none影藏起来</li>
             <li>定义一个current 类，大图片显示，小图片影藏</li>
             <li>
@@ -760,8 +878,13 @@
         <div class="ls-cot">
           <p>前言</p>
           <ul>
-            <li>设置或获取元素固有属性值 prop（） ，但是注意获取不了自定义属性，获取自定义属性 index 需要用 attr（）</li>
-            <li>所调元素固有属性就是元素本身自带的属性，比如&lt;a&gt;元素里面的href，比如&lt;input&gt;元素里面的type。</li>
+            <li>
+              设置或获取元素固有属性值 prop（）
+              ，但是注意获取不了自定义属性，获取自定义属性 index 需要用 attr（）
+            </li>
+            <li>
+              所调元素固有属性就是元素本身自带的属性，比如&lt;a&gt;元素里面的href，比如&lt;input&gt;元素里面的type。
+            </li>
             <li>
               获取属性语法:
               <pre><code class="language-js line-numbers">  element.prop ( "属性名" );</code></pre>
@@ -787,7 +910,10 @@
         <div class="ls-cot">
           <p>前言</p>
           <ul>
-            <li>data () 方法可以在指定的元素上存取数据，并不会修改DOM元素结构。一旦页面刷新，之前存放的数据都将被移除。</li>
+            <li>
+              data ()
+              方法可以在指定的元素上存取数据，并不会修改DOM元素结构。一旦页面刷新，之前存放的数据都将被移除。
+            </li>
             <li>
               附加数据语法：
               <pre><code class="language-js line-numbers">  data( "属性名" , "属性" );</code></pre>
@@ -799,7 +925,10 @@
             <li>
               获取自定义属性：
               <ol>
-                <li>这个方法获取data-index h5自定义属性，第一个不用写data- ，而且返回的是数字型，而attr()返回的是字符型，需要加上data-</li>
+                <li>
+                  这个方法获取data-index h5自定义属性，第一个不用写data-
+                  ，而且返回的是数字型，而attr()返回的是字符型，需要加上data-
+                </li>
               </ol>
             </li>
           </ul>
@@ -810,11 +939,17 @@
         <div class="ls-cot">
           <p>思路</p>
           <ol>
-            <li>全选思路：里面3个小的复选框按钮（j-checkbox）选中状态（checked）跟着全选按钮（checkAll）走。</li>
-            <li>因为checked是复选框的固有属性，此时我们需要利用prop（）方法获取和设置该属性。</li>
+            <li>
+              全选思路：里面3个小的复选框按钮（j-checkbox）选中状态（checked）跟着全选按钮（checkAll）走。
+            </li>
+            <li>
+              因为checked是复选框的固有属性，此时我们需要利用prop（）方法获取和设置该属性。
+            </li>
             <li>把全选按钮状态赋值给3小复选框就可以了。</li>
             <li>当我们每次点击小的复选框按钮，就来判断：</li>
-            <li>如果小复选框被选中的个数等于3就应该把全选按钮选上，否则全选按钮不选。</li>
+            <li>
+              如果小复选框被选中的个数等于3就应该把全选按钮选上，否则全选按钮不选。
+            </li>
             <li>:checked选择器：checked查找被选中的表单元素。</li>
           </ol>
           <pre><code class="language-js line-numbers">  $(".checkAll").change(function () {
@@ -866,7 +1001,9 @@
             <li>
               遍历元素
               <ol>
-                <li>jQuery隐式迭代是对同一类元素做了同样的操作。如果想要给同一类元素做不同操作，就需要用到遍历。</li>
+                <li>
+                  jQuery隐式迭代是对同一类元素做了同样的操作。如果想要给同一类元素做不同操作，就需要用到遍历。
+                </li>
                 <li>
                   遍历方法1 语法
                   <pre><code class="language-html line-numbers">  &lt;script&gt;&gt;
@@ -924,9 +1061,16 @@ $.each({                            // 遍历对象
         <div class="ls-cot">
           <p>前言</p>
           <ul>
-            <li>核心思路：首先声明一个变量，当我们点击+号（increment），就让这个值++，然后赋值给文本框。</li>
-            <li>注意1：只能增加本商品的数量，就是当前+号的兄弟文本框（itxt）的值。修改表单的值是val()方法</li>
-            <li>注意2：这个变量初始值应该是这个文本框的值，在这个值的基础上++。要获取表单的值, 减号（decrement）思路同理，但是如果文本框的值是1，就不能再减了。</li>
+            <li>
+              核心思路：首先声明一个变量，当我们点击+号（increment），就让这个值++，然后赋值给文本框。
+            </li>
+            <li>
+              注意1：只能增加本商品的数量，就是当前+号的兄弟文本框（itxt）的值。修改表单的值是val()方法
+            </li>
+            <li>
+              注意2：这个变量初始值应该是这个文本框的值，在这个值的基础上++。要获取表单的值,
+              减号（decrement）思路同理，但是如果文本框的值是1，就不能再减了。
+            </li>
           </ul>
           <pre><code class="language-js line-numbers">  $(".increment").click(function () {
       var n = $(this).siblings(".text").val();
@@ -943,13 +1087,24 @@ $.each({                            // 遍历对象
   });</code></pre>
           <p>购物车修改商品小计分析</p>
           <ol>
-            <li>核心思路：每次点击+号或者一号，根据文本框的值乘以当前商品的价格就是商品的小计</li>
-            <li>注意1：只能增加本商品的小计，就是当前商品的小计模块（p-sum）</li>
+            <li>
+              核心思路：每次点击+号或者一号，根据文本框的值乘以当前商品的价格就是商品的小计
+            </li>
+            <li>
+              注意1：只能增加本商品的小计，就是当前商品的小计模块（p-sum）
+            </li>
             <li>修改普通元素的内容是text()方法</li>
-            <li>注意2：当前商品的价格，要把￥符号去掉再相乘截取字符串substr（1）</li>
+            <li>
+              注意2：当前商品的价格，要把￥符号去掉再相乘截取字符串substr（1）
+            </li>
             <li>parents（‘选择器”）可以返回指定祖先元素</li>
-            <li>最后计算的结果如果想要保留2位小数通过 .toFixed（2）方法，数字可写想保留几位的数字</li>
-            <li>用户也可以直接修改表单里面的值，同样要计算小计。用表单change事件</li>
+            <li>
+              最后计算的结果如果想要保留2位小数通过
+              .toFixed（2）方法，数字可写想保留几位的数字
+            </li>
+            <li>
+              用户也可以直接修改表单里面的值，同样要计算小计。用表单change事件
+            </li>
             <li>用最新的表单内的值乘以单价即可但是还是当前商品小计</li>
           </ol>
         </div>
@@ -1052,9 +1207,15 @@ $.each({                            // 遍历对象
               商品删除模块：
               <ol>
                 <li>核心思路：把商品remove0删除元素即可</li>
-                <li>有三个地方需要删除：1.商品后面的删除按钮2.删除选中的商品3.清理购物车</li>
-                <li>商品后面的删除按钮：一定是删除当前的商品，所以从$（this）出发</li>
-                <li>删除选中的商品：先判断小的复选框按钮是否选中状态，如果是选中，则删除对应的商品</li>
+                <li>
+                  有三个地方需要删除：1.商品后面的删除按钮2.删除选中的商品3.清理购物车
+                </li>
+                <li>
+                  商品后面的删除按钮：一定是删除当前的商品，所以从$（this）出发
+                </li>
+                <li>
+                  删除选中的商品：先判断小的复选框按钮是否选中状态，如果是选中，则删除对应的商品
+                </li>
                 <li>每次删除都要调用计总函数 getSum();</li>
               </ol>
             </li>
@@ -1062,8 +1223,12 @@ $.each({                            // 遍历对象
               购物车选中商品添加背景
               <ol>
                 <li>核心思路：选中的商品添加背景，不选中移除背景即可</li>
-                <li>全选按钮点击：如果全选是选中的，则所有的商品添加背景，否则移除背景</li>
-                <li>小的复选框点击：如果是选中状态，则当前商品添加背景，否则移除背景</li>
+                <li>
+                  全选按钮点击：如果全选是选中的，则所有的商品添加背景，否则移除背景
+                </li>
+                <li>
+                  小的复选框点击：如果是选中状态，则当前商品添加背景，否则移除背景
+                </li>
                 <li>这个背景，可以通过类名修改，添加类和删除类</li>
               </ol>
             </li>
@@ -1086,15 +1251,24 @@ $.each({                            // 遍历对象
             <li>
               offset()设置或获取元素偏移 //取决于文档
               <ol>
-                <li>offset0方法设置或返回被选元素相对于文档的偏移坐标，跟父级没有关系。</li>
-                <li>该方法有2个属性left、top。offset().top用于获取距离文档顶部的距离，offset().left用于获取距离文档左侧的距离。</li>
-                <li>可以设置（修改）元素的偏移：offset（{top：10，left：30}）； 只对文档，不对父盒子</li>
+                <li>
+                  offset0方法设置或返回被选元素相对于文档的偏移坐标，跟父级没有关系。
+                </li>
+                <li>
+                  该方法有2个属性left、top。offset().top用于获取距离文档顶部的距离，offset().left用于获取距离文档左侧的距离。
+                </li>
+                <li>
+                  可以设置（修改）元素的偏移：offset（{top：10，left：30}）；
+                  只对文档，不对父盒子
+                </li>
               </ol>
             </li>
             <li>
               position()获取元素偏移 //取决于父亲，并且只对可见元素有效
               <ol>
-                <li>position()方法用于返回被选元素相对于带有定位的父级偏移坐标，如果父级都没有定位，则以文档为准。</li>
+                <li>
+                  position()方法用于返回被选元素相对于带有定位的父级偏移坐标，如果父级都没有定位，则以文档为准。
+                </li>
                 <li>position()方法只能获取 不能设置偏移</li>
               </ol>
             </li>
@@ -1114,8 +1288,14 @@ $.each({                            // 遍历对象
               <ol>
                 <li>核心原理：使用animate动画返回顶部。</li>
                 <li>animate动画函数里面有个scrollTop属性，可以设置位置</li>
-                <li>但是是元素做动画，因此$（"body，html"）.stop().animate( { scrollTop : 0 });</li>
-                <li>$( document) .stop().animate({scrollTop: 0}) 这样写是错误的，因为是元素做动画，不是文档</li>
+                <li>
+                  但是是元素做动画，因此$（"body，html"）.stop().animate( {
+                  scrollTop : 0 });
+                </li>
+                <li>
+                  $( document) .stop().animate({scrollTop: 0})
+                  这样写是错误的，因为是元素做动画，不是文档
+                </li>
               </ol>
             </li>
             <li>
@@ -1142,12 +1322,22 @@ $.each({                            // 遍历对象
             <li>
               需要改进：
               <ol>
-                <li>当页面刷新时不会触发这个时间，所以需要把滚动封装成函数，当页面刷新时调用一次，滚动时也会调用。</li>
+                <li>
+                  当页面刷新时不会触发这个时间，所以需要把滚动封装成函数，当页面刷新时调用一次，滚动时也会调用。
+                </li>
                 <li>当选中的li，需要添加current 类名，其他兄弟移除 类名</li>
-                <li>当我们页面滚动到内容区域某个模块，左侧电梯导航，相对应的i模块，也会添加current类，兄弟移除current类。</li>
-                <li>触发的事件是页面滚动，因此这个功能要写到页面滚动事件里面。</li>
-                <li>需要用到each，遍历内容区域大模块。each里面能拿到内容区域每一个模块元素和索引号</li>
-                <li>当我们点击了小1i此时不需要执行页面滚动事件里面的1i的背景选择添加currentl。需要添加节流阀，也叫互斥锁</li>
+                <li>
+                  当我们页面滚动到内容区域某个模块，左侧电梯导航，相对应的i模块，也会添加current类，兄弟移除current类。
+                </li>
+                <li>
+                  触发的事件是页面滚动，因此这个功能要写到页面滚动事件里面。
+                </li>
+                <li>
+                  需要用到each，遍历内容区域大模块。each里面能拿到内容区域每一个模块元素和索引号
+                </li>
+                <li>
+                  当我们点击了小1i此时不需要执行页面滚动事件里面的1i的背景选择添加currentl。需要添加节流阀，也叫互斥锁
+                </li>
               </ol>
             </li>
           </ul>
@@ -1172,7 +1362,9 @@ $.each({                            // 遍历对象
                 <li>
                   element.on(events,[selector],fn)
                   <ol>
-                    <li>events：一个或多个用空格分隔的事件类型，如“click“或“keydown"。是以对象形式写的</li>
+                    <li>
+                      events：一个或多个用空格分隔的事件类型，如“click“或“keydown"。是以对象形式写的
+                    </li>
                     <li>selector：元素的子元素选择器。</li>
                     <li>fn：回调函数即绑定在元素身上的侦听函数。</li>
                   </ol>
@@ -1198,7 +1390,9 @@ $.each({                            // 遍历对象
             <li>
               on() 方法优势2：
               <ul>
-                <li>可以事件委派操作。事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。</li>
+                <li>
+                  可以事件委派操作。事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。
+                </li>
               </ul>
               <pre><code class="language-js line-numbers">  $(function () {
       $(' ul').on(' click', '1i', function () {
@@ -1213,15 +1407,23 @@ $.each({                            // 遍历对象
             <li>
               事件处理one ()：
               <ul>
-                <li>写法跟 on()是一样的，作用也是一样的，都是可以绑定事件处理程序</li>
-                <li>one() 和 on ()的区别，one()事件只会触发一次，不需要解绑，但是 on() 需要，也需要解绑事件</li>
+                <li>
+                  写法跟 on()是一样的，作用也是一样的，都是可以绑定事件处理程序
+                </li>
+                <li>
+                  one() 和 on ()的区别，one()事件只会触发一次，不需要解绑，但是
+                  on() 需要，也需要解绑事件
+                </li>
                 <li>相当于一次性</li>
               </ul>
             </li>
             <li>
               自动触发事件trigger()：
               <ul>
-                <li>有些事件希望自动触发，比如轮播图自动播放功能跟点击右侧按钮一致。可以利用定时器自动触发右侧按钮点击事件 不用鼠标点击触发。相当于定时器的效果</li>
+                <li>
+                  有些事件希望自动触发，比如轮播图自动播放功能跟点击右侧按钮一致。可以利用定时器自动触发右侧按钮点击事件
+                  不用鼠标点击触发。相当于定时器的效果
+                </li>
                 <li>
                   语法
                   <pre><code class="language-js line-numbers">  element.click();                        // 第一种写法，会触发元素的默认行为
@@ -1263,7 +1465,10 @@ $.each({                            // 遍历对象
                 <li>阻止冒泡：event.stopPropagation（）</li>
               </ol>
             </li>
-            <li>长按press事件会导致浏览器弹出菜单，苹果的可以用-webkit-touch-callout: none;来禁止，但是安卓的不行。</li>
+            <li>
+              长按press事件会导致浏览器弹出菜单，苹果的可以用-webkit-touch-callout:
+              none;来禁止，但是安卓的不行。
+            </li>
             <li>
               禁止弹出只能用js来控制:
               <pre><code class="language-js line-numbers">  // 移动端禁止长按触发菜单
@@ -1279,7 +1484,9 @@ $.each({                            // 遍历对象
         <div class="ls-cot">
           <p>前言</p>
           <ul>
-            <li>如果想要把某个对象拷贝（合并）给另外一个对象使用，此时可以使用S.extend（）方法</li>
+            <li>
+              如果想要把某个对象拷贝（合并）给另外一个对象使用，此时可以使用S.extend（）方法
+            </li>
             <li>
               语法：
               <pre><code class="language-js line-numbers">  $.extend([deep],target,object1,[objectN])</code></pre>
@@ -1288,23 +1495,36 @@ $.each({                            // 遍历对象
                 <li>target：要拷贝的目标对象</li>
                 <li>object1：待拷到到第一个对象的对象。</li>
                 <li>objectN：待拷贝到第N个对象的对象。</li>
-                <li>浅拷贝是把被拷贝的对象复杂数据类型中的地址拷贝给目标对象，修改目标对象会影响被拷贝对象。</li>
+                <li>
+                  浅拷贝是把被拷贝的对象复杂数据类型中的地址拷贝给目标对象，修改目标对象会影响被拷贝对象。
+                </li>
               </ol>
             </li>
             <li>
               过程
               <ol>
-                <li>浅拷贝会把复杂类型的地址给拷贝过去，而不是值，targetObj自己用地址来调用这个复杂类型数据</li>
+                <li>
+                  浅拷贝会把复杂类型的地址给拷贝过去，而不是值，targetObj自己用地址来调用这个复杂类型数据
+                </li>
                 <li>当targetObj修改了 msg的属性值，也会影响obj里的属性值</li>
-                <li>当targetObj里也有 msg 复杂数据类型，浅拷贝的话，会和obj的msg的数据类型冲突，从而会直接覆盖掉</li>
+                <li>
+                  当targetObj里也有 msg
+                  复杂数据类型，浅拷贝的话，会和obj的msg的数据类型冲突，从而会直接覆盖掉
+                </li>
               </ol>
             </li>
             <li>
               深拷贝
               <ol>
-                <li>深拷贝，前面需要加true，完全克隆（拷贝的对象而不是地址），修改目标对象不会影响被拷贝对象。</li>
-                <li>深拷贝过程，会完全拷贝，而且复杂数据类型会重新开辟一个空间，而不是像浅拷贝一样指向同一个地址</li>
-                <li>因为不是指向同一个地址，所以当修改复杂数据类型的值时，不会影响，而且数据会合并，而不是覆盖</li>
+                <li>
+                  深拷贝，前面需要加true，完全克隆（拷贝的对象而不是地址），修改目标对象不会影响被拷贝对象。
+                </li>
+                <li>
+                  深拷贝过程，会完全拷贝，而且复杂数据类型会重新开辟一个空间，而不是像浅拷贝一样指向同一个地址
+                </li>
+                <li>
+                  因为不是指向同一个地址，所以当修改复杂数据类型的值时，不会影响，而且数据会合并，而不是覆盖
+                </li>
               </ol>
             </li>
           </ul>
@@ -1321,8 +1541,14 @@ $.each({                            // 遍历对象
                 <li>
                   $符号作为标识符，怎么用原生js实现的：
                   <ol>
-                    <li>原因很简单，把 $作为了函数名，封装了一个函数，并传递参数，且有返回值；</li>
-                    <li>这样 $('div') 相当于调用函数，并且传入实参，但是注意，这样写是调用不了jQuery的方法的，会报错</li>
+                    <li>
+                      原因很简单，把
+                      $作为了函数名，封装了一个函数，并传递参数，且有返回值；
+                    </li>
+                    <li>
+                      这样 $('div')
+                      相当于调用函数，并且传入实参，但是注意，这样写是调用不了jQuery的方法的，会报错
+                    </li>
                   </ol>
                 </li>
               </ul>
@@ -1334,14 +1560,21 @@ $.each({                            // 遍历对象
             <li>
               可观需求：
               <ul>
-                <li>需要一个解决方案，让jQuery和其他的s库不存在冲突，可以同时存在，这就叫做多库共存。</li>
+                <li>
+                  需要一个解决方案，让jQuery和其他的s库不存在冲突，可以同时存在，这就叫做多库共存。
+                </li>
               </ul>
             </li>
             <li>
               jQuery解决方案：
               <ul>
-                <li>如果是$符号冲突，把里面的$符号统一改为jQuery。比如jQuery（“div'）</li>
-                <li>jQuery变量规定新的名称：$.noConflict () var xx= $.noConflict0； ,意思是不冲突，自己定义名称</li>
+                <li>
+                  如果是$符号冲突，把里面的$符号统一改为jQuery。比如jQuery（“div'）
+                </li>
+                <li>
+                  jQuery变量规定新的名称：$.noConflict () var xx=
+                  $.noConflict0； ,意思是不冲突，自己定义名称
+                </li>
                 <li>
                   例如：
                   <pre><code class="language-js line-numbers">  var zidingyimingcheng  = jQuery. noConflict ();
@@ -1352,19 +1585,31 @@ $.each({                            // 遍历对象
           </ol>
           <p>共存2</p>
           <ul>
-            <li>jQuery功能比较有限，想要更复杂的特效效果，可以借助于jQuery插件完成。</li>
+            <li>
+              jQuery功能比较有限，想要更复杂的特效效果，可以借助于jQuery插件完成。
+            </li>
             <li>
               注意：这些插件也是依赖于jQuery来完成的，所以必须要先引入jQuery文件，因此也称为jQuery插件。
               <ol>
                 <li>
                   jQuery插件库
-                  <el-link type="primary" icon="Link" target="_blank" href="http://www.jq22.com/">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="http://www.jq22.com/"
+                  >
                     http://www.jq22.com/
                   </el-link>
                 </li>
                 <li>
                   jQuery之家(推荐)
-                  <el-link type="primary" icon="Link" target="_blank" href="http://www.htmleaf.com/">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="http://www.htmleaf.com/"
+                  >
                     http://www.htmleaf.com/
                   </el-link>
                 </li>
@@ -1380,16 +1625,24 @@ $.each({                            // 遍历对象
               </ol>
             </li>
             <li>瀑布流</li>
-            <li>图片懒加载（图片使用延迟加载在可提高网页下载速度。它也能帮助减轻服务器负载）</li>
+            <li>
+              图片懒加载（图片使用延迟加载在可提高网页下载速度。它也能帮助减轻服务器负载）
+            </li>
             <li>
               当我们页面滑动到可视区域，再显示图片
               <ol>
                 <li>插件 库下载插件 http://www.jq22.com/，搜索懒加载</li>
 
-                <li>把dist 复制项目js 文件下，然后html页面引入EasyLazyload.min.js 和 jQuery.min.js</li>
+                <li>
+                  把dist 复制项目js 文件下，然后html页面引入EasyLazyload.min.js
+                  和 jQuery.min.js
+                </li>
                 <li>修改img 的src</li>
                 <li>ctrl +h 输入 &lt;img src= 替换成 &lt;img data-lazy-src=</li>
-                <li>我们使用iquery插件库EasyLazyLoad。注意，此时的js引入文件和js调用必须写到DOM元素（图片）的最后面，先有图片 尾部复制调用</li>
+                <li>
+                  我们使用iquery插件库EasyLazyLoad。注意，此时的js引入文件和js调用必须写到DOM元素（图片）的最后面，先有图片
+                  尾部复制调用
+                </li>
               </ol>
               <pre><code class="language-js line-numbers">  lazyLoadInit({
       coverColor: "white",
@@ -1410,13 +1663,23 @@ $.each({                            // 遍历对象
               <ol>
                 <li>
                   gitHub:
-                  <el-link type="primary" icon="Link" target="_blank" href="https://github.com/alvarotrigo/fullPage.js">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="https://github.com/alvarotrigo/fullPage.js"
+                  >
                     https://github.com/alvarotrigo/fullPage.js
                   </el-link>
                 </li>
                 <li>
                   中文翻译网站：
-                  <el-link type="primary" icon="Link" target="_blank" href="http://www.dowebok.com/demo/2014/77/">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="http://www.dowebok.com/demo/2014/77/"
+                  >
                     http://www.dowebok.com/demo/2014/77/
                   </el-link>
                 </li>
@@ -1463,29 +1726,49 @@ $.each({                            // 遍历对象
           <p>前言</p>
           <ol>
             <li>刷新页面不会丢失数据，因此需要用到本地存储localStorage</li>
-            <li>核心思路：不管按下回车，还是点击复选框，都是把本地存储的数据加载到页面中，这样保证刷新关闭页面不会丢失数据</li>
+            <li>
+              核心思路：不管按下回车，还是点击复选框，都是把本地存储的数据加载到页面中，这样保证刷新关闭页面不会丢失数据
+            </li>
             <li>存储的数据格式：var toDoList=[{title:‘xxx'，done:false}]</li>
-            <li>注意点1：本地存储 localStorage里面只能存储字符串格式，因此需要把对象转换为字符串JSON.stringify（）。</li>
-            <li>注意点2：获取本地存储数据，需要把里面的字符串转换为对象格式JSON.parse（）我们才能使用里面的数据。</li>
+            <li>
+              注意点1：本地存储
+              localStorage里面只能存储字符串格式，因此需要把对象转换为字符串JSON.stringify（）。
+            </li>
+            <li>
+              注意点2：获取本地存储数据，需要把里面的字符串转换为对象格式JSON.parse（）我们才能使用里面的数据。
+            </li>
             <li>利用事件对象.keyCode判断用户按下回车键（13）。</li>
             <li>声明一个数组，保存数据</li>
-            <li>先要读取本地存储原来的数据（声明函数getData()），放到这个数组里面。</li>
+            <li>
+              先要读取本地存储原来的数据（声明函数getData()），放到这个数组里面。
+            </li>
             <li>之后把最新从表单获取过来的数据，追加到数组里面。</li>
             <li>最后把数组存储给本地存储（声明函数savaDate()）</li>
             <li>点击里面的a链接，不是删除的i，而是删除本地存储对应的数据。</li>
-            <li>核心原理：先获取本地存储数据，删除对应的数据，保存给本地存储，重新渲染列表li</li>
+            <li>
+              核心原理：先获取本地存储数据，删除对应的数据，保存给本地存储，重新渲染列表li
+            </li>
             <li>我们可以给链接自定义属性记录当前的索引号</li>
-            <li>根据这个索引号删除相关的数据----数组的splice（i，1）方法 ，第一个参数是从哪个位置开始删除，第二个参数是删除几个</li>
+            <li>
+              根据这个索引号删除相关的数据----数组的splice（i，1）方法
+              ，第一个参数是从哪个位置开始删除，第二个参数是删除几个
+            </li>
             <li>存储修改后的数据，然后存储给本地存储</li>
             <li>重新渲染加载数据列表</li>
             <li>因为a是动态创建的，我们使用on方法绑定事件</li>
-            <li>当我们点击了小的复选框，修改本地存储数据，再重新渲染数据列表。</li>
+            <li>
+              当我们点击了小的复选框，修改本地存储数据，再重新渲染数据列表。
+            </li>
             <li>点击之后，获取本地存储数据。</li>
             <li>修改对应数据属性done为当前复选框的checked状态。</li>
             <li>之后保存数据到本地存储</li>
             <li>重新渲染加载数据列表</li>
-            <li>load加载函数里面，新增一个条件，如果当前数据的done为true就是已经完成的，就把列表渲染加载到ul里面</li>
-            <li>如果当前数据的done为false，则是待办事项，就把列表渲染加载到ol里面</li>
+            <li>
+              load加载函数里面，新增一个条件，如果当前数据的done为true就是已经完成的，就把列表渲染加载到ul里面
+            </li>
+            <li>
+              如果当前数据的done为false，则是待办事项，就把列表渲染加载到ol里面
+            </li>
           </ol>
           <pre><code class="language-html line-numbers">  &lt;!-- html --&gt;
   &lt;body&gt;
@@ -1673,45 +1956,43 @@ $.each({                            // 遍历对象
   &lt;/div&gt;</code></pre>
         </div>
       </el-card>
-      <div style="height: 200px">
-        1
-      </div>
+      <div style="height: 200px">1</div>
     </template>
   </card-container>
 </template>
 
 <script setup lang="ts" name="jQueryPage ">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: '简介与下载' },
-  { id: 2, h2: 'jQuery的使用步骤' },
-  { id: 3, h2: 'jQuery和 DOM' },
-  { id: 4, h2: 'jQuery API' },
-  { id: 5, h2: 'jQuery设置样式' },
-  { id: 6, h2: '排他思想' },
-  { id: 7, h2: '链式编程' },
-  { id: 8, h2: '操作css方法' },
-  { id: 9, h2: 'jQuery效果' },
-  { id: 10, h2: '事件切换' },
-  { id: 11, h2: 'jQuery事件' },
-  { id: 12, h2: '动画队列及其停止排队方法' },
-  { id: 13, h2: 'jQuery 属性操作' },
-  { id: 14, h2: '数据缓存 data()' },
-  { id: 15, h2: '全选按钮' },
-  { id: 16, h2: 'jQuery文本属性值' },
-  { id: 17, h2: 'jQuery元素操作' },
-  { id: 18, h2: '购物车模块，删减数量' },
-  { id: 19, h2: '购物车总计' },
-  { id: 10, h2: '创建 添加 删除' },
-  { id: 21, h2: '尺寸和位置操作' },
-  { id: 22, h2: '事情注册' },
-  { id: 23, h2: '解绑事件' },
-  { id: 24, h2: '事件对象' },
-  { id: 25, h2: 'jQuery其他方法' },
-  { id: 26, h2: '多库共存' },
-  { id: 27, h2: 'toDoList 分析' },
-  { id: 28, h2: '移动端的轮播图' }
+  { id: 1, h2: "简介与下载" },
+  { id: 2, h2: "jQuery的使用步骤" },
+  { id: 3, h2: "jQuery和 DOM" },
+  { id: 4, h2: "jQuery API" },
+  { id: 5, h2: "jQuery设置样式" },
+  { id: 6, h2: "排他思想" },
+  { id: 7, h2: "链式编程" },
+  { id: 8, h2: "操作css方法" },
+  { id: 9, h2: "jQuery效果" },
+  { id: 10, h2: "事件切换" },
+  { id: 11, h2: "jQuery事件" },
+  { id: 12, h2: "动画队列及其停止排队方法" },
+  { id: 13, h2: "jQuery 属性操作" },
+  { id: 14, h2: "数据缓存 data()" },
+  { id: 15, h2: "全选按钮" },
+  { id: 16, h2: "jQuery文本属性值" },
+  { id: 17, h2: "jQuery元素操作" },
+  { id: 18, h2: "购物车模块，删减数量" },
+  { id: 19, h2: "购物车总计" },
+  { id: 10, h2: "创建 添加 删除" },
+  { id: 21, h2: "尺寸和位置操作" },
+  { id: 22, h2: "事情注册" },
+  { id: 23, h2: "解绑事件" },
+  { id: 24, h2: "事件对象" },
+  { id: 25, h2: "jQuery其他方法" },
+  { id: 26, h2: "多库共存" },
+  { id: 27, h2: "toDoList 分析" },
+  { id: 28, h2: "移动端的轮播图" },
 ]);
 </script>
 

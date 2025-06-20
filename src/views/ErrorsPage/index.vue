@@ -2,8 +2,6 @@
   <div>404</div>
 </template>
 
-<script setup lang='ts' name='404Page'>
+<script setup lang="ts" name="404Page"></script>
 
-</script>
-
-<style scoped lang='scss'></style>
+<style scoped lang="scss"></style>

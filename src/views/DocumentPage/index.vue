@@ -16,11 +16,11 @@
   </div>
 </template>
 
-<script setup lang='ts' name='DocumentPage'>
-import { ref } from 'vue';
-import AsideMenu from '@/views/DocumentPage/AsideMenu/index.vue';
-import ContentMain from '@/views/DocumentPage/ContentMain/index.vue';
-import NavBar from '@/views/DocumentPage/NavBar/index.vue';
+<script setup lang="ts" name="DocumentPage">
+import { ref } from "vue";
+import AsideMenu from "@/views/DocumentPage/AsideMenu/index.vue";
+import ContentMain from "@/views/DocumentPage/ContentMain/index.vue";
+import NavBar from "@/views/DocumentPage/NavBar/index.vue";
 
 const isCollapseWidth = ref();
 
@@ -29,7 +29,7 @@ function getIsCollapse(data: boolean) {
 }
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .container {
   position: relative;
   display: flex;

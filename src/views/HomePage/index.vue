@@ -13,13 +13,13 @@
           </div>
           <div class="home-bg-main-b5-3"></div>
           <div class="home-bg-main-b5-4">
-            <h1 @click="goToHome">
-              Hi, I'm XIONGBAB.
-            </h1>
+            <h1 @click="goToHome">Hi, I'm XIONGBAB.</h1>
             <p>
-              I am an amateur developer and learning programming is my hobby. At present, I have learned HTML, CSS,
-              Javascript, and Vue3, but of course, this is still in the learning stage. If you can, you can provide me
-              with some guidance on optimization on the website I have written. Thank you!
+              I am an amateur developer and learning programming is my hobby. At
+              present, I have learned HTML, CSS, Javascript, and Vue3, but of
+              course, this is still in the learning stage. If you can, you can
+              provide me with some guidance on optimization on the website I
+              have written. Thank you!
             </p>
           </div>
         </div>
@@ -29,7 +29,7 @@
         <div class="home-bg-main-b9">
           <div class="home-main-dev">
             <i></i>
-            <p>development time June 6th, 2025 </p>
+            <p>development time June 6th, 2025</p>
           </div>
           <div class="home-main-switch">
             <el-icon size="18">
@@ -43,17 +43,17 @@
   </div>
 </template>
 
-<script setup lang='ts' name='HomePage'>
-import { useRouter } from 'vue-router';
+<script setup lang="ts" name="HomePage">
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 
 function goToHome() {
-  router.push('/data');
+  router.push("/data");
 }
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .home-bg {
   width: 100%;
   height: 100%;
@@ -73,7 +73,7 @@ function goToHome() {
 
   .home-bg-circle {
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       bottom: 0;
@@ -87,7 +87,7 @@ function goToHome() {
     }
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       bottom: 0;
@@ -192,13 +192,13 @@ function goToHome() {
     min-width: 140px;
     width: 140px;
     height: 140px;
-    background: url('@/assets/images/avatar.png') no-repeat center center;
+    background: url("@/assets/images/avatar.png") no-repeat center center;
     background-size: 85%;
     border-radius: $bd-radius-circle;
     box-shadow: 0 0 0 2px $bd-color-white;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;
@@ -228,7 +228,7 @@ function goToHome() {
     border-right: 1px dashed $bd-bg-line;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;

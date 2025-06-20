@@ -2,14 +2,40 @@
   <div class="aside-menu" :class="{ 'aside-menu-active': isCollapse }">
     <div class="aside-menu-top">
       <svg
-        t="1750147474497" class="icon aside-menu-top-logo" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-        p-id="13340" width="36" height="36"
-      ><path d="M896 234.666667V298.666667c0 11.946667-9.386667 21.333333-21.333333 21.333333S853.333333 310.613333 853.333333 298.666667V213.333333h-59.733333c-37.546667 0-68.266667-30.72-68.266667-68.266666V85.333333H170.666667c-23.466667 0-42.666667 19.2-42.666667 42.666667v768c0 23.466667 19.2 42.666667 42.666667 42.666667h533.333333c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H170.666667c-46.933333 0-85.333333-38.4-85.333334-85.333333V128c0-46.933333 38.4-85.333333 85.333334-85.333333h582.826666L896 184.32V234.666667z" fill="" p-id="13341" /><path d="M661.333333 341.333333h-384c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333h384c11.946667 0 21.333333 9.386667 21.333334 21.333333s-9.386667 21.333333-21.333334 21.333333z m-384 85.333334h341.333334c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-341.333334c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z m0 128h170.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-170.666667c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z" fill="" p-id="13342" /><path d="M960 810.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v85.333334h106.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v21.333334c0 11.946667-9.386667 21.333333-21.333333 21.333333s-21.333333-9.386667-21.333333-21.333333v-322.133334c-72.106667-10.24-128-72.106667-128-147.2 0-82.346667 66.986667-149.333333 149.333333-149.333333s149.333333 66.986667 149.333333 149.333333c0 75.093333-55.893333 136.96-128 147.2V810.666667h106.666667z m-26.88-277.333334a101.12 101.12 0 0 0-101.546667-101.12c-55.893333 0-101.546667 45.226667-101.546666 101.12s45.226667 101.546667 101.546666 101.546667a101.802667 101.802667 0 0 0 101.546667-101.546667z" fill="#CC8752" p-id="13343" /></svg>
+        t="1750147474497"
+        class="icon aside-menu-top-logo"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="13340"
+        width="36"
+        height="36"
+      >
+        <path
+          d="M896 234.666667V298.666667c0 11.946667-9.386667 21.333333-21.333333 21.333333S853.333333 310.613333 853.333333 298.666667V213.333333h-59.733333c-37.546667 0-68.266667-30.72-68.266667-68.266666V85.333333H170.666667c-23.466667 0-42.666667 19.2-42.666667 42.666667v768c0 23.466667 19.2 42.666667 42.666667 42.666667h533.333333c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H170.666667c-46.933333 0-85.333333-38.4-85.333334-85.333333V128c0-46.933333 38.4-85.333333 85.333334-85.333333h582.826666L896 184.32V234.666667z"
+          fill=""
+          p-id="13341"
+        />
+        <path
+          d="M661.333333 341.333333h-384c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333h384c11.946667 0 21.333333 9.386667 21.333334 21.333333s-9.386667 21.333333-21.333334 21.333333z m-384 85.333334h341.333334c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-341.333334c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z m0 128h170.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-170.666667c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z"
+          fill=""
+          p-id="13342"
+        />
+        <path
+          d="M960 810.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v85.333334h106.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v21.333334c0 11.946667-9.386667 21.333333-21.333333 21.333333s-21.333333-9.386667-21.333333-21.333333v-322.133334c-72.106667-10.24-128-72.106667-128-147.2 0-82.346667 66.986667-149.333333 149.333333-149.333333s149.333333 66.986667 149.333333 149.333333c0 75.093333-55.893333 136.96-128 147.2V810.666667h106.666667z m-26.88-277.333334a101.12 101.12 0 0 0-101.546667-101.12c-55.893333 0-101.546667 45.226667-101.546666 101.12s45.226667 101.546667 101.546666 101.546667a101.802667 101.802667 0 0 0 101.546667-101.546667z"
+          fill="#CC8752"
+          p-id="13343"
+        />
+      </svg>
       <div class="aside-menu-top-title">
         <h2>XIONGBAB丶</h2>
         <p>A rookie who can write code</p>
       </div>
-      <div class="nav-toggle" :class="{ 'nav-toggle-active': isCollapse }" @click="changeMenu">
+      <div
+        class="nav-toggle"
+        :class="{ 'nav-toggle-active': isCollapse }"
+        @click="changeMenu"
+      >
         <el-icon><ArrowRight /></el-icon>
       </div>
     </div>
@@ -43,7 +69,12 @@
       </el-autocomplete>
     </div>
     <div class="aside-collapse scroll">
-      <el-menu default-active="/data" unique-opened :collapse="isCollapse" class="el-menu-vertical-demo aside-collapse-menu">
+      <el-menu
+        default-active="/data"
+        unique-opened
+        :collapse="isCollapse"
+        class="el-menu-vertical-demo aside-collapse-menu"
+      >
         <MenuTree :menuList="menuStore.menuRoutes" />
       </el-menu>
     </div>
@@ -54,26 +85,26 @@
   </div>
 </template>
 
-<script setup lang='ts' name='AsideMenu'>
-import { onMounted, ref } from 'vue';
-import useMenuStore from '@/store/modules/menu';
-import MenuTree from '@/views/DocumentPage/AsideMenu/MenuTree/index.vue';
+<script setup lang="ts" name="AsideMenu">
+import { onMounted, ref } from "vue";
+import useMenuStore from "@/store/modules/menu";
+import MenuTree from "@/views/DocumentPage/AsideMenu/MenuTree/index.vue";
 
 // #region btn click change width start
-const $emit = defineEmits(['sendIsCollapse']);
+const $emit = defineEmits(["sendIsCollapse"]);
 
 const menuStore = useMenuStore();
 
 const isCollapse = ref(false);
 function changeMenu() {
-  $emit('sendIsCollapse', isCollapse.value);
+  $emit("sendIsCollapse", isCollapse.value);
   isCollapse.value = !isCollapse.value;
 }
 
 // #endregion btn click change width end
 
 // #region search start
-const state = ref('');
+const state = ref("");
 interface LinkItem {
   value: string;
   link: string;
@@ -81,8 +112,8 @@ interface LinkItem {
 const links = ref<LinkItem[]>([]);
 function loadAll() {
   return [
-    { value: 'vue', link: 'https://github.com/vuejs/vue' },
-    { value: 'element', link: 'https://github.com/ElemeFE/element' }
+    { value: "vue", link: "https://github.com/vuejs/vue" },
+    { value: "element", link: "https://github.com/ElemeFE/element" },
   ];
 }
 let timeout: ReturnType<typeof setTimeout>;
@@ -113,7 +144,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .aside-menu {
   position: absolute;
   top: 0;

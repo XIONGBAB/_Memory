@@ -2,12 +2,27 @@
   <card-container title="css" :data="data">
     <template #svg>
       <svg
-        width="40" height="40" t="1699148624812" class="icon" viewBox="0 0 1024 1024"
-        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9115"
-      ><path d="M512 512zM128.3 64.3l69.8 805.8 313.4 89.5L825.8 870l69.9-805.7H128.3z m580.9 669.3l-197.1 56.2-196.8-56.5L301.9 578h96.4l6.9 79.1 107.1 30.3 0.3 0.5h0.1l106.9-29.7L630.7 530H406.1l-8-99.9h241.1l8.8-101.9H280.2l-8-97.9H753l-43.8 503.3z" fill="#264DE4" p-id="9116" /></svg>
+        width="40"
+        height="40"
+        t="1699148624812"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="9115"
+      >
+        <path
+          d="M512 512zM128.3 64.3l69.8 805.8 313.4 89.5L825.8 870l69.9-805.7H128.3z m580.9 669.3l-197.1 56.2-196.8-56.5L301.9 578h96.4l6.9 79.1 107.1 30.3 0.3 0.5h0.1l106.9-29.7L630.7 530H406.1l-8-99.9h241.1l8.8-101.9H280.2l-8-97.9H753l-43.8 503.3z"
+          fill="#264DE4"
+          p-id="9116"
+        />
+      </svg>
     </template>
     <template #describe>
-      <p>CSS（Cascading Style Sheets，层叠样式表）是一种用于描述HTML或XML（包括XML的各种子集如SVG、MathML和XHTML）文档外观和样式的语言。CSS是一种标记语言，用于设置HTML结构的样式.通过CSS，可以控制网页的布局、字体、颜色、间距、边框、背景等视觉效果，使网页更加美观和用户友好。同时它将样式与HTML内容分离</p>
+      <p>
+        CSS（Cascading Style
+        Sheets，层叠样式表）是一种用于描述HTML或XML（包括XML的各种子集如SVG、MathML和XHTML）文档外观和样式的语言。CSS是一种标记语言，用于设置HTML结构的样式.通过CSS，可以控制网页的布局、字体、颜色、间距、边框、背景等视觉效果，使网页更加美观和用户友好。同时它将样式与HTML内容分离
+      </p>
     </template>
     <template #content>
       <el-card id="part1" shadow="hover">
@@ -244,10 +259,18 @@
         <div class="ls-cot">
           <p>前言</p>
           <ul>
-            <li>HTML(结构):“超文本标记语言”,主要作用把内容(文字、图片、视频等)放入网页中</li>
-            <li>CSS(样式):“层叠样式表”,主要作用给HTML进行样式的显示,如何的布局</li>
-            <li>Javascript(行为):“浏览器的脚本语言”,主要作用给HTML加动态效果(特效)</li>
-            <li>CSS特点:可以非常精准的定位,定位某个或某些标记,给这些标记加样式。HTML和CSS代码分离,减少后期工作量(单独写css文件)</li>
+            <li>
+              HTML(结构):“超文本标记语言”,主要作用把内容(文字、图片、视频等)放入网页中
+            </li>
+            <li>
+              CSS(样式):“层叠样式表”,主要作用给HTML进行样式的显示,如何的布局
+            </li>
+            <li>
+              Javascript(行为):“浏览器的脚本语言”,主要作用给HTML加动态效果(特效)
+            </li>
+            <li>
+              CSS特点:可以非常精准的定位,定位某个或某些标记,给这些标记加样式。HTML和CSS代码分离,减少后期工作量(单独写css文件)
+            </li>
           </ul>
         </div>
       </el-card>
@@ -386,7 +409,9 @@
       <el-card id="part8" shadow="hover">
         <h2>行元素、块元素、转换</h2>
         <div class="ls-cot">
-          <p>常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;等,其中&lt;div&gt;标签是最典型的块元素。</p>
+          <p>
+            常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;等,其中&lt;div&gt;标签是最典型的块元素。
+          </p>
           <ul>
             <li>
               块级元素的特点:
@@ -401,12 +426,18 @@
               注意：
               <ol>
                 <li>文字类的元素内不能使用块级元素</li>
-                <li>&lt;p&gt;标签主要用于存放文字,因此&lt;p&gt;里面不能放块级元素,特别是不能放&lt;div&gt;</li>
-                <li>同理,&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签,里面也不能放其他块级元素</li>
+                <li>
+                  &lt;p&gt;标签主要用于存放文字,因此&lt;p&gt;里面不能放块级元素,特别是不能放&lt;div&gt;
+                </li>
+                <li>
+                  同理,&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签,里面也不能放其他块级元素
+                </li>
               </ol>
             </li>
           </ul>
-          <p>常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等,行内元素也称为联元素</p>
+          <p>
+            常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等,行内元素也称为联元素
+          </p>
           <ul>
             <li>
               行内元素的特点:
@@ -418,12 +449,16 @@
               </ol>
             </li>
           </ul>
-          <p>在行内元素中有几个特殊的标签—&lt;img/&gt;、&lt;input/&gt;、&lt;td&gt;,它们同时具有块元素和行内元素的特点,称为行内块元素</p>
+          <p>
+            在行内元素中有几个特殊的标签—&lt;img/&gt;、&lt;input/&gt;、&lt;td&gt;,它们同时具有块元素和行内元素的特点,称为行内块元素
+          </p>
           <ul>
             <li>
               行内块元素的特点:
               <ol>
-                <li>相邻行内元素(行内块)在一行上,但是他们之间会有空白缝隙,一行可以显示多个(行内元素特点)。</li>
+                <li>
+                  相邻行内元素(行内块)在一行上,但是他们之间会有空白缝隙,一行可以显示多个(行内元素特点)。
+                </li>
                 <li>默认宽度就是它本身内容的宽度(行内元素特点)。</li>
                 <li>高度,行高、外边距以及内边距都可以控制(块级元素特点)。</li>
               </ol>
@@ -442,14 +477,18 @@
         <div class="ls-cot">
           <p>前言</p>
           <ol>
-            <li>CSS有三个非常重要的三个特性:层叠性、继承性、优先级。(相当于覆盖)</li>
+            <li>
+              CSS有三个非常重要的三个特性:层叠性、继承性、优先级。(相当于覆盖)
+            </li>
             <li>
               层叠性：相同选择器给设置相同的样式,此时一个样式就会覆盖另一个冲突的样式。层叠性主要解决样式冲突的问题
               <ul>
                 <li>
                   层叠性原则：
                   <ol>
-                    <li>样式冲突,遵循的原则是就近原则,哪个样式离结构近,就执行哪个样式</li>
+                    <li>
+                      样式冲突,遵循的原则是就近原则,哪个样式离结构近,就执行哪个样式
+                    </li>
                     <li>样式不冲突,不会层叠</li>
                   </ol>
                 </li>
@@ -459,7 +498,9 @@
               继承性：CSS中的继承,子标签会继承父标签的某些样式,如文本颜色和字号。简单的理解就是:子承父业。
               <ul>
                 <li>恰当地使用继承可以简化代码,降低CSS样式的复杂性</li>
-                <li>子元素可以继承父元素的样式(text-,font-,line-这些元素开头的可以继承,以及color属性),</li>
+                <li>
+                  子元素可以继承父元素的样式(text-,font-,line-这些元素开头的可以继承,以及color属性),
+                </li>
               </ul>
             </li>
             <li>
@@ -467,8 +508,12 @@
               <ul>
                 <li>body{font:12px/1.5 Microsoft YaHei;}</li>
                 <li>行高可以跟单位也可以不跟单位</li>
-                <li>如果子元素没有设置行高，则会继承父元素的行高为1.5，此时子元素的行高是:当前子元素的文字大小*1.5</li>
-                <li>body行高1.5这样写法最大的优势就是里面子元素可以根据自己文字大小自动调整行高</li>
+                <li>
+                  如果子元素没有设置行高，则会继承父元素的行高为1.5，此时子元素的行高是:当前子元素的文字大小*1.5
+                </li>
+                <li>
+                  body行高1.5这样写法最大的优势就是里面子元素可以根据自己文字大小自动调整行高
+                </li>
               </ul>
             </li>
             <li>
@@ -479,7 +524,8 @@
 0,0,1,0           类选择器,伪类选择器
 0,1,0,0           ID选择器
 1,0,0,0           行内样式 style=""
-!important        重要的 无穷大</pre>
+!important        重要的 无穷大</pre
+              >
             </li>
           </ol>
         </div>
@@ -630,7 +676,9 @@
             <li>
               在使用定位布局时,可能会出现盒子重叠的情况。此时,可以使用z-index来控制盒子的前后次序(z轴)
               <ol>
-                <li>数值可以是正整数、负整数或0,默认是auto,数值越大,盒子越靠上</li>
+                <li>
+                  数值可以是正整数、负整数或0,默认是auto,数值越大,盒子越靠上
+                </li>
                 <li>如果属性值相同,则按照书写顺序,后来居上</li>
                 <li>数字后面不能加单位</li>
                 <li>只有定位的盒子才有z-index属性</li>
@@ -639,9 +687,18 @@
           </ul>
           <p>总结</p>
           <ul>
-            <li>标准流: 可以让盒子上下排列或者左右排列,垂直的块级盒子显示就用标准流布局。</li>
-            <li>浮动: 可以让多个块级元素一行显示或者左右对齐盒子,多个块级盒子水平显示就用浮动布局。</li>
-            <li>定位: 定位最大的特点是有层叠的概念,就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。</li>
+            <li>
+              标准流:
+              可以让盒子上下排列或者左右排列,垂直的块级盒子显示就用标准流布局。
+            </li>
+            <li>
+              浮动:
+              可以让多个块级元素一行显示或者左右对齐盒子,多个块级盒子水平显示就用浮动布局。
+            </li>
+            <li>
+              定位:
+              定位最大的特点是有层叠的概念,就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。
+            </li>
           </ul>
         </div>
       </el-card>
@@ -665,15 +722,25 @@
               使用精灵图核心总结
               <ol>
                 <li>精灵图主要针对于小的背景图片使用。</li>
-                <li>主要借助于背景位置来实现 background-position: -5px -6px 。 // background-position-y: ; background-position-x :;</li>
-                <li>一般情况下精灵图都是负值。(千万注意网页中的坐标:x轴右边走是正值,左边走是负值,y轴同理。)</li>
+                <li>
+                  主要借助于背景位置来实现 background-position: -5px -6px 。 //
+                  background-position-y: ; background-position-x :;
+                </li>
+                <li>
+                  一般情况下精灵图都是负值。(千万注意网页中的坐标:x轴右边走是正值,左边走是负值,y轴同理。)
+                </li>
               </ol>
             </li>
             <li>
-              使用方法: 软件用FW精确测量精灵图的坐标,精灵图坐标不要加逗号,鼠标对着图片上的左上角
+              使用方法:
+              软件用FW精确测量精灵图的坐标,精灵图坐标不要加逗号,鼠标对着图片上的左上角
               <ol>
-                <li>FW打开图片(千万不要移动图片),然后在图层面板,锁住图片,让图片不能移动</li>
-                <li>使用切片工具,切出要的图片框起来,左下角有坐标和宽高,宽高可以修改值,XY可以修改</li>
+                <li>
+                  FW打开图片(千万不要移动图片),然后在图层面板,锁住图片,让图片不能移动
+                </li>
+                <li>
+                  使用切片工具,切出要的图片框起来,左下角有坐标和宽高,宽高可以修改值,XY可以修改
+                </li>
                 <li>写css样式</li>
                 <pre><code class="language-css line-numbers">  .box {
       width: 60px;
@@ -692,7 +759,10 @@
           <p>前言</p>
           <ul>
             <li>把logo切成png图片</li>
-            <li>把png 图片转换为ico 图标,这需要借助于第三方转换网站,例如比特虫: http://www.bitbug.net/</li>
+            <li>
+              把png 图片转换为ico 图标,这需要借助于第三方转换网站,例如比特虫:
+              http://www.bitbug.net/
+            </li>
             <li>转换成Ico图片后放入制作网页的根目录下(跟index.html同级)</li>
             <li>
               在html页面里面的 &lt;head&gt;&lt;/head&gt;元素之间引入代码
@@ -712,20 +782,35 @@
               <ol>
                 <li>
                   icomoon宇库：
-                  <el-link type="primary" icon="Link" target="_blank" href="http://icomoon.io">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="http://icomoon.io"
+                  >
                     http://icomoon.io
                   </el-link>
                   国外服务器,打开慢
                 </li>
                 <li>
                   阿里iconFont字库：
-                  <el-link type="primary" icon="Link" target="_blank" href="http://www.iconfontcn/">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="http://www.iconfontcn/"
+                  >
                     http://www.iconfontcn/
                   </el-link>
                   国内免费可制作上传
                 </li>
                 <li>
-                  <el-link type="primary" icon="Link" target="_blank" href="fontawesome.com">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="fontawesome.com"
+                  >
                     fontawesome.com
                   </el-link>
                 </li>
@@ -735,8 +820,12 @@
               引入
               <ol>
                 <li>把下载包里面的 fonts文件 夹放入页面根目录下</li>
-                <li>在CSS样式中全局声明字体:简单理解把这些字体文件通过css引入到我们页面中。</li>
-                <li>引入的时候一定要注意src路径的问题,是否同级./还是上一级../</li>
+                <li>
+                  在CSS样式中全局声明字体:简单理解把这些字体文件通过css引入到我们页面中。
+                </li>
+                <li>
+                  引入的时候一定要注意src路径的问题,是否同级./还是上一级../
+                </li>
                 <li>可查看帮助文档</li>
               </ol>
             </li>
@@ -763,9 +852,14 @@
       <el-card id="part18" shadow="hover">
         <h2>解决图片底部空白缝隙</h2>
         <div class="ls-cot">
-          <p>bug：图片底侧会有一个空白缝隙,原因是行内块元素会和文字的基线对齐。</p>
+          <p>
+            bug：图片底侧会有一个空白缝隙,原因是行内块元素会和文字的基线对齐。
+          </p>
           <ul>
-            <li>解决方法1：给图片添加vertical-align:middle | top | bottom等。(提倡使用的)</li>
+            <li>
+              解决方法1：给图片添加vertical-align:middle | top |
+              bottom等。(提倡使用的)
+            </li>
             <li>解决方法2：把图片转换为块级元素 display:block;</li>
           </ul>
         </div>
@@ -881,14 +975,24 @@
             <li>
               ClassName命名
               <ul>
-                <li>ClassName的命名应该尽量精短、明确,必须以字母开头命名,且全部字母为小写,单词之间统一使用下划线连接nav_top</li>
-                <li>注意:ad、banner、gg、guanggao等有机会和广告挂勾的不建议直接用来做ClassName,因为有些浏览器插件(Chrome的广告拦截插件等)会直接过滤这些类名</li>
+                <li>
+                  ClassName的命名应该尽量精短、明确,必须以字母开头命名,且全部字母为小写,单词之间统一使用下划线连接nav_top
+                </li>
+                <li>
+                  注意:ad、banner、gg、guanggao等有机会和广告挂勾的不建议直接用来做ClassName,因为有些浏览器插件(Chrome的广告拦截插件等)会直接过滤这些类名
+                </li>
                 <li>另外,敏感不和谐字眼也不应该出现</li>
                 <li>
                   参考
                   <ol>
-                    <li>about关于、 account账户、 arrow箭头图标、 article文章、 aside边栏、 audio音频</li>
-                    <li>avatar头像、 bg,background背景、 bar工具栏、 branding品牌 ...</li>
+                    <li>
+                      about关于、 account账户、 arrow箭头图标、 article文章、
+                      aside边栏、 audio音频
+                    </li>
+                    <li>
+                      avatar头像、 bg,background背景、 bar工具栏、 branding品牌
+                      ...
+                    </li>
                     <li>等等 用英文代替,不懂的用翻译软件</li>
                   </ol>
                 </li>
@@ -914,16 +1018,25 @@
             <li>
               Css书写顺序
               <ul>
-                <li>布局定位属性:display/position/float/clear/visibility/overflow(建议display第一个写,毕竟关系到模式)</li>
+                <li>
+                  布局定位属性:display/position/float/clear/visibility/overflow(建议display第一个写,毕竟关系到模式)
+                </li>
                 <li>自身属性:width/height/margin/padding/border/background</li>
-                <li>文本属性:color/font/text-decoration/text-align/vertical-align/white-space/break-word</li>
-                <li>其他属性(CSS3):content/cursor/border-radius/box-shadow/text-shadow/background:linear-gradient...</li>
+                <li>
+                  文本属性:color/font/text-decoration/text-align/vertical-align/white-space/break-word
+                </li>
+                <li>
+                  其他属性(CSS3):content/cursor/border-radius/box-shadow/text-shadow/background:linear-gradient...
+                </li>
               </ul>
             </li>
             <li>
               创建文件
               <ul>
-                <li>index.html 首页、 base.css 初始化样式、 common.css 公共样式 (写首页 列表页 详情页等)</li>
+                <li>
+                  index.html 首页、 base.css 初始化样式、 common.css 公共样式
+                  (写首页 列表页 详情页等)
+                </li>
               </ul>
             </li>
           </ol>
@@ -937,8 +1050,13 @@
             <li>
               作用
               <ul>
-                <li>SEO(Search Engine Optimization)汉译为搜索引擎优化 是一种利用搜索引攀的规则提高网站在有关搜索引擎内自然排名的方式。</li>
-                <li>SEO的目的是对网站进行深度的优化,从而帮助网站获取免费的流量,进而在搜索引擎上提升网站的排名,提高网站的知名度。</li>
+                <li>
+                  SEO(Search Engine Optimization)汉译为搜索引擎优化
+                  是一种利用搜索引攀的规则提高网站在有关搜索引擎内自然排名的方式。
+                </li>
+                <li>
+                  SEO的目的是对网站进行深度的优化,从而帮助网站获取免费的流量,进而在搜索引擎上提升网站的排名,提高网站的知名度。
+                </li>
                 <li>
                   页面必须有三个标签用来符合SEO优化
                   <pre><code class="language-html line-numbers">  &lt;meta name="description" content=""&gt;   &lt;!-- 简介 --&gt;
@@ -953,17 +1071,28 @@
                 <li>
                   title网站标题
                   <ol>
-                    <li>title具有不可替代性,是我们内页的第一个重要标签,是搜索引擎了解网页的入口和对网页主题归属的最佳判断点。</li>
-                    <li>建议: 网站名(产品名)-网站的介绍(尽量不要超过30个汉字)</li>
-                    <li>例如:京东JD.COM综合网购首选正品低价、品质保障、配送及时、轻松购物！小米商城一小米5s、红米Note4、小米MIX、小米笔记本官方网站</li>
+                    <li>
+                      title具有不可替代性,是我们内页的第一个重要标签,是搜索引擎了解网页的入口和对网页主题归属的最佳判断点。
+                    </li>
+                    <li>
+                      建议: 网站名(产品名)-网站的介绍(尽量不要超过30个汉字)
+                    </li>
+                    <li>
+                      例如:京东JD.COM综合网购首选正品低价、品质保障、配送及时、轻松购物！小米商城一小米5s、红米Note4、小米MIX、小米笔记本官方网站
+                    </li>
                   </ol>
                 </li>
                 <li>
                   description网站说明
                   <ol>
                     <li>简要说明我们网站主要是做什么的。</li>
-                    <li>我们提倡,description作为网站的总体业务和主题概括,多采用“我们是..”、“我们提供…”、“xxx网作为…”、“电话:010..”之类语句。</li>
-                    <li>例如:&lt;meta name="description"content=“京东JD.COM-专业的综合网上购物商城销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务,为您提供愉悦的网上购物体验！"/&gt;</li>
+                    <li>
+                      我们提倡,description作为网站的总体业务和主题概括,多采用“我们是..”、“我们提供…”、“xxx网作为…”、“电话:010..”之类语句。
+                    </li>
+                    <li>
+                      例如:&lt;meta
+                      name="description"content=“京东JD.COM-专业的综合网上购物商城销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务,为您提供愉悦的网上购物体验！"/&gt;
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -989,16 +1118,26 @@
                     <li>链接长度 ,长度越长蜘蛛就是少去,不允许出现中文</li>
                     <li>网站识别回访, 打开速度快,识别难度</li>
                     <li>有效收录,有价值</li>
-                    <li>爬虫越多,越容易收录,一个页面起码要20-30个链接才是合格的页面</li>
+                    <li>
+                      爬虫越多,越容易收录,一个页面起码要20-30个链接才是合格的页面
+                    </li>
                     <li>访问日志 ,可以百度搜素怎么访问百度爬虫来站日志</li>
                   </ol>
                 </li>
                 <li>
                   怎么提高收录
                   <ol>
-                    <li>在网站搜索不出来。百度提示:很抱歉,没有找到与" url " 相关的网页时,可以点击提交网站给我们</li>
                     <li>
-                      <el-link type="primary" icon="Link" target="_blank" href="https://ziyuan.baidu.com/linksubmit/index">
+                      在网站搜索不出来。百度提示:很抱歉,没有找到与" url "
+                      相关的网页时,可以点击提交网站给我们
+                    </li>
+                    <li>
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://ziyuan.baidu.com/linksubmit/index"
+                      >
                         https://ziyuan.baidu.com/linksubmit/index
                       </el-link>
                       ,点网页,数据提交
@@ -1048,7 +1187,9 @@
                   <ol>
                     <li>锚本就是可以点击跳转的文字(链接)</li>
                     <li>作用:增加网页点击率,增加用户停留时间</li>
-                    <li>增加蜘蛛的爬行率,当爬虫进入网页爬取数据,看到链接会进去再爬取,一层一层</li>
+                    <li>
+                      增加蜘蛛的爬行率,当爬虫进入网页爬取数据,看到链接会进去再爬取,一层一层
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -1064,8 +1205,12 @@
                 <li>
                   网站的文章书写技巧
                   <ol>
-                    <li>虽然鼓励原创,但写伪原创更受喜欢,将原创获取进行修改,达到用户需求</li>
-                    <li>文章的写作技巧,图文结合 1-3张,字符800字,不能乱写,有效收录</li>
+                    <li>
+                      虽然鼓励原创,但写伪原创更受喜欢,将原创获取进行修改,达到用户需求
+                    </li>
+                    <li>
+                      文章的写作技巧,图文结合 1-3张,字符800字,不能乱写,有效收录
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -1094,7 +1239,9 @@
                 <li>
                   闪电算法:秒排的数据要求
                   <ol>
-                    <li>网页打开速度 大于3秒减分,2-3秒不加分不减分 小于2秒 加分</li>
+                    <li>
+                      网页打开速度 大于3秒减分,2-3秒不加分不减分 小于2秒 加分
+                    </li>
                     <li>css js文件少,图片,文件太大,影响打开速度</li>
                     <li>服务器</li>
                   </ol>
@@ -1106,18 +1253,29 @@
                     <li>域名、服务器</li>
                   </ol>
                 </li>
-                <li>选择一个符合SEO的网站域名:主题 域名好记,关键词,后缀 好记</li>
+                <li>
+                  选择一个符合SEO的网站域名:主题 域名好记,关键词,后缀 好记
+                </li>
                 <li>网站链接的权重划分:链接越长,越难排名</li>
                 <li>网站布局:F形布局</li>
                 <li>标签的细节优化:标题H标签,关键词</li>
                 <li>
                   nofollow
                   <ol>
-                    <li>a 标签 里设置属性 rel="nofollow" 标签设置上了之后,爬虫不会爬取</li>
-                    <li>不需要的外连接挂上 nofollow , 比如 广告,QQ客服链接,其他平台链接</li>
+                    <li>
+                      a 标签 里设置属性 rel="nofollow"
+                      标签设置上了之后,爬虫不会爬取
+                    </li>
+                    <li>
+                      不需要的外连接挂上 nofollow , 比如
+                      广告,QQ客服链接,其他平台链接
+                    </li>
                   </ol>
                 </li>
-                <li>网站图片: alt 属性的优化:对图片做说明,alt 和 title 需要描述相关的内容,不能随便写,详细的描述即可</li>
+                <li>
+                  网站图片: alt 属性的优化:对图片做说明,alt 和 title
+                  需要描述相关的内容,不能随便写,详细的描述即可
+                </li>
               </ul>
             </li>
           </ol>
@@ -1128,32 +1286,32 @@
 </template>
 
 <script setup lang="ts" name="CssPage">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: '基本样式' },
-  { id: 2, h2: '技巧' },
-  { id: 3, h2: 'Unicode编码字体' },
-  { id: 4, h2: '浏览器中可以看到部分' },
-  { id: 5, h2: 'CSS引入方式' },
-  { id: 6, h2: '选择器' },
-  { id: 7, h2: '文字代替' },
-  { id: 8, h2: '行元素、块元素、转换' },
-  { id: 9, h2: '层级' },
-  { id: 10, h2: '盒子模型' },
-  { id: 11, h2: '清除浮动' },
-  { id: 12, h2: '定位' },
-  { id: 13, h2: '元素的显示与隐藏' },
-  { id: 14, h2: '精灵图' },
-  { id: 15, h2: '制作favicon图标' },
-  { id: 16, h2: '字体图标' },
-  { id: 17, h2: '文字溢出 三个点' },
-  { id: 18, h2: '解决图片底部空白缝隙' },
-  { id: 19, h2: '滚动条' },
-  { id: 20, h2: 'label 冲突' },
-  { id: 21, h2: 'prism主题样式' },
-  { id: 22, h2: '规范' },
-  { id: 23, h2: 'seo优化网站TDK标签' }
+  { id: 1, h2: "基本样式" },
+  { id: 2, h2: "技巧" },
+  { id: 3, h2: "Unicode编码字体" },
+  { id: 4, h2: "浏览器中可以看到部分" },
+  { id: 5, h2: "CSS引入方式" },
+  { id: 6, h2: "选择器" },
+  { id: 7, h2: "文字代替" },
+  { id: 8, h2: "行元素、块元素、转换" },
+  { id: 9, h2: "层级" },
+  { id: 10, h2: "盒子模型" },
+  { id: 11, h2: "清除浮动" },
+  { id: 12, h2: "定位" },
+  { id: 13, h2: "元素的显示与隐藏" },
+  { id: 14, h2: "精灵图" },
+  { id: 15, h2: "制作favicon图标" },
+  { id: 16, h2: "字体图标" },
+  { id: 17, h2: "文字溢出 三个点" },
+  { id: 18, h2: "解决图片底部空白缝隙" },
+  { id: 19, h2: "滚动条" },
+  { id: 20, h2: "label 冲突" },
+  { id: 21, h2: "prism主题样式" },
+  { id: 22, h2: "规范" },
+  { id: 23, h2: "seo优化网站TDK标签" },
 ]);
 </script>
 

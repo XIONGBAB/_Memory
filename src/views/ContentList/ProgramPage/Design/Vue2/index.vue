@@ -2,15 +2,31 @@
   <card-container title="vue2" :data="data">
     <template #svg>
       <svg
-        width="40" height="40" t="1699148478737" class="icon" viewBox="0 0 1024 1024"
-        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6334"
+        width="40"
+        height="40"
+        t="1699148478737"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="6334"
       >
-        <path d="M615.6 123.6h165.5L512 589.7 242.9 123.6H63.5L512 900.4l448.5-776.9z" fill="#acef65" p-id="6335" />
-        <path d="M781.1 123.6H615.6L512 303 408.4 123.6H242.9L512 589.7z" fill="#34495E" p-id="6336" />
+        <path
+          d="M615.6 123.6h165.5L512 589.7 242.9 123.6H63.5L512 900.4l448.5-776.9z"
+          fill="#acef65"
+          p-id="6335"
+        />
+        <path
+          d="M781.1 123.6H615.6L512 303 408.4 123.6H242.9L512 589.7z"
+          fill="#34495E"
+          p-id="6336"
+        />
       </svg>
     </template>
     <template #describe>
-      <p>Vue基于标准HTML、CSS和JavaScript构建，提供了一套声明式的、组件化的编程模型，用于高效地开发用户界面。Vue是一个框架，也是一个生态，功能覆盖大部分前端开发常见的需求。</p>
+      <p>
+        Vue基于标准HTML、CSS和JavaScript构建，提供了一套声明式的、组件化的编程模型，用于高效地开发用户界面。Vue是一个框架，也是一个生态，功能覆盖大部分前端开发常见的需求。
+      </p>
     </template>
     <template #content>
       <el-card id="part1" shadow="hover">
@@ -23,7 +39,9 @@
               <ul>
                 <Li>模块化（js的模块化、css的模块化、资源的模块化）</Li>
                 <Li>组件化（复用现有的UI结构、样式、行为）</Li>
-                <Li>规范化（目录结构的划分、编码规范化、接口规范化、文档规范化、Git分支管理）</Li>
+                <Li
+                  >规范化（目录结构的划分、编码规范化、接口规范化、文档规范化、Git分支管理）</Li
+                >
                 <Li>自动化（自动化构建、自动部署、自动化测试）</Li>
               </ul>
             </li>
@@ -35,13 +53,23 @@
                   <ol>
                     <li>
                       grunt
-                      <el-link type="primary" icon="Link" target="_blank" href="https://www.gruntjs.net/">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://www.gruntjs.net/"
+                      >
                         https://www.gruntjs.net/
                       </el-link>
                     </li>
                     <li>
                       gulp
-                      <el-link type="primary" icon="Link" target="_blank" href="https://www.gulpjs.com.cn/">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://www.gulpjs.com.cn/"
+                      >
                         https://www.gulpjs.com.cn/
                       </el-link>
                     </li>
@@ -50,13 +78,23 @@
                 <li>目前主流的前端工程化解决方案：</li>
                 <li>
                   webpack
-                  <el-link type="primary" icon="Link" target="_blank" href="https://www.webpackjs.com/">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="https://www.webpackjs.com/"
+                  >
                     https://www.webpackjs.com/
                   </el-link>
                 </li>
                 <li>
                   parcel
-                  <el-link type="primary" icon="Link" target="_blank" href="https://zh.parceljs.org/">
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="https://zh.parceljs.org/"
+                  >
                     https://zh.parceljs.org/
                   </el-link>
                 </li>
@@ -66,25 +104,40 @@
               什么是webpack
               <ul>
                 <li>概念：webpack是前端项目工程化的具体解决方案。</li>
-                <li>主要功能：它提供了友好的前端模块化开发支持，以及代码压缩混淆、处理浏览器端JavaScript的兼容性、性能优化等强大的功能。</li>
+                <li>
+                  主要功能：它提供了友好的前端模块化开发支持，以及代码压缩混淆、处理浏览器端JavaScript的兼容性、性能优化等强大的功能。
+                </li>
               </ul>
             </li>
             <li>
               安装node.js并配置
               <ul>
-                <li>新建项目空白目录，并运行npm init-y命令，初始化包管理配置文件 package.json</li>
+                <li>
+                  新建项目空白目录，并运行npm init-y命令，初始化包管理配置文件
+                  package.json
+                </li>
                 <li>
                   需要安装node.js
                   <ol>
                     <li>
                       旧版本网址
-                      <el-link type="primary" icon="Link" target="_blank" href="https://nodejs.org/zh-cn/download/releases/">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://nodejs.org/zh-cn/download/releases/"
+                      >
                         https://nodejs.org/zh-cn/download/releases/
                       </el-link>
                     </li>
                     <li>
                       新版本网址
-                      <el-link type="primary" icon="Link" target="_blank" href="https://nodejs.org/zh-cn/download/">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://nodejs.org/zh-cn/download/"
+                      >
                         https://nodejs.org/zh-cn/download/
                       </el-link>
                     </li>
@@ -93,13 +146,17 @@
                 <li>
                   win7默认安装后配置（注：因为nodejs版本太高了，v12.16.2以上版本不支持win7系统，win10直接新版本下载默认安装）
                   <ol>
-                    <li>cmd => node -v 看版本 12.22.6 => npm -v 看npm版本6.14.15</li>
+                    <li>
+                      cmd => node -v 看版本 12.22.6 => npm -v 看npm版本6.14.15
+                    </li>
                     <li>
                       安装过程四个选项：
                       <ul>
                         <li>1. Node.js runtime 表示运行环境</li>
                         <li>2. npm package manager表示npm包管理器</li>
-                        <li>3. online documentation shortcuts 在线文档快捷方式</li>
+                        <li>
+                          3. online documentation shortcuts 在线文档快捷方式
+                        </li>
                         <li>4. Add to PATH添加到环境变量</li>
                       </ul>
                     </li>
@@ -109,9 +166,13 @@
                   修改包路径
                   <ol>
                     <li>
-                      默认情况下，我们在执行npm install -g XXXX时，下载了一个全局包，这个包的默认存放路径位
+                      默认情况下，我们在执行npm install -g
+                      XXXX时，下载了一个全局包，这个包的默认存放路径位
                       <ul>
-                        <li>1. C:\Users\Administrator\AppData\Roaming\npm\node_modules下</li>
+                        <li>
+                          1.
+                          C:\Users\Administrator\AppData\Roaming\npm\node_modules下
+                        </li>
                         <li>2. 可以通过CMD指令 npm root -g 查看</li>
                       </ul>
                     </li>
@@ -127,27 +188,52 @@
                       修改路径
                       <ul>
                         <li>1. 在CMD窗口执行以下两条命令：</li>
-                        <li>2. npm config set prefix "？:\？\nodejs\node_global" //自己的创建目录</li>
-                        <li>3. npm config set cache "？:\？\nodejs\node_cache" //自己的创建目录</li>
-                        <li>4. 或者在nodejs的安装目录中找到node_modules\npm.npmrc文件，修改如下：</li>
+                        <li>
+                          2. npm config set prefix "？:\？\nodejs\node_global"
+                          //自己的创建目录
+                        </li>
+                        <li>
+                          3. npm config set cache "？:\？\nodejs\node_cache"
+                          //自己的创建目录
+                        </li>
+                        <li>
+                          4.
+                          或者在nodejs的安装目录中找到node_modules\npm.npmrc文件，修改如下：
+                        </li>
                         <li>5. prefix =C:\node\node_global</li>
                         <li>6. cache = C:\node\node_cache</li>
-                        <li>7. 下载一个全局包，执行命令npm install -g vue，可以发现，</li>
+                        <li>
+                          7. 下载一个全局包，执行命令npm install -g
+                          vue，可以发现，
+                        </li>
                         <li>8. 下载的全局包vue已经放在了我们设置的目录中</li>
                       </ul>
                     </li>
                     <li>
                       修改用户变量path为：E:\java\nodejs\node_global
                       <ul>
-                        <li>1. 我们更改了npm全局模块的存放路径和cache路径，此时使用module时将会出现上述错误，</li>
-                        <li>2. 因为电脑系统现在还不知道你把默认路径给改了，所以需要修改系统环境变量。</li>
+                        <li>
+                          1.
+                          我们更改了npm全局模块的存放路径和cache路径，此时使用module时将会出现上述错误，
+                        </li>
+                        <li>
+                          2.
+                          因为电脑系统现在还不知道你把默认路径给改了，所以需要修改系统环境变量。
+                        </li>
                       </ul>
                     </li>
                     <li>
                       接下来设置环境变量，关闭cmd窗口，“我的电脑”-右键-“属性”-“高级系统设置”-“高级”-环境变量”
                       <ul>
-                        <li>1. 新增系统变量NODE_PATH,变量值为E:\java\nodejs\node_global\node_modules 或者默认路径的进入环境变量对话框，在【系统变量】下新建【NODE_PATH】</li>
-                        <li>2. 输入【D:\Develop\nodejs\node_global\node_modules】，将【用户变量】下的【Path】修改为【D:\Develop\nodejs\node_global】</li>
+                        <li>
+                          1.
+                          新增系统变量NODE_PATH,变量值为E:\java\nodejs\node_global\node_modules
+                          或者默认路径的进入环境变量对话框，在【系统变量】下新建【NODE_PATH】
+                        </li>
+                        <li>
+                          2.
+                          输入【D:\Develop\nodejs\node_global\node_modules】，将【用户变量】下的【Path】修改为【D:\Develop\nodejs\node_global】
+                        </li>
                       </ul>
                     </li>
                   </ol>
@@ -157,10 +243,15 @@
           </ol>
           <p>案例隔行变色</p>
           <ul>
-            <li>新建项目空白目录，并运行npm init-y命令，初始化包管理配置文件 package.json</li>
+            <li>
+              新建项目空白目录，并运行npm init-y命令，初始化包管理配置文件
+              package.json
+            </li>
             <li>新建src源代码目录</li>
             <li>新建src -&gt; index.html首页和src -&gt; index.js脚本文件</li>
-            <li>初始化首页基本的结构 ⑤运行npm install jquery -S命令，安装jQuery</li>
+            <li>
+              初始化首页基本的结构 ⑤运行npm install jquery -S命令，安装jQuery
+            </li>
             <li>
               通过ES6模块化的方式导入jQuery，实现列表隔行变色效果
               <pre><code class="language-js line-numbers">  // 1、使用ES6导入语法，导入jQuery
@@ -178,8 +269,16 @@
                 <li>
                   npm install webpack@5.42.1 webpack-cli@4.7.2 -D
                   <ol>
-                    <li>-D（--save-dev） 参数表示明确告诉npm ，装上两个包要对应版本的包，装在devDependencies下 devDependencies 表示只在开发阶段时包记录在这里面</li>
-                    <li>-S（--save） 装在dependencies下 dependencies表示是在项目开发阶段和上线，这个包都需要使用https://www.npmjs.com/package/webpack 网址install中，有介绍什么时候用- D ,什么时候用- S</li>
+                    <li>
+                      -D（--save-dev） 参数表示明确告诉npm
+                      ，装上两个包要对应版本的包，装在devDependencies下
+                      devDependencies 表示只在开发阶段时包记录在这里面
+                    </li>
+                    <li>
+                      -S（--save） 装在dependencies下
+                      dependencies表示是在项目开发阶段和上线，这个包都需要使用https://www.npmjs.com/package/webpack
+                      网址install中，有介绍什么时候用- D ,什么时候用- S
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -195,7 +294,10 @@
       mode: 'development'
   }</code></pre>
                     </li>
-                    <li>如果要上线了，也可以利用webpack 进行代码压缩，更改 mode: 'production' ,然后 命令行 npm run dev</li>
+                    <li>
+                      如果要上线了，也可以利用webpack 进行代码压缩，更改 mode:
+                      'production' ,然后 命令行 npm run dev
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -208,10 +310,15 @@
                   在终端中运行npm run dev命令，启动webpack进行项目的打包构建
                   <ol>
                     <li>在 M&ensp;VVM 概念中:</li>
-                    <li>Model表示当前页面渲染时所依赖的数据源。表示当前页面所渲染的 DOM 结构。</li>
+                    <li>
+                      Model表示当前页面渲染时所依赖的数据源。表示当前页面所渲染的
+                      DOM 结构。
+                    </li>
                     <li>View</li>
                     <li>ViewModel表示 vue 的实例，它是 M&ensp;VVM 的核心。</li>
-                    <li>代码意思：创建一个了main.js放入了dist下，同时将index.js和jQuery.js打包到了main.js下，KiB代表了文件大小</li>
+                    <li>
+                      代码意思：创建一个了main.js放入了dist下，同时将index.js和jQuery.js打包到了main.js下，KiB代表了文件大小
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -233,7 +340,9 @@
             <li>
               注意：可以在webpack.config.js 中修改打包的默认约定
               <ol>
-                <li>在webpack.config.js 配置文件中，通过entry节点指定打包的入口。</li>
+                <li>
+                  在webpack.config.js 配置文件中，通过entry节点指定打包的入口。
+                </li>
                 <li>通过output节点指定打包的出口。示例代码如下：</li>
               </ol>
               <pre><code class="language-js line-numbers">  const path = require('path')
@@ -256,7 +365,10 @@
           </ul>
           <p>webpack中的插件</p>
           <ul>
-            <li>作用：通过安装和配置第三方的插件，可以拓展 webpack的能力，从而让webpack用起来更方便。最常用的webpack 插件</li>
+            <li>
+              作用：通过安装和配置第三方的插件，可以拓展
+              webpack的能力，从而让webpack用起来更方便。最常用的webpack 插件
+            </li>
             <li>
               webpack-devServer
               <ol>
@@ -328,7 +440,9 @@
           </ul>
           <p>devServer节点</p>
           <ul>
-            <li>在webpack.config.js配置文件中，可以通过devserver节点对webpack-dev-server插件进行更多的配置</li>
+            <li>
+              在webpack.config.js配置文件中，可以通过devserver节点对webpack-dev-server插件进行更多的配置
+            </li>
             <li>
               实例代码如下：
               <pre><code class="language-js line-numbers">  const path = require('path')
@@ -357,9 +471,13 @@
       }
   }</code></pre>
             </li>
-            <li>注意：凡是修改了webpack.config.js配置文件，或修改了package.json配置文件，必须重启实时打包的服务器， 否则最新的配置文件无法生效！</li>
             <li>
-              如果想修改打开指定浏览器，需要在package .json 文件修改 script 的 dev代码，如下
+              注意：凡是修改了webpack.config.js配置文件，或修改了package.json配置文件，必须重启实时打包的服务器，
+              否则最新的配置文件无法生效！
+            </li>
+            <li>
+              如果想修改打开指定浏览器，需要在package .json 文件修改 script 的
+              dev代码，如下
               <pre><code class="language-js line-numbers">  "scripts": {
       "dev": "webpack serve --open chrome"
   },</code></pre>
@@ -367,8 +485,15 @@
           </ul>
           <p>loader概述</p>
           <ul>
-            <li>在实际开发过程中，webpack 默认只能打包处理以.js后缀名结尾的模块。其他非 .js后缀名结尾的模块，</li>
-            <li>webpack 默认处理不了，需要调用loader加载器才可以正常打包，否则会报错！</li>
+            <li>
+              在实际开发过程中，webpack
+              默认只能打包处理以.js后缀名结尾的模块。其他非
+              .js后缀名结尾的模块，
+            </li>
+            <li>
+              webpack
+              默认处理不了，需要调用loader加载器才可以正常打包，否则会报错！
+            </li>
             <li>
               loader 加载器的作用：协助webpack打包处理特定的文件模块。比如：
               <ol>
@@ -380,7 +505,10 @@
           </ul>
           <p>打包处理css文件</p>
           <ul>
-            <li>运行npm i style-loader@3.0.0 css-loader@5.2.6 -D 命令，安装处理css文件的loader</li>
+            <li>
+              运行npm i style-loader@3.0.0 css-loader@5.2.6 -D
+              命令，安装处理css文件的loader
+            </li>
             <li>在src目录下创建css</li>
             <li>
               在 index.js 下用ES6导入css样式
@@ -398,7 +526,8 @@
   })</code></pre>
             </li>
             <li>
-              在webpack.config.js 的 module => rules 数组中，添加loader规则如下：
+              在webpack.config.js 的 module => rules
+              数组中，添加loader规则如下：
               <pre><code class="language-js line-numbers">  const path = require('path')
   const HtmlPlugin = require('html-webpack-plugin')
   const htmlPlugin = new HtmlPlugin({
@@ -429,14 +558,18 @@
           </ul>
           <p>打包处理Less文件</p>
           <ul>
-            <li>运行npm i less-loader@10.0.1 less@4.1.1 -D 命令，安装处理css文件的loader</li>
+            <li>
+              运行npm i less-loader@10.0.1 less@4.1.1 -D
+              命令，安装处理css文件的loader
+            </li>
             <li>在src目录下创建less</li>
             <li>
               在 index.js 下用ES6导入css样式
               <pre><code class="language-js line-numbers">  import './css/index.less'</code></pre>
             </li>
             <li>
-              在webpack.config.js 的 module => rules 数组中，添加loader规则如下：
+              在webpack.config.js 的 module => rules
+              数组中，添加loader规则如下：
               <pre><code class="language-js line-numbers">  // 处理 .less文件的loader
   { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },</code></pre>
             </li>
@@ -451,7 +584,8 @@
   import logo from './images/star1.png'</code></pre>
             </li>
             <li>
-              在webpack.config.js 的 module => rules 数组中，添加loader规则如下：
+              在webpack.config.js 的 module => rules
+              数组中，添加loader规则如下：
               <pre><code class="language-js line-numbers">  // 处理 .less文件的loader
   // { test: /\.jpg|png|gif$/, use: 'url-loader' }
   { test: /\.jpg|png|gif$/, use: 'url-loader?limit=22229' }  // 这里22229代表的是图片字节</code></pre>
@@ -477,12 +611,20 @@
           </ul>
           <p>处理js (loader打包处理js文件中的高级语法)</p>
           <ul>
-            <li>webpack 只能打包处理一部分高级的JavaScript 语法I对于那些webpack无法处理的高级js语法，需要借助于babel-loader 进行打包处理。例如 webpack无法处理下面的JavaScript代码：</li>
-            <li>运行npm i babel-loader@8.2.2 @babel/core@7.14.6 @babel/plugin-proposal-decorators@7.14.5 -D 命令</li>
+            <li>
+              webpack 只能打包处理一部分高级的JavaScript
+              语法I对于那些webpack无法处理的高级js语法，需要借助于babel-loader
+              进行打包处理。例如 webpack无法处理下面的JavaScript代码：
+            </li>
+            <li>
+              运行npm i babel-loader@8.2.2 @babel/core@7.14.6
+              @babel/plugin-proposal-decorators@7.14.5 -D 命令
+            </li>
             <li>在src目录下创建images，添加图片</li>
             <li>在 index.js 下用ES6导入css样式</li>
             <li>
-              在webpack.config.js 的 module => rules 数组中，添加loader规则如下：
+              在webpack.config.js 的 module => rules
+              数组中，添加loader规则如下：
               <pre><code class="language-js line-numbers">  // 使用babel-loader 处理高级的JS 语法
   // 注意：必须使用exclude 指定拍出项 ； 因为node_ modules目录下的第三方包不需要被打包
   // 在配置 babel-loader 的时候，程序员只需要把自己的代码进行转换即可，一定要排除node_ modules
@@ -492,7 +634,10 @@
             <li>
               配置 babel-loader
               <ol>
-                <li>在项目根目录下，创建名为 babel.config.js的配置文件，定义Babel的配置项如下：</li>
+                <li>
+                  在项目根目录下，创建名为
+                  babel.config.js的配置文件，定义Babel的配置项如下：
+                </li>
               </ol>
               <pre><code class="language-js line-numbers">  module: {
     loaders: [{
@@ -511,9 +656,15 @@
       "build": "webpack --mode production"   // 项目发布时，运行 build命令 ，'build'可以自定义属性名
   },</code></pre>
             </li>
-            <li>--model 是一个参数选项，用来指定webpack的运行模式。production 代表生产环境，会对打包生成的文件</li>
+            <li>
+              --model 是一个参数选项，用来指定webpack的运行模式。production
+              代表生产环境，会对打包生成的文件
+            </li>
             <li>进行代码压缩和性能优化</li>
-            <li>注意：通过 --model的参数项优先级更高，会覆盖webpack.config.js 中的 model选项</li>
+            <li>
+              注意：通过 --model的参数项优先级更高，会覆盖webpack.config.js 中的
+              model选项
+            </li>
             <li>发布直接使用 npm run build 命令即可</li>
           </ul>
           <p>优化 (把javascript文件统一生成到js目录中，图片放在images下)</p>
@@ -541,13 +692,19 @@
         plugins: [htmlPlugin, new CleanWebpackPlugin()], </code></pre>
           <p>什么是Source Map</p>
           <ul>
-            <li>Source Map就是一个信息文件，里面储存着位置信息。也就是说，Source Map文件中存储着压缩混淆后的代码，所对应的转换前的位置。</li>
-            <li>有了它，出错的时候，除错工具将直接显示原始代码，而不是转换后的代码，能够极大的方便后期的调试。</li>
+            <li>
+              Source Map就是一个信息文件，里面储存着位置信息。也就是说，Source
+              Map文件中存储着压缩混淆后的代码，所对应的转换前的位置。
+            </li>
+            <li>
+              有了它，出错的时候，除错工具将直接显示原始代码，而不是转换后的代码，能够极大的方便后期的调试。
+            </li>
             <li>
               解决默认 Source Map 的问题
               <ol>
                 <li>
-                  开发环境下，推荐在 webpack.config.js中 添加如下配置，即可保证 运行时报错行数与源码行数一致
+                  开发环境下，推荐在 webpack.config.js中 添加如下配置，即可保证
+                  运行时报错行数与源码行数一致
                   <pre><code class="language-js line-numbers">  // 代表 webpack 运行模式，可选值有两个 development（开发模式） 和 production (上线模式)
   mode: 'development',
   // eval-source-map 仅限在 “开发模式” 下使用，不建议在 “生产模式” 下使用
@@ -555,7 +712,9 @@
   devtool: 'eval-source-map',</code></pre>
                 </li>
                 <li>
-                  生产环境下，如果省略了devtool 选项，则最终生成的文件中不包含Source Map ，这样能防止源码暴露，提高安全性
+                  生产环境下，如果省略了devtool
+                  选项，则最终生成的文件中不包含Source Map
+                  ，这样能防止源码暴露，提高安全性
                   <pre><code class="language-js line-numbers">  // 在发布时，直接注释掉即可，关闭 Spirce Map
   // devtool: 'eval-source-map',</code></pre>
                 </li>
@@ -564,14 +723,25 @@
             <li>
               为了方便代码修改。只定位行数不暴露代码
               <ol>
-                <li>在生产环境下，如果只想定位报错的具体行数， 且不想暴露源码。此时可以将devtool 的值设置为 nosources-source-map</li>
+                <li>
+                  在生产环境下，如果只想定位报错的具体行数，
+                  且不想暴露源码。此时可以将devtool 的值设置为
+                  nosources-source-map
+                </li>
               </ol>
             </li>
             <li>
               总结：
               <ol>
-                <li>开发环境 : 建议把 devtool 的值设置为 eval-source-map //好处是可以精准定位到具体的错误行 source-map 跟eval-source-map 效果一样，但是不建议使用</li>
-                <li>生产环境 : 建议关闭 Source Map （直接注释掉） 或者 将devtool的值设置为 nosources-source-map</li>
+                <li>
+                  开发环境 : 建议把 devtool 的值设置为 eval-source-map
+                  //好处是可以精准定位到具体的错误行 source-map
+                  跟eval-source-map 效果一样，但是不建议使用
+                </li>
+                <li>
+                  生产环境 : 建议关闭 Source Map （直接注释掉） 或者
+                  将devtool的值设置为 nosources-source-map
+                </li>
               </ol>
             </li>
           </ul>
@@ -579,7 +749,10 @@
           <ul>
             <li>如果使用 ../../../ 会比较繁琐，</li>
             <li>如果书写错误时就会报错</li>
-            <li>好处：使用 @ 示在项目的目录下进行查找，则不需要使用../ ./ 来表示层级关系</li>
+            <li>
+              好处：使用 @ 示在项目的目录下进行查找，则不需要使用../ ./
+              来表示层级关系
+            </li>
             <li>
               在webpack.config.js 配置文件的设置如下：
               <pre><code class="language-js line-numbers">  module.exports = {
@@ -603,7 +776,10 @@
           </ul>
           <p>拓展 (安装 chrome 的 vue_devtools_chrome .crx 插件)</p>
           <ul>
-            <li>在\Vue\工具\vue-google-plugin 下的crx文件，打开谷歌浏览器，开发者模式下，直接拖入安装</li>
+            <li>
+              在\Vue\工具\vue-google-plugin
+              下的crx文件，打开谷歌浏览器，开发者模式下，直接拖入安装
+            </li>
             <li>
               安装完后进行配置
               <ol>
@@ -618,7 +794,9 @@
         <div class="ls-cot">
           <p>什么是vue</p>
           <ul>
-            <li>官方给出的概念：Vue（读音/vju:/，类似于view）是一套用于构建用户界面的前端框架。</li>
+            <li>
+              官方给出的概念：Vue（读音/vju:/，类似于view）是一套用于构建用户界面的前端框架。
+            </li>
             <li>
               构建用户界面
               <ol>
@@ -628,9 +806,13 @@
             <li>
               框架
               <ol>
-                <li>框架是一套现成的解决方案，程序员只能遵守框架的规范，去编写自己的业务功能！</li>
+                <li>
+                  框架是一套现成的解决方案，程序员只能遵守框架的规范，去编写自己的业务功能！
+                </li>
                 <li>要学习vue，就是在学习vue框架中规定的用法！</li>
-                <li>vue的指令、组件（是对UI结构的复用）、路由、VueX、vue组件库</li>
+                <li>
+                  vue的指令、组件（是对UI结构的复用）、路由、VueX、vue组件库
+                </li>
               </ol>
             </li>
           </ul>
@@ -640,7 +822,8 @@
               数据>驱动>视图
               <ol>
                 <li>
-                  在使用了vue的页面中，vue会监听数据的变化，从而自动重新渲染页面的结构。 结构如下
+                  在使用了vue的页面中，vue会监听数据的变化，从而自动重新渲染页面的结构。
+                  结构如下
                   <pre><code class="language-js line-numbers">            自动渲染                      变化
 
   页面结构    &lt;==&gt;    vue监听数据的变化    &lt;==&gt;    页面所依赖的数据
@@ -654,18 +837,30 @@
             <li>
               双向数据绑定
               <ol>
-                <li>在填写表单时，双向数据绑定可以辅助开发者在不操作DOM的前提下，自动把用户填写的内容同步到数据源中</li>
-                <li>好处：开发者不再需要手动操作DOM元素，来获取表单元素最新的值！</li>
+                <li>
+                  在填写表单时，双向数据绑定可以辅助开发者在不操作DOM的前提下，自动把用户填写的内容同步到数据源中
+                </li>
+                <li>
+                  好处：开发者不再需要手动操作DOM元素，来获取表单元素最新的值！
+                </li>
                 <li>在网页中，form 表单负责采集数据， Ajax负责提交数据</li>
                 <li>js数据变化，会被自动渲染到页面上</li>
-                <li>页面上表单采集的数据发生变化时，会被vue自动获取，并更新到js数据中</li>
-                <li>注意：数据驱动视图和双向数据绑定的底层原理是MVVM （Model 数据源、View 视图、ViewModel vue实例）</li>
+                <li>
+                  页面上表单采集的数据发生变化时，会被vue自动获取，并更新到js数据中
+                </li>
+                <li>
+                  注意：数据驱动视图和双向数据绑定的底层原理是MVVM （Model
+                  数据源、View 视图、ViewModel vue实例）
+                </li>
               </ol>
             </li>
           </ul>
           <p>MVVM的工作原理</p>
           <ul>
-            <li>MVVM是vue 实现数据驱动视图和双向数据绑定的核心原理。MVVM指的是Model、View和ViewModel，它把每个HTML页面都</li>
+            <li>
+              MVVM是vue
+              实现数据驱动视图和双向数据绑定的核心原理。MVVM指的是Model、View和ViewModel，它把每个HTML页面都
+            </li>
             <li>拆分成了这三个部分</li>
             <li>
               当数据源发生变化时，会被ViewModel监听到，VM会根据最新的数据源自动更新页面的结构
@@ -675,7 +870,9 @@
                 <li>ViewModel表示vue 的实例，它是 MVVM 的核心。</li>
               </ol>
             </li>
-            <li>当表单元素的值发生变化时，也会被VM监听到，VM会把变化过后最新的值自动同步到Model数据源中</li>
+            <li>
+              当表单元素的值发生变化时，也会被VM监听到，VM会把变化过后最新的值自动同步到Model数据源中
+            </li>
           </ul>
           <p>Vue的版本</p>
           <ul>
@@ -684,7 +881,10 @@
               目前，vue共有三个大版本，其中
               <ol>
                 <li>2.x 版本的vue是目前企业级项目开发中的主流版本</li>
-                <li>3.x 版本的vue于2020-09-19发布，生态还不完善，尚未在企业级项目开发中普及和推广</li>
+                <li>
+                  3.x
+                  版本的vue于2020-09-19发布，生态还不完善，尚未在企业级项目开发中普及和推广
+                </li>
                 <li>1.x 版本的vue几乎被淘汰，不再建议学习与使用</li>
               </ol>
             </li>
@@ -735,7 +935,9 @@
           </ul>
           <p>指令的概念</p>
           <ol>
-            <li>指令（Directives）是vue为开发者提供的模板语法，用于辅助开发者渲染页面的基本结构。</li>
+            <li>
+              指令（Directives）是vue为开发者提供的模板语法，用于辅助开发者渲染页面的基本结构。
+            </li>
             <li>
               vue中的指令按照不同的用途，可以分为如下6大类：
               <ul>
@@ -743,7 +945,8 @@
                   内容渲染指令用来辅助开发者渲染DOM元素的文本内容。常用的内容渲染指令有如下3个：
                   <ol>
                     <li>
-                      v-text: // 缺点：会覆盖元素内部原有的内容，在开发中基本不用
+                      v-text: //
+                      缺点：会覆盖元素内部原有的内容，在开发中基本不用
                       <pre><code class="language-html line-numbers">  &lt;p v-text="username"&gt;&lt;/p&gt;
   &lt;!-- 把 gender 对应的值，渲染到第二个p标签中 --&gt;
   &lt;!-- 注意： 第二个p标签，默认的文本 “性别” 会被gender的值覆盖掉--&gt;
@@ -756,14 +959,17 @@
   }</code></pre>
                     </li>
                     <li>
-                      ｛｛ ｝｝：vue 提供的｛｛ ｝｝语法，专门用来解决 v-text 会覆盖默认文本内容的问题。
+                      ｛｛ ｝｝：vue 提供的｛｛ ｝｝语法，专门用来解决 v-text
+                      会覆盖默认文本内容的问题。
                       <pre><code class="language-html line-numbers">  /* 这种｛｛ ｝｝语法的专业名称是插值表达式（英文名为：Mustache）。
   在开发中用的最多，只是内容的占位符，不会覆盖原有的内容  */
   &lt;p&gt;姓名：｛｛ username ｝｝&lt;/p&gt;
   &lt;p&gt;性别: ｛｛ gender ｝｝&lt;/p&gt;</code></pre>
                     </li>
                     <li>
-                      v-html ：v-text指令和插值表达式只能渲染纯文本内容。如果要把包含HTML标签的字符串渲染为页面的HTML元素， 则需要用到V-html这个指令，相当于原生js的 innerHTML：
+                      v-html
+                      ：v-text指令和插值表达式只能渲染纯文本内容。如果要把包含HTML标签的字符串渲染为页面的HTML元素，
+                      则需要用到V-html这个指令，相当于原生js的 innerHTML：
                       <pre><code class="language-html line-numbers">  &lt;p v-html="info"&gt;&lt;/p&gt;
   //--------------------------------
   data: {
@@ -777,7 +983,10 @@
                 <li>
                   属性绑定指令
                   <ol>
-                    <li>注意：差值表达式只能用在元素的内容节点，不能用在元素的属性节点中 ，所以需要属性绑定指令</li>
+                    <li>
+                      注意：差值表达式只能用在元素的内容节点，不能用在元素的属性节点中
+                      ，所以需要属性绑定指令
+                    </li>
                     <li>功能：为元素的属性动态绑定值</li>
                     <li>
                       写法： （可简写: ）
@@ -813,7 +1022,9 @@
                 <li>
                   事件绑定指令
                   <ol>
-                    <li>vue提供了v-on事件绑定指令，用来辅助程序员为DOM元素绑定事件监听。</li>
+                    <li>
+                      vue提供了v-on事件绑定指令，用来辅助程序员为DOM元素绑定事件监听。
+                    </li>
                     <li>
                       语法格式： （可简写 @）
                       <pre><code class="language-html line-numbers">  &lt;div id="app"&gt;
@@ -869,8 +1080,13 @@
       }
   },</code></pre>
                     </li>
-                    <li>注意：原生DOM对象有onclick、oninput、onkeyup等原生事件，替换为vue的事件绑定形式后，</li>
-                    <li>分别为：v-on:click、v-on:input、v-on:keyup // 简写 成 @click @input @keyup</li>
+                    <li>
+                      注意：原生DOM对象有onclick、oninput、onkeyup等原生事件，替换为vue的事件绑定形式后，
+                    </li>
+                    <li>
+                      分别为：v-on:click、v-on:input、v-on:keyup // 简写 成
+                      @click @input @keyup
+                    </li>
                     <li>
                       事件对象：
                       <pre><code class="language-html line-numbers">  /* 当调用函数没有传参时，可以使用事件对象 event
@@ -922,7 +1138,10 @@
                 <li>
                   双向绑定指令
                   <ol>
-                    <li>vue 提供了v-model双向数据绑定指令，用来辅助开发者在不操作DOM的前提下，快速获取表单的数据。</li>
+                    <li>
+                      vue
+                      提供了v-model双向数据绑定指令，用来辅助开发者在不操作DOM的前提下，快速获取表单的数据。
+                    </li>
                   </ol>
                   <pre><code class="language-html line-numbers">  &lt;div id="app"&gt;
       &lt;p&gt;您的名字是 ｛｛ username ｝｝&lt;/p&gt;
@@ -973,7 +1192,8 @@
   },</code></pre>
                     </li>
                     <li>
-                      v-else : 跟 v-if 配套的指令 v-if 可以单独使用，或配合v-else指令一起使用
+                      v-else : 跟 v-if 配套的指令 v-if
+                      可以单独使用，或配合v-else指令一起使用
                       <pre><code class="language-html line-numbers">  &lt;div id="app"&gt;
       &lt;div&gt; v-if="type === 'A'"&gt;优秀&lt;/div&gt;
       &lt;div&gt; v-else-if="type ==='B'"&gt;良好&lt;/div&gt;
@@ -990,7 +1210,11 @@
                 <li>
                   列表渲染指令
                   <ol>
-                    <li>vue提供了 v-for 列表渲染指令，用来辅助开发者基于一个数组来循环渲染一个列表结构。V-for 指令需要</li>
+                    <li>
+                      vue提供了 v-for
+                      列表渲染指令，用来辅助开发者基于一个数组来循环渲染一个列表结构。V-for
+                      指令需要
+                    </li>
                     <li>
                       使用 item in items （item in 数组） 形式的特殊语法，其中：
                       <pre><code class="language-html line-numbers">  /* items 是待循环的数组
@@ -1024,7 +1248,9 @@
   },</code></pre>
                     </li>
                     <li>
-                      V-for 指令还支持一个可选的第二个参数，即当前项的索引。语法格式为（item，index）in items
+                      V-for
+                      指令还支持一个可选的第二个参数，即当前项的索引。语法格式为（item，index）in
+                      items
                       <pre><code class="language-html line-numbers">  &lt;tbody&gt;
       &lt;tr v-for="(item, index) in list"&gt;
           &lt;td&gt;｛｛ index ｝｝&lt;/td&gt;
@@ -1035,7 +1261,9 @@
   &lt;/tbody&gt;</code></pre>
                     </li>
                     <li>
-                      注意： 官方建议，只要用到 v-for指令，那么一定要绑定一个 ：key 属性，并且尽量把id作为key 的值, html中忘记加不会报错，但是在 .vue 的文件中忘记加，则会报错
+                      注意： 官方建议，只要用到 v-for指令，那么一定要绑定一个
+                      ：key 属性，并且尽量把id作为key 的值,
+                      html中忘记加不会报错，但是在 .vue 的文件中忘记加，则会报错
                       <pre><code class="language-js line-numbers">  &lt;!-- 官网对key 的值类型 是有要求的： 数字或者字符串 --&gt;
   &lt;!-- key值不允许使用name ,因为字符串会出现有相同的字符串。重复就报错，id不会，id是唯一的 --&gt;
   &lt;tr v-for="(item, index) in list" :key="item.id"&gt;
@@ -1049,9 +1277,19 @@
                       <ul>
                         <li>1. key的值只能是字符串或数字类型</li>
                         <li>2. key的值必须具有唯一性（即：key的值不能重复）</li>
-                        <li>3. 建议把数据项id属性的值作为key的值（因为id属性的值具有唯一性）不建议用name 来当做key 的值，因为name 会有重复，终端会报错</li>
-                        <li>4. 使用index的值当作key的值没有任何意义（因为index的值不具有唯一性）因为当往数据前添加一个数据，那么索引号会重新排序，这样导致数据紊乱，造成错误</li>
-                        <li>5. 建议使用V-for指令时一定要指定key的值（既提升性能、又防止列表状态紊乱）</li>
+                        <li>
+                          3.
+                          建议把数据项id属性的值作为key的值（因为id属性的值具有唯一性）不建议用name
+                          来当做key 的值，因为name 会有重复，终端会报错
+                        </li>
+                        <li>
+                          4.
+                          使用index的值当作key的值没有任何意义（因为index的值不具有唯一性）因为当往数据前添加一个数据，那么索引号会重新排序，这样导致数据紊乱，造成错误
+                        </li>
+                        <li>
+                          5.
+                          建议使用V-for指令时一定要指定key的值（既提升性能、又防止列表状态紊乱）
+                        </li>
                       </ul>
                     </li>
                   </ol>
@@ -1081,7 +1319,11 @@
                 <li>
                   掌握vue中的常用指令的基本用法
                   <ol>
-                    <li>1. 差值表达式｛｛ ｝｝ 、 v-bind ( 数据到视图，单向，简写 : ) 、v-on ( @ )、 v-if 和 v-else 、 很少用的有： v-show(display:none) 、 v-text 、 v-html</li>
+                    <li>
+                      1. 差值表达式｛｛ ｝｝ 、 v-bind ( 数据到视图，单向，简写
+                      : ) 、v-on ( @ )、 v-if 和 v-else 、 很少用的有：
+                      v-show(display:none) 、 v-text 、 v-html
+                    </li>
                     <li>2. 私有过滤器 filters 节点</li>
                   </ol>
                 </li>
@@ -1097,7 +1339,10 @@
           </ol>
           <p>过滤器 (仅限用在2.0的项目上，3.0已经不支持了)</p>
           <ul>
-            <li>过滤器（Filters）是vue为开发者提供的功能，常用于文本的格式化。Filters 本身就是一个函数 function</li>
+            <li>
+              过滤器（Filters）是vue为开发者提供的功能，常用于文本的格式化。Filters
+              本身就是一个函数 function
+            </li>
             <li>过滤器可以用在两个地方：插值表达式 和 V-bind属性绑定。</li>
             <li>
               过滤器应该被添加在JavaScript表达式的尾部，由“管道符”进行调用，示例代码如下：
@@ -1129,14 +1374,21 @@
               <ol>
                 <li>要定义到filters节点下，本质是一个函数</li>
                 <li>在过滤器函数中，一定要有return值</li>
-                <li>在过滤器的形参中，就可以获取到“管道符”前面待处理的那个值</li>
-                <li>如果全局过滤器和私有过滤器名字一致，此时按照“就近原则”，调用的是“私有过滤器</li>
+                <li>
+                  在过滤器的形参中，就可以获取到“管道符”前面待处理的那个值
+                </li>
+                <li>
+                  如果全局过滤器和私有过滤器名字一致，此时按照“就近原则”，调用的是“私有过滤器
+                </li>
               </ol>
             </li>
           </ul>
           <p>私有和全局 过滤器</p>
           <ul>
-            <li>在filters 节点下定义的过滤器，称为“私有过滤器”，因为它只能在当前vm实例所控制的el区域内使用。</li>
+            <li>
+              在filters
+              节点下定义的过滤器，称为“私有过滤器”，因为它只能在当前vm实例所控制的el区域内使用。
+            </li>
             <li>
               如果希望在多个vue实例之间共享过滤器，则可以按照如下的格式定义全局过滤器：
               <pre><code class="language-js line-numbers">  // 全局过滤器-独立于每个vm实例之外
@@ -1145,7 +1397,9 @@
       return str.charAt(0).toUpperCase() + str.slice(1)
   })</code></pre>
             </li>
-            <li>可以连续调用多个过滤器，用 | 分割，最后return最后一个过滤结果，</li>
+            <li>
+              可以连续调用多个过滤器，用 | 分割，最后return最后一个过滤结果，
+            </li>
             <li>
               并且可以传参，第一个参数永远是"管道符"前面待处理的值，第二个参数才是过滤器时传递的过来的num1,num2参数
               <pre><code class="language-html line-numbers">  &lt;div id="app"&gt;
@@ -1158,15 +1412,26 @@
             <li>
               过滤器的兼容性：
               <ol>
-                <li>过滤器仅在vue2.x和1.X中受支持，在vue3.x的版本中剔除了过滤器相关的功能。</li>
+                <li>
+                  过滤器仅在vue2.x和1.X中受支持，在vue3.x的版本中剔除了过滤器相关的功能。
+                </li>
                 <li>
                   在企业级项目开发中：
                   <ol>
-                    <li>如果使用的是2.x版本的vue，则依然可以使用过滤器相关的功能</li>
-                    <li>如果项目已经升级到了3.x版本的vue，官方建议使用计算属性或方法代替被剔除的过滤器功能具体的迁移指南，</li>
+                    <li>
+                      如果使用的是2.x版本的vue，则依然可以使用过滤器相关的功能
+                    </li>
+                    <li>
+                      如果项目已经升级到了3.x版本的vue，官方建议使用计算属性或方法代替被剔除的过滤器功能具体的迁移指南，
+                    </li>
                     <li>
                       请参考vue3.x的官方文档给出的说明：
-                      <el-link type="primary" icon="Link" target="_blank" href="https://v3.vuejs.org/guide/migration/filters.html#migration-strategy">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://v3.vuejs.org/guide/migration/filters.html#migration-strategy"
+                      >
                         https://v3.vuejs.org/guide/migration/filters.html#migration-strategy
                       </el-link>
                     </li>
@@ -1180,7 +1445,10 @@
             <li>
               什么是watch侦听器：
               <ol>
-                <li>watch 侦听器允许开发者监视数据的变化，从而针对数据的变化做特定的操作。语法格式如下：</li>
+                <li>
+                  watch
+                  侦听器允许开发者监视数据的变化，从而针对数据的变化做特定的操作。语法格式如下：
+                </li>
               </ol>
               <pre><code class="language-js line-numbers">  data: {
     username: 'zs',
@@ -1199,8 +1467,12 @@
             <li>
               方法格式的侦听器
               <ol>
-                <li>缺点1：无法在刚进入页面的时候，自动触发！！！，但是推荐，如果一进来就要触发，则采用对象格式</li>
-                <li>缺点2：如果侦听的是一个对象，如果对象中的属性发生了变化，不会触发侦听器！！</li>
+                <li>
+                  缺点1：无法在刚进入页面的时候，自动触发！！！，但是推荐，如果一进来就要触发，则采用对象格式
+                </li>
+                <li>
+                  缺点2：如果侦听的是一个对象，如果对象中的属性发生了变化，不会触发侦听器！！
+                </li>
               </ol>
             </li>
             <li>
@@ -1261,7 +1533,9 @@
               好处：
               <ol>
                 <li>实现了代码的复用</li>
-                <li>只要计算属性中依赖的数据源变化了，则计算属性会自动重新求值！</li>
+                <li>
+                  只要计算属性中依赖的数据源变化了，则计算属性会自动重新求值！
+                </li>
               </ol>
             </li>
           </ul>
@@ -1272,16 +1546,28 @@
         <div class="ls-cot">
           <p>一个专注于网络请求的库</p>
           <ul>
-            <li>axios（发音：艾克C奥斯）是前端圈最火的、专注于数据请求的库。</li>
+            <li>
+              axios（发音：艾克C奥斯）是前端圈最火的、专注于数据请求的库。
+            </li>
             <li>
               中文官网地址：
-              <el-link type="primary" icon="Link" target="_blank" href="http://www.axios-js.com/">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="http://www.axios-js.com/"
+              >
                 http://www.axios-js.com/
               </el-link>
             </li>
             <li>
               英文官网地址：
-              <el-link type="primary" icon="Link" target="_blank" href="https://www.npmjs.com/package/axios">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="https://www.npmjs.com/package/axios"
+              >
                 https://www.npmjs.com/package/axios
               </el-link>
             </li>
@@ -1351,20 +1637,33 @@
             <li>
               什么是单页面应用程序 (难度比较大，比如杏仁雕刻，一个html里)
               <ul>
-                <li>单页面应用程序（英文名：Single Page Application）简称SPA，顾名思义，指的是一个Web网站中只有唯一的一个HTML页面， 所有的功能与交互都在这唯一的一个页面内完成。</li>
+                <li>
+                  单页面应用程序（英文名：Single Page
+                  Application）简称SPA，顾名思义，指的是一个Web网站中只有唯一的一个HTML页面，
+                  所有的功能与交互都在这唯一的一个页面内完成。
+                </li>
               </ul>
             </li>
             <li>
               什么是vue-cli
               <ol>
-                <li>vue-cli是Vue.js开发的标准工具。它简化了程序员基于webpack创建工程化的Vue项目的过程。</li>
+                <li>
+                  vue-cli是Vue.js开发的标准工具。它简化了程序员基于webpack创建工程化的Vue项目的过程。
+                </li>
                 <li>
                   引用自vue-cli官网上的一句话：
                   <ul>
-                    <li>程序员可以专注在撰写应用上，而不必花好几天去纠结webpack配置的问题。</li>
+                    <li>
+                      程序员可以专注在撰写应用上，而不必花好几天去纠结webpack配置的问题。
+                    </li>
                     <li>
                       中文官网：
-                      <el-link type="primary" icon="Link" target="_blank" href="https://cli.vuejs.org/zh/">
+                      <el-link
+                        type="primary"
+                        icon="Link"
+                        target="_blank"
+                        href="https://cli.vuejs.org/zh/"
+                      >
                         https://cli.vuejs.org/zh/
                       </el-link>
                     </li>
@@ -1376,14 +1675,18 @@
               安装和使用
               <ul>
                 <li>
-                  vue-cli是npm上的一个全局包，使用npm install命令，即可方便的把它安装到自己的电脑上：
+                  vue-cli是npm上的一个全局包，使用npm
+                  install命令，即可方便的把它安装到自己的电脑上：
                   <pre><code class="language-js line-numbers">  npm install -g @vue/cli
   // 先要安装nodejs,然后再执行上面的安装命令，安装好后，cmd => vue -V  可查看版本，出现版本号则安装成功</code></pre>
                 </li>
                 <li>
                   基于vue-cli快速生成工程化的Vue项目：
                   <ol>
-                    <li>vue create 项目的名称： 红色代表固定的vue项目，后面的名称随意，用英文</li>
+                    <li>
+                      vue create 项目的名称：
+                      红色代表固定的vue项目，后面的名称随意，用英文
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -1466,19 +1769,33 @@
             <li>
               安装完后：
               <ul>
-                <li>根据提示，先cd到项目，然后再跑起来，输入cd item 按tab 则会自动输入全名</li>
+                <li>
+                  根据提示，先cd到项目，然后再跑起来，输入cd item 按tab
+                  则会自动输入全名
+                </li>
                 <li>npm run serve</li>
-                <li>Local: 本机访问的地址，在浏览器输入即可打开项目 Network：局域网访问地址</li>
+                <li>
+                  Local: 本机访问的地址，在浏览器输入即可打开项目
+                  Network：局域网访问地址
+                </li>
                 <li>终端端口不要关，关了就项目不运行了，如果关了就重新启用</li>
               </ul>
             </li>
             <li>
               vue项目中的src目录的构成：
               <ul>
-                <li>assets 文件夹：存放项目中用到的静态资源文件，例如：css样式表、图片资源</li>
-                <li>components 文件夹： 程序员封装的、可复用的组件，都要放到components目录下</li>
+                <li>
+                  assets
+                  文件夹：存放项目中用到的静态资源文件，例如：css样式表、图片资源
+                </li>
+                <li>
+                  components 文件夹：
+                  程序员封装的、可复用的组件，都要放到components目录下
+                </li>
                 <li>App.vue：是项目的根组件</li>
-                <li>main.js：是项目的入口文件。整个项目的运行，要先执行main.js</li>
+                <li>
+                  main.js：是项目的入口文件。整个项目的运行，要先执行main.js
+                </li>
               </ul>
             </li>
           </ol>
@@ -1505,18 +1822,25 @@
               如果把自己创建的Vue文件渲染到页面中
               <ol>
                 <li>创建文件 test.vue，写一些模版结构</li>
-                <li>打开main.js 导入文件，修改render函数里的形参，再 .$mount( "文件名" )</li>
+                <li>
+                  打开main.js 导入文件，修改render函数里的形参，再 .$mount(
+                  "文件名" )
+                </li>
               </ol>
             </li>
           </ul>
           <p>什么是组件化开发</p>
           <ul>
-            <li>组件化开发指的是：根据封装的思想，把页面上可重用的UI结构封装为组件，从而方便项目的开发和维护。</li>
+            <li>
+              组件化开发指的是：根据封装的思想，把页面上可重用的UI结构封装为组件，从而方便项目的开发和维护。
+            </li>
             <li>
               vue中的组件化开发
               <ol>
                 <li>vue是一个支持组件化开发的前端框架。</li>
-                <li>vue中规定：组件的后缀名是vue。之前接触到的App.vue文件本质上就是一个vue的组件。</li>
+                <li>
+                  vue中规定：组件的后缀名是vue。之前接触到的App.vue文件本质上就是一个vue的组件。
+                </li>
               </ol>
             </li>
             <li>
@@ -1565,7 +1889,9 @@
           <p>组件之间的父子关系</p>
           <ul>
             <li>组件在被封装好之后，彼此之间是相互独立的，不存在父子关系</li>
-            <li>在使用组件的时候，根据彼此的嵌套关系，形成了父子关系、兄弟关系</li>
+            <li>
+              在使用组件的时候，根据彼此的嵌套关系，形成了父子关系、兄弟关系
+            </li>
           </ul>
           <p>组件使用的三个步骤</p>
           <pre><code class="language-js line-numbers">  // 使用import语法导入需要的组件
@@ -1633,14 +1959,14 @@
 </template>
 
 <script setup lang="ts" name="vue2">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: 'Webpack' },
-  { id: 2, h2: 'vue简介' },
-  { id: 3, h2: '基本使用' },
-  { id: 4, h2: 'Axios' },
-  { id: 5, h2: '其他' }
+  { id: 1, h2: "Webpack" },
+  { id: 2, h2: "vue简介" },
+  { id: 3, h2: "基本使用" },
+  { id: 4, h2: "Axios" },
+  { id: 5, h2: "其他" },
 ]);
 </script>
 

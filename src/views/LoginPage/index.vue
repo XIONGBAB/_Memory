@@ -2,10 +2,6 @@
   <div>login</div>
 </template>
 
-<script setup lang='ts' name='LoginPage'>
+<script setup lang="ts" name="LoginPage"></script>
 
-</script>
-
-<style scoped lang='scss'>
-
-</style>
+<style scoped lang="scss"></style>

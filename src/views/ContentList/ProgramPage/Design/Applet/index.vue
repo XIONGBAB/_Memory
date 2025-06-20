@@ -2,8 +2,14 @@
   <card-container title="applet" :data="data">
     <template #svg>
       <svg
-        t="1737705187916" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-        p-id="1485" width="40" height="40"
+        t="1737705187916"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="1485"
+        width="40"
+        height="40"
       >
         <path
           d="M512 0a512 512 0 1 0 512 512A512 512 0 0 0 512 0z m256.717 460.186a151.962 151.962 0 0 1-87.347 65.74 83.251 83.251 0 0 1-24.474 4.096 29.082 29.082 0 0 1 0-58.163 15.667 15.667 0 0 0 6.451-1.229 91.443 91.443 0 0 0 55.91-40.96 75.264 75.264 0 0 0 11.06-39.628c0-45.978-42.496-83.866-94.31-83.866a105.267 105.267 0 0 0-51.2 13.414 81.92 81.92 0 0 0-43.725 70.452v244.224a138.445 138.445 0 0 1-72.704 120.422 159.642 159.642 0 0 1-79.77 20.48c-84.378 0-153.6-63.488-153.6-142.029a136.192 136.192 0 0 1 19.763-69.837 151.962 151.962 0 0 1 87.347-65.74 85.914 85.914 0 0 1 24.474-4.096 29.082 29.082 0 1 1 0 58.163 15.667 15.667 0 0 0-6.451 1.229 95.949 95.949 0 0 0-55.91 40.96 75.264 75.264 0 0 0-11.06 39.628c0 45.978 42.496 83.866 94.925 83.866a105.267 105.267 0 0 0 51.2-13.414 81.92 81.92 0 0 0 43.622-70.452V390.35a138.752 138.752 0 0 1 72.807-120.525 151.245 151.245 0 0 1 79.155-21.504c84.378 0 153.6 63.488 153.6 142.029a136.192 136.192 0 0 1-19.763 69.837z"
@@ -13,7 +19,9 @@
       </svg>
     </template>
     <template #describe>
-      <p>小程序是一种轻量级的应用程序，它可以在手机等移动设备上运行，且无需用户下载安装即可使用。特点与优势有即用即走、快速加载、无缝切换、跨平台复用、多入口接入、节省空间。</p>
+      <p>
+        小程序是一种轻量级的应用程序，它可以在手机等移动设备上运行，且无需用户下载安装即可使用。特点与优势有即用即走、快速加载、无缝切换、跨平台复用、多入口接入、节省空间。
+      </p>
     </template>
     <template #content>
       <el-card id="part1" shadow="hover">
@@ -31,15 +39,21 @@
             <li>
               API不同
               <ol>
-                <li>由于运行环境的不同，所以小程序中，无法调用DOM和BOM的API。</li>
-                <li>但是，小程序中可以调用微信环境提供的各种API，例如：地理定位、扫码、支付</li>
+                <li>
+                  由于运行环境的不同，所以小程序中，无法调用DOM和BOM的API。
+                </li>
+                <li>
+                  但是，小程序中可以调用微信环境提供的各种API，例如：地理定位、扫码、支付
+                </li>
               </ol>
             </li>
             <li>
               开发模式不同
               <ol>
                 <li>网页的开发模式：浏览器+代码编辑器</li>
-                <li>小程序有自己的一套标准开发模式：申请小程序开发账号、安装小程序开发者工具、创建和配置小程序项目</li>
+                <li>
+                  小程序有自己的一套标准开发模式：申请小程序开发账号、安装小程序开发者工具、创建和配置小程序项目
+                </li>
               </ol>
             </li>
           </ul>
@@ -52,17 +66,28 @@
             <li>
               微信添加：小程序官方组件展示，可以看到相关组件的说明
               <ul>
-                <li>使用浏览器打开 https://mp.weixin.qq.com/ 网址，点击右上角的“立即注册”即可进入到小程序开发账号的注册流程</li>
+                <li>
+                  使用浏览器打开 https://mp.weixin.qq.com/
+                  网址，点击右上角的“立即注册”即可进入到小程序开发账号的注册流程
+                </li>
                 <li>获取小程序的AppID: AppID(小程序ID)wx82ae3692392a70a</li>
               </ul>
             </li>
             <li>
               安装开发者工具
               <ul>
-                <li>微信开发者工具是官方推荐使用的小程序开发工具，它提供的主要功能如下：</li>
                 <li>
-                  下载：推荐下载和安装最新的稳定版（Stable Build）的微信开发者工具，下载页面的链接如下：
-                  <el-link type="primary" icon="Link" target="_blank" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html">
+                  微信开发者工具是官方推荐使用的小程序开发工具，它提供的主要功能如下：
+                </li>
+                <li>
+                  下载：推荐下载和安装最新的稳定版（Stable
+                  Build）的微信开发者工具，下载页面的链接如下：
+                  <el-link
+                    type="primary"
+                    icon="Link"
+                    target="_blank"
+                    href="https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html"
+                  >
                     https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html
                   </el-link>
                   默认安装即可，打开后登录
@@ -79,8 +104,13 @@
             <li>
               创建小程序
               <ul>
-                <li>小程序 =&gt; 加号 =&gt; 新建项目 =&gt; 输入项目名称，输入ID 不是用云服务，语言选js</li>
-                <li>需要预览可以在模拟器上预览，点击编译后即可，如果需要真机上显示，则点击预览后扫二维码</li>
+                <li>
+                  小程序 =&gt; 加号 =&gt; 新建项目 =&gt; 输入项目名称，输入ID
+                  不是用云服务，语言选js
+                </li>
+                <li>
+                  需要预览可以在模拟器上预览，点击编译后即可，如果需要真机上显示，则点击预览后扫二维码
+                </li>
               </ul>
             </li>
           </ol>
@@ -119,9 +149,12 @@
           <p>页面的组成部分</p>
           <ul>
             <li>
-              小程序官方建议把所有小程序的页面，都存放在pages目录中，以单独的文件夹存在 其中，每个页面由4个基本文件组成，它们分别是：
+              小程序官方建议把所有小程序的页面，都存放在pages目录中，以单独的文件夹存在
+              其中，每个页面由4个基本文件组成，它们分别是：
               <ol>
-                <li>.js文件（页面的脚本文件，存放页面的数据、事件处理函数等），处理业务逻辑</li>
+                <li>
+                  .js文件（页面的脚本文件，存放页面的数据、事件处理函数等），处理业务逻辑
+                </li>
                 <li>.json文件（当前页面的配置文件，配置窗口的外观、表现等）</li>
                 <li>.wxml文件（页面的模板结构文件），写标签，UI</li>
                 <li>.wxss文件（当前页面的样式表文件）</li>
@@ -135,14 +168,19 @@
         <div class="ls-cot">
           <p>json配置文件的作用</p>
           <ol>
-            <li>JSON是一种数据格式，在实际开发中，JSON总是以配置文件的形式出现。小程序项目中也不例外,通过不同的.json配置文件，可以对小程序项目进行不同级别的配置</li>
+            <li>
+              JSON是一种数据格式，在实际开发中，JSON总是以配置文件的形式出现。小程序项目中也不例外,通过不同的.json配置文件，可以对小程序项目进行不同级别的配置
+            </li>
             <li>
               小程序项目中有4种json配置文件，分别是：
               <ul>
                 <li>
                   项目根目录中的app.json配置文件
                   <ol>
-                    <li>app.json 是当前小程序的全局配置，包括了小程序的所有页面路径、窗口外观、界面表现、底部tab等</li>
+                    <li>
+                      app.json
+                      是当前小程序的全局配置，包括了小程序的所有页面路径、窗口外观、界面表现、底部tab等
+                    </li>
                     <li>
                       Demo项目里边的app.json配置内容如下：
                       <pre><code class="language-js line-numbers">  {
@@ -165,7 +203,9 @@
                 <li>
                   项目根目录中的project.config.json配置文件
                   <ol>
-                    <li>project.config.json是项目配置文件，用来记录我们对小程序开发工具所做的个性化配置，例如：</li>
+                    <li>
+                      project.config.json是项目配置文件，用来记录我们对小程序开发工具所做的个性化配置，例如：
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  {
     "description": "项目配置文件",
@@ -243,8 +283,12 @@
                 <li>
                   项目根目录中的sitemap.json配置文件
                   <ol>
-                    <li>微信现已开放小程序内搜索，效果类似于PC网页的SEO。sitemap.json文件用来配置小程序页面是否允许微信索引。</li>
-                    <li>当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。</li>
+                    <li>
+                      微信现已开放小程序内搜索，效果类似于PC网页的SEO。sitemap.json文件用来配置小程序页面是否允许微信索引。
+                    </li>
+                    <li>
+                      当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。
+                    </li>
                     <li>
                       当用户的搜索关键字和页面的索引匹配成功的时候，小程序的页面将可能展示在搜索结果中
                       <pre><code class="language-js line-numbers">  {
@@ -255,14 +299,23 @@
     }]
   }</code></pre>
                     </li>
-                    <li>注意：sitemap的索引提示是默认开启的，如需要关闭 sitemap的索引提示，可在小程序项目配置文件</li>
-                    <li>project.config.json的 setting 中配置字段 checkSiteMap为false，这样输出的地方就不会有这个黄色警告</li>
+                    <li>
+                      注意：sitemap的索引提示是默认开启的，如需要关闭
+                      sitemap的索引提示，可在小程序项目配置文件
+                    </li>
+                    <li>
+                      project.config.json的 setting 中配置字段
+                      checkSiteMap为false，这样输出的地方就不会有这个黄色警告
+                    </li>
                   </ol>
                 </li>
                 <li>
                   每个页面文件夹中的.json 配置文件
                   <ol>
-                    <li>小程序中的每一个页面，可以使用.json 文件来对本页面的窗口外观进行配置，页面中的配置项会覆盖</li>
+                    <li>
+                      小程序中的每一个页面，可以使用.json
+                      文件来对本页面的窗口外观进行配置，页面中的配置项会覆盖
+                    </li>
                     <li>
                       app.json的window中相同的配置项。页面会覆盖全局，就近原则
                       <pre><code class="language-js line-numbers">  {
@@ -295,7 +348,10 @@
           </code></pre>
           <p>修改项目首页</p>
           <ul>
-            <li>只需要调整 app.json -> pages 数组中页面路径的前后顺序，即可修改项目的首页。小程序会把排在第一位的页面，</li>
+            <li>
+              只需要调整 app.json -> pages
+              数组中页面路径的前后顺序，即可修改项目的首页。小程序会把排在第一位的页面，
+            </li>
             <li>
               当作项目首页进行渲染，如图所示：
               <pre><code class="language-js line-numbers">  {
@@ -322,7 +378,10 @@
         <div class="ls-cot">
           <p>WXML</p>
           <ol>
-            <li>WXML（Weixin Markup Language）是小程序框架设计的一套标签语言，用来构建小程序页面的结构，其作用类似于网页开发中的HTML。</li>
+            <li>
+              WXML（Weixin Markup
+              Language）是小程序框架设计的一套标签语言，用来构建小程序页面的结构，其作用类似于网页开发中的HTML。
+            </li>
             <li>
               与HTML的不同之处：
               <ul>
@@ -337,7 +396,10 @@
                   属性节点不同
                   <ol>
                     <li>&lt;a&gt; href="#"&gt;超链接&lt;/a&gt;</li>
-                    <li>&lt;navigator&gt; url="/pages/home/home"&gt;&lt;/navigator&gt;</li>
+                    <li>
+                      &lt;navigator&gt;
+                      url="/pages/home/home"&gt;&lt;/navigator&gt;
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -353,14 +415,20 @@
           </ol>
           <p>WXSS</p>
           <ol>
-            <li>WXSS（Weixin Style Sheets）是一套样式语言，用于描述WXML的组件样式，类似于网页开发中的CSS。</li>
+            <li>
+              WXSS（Weixin Style
+              Sheets）是一套样式语言，用于描述WXML的组件样式，类似于网页开发中的CSS。
+            </li>
             <li>
               与CSS的不同之处：
               <ul>
                 <li>
                   新增了 rpx 尺寸单位
                   <ol>
-                    <li>CSS中需要手动进行像素单位换算，例如rem WXSS在底层支持新的尺寸单位rpx，在不同大小的屏幕上小程序会自动进行换算</li>
+                    <li>
+                      CSS中需要手动进行像素单位换算，例如rem
+                      WXSS在底层支持新的尺寸单位rpx，在不同大小的屏幕上小程序会自动进行换算
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -384,26 +452,34 @@
           </ol>
           <p>js</p>
           <ol>
-            <li>一个项目仅仅提供界面展示是不够的，在小程序中，我们通过，js文件来处理用户的操作。</li>
+            <li>
+              一个项目仅仅提供界面展示是不够的，在小程序中，我们通过，js文件来处理用户的操作。
+            </li>
             <li>
               例如：响应用户的点击、获取用户的位置等等
               <ul>
                 <li>
                   app.js
                   <ol>
-                    <li>是整个小程序项目的入口文件，通过调用App（）函数来启动整个小程序</li>
+                    <li>
+                      是整个小程序项目的入口文件，通过调用App（）函数来启动整个小程序
+                    </li>
                   </ol>
                 </li>
                 <li>
                   页面的.js 文件
                   <ol>
-                    <li>是页面的入口文件，通过调用Page（）函数来创建并运行页面通的.js文件</li>
+                    <li>
+                      是页面的入口文件，通过调用Page（）函数来创建并运行页面通的.js文件
+                    </li>
                   </ol>
                 </li>
                 <li>
                   普通的 js
                   <ol>
-                    <li>是普通的功能模块文件，用来封装公共的函数或属性供页面使用</li>
+                    <li>
+                      是普通的功能模块文件，用来封装公共的函数或属性供页面使用
+                    </li>
                   </ol>
                 </li>
               </ul>
@@ -414,11 +490,17 @@
             <li>
               宿主环境（host environment）指的是程序运行所必须的依赖环境。例如：
               <ul>
-                <li>Android 系统和iOS系统是两个不同的宿主环境。安卓版的微信App是不能在iOS环境下运行的，所以， Android是安卓软件的宿主环境，脱离了宿主环境的软件是没有任何意义的！</li>
+                <li>
+                  Android
+                  系统和iOS系统是两个不同的宿主环境。安卓版的微信App是不能在iOS环境下运行的，所以，
+                  Android是安卓软件的宿主环境，脱离了宿主环境的软件是没有任何意义的！
+                </li>
                 <li>
                   手机微信是小程序的宿主环境。
                   <ol>
-                    <li>小程序借助宿主环境提供的能力，可以完成许多普通网页无法完成的功能，例如：微信扫码、微信支付、微信登录、地理定位、etc...</li>
+                    <li>
+                      小程序借助宿主环境提供的能力，可以完成许多普通网页无法完成的功能，例如：微信扫码、微信支付、微信登录、地理定位、etc...
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -483,7 +565,9 @@
           </ul>
           <p>小程序中的组件分类</p>
           <ol>
-            <li>小程序中的组件也是由宿主环境提供的，开发者可以基于组件快速搭建出漂亮的页面结构。</li>
+            <li>
+              小程序中的组件也是由宿主环境提供的，开发者可以基于组件快速搭建出漂亮的页面结构。
+            </li>
             <li>
               官方把小程序的件分为了9大类，分别是：
               <ul>
@@ -618,7 +702,9 @@
                       <ol>
                         <li>文本组件</li>
                         <li>类似于HTML中的span标签，是一个行内元素</li>
-                        <li>通过text组件的selectable属性，实现长按选中文本内容的效果(只有text才支持长按复制)：</li>
+                        <li>
+                          通过text组件的selectable属性，实现长按选中文本内容的效果(只有text才支持长按复制)：
+                        </li>
                       </ol>
                       <pre><code class="language-html line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view&gt;手机号为：&lt;text selectable&gt;13850984526&lt;/text&gt;&lt;/view&gt;</code></pre>
@@ -628,7 +714,9 @@
                       <ol>
                         <li>富文本组件</li>
                         <li>支持把HTML字符串渲染为WXML结构</li>
-                        <li>通过rich-text组件的nodes属性节点，把HTML字符串渲染为对应的Ul结构（常用于服务器传过来详情页标签）：</li>
+                        <li>
+                          通过rich-text组件的nodes属性节点，把HTML字符串渲染为对应的Ul结构（常用于服务器传过来详情页标签）：
+                        </li>
                       </ol>
                       <pre><code class="language-html line-numbers">  &lt;rich-text nodes="&lt;div&gt; style='font-size:30px'&gt;我被转化换了&lt;/div&gt;"&gt;&lt;/rich-text&gt;</code></pre>
                     </li>
@@ -637,7 +725,9 @@
                       <ol>
                         <li>按钮组件</li>
                         <li>功能比HTML中的button按钮丰富</li>
-                        <li>通过open-type属性可以调用微信提供的各种功能（客服、转发、获取用户授权、获取用户信息等）</li>
+                        <li>
+                          通过open-type属性可以调用微信提供的各种功能（客服、转发、获取用户授权、获取用户信息等）
+                        </li>
                       </ol>
                       <pre><code class="language-html line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;button&gt;普通按钮&lt;/button&gt;
@@ -653,7 +743,10 @@
                       <ol>
                         <li>图片组件</li>
                         <li>image组件默认宽度约300px、高度约240px</li>
-                        <li>image 组件的mode属性用来指定图片的裁剪和缩放模式，常用的mode属性值如下：</li>
+                        <li>
+                          image
+                          组件的mode属性用来指定图片的裁剪和缩放模式，常用的mode属性值如下：
+                        </li>
                       </ol>
                       <table>
                         <tbody>
@@ -663,23 +756,33 @@
                           </tr>
                           <tr>
                             <td>scaleToFill</td>
-                            <td>（默认值）缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满image元素</td>
+                            <td>
+                              （默认值）缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满image元素
+                            </td>
                           </tr>
                           <tr>
                             <td>aspectFit</td>
-                            <td>缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。</td>
+                            <td>
+                              缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。
+                            </td>
                           </tr>
                           <tr>
                             <td>aspectFill</td>
-                            <td>缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。</td>
+                            <td>
+                              缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+                            </td>
                           </tr>
                           <tr>
                             <td>widthFix</td>
-                            <td>缩放模式，宽度不变，高度自动变化，保持原图宽</td>
+                            <td>
+                              缩放模式，宽度不变，高度自动变化，保持原图宽
+                            </td>
                           </tr>
                           <tr>
                             <td>heighFix</td>
-                            <td>缩放模式，高度不变，宽度自动变化，保持原图宽高比不变</td>
+                            <td>
+                              缩放模式，高度不变，宽度自动变化，保持原图宽高比不变
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -708,7 +811,10 @@
           </ol>
           <p>小程序API概述</p>
           <ol>
-            <li>小程序中的API是由宿主环境提供的，通过这些丰富的小程序APl，开发者可以方便的调用微信提 供的能力，例如：获取用户信息、本地存储、支付功能等。</li>
+            <li>
+              小程序中的API是由宿主环境提供的，通过这些丰富的小程序APl，开发者可以方便的调用微信提
+              供的能力，例如：获取用户信息、本地存储、支付功能等。
+            </li>
             <li>
               小程序官方把API分为了如下3大类：
               <ul>
@@ -716,22 +822,35 @@
                   事件监听API
                   <ol>
                     <li>特点：以on开头，用来 监听某些事件的触发</li>
-                    <li>举例：wx.onWindowResize（function callback）监听窗口尺寸变化的事件 wx相当于于window 顶级对象</li>
+                    <li>
+                      举例：wx.onWindowResize（function
+                      callback）监听窗口尺寸变化的事件 wx相当于于window 顶级对象
+                    </li>
                   </ol>
                 </li>
                 <li>
                   同步API
                   <ol>
                     <li>特点1：以Sync结尾的API都是同步API</li>
-                    <li>特点2：同步APl的执行结果，可以通过函数返回值直接获取，如果执行出错会抛出异常</li>
-                    <li>举例：wx.setStorageSync（'key'，value'）向本地存储中写入内容</li>
+                    <li>
+                      特点2：同步APl的执行结果，可以通过函数返回值直接获取，如果执行出错会抛出异常
+                    </li>
+                    <li>
+                      举例：wx.setStorageSync（'key'，value'）向本地存储中写入内容
+                    </li>
                   </ol>
                 </li>
                 <li>
                   异步API
                   <ol>
-                    <li>特点：类似于jQuery中的$.ajax（options）函数，需要通过 success、fail、complete 接收调用的结果</li>
-                    <li>举例：wx.request（）发起网络数据请求，通过success 回调函数接收数据</li>
+                    <li>
+                      特点：类似于jQuery中的$.ajax（options）函数，需要通过
+                      success、fail、complete 接收调用的结果
+                    </li>
+                    <li>
+                      举例：wx.request（）发起网络数据请求，通过success
+                      回调函数接收数据
+                    </li>
                   </ol>
                 </li>
               </ul>
@@ -739,9 +858,18 @@
           </ol>
           <p>协同工作</p>
           <ol>
-            <li>在中大型的公司里，人员的分工非常仔细：同一个小程序项目，一般会有不同岗位、不同角色的员工 同时参与设计与开发。</li>
-            <li>此时出于管理需要，我们迫切需要对不同岗位、不同角色的员工的权限进行边界的划分，使他们能够 高效的进行协同工作。</li>
-            <li>提出需求-产品组 =&gt; 设计-设计组 =&gt; 开发-开发组 =&gt; 体验-产品组-设计组 =&gt; 测试-测试组 =&gt; 发布</li>
+            <li>
+              在中大型的公司里，人员的分工非常仔细：同一个小程序项目，一般会有不同岗位、不同角色的员工
+              同时参与设计与开发。
+            </li>
+            <li>
+              此时出于管理需要，我们迫切需要对不同岗位、不同角色的员工的权限进行边界的划分，使他们能够
+              高效的进行协同工作。
+            </li>
+            <li>
+              提出需求-产品组 =&gt; 设计-设计组 =&gt; 开发-开发组 =&gt;
+              体验-产品组-设计组 =&gt; 测试-测试组 =&gt; 发布
+            </li>
             <li>
               小程序成员管理体现在管理员对小程序项目成员及体验成员的管理：
               <ul>
@@ -858,10 +986,14 @@
                 <li>
                   不同项目成员对应的权限 说明
                   <ol>
-                    <li>开发者权限：可使用小程序开发者工具及对小程序的功能进行代码开发</li>
+                    <li>
+                      开发者权限：可使用小程序开发者工具及对小程序的功能进行代码开发
+                    </li>
                     <li>体验者权限：可使用体验版小程序</li>
                     <li>登录权限：可登录小程序管理后台，无需管理员确认</li>
-                    <li>开发设置：设置小程序服务器域名、消息推送及扫描普通链接二维码打开小程序</li>
+                    <li>
+                      开发设置：设置小程序服务器域名、消息推送及扫描普通链接二维码打开小程序
+                    </li>
                     <li>腾讯云管理：云开发相关设置</li>
                   </ol>
                 </li>
@@ -880,7 +1012,9 @@
               在软件开发过程中，根据时间节点的不同，会产出不同的软件版本，例如：
               <ul>
                 <li>开发者编写代码的同时，对项目代码进行自测（开发版本）</li>
-                <li>直到程序达到一个稳定可体验的状态时，开发者把体验版本给到产品经理和测试人员进行体验测试</li>
+                <li>
+                  直到程序达到一个稳定可体验的状态时，开发者把体验版本给到产品经理和测试人员进行体验测试
+                </li>
                 <li>最后修复完程序的Bug后，发布正式版供外部用户使用</li>
               </ul>
               <table>
@@ -891,41 +1025,60 @@
                   </tr>
                   <tr>
                     <td>开发版本</td>
-                    <td>使用开发者工具，可将代码上传到开发版本中。开发版本只保留每人最新的一份上传的代码。点击提交审核，可将代码提交审核。开发版本可删除，不影响线上版本和审核中版本的代码。</td>
+                    <td>
+                      使用开发者工具，可将代码上传到开发版本中。开发版本只保留每人最新的一份上传的代码。点击提交审核，可将代码提交审核。开发版本可删除，不影响线上版本和审核中版本的代码。
+                    </td>
                   </tr>
                   <tr>
                     <td>体验版本</td>
-                    <td>可以选择某个开发版本作为体验版，并且选取一份体验版。</td>
+                    <td>
+                      可以选择某个开发版本作为体验版，并且选取一份体验版。
+                    </td>
                   </tr>
                   <tr>
                     <td>审核中的版本</td>
-                    <td>只能有一份代码处于审核中。有审核结果后可以发布到线上，也可直接重新提交审核，覆盖原审核版本。</td>
+                    <td>
+                      只能有一份代码处于审核中。有审核结果后可以发布到线上，也可直接重新提交审核，覆盖原审核版本。
+                    </td>
                   </tr>
                   <tr>
                     <td>线上版本</td>
-                    <td>线上所有用户使用的代码版本，该版本代码在新版本代码发布后被覆盖更新。</td>
+                    <td>
+                      线上所有用户使用的代码版本，该版本代码在新版本代码发布后被覆盖更新。
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </li>
             <li>
-              小程序的发布上线，一般要经过 上传代码 -> 提交审核 -> 发布这三个步骤。
+              小程序的发布上线，一般要经过 上传代码 -> 提交审核 ->
+              发布这三个步骤。
               <ul>
                 <li>1. 点击开发者工具顶部工具栏中的“上传”按钮</li>
                 <li>2. 填写版本号以及项目备注</li>
                 <li>
                   3. 在后台查看上传之后的版本
                   <ol>
-                    <li>登录小程序 管理后台 -> 管理 -> 版本管理 -> 开发版本，即可查看刚才提交上传的版本了</li>
+                    <li>
+                      登录小程序 管理后台 -> 管理 -> 版本管理 ->
+                      开发版本，即可查看刚才提交上传的版本了
+                    </li>
                   </ol>
                 </li>
                 <li>
-                  4. 为什么需要提交审核：为了保证小程序的质量，以及符合相关的规范，小程序的发布是需要经过腾讯官方审核的。
+                  4.
+                  为什么需要提交审核：为了保证小程序的质量，以及符合相关的规范，小程序的发布是需要经过腾讯官方审核的。
                   <ol>
-                    <li>提交审核的方式：在开发版本的列表中，点击“提交审核”按钮之后，按照页面提示填写相关的信息，就能把小程 序提交到腾讯官方进行审核。</li>
+                    <li>
+                      提交审核的方式：在开发版本的列表中，点击“提交审核”按钮之后，按照页面提示填写相关的信息，就能把小程
+                      序提交到腾讯官方进行审核。
+                    </li>
                   </ol>
                 </li>
-                <li>5、审核通过之后，管理员的微信中会收到小程序通过审核的通知，此时在审核版本的列表中，点击“发布”按钮 之后，即可把“审核通过”的版本发布为“线上版本”，供所有小程序用户访问和使用。</li>
+                <li>
+                  5、审核通过之后，管理员的微信中会收到小程序通过审核的通知，此时在审核版本的列表中，点击“发布”按钮
+                  之后，即可把“审核通过”的版本发布为“线上版本”，供所有小程序用户访问和使用。
+                </li>
                 <li>
                   6、推广：相对于普通二维码来说，小程序码的优势如下：
                   <ol>
@@ -935,7 +1088,9 @@
                       可以帮助开发者更好地推广小程序
                       <ol>
                         <li>获取小程序码的5个步骤：</li>
-                        <li>登录小程序管理后台->设置->基本设置->基本信息->小程序码及线下物料下载</li>
+                        <li>
+                          登录小程序管理后台->设置->基本设置->基本信息->小程序码及线下物料下载
+                        </li>
                       </ol>
                     </li>
                   </ol>
@@ -978,7 +1133,9 @@
                 <li>
                   1. 在data中定义数据
                   <ol>
-                    <li>在页面对应的，js文件中，把数据定义到data对象中即可：</li>
+                    <li>
+                      在页面对应的，js文件中，把数据定义到data对象中即可：
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  // pages/list/list.js
   Page(｛
@@ -993,7 +1150,10 @@
                     <li>
                       Mustache 语法的格式：
                       <ol>
-                        <li>把data中的数据绑定到页面中渲染，使用Mustache 语法（双大括号）将变量包起来即可。语法格式为：</li>
+                        <li>
+                          把data中的数据绑定到页面中渲染，使用Mustache
+                          语法（双大括号）将变量包起来即可。语法格式为：
+                        </li>
                       </ol>
                       <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view&gt;｛｛ info ｝｝&lt;/view&gt;   // Vue中的插值表达式 就是Mustache 语法</code></pre>
@@ -1033,7 +1193,9 @@
           randomNum2: Math.random().toFixed(2) // 生成一个带两位小数的随机数
       },</code></pre>
                     </li>
-                    <li>注意，如果需要看变量的数据，可以在调试器（F12控制台），AppData中查看</li>
+                    <li>
+                      注意，如果需要看变量的数据，可以在调试器（F12控制台），AppData中查看
+                    </li>
                   </ol>
                 </li>
               </ul>
@@ -1071,7 +1233,9 @@
                 <li>
                   bindTap的语法格式：
                   <ol>
-                    <li>在小程序中，不存在HTML中的onclick鼠标点击事件，而是通过tap事件来响应用户的触摸行为。</li>
+                    <li>
+                      在小程序中，不存在HTML中的onclick鼠标点击事件，而是通过tap事件来响应用户的触摸行为。
+                    </li>
                     <li>
                       通过bindTap，可以为组件绑定tap触摸事件，语法如下：
                       <pre><code class="language-html line-numbers">  &lt;!--pages/list/list.wxml--&gt;
@@ -1093,7 +1257,10 @@
                 <li>
                   在事件处理函数中为data中的数据赋值
                   <ol>
-                    <li>通过调用this.setData(dataObject) 方法，可以给页面data中的数据重新赋值，示例如下：</li>
+                    <li>
+                      通过调用this.setData(dataObject)
+                      方法，可以给页面data中的数据重新赋值，示例如下：
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;button type="primary" bindtap="countChange"&gt;+1&lt;/button&gt;
@@ -1165,13 +1332,23 @@
                 <li>
                   target (常用)和 currentTarget的区别
                   <ol>
-                    <li>target是触发该事件的源头组件，而currentTarget则是当前事件所绑定的组件。举例如下：</li>
-                    <li>点击内部的按钮时，点击事件以冒泡的方式向外扩散，也会触发外层view的tap事件处理函数。</li>
+                    <li>
+                      target是触发该事件的源头组件，而currentTarget则是当前事件所绑定的组件。举例如下：
+                    </li>
+                    <li>
+                      点击内部的按钮时，点击事件以冒泡的方式向外扩散，也会触发外层view的tap事件处理函数。
+                    </li>
                     <li>
                       此时，对于外层的view来说：
                       <ol>
-                        <li>e.target指向的是触发事件的源头组件，因此，e.target是内部的按钮组件 button</li>
-                        <li>e.currentTarget 指向的是当前正在触发事件的那个组件，因此，e.currentTarget是当前的view组件</li>
+                        <li>
+                          e.target指向的是触发事件的源头组件，因此，e.target是内部的按钮组件
+                          button
+                        </li>
+                        <li>
+                          e.currentTarget
+                          指向的是当前正在触发事件的那个组件，因此，e.currentTarget是当前的view组件
+                        </li>
                       </ol>
                       <pre><code class="language-html line-numbers">  &lt;view class="outer-view" bindtap="outerHandler"&gt;
       &lt;button&gt; type="primary"&gt;按钮&lt;/button&gt;
@@ -1182,7 +1359,9 @@
                 <li>
                   事件传参
                   <ol>
-                    <li>小程序中的事件传参比较特殊，不能在绑定事件的同时为事件处理函数传递参数。</li>
+                    <li>
+                      小程序中的事件传参比较特殊，不能在绑定事件的同时为事件处理函数传递参数。
+                    </li>
                     <li>
                       例如，下面的代码将不能正常工祚：
                       <pre><code class="language-html line-numbers">  &lt;button type="primary" bindtap="countChange(123)"&gt;+1&lt;/button&gt;  &lt;!-- 这种是错误的写法 --&gt;
@@ -1194,7 +1373,9 @@
                 <li>
                   解决方法：
                   <ol>
-                    <li>可以为组件提供data-*自定义属性传参，其中*代表的是参数的名字，示例代码如下：</li>
+                    <li>
+                      可以为组件提供data-*自定义属性传参，其中*代表的是参数的名字，示例代码如下：
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;button&gt; bindtap="countChange" data-info="｛｛ 123 ｝｝"&gt;+1&lt;/button&gt; </code></pre>
@@ -1292,7 +1473,8 @@ Page（｛
                   wx:if
                   <ol>
                     <li>
-                      在小程序中，使用wx:if="｛｛ condition ｝｝"来判断是否需要渲染该代码块：
+                      在小程序中，使用wx:if="｛｛ condition
+                      ｝｝"来判断是否需要渲染该代码块：
                       <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view wx:if="｛｛ condition ｝｝"&gt; 如果插值为真，则会被渲染 &lt;/view&gt;
 
@@ -1334,7 +1516,9 @@ Page（｛
       &lt;view&gt;view 3&lt;/view&gt;
   &lt;/block&gt;</code></pre>
                     </li>
-                    <li>注意：&lt;block&gt;并不是一个组件，它只是一个包裹性质的容器，不会在页面中做任何渲染。</li>
+                    <li>
+                      注意：&lt;block&gt;并不是一个组件，它只是一个包裹性质的容器，不会在页面中做任何渲染。
+                    </li>
                   </ol>
                 </li>
               </ul>
@@ -1355,15 +1539,23 @@ Page（｛
                 <li>
                   运行方式不同
                   <ol>
-                    <li>wx:if以动态创建和移除元素的方式，控制元素的展示与隐藏</li>
-                    <li>hidden 以切换样式的方式（display:none/block；），控制元素的显示与隐藏</li>
+                    <li>
+                      wx:if以动态创建和移除元素的方式，控制元素的展示与隐藏
+                    </li>
+                    <li>
+                      hidden
+                      以切换样式的方式（display:none/block；），控制元素的显示与隐藏
+                    </li>
                   </ol>
                 </li>
                 <li>
                   使用建议
                   <ol>
                     <li>频繁切换时，建议使用hidden</li>
-                    <li>控制条件复杂时，建议使用wx:if 搭配wx:elif、wx:else进行展示与隐藏的切换</li>
+                    <li>
+                      控制条件复杂时，建议使用wx:if
+                      搭配wx:elif、wx:else进行展示与隐藏的切换
+                    </li>
                   </ol>
                 </li>
               </ul>
@@ -1386,11 +1578,16 @@ Page（｛
           array: [1,2,3,4,5,6]
       },</code></pre>
                     </li>
-                    <li>默认情况下，当前循环项的索引用index表示；当前循环项用item表示。</li>
+                    <li>
+                      默认情况下，当前循环项的索引用index表示；当前循环项用item表示。
+                    </li>
                     <li>
                       手动指定索引和当前项的变量名*（了解即可，可使用默认名）：
                       <ol>
-                        <li>使用wx:for-index可以指定当前循环项的索引的变量名（默认是用index为索引名，这里可以在for后面 - 改名）</li>
+                        <li>
+                          使用wx:for-index可以指定当前循环项的索引的变量名（默认是用index为索引名，这里可以在for后面
+                          - 改名）
+                        </li>
                         <li>
                           使用wx:for-item可以指定当前项的变量名
                           <pre><code class="language-html line-numbers">  &lt;!--pages/list/list.wxml--&gt;
@@ -1405,7 +1602,9 @@ Page（｛
                 <li>
                   wx:Key 的使用
                   <ol>
-                    <li>类似于Vue列表渲染中的：key，小程序在实现列表渲染时，也建议为渲染出来的列表项指定唯一的</li>
+                    <li>
+                      类似于Vue列表渲染中的：key，小程序在实现列表渲染时，也建议为渲染出来的列表项指定唯一的
+                    </li>
                     <li>
                       key值，从而提高渲染的效率，示例代码如下：
                       <pre><code class="language-html line-numbers">  &lt;!--pages/list/list.wxml--&gt;
@@ -1426,30 +1625,52 @@ Page（｛
           </ol>
           <p>WXSS模板样式</p>
           <ol>
-            <li>WXSS（WeiXin Style Sheets）是一套样式语言，用于美化WXML的组件样式，类似于网页开发中的CSS。</li>
+            <li>
+              WXSS（WeiXin Style
+              Sheets）是一套样式语言，用于美化WXML的组件样式，类似于网页开发中的CSS。
+            </li>
             <li>
               WXSS和CSS的关系
               <ul>
-                <li>WXSS具有CSS大部分特性，同时，WXSS还对CSS进行了扩充以及修改，以适应微信小程序的开发。</li>
+                <li>
+                  WXSS具有CSS大部分特性，同时，WXSS还对CSS进行了扩充以及修改，以适应微信小程序的开发。
+                </li>
                 <li>
                   与CSS相比，WXSS扩展的特性有：
                   <ol>
                     <li>
                       rpx尺寸单位
                       <ol>
-                        <li>rpx（responsive pixel）是微信小程序独有的，用来解决屏适配的尺寸单位。</li>
-                        <li>rpx的实现原理非常简单：鉴于不同设备屏幕的大小不同，为了实现屏幕的自动适配， rpx把所有设备的屏幕，在宽度上等分为750份（即：当前屏幕的总宽度为750rpx）。</li>
+                        <li>
+                          rpx（responsive
+                          pixel）是微信小程序独有的，用来解决屏适配的尺寸单位。
+                        </li>
+                        <li>
+                          rpx的实现原理非常简单：鉴于不同设备屏幕的大小不同，为了实现屏幕的自动适配，
+                          rpx把所有设备的屏幕，在宽度上等分为750份（即：当前屏幕的总宽度为750rpx）。
+                        </li>
                         <li>在较小的设备上，1rpx所代表的宽度较小</li>
                         <li>在较大的设备上，1rpx所代表的宽度较大</li>
-                        <li>小程序在不同设备上运行的时候，会自动把rpx的样式单位换算成对应的像素单位来渲染， 从而实现屏幕适配。</li>
+                        <li>
+                          小程序在不同设备上运行的时候，会自动把rpx的样式单位换算成对应的像素单位来渲染，
+                          从而实现屏幕适配。
+                        </li>
                       </ol>
                     </li>
                     <li>
                       rpx与px之间的单位换算*
                       <ol>
-                        <li>在iPhone6上，屏幕宽度为375px，共有750个物理像素，等分为750rpx。则： 750rpx=375px=750物理像素 （两倍关系，1px = 2rpx 2个物理像素点） 1rpx=0.5px=1物理像素</li>
-                        <li>官方建议：开发微信小程序时，设计师可以用iPhone6作为视觉稿的标准。</li>
-                        <li>开发举例：在iPhone6上如果要绘制宽100px，高20px的盒子，换算成rpx单位，宽高分别为200rpx和40rpx。</li>
+                        <li>
+                          在iPhone6上，屏幕宽度为375px，共有750个物理像素，等分为750rpx。则：
+                          750rpx=375px=750物理像素 （两倍关系，1px = 2rpx
+                          2个物理像素点） 1rpx=0.5px=1物理像素
+                        </li>
+                        <li>
+                          官方建议：开发微信小程序时，设计师可以用iPhone6作为视觉稿的标准。
+                        </li>
+                        <li>
+                          开发举例：在iPhone6上如果要绘制宽100px，高20px的盒子，换算成rpx单位，宽高分别为200rpx和40rpx。
+                        </li>
                       </ol>
                       <table>
                         <tbody>
@@ -1499,16 +1720,24 @@ Page（｛
                 <li>
                   全局样式：
                   <ol>
-                    <li>定义在app.wxss中的样式为全局样式，作用于每一个页面。</li>
+                    <li>
+                      定义在app.wxss中的样式为全局样式，作用于每一个页面。
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  /**app.wxss**/
   view {padding: 10rpx;margin: 10rpx;}</code></pre>
                 </li>
                 <li>
                   <ol>
-                    <li>在页面的.WXSS文件中定义的样式为局部样式，只作用于当前页面。</li>
-                    <li>当局部样式和全局样式冲突时，根据就近原则，局部样式会覆盖全局样式</li>
-                    <li>当局部样式的权重大于或等于全局样式的权重时，才会覆盖全局的样式，（鼠标放上会提示权重）</li>
+                    <li>
+                      在页面的.WXSS文件中定义的样式为局部样式，只作用于当前页面。
+                    </li>
+                    <li>
+                      当局部样式和全局样式冲突时，根据就近原则，局部样式会覆盖全局样式
+                    </li>
+                    <li>
+                      当局部样式的权重大于或等于全局样式的权重时，才会覆盖全局的样式，（鼠标放上会提示权重）
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  /* pages/list/list.wxss */
   input{padding: 5px;margin: 5px;border-radius: 3px;}</code></pre>
@@ -1555,9 +1784,15 @@ Page（｛
           </ul>
           <p>window 小程序窗口的组成部分</p>
           <ul>
-            <li>navigationBar 导航栏区域 （显示信号、时间、电量、标题、关闭和三个小点区域）</li>
+            <li>
+              navigationBar 导航栏区域
+              （显示信号、时间、电量、标题、关闭和三个小点区域）
+            </li>
             <li>background 背景区域（默认不可见，下拉后才显示的区域）</li>
-            <li>页面的主体区域 （用来显示wxml中的布局，window节点无法配置的区域，以上两个是Window节点可以配置的区域）</li>
+            <li>
+              页面的主体区域
+              （用来显示wxml中的布局，window节点无法配置的区域，以上两个是Window节点可以配置的区域）
+            </li>
             <li>
               了解window节点常用的配置项:
               <ol>
@@ -1643,8 +1878,13 @@ Page（｛
   }</code></pre>
           <p>全局开启下拉刷新功能</p>
           <ul>
-            <li>概念：下拉刷新是移动端的专有名词，指的是通过手指在屏幕上的下拉滑动操作，从而重新加载页面数据的行为。</li>
-            <li>设置步骤：app.json -&gt; window -&gt; 把enablePullDownRefresh的值设置为true</li>
+            <li>
+              概念：下拉刷新是移动端的专有名词，指的是通过手指在屏幕上的下拉滑动操作，从而重新加载页面数据的行为。
+            </li>
+            <li>
+              设置步骤：app.json -&gt; window -&gt;
+              把enablePullDownRefresh的值设置为true
+            </li>
             <li>
               注意：在app.json中启用下拉刷新功能，会作用于每个小程序页面，因为app.json是全局配置！
               <pre><code class="language-js line-numbers">  {
@@ -1655,13 +1895,18 @@ Page（｛
     },
   }</code></pre>
             </li>
-            <li>模拟器并不能100%还原真机上的操作，不能太依赖，还是要用真机上测试</li>
+            <li>
+              模拟器并不能100%还原真机上的操作，不能太依赖，还是要用真机上测试
+            </li>
           </ul>
           <p>设置下拉刷新时窗口的背景色</p>
           <ul>
-            <li>当全局开启下拉刷新功能之后，默认的窗口背景为白色。如果自定义下拉刷新窗口背景色，</li>
             <li>
-              设置步骤为：app.json -&gt; window -&gt; 为backgroundColor 指定16进制的颜色值#efefef。效果如下：
+              当全局开启下拉刷新功能之后，默认的窗口背景为白色。如果自定义下拉刷新窗口背景色，
+            </li>
+            <li>
+              设置步骤为：app.json -&gt; window -&gt; 为backgroundColor
+              指定16进制的颜色值#efefef。效果如下：
               <pre><code class="language-js line-numbers">  {
     "window":{
       "backgroundColor": "#efefef"
@@ -1678,9 +1923,16 @@ Page（｛
   }</code></pre>
           <p>设置上拉触底的距离</p>
           <ul>
-            <li>概念：上拉触底是移动端的专有名词，通过手指在屏幕上的上拉滑动操作，从而加载更多数据的行为。</li>
-            <li>例如：在购物的时候，一直往上拉来加载数据，当快触碰到底的时候，会执行加载其它数据的动作</li>
-            <li>设置步骤：app.json -> window -> 为onReachBottomDistance 设置新的数值</li>
+            <li>
+              概念：上拉触底是移动端的专有名词，通过手指在屏幕上的上拉滑动操作，从而加载更多数据的行为。
+            </li>
+            <li>
+              例如：在购物的时候，一直往上拉来加载数据，当快触碰到底的时候，会执行加载其它数据的动作
+            </li>
+            <li>
+              设置步骤：app.json -> window -> 为onReachBottomDistance
+              设置新的数值
+            </li>
             <li>
               注意：默认距离为50px，如果没有特殊需求，建议使用默认值即可。
               <pre><code class="language-js line-numbers">  {
@@ -1710,7 +1962,10 @@ Page（｛
                   顶部 tabBar
                   <ol>
                     <li>tabBar中只能配置最少2个、最多5个tab页签</li>
-                    <li>当渲染顶部 tabBar时，不显示icon，只显示文本(顶部不支持icon图标，底部才支持)</li>
+                    <li>
+                      当渲染顶部
+                      tabBar时，不显示icon，只显示文本(顶部不支持icon图标，底部才支持)
+                    </li>
                     <li>
                       tabBar节点的配置项
                       <table>
@@ -1793,7 +2048,9 @@ Page（｛
                             <td>conPath</td>
                             <td>String</td>
                             <td>否</td>
-                            <td>未选中时的图标路径；当position为top时，不显示icon</td>
+                            <td>
+                              未选中时的图标路径；当position为top时，不显示icon
+                            </td>
                           </tr>
                           <tr>
                             <td>selectedColor</td>
@@ -1805,7 +2062,9 @@ Page（｛
                             <td>selectedIconPath</td>
                             <td>String</td>
                             <td>否</td>
-                            <td>选中时的图标路径；当position为top时，不显示icon</td>
+                            <td>
+                              选中时的图标路径；当position为top时，不显示icon
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -1834,13 +2093,22 @@ Page（｛
           </ol>
           <p>页面配置</p>
           <ul>
-            <li>小程序中，每个页面都有自己的.json配置文件，用来对当前页面的窗口外观、页面效果等进行配置。</li>
+            <li>
+              小程序中，每个页面都有自己的.json配置文件，用来对当前页面的窗口外观、页面效果等进行配置。
+            </li>
             <li>
               页面配置和全局配置的关系
               <ol>
-                <li>小程序中，app.json中的window节点，可以全局配置小程序中每个页面的窗口表现。</li>
-                <li>如果某些小程序页面想要拥有特殊的窗口表现，此时，“页面级别的.json 配置文件”就可以实现这种需求。</li>
-                <li>注意：当页面配置与全局配置冲突时，根据就近原则，最终的效果以页面配置为准。</li>
+                <li>
+                  小程序中，app.json中的window节点，可以全局配置小程序中每个页面的窗口表现。
+                </li>
+                <li>
+                  如果某些小程序页面想要拥有特殊的窗口表现，此时，“页面级别的.json
+                  配置文件”就可以实现这种需求。
+                </li>
+                <li>
+                  注意：当页面配置与全局配置冲突时，根据就近原则，最终的效果以页面配置为准。
+                </li>
               </ol>
               <pre><code class="language-js line-numbers">  {
     "usingComponents": {},
@@ -1917,7 +2185,10 @@ Page（｛
                     <li>
                       必须将接口的域名添加到信任列表中
                       <ol>
-                        <li>点击小程序开发工具中右上角的详情 => 项目配置 => 域名信息填写</li>
+                        <li>
+                          点击小程序开发工具中右上角的详情 => 项目配置 =>
+                          域名信息填写
+                        </li>
                       </ol>
                     </li>
                   </ol>
@@ -1927,8 +2198,13 @@ Page（｛
             <li>
               配置request合法域名列表
               <ul>
-                <li>需求描述：假设在自己的微信小程序中，希望请求 https://www.escook.cn/域名下的接口</li>
-                <li>配置步骤：登录微信小程序管理后台->开发->开发设置->服务器域名->修改request合法域名</li>
+                <li>
+                  需求描述：假设在自己的微信小程序中，希望请求
+                  https://www.escook.cn/域名下的接口
+                </li>
+                <li>
+                  配置步骤：登录微信小程序管理后台->开发->开发设置->服务器域名->修改request合法域名
+                </li>
                 <li>
                   注意事项：
                   <ol>
@@ -1944,7 +2220,8 @@ Page（｛
               发起Get请求
               <ul>
                 <li>
-                  调用微信小程序提供的 wx.request（）方法，可以发起GET数据请求，示例代码如下：
+                  调用微信小程序提供的
+                  wx.request（）方法，可以发起GET数据请求，示例代码如下：
                   <pre><code class="language-js line-numbers">  &lt;!--pases/home/home.wxml--&gt;
   &lt;button&gt; bindtap="getInfo"&gt; 发起GET请求&lt;/button&gt;
 
@@ -1990,7 +2267,9 @@ Page（｛
             <li>
               在页面刚加载时请求数据
               <ul>
-                <li>在很多情况下，我们需要在页面刚加载的时候，自动请求一些初始化的数据。</li>
+                <li>
+                  在很多情况下，我们需要在页面刚加载的时候，自动请求一些初始化的数据。
+                </li>
                 <li>
                   此时需要在页面的onLoad事件中调用获取数据的函数，示例代码如下：
                   <pre><code class="language-js line-numbers">  // pases/home/home.js
@@ -2017,16 +2296,30 @@ Page（｛
             <li>
               跳过request合法域名校验
               <ul>
-                <li>如果后端程序员仅仅提供了http协议的接口、暂时没有提供https协议的接口。</li>
-                <li>此时为了不耽误开发的进度，我们可以在微信开发者工具中详情 => 本地设置，临时开启勾选【开发环境不校验请求域名、 TLS版本及HTTPS证书】选项，跳过request合法域名的校验。</li>
-                <li>注意：跳过request合法域名校验的选项，仅限在开发与调试阶段使用！</li>
+                <li>
+                  如果后端程序员仅仅提供了http协议的接口、暂时没有提供https协议的接口。
+                </li>
+                <li>
+                  此时为了不耽误开发的进度，我们可以在微信开发者工具中详情 =>
+                  本地设置，临时开启勾选【开发环境不校验请求域名、
+                  TLS版本及HTTPS证书】选项，跳过request合法域名的校验。
+                </li>
+                <li>
+                  注意：跳过request合法域名校验的选项，仅限在开发与调试阶段使用！
+                </li>
               </ul>
             </li>
             <li>
               关于跨域和Ajax的说明
               <ul>
-                <li>跨域问题只存在于基于浏览器的Web开发中。由于小程序的宿主环境不是浏览器，而是微信客户端，所以小程序中不存在 跨域的问题。</li>
-                <li>Ajax技术的核心是依赖于浏览器中的XMLHttpRequest这个对象，由于小程序的宿主环境是微信客户端，所以小程序中不能 叫做“发起Ajax请求”，而是叫做“发起网络数据请求”。</li>
+                <li>
+                  跨域问题只存在于基于浏览器的Web开发中。由于小程序的宿主环境不是浏览器，而是微信客户端，所以小程序中不存在
+                  跨域的问题。
+                </li>
+                <li>
+                  Ajax技术的核心是依赖于浏览器中的XMLHttpRequest这个对象，由于小程序的宿主环境是微信客户端，所以小程序中不能
+                  叫做“发起Ajax请求”，而是叫做“发起网络数据请求”。
+                </li>
               </ul>
             </li>
           </ol>
@@ -2123,7 +2416,9 @@ Page（｛
             <li>
               能够使用WXSS样式美化页面结构
               <ol>
-                <li>rpx尺寸单位(2px = 1rpx)、@import样式导入、全局样式和局部样式</li>
+                <li>
+                  rpx尺寸单位(2px = 1rpx)、@import样式导入、全局样式和局部样式
+                </li>
               </ol>
             </li>
             <li>
@@ -2167,10 +2462,15 @@ Page（｛
                     <li>
                       声明式导航
                       <ol>
-                        <li>在页面上声明一个&lt;navigator&gt;导航组件, 通过点击&lt;navigator&gt;组件实现页面跳转</li>
+                        <li>
+                          在页面上声明一个&lt;navigator&gt;导航组件,
+                          通过点击&lt;navigator&gt;组件实现页面跳转
+                        </li>
                       </ol>
                     </li>
-                    <li>导航到tabBar页面，tabBar页面指的是被配置为tabBar的页面</li>
+                    <li>
+                      导航到tabBar页面，tabBar页面指的是被配置为tabBar的页面
+                    </li>
                     <li>
                       在使用&lt;navigator&gt;组件跳转到指定的tabBar页面时，需要指定url属性和open-type属性，其中：
                       <ol>
@@ -2180,22 +2480,35 @@ Page（｛
                       <pre><code class="language-html line-numbers">  &lt;!--pages/home/home.wxml--&gt;
   &lt;navigator&gt; url="/pages/message/message" open-type="switchTab"&gt;导航到消息页面&lt;/navigator&gt;</code></pre>
                     </li>
-                    <li>导航到非 tabBar页面，非tabBar页面指的是没有被配置为tabBar的页面。</li>
                     <li>
-                      在使用&lt;navigator&gt;组件跳转到普通的非tabBar页面时，则需要指定 url属性和open-type属性，其中：
+                      导航到非
+                      tabBar页面，非tabBar页面指的是没有被配置为tabBar的页面。
+                    </li>
+                    <li>
+                      在使用&lt;navigator&gt;组件跳转到普通的非tabBar页面时，则需要指定
+                      url属性和open-type属性，其中：
                       <ol>
                         <li>url表示要跳转的页面的地址，必须以/开头</li>
-                        <li>open-type 表示跳转的方式，必须为navigate，如果省略也是可以跳转非tabBar页面</li>
+                        <li>
+                          open-type
+                          表示跳转的方式，必须为navigate，如果省略也是可以跳转非tabBar页面
+                        </li>
                       </ol>
                       <pre><code class="language-html line-numbers">  &lt;!--pages/home/home.wxml--&gt;
   &lt;navigator&gt; url="/pages/fTabBar/fTabBar" open-type="navigate"&gt;非tabbar页面&lt;/navigator&gt;</code></pre>
                     </li>
                     <li>
-                      后退导航，如果要后退到上一页面或多级页面，则需要指定open-type 属性和 delta属性，其中：
+                      后退导航，如果要后退到上一页面或多级页面，则需要指定open-type
+                      属性和 delta属性，其中：
                       <ol>
-                        <li>open-type的值必须是navigateBack，表示要进行后退导航</li>
+                        <li>
+                          open-type的值必须是navigateBack，表示要进行后退导航
+                        </li>
                         <li>delta的值必须是数字，表示要后退的层级</li>
-                        <li>注意：为了简便，如果只是后退到上一页面，则可以省略 delta属性，因为其默认值就是1。</li>
+                        <li>
+                          注意：为了简便，如果只是后退到上一页面，则可以省略
+                          delta属性，因为其默认值就是1。
+                        </li>
                       </ol>
                       <pre><code class="language-html line-numbers">  &lt;!--pages/message/message.wxml--&gt;
   &lt;text&gt;pages/message/message.wxml&lt;/text&gt;
@@ -2210,7 +2523,8 @@ Page（｛
               编程式导航-跳转到非tabBar页面
               <ul>
                 <li>
-                  调用wx.navigateTo（Object object）方法，可以跳转到非tabBar的页面。其中Object参数对象的属性列表如下：
+                  调用wx.navigateTo（Object
+                  object）方法，可以跳转到非tabBar的页面。其中Object参数对象的属性列表如下：
                   <table>
                     <tbody>
                       <tr>
@@ -2241,7 +2555,9 @@ Page（｛
                         <td>complete</td>
                         <td>function</td>
                         <td>否</td>
-                        <td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+                        <td>
+                          接口调用结束的回调函数（调用成功、失败都会执行）
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -2264,7 +2580,8 @@ Page（｛
               编程式导航-后退导航
               <ul>
                 <li>
-                  调用wx.navigateBack（Object object）方法，可以返回上一页面或多级页面。其中Object参数对象可选的属性
+                  调用wx.navigateBack（Object
+                  object）方法，可以返回上一页面或多级页面。其中Object参数对象可选的属性
                   <table>
                     <tbody>
                       <tr>
@@ -2295,7 +2612,9 @@ Page（｛
                         <td>complete</td>
                         <td>function</td>
                         <td>否</td>
-                        <td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+                        <td>
+                          接口调用结束的回调函数（调用成功、失败都会执行）
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -2332,7 +2651,8 @@ Page（｛
               导航传参-编程式导航传参
               <ul>
                 <li>
-                  调用wx.navigateTo（Object object）方法跳转页面时，也可以携带参数，代码示例如下：
+                  调用wx.navigateTo（Object
+                  object）方法跳转页面时，也可以携带参数，代码示例如下：
                   <pre><code class="language-html line-numbers">  &lt;!--pages/fTabBar/fTabBar.wxml--&gt;
   &lt;button bindtap="gotoInfo2"&gt;跳转页面&lt;/button&gt;
 
@@ -2375,20 +2695,27 @@ Page（｛
             <li>
               页面事件--下拉刷新
               <ul>
-                <li>下拉刷新是移动端的专有名词，指的是通过手指在屏幕上的下拉滑动操作，从而重新加载页面数据的行为。</li>
+                <li>
+                  下拉刷新是移动端的专有名词，指的是通过手指在屏幕上的下拉滑动操作，从而重新加载页面数据的行为。
+                </li>
                 <li>
                   启用下拉刷新（启用下拉刷新有两种方式）：
                   <ol>
                     <li>
                       全局开启下拉刷新
                       <ol>
-                        <li>在app.json的window节点中，将enablePullDownRefresh 设置为true</li>
+                        <li>
+                          在app.json的window节点中，将enablePullDownRefresh
+                          设置为true
+                        </li>
                       </ol>
                     </li>
                     <li>
                       局部开启下拉刷新（推荐）
                       <ol>
-                        <li>在页面的.json配置文件中，将enablePullDownRefresh设置为true</li>
+                        <li>
+                          在页面的.json配置文件中，将enablePullDownRefresh设置为true
+                        </li>
                       </ol>
                     </li>
                   </ol>
@@ -2397,10 +2724,16 @@ Page（｛
                   配置下拉刷新窗口的样式
                   <ol>
                     <li>
-                      在全局或页面的.json 配置文件中，通过backgroundColor和backgroundTextStyle来配置下拉刷新窗口的样式，其中：
+                      在全局或页面的.json
+                      配置文件中，通过backgroundColor和backgroundTextStyle来配置下拉刷新窗口的样式，其中：
                       <ol>
-                        <li>backgroundColor用来配置下拉刷新窗口的背景颜色，仅支持16进制的颜色值</li>
-                        <li>backgroundTextStyle 用来配置下拉刷新loading的样式，仅支持dark和light</li>
+                        <li>
+                          backgroundColor用来配置下拉刷新窗口的背景颜色，仅支持16进制的颜色值
+                        </li>
+                        <li>
+                          backgroundTextStyle
+                          用来配置下拉刷新loading的样式，仅支持dark和light
+                        </li>
                       </ol>
                     </li>
                   </ol>
@@ -2415,7 +2748,9 @@ Page（｛
 
   },</code></pre>
                     </li>
-                    <li>例如，在页面的wxml中有如下的UI结构，点击按钮可以让count值自增+1：</li>
+                    <li>
+                      例如，在页面的wxml中有如下的UI结构，点击按钮可以让count值自增+1：
+                    </li>
                     <li>
                       在触发页面的下拉刷新事件的时候，如果要把count的值重置为0，示例代码如下：
                       <pre><code class="language-html line-numbers">  &lt;!--pages/message/message.wxml--&gt;
@@ -2446,8 +2781,13 @@ Page（｛
                 <li>
                   停止下拉刷新的效果
                   <ol>
-                    <li>当处理完下拉刷新后，下拉刷新的loading效果会一直显示，不会主动消失，所以需要手动隐藏loading 效果。</li>
-                    <li>此时，调用wx.stopPullDownRefresh（）可以停止当前页面的下拉刷新。示例</li>
+                    <li>
+                      当处理完下拉刷新后，下拉刷新的loading效果会一直显示，不会主动消失，所以需要手动隐藏loading
+                      效果。
+                    </li>
+                    <li>
+                      此时，调用wx.stopPullDownRefresh（）可以停止当前页面的下拉刷新。示例
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  /* 页面相关事件处理函数--监听用户下拉动作 */
   onPullDownRefresh: function () {
@@ -2460,14 +2800,18 @@ Page（｛
                 <li>
                   上拉触底
                   <ol>
-                    <li>上拉触底是移动端的专有名词，通过手指在屏幕上的上拉滑动操作，从而加载更多数据的行为。</li>
+                    <li>
+                      上拉触底是移动端的专有名词，通过手指在屏幕上的上拉滑动操作，从而加载更多数据的行为。
+                    </li>
                     <li>更多实现的是分页效果</li>
                   </ol>
                 </li>
                 <li>
                   监听页面的上拉触底事件
                   <ol>
-                    <li>在页面的js文件中，通过onReachBottom（）函数即可监听当前页面的上拉触底事件。示例代码如下：</li>
+                    <li>
+                      在页面的js文件中，通过onReachBottom（）函数即可监听当前页面的上拉触底事件。示例代码如下：
+                    </li>
                   </ol>
                   <pre><code class="language-js line-numbers">  /* 页面上拉触底事件的处理函数 */
   onReachBottom: function () {
@@ -2477,10 +2821,19 @@ Page（｛
                 <li>
                   配置上拉触底距离
                   <ol>
-                    <li>上拉触底距离指的是触发上拉触底事件时，滚动条距离页面底部的距离。</li>
-                    <li>上拉触底距离指的是触发上拉触底事件时，滚动条距离页面底部的距离。</li>
-                    <li>可以在全局或页面的，json配置文件中，通过onReachBottomDistance 属性来配置上拉触底的距离。</li>
-                    <li>小程序默认的触底距离是50px，在实际开发中可以根据自己的需求修改这个默认值。</li>
+                    <li>
+                      上拉触底距离指的是触发上拉触底事件时，滚动条距离页面底部的距离。
+                    </li>
+                    <li>
+                      上拉触底距离指的是触发上拉触底事件时，滚动条距离页面底部的距离。
+                    </li>
+                    <li>
+                      可以在全局或页面的，json配置文件中，通过onReachBottomDistance
+                      属性来配置上拉触底的距离。
+                    </li>
+                    <li>
+                      小程序默认的触底距离是50px，在实际开发中可以根据自己的需求修改这个默认值。
+                    </li>
                   </ol>
                 </li>
               </ul>
@@ -2608,10 +2961,13 @@ Page（｛
               生命周期
               <ul>
                 <li>
-                  生命周期（Life Cycle）是指一个对象从创建->运行->销毁的整个阶段，强调的是一个时间段。例如：
+                  生命周期（Life
+                  Cycle）是指一个对象从创建->运行->销毁的整个阶段，强调的是一个时间段。例如：
                   <ol>
                     <li>张三出生，表示这个人生命周期的开始</li>
-                    <li>张三离世，表示这个人生命周期的结束·中间张三的一生，就是张三的生命周期</li>
+                    <li>
+                      张三离世，表示这个人生命周期的结束·中间张三的一生，就是张三的生命周期
+                    </li>
                     <li>
                       我们可以把每个小程序运行的过程，也概括为生命周期：
                       <ol>
@@ -2634,17 +2990,26 @@ Page（｛
                     <li>
                       页面生命周期
                       <ol>
-                        <li>特指小程序中，每个页面的加载 -> 渲染 -> 销毁的过程</li>
+                        <li>
+                          特指小程序中，每个页面的加载 -> 渲染 -> 销毁的过程
+                        </li>
                       </ol>
                     </li>
-                    <li>其中，页面的生命周期范围较小，应用程序的生命周期范围较大</li>
+                    <li>
+                      其中，页面的生命周期范围较小，应用程序的生命周期范围较大
+                    </li>
                   </ol>
                 </li>
                 <li>
                   什么是生命周期函数
                   <ol>
-                    <li>生命周期函数：是由小程序框架提供的内置函数，会伴随着生命周期，自动按次序执行。</li>
-                    <li>生命周期函数的作用：允许程序员在特定的时间点，执行某些特定的操作。例如，页面刚加载的时候， 可以在onLoad 生命周期函数中初始化页面的数据。</li>
+                    <li>
+                      生命周期函数：是由小程序框架提供的内置函数，会伴随着生命周期，自动按次序执行。
+                    </li>
+                    <li>
+                      生命周期函数的作用：允许程序员在特定的时间点，执行某些特定的操作。例如，页面刚加载的时候，
+                      可以在onLoad 生命周期函数中初始化页面的数据。
+                    </li>
                   </ol>
                 </li>
                 <li>
@@ -2653,8 +3018,12 @@ Page（｛
                     <li>
                       应用的生命周期函数
                       <ol>
-                        <li>特指小程序从启动 -> 运行 -> 销毁期间依次调用的那些函数</li>
-                        <li>小程序的应用生命周期函数需要在app.js中进行声明，示例代码如下：</li>
+                        <li>
+                          特指小程序从启动 -> 运行 -> 销毁期间依次调用的那些函数
+                        </li>
+                        <li>
+                          小程序的应用生命周期函数需要在app.js中进行声明，示例代码如下：
+                        </li>
                       </ol>
                       <pre><code class="language-js line-numbers">  // app.js
   App（｛
@@ -2679,8 +3048,13 @@ Page（｛
                     <li>
                       页面的生命周期函数
                       <ol>
-                        <li>特指小程序中，每个页面从加载 -> 渲染 -> 销毁期间依次调用的那些函数</li>
-                        <li>小程序的页面生命周期函数需要在页面的.js文件中进行声明，示例代码如下：</li>
+                        <li>
+                          特指小程序中，每个页面从加载 -> 渲染 ->
+                          销毁期间依次调用的那些函数
+                        </li>
+                        <li>
+                          小程序的页面生命周期函数需要在页面的.js文件中进行声明，示例代码如下：
+                        </li>
                       </ol>
                       <pre><code class="language-js line-numbers">  Page({
     onLoad: function (options) { }, // 监听页面加载，一个页面只调用1次
@@ -2698,23 +3072,37 @@ Page（｛
             <li>
               WXS脚本
               <ul>
-                <li>WXS（Weixin Script）是小程序独有的一套脚本语言，结合WXML，可以构建出页面的结构。wxml中无法调用在页面的，js中定义的函数，但是，wxml中可以调用wxs中定义的函数。</li>
+                <li>
+                  WXS（Weixin
+                  Script）是小程序独有的一套脚本语言，结合WXML，可以构建出页面的结构。wxml中无法调用在页面的，js中定义的函数，但是，wxml中可以调用wxs中定义的函数。
+                </li>
                 <li>小程序中Wxs的典型应用场景就是“过滤器”。</li>
                 <li>
                   wxs和JavaScript的关系*
                   <ol>
-                    <li>虽然wxs的语法类似于JavaScript，但是wxs和JavaScript是完全不同的两种语言：</li>
+                    <li>
+                      虽然wxs的语法类似于JavaScript，但是wxs和JavaScript是完全不同的两种语言：
+                    </li>
                     <li>
                       Wxs有自己的数据类型
                       <ol>
-                        <li>number 数值类型、string字符串类型、boolean布尔类型、object对象类型、 function函数类型、array数组类型、 date日期类型、 regexp正则</li>
+                        <li>
+                          number
+                          数值类型、string字符串类型、boolean布尔类型、object对象类型、
+                          function函数类型、array数组类型、 date日期类型、
+                          regexp正则
+                        </li>
                       </ol>
                     </li>
                     <li>
                       Wxs不支持类似于ES6及以上的语法形式
                       <ol>
-                        <li>不支持：let、const、解构赋值、展开运算符、箭头函数、对象属性简写、etc.</li>
-                        <li>支持：var定义变量、普通function函数等类似于ES5的语法</li>
+                        <li>
+                          不支持：let、const、解构赋值、展开运算符、箭头函数、对象属性简写、etc.
+                        </li>
+                        <li>
+                          支持：var定义变量、普通function函数等类似于ES5的语法
+                        </li>
                       </ol>
                     </li>
                     <li>
@@ -2733,8 +3121,12 @@ Page（｛
                     <li>
                       内嵌wxs脚本
                       <ol>
-                        <li>wxs代码可以编写在wxml文件中的&lt;wxs&gt;标签内，就像Javascript代码可以编写在html文件中的&lt;script&gt;</li>
-                        <li>wxml文件中的每个&lt;wxs&gt;&lt;/wxs&gt;标签，必须提供module属性，用来指定当前WXs的模块名称，方便在wxml中访问模</li>
+                        <li>
+                          wxs代码可以编写在wxml文件中的&lt;wxs&gt;标签内，就像Javascript代码可以编写在html文件中的&lt;script&gt;
+                        </li>
+                        <li>
+                          wxml文件中的每个&lt;wxs&gt;&lt;/wxs&gt;标签，必须提供module属性，用来指定当前WXs的模块名称，方便在wxml中访问模
+                        </li>
                         <li>块中的成员：</li>
                       </ol>
                       <pre><code class="language-js line-numbers">  // pages/home/home.js
@@ -2755,7 +3147,10 @@ Page（｛
                     <li>
                       外联wxs脚本
                       <ol>
-                        <li>wxs代码还可以编写在以.wxs为后缀名的文件内，就像 javascript代码可以编写在以.js为后缀名的</li>
+                        <li>
+                          wxs代码还可以编写在以.wxs为后缀名的文件内，就像
+                          javascript代码可以编写在以.js为后缀名的
+                        </li>
                         <li>文件中一样。示例代码如下：</li>
                       </ol>
                       <pre><code class="language-js line-numbers">  // tools.wxs
@@ -2781,17 +3176,29 @@ Page（｛
                     <li>
                       WXS的特点
                       <ol>
-                        <li>与JavaScript不同，为了降低wxs（Weixin Script）的学习成本，wXs语言在设计时借大量鉴了JavaScript的语法。但是本质上，wxs和JavaScript是完全不同的两种语言！</li>
                         <li>
-                          不能作为组件的事件回调。wxs典型的应用场景就是“过滤器”，经常配合Mustache 语法进行使用，例如：
+                          与JavaScript不同，为了降低wxs（Weixin
+                          Script）的学习成本，wXs语言在设计时借大量鉴了JavaScript的语法。但是本质上，wxs和JavaScript是完全不同的两种语言！
+                        </li>
+                        <li>
+                          不能作为组件的事件回调。wxs典型的应用场景就是“过滤器”，经常配合Mustache
+                          语法进行使用，例如：
                           <pre><code class="language-js line-numbers">  &lt;view&gt;｛｛ m2.toLower(country) ｝｝ &lt;/view&gt;</code></pre>
                         </li>
                         <li>
                           但是，在WXs中定义的函数不能作为组件的事件回调函数。例如，下面的用法是错误的：
                           <pre><code class="language-js line-numbers">  &lt;button bindtap="m2.toLower"&gt;&lt;/button&gt;</code></pre>
                         </li>
-                        <li>不能作为组件的事件回调。 隔离性指的是wxs的运行环境和其他JavaScript代码是隔离的。体现在如下两方面：1. Wxs不能调用js中定义的函数 2. wxs不能调用小程序提供的API</li>
-                        <li>性能好。 在iOS设备上，小程序内的WXS会比JavaScript代码快2~20倍，在安卓设备上无差异</li>
+                        <li>
+                          不能作为组件的事件回调。
+                          隔离性指的是wxs的运行环境和其他JavaScript代码是隔离的。体现在如下两方面：1.
+                          Wxs不能调用js中定义的函数 2.
+                          wxs不能调用小程序提供的API
+                        </li>
+                        <li>
+                          性能好。
+                          在iOS设备上，小程序内的WXS会比JavaScript代码快2~20倍，在安卓设备上无差异
+                        </li>
                       </ol>
                     </li>
                   </ol>
@@ -2814,17 +3221,31 @@ Page（｛
                     <li>
                       创建组件：三步
                       <ol>
-                        <li>在项目的根目录中，鼠标右键，创建 components文件夹 -> test文件夹</li>
-                        <li>在新建的components -> test文件夹上，鼠标右键，点击“新建 Component"</li>
-                        <li>键入组件的名称之后回，会自动生成组件对应的4个文件，后缀名分别为.js，.json，.wxml和.wxss</li>
-                        <li>注意：为了保证目录结构的清晰，建议把不同的组件，存放到单独目录中，例如</li>
+                        <li>
+                          在项目的根目录中，鼠标右键，创建 components文件夹 ->
+                          test文件夹
+                        </li>
+                        <li>
+                          在新建的components ->
+                          test文件夹上，鼠标右键，点击“新建 Component"
+                        </li>
+                        <li>
+                          键入组件的名称之后回，会自动生成组件对应的4个文件，后缀名分别为.js，.json，.wxml和.wxss
+                        </li>
+                        <li>
+                          注意：为了保证目录结构的清晰，建议把不同的组件，存放到单独目录中，例如
+                        </li>
                       </ol>
                     </li>
                     <li>
                       引用组件
                       <ol>
-                        <li>组件的引用方式分为“局部引用”和“全局引用”，顾名思义：</li>
-                        <li>局部引用：组件只能在当前被引用的页面内使用，在页面的json配置文件中引用组件的方式，</li>
+                        <li>
+                          组件的引用方式分为“局部引用”和“全局引用”，顾名思义：
+                        </li>
+                        <li>
+                          局部引用：组件只能在当前被引用的页面内使用，在页面的json配置文件中引用组件的方式，
+                        </li>
                         <li>叫做“局部引用”。示例代码如下：</li>
                       </ol>
                       <pre><code class="language-js line-numbers">  {
@@ -2837,7 +3258,9 @@ Page（｛
                     <li>
                       全局引用：组件可以在每个小程序页面中使用
                       <ol>
-                        <li>在app.json全局配置文件中引用组件的方式，叫做“全局引用”。示例代码如下：</li>
+                        <li>
+                          在app.json全局配置文件中引用组件的方式，叫做“全局引用”。示例代码如下：
+                        </li>
                       </ol>
                     </li>
                     <li>组件样式隔离</li>
@@ -2853,15 +3276,25 @@ Page（｛
                       组件样式隔离的注意点
                       <ol>
                         <li>app.Wxss中的全局样式对组件无效</li>
-                        <li>只有class选择器会有样式隔离效果，id 选择器、属性选择器、标签选择器不受样式隔离的影响</li>
-                        <li>建议：在组件和引用组件的页面中建议使用Class 选择器，不要使用id、属性、标签选择器！</li>
+                        <li>
+                          只有class选择器会有样式隔离效果，id
+                          选择器、属性选择器、标签选择器不受样式隔离的影响
+                        </li>
+                        <li>
+                          建议：在组件和引用组件的页面中建议使用Class
+                          选择器，不要使用id、属性、标签选择器！
+                        </li>
                       </ol>
                     </li>
                     <li>
                       修改组件的样式隔离选项
                       <ol>
-                        <li>默认情况下，自定义组件的样式隔离特性能够防止组件内外样式互相干扰的问题。</li>
-                        <li>但有时我们希望在外界能够控制组件内部的样式，此时，可以通过stylelsolation修改组件的样式隔离选项</li>
+                        <li>
+                          默认情况下，自定义组件的样式隔离特性能够防止组件内外样式互相干扰的问题。
+                        </li>
+                        <li>
+                          但有时我们希望在外界能够控制组件内部的样式，此时，可以通过stylelsolation修改组件的样式隔离选项
+                        </li>
                       </ol>
                       <table>
                         <tbody>
@@ -2873,17 +3306,24 @@ Page（｛
                           <tr>
                             <td>isolated</td>
                             <td>是</td>
-                            <td>表示启用样式隔离，在自定义组件内外，使用class指定的样式将不会相互影响</td>
+                            <td>
+                              表示启用样式隔离，在自定义组件内外，使用class指定的样式将不会相互影响
+                            </td>
                           </tr>
                           <tr>
                             <td>apply-shared</td>
                             <td>否</td>
-                            <td>表示页面wxss样式将影响到自定义组件，但自定义组件wxss中指定的样式不会影响页面</td>
+                            <td>
+                              表示页面wxss样式将影响到自定义组件，但自定义组件wxss中指定的样式不会影响页面
+                            </td>
                           </tr>
                           <tr>
                             <td>shared</td>
                             <td>否</td>
-                            <td>表示页面wxss样式将影响到自定义组件，自定义组件WXss中指定的样式也会影响页面和其他设置了apply shared 或 sharea的自定义组件</td>
+                            <td>
+                              表示页面wxss样式将影响到自定义组件，自定义组件WXss中指定的样式也会影响页面和其他设置了apply
+                              shared 或 sharea的自定义组件
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -2940,7 +3380,8 @@ Page（｛
                       </ol>
                     </li>
                     <li>
-                      data和properties的区别。在小程序的组件中，properties 属性和data数据的用法相同，它们都是可读可写的，只不过：
+                      data和properties的区别。在小程序的组件中，properties
+                      属性和data数据的用法相同，它们都是可读可写的，只不过：
                       <ol>
                         <li>data 更倾向于存储组件的私有数据</li>
                         <li>properties更倾向于存储外界传递到组件中的数据</li>
@@ -2984,7 +3425,8 @@ Page（｛
                       数据监听器
                       <ol>
                         <li>
-                          数据监听器用于监听和响应任何属性和数据字段的变化，从而执行特定的操作。它的作用类似于vue中 的watch侦听器。在小程序组件中，数据监听器的基本语法格式如下：
+                          数据监听器用于监听和响应任何属性和数据字段的变化，从而执行特定的操作。它的作用类似于vue中
+                          的watch侦听器。在小程序组件中，数据监听器的基本语法格式如下：
                           <pre><code class="language-js line-numbers">  Component({
     observers: {
         '字段A，字段B':function(字段A的新值，字段B的新值){
@@ -3125,7 +3567,8 @@ Page（｛
                       监听对象中所有属性的变化
                       <ol>
                         <li>
-                          如果某个对象中需要被监听的属性太多，为了方便，可以使用通配符**来监听对象中所有属性的变化， 示例代码如下：
+                          如果某个对象中需要被监听的属性太多，为了方便，可以使用通配符**来监听对象中所有属性的变化，
+                          示例代码如下：
                           <pre><code class="language-js line-numbers">  observers: {
       // 监听rgb对象上 r, g, b 三个子属性的变化
       'rgb.**': function(obj){
@@ -3141,16 +3584,27 @@ Page（｛
                     <li>
                       纯数据字段
                       <ol>
-                        <li>概念：纯数据字段指的是那些不用于界面渲染的 data字段。</li>
-                        <li>应用场景：例如有些情况下，某些data中的字段既不会展示在界面上，也不会传递给其他组件， 仅仅在当前组件内部使用。带有这种特性的 data 字段适合被设置为纯数据字段。</li>
+                        <li>
+                          概念：纯数据字段指的是那些不用于界面渲染的 data字段。
+                        </li>
+                        <li>
+                          应用场景：例如有些情况下，某些data中的字段既不会展示在界面上，也不会传递给其他组件，
+                          仅仅在当前组件内部使用。带有这种特性的 data
+                          字段适合被设置为纯数据字段。
+                        </li>
                         <li>好处：纯数据字段有助于提升页面更新的性能。</li>
                       </ol>
                     </li>
                     <li>
                       使用规则
                       <ol>
-                        <li>在Component构造器的options 节点中，指定pureDataPattern为一个正则表达式，字段名符合这个</li>
-                        <li>正则表达式的字段将成为纯数据字段，示例代码如下：</li>
+                        <li>
+                          在Component构造器的options
+                          节点中，指定pureDataPattern为一个正则表达式，字段名符合这个
+                        </li>
+                        <li>
+                          正则表达式的字段将成为纯数据字段，示例代码如下：
+                        </li>
                       </ol>
                       <pre><code class="language-js line-numbers">  Component({
     options:{
@@ -3179,14 +3633,14 @@ Page（｛
 </template>
 
 <script setup lang="ts" name="Applet">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: '小程序' },
-  { id: 2, h2: '小程序步骤' },
-  { id: 3, h2: '语法' },
-  { id: 4, h2: '全局配置' },
-  { id: 5, h2: '其他' }
+  { id: 1, h2: "小程序" },
+  { id: 2, h2: "小程序步骤" },
+  { id: 3, h2: "语法" },
+  { id: 4, h2: "全局配置" },
+  { id: 5, h2: "其他" },
 ]);
 </script>
 

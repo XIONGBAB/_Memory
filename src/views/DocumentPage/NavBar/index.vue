@@ -1,47 +1,39 @@
 <template>
   <div class="nav-bar">
     <div class="doc-nav-list">
-      <div class="doc-nav-list-item">
-        首页
-      </div>
-      <div class="doc-nav-list-item">
-        组件
-      </div>
-      <div class="doc-nav-list-item">
-        资源
-      </div>
+      <div class="doc-nav-list-item">首页</div>
+      <div class="doc-nav-list-item">组件</div>
+      <div class="doc-nav-list-item">资源</div>
     </div>
     <div class="dov-nav-information">
       <el-popover class="box-item" content="Error" placement="bottom">
         <template #reference>
-          <el-avatar class="user-logo" src="https://sns-avatar-qc.xhscdn.com/avatar/64689321979140ca8214df1b.jpg?imageView2/2/w/540/format/webp|imageMogr2/strip2" @error="errorHandler">
-            <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png" />
+          <el-avatar
+            class="user-logo"
+            src="https://sns-avatar-qc.xhscdn.com/avatar/64689321979140ca8214df1b.jpg?imageView2/2/w/540/format/webp|imageMogr2/strip2"
+            @error="errorHandler"
+          >
+            <img
+              src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png"
+            />
           </el-avatar>
         </template>
         <template #default>
-          <div class="user-name">
-            个人主页
-          </div>
-          <div class="user-name">
-            帐号设置
-          </div>
-          <div class="user-name">
-            退出登录
-          </div>
+          <div class="user-name">个人主页</div>
+          <div class="user-name">帐号设置</div>
+          <div class="user-name">退出登录</div>
         </template>
       </el-popover>
-      <div class="user-name">
-        Admin
-      </div>
+      <div class="user-name">Admin</div>
     </div>
   </div>
 </template>
 
-<script setup lang='ts' name='NavBar'>
+<script setup lang="ts" name="NavBar">
 const errorHandler = () => true;
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .nav-bar {
   width: 100%;
   height: 100%;

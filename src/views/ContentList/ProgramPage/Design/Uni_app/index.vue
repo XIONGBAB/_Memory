@@ -2,15 +2,31 @@
   <card-container title="uni-app" :data="data">
     <template #svg>
       <svg
-        t="1737717671929" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-        p-id="3652" width="40" height="40"
+        t="1737717671929"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="3652"
+        width="40"
+        height="40"
       >
-        <path d="M62 62m45 0l810 0q45 0 45 45l0 810q0 45-45 45l-810 0q-45 0-45-45l0-810q0-45 45-45Z" fill="#2B9939" p-id="3653" />
-        <path d="M212.00000029 212.00000029v599.99999942h599.99999942V212.00000029H662.00000029v450H361.99999971V212.00000029z" fill="#FFFFFF" p-id="3654" />
+        <path
+          d="M62 62m45 0l810 0q45 0 45 45l0 810q0 45-45 45l-810 0q-45 0-45-45l0-810q0-45 45-45Z"
+          fill="#2B9939"
+          p-id="3653"
+        />
+        <path
+          d="M212.00000029 212.00000029v599.99999942h599.99999942V212.00000029H662.00000029v450H361.99999971V212.00000029z"
+          fill="#FFFFFF"
+          p-id="3654"
+        />
       </svg>
     </template>
     <template #describe>
-      <p>ni-app是一个基于Vue.js开发的跨平台移动应用开发框架，由DCloud（凌云科技）推出。uni-app允许开发者使用一套代码，同时在多个平台上构建原生级别的应用程序，包括微信小程序、H5、iOS、Android以及其他支持的平台</p>
+      <p>
+        ni-app是一个基于Vue.js开发的跨平台移动应用开发框架，由DCloud（凌云科技）推出。uni-app允许开发者使用一套代码，同时在多个平台上构建原生级别的应用程序，包括微信小程序、H5、iOS、Android以及其他支持的平台
+      </p>
     </template>
     <template #content>
       <el-card id="part1" shadow="hover">
@@ -167,13 +183,13 @@
 </template>
 
 <script setup lang="ts" name="UniApp">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: '新建项目' },
-  { id: 2, h2: '初始配置' },
-  { id: 3, h2: '生命周期' },
-  { id: 4, h2: '项目开发' }
+  { id: 1, h2: "新建项目" },
+  { id: 2, h2: "初始配置" },
+  { id: 3, h2: "生命周期" },
+  { id: 4, h2: "项目开发" },
 ]);
 </script>
 

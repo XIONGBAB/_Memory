@@ -2,12 +2,27 @@
   <card-container title="css3" :data="$data">
     <template #svg>
       <svg
-        width="40" height="40" t="1699148624812" class="icon" viewBox="0 0 1024 1024"
-        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9115"
-      ><path d="M512 512zM128.3 64.3l69.8 805.8 313.4 89.5L825.8 870l69.9-805.7H128.3z m580.9 669.3l-197.1 56.2-196.8-56.5L301.9 578h96.4l6.9 79.1 107.1 30.3 0.3 0.5h0.1l106.9-29.7L630.7 530H406.1l-8-99.9h241.1l8.8-101.9H280.2l-8-97.9H753l-43.8 503.3z" fill="#30a6f5" p-id="9116" /></svg>
+        width="40"
+        height="40"
+        t="1699148624812"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="9115"
+      >
+        <path
+          d="M512 512zM128.3 64.3l69.8 805.8 313.4 89.5L825.8 870l69.9-805.7H128.3z m580.9 669.3l-197.1 56.2-196.8-56.5L301.9 578h96.4l6.9 79.1 107.1 30.3 0.3 0.5h0.1l106.9-29.7L630.7 530H406.1l-8-99.9h241.1l8.8-101.9H280.2l-8-97.9H753l-43.8 503.3z"
+          fill="#30a6f5"
+          p-id="9116"
+        />
+      </svg>
     </template>
     <template #describe>
-      <p>CSS3（Cascading Style Sheets 3）是层叠样式表的第三个版本，它是一种用于描述文档样式的语言，是CSS（层叠样式表）技术的升级版本，其中增添了类选择器，盒子阴影、过渡、透视、渐变等技术更新</p>
+      <p>
+        CSS3（Cascading Style Sheets
+        3）是层叠样式表的第三个版本，它是一种用于描述文档样式的语言，是CSS（层叠样式表）技术的升级版本，其中增添了类选择器，盒子阴影、过渡、透视、渐变等技术更新
+      </p>
     </template>
     <template #content>
       <el-card id="part1" shadow="hover">
@@ -90,17 +105,28 @@
         <div class="ls-cot">
           <p>前言</p>
           <ul>
-            <li>CSS3中可以通过box-sizing来指定盒模型,有2个值:即可指定为 content-box、border-box。</li>
+            <li>
+              CSS3中可以通过box-sizing来指定盒模型,有2个值:即可指定为
+              content-box、border-box。
+            </li>
             <li>这样我们计算盒子大小的方式就发生了改变。</li>
             <li>
               可以分成两种情况
               <ol>
-                <li>box-sizing:content-box 盒子大小为width + padding + border(以前默认的)</li>
+                <li>
+                  box-sizing:content-box 盒子大小为width + padding +
+                  border(以前默认的)
+                </li>
                 <li>box-sizing:border-box 盒子大小为width</li>
               </ol>
             </li>
-            <li>如果盒子模型我们改为了box-sizing:border-box,那padding和border就不会撑大盒子了(前提padding和border不会超过width宽度)</li>
-            <li>注意,css3 的盒子模型是把边框算进去的,所以行高line-hight 不等于盒子高,要减去盒子边框</li>
+            <li>
+              如果盒子模型我们改为了box-sizing:border-box,那padding和border就不会撑大盒子了(前提padding和border不会超过width宽度)
+            </li>
+            <li>
+              注意,css3 的盒子模型是把边框算进去的,所以行高line-hight
+              不等于盒子高,要减去盒子边框
+            </li>
           </ul>
         </div>
       </el-card>
@@ -110,17 +136,22 @@
           <p>滤镜函数filter</p>
           <ul>
             <li>filter CSS属性将模糊或颜色偏移等图形效果应用于元素。</li>
-            <li>filter:函数(); 例如:filter:blur(5px); blur模糊处理 数值越大越模糊</li>
+            <li>
+              filter:函数(); 例如:filter:blur(5px); blur模糊处理 数值越大越模糊
+            </li>
           </ul>
           <p>计算函数calc</p>
           <ul>
             <li>calc() 此CSS函数让你在声明CSS属性值时执行一些计算。</li>
-            <li>width:calc(100%-80px); 括号里面可以使用 + - * / 来进行计算。</li>
+            <li>
+              width:calc(100%-80px); 括号里面可以使用 + - * / 来进行计算。
+            </li>
           </ul>
           <p>attr()</p>
           <ul>
             <li>
-              图标上通知徽标 可以使用attr()函数来做，目前兼容性只支持伪元素的content
+              图标上通知徽标
+              可以使用attr()函数来做，目前兼容性只支持伪元素的content
               <pre><code class="language-css line-numbers">  content:attr(data-count)
   &lt;div data-count="1"&gt;&lt;/div&gt;</code></pre>
             </li>
@@ -135,7 +166,9 @@
             <li>n可以是数字,关键字和公式</li>
             <li>n如果是数字,就是选择第n个子元素,里面数字从1开始…</li>
             <li>n可以是关键字:even偶数,odd奇数</li>
-            <li>n可以是公式:常见的公式如下(如果n是公式,则从0开始计算,但是第0个元素或者超出了元素的个数会被忽略)</li>
+            <li>
+              n可以是公式:常见的公式如下(如果n是公式,则从0开始计算,但是第0个元素或者超出了元素的个数会被忽略)
+            </li>
           </ul>
           <p>公式</p>
           <ul>
@@ -152,14 +185,22 @@
         <div class="ls-cot">
           <p>transition: 要过渡的属性 花费时间 运动曲线 何时开始</p>
           <ul>
-            <li>过渡属性:想要变化的css属性,宽 高 背景色 内外边距都行。如果想要所有的属性都变化过渡,写一个 all 就可以。</li>
+            <li>
+              过渡属性:想要变化的css属性,宽 高 背景色
+              内外边距都行。如果想要所有的属性都变化过渡,写一个 all 就可以。
+            </li>
             <li>花费时间:单位是秒(必须写单位)比如0.5s</li>
             <li>运动曲线:默认是 ease(可以省略)</li>
-            <li>何时开始:单位是秒(必须写单位)可以设置延迟触发时间默认是0s(可以省略)</li>
+            <li>
+              何时开始:单位是秒(必须写单位)可以设置延迟触发时间默认是0s(可以省略)
+            </li>
             <li>
               过渡效果：谁用给谁加,多个效果用逗号隔开
               <ol>
-                <li>linear匀速 ease逐渐慢下来 ease-in加速 ease-out减速 ease-in-out快入慢出</li>
+                <li>
+                  linear匀速 ease逐渐慢下来 ease-in加速 ease-out减速
+                  ease-in-out快入慢出
+                </li>
               </ol>
             </li>
           </ul>
@@ -242,7 +283,10 @@
             <li>
               2D综合写法：
               <ul>
-                <li>同时使用多个转换,其格式为:transform: translate() rotate() scale()等,</li>
+                <li>
+                  同时使用多个转换,其格式为:transform: translate() rotate()
+                  scale()等,
+                </li>
                 <li>其顺序会影转换的效果。(先旋转会改变坐标轴方向)</li>
                 <li>当我们同时有位移和其他属性的时候,记得要将位移放到最前</li>
               </ul>
@@ -252,12 +296,20 @@
               <ul>
                 <li>转换transform我们简单理解就是变形有2D和3D之分</li>
                 <li>我们暂且学了三个分别是位移旋和缩放</li>
-                <li>2D移动translate(xy)最大的优势足不影响其他盒子,里面参数用%,是相对于自身宽度和高度来计算的</li>
+                <li>
+                  2D移动translate(xy)最大的优势足不影响其他盒子,里面参数用%,是相对于自身宽度和高度来计算的
+                </li>
                 <li>可以分开写比如translateX(x)和translateY(y)</li>
                 <li>2D旋转rotate(度数)可以实现旋转元素废数的单位是deg</li>
-                <li>2D缩放scale(x,y)里面参数是数字不跟单位可以是小数最大的优势不影响其他盒子</li>
-                <li>设置转换中心点transform-origin:xy:参数可以百分比、像素或者是方位名词</li>
-                <li>当我们进行综合写法,同时有位移和其他属性的时候,记得要将位移放到最前</li>
+                <li>
+                  2D缩放scale(x,y)里面参数是数字不跟单位可以是小数最大的优势不影响其他盒子
+                </li>
+                <li>
+                  设置转换中心点transform-origin:xy:参数可以百分比、像素或者是方位名词
+                </li>
+                <li>
+                  当我们进行综合写法,同时有位移和其他属性的时候,记得要将位移放到最前
+                </li>
               </ul>
             </li>
           </ol>
@@ -268,8 +320,13 @@
         <div class="ls-cot">
           <p>前言</p>
           <ul>
-            <li>动画(animation) 是CSS3中具有颠覆性的特征之一,可通过设置多个节点来精确控制一个或一组动画,常用来实现复杂的动画效果。</li>
-            <li>相比较过渡,动画可以实现更多变化,更多控制,连续自动播放等效果。</li>
+            <li>
+              动画(animation)
+              是CSS3中具有颠覆性的特征之一,可通过设置多个节点来精确控制一个或一组动画,常用来实现复杂的动画效果。
+            </li>
+            <li>
+              相比较过渡,动画可以实现更多变化,更多控制,连续自动播放等效果。
+            </li>
           </ul>
           <pre><code class="language-css line-numbers">  @keyframes animationName{
       0%{}
@@ -336,7 +393,10 @@
               </ol>
             </li>
             <li>3D转换我们主要学习工作中最常用的3D位移和3D旋转</li>
-            <li>backface-visibility: hidden; 开启3d后,翻转看不到后面盒子的需要加上这句</li>
+            <li>
+              backface-visibility: hidden;
+              开启3d后,翻转看不到后面盒子的需要加上这句
+            </li>
             <li>
               3D移动 translate
               <pre><code class="language-css line-numbers">  /* X Y Z有不需要的数值就写0,但不能为空,不能省略 */
@@ -392,7 +452,9 @@
         <div class="ls-cot">
           <p>在2D平面产生近大远小视觉立体,但是只是效果二维的</p>
           <ul>
-            <li>如果想要在网页产生3D效果需要透视(理解成3D物体投影在2D平面内)。</li>
+            <li>
+              如果想要在网页产生3D效果需要透视(理解成3D物体投影在2D平面内)。
+            </li>
             <li>模拟人类的视觉位置,可认为安排一只眼睛去看</li>
             <li>透视我们也称为视距:视距就是人的眼睛到屏幕的距离</li>
             <li>距离视觉点越近的在电脑平面成像越大,越远成像越小</li>
@@ -470,10 +532,17 @@
         <div class="ls-cot">
           <p>前言</p>
           <ul>
-            <li>新建common.less设置好最常见的屏幕尺寸,利用媒体查询设置不同的htm字体大小,因为除了首页其他页面也需要</li>
-            <li>我们关心的尺寸有320px、360px、375px、384px、400px、414px、424px、480px、540px、720px、750px</li>
+            <li>
+              新建common.less设置好最常见的屏幕尺寸,利用媒体查询设置不同的htm字体大小,因为除了首页其他页面也需要
+            </li>
+            <li>
+              我们关心的尺寸有320px、360px、375px、384px、400px、414px、424px、480px、540px、720px、750px
+            </li>
             <li>划分的份数我们定为15等份</li>
-            <li>因为我们pc端也可以打开我们苏宁移动端首页,我们默认html字体大小为50px, 注意这句话写到最上面</li>
+            <li>
+              因为我们pc端也可以打开我们苏宁移动端首页,我们默认html字体大小为50px,
+              注意这句话写到最上面
+            </li>
           </ul>
         </div>
       </el-card>
@@ -484,7 +553,12 @@
           <ul>
             <li>
               官网地址:
-              <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">
+              <el-link
+                type="primary"
+                icon="Link"
+                target="_blank"
+                href="https://www.swiper.com.cn/"
+              >
                 https://www.swiper.com.cn/
               </el-link>
               <ol>
@@ -503,10 +577,22 @@
             <li>
               不懂可以点击 API文档进行swiper查询代码
               <ol>
-                <li>&gt;&gt; 点击获取Swiper &gt;&gt; 下载Swiper &gt;&gt; 点击版本自动会下载 &gt;&gt; 得到swiper-6.6.2</li>
-                <li>&gt;&gt; 解压压缩包 &gt;&gt; package &gt;&gt; 复制 swiper-bundle.min.js + swiper-bundle.min.css 到项目下</li>
-                <li>&gt;&gt; 然后点击 &gt;&gt; 在线演示 &gt;&gt; 选择想要的样式 &gt;&gt; 点击在新窗口打开 &gt;&gt; F12拷贝代码</li>
-                <li>注意:在项目里面先引入css文件,然后在尾部引入js文件，最后拷贝代码 和 css样式代码</li>
+                <li>
+                  &gt;&gt; 点击获取Swiper &gt;&gt; 下载Swiper &gt;&gt;
+                  点击版本自动会下载 &gt;&gt; 得到swiper-6.6.2
+                </li>
+                <li>
+                  &gt;&gt; 解压压缩包 &gt;&gt; package &gt;&gt; 复制
+                  swiper-bundle.min.js + swiper-bundle.min.css 到项目下
+                </li>
+                <li>
+                  &gt;&gt; 然后点击 &gt;&gt; 在线演示 &gt;&gt; 选择想要的样式
+                  &gt;&gt; 点击在新窗口打开 &gt;&gt; F12拷贝代码
+                </li>
+                <li>
+                  注意:在项目里面先引入css文件,然后在尾部引入js文件，最后拷贝代码
+                  和 css样式代码
+                </li>
               </ol>
             </li>
           </ul>
@@ -572,7 +658,10 @@
   */</code></pre>
           <ul>
             <li>属性指定元素的内容应该如何去适应指定容器的高度与宽度</li>
-            <li>一般用于 img 和 video 标签,一般可以对这些元素进行保留原始比例的剪切、缩放或者直接进行拉伸等</li>
+            <li>
+              一般用于 img 和 video
+              标签,一般可以对这些元素进行保留原始比例的剪切、缩放或者直接进行拉伸等
+            </li>
           </ul>
         </div>
       </el-card>
@@ -619,7 +708,9 @@
               <pre><code class="language-css line-numbers">  display: grid;              /* 属于块级元素 */
   display: -ms-inline-grid;   /* 兼容性写法,行内栅格 */</code></pre>
             </li>
-            <li>给父容器设置好宽高,然后设置排列模式,根据子元素,设置对应的排列方式,不设置,默认列铺满,每列独占一行</li>
+            <li>
+              给父容器设置好宽高,然后设置排列模式,根据子元素,设置对应的排列方式,不设置,默认列铺满,每列独占一行
+            </li>
             <li>
               实例
               <pre><code class="language-html line-numbers"> &lt;!-- div父盒子宽度300px,高度300px。底下有9个子div,但没有设置宽高,那么进行九宫格排列 --&gt;
@@ -775,7 +866,8 @@
       &lt;/div&gt; */ </code></pre>
             </li>
             <li>
-              改变排列方向,默认 row ,且使用 dense 可以自动填满出现的元素占位后的空隙
+              改变排列方向,默认 row ,且使用 dense
+              可以自动填满出现的元素占位后的空隙
               <pre><code class="language-css line-numbers">  grid-auto-flow: row dense;
   || grid-auto-flow: column dense; /* 改变排列方向 为列 */
   /* 例如1 和 2 号都设置了占位,那么使用  dense 属性 就可以让3 和 4 自动填满上来,相当于按顺序浮动上来 */
@@ -914,7 +1006,8 @@
   width: 50px; </code></pre>
             </li>
             <li>
-              占的份数,跟缩放的性质一样 可以跟参数。也会跟grid 布局里面占分数一样,写多个参数
+              占的份数,跟缩放的性质一样 可以跟参数。也会跟grid
+              布局里面占分数一样,写多个参数
               <pre><code class="language-css line-numbers">  flex: 1;                         /* 分别对应三个值 flex-grow flex-shrink flex-basis*/</code></pre>
             </li>
             <li>
@@ -927,7 +1020,10 @@
               使用 margin-right:auto; 可以在导航中撑开 铺满右侧的元素
               <ol>
                 <li>|元素1| |元素2| |元素3| -------- |元素4|</li>
-                <li>元素三设置 margin-right:auto 会自动撑满剩余空间,把元素4挤到最后</li>
+                <li>
+                  元素三设置 margin-right:auto
+                  会自动撑满剩余空间,把元素4挤到最后
+                </li>
               </ol>
             </li>
             <li>
@@ -949,7 +1045,10 @@
   align-self:center;               /* 子元素自身控制对齐方式 */
   order:1;                         /* 相当于层级,控制元素排列顺序 */</code></pre>
             </li>
-            <li>flex-shrink 定义项目缩小比例,默认为1,如果有一个项目flex-shrink为0,其他项目都为1,空间不足时前者不缩小</li>
+            <li>
+              flex-shrink
+              定义项目缩小比例,默认为1,如果有一个项目flex-shrink为0,其他项目都为1,空间不足时前者不缩小
+            </li>
           </ul>
         </div>
       </el-card>
