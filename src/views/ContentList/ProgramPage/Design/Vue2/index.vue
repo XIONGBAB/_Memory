@@ -1,16 +1,19 @@
 <template>
-  <card-container :title="`vue2`" :data="data">
+  <card-container title="vue2" :data="data">
     <template #svg>
-      <svg width="40" height="40" t="1699148478737" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6334">
-        <path d="M615.6 123.6h165.5L512 589.7 242.9 123.6H63.5L512 900.4l448.5-776.9z" fill="#acef65" p-id="6335"></path>
-        <path d="M781.1 123.6H615.6L512 303 408.4 123.6H242.9L512 589.7z" fill="#34495E" p-id="6336"></path>
+      <svg
+        width="40" height="40" t="1699148478737" class="icon" viewBox="0 0 1024 1024"
+        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6334"
+      >
+        <path d="M615.6 123.6h165.5L512 589.7 242.9 123.6H63.5L512 900.4l448.5-776.9z" fill="#acef65" p-id="6335" />
+        <path d="M781.1 123.6H615.6L512 303 408.4 123.6H242.9L512 589.7z" fill="#34495E" p-id="6336" />
       </svg>
     </template>
     <template #describe>
       <p>Vue基于标准HTML、CSS和JavaScript构建，提供了一套声明式的、组件化的编程模型，用于高效地开发用户界面。Vue是一个框架，也是一个生态，功能覆盖大部分前端开发常见的需求。</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>Webpack</h2>
         <div class="ls-cot">
           <p>vue中使用</p>
@@ -32,22 +35,30 @@
                   <ol>
                     <li>
                       grunt
-                      <el-link type="primary" icon="Link" target="_blank" href="https://www.gruntjs.net/">https://www.gruntjs.net/</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://www.gruntjs.net/">
+                        https://www.gruntjs.net/
+                      </el-link>
                     </li>
                     <li>
                       gulp
-                      <el-link type="primary" icon="Link" target="_blank" href="https://www.gulpjs.com.cn/">https://www.gulpjs.com.cn/</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://www.gulpjs.com.cn/">
+                        https://www.gulpjs.com.cn/
+                      </el-link>
                     </li>
                   </ol>
                 </li>
                 <li>目前主流的前端工程化解决方案：</li>
                 <li>
                   webpack
-                  <el-link type="primary" icon="Link" target="_blank" href="https://www.webpackjs.com/">https://www.webpackjs.com/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="https://www.webpackjs.com/">
+                    https://www.webpackjs.com/
+                  </el-link>
                 </li>
                 <li>
                   parcel
-                  <el-link type="primary" icon="Link" target="_blank" href="https://zh.parceljs.org/">https://zh.parceljs.org/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="https://zh.parceljs.org/">
+                    https://zh.parceljs.org/
+                  </el-link>
                 </li>
               </ul>
             </li>
@@ -67,11 +78,15 @@
                   <ol>
                     <li>
                       旧版本网址
-                      <el-link type="primary" icon="Link" target="_blank" href="https://nodejs.org/zh-cn/download/releases/">https://nodejs.org/zh-cn/download/releases/</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://nodejs.org/zh-cn/download/releases/">
+                        https://nodejs.org/zh-cn/download/releases/
+                      </el-link>
                     </li>
                     <li>
                       新版本网址
-                      <el-link type="primary" icon="Link" target="_blank" href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://nodejs.org/zh-cn/download/">
+                        https://nodejs.org/zh-cn/download/
+                      </el-link>
                     </li>
                   </ol>
                 </li>
@@ -152,7 +167,7 @@
   import $ from 'jquery'
 
   // 2、定义jQuery的入口函数
-  $(function () { 
+  $(function () {
       $('li:odd').css('background-color','red')
       $('li:even').css('background-color','blue')
   })</code></pre>
@@ -234,8 +249,8 @@
           path: path.join(__dirname, 'main'), // 'main' 是文件名  等于修改了dist的文件名字，_ _就代表下根目录
           filename: 'bundle.js' // 'bundle.js' 是要修改后的js文件名，等于修改main.js的名字
       }
-  }       
-    
+  }
+
   // 注意：改完后记得html文件的引入js也要修改相对应的文件名</code></pre>
             </li>
           </ul>
@@ -256,17 +271,17 @@
   },
 
   // 再次运行 npm run dev 命令，重新进行项目的打包
-  [webpack-cli] Unable to load '@webpack-cli/serve' command 
-  [webpack-cli] TypeError: options.forEach is not a function 
-  // 如果出现以上错误提示， 看报错表面意思 "[webpack cli]无法加载“@webpack cli/serve”命令", 
+  [webpack-cli] Unable to load '@webpack-cli/serve' command
+  [webpack-cli] TypeError: options.forEach is not a function
+  // 如果出现以上错误提示， 看报错表面意思 "[webpack cli]无法加载“@webpack cli/serve”命令",
   // 感觉应该是加载不到 webpack-cli 就安装一下
-  
+
   npm install webpack-cli --save-dev
 
   // 在浏览器中访问 http://localhost:8080 地 址，查看自动打包效果
   /* 当窗口一直在监听的时候，不需要再npm run了，如果想停掉终端，按两下 ctrl + c 就可以了
       但同时监听结束，修改后保存不起作用
-      进入8080端口的网页中src点进去就可以实现同步效果，注意html也要修改引入的内存中js文件 
+      进入8080端口的网页中src点进去就可以实现同步效果，注意html也要修改引入的内存中js文件
       &lt;script&gt; src="/main.js"&gt;&lt;/script&gt;       &lt;!-- 这里是加载内存中的main.js,html页面是需要修改成内存中的js  --&gt; */
                   </code></pre>
                 </li>
@@ -288,7 +303,7 @@
       template: './src/index.html', // 指定原文件的存放路径
       filename: './index.html'      // 指定生成的文件的存放路径
   });
-  
+
   // 使用Node.js 中的导出语法，向外导出一个webpack的配置对象
   module.exports = {
       // 代表 webpack 运行模式，可选值有两个 development（开发模式） 和 production (上线模式)
@@ -373,7 +388,7 @@
   import $ from 'jquery'
   // 导入样式（在webpack中，一切皆模块，都可以通过ES6导入语法进行导入和使用）
   import './css/index.css'
-  
+
   // 2、 定义jQuery的入口函数
   $(function() {
       // 3、实现奇偶行变色
@@ -392,16 +407,16 @@
   });
   module.exports = {
       mode: 'development',
-      entry: path.join(__dirname, './src/index.js'), 
+      entry: path.join(__dirname, './src/index.js'),
       output: {
-          path: path.join(__dirname, 'dist'), 
-          filename: 'main.js' 
+          path: path.join(__dirname, 'dist'),
+          filename: 'main.js'
       },
       plugins: [htmlPlugin],
       devServer: {
-          open: true, 
-          port: 80, 
-          host: '127.0.0.1' 
+          open: true,
+          port: 80,
+          host: '127.0.0.1'
       },
       module: {       // 所有第三方文件模块的匹配规则
           rules: [    // 文件后缀名的匹配规则
@@ -517,11 +532,11 @@
       为了在每次打包发布时自动清理掉dist目录中的旧文件，可以安装并配置clean-webpack-plugin插件
         安装清理dist 目录的webpack插件 ，输入命令如下：    */
         npm install clean-webpack-plugin@3.0.0 -D   // 官网命令  npm install --save-dev clean-webpack-plugin
-          
+
         在webpack.config.js 配置文件的 output节点，进行如下配置：
         // clean-webpack-plugin 插件 创建常亮构造函数
-        const { CleanWebpackPlugin } = require('clean-webpack-plugin')   
-        
+        const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
         // 插件数组，将来webpack 在运行时，会加载并调用这些插件，添加插件
         plugins: [htmlPlugin, new CleanWebpackPlugin()], </code></pre>
           <p>什么是Source Map</p>
@@ -581,7 +596,7 @@
               <pre><code class="language-js line-numbers">  // 导入样式（在webpack中，一切皆模块，都可以通过ES6导入语法进行导入和使用）
   import '@/css/index.css'
   import '@/css/index.less'
-  
+
   // 导入图片，得到图片文件
   import logo from '@/images/star1.png'</code></pre>
             </li>
@@ -598,7 +613,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>vue简介</h2>
         <div class="ls-cot">
           <p>什么是vue</p>
@@ -627,9 +642,9 @@
                 <li>
                   在使用了vue的页面中，vue会监听数据的变化，从而自动重新渲染页面的结构。 结构如下
                   <pre><code class="language-js line-numbers">            自动渲染                      变化
-  
+
   页面结构    &lt;==&gt;    vue监听数据的变化    &lt;==&gt;    页面所依赖的数据
-  
+
   --------------------------- 数据驱动视图 ---------------------------</code></pre>
                 </li>
                 <li>好处：当页面数据发生变化时，页面会自动重新渲染！</li>
@@ -683,7 +698,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>基本使用</h2>
         <div class="ls-cot">
           <p>步骤</p>
@@ -733,7 +748,7 @@
   &lt;!-- 把 gender 对应的值，渲染到第二个p标签中 --&gt;
   &lt;!-- 注意： 第二个p标签，默认的文本 “性别” 会被gender的值覆盖掉--&gt;
   &lt;p v-text="gender"&gt;性别&lt;/p&gt;
-  
+
   //------------------------------------------
   data: {
       username: 'zs',
@@ -768,10 +783,10 @@
                       写法： （可简写: ）
                       <pre><code class="language-html line-numbers">  &lt;div&gt; id="app"&gt;
       &lt;input type="text" v-bind:placeholder="tips"&gt;   // 在属性前面前面加上一个 v-bind:
-      // vue规定中 v-bind: 指令可以简写只要在属性名前面加个 ：      
+      // vue规定中 v-bind: 指令可以简写只要在属性名前面加个 ：
       &lt;img :src="photo" alt=""&gt;
   &lt;/div&gt;
-  //-------------------------------------------- 
+  //--------------------------------------------
   data: {
       tips: '请输入用户名'，
       photo: 'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png'
@@ -783,12 +798,12 @@
   注意：在使用 v-bind属性绑定期间，如果绑定内容需要进行动态拼接，则字符串的外面应该包裹单引号，如下面例子
   ｛｛ ｝｝ 和 v-bind: 都支持简单的运算操作 */
   &lt;div&gt;1+2的结果：｛｛ 1 + 2 ｝｝&lt;/div&gt;
-  &lt;div&gt;｛｛ tips ｝｝反转的结果是：｛｛ tips.split('').reverse().join('')｝｝&lt;/div&gt;          
-  &lt;!-- 这样的写法就要用 js 的逻辑来写，不能看成只是一个字符串，vue会进行转换 --&gt; 
-  &lt;!-- 如果 box 没有加上单引号，则会被认为是一个 变量，如果没找到则会报错 --&gt; 
-  
+  &lt;div&gt;｛｛ tips ｝｝反转的结果是：｛｛ tips.split('').reverse().join('')｝｝&lt;/div&gt;
+  &lt;!-- 这样的写法就要用 js 的逻辑来写，不能看成只是一个字符串，vue会进行转换 --&gt;
+  &lt;!-- 如果 box 没有加上单引号，则会被认为是一个 变量，如果没找到则会报错 --&gt;
+
   &lt;div :title="'box' + index"&gt;这是一个 div&lt;/div&gt;
-  //-------------------------------------------- 
+  //--------------------------------------------
   data: {
     index: 3
   }</code></pre>
@@ -807,7 +822,7 @@
     &lt;button&gt; v-on:click="sub"&gt;-1&lt;/button&gt;
   &lt;/div&gt;
   //------------------------------------------------
-  // methods 的作用，就是定义事件的处理函数 
+  // methods 的作用，就是定义事件的处理函数
   methods: {
      // add: function() {
      //     console.log(1);
@@ -821,7 +836,6 @@
           this.count--
       }
   },
-
 
   // 注意：在绑定事件处理函数的时候，可以使用（）传递参数
   &lt;div id="app"&gt;
@@ -839,11 +853,10 @@
       }
   },
 
-  
   // 简写形式
   &lt;div id="app"&gt;
     &lt;div&gt;当前的数值为 ｛｛ count ｝｝&lt;/div&gt;
-    &lt;button&gt; @click="add(3)"&gt;+1&lt;/button&gt;   // v-on: 可以简写  @   
+    &lt;button&gt; @click="add(3)"&gt;+1&lt;/button&gt;   // v-on: 可以简写  @
     &lt;button&gt; @click="sub(5)"&gt;-1&lt;/button&gt;
   &lt;/div&gt;
   //----------------------------------------------
@@ -865,7 +878,7 @@
   那么vue 提供一个 &event 来解决 ,实参是固定写法 ,不带实参也可以默认当做事件对象 */
 
   &lt;div&gt;count的值为： ｛｛ count ｝｝ &lt;/div&gt;
-  &lt;button @click="add(1 , $event)"&gt;-N&lt;/button&gt;   
+  &lt;button @click="add(1 , $event)"&gt;-N&lt;/button&gt;
   //------------------------------------------------
   methods: {
       add(n , e) {
@@ -883,7 +896,7 @@
                       事件修饰符：.prevent .stop .capture .once .self
                       <pre><code class="language-html line-numbers">  // 在事件处理函数中调用event.preventDefault（）或 event.stopPropagation（）是非常常见的需求。因此， vue提供了事件修饰符的概念，来辅助程序员更方便的对事件的触发进行控制。常用的5个事件修饰符
   &lt;a href="http://www.baidu.com" @click.prevent="show"&gt;跳转链接，阻止默认行为&lt;/a&gt;
-  //---------------------------------------------------------------- 
+  //----------------------------------------------------------------
   methods: {
       show(e) {
           // e.preventDefault()  DOM标准写法
@@ -896,7 +909,7 @@
                       <pre><code class="language-html line-numbers">  // 在监听键盘事件时，我们经常需要判断详细的按键。此时，可以为键盘相关的事件添加按键修饰符
   &lt;input type="text" @keyup.esc="clearInput"&gt;  // .esc代表是按下了 esc键，如果是其它的，则修改成相应按键
   &lt;input type="text" @keyup.esc="clearInput" @keyup.enter="commitAjax"&gt;
-  //---------------------------------------- 
+  //----------------------------------------
   methods: {
       clearInput(e) {
           e.target.value = ''
@@ -954,7 +967,7 @@
      &lt;p v-if="flag"&gt;我是被v-if控制的&lt;/p&gt;       // if是作为判断条件 动态
      &lt;p v-show="flag"&gt;我是被v-show控制的&lt;/p&gt;   // 而show  是作为内联样式，display：none 显示的
   &lt;/div&gt;
-  //----------------------------------------------------------- 
+  //-----------------------------------------------------------
   data: {
       flag: true
   },</code></pre>
@@ -1004,8 +1017,8 @@
   //-----------------------------------------------------------
   data: {
       list: [
-          { id: 1, name: '张三'}, 
-          { id: 2, name: '李四'}, 
+          { id: 1, name: '张三'},
+          { id: 2, name: '李四'},
           { id: 3, name: '王五' }
       ]
   },</code></pre>
@@ -1090,7 +1103,7 @@
               过滤器应该被添加在JavaScript表达式的尾部，由“管道符”进行调用，示例代码如下：
               <pre><code class="language-html line-numbers">  &lt;!-- 在差值表达式里面通过 “管道符 ”调用 capitalize 过滤器，对message的值进行格式化--&gt;
   &lt;p&gt;｛｛ message | capitalize ｝｝&lt;/p&gt;   //  capitalize 过滤器名称可以自定义
-  
+
   &lt;!-- 在 v-bind 中通过 “管道符”调用， formatId 过滤器， 对rawId的值进行格式化 --&gt;
   &lt;div v-bind:id="rawId | formatId"&gt;&lt;/div&gt;
   //----------------------------------------------------------------------------------
@@ -1104,7 +1117,7 @@
       filters:{
           capitalize(val){  // val是 | 前面的那个原值
               const first = val.charAt(0).toUpperCase();
-              const other = val.slice(1);  
+              const other = val.slice(1);
               // 过滤器函数中一定要有返回值
               return first + other;
           }
@@ -1153,7 +1166,9 @@
                     <li>如果项目已经升级到了3.x版本的vue，官方建议使用计算属性或方法代替被剔除的过滤器功能具体的迁移指南，</li>
                     <li>
                       请参考vue3.x的官方文档给出的说明：
-                      <el-link type="primary" icon="Link" target="_blank" href="https://v3.vuejs.org/guide/migration/filters.html#migration-strategy">https://v3.vuejs.org/guide/migration/filters.html#migration-strategy</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://v3.vuejs.org/guide/migration/filters.html#migration-strategy">
+                        https://v3.vuejs.org/guide/migration/filters.html#migration-strategy
+                      </el-link>
                     </li>
                   </ol>
                 </li>
@@ -1231,7 +1246,7 @@
   computed:{
       // rgb作为一个计算属性，被定义成了方法格式，最终这个方法中，要返回一个生成好的rgb(x,x,x)字符串
       rgb:function(){
-          return ` rgb(${this.r},${this.g},${this.b})` 
+          return ` rgb(${this.r},${this.g},${this.b})`
       }
   }</code></pre>
             </li>
@@ -1252,7 +1267,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>Axios</h2>
         <div class="ls-cot">
           <p>一个专注于网络请求的库</p>
@@ -1260,11 +1275,15 @@
             <li>axios（发音：艾克C奥斯）是前端圈最火的、专注于数据请求的库。</li>
             <li>
               中文官网地址：
-              <el-link type="primary" icon="Link" target="_blank" href="http://www.axios-js.com/">http://www.axios-js.com/</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="http://www.axios-js.com/">
+                http://www.axios-js.com/
+              </el-link>
             </li>
             <li>
               英文官网地址：
-              <el-link type="primary" icon="Link" target="_blank" href="https://www.npmjs.com/package/axios">https://www.npmjs.com/package/axios</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://www.npmjs.com/package/axios">
+                https://www.npmjs.com/package/axios
+              </el-link>
             </li>
             <li>
               先引入axiosjs
@@ -1278,8 +1297,7 @@
       url:"http://www.liulongbin.top:3006/api/getbooks",
       // URL 中的查询参数  GET  或者下面POST请求
       params:{},
-  
-  
+
       // 请求体参数   POST
       data:{}
   }).then(function(books){
@@ -1317,8 +1335,7 @@
     // })
     const {data: res} = await axios.get('http: //www.liulongbin.top:3006/api/getBooks'，{});
   });
-  
-  
+
   document.querySelector('#btnPost').addEventListener( 'click', async function(){
     const {data: res} = await axios.post('http: //www.liulongbin.top:3006/api/getBooks',{});
   });</code></pre>
@@ -1326,7 +1343,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part5">
+      <el-card id="part5" shadow="hover">
         <h2>其他</h2>
         <div class="ls-cot">
           <p>Vue-cli</p>
@@ -1347,7 +1364,9 @@
                     <li>程序员可以专注在撰写应用上，而不必花好几天去纠结webpack配置的问题。</li>
                     <li>
                       中文官网：
-                      <el-link type="primary" icon="Link" target="_blank" href="https://cli.vuejs.org/zh/">https://cli.vuejs.org/zh/</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://cli.vuejs.org/zh/">
+                        https://cli.vuejs.org/zh/
+                      </el-link>
                     </li>
                   </ul>
                 </li>
@@ -1358,7 +1377,7 @@
               <ul>
                 <li>
                   vue-cli是npm上的一个全局包，使用npm install命令，即可方便的把它安装到自己的电脑上：
-                  <pre><code class="language-js line-numbers">  npm install -g @vue/cli 
+                  <pre><code class="language-js line-numbers">  npm install -g @vue/cli
   // 先要安装nodejs,然后再执行上面的安装命令，安装好后，cmd => vue -V  可查看版本，出现版本号则安装成功</code></pre>
                 </li>
                 <li>
@@ -1432,9 +1451,9 @@
   ? Check the features needed for your project: Choose Vue version, Babel,
   ? Choose a version of Vue.js that you want to start the project with 2. x
   ? Pick a CSS pre-processor （PostCSS,Where do you prefer placing config for Babel, ESLint, etc.?(Use arrow keys)
-  > In dedicated config filesIn 
+  > In dedicated config filesIn
     In package.json
-  /*  解释： 是否独立创建文件还是跟package.json放在一起，选默认第一个 */ 
+  /*  解释： 是否独立创建文件还是跟package.json放在一起，选默认第一个 */
 
   /* 最后一步
       是否存储以上选择的预设，供下次创建相同配置时选择此次预设，yes / no 都可以
@@ -1472,9 +1491,9 @@
   // 导入App.vue根组件，将来要把App.vue中的模板结构，渲染到HTML页面中
   // import App from './App.vue'
   import test from './test.vue'
-  
+
   Vue.config.productionTip = false
-  
+
   // 创建Vue的实例对象
   new Vue({
     // 把render 函数指定的组件，渲染到HTML页面中
@@ -1516,7 +1535,7 @@
         &lt;button @click="changeName"&gt;+1&lt;/button&gt;
     &lt;/div&gt;
   &lt;/template&gt;
-  
+
   &lt;script&gt;
     export default { // 固定写法，默认导出
       // data 数据源
@@ -1539,7 +1558,7 @@
       computed:{ }   // 当前组件的计算属性
     }
   &lt;/script&gt;
-  
+
   &lt;style lang="less"&gt; &lt;/style&gt;   /* 样式 如果要用less语法，则需要写语言，默认css，可以不写 */</code></pre>
             </li>
           </ul>
@@ -1555,8 +1574,8 @@
 
   // 使用components节点注册组件，多个组件用，号分割
   export default {
-    components: {   
-      Left，   
+    components: {
+      Left，
       Right
     }
   }
@@ -1582,8 +1601,8 @@
       // 1、先在main.js中 导入需要被全局注册的那个组件
       import Count from "@/components/Count.vue"
       Vue.component('MyCount', Count);
-  
-      // 2、在需要使用的Vue中使用  
+
+      // 2、在需要使用的Vue中使用
       &lt;MyCount&gt;Count组件&lt;/MyCount&gt;
 
   /* 组件的props
@@ -1594,7 +1613,7 @@
             &lt;MyCount&gt; init="9"&gt;&lt;/MyCount&gt;  // 将init值传给自定义属性props
         &lt;/div&gt;
       &lt;/template&gt;
-      
+
       &lt;script&gt;&gt;
       export default {
         // props 是‘自定义属性’，允许使用者通过自定义属性，为当前组件指定初始化值
@@ -1612,14 +1631,17 @@
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="vue2">
 import { ref } from 'vue';
-let data = ref([
+
+const data = ref([
   { id: 1, h2: 'Webpack' },
   { id: 2, h2: 'vue简介' },
   { id: 3, h2: '基本使用' },
   { id: 4, h2: 'Axios' },
-  { id: 5, h2: '其他' },
+  { id: 5, h2: '其他' }
 ]);
 </script>
+
 <style scoped lang="scss"></style>

@@ -1,16 +1,19 @@
 <template>
-  <card-container :title="`javascript`" :data="data">
+  <card-container title="javascript" :data="data">
     <template #svg>
-      <svg width="40" height="40" t="1699148574627" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8149">
-        <path d="M64 64h896v896H64z" fill="#F5DE19" p-id="8150"></path>
-        <path d="M665.888 764a91.712 91.712 0 0 0 83.2 51.2c34.88 0 57.184-17.44 57.184-41.6 0-28.8-22.912-39.104-61.312-55.904l-21.056-9.024c-60.8-25.888-101.12-58.304-101.12-126.848 0-63.136 48-111.232 123.296-111.232a124.448 124.448 0 0 1 119.744 67.424L800 580.096A57.248 57.248 0 0 0 745.952 544a36.64 36.64 0 0 0-40.288 36.096c0 25.248 15.648 35.488 51.776 51.2l21.056 9.024c71.552 30.688 112 61.952 112 132.256 0 75.808-59.552 117.344-139.52 117.344a161.76 161.76 0 0 1-153.44-86.112z m-297.44 7.296c13.216 23.456 25.248 43.296 54.176 43.296 27.648 0 45.12-10.816 45.12-52.896v-286.304h84.192v287.424c0 87.168-51.2 126.848-125.728 126.848a130.72 130.72 0 0 1-126.304-76.8z" fill="" p-id="8151"></path>
+      <svg
+        width="40" height="40" t="1699148574627" class="icon" viewBox="0 0 1024 1024"
+        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8149"
+      >
+        <path d="M64 64h896v896H64z" fill="#F5DE19" p-id="8150" />
+        <path d="M665.888 764a91.712 91.712 0 0 0 83.2 51.2c34.88 0 57.184-17.44 57.184-41.6 0-28.8-22.912-39.104-61.312-55.904l-21.056-9.024c-60.8-25.888-101.12-58.304-101.12-126.848 0-63.136 48-111.232 123.296-111.232a124.448 124.448 0 0 1 119.744 67.424L800 580.096A57.248 57.248 0 0 0 745.952 544a36.64 36.64 0 0 0-40.288 36.096c0 25.248 15.648 35.488 51.776 51.2l21.056 9.024c71.552 30.688 112 61.952 112 132.256 0 75.808-59.552 117.344-139.52 117.344a161.76 161.76 0 0 1-153.44-86.112z m-297.44 7.296c13.216 23.456 25.248 43.296 54.176 43.296 27.648 0 45.12-10.816 45.12-52.896v-286.304h84.192v287.424c0 87.168-51.2 126.848-125.728 126.848a130.72 130.72 0 0 1-126.304-76.8z" fill="" p-id="8151" />
       </svg>
     </template>
     <template #describe>
       <p>JavaScript最初是由Netscape的工程师布兰登·艾奇（Brendan Eich）在1995年设计的，最初命名为LiveScript，但为了利用当时流行的Java语言的市场效应，它被改名为JavaScript。</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>网页效果</h2>
         <div class="ls-cot">
           <p>网页特效 （PC端网页特效 元素偏移量offset系列）</p>
@@ -37,7 +40,7 @@
   offset  系列获得的数值是没有单位的               |        style.width   获得的是带有单位的字符串
   offsetWidth 包含padding+border+width           |        style.width   获得不包含padding和border的值
   offsetWidth 等属性是只读属性，只能获取不能赋值    |        style.width   是可读写属性，可以获取也可以赋值
-  
+
   所以,我们想要获取元素大小位置，用offset更合适     |         所以，我们想要给元素更改值，则需要用style改变</code></pre>
             </li>
             <li>
@@ -48,7 +51,7 @@
       首先得到鼠标在页面中的坐标（e.pageXe.pageY）
       其次得到盒子在页面中的距离（box.offsetLeft，box.offsetTop）
       用鼠标距离页面的坐标减去盒子在页面中的距离，得到鼠标在盒子内的坐标
-      如果想要移动一下鼠标，就要获取最新的坐标，使用鼠标移动事件mousemove  */ 
+      如果想要移动一下鼠标，就要获取最新的坐标，使用鼠标移动事件mousemove  */
   &lt;div&gt; class='box'&gt;&lt;/div&gt;        // 记得带定位
 
   var box = document.querySelector('.box');
@@ -73,7 +76,7 @@
           鼠标的坐标减去鼠标在盒子内的坐标，才是模态框真正的位置。
           鼠标按下，我们要得到鼠标在盒子的坐标。
           鼠标移动，就让模态框的坐标设置为：鼠标坐标减去盒子坐标即可，注意移动事件写到按下事件里面。
-          鼠标松开，就停止拖拽，就是可以让鼠标移动事件解除  */ 
+          鼠标松开，就停止拖拽，就是可以让鼠标移动事件解除  */
   &lt;div class="link"&gt;&lt;a id="links" href="javascript:;"&gt;点击，弹出登录框&lt;/a&gt;&lt;/div&gt;
   &lt;div id="login" class="box"&gt;
       &lt;div id="title" class="title"&gt;鼠标拖动区域&lt;/div&gt;
@@ -103,8 +106,8 @@
           var x = e.pageX - box.offsetLeft;
           var y = e.pageY - box.offsetTop;
           // 2、鼠标移动的时候，把鼠标在页面中的坐标减去鼠标在盒子的坐标就是模态框的left和top值
-          document.addEventListener('mousemove', move)  
-          
+          document.addEventListener('mousemove', move)
+
           function move(e) {
               box.style.left = e.pageX - x + 'px';    // offset 只能获取不能赋值，所以这里用style
               box.style.top = e.pageY - y + 'px';     // 注意 要加单位
@@ -122,17 +125,17 @@
       鼠标经过小图片盒子，黄色的遮挡层和大图片盒子显示，离开隐藏2个盒子功能
       黄色的遮挡层跟随鼠标功能。
       * 移动黄色遮挡层，大图片跟随移动功能。
-      公式： 
+      公式：
             1        x                            1 * 4
             一   =   一          求x         x  =  一一一
             2        4                              2
-    
+
       * 求大图片的移动距离
       公式：
             遮挡层移动距离                     大图片移动距离
             ----------------     =         ---------------       求大图片移动距离？
             遮挡层最大移动距离                 大图片最大移动距离
-    
+
                                            遮挡层移动距离 * 大图片最大移动距离
             大图片移动距离          =        ------------------------------
                                                   遮挡层最大移动距离
@@ -206,7 +209,7 @@
           // 大图片的移动距离 = 遮挡层移动距离*大图片最大移动距离 / 遮挡层的最大移动距离
           // 大图
           var bigIMg = document.querySelector('.bigImg');
-          // 大图片最大移动距离 
+          // 大图片最大移动距离
           var bigMax = bigIMg.offsetWidth - big.offsetWidth;
           // 大图片移动距离 X Y
           var bigX = maskX * bigMax / maskMax;
@@ -244,8 +247,8 @@
               主要作用：创建一个独立的作用域 , 不需要调用，立马能够自己执行
               <pre><code class="language-js line-numbers">  (function(a, b) {
       console.log(a + b);
-  }(3, 2)); 
-  // 多个立即执行函数，需要用 ；来隔开 
+  }(3, 2));
+  // 多个立即执行函数，需要用 ；来隔开
   (function sum(a, b) {           // 写函数名也是不会报错的
       console.log(a - b);
   })(3, 2);
@@ -422,10 +425,10 @@
     } else {
       alert(' 向下');
     }
-    return false // 取消浏览器默认行为 
-                 // 但是addEventLister里，此方法不管用，需要用 event .preventDefault (); 方法取消 
+    return false // 取消浏览器默认行为
+                 // 但是addEventLister里，此方法不管用，需要用 event .preventDefault (); 方法取消
                  // 兼容性写法 ：event .preventDefault && event.preventDefault();
-                 // 如果第一个为false， 就直接不用 
+                 // 如果第一个为false， 就直接不用
   }</code></pre>
                 </li>
               </ol>
@@ -494,7 +497,7 @@
                   clearInterval(stop);
               }
               obj.style.left = obj.offsetLeft + num + 'px';
-      
+
           }, 1000);
       }
       function animate2(obj, target, num) {
@@ -502,9 +505,9 @@
               if (obj.offsetTop &gt;= target) {
                   // 停止动画，本质就是停止定时器，用clearInterval
                   clearInterval(stop);
-              } 
+              }
               obj.style.top = obj.offsetTop + num + 'px';
-      
+
           }, 1000);
       }
       var div = document.querySelector('div');
@@ -531,7 +534,7 @@
               if (obj.offsetLeft &gt;= target) {
                   // 停止动画，本质就是停止定时器，用clearInterval
                   clearInterval(obj.stop);
-              } 
+              }
               obj.style.left = obj.offsetLeft + num + 'px';
           }, 30);
       }
@@ -556,7 +559,7 @@
               if (obj.offsetLeft &gt;= target) {
                   // 停止动画，本质就是停止定时器，用clearInterval
                   clearInterval(obj.stop);
-              } 
+              }
               obj.style.left = obj.offsetLeft + 1 + 'px';
           }, 30);
       }
@@ -597,13 +600,13 @@
                //所以以上代码  要改成  下面的代码
            *  var step = (target - obj.offsetLeft) / 10;
               //判断，step 大于0吗？如果大于执行ceil，否则执行floor
-                step = step &gt; 0 ?  Math.ceil(step):Math.floor(step); 
+                step = step &gt; 0 ?  Math.ceil(step):Math.floor(step);
 
               if (obj.offsetLeft == target) {                         // 这里可以大于，但是一般写等于，没有必要大于
                   // 停止动画，本质就是停止定时器，用clearInterval
                   clearInterval(obj.stop);
-              } 
-                  // 修改，把每次加 1 这个步长 改为缓动慢慢变小的值 
+              }
+                  // 修改，把每次加 1 这个步长 改为缓动慢慢变小的值
                   // 也就是步长公式：（目标值 - 现在的位置）/ 10   步长值要写道定时器的里面
                删  obj.style.left = obj.offsetLeft + (target - obj.offsetLeft) / 10 + 'px';  //自己写的
                *   obj.style.left = obj.offsetLeft + step + 'px';     // 2、老师写的
@@ -640,11 +643,11 @@
               clearInterval(obj.stop);
               //回调函数写到定时器结束里面
               if (callback) {                                   // 有callback这个回调函数参数吗
-                  callback();                                   // 没有就不调用，有就调用  
+                  callback();                                   // 没有就不调用，有就调用
               }
           }
           // 修改，把每次加 1 这个步长改为缓动慢慢变小的值，
-          // 也就是步长公式：（目标值 - 现在的位置）/ 10 
+          // 也就是步长公式：（目标值 - 现在的位置）/ 10
           obj.style.left = obj.offsetLeft + step + 'px';
       }, 15);                                                   // 推荐改成 15
   }
@@ -654,7 +657,7 @@
   var btn800 = document.querySelector('.btn800');
   btn500.addEventListener('click', function() {
       animate(div, 500, function() {                            // 传递对象，目标距离，一次走多少像素,回调函数
-          div.style.backgroundColor = 'red'; 
+          div.style.backgroundColor = 'red';
       });
   })
   btn800.addEventListener('click', function() {
@@ -726,7 +729,7 @@
       sliderBar.addEventListener('mouseleave', function() {
           animate(con, 0);
           sliderBar.children[0].innerHTML = '←';       // 当鼠标离开，改会左箭头
-      }); 
+      });
   &lt;/script&gt;</code></pre>
             </li>
           </ul>
@@ -803,7 +806,7 @@
         obj.style.left = obj.offsetLeft + step + 'px';
     }, 15);
   }
-  
+
   // js 动画代码
   &lt;!-- 因为index.js 依赖animate.js，所以要卸载index.js的上面 --&gt;
     &lt;script&gt; src="js/animate.js"&gt;&lt;/script&gt;
@@ -828,7 +831,7 @@
         .current {background-color: rgb(255, 126, 126);}
     &lt;/style&gt;
   &lt;/head&gt;
-  
+
   &lt;body&gt;
     &lt;div class="focus"&gt;
         &lt;!-- 按钮 --&gt;
@@ -951,7 +954,7 @@
     btnL.addEventListener('click', function() {
             if (flag) { //同理步骤25 节流阀
                 flag = false;
-                // 16、判断，如果num ==0，点击后肯定是走到最后一张 
+                // 16、判断，如果num ==0，点击后肯定是走到最后一张
                 if (num == 0) {
                     // ul.style.left = (ul.children.length - 1) * focusWidth + 'px';
                     // num = ul.children.length - 1;
@@ -985,7 +988,7 @@
         btnR.click(); //触发手动点击事件
     }, 2000)
   })
-  
+
   // 细节优化：装ul的宽度是js自动获取
 
   window.onload = function () {
@@ -994,7 +997,7 @@
     imgList.style.width = 520 * imgArr.length + "px";   // 设置imgList的宽度
   }
 
-  // 点击分页器js动态水平居中 
+  // 点击分页器js动态水平居中
   // 设置导航按钮居中
   var navDiv = document.getElementById("navDiv");       // 获取naVDiv
   var outer = document.getElementById("outer");         // 获取outer
@@ -1058,7 +1061,7 @@
               lis[i].addEventListener('mouseenter', function() {
                   animate(style1, this.offsetLeft);
               });
-              // (2) 鼠标离开就回到起始的位置 
+              // (2) 鼠标离开就回到起始的位置
               lis[i].addEventListener('mouseleave', function() {
                   animate(style1, current);
               });
@@ -1103,8 +1106,8 @@
               <pre><code class="language-js line-numbers">  /*
     TouchEvent 是一类描述手指在触莫平面（角触摸屏、触摸板等）的状态变化的事件。
     这类事件用于描述一个或多个触点，使开发者可以检测触点的移动，触点的增加和减少，等等
-    touchstart、touchmove、touchend三个事件都会各自有事件对象。 
-  
+    touchstart、touchmove、touchend三个事件都会各自有事件对象。
+
     触摸事件对象重点我们看三个常见对象列表：
     touches          正在触摸屏幕的所有手指的一个列表协
     targetTouches    正在触摸当前DOM元素上的手指的一个列表
@@ -1131,7 +1134,7 @@
       移动手指touchmove：计算手指的滑动距离，并且移动盒子
       离开手指touchend：注意：手指移动也会触发滚动屏幕所以这里要阻止默认的屏幕滚动e.preventDefault(); */
 
-      &lt;div&gt;&lt;/div&gt; 
+      &lt;div&gt;&lt;/div&gt;
   &lt;script&gt;&gt;
       var div = document.querySelector('div');
       // 因为等会会用来计算，所以声明一个全局变量
@@ -1161,7 +1164,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>其他拓展</h2>
         <div class="ls-cot">
           <p>classList 属性</p>
@@ -1179,7 +1182,7 @@
   element.classlist.toggle('类名');
 
   // 检查类：
-  element.classList.contains("检查元素是否包含此class类名") 
+  element.classList.contains("检查元素是否包含此class类名")
 
   // 替换类：
   element.classList.replace("原有类名","需要替换的类名") </code></pre>
@@ -1200,7 +1203,7 @@
               因为图片的宽度是铺满的，所以让ul走屏幕的宽度就可以了。-100%
               <pre><code class="language-css line-numbers">  .focus ul {
     /* overflow: hidden; */
-    width: 500%; 
+    width: 500%;
     margin-left: -100%;  /* 不添加的话，会显示复制出来的第三张 */
   }</code></pre>
             </li>
@@ -1270,7 +1273,7 @@
       var w = focus.offsetWidth;                                      // 1.2 获取focus 的宽度
       var ol = focus.children[1];                                     // 7.1 获取focus下的第二个孩子 ol
       var index = 0;                                                  // 2、添加一个索引号变量
-      var timer = setInterval(function() {              
+      var timer = setInterval(function() {
           index++;                                                    // 2.1 定时器开启，每隔两面，索引号+1
           var translateX = -index * w;                                // 3、让索引号 * 图片的宽度 ，会等于移动的距离，注意往左走是负值
           ul.style.transition = 'all .3s';                            // 4、添加css3 的过度效果
@@ -1314,7 +1317,7 @@
           // 8.7手指是一点一点的拖，所以不需要做过度效果
           ul.style.transition = 'none';                                // 去掉过渡效果
           ul.style.transform = 'translateX(' + translateX + 'px)'; //加上CSS3移动效果
-          // 15.1 
+          // 15.1
           flag = true;                                                 // 22、如果 用户手指移动过，我们再去判断
           e.preventDefault();                                          // 阻止滚动屏幕的行为
       });
@@ -1419,13 +1422,13 @@
     });
     obj.addEventListener('touchend', function (e) {
       if (!isMove && (Date.now() - startTime) &lt; 150) { // 如果手指触摸和离开时间小于150ms算点击
-        callbacks && callback();                          // 执行回调函数  
+        callbacks && callback();                          // 执行回调函数
       }
       isMove = false;                                     // 取反重置
       startTime = 0;
     });
   }
-  // 调用 
+  // 调用
   tap(div, function () {/* 执行代码 */});</code></pre>
                 </li>
                 <li>使用插件。fastClick插件解决300ms延迟。</li>
@@ -1434,7 +1437,9 @@
                 <li>fastClick插件解决300ms延迟。使用延时</li>
                 <li>
                   GitHub官网地址：
-                  <el-link type="primary" icon="Link" target="_blank" href="https://github.com/ftlabs/fastclick/lib/fastclick.js">https://github.com/ftlabs/fastclick/lib/fastclick.js</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="https://github.com/ftlabs/fastclick/lib/fastclick.js">
+                    https://github.com/ftlabs/fastclick/lib/fastclick.js
+                  </el-link>
                   <ol>
                     <li>打开网址，进入项目，找到文件，复制里面的封装函数代码</li>
                     <li>新建fastClick.js文件.粘贴代码</li>
@@ -1469,7 +1474,9 @@
               <ul>
                 <li>
                   Swiper插件的使用 中文官网地址：
-                  <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">https://www.swiper.com.cn/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">
+                    https://www.swiper.com.cn/
+                  </el-link>
                   <ol>
                     <li>进入官网，导航栏上点击 获取Swiper里的下载，然后下载最新的文档就可以了</li>
                     <li>下载完Swiper，解压出来，打开 demos文件夹，找到你想要的轮播图名称，打开</li>
@@ -1479,9 +1486,9 @@
   &lt;!-- Link Swiper's CSS --&gt;
   &lt;link rel="stylesheet" href="../package/swiper-bundle.min.css"&gt;
 
-  // 引入js 文件    
-  &lt;!-- Swiper JS --&gt; 
-  &lt;script&gt; src="../package/swiper-bundle.min.js"&gt;&lt;/script&gt; 
+  // 引入js 文件
+  &lt;!-- Swiper JS --&gt;
+  &lt;script&gt; src="../package/swiper-bundle.min.js"&gt;&lt;/script&gt;
 
   /*
     打开解压出来的文件夹
@@ -1498,7 +1505,9 @@
           <ul>
             <li>
               官网地址：
-              <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">https://www.swiper.com.cn/</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">
+                https://www.swiper.com.cn/
+              </el-link>
               <ol>
                 <li>下载需要的swiper.min.css和swiper.min.js文件件</li>
                 <li>官网找到类似案例，复制html结构，css样式js语法</li>
@@ -1526,12 +1535,16 @@
           <ol>
             <li>
               superSlide：
-              <el-link type="primary" icon="Link" target="_blank" href="http://www.superslide2.com/">http://www.superslide2.com/</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="http://www.superslide2.com/">
+                http://www.superslide2.com/
+              </el-link>
               // 移动端点击touchSlide
             </li>
             <li>
               iScroll：
-              <el-link type="primary" icon="Link" target="_blank" href="https://github.com/cubiq/iscroll">https://github.com/cubiq/iscroll</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://github.com/cubiq/iscroll">
+                https://github.com/cubiq/iscroll
+              </el-link>
               <ul>
                 <li>
                   插件使用步骤：
@@ -1586,7 +1599,9 @@
                 <li>Bootstrap</li>
                 <li>
                   BootCss3:
-                  <el-link type="primary" icon="Link" target="_blank" href="https://v3.bootcss.com/">https://v3.bootcss.com/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="https://v3.bootcss.com/">
+                    https://v3.bootcss.com/
+                  </el-link>
                   javascript 插件 依赖于jQuery，所以需要引入 jQuery.min.js，再引入min.js文件
                 </li>
               </ol>
@@ -1594,7 +1609,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>本地存储</h2>
         <div class="ls-cot">
           <p>重点</p>
@@ -1672,7 +1687,7 @@
         如果勾选，就存储，否则就移除
   */
 
-  &lt;input type="text" id="uname"&gt; 
+  &lt;input type="text" id="uname"&gt;
   &lt;input type="checkbox" id="remember"&gt;记住用户名
   &lt;script&gt;
       // 1、获取元素
@@ -1732,7 +1747,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>高级js</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -2029,7 +2044,7 @@
               <pre><code class="language-js line-numbers">  for (var i = 0 ; length = a.length; i&lt; length; i++){
     var a = a[ i ];
     a.index = i ;
-    a.onclick = function() { alert( '第' + （this.index +1 ）+"个)} 
+    a.onclick = function() { alert( '第' + （this.index +1 ）+"个)}
   }</code></pre>
             </li>
             <li>
@@ -2037,7 +2052,7 @@
               <pre><code class="language-js line-numbers">  for (var i = 0 ; length = a.length; i&lt; length; i++){
     ( function( i ){
     var a = a[ i ];
-    a.onclick = function() { alert( '第' + （this.index +1 ）+"个)} 
+    a.onclick = function() { alert( '第' + （this.index +1 ）+"个)}
     })( i )
   }</code></pre>
             </li>
@@ -2079,7 +2094,7 @@
       var a = 2;
       function fn2 (){
         a++
-        console.log ( a )  
+        console.log ( a )
       }
         return fn2
   }
@@ -2161,7 +2176,7 @@
 
   // HTML代码
   &lt;div&gt; id="myId"&gt;&lt;/div&gt;
-  
+
   // JS代码
   var myIdElement = document.getElementById("myId");
   var beforeStyle = window.getComputedStyle(myIdElement, ":before");
@@ -2193,7 +2208,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part5">
+      <el-card id="part5" shadow="hover">
         <h2>ES6</h2>
         <div class="ls-cot">
           <p>ECMA</p>
@@ -2202,7 +2217,9 @@
             <li>ECMAScript 是由Ecma国际通过ECMA-262标准化的脚本程序设计语言。</li>
             <li>
               ECMA-262历史版本
-              <el-link type="primary" icon="Link" target="_blank" href="http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm">http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm">
+                http://www.ecma-international.org/publications/standards/Ecma-262-arch.htm
+              </el-link>
             </li>
             <li>注：从ES6开始，每年发布一个版本，版本号比年份最后一位大1</li>
           </ul>
@@ -2213,7 +2230,9 @@
           <p>ES6兼容性</p>
           <ul>
             <li>
-              <el-link type="primary" icon="Link" target="_blank" href="http:/kangax.github.io/compat-table/es6/">http:/kangax.github.io/compat-table/es6/</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="http:/kangax.github.io/compat-table/es6/">
+                http:/kangax.github.io/compat-table/es6/
+              </el-link>
               可查看兼容性
             </li>
           </ul>
@@ -2231,7 +2250,7 @@
                 <li>变量不能重复声明，和var 不一样，不用担心被污染</li>
                 <li>
                   块级作用域 全局 函数 eval ，不止{} ,还有if else while for 里的作用域有效
-                  <pre><code class="language-js line-numbers">  { 
+                  <pre><code class="language-js line-numbers">  {
     let a = '块级作用域 '
   }</code></pre>
                 </li>
@@ -2244,10 +2263,10 @@
                 <li>
                   不影响作用域链接
                   <pre><code class="language-js line-numbers">  {
-  let c = '123'   
+  let c = '123'
   function fn(){
-       console.log(c);   // 不会影响作用域链  ，此层作用域没有，还是会往上一级查找  
-  } 
+       console.log(c);   // 不会影响作用域链  ，此层作用域没有，还是会往上一级查找
+  }
   fn();                  // 输出 123
   }</code></pre>
                 </li>
@@ -2276,8 +2295,8 @@
           <p>结构赋值 (ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值，这杯称为结构赋值)</p>
           <pre><code class="language-js line-numbers">  // 数组结构
   const A = ['小白', '小黑', '小黄'];
-  let [bai, hei, huang] = A;   // 这样操作，相当于把数组对应的值传给变量 ，声明并赋值 bai hei huang 
-  
+  let [bai, hei, huang] = A;   // 这样操作，相当于把数组对应的值传给变量 ，声明并赋值 bai hei huang
+
   // 对象结构
   const B = {
     name: '大白',
@@ -2307,7 +2326,7 @@
   let a = '10+';
   let b = a + '10';
   console.log(b);      //  之前的拼接方式
-  
+
   let a = '10+';
   let b = `${a}10`;    //  固定格式  ${ 里面放变量 }
   console.log(b);
@@ -2392,7 +2411,7 @@
   // 直接调用
   getName();                   // windows
   getName2();                  // windows
-  
+
   // call 方法调用
   getName.call(Name);          // 对象的name
   getName2.call(Name);         //  windows</code></pre>
@@ -2417,7 +2436,7 @@
 
   // 2. 省略花括号，当代码体只有一条语句的时候，此时return 必须省略而且语句的执行结果就是函数的返回值
   let son = age => age + age;    // 省略了{ } 和 return
-  console.log(son(15)); 
+  console.log(son(15));
   let son = (a, b) => a + b;     // 多个形参时，需要加上（） ，要不然会报错
   console.log(son(15, 15));
                   </code></pre>
@@ -2429,14 +2448,14 @@
   box.addEventListener('click', function () {
       let _this = this; // 声明一个_this指向变量
       setTimeout(function () {
-          this.style.backgroundColor = 'pink'; // 如果没有在外面声明一个this 赋值操作 会this指向错误 
+          this.style.backgroundColor = 'pink'; // 如果没有在外面声明一个this 赋值操作 会this指向错误
           _this.style.background = 'pink';     // 此时赋值过的 _this 变量指向的是调用者
       }, 500);
   });
   // 箭头函数
   box.addEventListener('click', function () {
       setTimeout(() => {
-          this.style.background = 'pink';      // 箭头函数就可以使用this 
+          this.style.background = 'pink';      // 箭头函数就可以使用this
                                                // 因为箭头函数始终是指向函数声明时所在作用域下的this值
                                                // 也就是 box 的点击事件函数，事件源box
       }, 500);
@@ -2459,7 +2478,7 @@
   })
   // 简写
   const result = arr.filter(item => item % 2 === 0);  // 如果为真 直接 return 保留结果
-  
+
   console.log(result);</code></pre>
                 </li>
               </ol>
@@ -2496,7 +2515,7 @@
       a: 'v',
       b: 'd'
   })
-  // 使用结构赋值 
+  // 使用结构赋值
   function object({ a,b }) {   // 使用 { } 包裹形参
       console.log(a);
       console.log(b);
@@ -2506,7 +2525,7 @@
       b: 'd'
   })
   // 也可以赋值，如果传参，可以直接赋值，传了就直接用
-  function object({ a="123", b }) { 
+  function object({ a="123", b }) {
       console.log(a);  // 123
       console.log(b);  // d
   }
@@ -2522,7 +2541,7 @@
     console.log(arguments);         // 是以对象方式管理  1，2，3，4，5
   }
   get(1, 2, 3, 4, 5);
-  
+
   function get2(a, b, ...args) {    // 以数组方式进行管理  rest 方法，在形参前加 ...
     console.log(a);                 // 1
     console.log(b);                 // 2
@@ -2540,7 +2559,7 @@
       console.log(arguments);
   }
   get(boy);                     // 以数组参数传入，就一个参数  0['x', 'b', 'c']
-  // 扩展运算符 
+  // 扩展运算符
   const boy = ['x', 'b', 'c'];
   function get() {
       console.log(arguments);   // 会输出三个参数  0['x']    1['b']    2['c']
@@ -2574,7 +2593,7 @@
   const boxS = document.querySelectorAll('.box');
   console.log(boxS);                                // 原型上 是一个对象
   // 转换
-  const boxS = document.querySelectorAll('.box'); 
+  const boxS = document.querySelectorAll('.box');
   const result = [...boxS];                         // 伪数组被转换成 数组Arr
   console.log(result);
 
@@ -2585,9 +2604,9 @@
     "2": "男",
     "length": 3                                // 必须写上长度和索引下标
   };
-  var a = Array.from(obj);   
+  var a = Array.from(obj);
   console.log(a);                              // ["zs", 18, "男"]
-  // --------------------------------------------------------   
+  // --------------------------------------------------------
   var obj = {
     "0": 15,
     "1": 18,
@@ -2616,18 +2635,18 @@
               创建Symbol
               <pre><code class="language-js line-numbers">  let s = Symbol();
   console.log(s, typeof s);     // Symbol() "symbol"
-  
+
   // 传参
   let s2 = Symbol('a');
   let s3 = Symbol('a');
-  console.log(s2 === s3);       // false，虽然参数值相同，但是标识不同 ，false 
-  
+  console.log(s2 === s3);       // false，虽然参数值相同，但是标识不同 ，false
+
   // for
   let s4 = Symbol.for('a');
   let s5 = Symbol.for('a');
   console.log(s4 === s5); // true
   // Symbol.for() 与 Symbol 都会生成Symbol.区别是前者被登记在全局环境中，后者不会，所以相等
-  
+
   // 不能与其他数据进行运算
   let s = Symbol();
   let s4 = s + s;
@@ -2663,7 +2682,7 @@
               </ol>
               <pre><code class="language-js line-numbers">  const arr = [1, 2, 3];
   const arr2 = [4, 5, 6];
-  console.log(arr.concat(arr2));             // 1,2,3,4,5,6 
+  console.log(arr.concat(arr2));             // 1,2,3,4,5,6
   // 使用isConcatSpreadable 方法
   const arr = [1, 2, 3];
   const arr2 = [4, 5, 6];
@@ -2682,7 +2701,7 @@
   for (let v in arr) {
       console.log(v);         // 0,1,3  相当于数组索引号
   }
-  // for of  
+  // for of
   for (let v of arr) {
       console.log(v);         // a,b,c  数组索引值
   }</code></pre>
@@ -2693,7 +2712,7 @@
   for (let v of arr) {       // 为什么数组能使用for of 遍历，因为其原型对象中有  Symbol()属性
       console.log(v);        // a b c  键值
   }
-  // for of  与 for in 不同区别 
+  // for of  与 for in 不同区别
   for (let v in arr) {
       console.log(v);        // 0 1 2  索引
   }</code></pre>
@@ -2811,7 +2830,7 @@
           }, 3000);
       }, 2000);
   }, 1000);
-  
+
   // 使用yield
   function one() {
       setTimeout(() => {
@@ -2848,28 +2867,28 @@
         a.next(data);
     }, 1000);
   }
-  
+
   function two() {
     setTimeout(() => {
         let data = '数据2';
         a.next(data);
     }, 1000);
   }
-  
+
   function three() {
     setTimeout(() => {
         let data = '数据3';
         a.next(data);
     }, 1000);
   }
-  
-  function* get() {       
+
+  function* get() {
     console.log(yield one());        // 简写调用
     console.log(yield two());        // 简写调用
     let three3 = yield three();
     console.log(three3);
   }
-  
+
   let a = get();
   a.next();
   // one(); 这种调用不实际，要先拿到数据1 再去拿到数据2
@@ -2896,7 +2915,7 @@
       setTimeout(() => {
           // let data = '数据库中的数据'
           // resolve(data);
-  
+
           let err = '数据读取失败';
           reject(err);
       }, 1000);
@@ -2980,16 +2999,16 @@
         reject('用户数据');
     })
   });
-  
+
   // 链式调用
   p.then(value => {
-  
+
   }, reason => {
-  
+
   }).then(value => {
-  
+
   }, reason => {})
-  
+
   p.then(value => {}).then(value => {  // 可以直接写成功，省略失败 })
                   </code></pre>
                 </li>
@@ -3014,7 +3033,7 @@
           resolve(data);
       });
   });
-  
+
   p.then(value => {
       return new Promise((resolve, reject) => {
           fs.readFile("./text/b.text", (err, data) => {
@@ -3042,7 +3061,7 @@
           reject('出错了');
       }, 1000);
   });
-  
+
   p.catch(reason => { // catch 只需要定义一个回调，失败的回调函数就行
       console.warn(reason);
   })</code></pre>
@@ -3065,7 +3084,7 @@
   let s = new Set();
   let s2 = new Set([1, 3, 4, 5, 7, 3, 4]);
   console.log(s2);                          // 输出结果，set[5]{ 1, 3, 4, 5, 7}  ，会自动去重
-  console.log(s2.size);                     // 5 
+  console.log(s2.size);                     // 5
   console.log(s2.delete(1));                // true
   console.log(s2.add(2));                   // set[5]{ 3, 4, 5, 7, 2}
   console.log(s2.has(1));                   // false 因为前面删掉了
@@ -3082,7 +3101,7 @@
   // 数组去重
   let result = [...new Set(arr)];
   console.log(result); // 变成一个数组  [1,3,4,5,7]
-  
+
   // 交集
   let arr = [1, 3, 4, 5, 7, 3, 4];
   let arr2 = [4, 5, 3, 5, 6];
@@ -3096,13 +3115,13 @@
   })
   let result = [...new Set(arr)].filter(item=> new Set(arr2).has(item));  //简写
   console.log(result);                             // 3,4,5
-  
-  // 并集，就是两个的集合 
+
+  // 并集，就是两个的集合
   let arr = [1, 3, 4, 5, 7, 3, 4];
   let arr2 = [4, 5, 3, 5, 6];
   let result = [...new Set([...arr, ...arr2])];
   console.log(result);                             // 1,3,4,5,7,6
-  
+
   // 差集，在两个数组中，谁是主体，那么就要判断副体中，没有重复的就是差集，案例中arr是主体，1和7没有
   let arr = [1, 3, 4, 5, 7, 3, 4];
   let arr2 = [4, 5, 3, 5, 6];
@@ -3140,7 +3159,7 @@
 
   // 2. delete（value）：删除某个值，返回一个布尔值，表示删除是否成功
   data.delete('a');                    // 并可以返回 布尔值，如果删除成功，则返回true ,可以拿变量来接收
-  console.log(data.size);              // 1 
+  console.log(data.size);              // 1
 
   // 3.has（value）：返回一个布尔值，表示该值是否为Set的成员
   let a = data.has('a');               // false 因为前面删除了
@@ -3154,7 +3173,7 @@
   // 5.遍历 Set 中的数据
   let data = new Set(['a', 'b']);
   data.add('c').add('d');
-  data.forEach(d => console.log(d));   // 遍历出 a   b  c  d   
+  data.forEach(d => console.log(d));   // 遍历出 a   b  c  d
                   </code></pre>
                 </li>
               </ol>
@@ -3194,14 +3213,14 @@
   let iphone = new Phone('apple', '1000');
   iphone.call();
   console.log(iphone);
-  
-  // 使用ES6 class 
-  // ES6 class 
+
+  // 使用ES6 class
+  // ES6 class
   class Phone {
       constructor(brand, price) {         // 构造方法  固定名字，不能修改，不需要return 用这个名字会直接返回
           this.brand = brand;
           this.price = price;
-      }                                   // 并且多个函数或方法之间不能加 ， 逗号 
+      }                                   // 并且多个函数或方法之间不能加 ， 逗号
       call() {       // 方法必须使用该语法，不能使用ES5 的对象完整形式 例如 call : function(){}
           console.log('我是手机');
       }
@@ -3210,7 +3229,7 @@
   let iphone = new Phone('apple', 1200);  // 必须使用 new 来实例化对象
   iphone.call();
   console.log(iphone);
-  
+
   // class 的静态成员
   class Phone {
       // 静态属性
@@ -3285,10 +3304,10 @@
             console.log(this.x - this.y);
         }
     }
-    let a = new Son(7, 3); 
+    let a = new Son(7, 3);
     a.sub();
     a.add();
-  
+
     //  super() 调用父类的构造函数
     class Father {
       constructor(x, y) {
@@ -3314,7 +3333,7 @@
           this.x = x;
           this.y = y;
           this.add();  // 加上 this. 方法
-      } 
+      }
       add() {
           console.log(this.x + this.y);
       }
@@ -3367,9 +3386,9 @@
         #age;                         // 必须封闭类中声明私有字段“#gae”
         #sex;                         // 必须封闭类中声明私有字段“#sex”
         constructor(name, age, sex,money) {
-            this.#name = name;        // 私有属性，只能通过方法getter获取和方法setter设置 
-            this.#age = age;          // 私有属性，只能通过方法getter获取和方法setter设置 
-            this.#sex = sex;          // 私有属性，只能通过方法getter获取和方法setter设置 
+            this.#name = name;        // 私有属性，只能通过方法getter获取和方法setter设置
+            this.#age = age;          // 私有属性，只能通过方法getter获取和方法setter设置
+            this.#sex = sex;          // 私有属性，只能通过方法getter获取和方法setter设置
             this.money = money;       // Person 公共属性,不受限制调用
         }
         fun() {
@@ -3381,7 +3400,7 @@
         get name() {                   // 私有属性，js提供get 函数名 来获取私有属性
             return this.#name;
         }
-        /* 
+        /*
           setName(name) {              // 等同于上面的set方法  来设置私有属性
               this.#name = name;
           }
@@ -3394,7 +3413,7 @@
     p.setName("猪八戒")                // 只能通过方法set 设置私有属性
     p.getName()                       // 只能通过方法get 获取私有属性
     p.name = "猪八戒"                  // 当设置私有属性时，调用的是set方法
-    console.log(p.name);              // 当获取私有属性时，调用的是get方法，调用时不要加括号 
+    console.log(p.name);              // 当获取私有属性时，调用的是get方法，调用时不要加括号
     console.log(p.money);             // 公共属性可以直接获取
 
   // 6. 父类方法可以重写 38j
@@ -3420,27 +3439,27 @@
   }
   console.log(0.1 + 0.2); // 0.30000000000000004
   console.log(equal(0.1 + 0.2, 0.3)); // true
-  
+
   // 1. 二进制和八进制
   let t = 0b1010;
-  
+
   // 2. Number.isFinite 检测一个数值是否为有限数
   console.log(Number.isFinite(100)); // true
   console.log(Number.isFinite(100 / 0)); // false
-  
+
   // 3. Number.isNaN() 检测一个数值是否为NaN
-  
+
   // 4. Number.parseInt() Number.PaseFloat()  字符串转整数
-  
+
   // 5. Number.isInteger() 判断一个数是否为整数
-  
+
   // 6. Number.trunc() 将数字的小数部分抹掉
-  
+
   // 7. Math.sign() 判断一个数到底为正数 负数 还是零  返回结果  1  -1   0</code></pre>
           <p>对象方法扩展</p>
           <pre><code class="language-js line-numbers">  // 1.Object.is() 判断两个值是否完全相等
   // 相当于 ===   但是 NaN 是个例外
-  
+
   // 2.Object.assign 对象的合并
   const config1 = {
       name: '1',
@@ -3451,8 +3470,7 @@
       sex: '男'
   }
   console.log(Object.assign(config1, config2));  // 后面的对象会覆盖前面的，如果没有的属性会合并
-  
-  
+
   // 3.Object.setPrototypeof 设置原型对象   Object.getPrototypeof
   const school = {
       name: '尚硅谷'
@@ -3486,34 +3504,34 @@
               <ul>
                 <li>
                   export 命令用于规定模块的对外接口
-                  <pre><code class="language-html line-numbers">  // 分别暴露 
+                  <pre><code class="language-html line-numbers">  // 分别暴露
   export const fs = '1';
   export function get() {
       console.log('暴露数据');
   }
   // html 页面 script type属性必须写上   type ="module"
     &lt;script type="module"&gt;
-       // html 页面引入 index.js 暴露的模块内容 
+       // html 页面引入 index.js 暴露的模块内容
         import * as index from "./js/index.js";
         console.log(index);
     &lt;/script&gt;
   &lt;/body&gt;
-  
-  // 统一暴露 
+
+  // 统一暴露
   const fs = '1';
   function get() {
       console.log('暴露数据');
   }
   export { fs, get };   // 统一暴露  用 export{ } 格式
-  
+
   // 默认暴露
   export default {
       aa: '1';
-      fn: function() { 
+      fn: function() {
             console.log('暴露数据');
           }
   }
-  // html页面调用方法，需要多加一个 default 
+  // html页面调用方法，需要多加一个 default
   &lt;script type="module"&gt;
       // html 页面引入 index.js 模块内容
       import * as index from "./js/index.js"
@@ -3524,16 +3542,16 @@
                   import 命令用于输入其它模块提供的功能
                   <pre><code class="language-js line-numbers">  // 通用 导入方式
   import * as index from "./js/index.js"
-  
+
   // 结构赋值形式，
-  export let a = 1; 
+  export let a = 1;
   export function get() {
       console.log(111);
   }
   import {a,get} from "./js/index.js"; // 结构赋值形式  ｛里面跟着要暴露的名称｝
   console.log(a);
   console.log(get);
-  
+
   //结构 统一暴露下的的结构赋值
   const a = 1;
   function get() {
@@ -3543,7 +3561,7 @@
   html 页面下调用方式
   import {a as bm , get} from "./js/index.js"; // 因为a 和其他冲突了，所以用 as 取一个别名
   console.log(bm , get);
-  
+
   // 默认暴露
   export default {
       a: 1,
@@ -3551,10 +3569,10 @@
           console.log(111);
       }
   }
-  html 页面下调用方式 
-  import {default as index} from "./js/index.js"; // 固定写法 ，必须要起一个别名 
+  html 页面下调用方式
+  import {default as index} from "./js/index.js"; // 固定写法 ，必须要起一个别名
   console.log(index);
-  
+
   // 简便形式，但只能针对默认暴露
   import index from "./js/index.js";</code></pre>
                 </li>
@@ -3572,7 +3590,7 @@
   console.log(index1);
   console.log(index2);
   console.log(index3);
-  
+
   // html 引入必须加一个  type="module"
   &lt;script&gt; src="./js/All.js" type="module"&gt;&lt;/script&gt;</code></pre>
                 </li>
@@ -3621,7 +3639,7 @@
               </ol>
               <pre><code class="language-js line-numbers">  const arr = [1, 2, 3, 4, 5, 6];
   console.log(arr.includes(0));     // false  indexOf 只会返回1 -1 ，这个则会判断有没有
-  
+
   console.log(2 ** 3);              // 次方 等同于 Math.pow() 求x的y 次幂的值
   console.log(Math.pow(2, 3));      // 求次方</code></pre>
             </li>
@@ -3663,7 +3681,7 @@
   const reg = /&lt;a href="(?&lt;url&gt;.*)"&gt;(?&lt;text&gt;.*)&lt;\/a&gt;/; // 第一个（?&lt;标识名&gt;.*）
   const result = reg.exec(str);
   console.log(result);                                  // 输出有 个  groups  属性
-  
+
   // 2. 正向断言
   let str = '122313213一二三四五6666不知道';
   const reg = /\d+(?=不)/;      // 匹配前面的数字
@@ -3734,11 +3752,11 @@
           <pre><code class="language-js line-numbers">  // 大整形，但是BigInt（'转换对象不能是浮点数'）
   let n = 123n;
   console.log(n, typeof n);
-  
+
   // 函数
   console.log(BigInt(n));
   // console.log(BigInt(1.2));    // 不能使用浮点数进行转换
-  
+
   // 作用是大数值运算
   let max = Number.MAX_SAFE_INTEGER;
   console.log(max);
@@ -3751,7 +3769,7 @@
   console.log(BigInt(max) + BigInt(2));</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part6">
+      <el-card id="part6" shadow="hover">
         <h2>SVG</h2>
         <div class="ls-cot">
           <p>js库</p>
@@ -3778,9 +3796,9 @@
             <li>
               代码
               <pre><code class="language-html line-numbers">  &lt;!-- 设置矢量图的宽高 填充颜色 切出大小 --&gt;
-  &lt;svg width="200px" height="200px" fill="white" viewBox="50 50 50 50"&gt; 
+  &lt;svg width="200px" height="200px" fill="white" viewBox="50 50 50 50"&gt;
       &lt;!-- 画圆标签 id 相对父元素的坐标X 坐标Y 半径 --&gt;
-      &lt;circle&gt; id="myCircle" cx="50" cy="50" r="50"&gt;&lt;/circle&gt; 
+      &lt;circle&gt; id="myCircle" cx="50" cy="50" r="50"&gt;&lt;/circle&gt;
   &lt;/svg&gt;   </code></pre>
             </li>
           </ul>
@@ -3790,11 +3808,11 @@
 
   &lt;!-- &lt;line&gt; 直线x1和y1代表线段起始点的横坐标和纵坐标，x2和y2代表结束点的坐标，style代表样式，颜色和宽度 --&gt;
   &lt;line&gt; x1="50" y1="50" x2="50" y2="600" style="stroke: white; stroke-width: 5px"&gt;&lt;/line&gt;
-  
+
   &lt;!-- &lt;polyline&gt; 折线 --&gt;
   &lt;style&gt;
-      svg {transition: all 2s;}  .line {stroke: white;stroke-width: 50px;fill: none;}  svg:hover {transform: rotate(90deg);} 
-  &lt;/style&gt; 
+      svg {transition: all 2s;}  .line {stroke: white;stroke-width: 50px;fill: none;}  svg:hover {transform: rotate(90deg);}
+  &lt;/style&gt;
   &lt;polyline points="50,100 50,300 350,300" class="line"&gt;&lt;/polyline&gt;
 
   &lt;!-- &lt;rect&gt;矩形，  x起始坐标   y起始坐标    width宽度    height高度  --&gt;
@@ -3806,18 +3824,18 @@
   &lt;!-- &lt;polygon&gt;  多边形，  points指定坐标，第一点x,y  第二个点x,y  第三个........ --&gt;
   &lt;polyline&gt; points="0,0 50,100 50,300 350,300" class="line"&gt;&lt;/polyline&gt;
 
-  &lt;!-- 
-      &lt;path&gt;    路径， 按顺序书写：d = " M移动到    L画直线到........    Z闭合路径"   
+  &lt;!--
+      &lt;path&gt;    路径， 按顺序书写：d = " M移动到    L画直线到........    Z闭合路径"
       M x    y      移动到（x，y）（小写表示相对于上个坐标的位移，下同
       L x    y      画一条直线到x，y）
       H x        水平画一条直线到x
       V y        竖直画一条直线到y
-      A rx   ry  x-axis-rotation large-arc    sweep  x   y   
+      A rx   ry  x-axis-rotation large-arc    sweep  x   y
         画一段到x，y的椭圆弧，椭圆弧的x，y轴半径分别为rx，ry.椭圆相对于x轴旋转x-axis-rotation度，
         large-arc=0表明弧线小于180，large-arc=1表示弧线大于180度，sweep=0表明弧线逆时针旋转，
         sweep=1表明现线顺时间旋转.具体解释看如何绘制椭圆弧
       Q cx   cy   x  y
-      T x    y 
+      T x    y
       C cx2  cy2  x  y
       S cx2  cy2  x  y
   --&gt;
@@ -3863,7 +3881,7 @@
       &lt;/circle&gt;
   &lt;/svg&gt;
 
-  &lt;!-- &lt;animateTransform&gt;   对于animate标签transform不起作用时采用的 
+  &lt;!-- &lt;animateTransform&gt;   对于animate标签transform不起作用时采用的
       上面代码中，&lt;animateTransform&gt;的效果为旋转（rotate），这from和to属性值有三个数字，第一个数字是角度值，第二个值和第三个值是旋转
       中心的坐标。from="0200200"表示开始时，角度为0，围绕（200，200）开始旋转；to="360400400"表示结束时，角度为360，围绕（400，400）旋转。
   --&gt;
@@ -3916,8 +3934,8 @@
         let circle = document.querySelector("#mycircle");
         svg.setAttribute("width", "300px");     // 通过setAttribute来修改属性
         svg.setAttribute("height", "300px");
-        circle.setAttribute("r", "100px"); 
-        svg.style.fill = "red";                 // 通过style来修改样式 
+        circle.setAttribute("r", "100px");
+        svg.style.fill = "red";                 // 通过style来修改样式
         let num = 10;
         let timer = setInterval(function () {   // 也可以做动画
             num += 10;
@@ -3940,22 +3958,30 @@
             </li>
             <li>
               可以使用封装好的库:
-              <el-link type="primary" icon="Link" target="_blank" href="https://echarts.apache.org/zh/index.html">https://echarts.apache.org/zh/index.html</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://echarts.apache.org/zh/index.html">
+                https://echarts.apache.org/zh/index.html
+              </el-link>
               <ol>
                 <li>
                   引入JS文件或者下载好js文件，进行引入
                   <ol>
                     <li>
                       Staticfile CDN（国内）:
-                      <el-link type="primary" icon="Link" target="_blank" href="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js">https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js">
+                        https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js
+                      </el-link>
                     </li>
                     <li>
                       jsDelivr：
-                      <el-link type="primary" icon="Link" target="_blank" href="https://cdn.jsdelivr.net/npm/echarts@4.3.0/dist/echarts.min.js">https://cdn.jsdelivr.net/npm/echarts@4.3.0/dist/echarts.min.js</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://cdn.jsdelivr.net/npm/echarts@4.3.0/dist/echarts.min.js">
+                        https://cdn.jsdelivr.net/npm/echarts@4.3.0/dist/echarts.min.js
+                      </el-link>
                     </li>
                     <li>
                       cdnjs:
-                      <el-link type="primary" icon="Link" target="_blank" href="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.min.js">https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.min.js</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.min.js">
+                        https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts.min.js
+                      </el-link>
                     </li>
                   </ol>
                 </li>
@@ -4015,20 +4041,20 @@
       &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
       &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
       &lt;title&gt;Document&lt;/title&gt;
-      &lt;!-- 第一步 --&gt; 
+      &lt;!-- 第一步 --&gt;
       &lt;script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
   &lt;body&gt;
       &lt;!-- 第二步 --&gt;
       &lt;div id="main" style="width: 600px;height:400px;"&gt;&lt;/div&gt;
       &lt;script type="text/javascript"&gt;
-          var myChart = echarts.init(document.getElementById('main'));  // 第三步1 
-          var option = ｛                                                // 第三步2 
+          var myChart = echarts.init(document.getElementById('main'));  // 第三步1
+          var option = ｛                                                // 第三步2
               xAxis: {type: 'category',boundaryGap: false, data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']},
               yAxis: { type: 'value'},
               series: [｛ data: [820, 932, 901, 934, 1290, 1330, 1320],type: 'line',areaStyle: {｝｝]
           };
-          myChart.setOption(option);                                    // 第三步3 
+          myChart.setOption(option);                                    // 第三步3
       &lt;/script&gt;
   &lt;/body&gt;
   &lt;/html&gt;</code></pre>
@@ -4039,15 +4065,18 @@
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="Javascript3Page">
 import { ref } from 'vue';
-let data = ref([
+
+const data = ref([
   { id: 1, h2: '网页效果' },
   { id: 2, h2: '其他拓展' },
   { id: 3, h2: '本地存储' },
   { id: 4, h2: '高级js' },
   { id: 5, h2: 'ES6' },
-  { id: 6, h2: 'SVG' },
+  { id: 6, h2: 'SVG' }
 ]);
 </script>
+
 <style scoped lang="scss"></style>

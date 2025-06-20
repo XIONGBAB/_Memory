@@ -1,16 +1,19 @@
 <template>
-  <card-container :title="`uni-app`" :data="data">
+  <card-container title="uni-app" :data="data">
     <template #svg>
-      <svg t="1737717671929" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3652" width="40" height="40">
-        <path d="M62 62m45 0l810 0q45 0 45 45l0 810q0 45-45 45l-810 0q-45 0-45-45l0-810q0-45 45-45Z" fill="#2B9939" p-id="3653"></path>
-        <path d="M212.00000029 212.00000029v599.99999942h599.99999942V212.00000029H662.00000029v450H361.99999971V212.00000029z" fill="#FFFFFF" p-id="3654"></path>
+      <svg
+        t="1737717671929" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="3652" width="40" height="40"
+      >
+        <path d="M62 62m45 0l810 0q45 0 45 45l0 810q0 45-45 45l-810 0q-45 0-45-45l0-810q0-45 45-45Z" fill="#2B9939" p-id="3653" />
+        <path d="M212.00000029 212.00000029v599.99999942h599.99999942V212.00000029H662.00000029v450H361.99999971V212.00000029z" fill="#FFFFFF" p-id="3654" />
       </svg>
     </template>
     <template #describe>
       <p>ni-app是一个基于Vue.js开发的跨平台移动应用开发框架，由DCloud（凌云科技）推出。uni-app允许开发者使用一套代码，同时在多个平台上构建原生级别的应用程序，包括微信小程序、H5、iOS、Android以及其他支持的平台</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>新建项目</h2>
         <div class="ls-cot">
           <p>步骤</p>
@@ -20,7 +23,7 @@
           </ol>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>初始配置</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -28,9 +31,9 @@
       └── components                # uni-app组件目录
       ├   └── comp-a                # 可复用的a组件
       ├── bybrid                    # 存放本地网页的目录（自建）
-      ├── olatforms                 # 存放各平台专用页面的目录  
+      ├── olatforms                 # 存放各平台专用页面的目录
       ├── pages                     # 业务页面文件存放的目录
-      ├   └── index   
+      ├   └── index
       ├       └── index.vue         # index页面
       ├   └── list
       ├       └── list.vue          # list页面
@@ -42,12 +45,12 @@
       ├── main                      # Vue初始化入口文件
       ├── App                       # 应用配置，用来配置App全局样式以及监听，应用生命周期
       ├── manifest                  # 配置应用名称，appid.logo，版本等打包信息
-      ├── pages                     # 配置页面路由，导航条，选项卡等页面信息 
+      ├── pages                     # 配置页面路由，导航条，选项卡等页面信息
 
       manifest：可以配置微信小程序的APP ID https://mp.weixin.qq.com/ 获取ID</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>生命周期</h2>
         <div class="ls-cot">
           <p>表格</p>
@@ -93,7 +96,7 @@
           </table>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>项目开发</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -127,12 +130,12 @@
             <li>
               使用npm 引入uView Ui插件库，终端安装
               <pre><code class="language-js line-numbers">  /* npm install uview-ui
-      npm update uview-ui */ 
+      npm update uview-ui */
 
-  // main.js 导入  
+  // main.js 导入
   import uView from "uview-ui";Vue.use(uView);
 
-  // uni.scss 
+  // uni.scss
   @import 'uview-ui/theme.scss';
 
   // App.vue
@@ -141,7 +144,7 @@
   &lt;/style&gt;
 
   // HB 工具下 插件安装scss/sass编译 按需引入 pages.json
-  "easycom": { 
+  "easycom": {
       "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
   }
 
@@ -162,13 +165,16 @@
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="UniApp">
 import { ref } from 'vue';
-let data = ref([
+
+const data = ref([
   { id: 1, h2: '新建项目' },
   { id: 2, h2: '初始配置' },
   { id: 3, h2: '生命周期' },
-  { id: 4, h2: '项目开发' },
+  { id: 4, h2: '项目开发' }
 ]);
 </script>
+
 <style scoped lang="scss"></style>

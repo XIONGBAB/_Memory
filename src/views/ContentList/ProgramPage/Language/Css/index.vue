@@ -1,18 +1,21 @@
 <template>
-  <card-container :title="`css`" :data="data">
+  <card-container title="css" :data="data">
     <template #svg>
-      <svg width="40" height="40" t="1699148624812" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9115"><path d="M512 512zM128.3 64.3l69.8 805.8 313.4 89.5L825.8 870l69.9-805.7H128.3z m580.9 669.3l-197.1 56.2-196.8-56.5L301.9 578h96.4l6.9 79.1 107.1 30.3 0.3 0.5h0.1l106.9-29.7L630.7 530H406.1l-8-99.9h241.1l8.8-101.9H280.2l-8-97.9H753l-43.8 503.3z" fill="#264DE4" p-id="9116"></path></svg>
+      <svg
+        width="40" height="40" t="1699148624812" class="icon" viewBox="0 0 1024 1024"
+        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9115"
+      ><path d="M512 512zM128.3 64.3l69.8 805.8 313.4 89.5L825.8 870l69.9-805.7H128.3z m580.9 669.3l-197.1 56.2-196.8-56.5L301.9 578h96.4l6.9 79.1 107.1 30.3 0.3 0.5h0.1l106.9-29.7L630.7 530H406.1l-8-99.9h241.1l8.8-101.9H280.2l-8-97.9H753l-43.8 503.3z" fill="#264DE4" p-id="9116" /></svg>
     </template>
     <template #describe>
       <p>CSS（Cascading Style Sheets，层叠样式表）是一种用于描述HTML或XML（包括XML的各种子集如SVG、MathML和XHTML）文档外观和样式的语言。CSS是一种标记语言，用于设置HTML结构的样式.通过CSS，可以控制网页的布局、字体、颜色、间距、边框、背景等视觉效果，使网页更加美观和用户友好。同时它将样式与HTML内容分离</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>基本样式</h2>
         <div class="ls-cot">
           <p>代码</p>
           <pre><code class="language-css line-numbers"> div{
-      opacity:1;                       /* 透明度,0-1之间取值 */ 
+      opacity:1;                       /* 透明度,0-1之间取值 */
       filter: alpha(opacity=50);       /* 兼容IE的透明度 */
 
     字体:
@@ -20,18 +23,18 @@
       font-weight: normal;             /* normal(默认) 、bold(加粗)、lighter(细)/ 还可以写数字,但不要加单位 px */
       font-size: 10px;                 /* 像素(px)、em(倍数)、百分比(%) */
       font-family:serif;               /* serif衬线字体  sans-serif非衬线字体 monospace 等宽字体 */
-      @font-face{                      /* 自定义 */ 
+      @font-face{                      /* 自定义 */
          font-family:'zidingyi';       /* 指定字体的名字 */
          src:url('./font/xxxx.ttf');   /* 写路径 */
       }
-      font: font-style font-weight font-size/line-height font-family;  
-      /* 复合写法,不能更换顺序,属性空格隔开,不写可省略取默认值,但必须写 size和family属性 */ 
+      font: font-style font-weight font-size/line-height font-family;
+      /* 复合写法,不能更换顺序,属性空格隔开,不写可省略取默认值,但必须写 size和family属性 */
 
-    文本: 
+    文本:
       color: red;                      /* 字体颜色:可以写英文、16进制、RGB */
       text-align: center;              /* 只能水平对齐方式,必须在块元素中, Left|center|right */
       text-align-last: justify;        /* 多行时最后一行被调整为两端对齐,也就是居中了,单行的话,会两端对齐,相当于平铺 */
-      word-break: break-all;           /* 适应英文或数字换行用 */    
+      word-break: break-all;           /* 适应英文或数字换行用 */
       text-decoration: none;           /* 取值范围: none(无)、underline(下划线)、overline(上划线)、x(删除线) */
       text-indent: 10em;               /* 首行缩进,数值 1em=1个文字大小 */
       list-style: none;                /* 去除无序列表前面的小圆点 */
@@ -39,18 +42,18 @@
                                           outline-color,outline-style,outline-width */
       letter-spacing:10px;             /* 字符间距 数值(px) */
       word-spacing:10px;               /* 单词间距 数值(px)  */
-      direction:left;                  /* 文本方向 */  
+      direction:left;                  /* 文本方向 */
       text-transform:capitalize;       /* 控制元素中的每个首字母大写,none无变化 uppercase转大写 lowercase转小写 */
-      white-space:nowrap;              /* 取消文本换行,设置元素中空白的处理方式 */ 
+      white-space:nowrap;              /* 取消文本换行,设置元素中空白的处理方式 */
       user-select: none;               /* 文本不能选中 CSS3 */
       resize: none;                    /* 用于文本域textarea   防止拖拽文本域 */
       line-height: 10px;               /* 行间距 上间距+文字高度+下间距(上下间距一样大)=总行高 */
                                        /* 注意,css3 的盒子模型是把边框算进去的,所以行高不等于盒子高,要减去盒子边框 */
-      line-height: 2;                  /* 可以写倍数,字体行高的两倍,可以写整数,也可以写小数5.3333 */ 
+      line-height: 2;                  /* 可以写倍数,字体行高的两倍,可以写整数,也可以写小数5.3333 */
       -webkit-font-smoothing: antialiased; /* CSS3 抗锯齿形 让文字显示的更加清晰 */
 
     背景:
-      background-color: transparent;               /* 背景颜色 transparent(透明)/other(其他颜色) */ 
+      background-color: transparent;               /* 背景颜色 transparent(透明)/other(其他颜色) */
       background-size: 500px 500px;                /* 大小 移动端内容 50%(盒子的一半) cover(铺满) contain(宽或高铺满) */
       background-image: url(images/img.png);       /* 背景图片 */
       background-repeat:no-repeat;                 /* 平铺方式 repeat(平铺)/(不平铺) /repeat-x | -y/;(x和Y轴平铺) */
@@ -62,40 +65,40 @@
       background:hsl(hue, saturation, lightness)   /*  HSL值:H色相(0-360)  S饱和度(0%-100%)  L亮度(0%-100%) */
       background:hsla(hue, saturation, lightness, alpha)  /*  HSL值:H色相  S饱和度  L亮度  A透明度 */
       background:;                                 /* 背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置   复合写法 */
-    
+
     居中定位:
-      position: absolute ;                         /* 九宫格单词定位方式                                */  
-      left: 0;                                     /* left top        center top         right top    */ 
+      position: absolute ;                         /* 九宫格单词定位方式                                */
+      left: 0;                                     /* left top        center top         right top    */
       top: 0;                                      /* left center     center center      right center */
       bottom: 0;                                   /* left bottom     center bottom      right bottom */
       right: 0;
       margin: auto;
-    
+
     列表:
       list-style-image:url(./li01.jpg);            /* 列表图片 */
       list-style-position:Inside;                  /* 列表符号的位置,只对li用,Inside(内)、outside(外) */
       list-style: none url(./li01.jpg) inside;     /* 把三个属性的值都写到一个属性中 */
-    
-      /* 如果三个属性都没有,那就单个单个写,如果其中有一个没有,可以不写,如:none url 
+
+      /* 如果三个属性都没有,那就单个单个写,如果其中有一个没有,可以不写,如:none url
          常用属性none 去掉小圆点, disc  circle  square  decimal .... 其他样式可以查文档 */
-    
+
     表格:
       border-collapse:collapse;                    /* 边框是否折叠 */
       border: 1px solid black;                     /* 设置边框 */
       text-align:right;                            /* 文字对齐 */
       vertical-align: baseline | top | middle | bottom;   /* 对齐方式 */
       pointer-events:none;                         /* 禁止长按图片保存 */
-    
+
     图片:
       vertical-align: top;                         /* 图片与文字垂直对齐方式 */
-      filter: gray;                                /* 使用滤镜让图片全部变黑白照 */ 
+      filter: gray;                                /* 使用滤镜让图片全部变黑白照 */
       a:link img{filter: gray;}                    /* 可以做的小效果,默认的是灰白照 ,当鼠标放上的时候 是彩色 */
-      a:hover img{filter: "";}   
-    
+      a:hover img{filter: "";}
+
     鼠标:
       cursor: url(images/activity01-image.jpg);    /* 用值 或者 也可以使用url */
       cursor:pointer;                              /* default默认 auto默认 pointer手 ,move移动 可查文档*/
-    
+
     边框:
       border-width: 1px;                           /* 边框粗细 */
       border-style: solid;                         /* 边框样式 solid(实线) dashed(虚线) dotted(点线) double(双线) */
@@ -103,16 +106,16 @@
       border: 1px solid red;                       /* 复合写法,没有顺序要求 */
       border-collapse: collapse;                   /* 控制相邻单元格的边框  collapse合并 */
       border-radius: 10px;                         /* 设置圆角 (盒子高 + 上下边框) / 2 */
-      outline: none;                               /* 一般用于表单的蓝色边框线 */ 
-      border-left-width: 1px;                      /* 左边框粗细,上下左右用-拼接 */   
+      outline: none;                               /* 一般用于表单的蓝色边框线 */
+      border-left-width: 1px;                      /* 左边框粗细,上下左右用-拼接 */
 
-    轮廓:  
+    轮廓:
       outline: none;                               /* input表单光标点后轮廓去除,可以设置的属性是(按顺序) 相关值参考菜鸟编程
-                                                      不影响页面布局  outline-color,outline-style,outline-width     */   
+                                                      不影响页面布局  outline-color,outline-style,outline-width     */
   }</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>技巧</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -130,7 +133,7 @@
       revert                    /* 未列入规范,所有不要使用  */
       cover                     /* 跟父容器一样大 进行宽高铺满,虽然是等比例放大,但是会裁剪掉超出部分 */
       contain                   /* 是会以宽度进行放大 */
-      center/cover  
+      center/cover
       background: url(images2/background.png) no-repeat center/cover;  /* 从中间等比例放大 */
 
   C
@@ -141,10 +144,10 @@
   D
       /* ~ 与 + 的使用  */
       /* 1）需要更改的兄弟元素是当前元素的相邻元素,也就是说紧挨着当前元素。那么写法如下:
-            注意hover后面一般都是控制子元素,hover更改同级(兄弟)元素属性:更改兄弟元素又分两种情况: */ 
+            注意hover后面一般都是控制子元素,hover更改同级(兄弟)元素属性:更改兄弟元素又分两种情况: */
             .item-1:hover+.item-2 {background-color: #50ff00;}
       /* 2）需要改变的兄弟元素不是当前元素的邻接元素,就是不紧挨着
-            这种情况就需要改一下写法,用上面的 “+” 就行不通了,得用 “~”。写法如下: */   
+            这种情况就需要改一下写法,用上面的 “+” 就行不通了,得用 “~”。写法如下: */
             .item-1:hover~.item-3>.item-3-child {background-color: #50ff00;}
 
   E
@@ -160,20 +163,20 @@
 
       &lt;style&gt; &lt;/style&gt;                                              /* 不写代表所有设备 */
       &lt;style&gt; media="screen , print"&gt;&lt;/style&gt;                       /* 多个用,分割 */
-      &lt;style&gt; media="screen and (orientation: landscape)"&gt;&lt;/style&gt;  /* 横屏下变换的样式 */  
-  
+      &lt;style&gt; media="screen and (orientation: landscape)"&gt;&lt;/style&gt;  /* 横屏下变换的样式 */
+
   E
-      .div{                                    /* 英文字体的大小写可以用css控制 */  
+      .div{                                    /* 英文字体的大小写可以用css控制 */
         font-variant: small-caps;              /* 小型大写 all-small-caps 所有字母小型大写 */
         font-variant: normal;                  /* 默认值 */
         font-variant: inherit;                 /* 继承 */
         text-transform:none | capitalize | uppercase | lowercase | inherit;
                                                /* 默认 | 大写字母开头 | 仅有大写 | 仅小写 | 继承*/
       }
-  
+
   F
       .div{ white-space: pre;}                 /* 文字的空白处理,详细看菜鸟文档 */
-      .div{ writing-mode: vertical-lr};        /* 从左到右 竖向排  排版模式 */  
+      .div{ writing-mode: vertical-lr};        /* 从左到右 竖向排  排版模式 */
 
   G
       /* 定义变量css定义变量可分多种情况: */
@@ -183,7 +186,7 @@
           :root {--borderColor: #ccc;}
       }
       /* 使用:*/
-      .has-border-table>tr>td {border-right: 1px solid var(--borderColor);}             
+      .has-border-table>tr>td {border-right: 1px solid var(--borderColor);}
 
   H
       html {font-size: (320px / @num);}        /* less 在做除法运算时,需要用()包裹,@num是less定义变量的写法 @num: 10;*/
@@ -201,7 +204,7 @@
       /* margin负值运用
       每个盒子都有一个1px边框,当两个边框浮动重叠的时候就会出现2px边框,合理运用margin-left:-1px;
       让后面一个盒子向左移动1px的距离,重叠后就会覆盖前一个的1px
-    
+
       1.让每个盒子margin往左侧移动-1px正好压住相邻盒子边框
       2.鼠标经过某个盒子的时候,提高当前盒子的层级即可(如果没有有定位,则加相对定位(保留位置),如果有定位,则加z-index) */
       3.巧妙运用浮动元素不会压住文字的特性,可以让文字围绕
@@ -209,7 +212,7 @@
   K
       img{ pointer-events:none;}              /* 禁止长按出现保存图片 ,但是也会阻止点击链接 */
 
-  L 
+  L
       /* -moz-:代表firefox 浏览器私有属性 */
       /* -ms-:代表ie浏览器私有属性 */
       /* -webkit-:代表safari、chrome私有属性 */
@@ -219,7 +222,7 @@
       -webkit-border-radius:10px;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>Unicode编码字体</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -236,7 +239,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>浏览器中可以看到部分</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -248,22 +251,22 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part5">
+      <el-card id="part5" shadow="hover">
         <h2>CSS引入方式</h2>
         <div class="ls-cot">
           <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;link rel="stylesheet" href="style.css"&gt;    &lt;!-- head标签里引入css文件 --&gt;  
+          <pre><code class="language-html line-numbers">  &lt;link rel="stylesheet" href="style.css"&gt;    &lt;!-- head标签里引入css文件 --&gt;
   @import url("other.css");                   &lt;!-- @import:可以在一个css文件中再次引入一个css文件 --&gt;
   &lt;div style="color: bisque">&lt;/div&gt;           &lt;!-- 行内样式, 把CSS样式当成HTML的一个属性来写 --&gt;
   &lt;style&gt; &lt;/style&gt;                            &lt;!-- style标签内写入样式,style可以插入到任意位置,规范是写在head标签里  --&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part6">
+      <el-card id="part6" shadow="hover">
         <h2>选择器</h2>
         <div class="ls-cot">
           <p>代码</p>
-          <pre><code class="language-css line-numbers">  .div{color: red!important;}   /* 无穷大 不推荐使用 */   
-  style=""                      /* 行内样式 权重   1000 */  
+          <pre><code class="language-css line-numbers">  .div{color: red!important;}   /* 无穷大 不推荐使用 */
+  style=""                      /* 行内样式 权重   1000 */
   #id{}                         /* ID选择器 权重   100 */
   .div{}                        /* 类选择器 权重    10 */
   p{}                           /* 标签选择器 权重   1 */
@@ -327,8 +330,8 @@
   :required                     /* 用于匹配设置了 "required" 属性的元素 */
   :valid                        /* 用于匹配输入值为合法的元素 */
   :invalid                      /* 用于匹配输入值为非法的元素 */
-  :root                         /* 选择文档的根元素 */ 
-  :target                       /* 对到达的目标伪类选择器 */ 
+  :root                         /* 选择文档的根元素 */
+  :target                       /* 对到达的目标伪类选择器 */
   :empty{display: none}         /* 空元素选择器 相对于使用的少,一般在没有内容的元素上 让其影藏 */
   :nth-child(-n+3) :not(:nth-child(2)){} /* 可以接着用,然后排除不要的元素,可以连着写多个 */
   p::first-letter{}             /* 对文本操作,每个段落第一个字的控制 */
@@ -338,23 +341,23 @@
   /* nth-child 与 nth-of-type的区别: nth-child 是在父亲元素下进行遍历
     例子:这样的情况下都不会选择,因为nth-child 会从第一个标签开始计算,显然,div:nth-child(1)是选择不到的,条件不满足
     &lt;style&gt;
-        section div:nth-of-type(1) { color: yellow;}     这种情况下才会指定元素的盒子排序 
+        section div:nth-of-type(1) { color: yellow;}     这种情况下才会指定元素的盒子排序
         section div:nth-child(1) { color: red;}          这种情况不会选择到div元素的第一个,指定了div也不会
     &lt;/style&gt;
     &lt;section&gt;
         &lt;p&gt;不同标签&lt;/p&gt;
-        &lt;div&gt;同标签1&lt;/div&gt;                     
+        &lt;div&gt;同标签1&lt;/div&gt;
         &lt;div&gt;同标签2&lt;/div&gt;
     &lt;section&gt;
   */</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part7">
+      <el-card id="part7" shadow="hover">
         <h2>文字代替</h2>
         <div class="ls-cot">
           <p>代码</p>
           <pre><code class="language-html line-numbers">  &lt;!-- 当图片加载不了时可以用文字代替 --&gt;
-  &lt;head&gt; 
+  &lt;head&gt;
   &lt;style&gt;
       a {
         display: inline-block;text-decoration: none;color: #424242;width: 190px;
@@ -380,7 +383,7 @@
   &lt;/body&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part8">
+      <el-card id="part8" shadow="hover">
         <h2>行元素、块元素、转换</h2>
         <div class="ls-cot">
           <p>常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;等,其中&lt;div&gt;标签是最典型的块元素。</p>
@@ -434,7 +437,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part9">
+      <el-card id="part9" shadow="hover">
         <h2>层级</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -476,13 +479,12 @@
 0,0,1,0           类选择器,伪类选择器
 0,1,0,0           ID选择器
 1,0,0,0           行内样式 style=""
-!important        重要的 无穷大</pre
-              >
+!important        重要的 无穷大</pre>
             </li>
           </ol>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part10">
+      <el-card id="part10" shadow="hover">
         <h2>盒子模型</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -498,7 +500,7 @@
   padding-right: ;             /* 右 */   /* 5px 6px;          代表上下5px   左右5px */
   padding-bottom: ;            /* 下 */   /* 5px 6px 7px;      代表上5px     左右6px    下7px */
   padding-left:;               /* 左 */   /* 1px 2px 3px 4px;  代表上1px     右2px      下3px   左4px */
-      
+
   /* 当我们给盒子指定padding值之后:
       1、内容和边框有了距离,添加了内边距。
       2、padding会影响了盒子实际大小。
@@ -510,7 +512,7 @@
   margin-right: ;              /* 右 */
   margin-bottom: ;             /* 下 */
   margin-left:;                /* 左 */
-  /* 如果要块级元素居中,必须要给块级设置宽度,然后 margin: 0 auto ;   垂直居中 
+  /* 如果要块级元素居中,必须要给块级设置宽度,然后 margin: 0 auto ;   垂直居中
      注意:以上方法是让块级元素水平居中,行内元素或者行内块元素水平居中给其父元素添加 text-align: center;即可。 */
 
   /* Margin 塌陷解决方案(BFC,是CSS中一个隐含的属性,也称块级格式化)  可开启BFC:
@@ -522,13 +524,13 @@
   padding: 0;                  /* 清除内边距 */
   margin: 0;                   /* 清除外边距 */
 
-  /* 注意:行内元素为了照顾兼容性,尽量只设置左右内外边距,不要设置上下内外边距。但是转换为块级和行内块元素就可以了 
+  /* 注意:行内元素为了照顾兼容性,尽量只设置左右内外边距,不要设置上下内外边距。但是转换为块级和行内块元素就可以了
      为了满足等式,只有width  margin-left  margin-right  可以设置 auto
   公式(必须满足其元素内容区的宽度):
   margin-left+border-left+padding-left+width+padding-right+border-right+margin-right = 其元素内容区的宽度 */</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part11">
+      <el-card id="part11" shadow="hover">
         <h2>清除浮动</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -543,8 +545,8 @@
     .clearfix::before, .clearfix::after {content: "";display: table;}.clearfix::after {clear: both;}
     .clearfix {*zoom: 1;}       /* *zoom是兼容低版本浏览器 */
 
-  /* 总结 
-    1、额外标签法也称为隔墙法,是W3C推荐的做法。(用伪元素来做),必须用在块元素身上,行内元素不起作用   
+  /* 总结
+    1、额外标签法也称为隔墙法,是W3C推荐的做法。(用伪元素来做),必须用在块元素身上,行内元素不起作用
     2.父级添加overflow属性  hidden(推荐)、auto或scroll
     3.父级添加after伪元素
     4.父级添加双伪元素 */
@@ -558,11 +560,11 @@
       先用标准流的父元素排列上下位置,之后内部子元素采取浮动排列左右位置
     4.一个元素浮动了,理论上其余的兄弟元素也要浮动。
       一个盒子里面有多个子盒子,如果其中一个盒子浮动了,那么其他兄弟也应该浮动,以防止引起问题。
-      浮动的盒子只会影响浮动盒子后面的标准流,不会影响前面的标准流  
+      浮动的盒子只会影响浮动盒子后面的标准流,不会影响前面的标准流
     5.双伪元素记得是display: table  table是表格的意思,一行显示,如果值是block,是上下显示,不要混淆了 */</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part12">
+      <el-card id="part12" shadow="hover">
         <h2>定位</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -572,20 +574,20 @@
   position: absolute;          /* 绝对定位,子绝父相,就近原则,父元素有相对定位,位置就取决于父亲,没有就到顶级html */
   position: fixed;             /* 元素的位置对于浏览器窗口是固定的,及时窗口滚动,元素也不会动 */
   position: sticky;            /* 粘性定位 可以做页面滚动效果 top值 IE/Edge 15 及更早 IE 版本不支持  */
-  position: -webkit-sticky;    /* 相当于 fixed 和 relative 的结合 参数依然是 上下左右设置 
+  position: -webkit-sticky;    /* 相当于 fixed 和 relative 的结合 参数依然是 上下左右设置
 
-  static                       不脱标         不能偏移             
-  relative                     不脱标、占位    相对一自身偏移         
-  absolute                     脱标、不占位    相对于带定位的父级      
-  fixed                        脱标、不占位    浏览器可视区           
-  sticky                       不脱标、占位    浏览器可视区   有兼容性问题,用js实现即可 */      
+  static                       不脱标         不能偏移
+  relative                     不脱标、占位    相对一自身偏移
+  absolute                     脱标、不占位    相对于带定位的父级
+  fixed                        脱标、不占位    浏览器可视区
+  sticky                       不脱标、占位    浏览器可视区   有兼容性问题,用js实现即可 */
 
   /* 边偏移: top:1px;   bottom:2px;   left:3px;    right:4px; */
 
   /* 注意:
-      1. 绝对定位是元素在移动位置的时候,是相对于它祖先元素来说的(拼爹型)。子绝父相 
+      1. 绝对定位是元素在移动位置的时候,是相对于它祖先元素来说的(拼爹型)。子绝父相
       2. 固定定位
-         * 以浏览器的可视窗口为参照点移动元素。它以屏幕为准 
+         * 以浏览器的可视窗口为参照点移动元素。它以屏幕为准
          * 跟父元素没有任何关系
          * 不随滚动条滚动。
          * 固定定位不在占有原先的位置 */
@@ -601,12 +603,12 @@
 
   /* 在移动端,让固定定位的盒子居中对齐用以下代码 */
     .div {position: fixed;top: 0;}            /* 默认的话就是在中间 */
-  /* 保险做法: 先走屏幕的一半,然后自身移动一半   先写兼容老版本的 */ 
+  /* 保险做法: 先走屏幕的一半,然后自身移动一半   先写兼容老版本的 */
     .div {position: fixed;top: 0;left: 50%;   /* 先走屏幕的一半 */
          -webkit-transform: translateX(-50%); /* 先写兼容老版本的 */
          transform: translateX(-50%);         /* 然后再移动自身的负50% */
     }
-  /* 让绝对定位的盒子居中 
+  /* 让绝对定位的盒子居中
     position: absolute;
     left: 50%;
     top: 50%;
@@ -643,18 +645,18 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part13">
+      <el-card id="part13" shadow="hover">
         <h2>元素的显示与隐藏</h2>
         <div class="ls-cot">
           <p>代码</p>
           <pre><code class="language-css line-numbers">  display: none | block;                        /* 影藏元素后,不再占有原来的位置 */
   visibility: visible | hidden;                 /* 影藏元素后,继续占有原来的位置 */
   overflow: hidden | visible | scroll | auto ;  /* 参数:影藏 | 溢出不剪切也不添加滚动条 | 不管超不超出都显示滚动条 | 自动 */
-  
+
   /* 切记不要在body上加overflow:hidden;这样加上,如果内容超出屏幕会直接裁切掉,导致不出现滑动条 */</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part14">
+      <el-card id="part14" shadow="hover">
         <h2>精灵图</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -684,7 +686,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part15">
+      <el-card id="part15" shadow="hover">
         <h2>制作favicon图标</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -700,7 +702,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part16">
+      <el-card id="part16" shadow="hover">
         <h2>字体图标</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -710,15 +712,23 @@
               <ol>
                 <li>
                   icomoon宇库：
-                  <el-link type="primary" icon="Link" target="_blank" href="http://icomoon.io">http://icomoon.io</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="http://icomoon.io">
+                    http://icomoon.io
+                  </el-link>
                   国外服务器,打开慢
                 </li>
                 <li>
                   阿里iconFont字库：
-                  <el-link type="primary" icon="Link" target="_blank" href="http://www.iconfontcn/">http://www.iconfontcn/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="http://www.iconfontcn/">
+                    http://www.iconfontcn/
+                  </el-link>
                   国内免费可制作上传
                 </li>
-                <li><el-link type="primary" icon="Link" target="_blank" href="fontawesome.com">fontawesome.com</el-link></li>
+                <li>
+                  <el-link type="primary" icon="Link" target="_blank" href="fontawesome.com">
+                    fontawesome.com
+                  </el-link>
+                </li>
               </ol>
             </li>
             <li>
@@ -733,7 +743,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part17">
+      <el-card id="part17" shadow="hover">
         <h2>文字溢出三个点</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -741,7 +751,7 @@
   white-space: nowrap;             /* 1.强制一行内显示文本,默认是normal自动 */
   overflow: hidden;                /* 2.溢出的部分影藏 */
   text-overflow: ellipsis;         /* 3.文字用省略号代替超出的部分 */
-  
+
   /* 多行文本溢出 */
   display: -webkit-box;            /* 弹性伸缩盒子模型显示 */
   overflow: hidden;                /* 溢出的部分影藏 */
@@ -750,7 +760,7 @@
   -webkit-line-clamp: 2;           /* 限制在一个块元素显示的文本的行数 */</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part18">
+      <el-card id="part18" shadow="hover">
         <h2>解决图片底部空白缝隙</h2>
         <div class="ls-cot">
           <p>bug：图片底侧会有一个空白缝隙,原因是行内块元素会和文字的基线对齐。</p>
@@ -760,7 +770,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part19">
+      <el-card id="part19" shadow="hover">
         <h2>滚动条</h2>
         <div class="ls-cot">
           <p>给固定定位的盒子添加滚动条,需要添加一个最大高度和一个Y轴滚动条</p>
@@ -780,7 +790,7 @@
   &::-webkit-scrollbar-thumb {
       background: linear-gradient(rgb(17, 157, 212), rgb(17, 212, 105)); border-radius: 5px;
       transition: 1s;}
-  
+
   &::-webkit-scrollbar-thumb:hover {
       background: linear-gradient(rgb(17, 212, 105), rgb(17, 157, 212));}</code></pre>
           <p>样式2</p>
@@ -812,13 +822,13 @@
       div::-webkit-scrollbar-track {background: #fff;}</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part20">
+      <el-card id="part20" shadow="hover">
         <h2>label 冲突</h2>
         <div class="ls-cot">
           <p>label 中用了A标签不起作用解决办法</p>
           <pre><code class="language-html line-numbers">  &lt;!-- 给A标签添加这个样式 ,取消A的行为,否则使用  el:checked ~ .navSecondLabel 点击后不生效 --&gt;
   &lt;style&gt;.navSubMenuATag { pointer-events: none}&lt;/style&gt;
-  
+
   &lt;li class="secondSubMenuLiTag"&gt;
       &lt;input type="checkbox" name="" id="navSecond1" /&gt;
       &lt;label class="navSecondLabel" for="navSecond1"&gt;
@@ -830,7 +840,7 @@
   &lt;/li&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part21">
+      <el-card id="part21" shadow="hover">
         <h2>prism主题样式</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -852,7 +862,7 @@
   &lt;/script&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part22">
+      <el-card id="part22" shadow="hover">
         <h2>规范</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -919,7 +929,7 @@
           </ol>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part23">
+      <el-card id="part23" shadow="hover">
         <h2>seo优化网站TDK标签</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -988,7 +998,9 @@
                   <ol>
                     <li>在网站搜索不出来。百度提示:很抱歉,没有找到与" url " 相关的网页时,可以点击提交网站给我们</li>
                     <li>
-                      <el-link type="primary" icon="Link" target="_blank" href="https://ziyuan.baidu.com/linksubmit/index">https://ziyuan.baidu.com/linksubmit/index</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://ziyuan.baidu.com/linksubmit/index">
+                        https://ziyuan.baidu.com/linksubmit/index
+                      </el-link>
                       ,点网页,数据提交
                     </li>
                     <li>站长工具</li>
@@ -1114,10 +1126,11 @@
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="CssPage">
 import { ref } from 'vue';
 
-let data = ref([
+const data = ref([
   { id: 1, h2: '基本样式' },
   { id: 2, h2: '技巧' },
   { id: 3, h2: 'Unicode编码字体' },
@@ -1140,7 +1153,7 @@ let data = ref([
   { id: 20, h2: 'label 冲突' },
   { id: 21, h2: 'prism主题样式' },
   { id: 22, h2: '规范' },
-  { id: 23, h2: 'seo优化网站TDK标签' },
+  { id: 23, h2: 'seo优化网站TDK标签' }
 ]);
 </script>
 

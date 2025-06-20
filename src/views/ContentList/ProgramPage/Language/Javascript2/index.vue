@@ -1,16 +1,19 @@
 <template>
-  <card-container :title="`javascript`" :data="data">
+  <card-container title="javascript" :data="data">
     <template #svg>
-      <svg width="40" height="40" t="1699148574627" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8149">
-        <path d="M64 64h896v896H64z" fill="#F5DE19" p-id="8150"></path>
-        <path d="M665.888 764a91.712 91.712 0 0 0 83.2 51.2c34.88 0 57.184-17.44 57.184-41.6 0-28.8-22.912-39.104-61.312-55.904l-21.056-9.024c-60.8-25.888-101.12-58.304-101.12-126.848 0-63.136 48-111.232 123.296-111.232a124.448 124.448 0 0 1 119.744 67.424L800 580.096A57.248 57.248 0 0 0 745.952 544a36.64 36.64 0 0 0-40.288 36.096c0 25.248 15.648 35.488 51.776 51.2l21.056 9.024c71.552 30.688 112 61.952 112 132.256 0 75.808-59.552 117.344-139.52 117.344a161.76 161.76 0 0 1-153.44-86.112z m-297.44 7.296c13.216 23.456 25.248 43.296 54.176 43.296 27.648 0 45.12-10.816 45.12-52.896v-286.304h84.192v287.424c0 87.168-51.2 126.848-125.728 126.848a130.72 130.72 0 0 1-126.304-76.8z" fill="" p-id="8151"></path>
+      <svg
+        width="40" height="40" t="1699148574627" class="icon" viewBox="0 0 1024 1024"
+        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8149"
+      >
+        <path d="M64 64h896v896H64z" fill="#F5DE19" p-id="8150" />
+        <path d="M665.888 764a91.712 91.712 0 0 0 83.2 51.2c34.88 0 57.184-17.44 57.184-41.6 0-28.8-22.912-39.104-61.312-55.904l-21.056-9.024c-60.8-25.888-101.12-58.304-101.12-126.848 0-63.136 48-111.232 123.296-111.232a124.448 124.448 0 0 1 119.744 67.424L800 580.096A57.248 57.248 0 0 0 745.952 544a36.64 36.64 0 0 0-40.288 36.096c0 25.248 15.648 35.488 51.776 51.2l21.056 9.024c71.552 30.688 112 61.952 112 132.256 0 75.808-59.552 117.344-139.52 117.344a161.76 161.76 0 0 1-153.44-86.112z m-297.44 7.296c13.216 23.456 25.248 43.296 54.176 43.296 27.648 0 45.12-10.816 45.12-52.896v-286.304h84.192v287.424c0 87.168-51.2 126.848-125.728 126.848a130.72 130.72 0 0 1-126.304-76.8z" fill="" p-id="8151" />
       </svg>
     </template>
     <template #describe>
       <p>JavaScript最初是由Netscape的工程师布兰登·艾奇（Brendan Eich）在1995年设计的，最初命名为LiveScript，但为了利用当时流行的Java语言的市场效应，它被改名为JavaScript。</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>数组</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -35,7 +38,7 @@
               <pre><code class="language-js line-numbers">  var 数组名 = new Array();
   var arr = new Array(10,20,30,40); //创建一个新的数组，并传入参数 zzz
 
-  // 这种方式暂且了解，等学完对象再看。  注意Array(), A要大写 
+  // 这种方式暂且了解，等学完对象再看。  注意Array(), A要大写
   // 我们数组里面的数据一定用逗号分隔
   // 数组里面的数据比如1，2，我们称为数组元素
   // 数组中还能放数组，用的比较少，称为二维数组
@@ -84,13 +87,13 @@
     console.log(arr[i]);
   }
   console.log(arr.length);
-  
+
   // 案例：求数组中的和，以及平均值
   var arr = [2, 6, 1, 7, 4]
   var num = 0;
   var average = 0;
   for (var i = 0; i &lt; arr.length; i++) {
-      num += arr[i]           // 我们加的是数组中的元素，而不是计数器 ‘i’ 
+      num += arr[i]           // 我们加的是数组中的元素，而不是计数器 ‘i’
   }
   average = num / arr.length;
   console.log(num,average);   // 想要输出多个变量，用逗号隔开  20 5
@@ -304,22 +307,22 @@
                                     // a : 元素 b : 索引号 c : 索引号和元素
   });</code></pre>
           <p>数组方法</p>
-          <pre><code class="language-js line-numbers">  arr.concat();                      // 连接两个或更多的数组，并这回结果。不破坏原素组，会返回一个新数组 
+          <pre><code class="language-js line-numbers">  arr.concat();                      // 连接两个或更多的数组，并这回结果。不破坏原素组，会返回一个新数组
   arr.join();                        // 把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔 .join(".")
   arr.pop();                         // 删除并返回裁组的最后一个元素,并返回删的是谁就返回是谁
-  arr.shift();                       // 删除数组第一个元素，并返回数组的第一个元素 
+  arr.shift();                       // 删除数组第一个元素，并返回数组的第一个元素
   arr.unshift();                     // 向数组的开头添加一个或多个元素，并返回新的长度
-  arr.push();                        // 向数组的末尾添加一个或更多元素，并返回新的长度 
-  arr.reverse();                     // 颠倒数组中元素的顺序 
+  arr.push();                        // 向数组的末尾添加一个或更多元素，并返回新的长度
+  arr.reverse();                     // 颠倒数组中元素的顺序
   arr.slice();                       // 切片，不传参数等于浅拷贝。截取（0，2） （包括该参数，截取不包括该参数）从某个已有的数组返回选定的元素，不会破坏原数组，
-  arr.sort();                        // 对数组的元素进行排序 
+  arr.sort();                        // 对数组的元素进行排序
   arr.splice();                      // 返回值为被删除的元素。删除、添加、插入、替换 功能。splice(1,2，"3"，"3") 传参:删除的起始位置，删除的数量，3是要插入的值
                                      // splice(1,0,"3") 从数组索引为1的位置，不删除，插入一个3
-  arr.toSource();                    // 返回改对象的源代码 
-  arr.toString();                    // 把数组转换为字符串，并返回结果 
-  arr.toLocaleString();              // 把数组转换为本地数组，并返回结果 
-  arr.unshift();                     // 向数组的开头添加一个或更多元素，并返回新的长度 
-  arr.values();                      // 返回数组对象的原始值 
+  arr.toSource();                    // 返回改对象的源代码
+  arr.toString();                    // 把数组转换为字符串，并返回结果
+  arr.toLocaleString();              // 把数组转换为本地数组，并返回结果
+  arr.unshift();                     // 向数组的开头添加一个或更多元素，并返回新的长度
+  arr.values();                      // 返回数组对象的原始值
   arr.at();                          // 返回指定索引处的元素，可以接收负索引作为参数 === arr[arr.length -1] 。不破坏原素组，会返回一个新数组
   arr.indexOf("元素"，起始位置);      // 从前往后查 获取元素在数组中第一次出现的位置 ，未找到返回 -1
   arr.lastIndexOf("元素"，起始位置);  // 从后往前查 获取元素在数组中第一次出现的位置 ，未找到返回 -1
@@ -327,7 +330,7 @@
           <p>案例</p>
           <pre><code class="language-js line-numbers">  // 案例1：
   var arr = [1, 2, 3, , , 27, 20];
-  /* arr.sort(); 
+  /* arr.sort();
       排序，默认会按照Unicode编码进行排序，会个位相比，十位相比
           所以对数字进行排序时，可能会得到错误的结果
       那么我们自己来指定排序的规则
@@ -351,7 +354,7 @@
         }
         // 方法2
         return a-b;            // a-b 如果a=11 b=10，那么a-b 就会大于1，从小到大排序
-        return b-a;            // 从大到小排序 
+        return b-a;            // 从大到小排序
     });
 
   // 案例2：数组练习 --- 七星彩
@@ -382,7 +385,7 @@
   console.log(arr);</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>函数</h2>
         <div class="ls-cot">
           <p>函数概念</p>
@@ -398,7 +401,7 @@
                   声明函数 自定义函数（命名函数）
                   <pre><code class="language-js line-numbers">  // function 函数名（[形参可省略]） {
       // 函数体
-  // } 
+  // }
   function sayHi() {
       console.log('内容');
   }</code></pre>
@@ -453,7 +456,7 @@
             <li>
               实参：可以是任何一个数据类型
               <pre><code class="language-js line-numbers">  // 形参：function 函数名 ( 形参1， 形参2 ...){} 在声明函数的小括号里面是形参（形式上的参数）
-  function 函数名 ( name,name, ...){    
+  function 函数名 ( name,name, ...){
   }
 
   // 调用： 函数名 ( 实参1,实参2 ...); 在函数调用的小括号里面是实参（实际的参数）
@@ -490,7 +493,7 @@
         alert( ' 我在return后面，就不会执行' );    // 后面的代码，只要return完，后面代码就不会执行了，相当于break
     }
     函数名（）;
-  */ 
+  */
 
   function getSum() {                            // 函数名
      return 666;                                 // 需要返回的结果
@@ -537,13 +540,13 @@
       }
       console.log(getMax(88, 20));
 
-  // return 只能返回一个值 
+  // return 只能返回一个值
       function getMax(num1, num2) {
           return num1, num2;                               // return 当出现两个值时，只会返回最后一个值
       }
       console.log(getMax(88, 20));
 
-  // 如果需要多个值，可以用数组 
+  // 如果需要多个值，可以用数组
       function getMax(num1, num2) {
           return [num1 + num2, num1 * num2, num1 / num2];  // return 当出现两个值时，只会返回最后一个值,但是可以用数组取多个值
       }
@@ -757,7 +760,7 @@
     fn2();
     console.log('fn1');
   }
-  
+
   function fn2() {
       console.log(222);
       console.log('fn2');
@@ -790,7 +793,7 @@
           <pre><code class="language-js line-numbers">  var fun = function () {
     //执行语句
   };
-  
+
   fun();</code></pre>
           <p>作用域</p>
           <ul>
@@ -1031,7 +1034,7 @@
     },
   }
   obj1.movie('2', '福建');
-  
+
   let obj2 = {
       name: "张三",
       age: 30
@@ -1104,7 +1107,7 @@
         }
     }
   };
-  
+
   function copyObject(obj) {                      // 创建一个深拷贝方法
       let newObj = {};                            // 创建一个新的对象，用来存储值
       Object.keys(obj).forEach(r => {             // 循环obj对象身上的所有属性名称
@@ -1120,7 +1123,7 @@
   console.log(obj2);
   console.log(obj2.name = '李四');                 // 修改obj2  的名字
   console.log(obj1.name);                         // 修改obj2 的名字，但是没有影响到obj1   这就是深拷贝
-  
+
   /* 如果想用深拷贝，最好的办法就是用递归算法如果不会写函数，用JSON方法也可以达到递归效果，也是一种深拷贝 */
   let obj1 = {              // 创建一个对象
     "name": "张三",
@@ -1147,14 +1150,14 @@
       }
       return n * fn(n - 1);
   }
-  console.log(fn(3));  /* 执行过程 fn(3)  
-                          3 != 1  
+  console.log(fn(3));  /* 执行过程 fn(3)
+                          3 != 1
                           return 3 * (fn(3-1))
                           2 != 1
                           return 2 * (fn(2-1))
-                          1 == 1   
+                          1 == 1
                           return 1
-                          
+
                           return 3 * 2 * 1
                           result 6     */
 
@@ -1243,7 +1246,7 @@
           // 1、获取属性值  oldObj[k]
           var item = oldObj[k];
           if (item instanceof Array) {         // 2、判断是否是数组
-              newObj[k] = [];  
+              newObj[k] = [];
               deepCopy(newObj[k], item);       // 递归
           } else if (item instanceof Object) { // 3、判断啊是否是对象
               newObj[k] = {};
@@ -1295,7 +1298,7 @@
               <ol>
                 <li>
                   正常求数组中的数
-                  <pre><code class="language-js line-numbers">  let arr = [11, 22, 33, 44, 55, 66, 77, 88, 99]; 
+                  <pre><code class="language-js line-numbers">  let arr = [11, 22, 33, 44, 55, 66, 77, 88, 99];
   for (let i = 0; i &lt; arr.length; i++) { // 输出数组中的偶数
       if (arr[i] % 2 === 0) {
           console.log(arr[i]);
@@ -1323,38 +1326,38 @@
   }
   sum(arr, fun1)
   // sum(arr,fun1) 的执行步骤
-  /* 
+  /*
       function sum(arr,callback ) {                 // arr 和 fun1 是形参  [11, 22, 33, 44, 55, 66, 77, 88, 99], fun1
           for (let i = 0; i &lt; arr.length; i++) {    // 循环数组，i&lt; [11, 22, 33, 44, 55, 66, 77, 88, 99]数组的长度
               if (callback(arr[i])) {               // if(fun1(arr[i]))  ,这里调用fun1 方法   val = arr[i]  ,返回结果为true
                   console.log(arr[i]);              // 结果为true 的话 就直接打印 arr[i]
               }
           }
-      } 
+      }
   */
   function fun2(val) {
       return val % 2 === 0;
   }
   sum(arr, fun2);
   // sum(arr,fun2) 的执行步骤
-  /* 
+  /*
     function sum(arr,callback ) {                    // arr 和 fun1 是形参 [11, 22, 33, 44, 55, 66, 77, 88, 99], fun2
-          for (let i = 0; i &lt; arr.length; i++) {     // 循环数组，i&lt; [11, 22, 33, 44, 55, 66, 77, 88, 99]数组的长度 
+          for (let i = 0; i &lt; arr.length; i++) {     // 循环数组，i&lt; [11, 22, 33, 44, 55, 66, 77, 88, 99]数组的长度
               if(callback(arr[i])) {                 // if(fun2(arr[i])) ,这里调用fun2 方法 val = arr[i]  返回结果  return  arr[i]的值 % 2 等于0 ;
-                  console.log(arr[i]);               // 结果为true 的话 就直接打印 arr[i] 
-              } 
+                  console.log(arr[i]);               // 结果为true 的话 就直接打印 arr[i]
+              }
           }
     }
   */
 
-  // ES6简写形式   
+  // ES6简写形式
   function sum(arr, callback) {
       for (let i = 0; i &lt; arr.length; i++) {
           if (callback(arr[i])) {
               console.log(arr[i]);
           }
       }
-  } //---------------------------------------------------------------------- 
+  } //----------------------------------------------------------------------
   sum(arr, val=> true)
   console.log('-------------------------------------------');
   sum(arr, val => val % 2 === 0);</code></pre>
@@ -1425,7 +1428,7 @@
               <ol>
                 <li>
                   过滤数组中的元素，返回过滤后的结果，调用这个方法会返回全新的数组
-                  <pre><code class="language-js line-numbers">  // 第二个参数是每一项元素对应的下标。注意：第二个参数可以省略 
+                  <pre><code class="language-js line-numbers">  // 第二个参数是每一项元素对应的下标。注意：第二个参数可以省略
   let arr = [11, 22, 33, 44, 55, 66, 77, 88, 99];
 
   let result = arr.filter(function (item) {
@@ -1450,9 +1453,9 @@
               arr2.push(arr[i]);
           }
       }
-      return arr2; //返回结果arr2 
+      return arr2; //返回结果arr2
   }
-  /* 
+  /*
       let arr2 = filter(arr,function(item){
           return item %2===0;   // 回调函数中，如果值为真，则会push 到arr2里面，并返回结果
       })
@@ -1512,7 +1515,7 @@
   2、let result = arr.map(item => item % 4);        // 所有元素都取余运算，返回新数组结果
   console.log(result);
 
-  // map 原理 
+  // map 原理
   let arr = [11, 22, 33, 44, 55, 66, 77, 88, 99];
 
   function map(arr, calLback) {
@@ -1620,7 +1623,7 @@
   for(let i = 0;i&lt;100;i++){
       arr.push('数据' +(i+1))
   }
-  function pageData(arr,pageIndex,pageSize){  // 定义一个分页方法，方法三个参数，原始数组，页码，每页数量 
+  function pageData(arr,pageIndex,pageSize){  // 定义一个分页方法，方法三个参数，原始数组，页码，每页数量
       // 思路：就是对原始数组中的数据，做截取
       //      定义截取数据的起始位置
       let start = (pageIndex - 1) * pageSize;
@@ -1650,14 +1653,14 @@
   },
 
   // 面试题
-  var num = 10;                     // 3、此时this.num的值是60，num值也就变成60   // 7.2、 65 
-  var obj = {          
-      num: 20                       // 8.1后 this.num = 10 * 3  
+  var num = 10;                     // 3、此时this.num的值是60，num值也就变成60   // 7.2、 65
+  var obj = {
+      num: 20                       // 8.1后 this.num = 10 * 3
   };
   obj.fn = (function (num) {        // 2、num形参=20,因为obj.num作为实参传进来的   21
       // 1、立即执行函数，第一次调用，this是指向window，因为是自己调用自己
       this.num = num * 3;           // 60
-      num++;                        // num++ = 20  num = 21   7.2、后 +1 =22   
+      num++;                        // num++ = 20  num = 21   7.2、后 +1 =22
       return function (n) {         // 4、返回函数给  obj.fn
           this.num += n;
           num++;                    // 7.2、 num++ = 65 num++ = 21 num = 22    8.2后+1、 num++ = 22 num = 23
@@ -1667,7 +1670,7 @@
   var fn = obj.fn;                  // 5、将方法赋值给fn
   console.log(fn);                  // 6、这里打印的话就是打印方法
   fn(5);                            // 7、调fn方法，传值5  此时方法的this 指向的是window   window.fn（5）
-                                    // 7.1、所以方法中，this.num+=n  就会是 60 + 5 
+                                    // 7.1、所以方法中，this.num+=n  就会是 60 + 5
 
   obj.fn(10);                       // 8、此时是obj在调用，那么this指向obj   23
   console.log(num, obj.num);        // 65   30
@@ -1685,7 +1688,7 @@
       })
       console.log(sum);
 
-  // 使用 reduce() 方法    
+  // 使用 reduce() 方法
       let arr = [11, 22, 33, 44, 55, 66, 77, 88, 99, 100];
       let sum = arr.reduce(function (a, b) {   // 回调函数，值要传两个 a 代表要返回计算结束的值
           return a + b                         // b 代表当前元素,如果循环第一次，那么就代表11，依次循环
@@ -1724,7 +1727,7 @@
         // zs.fun1 = fun1   就是在zs里面添加了一个fun1方法
         /*   fun1:function(){
                 console.log(this.a, this.b);
-             } 
+             }
         */
     }
     zs.fun1 = fun1;                         // 将fun1的方法赋值给zs对象，
@@ -1749,18 +1752,18 @@
     };
     ls.fun2().fun3(); // this 没有备份 ls.fun2().fun3();则会undefined ，此时的this指向的是return
     ls.fun2().fun4(); // this 没有备份 ls.fun2().fun4()则会undefined
-  //------------------------------------------------------------------------------------------------- 
+  //-------------------------------------------------------------------------------------------------
     let ls = {
         a: "李四",
         b: 40,
         fun2() {
-            let _this = this;                       // 方法一，解决this指向问题，创建一个变量，将this指向备份到 _this 
+            let _this = this;                       // 方法一，解决this指向问题，创建一个变量，将this指向备份到 _this
             return {
                 fun3() {
-                    console.log(_this.a, _this.b);  // 这里使用 _this.a 就可以访问到外层 a属性的值 
-                },   
-                fun4: () => {                       
-                  // 方法二， 利用箭头函数，因为箭头函数中是没有this和arguments的，而this指向是找外层的                     
+                    console.log(_this.a, _this.b);  // 这里使用 _this.a 就可以访问到外层 a属性的值
+                },
+                fun4: () => {
+                  // 方法二， 利用箭头函数，因为箭头函数中是没有this和arguments的，而this指向是找外层的
                   // 并且arguments 跟 this 一样是指向外层的arguments,如果没有也报错
                   console.log(this.a, this.b); // this指向的是返回值函数 fun3 fun4
                 }
@@ -1777,7 +1780,7 @@
               <ol>
                 <li>
                   代码
-                  <pre><code class="language-js line-numbers">  //  ...args 就是 rest参数   
+                  <pre><code class="language-js line-numbers">  //  ...args 就是 rest参数
   function say(a, b, ...args) {
       console.log(a);
       console.log(b);
@@ -1807,7 +1810,7 @@
   }
   let b = { ...a};          // 展开运算符，可以将一个对象成员，可以浅克隆（只拷一级，如果对象里还有一对象，则不会拷贝成功）给另一个对象
   console.log(b);           // {name: "a", age: 20, sxe: "男", job: "工作人员"}
-  
+
   // ---------------------------------------------------------------------
   let c = {
       name: "c",
@@ -1839,7 +1842,7 @@
   let {name,age,sex} = a;          // 相当于  let name = a.name let age = a.age ....
   console.log(name, age, sex);
   //-----------------------------------------------------------------------------------
-  let age = 30;  
+  let age = 30;
   let { name, age,sex } = a;       // 再赋值会报错  因为let 只能声明一次，相当于age let 两次了
   console.log(name, age, sex);     // 'age' has already been declared
   // 解决方法-------------------------------------------------------------------------------
@@ -1864,7 +1867,6 @@
   console.log(a.name);
   a.fun1();
 
-
   // ES6规定，对象中属性左右两边的表达式相同，可以省略右边的表达式
   // 该对象在定义的时候，会自动往父级作用域寻找同名属性对应的值
   let a = {
@@ -1881,7 +1883,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>对象</h2>
         <div class="ls-cot">
           <p>对象是由属性和方法组成的。</p>
@@ -1921,7 +1923,7 @@
           <ol>
             <li>
               利用字面量创建对象
-              <pre><code class="language-js line-numbers">  var obj = { };                 // 这样是创建了一个空对象 
+              <pre><code class="language-js line-numbers">  var obj = { };                 // 这样是创建了一个空对象
   var obj = {
       name: '张三丰',             // 对象里面属性，有多个属性或者方法用逗号隔开 ，属性名建议不加引号，特殊才加，
       age: 18,
@@ -1931,13 +1933,13 @@
   };
 
   /* obj [ ' 123 ' ] = 789; 如果要采用特殊的属性名，用 [ ],调用 则用 obj[ ' ' ]
-  调用对象的属性，我们可以采取 对象名.属性名 
+  调用对象的属性，我们可以采取 对象名.属性名
       console.log(obj.name);
-  调用对象的属性，我们也可以采取 对象名['']; 注意 ，要加上' ' 
-      console.log(obj['name']); 
-  调用对象的方法，我们采取 对象名.方法名(); 
+  调用对象的属性，我们也可以采取 对象名['']; 注意 ，要加上' '
+      console.log(obj['name']);
+  调用对象的方法，我们采取 对象名.方法名();
       obj.sayHi();
-  
+
   *、对象的增删改查
     1、增 语法： obj.属性名 = 属性值；
       obj.name = "张三";
@@ -1982,7 +1984,7 @@
         this . 属性 = 值；
         this . 方法 = function(){}
     }
-     new 构造函数名 () ;           // 调用构造函数 
+     new 构造函数名 () ;           // 调用构造函数
   */
   function Person(name, age, sex) {
       this.name = name;
@@ -2007,7 +2009,7 @@
   })();
   let B = (function () {
       function B() {}
-  
+
       // 继承 Person
       B.prototype = new A();
       return B;
@@ -2090,9 +2092,9 @@
   // console.log(person);
   console.log(typeof(person));               // Object
   console.log(person.name);                  // 张三
-  var person2 = new Star('李四', '男', 30);     
-    
-  创建一个方法，传入实参的方式 
+  var person2 = new Star('李四', '男', 30);
+
+  创建一个方法，传入实参的方式
   function Star(uname, sex, age) {
     this.sing = function(sang){              // 创建一个方法
         console.log(sang);
@@ -2123,11 +2125,11 @@
               <pre><code class="language-js line-numbers">  var a = 123;
   var b = a;
   a++;
-  console.log(a); //124         
-  console.log(b); //123       
+  console.log(a); //124
+  console.log(b); //123
   // a和b是完全独立的，一个值的变化，不会影响其他值 ，js变量都是存在栈内存的
   // 基本数据类型都是直接在栈内存中存储
-  
+
   var obj = new Object();
   obj.name = '我是数据1';
   var obj2 = obj;
@@ -2153,7 +2155,7 @@
   let a1 = new Person('张三', 18, "男");
   console.log(a1);
   a1.fun();
-  
+
   //  ES6 新语法
   // 定义一个person 类型
   class Person {
@@ -2181,7 +2183,7 @@
     #age;              // 必须封闭类中声明私有字段“#gae”
     #sex;              // 必须封闭类中声明私有字段“#sex”
     constructor(name, age, sex,money) {
-        this.#name = name;   // 私有属性，只能通过方法get获取和方法set设置 
+        this.#name = name;   // 私有属性，只能通过方法get获取和方法set设置
         this.#age = age;     // 私有属性
         this.#sex = sex;     // 私有属性
         this.money = money;  // Person 公共属性
@@ -2189,15 +2191,15 @@
     fun() {
         console.log(this.#name, this.#age, this.#sex);
     }
-    setName(name) {          // 私有属性，只能通过方法get获取 
+    setName(name) {          // 私有属性，只能通过方法get获取
         this.#name = name;
     }
-    getName() {              // 私有属性，只能通过方法set设置 
+    getName() {              // 私有属性，只能通过方法set设置
         return this.#name;
     }
   }
   let p = new Person("张三", 18, "男",500);
-  console.log(p.getName());    // 私有属性，只能通过方法get获取 
+  console.log(p.getName());    // 私有属性，只能通过方法get获取
   console.log(p.money);        // 公共属性可以直接获取</code></pre>
             </li>
             <li>
@@ -2281,14 +2283,14 @@
   };
   let a = [11, 22, 33];
   console.log(a.sum());                             // 调用数组的扩展内置方法  sum()
-  console.log(Array.prototype);                     // 这样就可以看到新增 sum方法 
+  console.log(Array.prototype);                     // 这样就可以看到新增 sum方法
                                                     // [sum: ƒ, constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]
 
   //-----------------------------------------------------------------------------------
   Array.prototype={sum:function() {} }              // 不能使用 = ，这样等于覆盖掉数组中的对象和方法，调用其他方法时会报错</code></pre>
             </li>
           </ul>
-          <pre><code class="language-js line-numbers">                      Student.prototype  &gt;   
+          <pre><code class="language-js line-numbers">                      Student.prototype  &gt;
   Student 构造函数      &lt;================&gt;          Student 原型对象prototype
                   &lt; Student.prototype.constructor
 
@@ -2308,11 +2310,11 @@
   }
   let a1 = new Person('张三', 18, "男");
   console.log(a1);
-  
+
   // 使用 extends 关键字 进行继承
   class School extends Person {
       constructor(name, age, sex, gender) {
-          super(name, age, sex);             // super()表示调用父类的构造函数 
+          super(name, age, sex);             // super()表示调用父类的构造函数
           this.gender = gender;              // 表示School 新增的属性,是 school 独有的属性
       }
       // 写一个自己的方法
@@ -2321,7 +2323,7 @@
       }
   }
 
-  // 继承构造函数属性 
+  // 继承构造函数属性
   function Father(name, age) {
       this.name = name;
       this.age = age;
@@ -2331,10 +2333,10 @@
   };
   var son = new Son('张三', 10);
   console.log(son);
-  
+
   // 继承父亲的方法
   Son.prototype = Father.prototype;          //  X  这样做虽然可以在Son中访问到父级的方法，但是子级创建的方法会一起给父级添加
-  Son.prototype  = new Father();             // 这样的好处是，能访问父级的方法，不会让Son新增方法存到父级原型对象中 
+  Son.prototype  = new Father();             // 这样的好处是，能访问父级的方法，不会让Son新增方法存到父级原型对象中
   Son.prototype.constructor = Son;           // 注意要添加这一步
                                              // 因为采用对象的形式修改了原型对象，需要让constructor指回原来的原型对象</code></pre>
           <p>for in 循环对象</p>
@@ -2353,7 +2355,7 @@
   for (let k in obj1) {
       console.log(k + ':' + obj1[k]);
   }
-  
+
   let b = Object.keys(obj1);
   console.log(b);                       // ["name", "age", "gender"]
   let obj2 = {}
@@ -2401,17 +2403,17 @@
   let b = arr.join("&");                          // 用& 特定的格式转换字符串
   console.log(b);
   //-------------------------------------------------------------------
-  // 简化： 
+  // 简化：
   let b = Object.keys(a).map((key,split='&')=> {  // 方法可以传两个参数，一个是键名，一个是分割符号，默认写了&
       return [key, a[key]].join("=");
   }).join(split);
   console.log(b);
   //---------------------------------------------------------------------
-  // ES6简化 
+  // ES6简化
   let b = Object.keys(a).map((key,split='&') => [key, a[key]].join("=")).join(split);
   console.log(b);</code></pre>
           <p>ES6语法，将字符串转换为对象</p>
-          <pre><code class="language-js line-numbers">  let str = "name=张三&age=18&gender=男"; 
+          <pre><code class="language-js line-numbers">  let str = "name=张三&age=18&gender=男";
   let obj = {};                           // 1、定义一个空对象
   let arr = str.split("&");               // 2、使用&符号分割字符串成数组
   // console.log(arr); ["name=张三", "age=18", "gender=男"]
@@ -2558,7 +2560,9 @@
           <ul>
             <li>
               MDN网址：
-              <el-link type="primary" icon="Link" target="_blank" href="https://developer.mozilla.org/zh-CN/">https://developer.mozilla.org/zh-CN/</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://developer.mozilla.org/zh-CN/">
+                https://developer.mozilla.org/zh-CN/
+              </el-link>
             </li>
             <li>学习一个内置对象的使用，只要学会其常用成员的使用即可，我们可以通过查文档学习，可以通过MDN/W3C来查询。</li>
             <li>Mozilla开发者网络（MDN）提供了有关开放网络技术（Open Web）的信息，包括HTML、CSS和万维网及HTML5应用的API。</li>
@@ -2620,10 +2624,10 @@
     console.log(Math.ceil(1.6));     // 2
     console.log(Math.ceil(-4.6));    //-4 只会取到整数，并不考虑四舍五入（ -4 > -4.6 ）
     console.log(Math.ceil('中文'));   // NaN
-  
-  Math.round ();                     // 四舍五入，取整，负值 .5 比较特殊， 因为谁大取值谁， - 5 -4.5 -4 ，-4比-5大 
+
+  Math.round ();                     // 四舍五入，取整，负值 .5 比较特殊， 因为谁大取值谁， - 5 -4.5 -4 ，-4比-5大
     console.log(Math.round(1.2));    // 1
-    console.log(Math.round(1.6));    // 2   
+    console.log(Math.round(1.6));    // 2
     console.log(Math.round(-4.5));   // -4   只会取到整数，不会四舍五入
     console.log(Math.round('中文'));  // NaN</code></pre>
             </li>
@@ -2684,7 +2688,7 @@
       return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   var num2 = getRandom(1, 10); //调用函数
-  
+
   while (true) { //这是一个死循环，注意
       var num = parseInt(prompt('请输入一个数值'));
       if (num &gt; num2) {
@@ -2707,7 +2711,7 @@
     var a = new Date();
     console.log(a);
 
-  // 2、如果带参数： 参数常用写法数字型  2019，10，01  （逗号隔开）或者是 字符串 ' 2019-10-1  8:8:8' 
+  // 2、如果带参数： 参数常用写法数字型  2019，10，01  （逗号隔开）或者是 字符串 ' 2019-10-1  8:8:8'
     var a = new Date('2019-10-1 8:8:8');    // 字符串形式 . 年月日和日月年都可以，二选一
     var a = new Date('2019/10/1 8:8:8');    // 必须加 ' ' 和 ：    二选一
     console.log(a);
@@ -2715,31 +2719,31 @@
   // 3、将时间转换字符串
     let d = new Date();
     let result = d.toLocaleDateString()     // 将日期转换成刚本地时间格式字符串  xxxx/xx/xx
-    let result2 = d.toLocaleTimeString()    // 将时间转换成本地时间格式字符串    xx:xx:xx 
-    let result3 = d.toLocaleString()        // 日期和时间都转换                xxxx/xx/xx xx:xx:xx 
+    let result2 = d.toLocaleTimeString()    // 将时间转换成本地时间格式字符串    xx:xx:xx
+    let result3 = d.toLocaleString()        // 日期和时间都转换                xxxx/xx/xx xx:xx:xx
     let r4 = d.toLocaleString("zh-CN",{})   // 日期格式可以传参 （"语言代码-国家地区"） 参数可以百度搜索。第二个参数可以传配置对象，查文档
 
     Date对象和Math对象不一样，他是一个构造函数，所以我们需要实例化后才能使用
     Date实例用来处理日期和时间
 
   var dateObj = new Date();
-      dateObj.getFullYear();        /* 获取当年 */        
-      dateObj.getMonth();           /* 获取当月 0 - 11 */   
-      dateObj.getDate();            /* 获取当天 */   
+      dateObj.getFullYear();        /* 获取当年 */
+      dateObj.getMonth();           /* 获取当月 0 - 11 */
+      dateObj.getDate();            /* 获取当天 */
       dateObj.getDay();             /* 获取星期 周日0 到 周六6 */
       dateObj.getHours();           /* 获取当前小时 */
       dateObj.getMinutes();         /* 获取当前分钟 */
       dateObj.getSeconds();         /* 获取当前秒 */
-  
+
   注意：在getMonth(); 需要加1,因为获取的当前月 是0 到11 来表示的
         在getDay();   获取的当前日是索引号 0 到6 来表示的，周日是0，写在最前面，周一是1，周六是6
-  
+
   // 案例
       var a = new Date();
       var Year = a.getFullYear();
-      var Month = a.getMonth() + 1;  //要 +1 
+      var Month = a.getMonth() + 1;  //要 +1
       var mDate = a.getDate();
-      var day = a.getDay(); 
+      var day = a.getDay();
       var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
       // 这里注意，数组中第一个必须写星期日，因为获取是从 0  1 2 3 4 5 6来获取的，0是星期日
       var Hours = a.getHours();
@@ -2747,8 +2751,8 @@
       var Seconds = a.getSeconds();
       console.log('今天是：' + Year + '年' + Month + '月' + mDate + '日，' + arr[day] + '');
       console.log(Hours + ':' + Minutes + ':' + Seconds);
-  
-  // 用函数封装一个时分秒    
+
+  // 用函数封装一个时分秒
       function getTimer() {
           var a = new Date();
           var Hours = a.getHours();
@@ -2758,12 +2762,12 @@
       }
       console.log(getTimer());
 
-  // 完善代码：当时间小于10的话，前面补一个 0  
+  // 完善代码：当时间小于10的话，前面补一个 0
       function getTimer() {
           var a = new Date();
-          var Hours = a.getHours(); 
+          var Hours = a.getHours();
           Hours = Hours &lt; 10 ? '0' + Hours : Hours;               // 小于10自动补0，更美观
-          var Minutes = a.getMinutes(); 
+          var Minutes = a.getMinutes();
           Minutes = Minutes &lt; 10 ? '0' + Minutes : Minutes;       // 小于10自动补0，更美观
           var Seconds = a.getSeconds();
           Seconds = Seconds &lt; 10 ? '0' + Seconds : Seconds;       // 小于10自动补0，更美观
@@ -2797,10 +2801,10 @@
   h = parseInt（总秒数/60/60%24）;                       计算小时
   m= parseInt（总秒数/60%60）;                           计算分数
   s = parseInt（总秒数%60）;                             计算当前秒数 */
-  
+
   function countDown(time) {
     var dayTime = +new Date();                           // 如果值为空，那么会获取当前的总毫秒数
-    var inputTime = +new Date(time);                     // 如果有值，就是获取值到1970的总毫秒数 
+    var inputTime = +new Date(time);                     // 如果有值，就是获取值到1970的总毫秒数
     var total = (inputTime - dayTime) / 1000;            // 现在dayTime就是秒数了
     var d = parseInt(total / 60 / 60 / 24);              // 计算天数
     d = d &lt; 10 ? '0' + d : d                             // 小于10自动补0
@@ -2820,22 +2824,22 @@
           <ul>
             <li>
               创建数组对象的两种方式
-              <pre><code class="language-js line-numbers">  // 1、字面量方式 
+              <pre><code class="language-js line-numbers">  // 1、字面量方式
     var a = [] ;
 
-  // 2、new Array（）;           // 创建空数组 
+  // 2、new Array（）;           // 创建空数组
     var a = new Array () ;
     var a = new Array (5) ;     // 这样写，代表创建了一个数组，里面存放了5个空元素
     var a = new Array (5,4) ;   // 这样写 ，代表数组里有两个元素， 5 和 4</code></pre>
             </li>
             <li>
               检测是否是数组的两种方法：
-              <pre><code class="language-js line-numbers">  // instanceof 和 （ Array. isArray(参数); 优先级更高，H5新增 ie9以上才支持 ） 
+              <pre><code class="language-js line-numbers">  // instanceof 和 （ Array. isArray(参数); 优先级更高，H5新增 ie9以上才支持 ）
   var arr = [];
   console.log(arr instanceof Array);      // 返回 true  和  false
   console.log(Array.isArray(arr));        // 返回 true  和  false
 
-  // 翻转数组案例 
+  // 翻转数组案例
   function reverse(arr) {
       if (arr instanceof Array) {         // 检测传进来的是否是数组，如果不是则弹出请输入正确数组
           var newArr = [];
@@ -2888,16 +2892,16 @@
             </li>
             <li>
               数组排序、冒泡排序
-              <pre><code class="language-js line-numbers">  // reverse()                      颠倒数组中元素的顺序，无参数   该方法会改变原来的数组 返回新数组 
+              <pre><code class="language-js line-numbers">  // reverse()                      颠倒数组中元素的顺序，无参数   该方法会改变原来的数组 返回新数组
   // sort()                         对数组的元素进行排序          该方法会改变原来的数组返回新数组
 
   var arr = [20, 8, 7, 12, 1];
   arr.reverse(); //翻转数组
   console.log(arr);
 
-  // 冒泡排序，如果顺序不一样，则会按照个位先排序，所以需要用函数解决 a- b b-a 
+  // 冒泡排序，如果顺序不一样，则会按照个位先排序，所以需要用函数解决 a- b b-a
   // var arr = [20, 8, 7, 9, 11]; // 这样排序会出现  11 20   7 8 9  排序
-  var arr = [20, 18, 15, 11, 9];  // 比大小 是先 第一位进行排序，然后再第二位比较  
+  var arr = [20, 18, 15, 11, 9];  // 比大小 是先 第一位进行排序，然后再第二位比较
                                   // 返回结果  11 15 18 20 9
 
   arr.sort(function(a, b) {       // 冒泡排序，完整写法，在sort()；里写一个函数
@@ -2913,9 +2917,9 @@
 
   返回数组元素索引号方法 indexOf（数组元素）作用就是返回该数组元素的索引号
   如果数组中有两个相同的 数组元素，则返回满足条件的第一个数组元素，后面的将不再获取
-  lastIndexOf , I 和 O 要大写 
+  lastIndexOf , I 和 O 要大写
 
-  var arr = [20, 18, 15, '猜我是第几', 9, 15]; // 比大小是在 10个之间 以内进行排序 
+  var arr = [20, 18, 15, '猜我是第几', 9, 15]; // 比大小是在 10个之间 以内进行排序
   console.log(arr.indexOf('猜我是第几'));      // 返回值 3
   console.log(arr.indexOf(15, 15));          // 返回值 -1，只允许返回一个值 ，从头开始查找
   console.log(arr.lastIndexOf(15));          // 返回值 5，因为是从末尾往前查找，只返回满足条件的第一个值，注意 I O 要大写</code></pre>
@@ -2952,7 +2956,7 @@
               数组其他方法
               <pre><code class="language-js line-numbers">  concat()      连接两个或多个数组  不影响原数组          返回一个新的数组
   slice()       数组截取slice（begin，end）            返回被截取项目的新数组数组
-  splice        数组删除splice（第几个开始，要删除个数）   返回被删除项目的新数组注意，这个会影响原数组 
+  splice        数组删除splice（第几个开始，要删除个数）   返回被删除项目的新数组注意，这个会影响原数组
 
   var demo = [1, 2, 3, 4];
   var demo2 = [5, 6, 7, 8];
@@ -3004,13 +3008,13 @@
               基本包装类型：就是把简单数据类型包装成为了复杂数据类型，这样这个基本数据类型就有了属性和方法
               <pre><code class="language-js line-numbers">  // 基本包装类型
   var str ='andy';
-  console.log(str.length); 
+  console.log(str.length);
   // 对象 才有 属性和方法   复杂数据类型才有 属性和方法
   // 简单数据类型为什么会有length属性呢？
   // 基本包装类型：就是把简单数据类型包装成为了复杂数据类型
   // （1）把简单数据类型包装为复杂数据类型
   var temp=new String("andy");
-  // （2）把临时变量的值给str 
+  // （2）把临时变量的值给str
   str = temp;
   // （3）销毁这个临时变量
   temp= nul1;</code></pre>
@@ -3021,7 +3025,7 @@
                 <li>指的是里面的值不可变，虽然看上去可以改变内容，但其实是地址变了，内存中新开辟了一个内存空间。</li>
               </ol>
               <pre><code class="language-js line-numbers">  var num1 = 10;
-  console.log (num1) ;   // 此时肯定会输出 10 
+  console.log (num1) ;   // 此时肯定会输出 10
   num1 = 20;             // 给num1 赋值一个 20，替换原来的数据
   console.log (num1) ;   // 此时输出的肯定是 20 ， 但是 10 的地址值在内存不会销毁，而是 num1的指向 到 20 地址
 
@@ -3096,7 +3100,7 @@
   //第二步 开始遍历对象
   var max = 0;                         // 存的是最大值
   var ch = '';                         // 先用一个空的变量来接收 属性名
-  for (var k in o) {                   // k 是得到属性名     o[k]得到的是属性值   
+  for (var k in o) {                   // k 是得到属性名     o[k]得到的是属性值
       if (o[k] > max) {
           max = o[k];
           ch = k;
@@ -3160,12 +3164,12 @@ console.log(str.replace('g', '22'));
   while (str.indexOf('g') != -1) {
       str = str.replace('g', '22');
   }
-console.log(str); 
+console.log(str);
 
 // 5、截取指定开始位置到结束位置的字符串，如：取得1-5的字符串
 console.log(str.slice(0, 5));
 
-// 6、找出以上字符串中出现次数最多的字符和出现的次数 
+// 6、找出以上字符串中出现次数最多的字符和出现的次数
   var str = 'abaasdffggghhjkkgfddsssss3444343';
   var o = {};
   for (var i = 0; i &lt; str.length; i++) {
@@ -3194,32 +3198,32 @@ console.log(str.slice(0, 5));
               <ol>
                 <li>Math 和其他对象不同，它不是一个构造函数，它属于一个工具类，不用创建对象，它里面封装了数学数学的相关属性和方法</li>
               </ol>
-              <pre><code class="language-js line-numbers">  abs(x)                      // 返回数的绝对值 
-  Math.acos(x)                // 返回数的反余弦值 
-  Math.asin(x)                // 返回数的反正弦值 
-  Math.atan(x)                // 以介于 -pI/2 与PI/2 弧度之间的数值来 返回×的反正切值 
+              <pre><code class="language-js line-numbers">  abs(x)                      // 返回数的绝对值
+  Math.acos(x)                // 返回数的反余弦值
+  Math.asin(x)                // 返回数的反正弦值
+  Math.atan(x)                // 以介于 -pI/2 与PI/2 弧度之间的数值来 返回×的反正切值
   Math.atan2(y.x)             // 返回从x轴到点(x，y)的角度 (介于-PI/2与PI/2弧度之间)
   Math.ceil(x)                // 对数进行上舍入
   Math.trunc(x)               // 对数取整，返回整数部分
-  Math.cos(x)                 // 返回教的余弦 
-  Math.exp(x1)                // 返回e的指数 
+  Math.cos(x)                 // 返回教的余弦
+  Math.exp(x1)                // 返回e的指数
   Math.floor(x)               // 对数进行下舍入， 负数的话取最小，-2.9 取值为 -3
-  Math.loa(x)                 // 返回教的自然对数(底为e) 
-  Math.max(x,y)               // 返回x和y中的最高值  
-  Math.min(x.y)               // 返回x和y中的最低值  
-  Math.pow(x.y)               // 返回x的y次幂 
+  Math.loa(x)                 // 返回教的自然对数(底为e)
+  Math.max(x,y)               // 返回x和y中的最高值
+  Math.min(x.y)               // 返回x和y中的最低值
+  Math.pow(x.y)               // 返回x的y次幂
   Math.random()               // 返回0~1之间的伪随机数，包括0，不包括1，浮点数时不包括0，整数时包括0
-  Math.round(x)               // 把数四舍五入为最接近的整数 
-  Math.sin(x)                 // 返回教的正弦 
-  Math.sqrt(x)                // 返回数的平方根 
-  Math.tan(x)                 // 返回角的正切 
-  Math.toSource()             // 返回该对象的源代码 
+  Math.round(x)               // 把数四舍五入为最接近的整数
+  Math.sin(x)                 // 返回教的正弦
+  Math.sqrt(x)                // 返回数的平方根
+  Math.tan(x)                 // 返回角的正切
+  Math.toSource()             // 返回该对象的源代码
   Math.valueOf()              // 返回Math对象的原始值  </code></pre>
             </li>
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>正则表达式</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -3240,16 +3244,16 @@ console.log(str.slice(0, 5));
   var reg = / a | b /;        // 使用 | 表示或者的意思
   var reg = / [ab] /;         // 使用 [ ] 也表示或的关系，出现任意一个都行
   var reg = / [a - z] /;      // 使用 [ a - z ] 表示任意的小写字母 ，大写 [ A - Z] 表示任意的大写字母
-  var reg = / [A - z] /;      // 使用 [ A - z] 表示任意字母 
+  var reg = / [A - z] /;      // 使用 [ A - z] 表示任意字母
   var reg = / a [bde ] c /;   // 使用 a [ bde ] c 表示前后固定，中间或
   var reg = / ^ac /;          // 使用 / ^a c / 表示除了的意思
   var reg = / [0 - 9 ]/;      // 使用 / [ 0 - 9 ] / 表示数字
   var reg = / [0 - 9 ]/ig;    // 匹配模式中，两个都写，表示既忽略大小写也全局匹配
   var reg = / a {3}/;         // 使用{ }可以表示量词，数字代表出现连续几次 ，量词只对前边的一个内容起作用
-                              // 例如 / ab{3} / 不会表示 ababab ,而是表示 abbb 
+                              // 例如 / ab{3} / 不会表示 ababab ,而是表示 abbb
   var reg = / (ab) {3}/;      // 用（）括起来表示一组的，这样才表示 abababa
   var reg = / b{1，3}/;       // {第一个参数和第二个参数表示从一到二出现的范围值}必须出现 1 - 3 次
-                              // 出现1个为 true，2个为 true，3个为true ，4个为false,因为 1 - 3 次 
+                              // 出现1个为 true，2个为 true，3个为true ，4个为false,因为 1 - 3 次
   var reg = / ab+c/;          // 使用 + 号 表示至少出现一次才可以，相当于 {1, }
   var reg = / ab*c/;          // 使用 * 号 表示0或多个，表示有没有都行，相当于 {0, }
   var reg = / ab？c/;         // 使用？ 号 表示0或1个，表示没有或者只能出现一次，相当于 {0, 1}
@@ -3311,7 +3315,7 @@ console.log(str.slice(0, 5));
   str = str.replace ( /^\s+ | \s+$ /g , '') ;   // 替换开头和结尾的空格为 空字符串
 
   let str = "body and head";
-  let newStr = str.replace('body', 'html'); 
+  let newStr = str.replace('body', 'html');
   let newStr = str.replace(/body/, 'html');     // （）可以跟正则表达式
   console.log(newStr);                          // html and head</code></pre>
             </li>
@@ -3329,7 +3333,7 @@ console.log(str.slice(0, 5));
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part5">
+      <el-card id="part5" shadow="hover">
         <h2>其他</h2>
         <div class="ls-cot">
           <p>简单类型和复杂类型</p>
@@ -3445,7 +3449,7 @@ console.log(str.slice(0, 5));
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part6">
+      <el-card id="part6" shadow="hover">
         <h2>DOM</h2>
         <div class="ls-cot">
           <p>简介</p>
@@ -3457,7 +3461,7 @@ console.log(str.slice(0, 5));
                             根元素&lt;html&gt;
           |-------------------------|---------------------------|
     元素&lt;head&gt;                                              元素&lt;body&gt;
-          |                                                     |    
+          |                                                     |
           |                         |---------------------------|-------------------|
     元素&lt;title&gt;                属性：href                     元素&lt;a&gt;              元素&lt;h1&gt;
           |                                                     |                   |
@@ -3501,7 +3505,9 @@ console.log(str.slice(0, 5));
                     <li>HTMLDocument ==&gt; Document ==&gt; Node ==&gt; EventTarget ==&gt; Object.prototype ==&gt; null</li>
                     <li>
                       查询文档：
-                      <el-link type="primary" icon="Link" target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document">https://developer.mozilla.org/zh-CN/docs/Web/API/Document</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document">
+                        https://developer.mozilla.org/zh-CN/docs/Web/API/Document
+                      </el-link>
                     </li>
                   </ol>
                 </li>
@@ -3550,10 +3556,10 @@ console.log(str.slice(0, 5));
             </li>
             <li>
               增删改
-              <pre><code class="language-js line-numbers">  // 创建元素节点，文本节点 
+              <pre><code class="language-js line-numbers">  // 创建元素节点，文本节点
   document.createElement( '标签名' ) ;       // 元素
   document.createTextNode( ' 内容 ' );       // 文本
-  // 把新的子节点添加到指定的节点 
+  // 把新的子节点添加到指定的节点
   element.appendChild ();                   // 向父节点中添加一个子节点
   element.insertAdjacentElement();          // 向父节点中添加一个子节点，功能更强大。("参数1：插入的位置"，参数2：要插入的元素)
   element.insertAdjacentHTML();             // 向父节点中添加一个子节点，功能更强大。("参数1：插入的位置"，"参数2：插入的元素可以直接写标签 跟innerHTML一样")
@@ -3564,9 +3570,9 @@ console.log(str.slice(0, 5));
   子节点.parentNode.removeChild ();          // 子节点.parentNode 就相当于找到了父节点，然后删除，常用
   // 替换节点
   element.replaceWith();                    // 可以替换某个节点，参数:（li）
-  // 综合增加顺序 
-  var li = document.createElement (' li '); // 创建： 
-  li.innerHTML('文本内容');                  // 添加内容 
+  // 综合增加顺序
+  var li = document.createElement (' li '); // 创建：
+  li.innerHTML('文本内容');                  // 添加内容
   父节点.appendChild(li);                    // 父节点添加子节点</code></pre>
             </li>
             <li>
@@ -3579,25 +3585,25 @@ console.log(str.slice(0, 5));
   /* 1. 因为我们文档页面从上往下加载，所以先得有标签所以我们script写到标签的下面
      2. get获得，element元素，by通过驼峰命名法
      3. 参数id是大小写敏感的字符串
-     4. 返回的是一个元素对象 
+     4. 返回的是一个元素对象
      注意： getElementById ('必须是字符串，记得加引号'); */
                   </code></pre>
                 </li>
                 <li>
                   根据标签名获取
                   <pre><code class="language-js line-numbers">  var div = document.getElementsByTagName("p");  // 返回的是获取过来元素对象的集合以伪数组的形式存储
-  console.log(div[0]);                           // 因为是数组存储，所以用数组方式查看元素 
+  console.log(div[0]);                           // 因为是数组存储，所以用数组方式查看元素
   for (var i = 0; i &lt; div.length; i++) {         // 一次查看一个 如果需要查看多个，可以用数组遍历
       console.log(div[i]);
   }
-  
+
   /* 得到元素对象动态的，不管你删除还是增加都是可以的
      如果页面中只有一个元素，返回的还是伪数组的形式
      如果页面中没有元素，则返回空的 伪数组
      使用 element.getElementsByTagName (' 标签名'); 获取某个元素（父元素）内部所有指定标签名的子元素。
      注意：父元素必须是单个对象（必须指明是哪一个元素对象）.获取的时候不包括父元素自
      例如：                                                                */
-  
+
       var ol= document.getElementByTagName ("ol");
       console.log (ol[0].getElementByTagName('li') ) ;   // 获取ol下的 li</code></pre>
                 </li>
@@ -3609,7 +3615,7 @@ console.log(str.slice(0, 5));
                 </li>
                 <li>
                   特殊元素获取
-                  <pre><code class="language-js line-numbers">  var bodyEle = document.body;                 // 获取body 元素: 返回body 元素对象 
+                  <pre><code class="language-js line-numbers">  var bodyEle = document.body;                 // 获取body 元素: 返回body 元素对象
   var bodyEle = document.documentElement;      // 获取html 元素： 返回html 元素对象</code></pre>
                 </li>
               </ul>
@@ -3626,31 +3632,30 @@ console.log(str.slice(0, 5));
   // 事件类型： 如何触发 什么事件 比如鼠标点击onclick ，还是鼠标经过hover ，还是键盘按下
     var btn = document.getElementById(' btn ');
     btn.onclick = function () {}
-  
-  
-  // 事件处理程序： 通过一个函数赋值的方式 完成 
+
+  // 事件处理程序： 通过一个函数赋值的方式 完成
     btn.onclick = function () {
         alert(' 你好 ');
     }</code></pre>
             </li>
             <li>
               事件执行步骤
-              <pre><code class="language-js line-numbers">  // 1. 获取事件源 
+              <pre><code class="language-js line-numbers">  // 1. 获取事件源
     var div = document.querySelector(' div ');
-  // 2. 注册事件（绑定事件） 
+  // 2. 注册事件（绑定事件）
     div.onclick
-  // 3. 添加事件处理程序（采取函数赋值形式） 
+  // 3. 添加事件处理程序（采取函数赋值形式）
     div.onclick = function () {
         alert(' 我被选中了');
     }</code></pre>
             </li>
             <li>
               常用事件
-              <pre><code class="language-js line-numbers">  div.onclick = function(){};                 // 鼠标点击左键触发 
-  div.onmouseover = function(){};             // 鼠标经过触发 
+              <pre><code class="language-js line-numbers">  div.onclick = function(){};                 // 鼠标点击左键触发
+  div.onmouseover = function(){};             // 鼠标经过触发
   div.onmouseout = function(){};              // 鼠标离开触发
   div.onfocus = function(){};                 // 获得鼠标焦点触发
-  div.onblur = function(){};                  // 失去鼠标焦点触发 
+  div.onblur = function(){};                  // 失去鼠标焦点触发
   div.onmousemove = function(){};             // 鼠标移动触发
   div.onmouseup = function(){};               // 鼠标弹起触发
   div.onmousedown = function(){};             // 鼠标按下触发
@@ -3664,7 +3669,7 @@ console.log(str.slice(0, 5));
            mouseover 鼠标经过自身盒子会触发，经过子盒子还会触发。
            mouseenter 只会经过自身盒子触发。
         3. 之所以这样，就是因为 mouseenter 不会冒泡
-        4. 跟mouseenter搭配鼠标离开mouseleave同样不会冒泡，常用  
+        4. 跟mouseenter搭配鼠标离开mouseleave同样不会冒泡，常用
   */</code></pre>
             </li>
             <li>
@@ -3707,16 +3712,16 @@ console.log(str.slice(0, 5));
             <li>
               JavaScript的DOM操作可以改变网页内容、结构和样式，我们可以利用DOM操作元素来改变元素里面的内容、属性等。注意以下都是属性
               <pre><code class="language-js line-numbers">  var div = document.querySelector("div");
-  // 改变元素内容： 
-     div.innerText = "";   // 不识别html标签 非标准 从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉 
+  // 改变元素内容：
+     div.innerText = "";   // 不识别html标签 非标准 从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉
      div.innerHTML = "";   // 识别 html标签  标准  起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行
      div.textContent ="";  // 等同于innerText，但是会考虑标签的css样式，而innerText会考虑，不考虑css会提供性能。它能识别html标签，但是不添加代码，只显示代码字符串。包括html标签，同时保留空格和换行
 
-  // 案例： 
+  // 案例：
       &lt;!-- 当我们点击了按钮，文字会发生变化 --&gt;
       &lt;button&gt;显示当前系统时间&lt;/button&gt;
       &lt;div&gt;某个时间&lt;/div&gt;
-  
+
       &lt;script&gt;
           // 获取元素
           var btn = document.querySelector('button');
@@ -3729,7 +3734,7 @@ console.log(str.slice(0, 5));
           function getTime() {
               var a = new Date();
               var Year = a.getFullYear();
-              var Month = a.getMonth() + 1;                  // 要 +1 
+              var Month = a.getMonth() + 1;                  // 要 +1
               var mDate = a.getDate();
               var day = a.getDay();
               var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
@@ -3747,10 +3752,10 @@ console.log(str.slice(0, 5));
          var p = document.querySelector('p');                // 注意大小写
       // 2、直接赋值
          p.innerText = getTime();                            // 这样程序直接执行
-  
-  // innerText  和  innerHTML  区别：  
+
+  // innerText  和  innerHTML  区别：
       // 1、innerText 是不识别html 标签的 但是 innerHTML是会识别html标签的
-  
+
       &lt;div&gt;某个时间&lt;/div&gt;
       &lt;p&gt;123&lt;/p&gt;
       &lt;script&gt;
@@ -3760,8 +3765,8 @@ console.log(str.slice(0, 5));
           div.innerText = '&lt;strong&gt; 我想加粗 &lt;/strong&gt;';  // 输出   &lt;strong&gt; 我想加粗 &lt;/strong&gt;
           p.innerHTML = '&lt;strong&gt; 我想加粗 &lt;/strong&gt;';    // 输出   我想加粗
       &lt;/script&gt;
-  
-  // 2、 这两个属性是可读写的可以获取元素里面的内容，但是 innerText 会去掉空格和换行, innerHTML 会保留 
+
+  // 2、 这两个属性是可读写的可以获取元素里面的内容，但是 innerText 会去掉空格和换行, innerHTML 会保留
       &lt;div&gt;
           某个时间
           &lt;span&gt;123&lt;/span&gt;
@@ -3773,7 +3778,7 @@ console.log(str.slice(0, 5));
           var p = document.querySelector('p');
           console.log(div.innerText);                         // 输出    某个时间 123
           console.log(div.innerHTML);                         // 输出    某个时间
-      &lt;/script&gt;                                    
+      &lt;/script&gt;
                                                               // &lt;span&gt;123&lt;/span&gt; 会保留换行，标签和空格</code></pre>
             </li>
             <li>
@@ -3804,9 +3809,9 @@ console.log(str.slice(0, 5));
           img.src = 'images/img.gif';         // 解读为  元素自带的什么属性  进行操作
           img.title = '刘德华';
       }
-  &lt;/script&gt; 
+  &lt;/script&gt;
 
-  /* 
+  /*
   案例：
       根据不同时间，页面显示不同图片，同时显示不同的问候语。如果上午时间打开页面，显示上午好，显示上午的图片。
       如果下午时间打开页面，显示下午好，显示下午的图片。如果晚上时间打开页面，显示晚上好，显示晚上的图片。
@@ -3814,7 +3819,7 @@ console.log(str.slice(0, 5));
   分析：
       1、根据系统不同时间来判断，所以需要用到日期内置对象
       2、利用多分支语句来设置不同的图片
-      3、需要一个图片，并且根据时间修改图片，就需要用到操作元素src属性 
+      3、需要一个图片，并且根据时间修改图片，就需要用到操作元素src属性
   */
   &lt;img src="./images/img.gif" alt="" title="上午好"&gt;
   &lt;div&gt;上午好&lt;/div&gt;
@@ -3857,14 +3862,14 @@ console.log(str.slice(0, 5));
       }
   &lt;/script&gt;
 
-  // 如果想要某个表单被禁用，不能被点击 disabled ，我们想要按钮 button禁用       
+  // 如果想要某个表单被禁用，不能被点击 disabled ，我们想要按钮 button禁用
     btn.onclick = function() {
        * input.innerHTML = '这样写是不起作用的';           // 因为HTML是操作普通盒子，div标签里的内容
          input.value = '表单里面的value';                // 点击后修改value值
          btn.disabled = true;                           // 关 ，此时按钮就是灰色不能点击的状态了
        * this.disabled = true;                          // 这个方法也可以达到同样效果 ，this 是指向事件函数的调用者
     }
-  
+
   /* 案例：点击按钮将密码框切换为文本框，并可以查看密码明文
       1、核心思路：点击眼睛按钮，把密码框类型改为文本框就可以看见里面的密码
       2、一个按钮两个状态，点击一次，切换为文本框，继续点击一次切换为密码框
@@ -3883,7 +3888,7 @@ console.log(str.slice(0, 5));
             &lt;img src="images/close.png" alt="" id='eye'&gt;
         &lt;/label&gt;
         &lt;input type="password" name="" id="pwd"&gt;
-    &lt;/div&gt; 
+    &lt;/div&gt;
     &lt;!-- js --&gt;
     &lt;script&gt;
         1、 先获取元素
@@ -3922,7 +3927,7 @@ console.log(str.slice(0, 5));
 
   // 兼容性写法
     // 封装一个兼容性函数，来解决不兼容问题，判断条件中也可以使用三元表达式来写
-    function getStyle(obj, name) {       
+    function getStyle(obj, name) {
         if (window.getComputedStyle) {
             // 正常浏览器的方式，具有get....方法
             return getComputedStyle(boj, null)[name];
@@ -3938,7 +3943,7 @@ console.log(str.slice(0, 5));
                 <li>注意里面的属性采取驼峰命名法，如 background-color = backgroundColor</li>
                 <li>权重问题：js 修改了样式是相当于行内样式，比css 样式内嵌样式都要权重高</li>
               </ol>
-              <pre><code class="language-html line-numbers">  &lt;style&gt;      
+              <pre><code class="language-html line-numbers">  &lt;style&gt;
       .box {width: 400px;height: 400px;background-color: skyblue;margin: 100px auto;}
   &lt;/style&gt;
 
@@ -3965,13 +3970,13 @@ console.log(str.slice(0, 5));
             <li>
               案例
               <pre><code class="language-html line-numbers">  &lt;!-- 案例1：淘宝点击关闭二维码
-                
+
       思路：
            当鼠标点击二维码关闭按钮的时候，则关闭整个二维码。（自己做了关闭打开两个按钮）
-      核心思路：  
+      核心思路：
         1. 利用样式的显示和隐藏完成，display: none隐藏元素, display: block 显示元素,
             visibility:hidden; 隐藏, visibility:initial; 显示。
-        2. 先有一个大盒子装文字和图片，然后关闭按钮用定位，定到左上角      
+        2. 先有一个大盒子装文字和图片，然后关闭按钮用定位，定到左上角
   --&gt;
   &lt;style&gt;
       .box { width: 400px;height: 400px;background-color: skyblue;margin: 100px auto;visibility: initial;          }
@@ -4024,7 +4029,7 @@ console.log(str.slice(0, 5));
       1、首先表单需要2个新事件，获得焦点onfocus 失去焦点onblur
       2、如果获得焦点，判断表单里面内容是否为默认文字，如果是默认文字，就清空表单内容
       3、如果失去焦点，判断表单内容是否为空，如果为空，则表单内容改为默认文字
-  */ 
+  */
   &lt;input type="text" value="手机" name="" id=""&gt;
 
   // 获取元素
@@ -4044,19 +4049,19 @@ console.log(str.slice(0, 5));
       this.style.color = '#ccc';              // 失去焦点，需要把文本框的文字变回原来颜色
   }</code></pre>
           <p>类名样式操作 (element.className)</p>
-          <pre><code class="language-js line-numbers">  // 样式写成CSS，想变化就JS更改类名，使用方法： 
+          <pre><code class="language-js line-numbers">  // 样式写成CSS，想变化就JS更改类名，使用方法：
   // 1、先建立一个要变化的类名和样式
       .classStyle {
           background-color: red;
           font-size: 16px;
           margin-top: 10px;
       }
-  // 2、用js 来调用，先不需要使用，当点击后才开始使用，相当于让当前元素改了新样式的类名，把原来的类名更换成新的 
+  // 2、用js 来调用，先不需要使用，当点击后才开始使用，相当于让当前元素改了新样式的类名，把原来的类名更换成新的
       div.onclick = function () {
           this.className = ' classStyle';
       }
       // 这样就比element.style 方便多了，样式较多且复杂就可以使用 className，简单则用style
-    
+
   // 注意：添加JS 修改的类名后，会覆盖原类名，如果想要增加且不覆盖，使用以下方法：
       this. className = ' 原先类名 新增类名';         // 就是把原先的保留，然后空格写修改的新类名</code></pre>
           <ul>
@@ -4070,11 +4075,11 @@ console.log(str.slice(0, 5));
       .message {
           display: inline-block;font-size: 12px; color: #999; background: url(images/mess.png) no-repeat left center;padding-left: 20px;
       }
-      
+
       .wrong {
           color: red;background: url(images/wrong.png) no-repeat left center;
       }
-      
+
       .right {
           color: green; background: url(images/mess.png) no-repeat left center;
       }
@@ -4098,7 +4103,6 @@ console.log(str.slice(0, 5));
             }
         }
     &lt;/script&gt;
-  
 
   /* 案例2：世纪佳缘用户名显示隐藏内容 ： https://www.jiayuan.com/  */
   &lt;style&gt;
@@ -4155,7 +4159,6 @@ console.log(str.slice(0, 5));
       }
   &lt;/script&gt;
 
-
   /* 案例3：京东关闭广告（直接隐藏即可） */
   &lt;style&gt;
     * {margin: 0;padding: 0;}
@@ -4189,7 +4192,6 @@ console.log(str.slice(0, 5));
           adv.style.display = 'none';
       }
   &lt;/script&gt;
-
 
   /* 案例4：新浪下拉菜单（微博即可） */
   &lt;style&gt;
@@ -4233,13 +4235,12 @@ console.log(str.slice(0, 5));
       }
   &lt;/script&gt;
 
-
   /* 案例5：开关灯案例（见素材）
   &lt;style&gt;
     body {background-color: black;}       // 这一步是可以省略的，多余了
   &lt;/style&gt;
   &lt;/head&gt;
-  
+
   &lt;body&gt;
   &lt;button&gt;开关灯&lt;/button&gt;
   &lt;script&gt;
@@ -4258,8 +4259,8 @@ console.log(str.slice(0, 5));
           }
       }
   &lt;/script&gt;
-  
-  // 另一种写法，老师写的 
+
+  // 另一种写法，老师写的
   &lt;button id="btn"&gt;开关灯&lt;/button&gt;
   &lt;script&gt;
       var btn = document.getElementById('btn');
@@ -4267,14 +4268,13 @@ console.log(str.slice(0, 5));
       btn.onclick = function() {
           if (flag == 0) {
               document.body.style.backgroundColor = 'black';  // 意思为文档下的body的样式，背景颜色 改为黑色
-              flag = 1;                                                              
+              flag = 1;
           } else {
               document.body.style.backgroundColor = '#fff';
               flag = 0;
           }
       }
   &lt;/script&gt;
-
 
   /* 案例6：百度换肤 */
   // 1、这个案例练习的是给一组元素注册事件
@@ -4283,10 +4283,10 @@ console.log(str.slice(0, 5));
   // 4、核心算法：把当前图片的src路径取过来，给body做为背景即可
     body {
         background: url(images/img.gif)no-repeat center top;
-    } 
+    }
     ul li {
         display: block;float: left;width: 120px;height: 30px;
-        border: 1px solid #999;text-align: center;line-height: 
+        border: 1px solid #999;text-align: center;line-height:
         30px;font-size: 12px;border-radius: 15px;margin: 0 10px;
     }
     ul li:hover {
@@ -4315,11 +4315,11 @@ console.log(str.slice(0, 5));
     &lt;/script&gt;
 
   // 案例7：隔行变色
-  /* 
-    用到新的鼠标事件 鼠标经过onmouseover  鼠标离开onmouseout 
+  /*
+    用到新的鼠标事件 鼠标经过onmouseover  鼠标离开onmouseout
     核心思路：  鼠标经过tr行，当前的行变背景颜色，鼠标离开去掉当前的背景颜色
     注意：     第一行（thead里面的行）不需要变换颜色，因此我们获取的是tbody里面的行
-  */ 
+  */
   &lt;style&gt;
       table {width: 800px;margin: 100px auto; text-align: center;border-collapse: collapse;font-size: 14px;}
       thead tr {height: 30px; background-color: skyblue;}
@@ -4375,17 +4375,16 @@ console.log(str.slice(0, 5));
           }
           trs[i].onmouseout = function() {
               this.style.backgroundColor = '';
-              // 当鼠标离开的时候为空 
+              // 当鼠标离开的时候为空
               // this.className = '';
           }
       }
   &lt;/script&gt;
 
-
   /* 案例8：表单全选，取消全选 */
   // 1、全选和取消全选做法：让下面所有复选框的checked属性（选中状态）跟随全选按钮即可
   // 2、下面复选框需要全部选中，上面全选才能选中做法：给下面所有复选框绑定点击事件
-  // 3、每次点击，都要循环查看下面所有的复选框是否有没选中的，如果有一个授选中的，上面全选就不选中。 
+  // 3、每次点击，都要循环查看下面所有的复选框是否有没选中的，如果有一个授选中的，上面全选就不选中。
   &lt;div class="wrap"&gt;
       &lt;table&gt;
           &lt;thead&gt;
@@ -4435,10 +4434,10 @@ console.log(str.slice(0, 5));
       var j_cbAll = document.getElementById('j_cbAll');
       // j_tb 下的所以按钮
       var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
-      // 注册事件 
+      // 注册事件
       j_cbAll.onclick = function() {
               // this.checked 可以得到当前的复选框状态，当选中为true,没选中为false
-              // 循环，遍历每个body下的复选框                           
+              // 循环，遍历每个body下的复选框
               for (var i = 0; i &lt; j_tbs.length; i++) {
                   j_tbs[i].checked = this.checked;
               }
@@ -4478,7 +4477,7 @@ console.log(str.slice(0, 5));
       var div = document.querySelector('div');
       console.log(div.style);
       console.log(div.id);
-  &lt;/script&gt; 
+  &lt;/script&gt;
 
   // element.getAttribute (' 属性'); 解释：得到 某个的属性
   console.log(div.getAttribute('id'));
@@ -4488,7 +4487,7 @@ console.log(str.slice(0, 5));
       element.属性 获取内置属性值（元素本身自带的属性）
       element.getAttribute（属性）; 主要获得自定义的属性（标准）我们程序员自定义的属性
 
-  // 2、获取H5自定义属性 
+  // 2、获取H5自定义属性
       *、兼容性获取 element.getAttribute（‘data-index'）； // 推荐使用
       *、H5新增 element.dataset.index 或者 element.dataset[index] ie 11才开始支持，还必须是获取 data - 开头的
   &lt;div getTime='20' data-index = '2' data-list-name="andy"&gt;123&lt;/div&gt;
@@ -4516,10 +4515,10 @@ console.log(str.slice(0, 5));
               <pre><code class="language-html line-numbers">  &lt;a&gt; href="#" class="link" data-param1="value1" data-param2="value2"&gt;Link 1&lt;/a&gt;
   &lt;a&gt; href="#" class="link" data-param1="value3" data-param2="value4"&gt;Link 2&lt;/a&gt;
   &lt;a&gt; href="#" class="link" data-param1="value5" data-param2="value6"&gt;Link 3&lt;/a&gt;
-  
+
   &lt;script&gt;
     const links = document.querySelectorAll('.link');
-  
+
     links.forEach(link =&gt; {
       link.addEventListener('click', e =&gt; {
         e.preventDefault();
@@ -4559,27 +4558,27 @@ console.log(str.slice(0, 5));
                       根元素&lt;html&gt;
   |-------------------------|---------------------------|
   元素&lt;head&gt;                                         元素&lt;body&gt;
-  |                                                     |    
+  |                                                     |
   |                         |---------------------------|-------------------|
   元素&lt;title&gt;            属性：href                   元素&lt;a&gt;             元素&lt;h1&gt;
   |                                                     |                   |
   文本：文档标题                                   文本：我的链接        文本：我的标题
-  
+
   /*
     一般地，节点至少拥有nodeType（节点类型）、nodeName（节点名称）和  nodeValue（节点值）这三个基本属性。
         元素节点   nodeType为1       nodeName: "div"
         属性节点   nodeType为2       nodeType: "1"
-        文本节点   nodeType为3       nodeValue: null      （文本节点包含文字、空格、换行等） 
+        文本节点   nodeType为3       nodeValue: null      （文本节点包含文字、空格、换行等）
     我们在实际开发中，节点操作主要操作的是元素节点
   */
-  
+
   // 节点层级：     利用DOM树可以把节点划分为不同的层级关系，常见的是父子兄层级关系。
-  
+
                           文档
                     根元素&lt;html&gt;
   |-------------------------|---------------------------|
   元素&lt;head&gt;                                         元素&lt;body&gt;
-  |                                                     |    
+  |                                                     |
   |                         |---------------------------|-------------------|
   元素&lt;title&gt;            属性：href                   元素&lt;a&gt;             元素&lt;h1&gt;
   |                                                     |                   |
@@ -4602,7 +4601,7 @@ console.log(str.slice(0, 5));
               子节点1 不常用
               <pre><code class="language-html line-numbers">  /* parentNode.Nodes  标准   注意：childNodes 是得到所有的子节点，包含元素节点，文本节点等，*/
 
-&lt;ul&gt; 
+&lt;ul&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
@@ -4612,13 +4611,13 @@ console.log(str.slice(0, 5));
     // 1、子节点
     // 以前做法，两个都获取
     var ul = document.querySelector('ul');
-    var lis = ul.querySelector('li');       
+    var lis = ul.querySelector('li');
     // 现在做法，获取到   QRCode 的父亲  box    var lis  可以用不用写
     ul.childNodes;
 &lt;/script&gt;
 
 // 注意：返回值里面包含了所有的子节点，包括元素节点，文本节点等。
-        如果只想要获得里面的元素节点，则需要专门处理。所以我们一般不提倡使用childNodes      
+        如果只想要获得里面的元素节点，则需要专门处理。所以我们一般不提倡使用childNodes
 &lt;script&gt;
     var ul = document.querySelector('ul');
     for (var i = 0; i &lt; ul.childNodes.length; i++) {
@@ -4675,9 +4674,9 @@ var lis = ul.querySelector('li');
           <ul>
             <li>
               创建节点
-              <pre><code class="language-js line-numbers">  document.createElement( 'tagName' ) 
+              <pre><code class="language-js line-numbers">  document.createElement( 'tagName' )
   // 该方法创建由tagName指定的HTML元素。因为这些元素原先不存在，是根据我们的需求动态生成的，所以我们也称为动态创建元素节点。
-  // 例如： 
+  // 例如：
       var div = document.createElement('div');</code></pre>
             </li>
             <li>
@@ -4700,7 +4699,6 @@ var lis = ul.querySelector('li');
       ul.insertBefore(li, ul.children[0])         // 括号解释，添加哪个孩子，添加到哪个的前面
   &lt;/script&gt;
 
-
   // 例子2
   /* 创建留言：
       1、核心思路：点击按钮之后，就动态创建一个li，添加到ul里面。
@@ -4709,7 +4707,7 @@ var lis = ul.querySelector('li');
   &lt;textarea&gt; name="" id="" cols="30" rows="10"&gt;&lt;/textarea&gt;
   &lt;button&gt;发布&lt;/button&gt;
   &lt;ul&gt;
-  
+
   &lt;/ul&gt;
   &lt;script&gt;&gt;
     // 获取元素
@@ -4726,7 +4724,7 @@ var lis = ul.querySelector('li');
             li.innerHTML = text.value;
             //添加节点
         1、  ul.appendChild(li); // 注意 添加里面不要单引号     在后面添加
-            
+
         2、  ul.insertBefore(li, ul.children[0]);        // 在前面添加
         } else {
             alert('请输入内容');
@@ -4734,7 +4732,7 @@ var lis = ul.querySelector('li');
         }
     }
   &lt;/script&gt;
-  
+
   /* 删除留言：
       1、当我们把文本域里面的值赋值给li的时候，多添加一个删除的链接
       2、需要把所有的链接获取过来，当我们点击当前的链接的时候，删除当前链接所在的li
@@ -4742,7 +4740,7 @@ var lis = ul.querySelector('li');
   &lt;textarea&gt; name="" id="" cols="30" rows="10"&gt;&lt;/textarea&gt;
   &lt;button&gt;发布&lt;/button&gt;
   &lt;ul&gt;
-  
+
   &lt;/ul&gt;
   &lt;script&gt;&gt;
     // 获取元素
@@ -4820,7 +4818,7 @@ var lis = ul.querySelector('li');
               代码
               <pre><code class="language-js line-numbers">  node.cloneNode ()
 
-  // 该方法返回调用该方法的节点的一个副本。也称为克隆节点/拷贝节点 
+  // 该方法返回调用该方法的节点的一个副本。也称为克隆节点/拷贝节点
   &lt;ul&gt;
       &lt;li&gt;1&lt;/li&gt;
       &lt;li&gt;2&lt;/li&gt;
@@ -4865,23 +4863,23 @@ var lis = ul.querySelector('li');
       tbody.appendChild(tr);
       // 2. 行里面创建单元格(跟数据有关系的3个单元格) td 单元格的数量取决于每个对象里面的属性个数  for循环遍历对象 datas[i]
       for (var k in dataS[i]) { // 里面的for循环管列 td
-          // 创建单元格 
+          // 创建单元格
           var td = document.createElement('td');
-          // 把对象里面的属性值 dataS[i][k] 给 td  
+          // 把对象里面的属性值 dataS[i][k] 给 td
           // console.log(dataS[i][k]);
           td.innerHTML = dataS[i][k];
           tr.appendChild(td);
       }
-      // 3. 创建有删除2个字的单元格 
+      // 3. 创建有删除2个字的单元格
       var td = document.createElement('td');
       td.innerHTML = '&lt;a href="javascript:;"&gt;删除 &lt;/a&gt;';
       tr.appendChild(td);
   }
-  // 4. 删除操作 开始 
+  // 4. 删除操作 开始
   var as = document.querySelectorAll('a');
   for (var i = 0; i &lt; as.length; i++) {
       as[i].onclick = function() {
-          // 点击a 删除 当前a 所在的行(链接的爸爸的爸爸)  node.removeChild(child)  
+          // 点击a 删除 当前a 所在的行(链接的爸爸的爸爸)  node.removeChild(child)
           tbody.removeChild(this.parentNode.parentNode)
       }
   }
@@ -4915,10 +4913,10 @@ var lis = ul.querySelector('li');
             </li>
             <li>
               使用forEach 循环数组对象，遍历数据动态添加
-              <pre><code class="language-js line-numbers">  let study_content = $q(".study_content"); 
+              <pre><code class="language-js line-numbers">  let study_content = $q(".study_content");
   let arr = [];
   data.forEach(d =&gt; {
-      let link = ` 
+      let link = `
                   &lt;div class="study_content"&gt;
                       &lt;div class="link"&gt;
                           &lt;div class="circular"&gt;&lt;/div&gt;
@@ -4939,7 +4937,7 @@ var lis = ul.querySelector('li');
       study_content.innerHTML += a;
   })
 
-  // 推荐使用此方法，但方法也有很多，比如filter 但是注意forEach是不返回任何东西的，只会做遍历操作 
+  // 推荐使用此方法，但方法也有很多，比如filter 但是注意forEach是不返回任何东西的，只会做遍历操作
     let study_content = $q(".study_content");
     let newData = data.map(e =&gt; {
         return ` &lt;div class="study_content"&gt;
@@ -4963,8 +4961,8 @@ var lis = ul.querySelector('li');
               三种动态创建元素的区别
               <pre><code class="language-js line-numbers">  document.write()
   element.innerHTML
-  document.createElement() 
-  
+  document.createElement()
+
   // 区别：
   //   1、document.write 是直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘
   //   2、innerHTML是将内容写入某个DOM节点，不会导致页面全部重绘
@@ -4985,7 +4983,7 @@ var lis = ul.querySelector('li');
                         根元素&lt;html&gt;
   |-------------------------|---------------------------|
   元素&lt;head&gt;                                       元素&lt;body&gt;
-  |                                                     |    
+  |                                                     |
   |                         |---------------------------|-------------------|
   元素&lt;title&gt;            属性：href                  元素&lt;a&gt;              元素&lt;h1&gt;
   |                                                     |                   |
@@ -5082,7 +5080,7 @@ var lis = ul.querySelector('li');
   // 该方法接收两个参数：
      eventNameWithOn:      // 事件类型字符串，比如onclick、onmouseover，这里要带on
      callback:             // 事件处理函数，当目标触发事件时回调函数被调用
-                           // 支持IE 9之前的版本，但是事件类型中 必须带 on  
+                           // 支持IE 9之前的版本，但是事件类型中 必须带 on
 
   btns[0].attachEvent('onclick', function() {
       alert('事件侦听333');
@@ -5147,7 +5145,7 @@ var lis = ul.querySelector('li');
                   detachEvent() 方法
                   <pre><code class="language-js line-numbers">  eventTarget.detachEvent(eventNameWithon, callback);
 
-  // 例子 
+  // 例子
       &lt;script&gt;
           var divs = document.querySelectorAll('div');
           divs[1].addEventListener('click', fn) //里面的函数调用 fn ，不用加小括号
@@ -5156,14 +5154,14 @@ var lis = ul.querySelector('li');
               divs[1].removeEventListener('click', fn);
           }
       &lt;/script&gt;
-  
+
   // 注意：因为addEventListener（）方法的第二个参数类型是函数，如果写成fn（）那么就会传入函数调用结果，
       也就是 return 的内容函数，fn中没写return，默认会传入undefined导致错误
 
   // eventTarget.detachEvent(eventNameWidthOn, callback);
   // 兼容性问题，只有在IE9以下才能使用
       divs[1].attachEvent('onclick', fn);
-    
+
       function fn() {
           alert('1');
           divs[2].detachEvent('onclick',fn)
@@ -5182,8 +5180,8 @@ var lis = ul.querySelector('li');
               element['on' + eventName] = fn
           }
       }
-  &lt;/script&gt; 
-  
+  &lt;/script&gt;
+
   // 够用： div[0].onclick = null ;
   // 不兼容直接用传统： div[0].removeEventListener( 'click' , fn )</code></pre>
                 </li>
@@ -5271,7 +5269,7 @@ var lis = ul.querySelector('li');
         的信息，比如，鼠标 判断用户按下了哪个键
   // 4、这个事件对象我们可以自己命名，比如 event\ evt e
   // 5、事件对象也有兼容性问题，ie678  通过 window.event
-  div.onclick = function (event){     
+  div.onclick = function (event){
       e = e || window.event   兼容性写法   如果浏览器认识，则执行e,如果不认识，则执行 window.event
   }</code></pre>
             </li>
@@ -5279,17 +5277,17 @@ var lis = ul.querySelector('li');
               什么是事件对象
               <pre><code class="language-js line-numbers">  eventTarget.onclick = function(event){}
   eventTarget.addEventListener('click',function(event){})
-  
+
   /*
     这个event 就是事件对象，我们还喜欢的写成e或者 evt
     官方解释：event对象代表事件的状态，比如键盘按键的状态、鼠标的位置、鼠标按钮的状态。
     简单理解：事件发生后，跟事件相关的一系列信息数据的集合都放到这个对象里面，这个对象就是事件对象event，它有很多属性和方法。
-  
+
     比如：
       1.谁绑定了这个事件。
       2.鼠标触发事件的话，会得到鼠标的相关信息，如鼠标位置。
       3.键盘触发事件的话，会得到健盘的相关信息，如按了哪个键。
-  
+
     这个event是个形参，系统帮我们设定为事件对象，不需要传递实参过去。
     当我们注册事件时，event对象就会被系统自动创建，并依次传递给事件监听器（事件处理函数）。
   */</code></pre>
@@ -5304,12 +5302,12 @@ var lis = ul.querySelector('li');
             <li>解决代码示例： e = e || window.event</li>
             <li>
               事件对象的常用属性和方法
-              <pre><code class="language-html line-numbers">  e.target            // 返回触发事件的对象标准 
-  e.srcElement        // 返回触发事件的对象非标准ie6-8使用 
-  e.type              // 返回事件类型比如click mouseover不带on 
-  e.cancelBubble      // 该属性阻止冒泡非标准ie6-8使用 
-  e.returnValue       // 该属性阻止默认事件（默认行为）非标准ie6-8使用比如不让链接跳转 
-  e.preventDefault()  // 该方法阻止默认事件（默认行为）标准比如不让链接跳转 
+              <pre><code class="language-html line-numbers">  e.target            // 返回触发事件的对象标准
+  e.srcElement        // 返回触发事件的对象非标准ie6-8使用
+  e.type              // 返回事件类型比如click mouseover不带on
+  e.cancelBubble      // 该属性阻止冒泡非标准ie6-8使用
+  e.returnValue       // 该属性阻止默认事件（默认行为）非标准ie6-8使用比如不让链接跳转
+  e.preventDefault()  // 该方法阻止默认事件（默认行为）标准比如不让链接跳转
   e.stopPropagation() // 阻止冒泡标准
 
   &lt;script&gt;
@@ -5321,11 +5319,11 @@ var lis = ul.querySelector('li');
           console.log(this);
       })
 
-  e.srcElement  兼容性问题解决( 了解兼容性 ) 
+  e.srcElement  兼容性问题解决( 了解兼容性 )
   div.onclick = function (e) {
       e = e || window.event ;
       var target = e.target || e.srcElement ;
-  } 
+  }
 
   &lt;a&gt; href="www.baidu.com"&gt;百度&lt;/a&gt;
   &lt;script&gt;
@@ -5341,7 +5339,7 @@ var lis = ul.querySelector('li');
           e.returnValue;
           // 3、简单写法 我们可以利用return false 也能阻止默认行为，没有兼容性问题
           return false;
-          // 缺点，如果后面有代码，则不执行，只限于传统方式，如果用 addEventListener 是不起作用的 
+          // 缺点，如果后面有代码，则不执行，只限于传统方式，如果用 addEventListener 是不起作用的
           alert('后面不会被执行了');
       }
   &lt;/script&gt;</code></pre>
@@ -5354,27 +5352,27 @@ var lis = ul.querySelector('li');
   });
 
   // 2. 测试无效 / 或者还可以 放个透明absolute定位div遮盖住图片
-  document.oncontextmenu=function(e){ 
-    // 或者return false;    
+  document.oncontextmenu=function(e){
+    // 或者return false;
     e.preventDefault();
   };
 
-  // 3. 关于长按的弹窗菜单怎么屏蔽，网上查了很多资料，都是设置e.preventDefault()，来实现，但是一直用的是 
+  // 3. 关于长按的弹窗菜单怎么屏蔽，网上查了很多资料，都是设置e.preventDefault()，来实现，但是一直用的是
   obj.addEventListener("touchstart", function (e) {
       e.preventDefault();
   }, false);
 
-  // 4. 这个设置的应该是屏蔽触屏的反应，设置屏蔽弹出菜单的应该是这样： 
+  // 4. 这个设置的应该是屏蔽触屏的反应，设置屏蔽弹出菜单的应该是这样：
   document.oncontextmenu = function (e) {
       e.preventDefault();
   };
 
-  // 5. 最后解决办法：用css，但是也会让链接失效，所以要用js来触发点击事件  
-  img { 
-      pointer-events:none;          // 禁止长按图片保存  
+  // 5. 最后解决办法：用css，但是也会让链接失效，所以要用js来触发点击事件
+  img {
+      pointer-events:none;          // 禁止长按图片保存
   }
-  
-  // 6. 以下代码需要试验  
+
+  // 6. 以下代码需要试验
   (function agent() {
     let unlock = false
     document.addEventListener('allow_copy', (event) => {
@@ -5407,24 +5405,24 @@ var lis = ul.querySelector('li');
   })();
 
   // 7. 测试后，可以实现的：
-  // 移动端长按事件 
+  // 移动端长按事件
   body {
     user-select: none;
     -webkit-touch-callout: none;/* iOS Safari */
     -webkit-user-select: none;
   }
 
-  // 右键菜单事件 
+  // 右键菜单事件
   document.addEventListener('contextmenu', function (e) {
       e.preventDefault();
   });
-  
-  // pc端事件，移动端还是会出 
+
+  // pc端事件，移动端还是会出
   document.ontouchend = function () {
       throw new Error("NO ERROR:禁止长按弹出的菜单");
   }
 
-  // 复制事件   
+  // 复制事件
   document.addEventListener("copy", (e) => {
       e.preventDefault();
   })</code></pre>
@@ -5522,34 +5520,34 @@ var lis = ul.querySelector('li');
                 <li>
                   MouseEvent 和键盘事件对象 Keyboardevent
                   <pre><code class="language-js line-numbers">  div.addEventListener("mouseleave",function(e){
-    e.clientX                   // 返回鼠标相对于浏览器窗口可视区的X坐标 
-    e.clientY                   // 返回鼠标相对于浏览器窗口可视区的Y坐标 
-    e.pageX                     // 返回鼠标相对于文档页面的X坐标IE9+支持 
-    e.pageY                     // 返回鼠标相对于文档页面的Y坐标IE9+支持 
-    e.screenX                   // 返回鼠标相对于电脑屏幕的X坐标 
-    e.screenY                   // 返回鼠标相对于电脑屏幕的Y坐标 
+    e.clientX                   // 返回鼠标相对于浏览器窗口可视区的X坐标
+    e.clientY                   // 返回鼠标相对于浏览器窗口可视区的Y坐标
+    e.pageX                     // 返回鼠标相对于文档页面的X坐标IE9+支持
+    e.pageY                     // 返回鼠标相对于文档页面的Y坐标IE9+支持
+    e.screenX                   // 返回鼠标相对于电脑屏幕的X坐标
+    e.screenY                   // 返回鼠标相对于电脑屏幕的Y坐标
   })
-  
+
   // e.clientX 和 e.clientY 不管网页高多少，只会在当前可视区窗口返回坐标XY值，不会返回取决于高度的XY值
   // e.pageX 和 e.pageY 才是获取整个页面文档高度的X Y值，与e.client 的区别 ，实际开发常用
-  
+
   document.addEventListener('click', function(e) {
     console.log(e.screenX);     // 兼容大部分
     console.log(e.screenY);     // 兼容大部分
   })
 
   // IE8 不支持事件对象event ,所以要在前面加上一个 window，因为IE8以下是将事件对象作为window对象的属性保存的
-  // 兼容性解决方法： 
+  // 兼容性解决方法：
   document.addEventListener('click', function(e) {
       // 第一个写法
       if (!event) { //兼容IE 8 以下
           event = window.event;
       }
-      // 第二个写法 
+      // 第二个写法
       event = event || window.event;
 
-      console.log(e.screenX); 
-      console.log(e.screenY); 
+      console.log(e.screenX);
+      console.log(e.screenY);
   })</code></pre>
                 </li>
               </ol>
@@ -5598,7 +5596,7 @@ var lis = ul.querySelector('li');
       console.log(e.keyCode);
       // 如果要区分大小写，使用 keypress
   })
-  
+
   /*
   注意： onkeydown  和onkeyup  不区分字母大小写，onkeypress区分字母大小写。
         在我们实际开发中，我们更多的使用keydown 和 keyup，它能识别所有的键（包括功能键）
@@ -5700,7 +5698,7 @@ var lis = ul.querySelector('li');
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part7">
+      <el-card id="part7" shadow="hover">
         <h2>BOM</h2>
         <div class="ls-cot">
           <p>概述</p>
@@ -5715,8 +5713,8 @@ var lis = ul.querySelector('li');
     ·DOM是W3C标准规范                            ·BOM是浏览器厂商在各自浏览器上定义的，兼容性较差
 
   BOM 比 DOM 更大，它包含DOM。
-  
-                                  window       
+
+                                  window
       -------------------------------|----------------------------
       |            |                 |            |              |
   document       location        navigation     screen       history</code></pre>
@@ -5738,8 +5736,8 @@ var lis = ul.querySelector('li');
                 <li>注意1: 有了window.onload就可以把JS代码写到页面元素的上方，因为onload是等页面内容全部加载完毕，再去执行处理函数。</li>
                 <li>注意2: window.onload传统注册事件方式只能写一次，如果有多个，会以最后一个window.onload为准。 如果使用addEventListener则没有限制。</li>
               </ul>
-              <pre><code class="language-js line-numbers">  window.onload=function（）{}   或者   window.addEventListener（"load"，function（）{}）； 
-  
+              <pre><code class="language-js line-numbers">  window.onload=function（）{}   或者   window.addEventListener（"load"，function（）{}）；
+
   // window.onload是窗口（页面）加载事件，当文档内容完全加载完成才会触发该事件（包括图像、脚本文件、CSS文件等，就调用的处理函数。</code></pre>
             </li>
             <li>
@@ -5777,7 +5775,7 @@ var lis = ul.querySelector('li');
                   </ol>
                   <pre><code class="language-js line-numbers">  // window 在调用的时候可以省略     1秒 = 1000毫秒
   // 单位必须是毫秒，如果省略，默认是0   立马执行
-  // 调用函数可以直接写函数，还可以写函数名        
+  // 调用函数可以直接写函数，还可以写函数名
 
   function callback() {console.log('定时器');}
   // 如果多个需要多个定时效果，给定时器赋值一个标识符
@@ -5786,7 +5784,7 @@ var lis = ul.querySelector('li');
 
   // 案例：五秒自动关闭广告
   // 1、核心思路：5秒之后，就把这个广告隐藏起来
-  // 2、用定时器setTimeout 
+  // 2、用定时器setTimeout
   &lt;div&gt;广告&lt;/div&gt;
   &lt;script&gt;
       var div = document.querySelector('div');
@@ -5846,7 +5844,7 @@ var lis = ul.querySelector('li');
     var hour = document.querySelector('.hour');        // 小时的盒子
     var minute = document.querySelector('.minute');    // 分钟的盒子
     var second = document.querySelector('.second');    // 秒数的盒子
-    var inputTime = +new Date('2021-7-3 11:30:00');    // 如果有值，就是获取填入数值到1970年的总毫秒数 
+    var inputTime = +new Date('2021-7-3 11:30:00');    // 如果有值，就是获取填入数值到1970年的总毫秒数
     countDown();                                       // 先调用一次这个函数，防止第一次刷新页面有空白
     // 开启定时器
     setInterval(countDown, 1000);
@@ -5938,7 +5936,7 @@ var lis = ul.querySelector('li');
               <pre><code class="language-js line-numbers">  var o = {
     sayHi: function() {
         console.log(this);       // this 指向的是o调用者 这个对象
-    } 
+    }
   }
   o.sayHi();</code></pre>
             </li>
@@ -5967,7 +5965,7 @@ var lis = ul.querySelector('li');
   同步：
       前一个任务结束后再执行后一个任务，程序的执行顺序与任务的排列顺序是一致的、同步的。比如做饭的同步做法：
         我们要烧水煮饭，等水开了（10分钟之后），再去切菜，炒菜。
-      
+
   异步：
       你在做一件事情时，因为这件事情会花费很长时间，在做这件事的同时，你还可以去处理其他事情。比如做饭的异步做法：
         我们在烧水的同时，利用这10分钟，去切菜，炒菜。
@@ -6001,7 +5999,7 @@ var lis = ul.querySelector('li');
   },1000)
   console.log(2);  // 以上执行结果根据最新的H5 web  worker标准执行结果  1 2 3，实现异步效果
   // 无需等待
-  
+
   console.log(1);
   setInterval(function(){
       console.log(3);
@@ -6019,10 +6017,10 @@ var lis = ul.querySelector('li');
               <pre><code class="language-js line-numbers">  URL的一般语法格式为：
   protocol：//host[：port]/path/[？query]#fragment http://www.itcast.cn/index.html？name=andysage=18#1ink
 
-  /* 
+  /*
     组成
       protocol                    通信协议常用的http、ftp、WebSocket、TCP等
-      host                        主机（域名）www.baidu.com 
+      host                        主机（域名）www.baidu.com
       port                        端口号可选，省略时使用方案的默认端口如http的默认端口为80
       path                        路径由零或多个”符号隔开的字符串，一般用来表示主机上的一个目录或文件地址
       query                       参数以键值对的形式，通过&符号分隔开来
@@ -6042,7 +6040,7 @@ var lis = ul.querySelector('li');
               <ol>
                 <li>
                   代码
-                  <pre><code class="language-html line-numbers">  &lt;button&gt;点击&lt;/button&gt;   
+                  <pre><code class="language-html line-numbers">  &lt;button&gt;点击&lt;/button&gt;
   &lt;script&gt;
       var btn = document.querySelector('button');
       btn.addEventListener('click', function() {
@@ -6080,7 +6078,7 @@ var lis = ul.querySelector('li');
               location 对象的方法
               <pre><code class="language-js line-numbers">  location.assign()                          /* 跟href一样，可以跳转页面（也称为重定向页面） */
   location.replace()                         /* 替换当前页面，因为不记录历史，所以不能后退页面 */
-  location.reload()                          /* 重新加载页面，相当于刷新按钮或者f5如果参数为true 强制刷新ctrl+f5 */ 
+  location.reload()                          /* 重新加载页面，相当于刷新按钮或者f5如果参数为true 强制刷新ctrl+f5 */
   location.assign('https://www.baidu.com')   /* 有记录浏览历史，所以可以实现后退功能 */</code></pre>
             </li>
             <li>
@@ -6105,7 +6103,7 @@ var lis = ul.querySelector('li');
               window对象给我们提供了一个history对象，与浏览器历史记录进行交互。该对象包含用户（在浏览器窗口中）
               <pre><code class="language-js line-numbers">  history.forward ();     // 前进功能
   history.back();         // 可以后退功能
-  history.go(1);          // 前进后退功能参数如果是1前进1个页面如果是-1后退1个页面 
+  history.go(1);          // 前进后退功能参数如果是1前进1个页面如果是-1后退1个页面
                           // history对象一般在实际开发中比较少用，但是会在一些OA办公系统中见到。 </code></pre>
             </li>
           </ul>
@@ -6114,16 +6112,19 @@ var lis = ul.querySelector('li');
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="Javascript2Page">
 import { ref } from 'vue';
-let data = ref([
+
+const data = ref([
   { id: 1, h2: '数组' },
   { id: 2, h2: '函数' },
   { id: 3, h2: '对象' },
   { id: 4, h2: '正则表达式' },
   { id: 5, h2: '其他' },
   { id: 6, h2: 'DOM' },
-  { id: 7, h2: 'BOM' },
+  { id: 7, h2: 'BOM' }
 ]);
 </script>
+
 <style scoped lang="scss"></style>

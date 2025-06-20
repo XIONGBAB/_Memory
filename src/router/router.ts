@@ -52,7 +52,6 @@ export const constantRoute: Array<RouteRecordRaw> = [
         }
       }
     ]
-
   },
   {
     path: '/program',

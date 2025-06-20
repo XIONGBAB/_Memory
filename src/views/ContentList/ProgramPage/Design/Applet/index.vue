@@ -1,19 +1,22 @@
 <template>
-  <card-container :title="`applet`" :data="data">
+  <card-container title="applet" :data="data">
     <template #svg>
-      <svg t="1737705187916" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1485" width="40" height="40">
+      <svg
+        t="1737705187916" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="1485" width="40" height="40"
+      >
         <path
           d="M512 0a512 512 0 1 0 512 512A512 512 0 0 0 512 0z m256.717 460.186a151.962 151.962 0 0 1-87.347 65.74 83.251 83.251 0 0 1-24.474 4.096 29.082 29.082 0 0 1 0-58.163 15.667 15.667 0 0 0 6.451-1.229 91.443 91.443 0 0 0 55.91-40.96 75.264 75.264 0 0 0 11.06-39.628c0-45.978-42.496-83.866-94.31-83.866a105.267 105.267 0 0 0-51.2 13.414 81.92 81.92 0 0 0-43.725 70.452v244.224a138.445 138.445 0 0 1-72.704 120.422 159.642 159.642 0 0 1-79.77 20.48c-84.378 0-153.6-63.488-153.6-142.029a136.192 136.192 0 0 1 19.763-69.837 151.962 151.962 0 0 1 87.347-65.74 85.914 85.914 0 0 1 24.474-4.096 29.082 29.082 0 1 1 0 58.163 15.667 15.667 0 0 0-6.451 1.229 95.949 95.949 0 0 0-55.91 40.96 75.264 75.264 0 0 0-11.06 39.628c0 45.978 42.496 83.866 94.925 83.866a105.267 105.267 0 0 0 51.2-13.414 81.92 81.92 0 0 0 43.622-70.452V390.35a138.752 138.752 0 0 1 72.807-120.525 151.245 151.245 0 0 1 79.155-21.504c84.378 0 153.6 63.488 153.6 142.029a136.192 136.192 0 0 1-19.763 69.837z"
           fill="#00B240"
           p-id="1486"
-        ></path>
+        />
       </svg>
     </template>
     <template #describe>
       <p>小程序是一种轻量级的应用程序，它可以在手机等移动设备上运行，且无需用户下载安装即可使用。特点与优势有即用即走、快速加载、无缝切换、跨平台复用、多入口接入、节省空间。</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>小程序</h2>
         <div class="ls-cot">
           <p>小程序与普通网页开发的区别</p>
@@ -59,7 +62,9 @@
                 <li>微信开发者工具是官方推荐使用的小程序开发工具，它提供的主要功能如下：</li>
                 <li>
                   下载：推荐下载和安装最新的稳定版（Stable Build）的微信开发者工具，下载页面的链接如下：
-                  <el-link type="primary" icon="Link" target="_blank" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html">
+                    https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html
+                  </el-link>
                   默认安装即可，打开后登录
                 </li>
               </ul>
@@ -125,7 +130,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>小程序步骤</h2>
         <div class="ls-cot">
           <p>json配置文件的作用</p>
@@ -275,7 +280,7 @@
   {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs", 
+        "pages/logs/logs",
         "pages/list/list"   // 新增
     ],
     "window": {
@@ -312,7 +317,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>语法</h2>
         <div class="ls-cot">
           <p>WXML</p>
@@ -499,8 +504,7 @@
       &lt;view&gt;B&lt;/view&gt;
       &lt;view&gt;C&lt;/view&gt;
   &lt;/view&gt;
-  
-  
+
   /* pages/list/list.wxss */
   .container view{width: 100px;height: 100px;text-align: center;line-height: 100px;}
   .container view:nth-child(1){background-color: aquamarine;}
@@ -521,7 +525,7 @@
       &lt;view&gt;B&lt;/view&gt;
       &lt;view&gt;C&lt;/view&gt;
   &lt;/scroll-view&gt;
-  
+
   /* pages/list/list.wxss */
   .container view{ width: 100px;height: 100px;text-align: center;line-height: 100px;}
   .container view:nth-child(1){background-color: aquamarine;}
@@ -546,7 +550,7 @@
         &lt;view&gt; class="item"&gt;C&lt;/view&gt;
       &lt;/swiper-item&gt;
   &lt;/swiper&gt;
-  
+
   /* pages/list/list.wxss */
   .swiper-wrap {height: 150px;}
   .item {height: 100%;line-height: 150px;text-align: center;}
@@ -640,7 +644,7 @@
   &lt;button type="primary"&gt;主色调按钮&lt;/button&gt;
   &lt;button type="warn"&gt;警告按钮&lt;/button&gt;
   &lt;button disabled&gt;禁用按钮&lt;/button&gt;
-  
+
   &lt;button type="primary" size="mini"&gt;较小按钮&lt;/button&gt;
   &lt;button type="warn" size="mini" plain&gt;镂空按钮&lt;/button&gt;</code></pre>
                     </li>
@@ -1005,7 +1009,7 @@
                       <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view&gt;｛｛ info ｝｝&lt;/view&gt;
   &lt;image&gt; src="｛｛ imgSrc ｝｝" mode="widthFix"&gt;&lt;/image&gt;
-  
+
   // pages/list/list.js
   Page（｛
       /* 页面的初始数据 */
@@ -1020,7 +1024,7 @@
   &lt;view&gt;｛｛ info ｝｝&lt;/view&gt;
   &lt;view&gt;｛｛ randomNum1 &gt;= 5 ? '随机数大于5' : '随机数小于5' ｝｝&lt;/view&gt;    // 三元运算符
   &lt;view&gt;生成100以内的随机｛｛ randomNum2 * 100 ｝｝&lt;/view&gt;                // 算术运算
-  
+
   // pages/list/list.js
   Page（｛
       /* 页面的初始数据*/
@@ -1093,7 +1097,7 @@
                   </ol>
                   <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;button type="primary" bindtap="countChange"&gt;+1&lt;/button&gt;
-  
+
   // pages/list/list.js
   Page（｛
       /* 页面的初始数据 */
@@ -1182,7 +1186,7 @@
                     <li>
                       例如，下面的代码将不能正常工祚：
                       <pre><code class="language-html line-numbers">  &lt;button type="primary" bindtap="countChange(123)"&gt;+1&lt;/button&gt;  &lt;!-- 这种是错误的写法 --&gt;
-  
+
   // 因为小程序会把bindtap的属性值，统一当作事件名称来处理，相当于要调用一个名称为btnHandler(123)的事件处理函数。</code></pre>
                     </li>
                   </ol>
@@ -1204,8 +1208,8 @@
                       在事件处理函数中，通过event.target.dataset.参数名即可获取到具体参数的值，示例代码如下：
                       <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;button&gt; bindtap="countChange" data-info="｛｛ 123 ｝｝"&gt;+1&lt;/button&gt;   // ｛｛ 里面是转换为数字，如果不这样写是字符串｝｝
-  
-  // pages/list/list.js   
+
+  // pages/list/list.js
   Page（｛
       data: {
           count: 0
@@ -1213,7 +1217,7 @@
       countChange(e) {
           console.log(e.target.dataset);
           console.log(e.target.dataset.info);
-          this.setData({ 
+          this.setData({
             count: this.data.count + e.target.dataset.info // 这里就会按传递的参数进行增加，前面写法固定，名字自取
           });
       },</code></pre>
@@ -1235,7 +1239,7 @@
                     </li>
                     <li>
                       在页面的.js文件中定义事件处理函数：
-                      <pre><code class="language-js line-numbers">  // pages/list/list.js   
+                      <pre><code class="language-js line-numbers">  // pages/list/list.js
 Page（｛
     data: {
     },
@@ -1250,7 +1254,7 @@ Page（｛
             <li>
               实现文本框和data之间的数据同步实现步骤：
               <pre><code class="language-js line-numbers">  // 1、定义数据
-  // pages/list/list.js   
+  // pages/list/list.js
   Page（｛
       data: {
           msg: '定义数据'
@@ -1268,9 +1272,9 @@ Page（｛
       margin: 5px;
       border-radius: 3px;
   }
-  
+
   // 4、绑定input事件处理函数
-  // pages/list/list.js   
+  // pages/list/list.js
   Page（｛
       data: {
           msg: '定义数据'
@@ -1291,8 +1295,8 @@ Page（｛
                       在小程序中，使用wx:if="｛｛ condition ｝｝"来判断是否需要渲染该代码块：
                       <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view wx:if="｛｛ condition ｝｝"&gt; 如果插值为真，则会被渲染 &lt;/view&gt;
-  
-  // pages/list/list.js   
+
+  // pages/list/list.js
   Page（｛
       data: {
           condition: false
@@ -1303,9 +1307,9 @@ Page（｛
                       <pre><code class="language-html line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view wx:if="｛｛ type === 1 ｝｝"&gt; 男 &lt;/view&gt;
   &lt;view wx:elif="｛｛ type === 2 ｝｝"&gt; 女 &lt;/view&gt;
-  &lt;view wx:else="｛｛ type === 2 ｝｝"&gt; 保密 &lt;/view&gt; 
-  
-  // pages/list/list.js   
+  &lt;view wx:else="｛｛ type === 2 ｝｝"&gt; 保密 &lt;/view&gt;
+
+  // pages/list/list.js
   Page（｛
       data: {
           type: 1   // 此处为判断值
@@ -1318,7 +1322,7 @@ Page（｛
                   <ol>
                     <li>
                       如果要一次性控制多个组件的展示与隐藏，可以使用一个
-                      <block></block>
+                      <block />
                       标签将多个组件包装起来，
                     </li>
                     <li>
@@ -1375,9 +1379,8 @@ Page（｛
                       <pre><code class="language-html line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view wx:for="｛｛ array ｝｝"&gt;
       索引是：｛｛ index ｝｝ 当前项是｛｛ item ｝｝  &lt;/view&gt;
-  
-  
-  // pages/list/list.js   
+
+  // pages/list/list.js
   Page({
       data: {
           array: [1,2,3,4,5,6]
@@ -1407,8 +1410,8 @@ Page（｛
                       key值，从而提高渲染的效率，示例代码如下：
                       <pre><code class="language-html line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view&gt; wx:for="｛｛ userList ｝｝" wx:key="id"&gt;｛｛ item.name ｝｝&lt;/view&gt;
-  
-  // pages/list/list.js   
+
+  // pages/list/list.js
   Page（｛
       data: {
           userList:[{id:1, name: '小白'},
@@ -1483,10 +1486,10 @@ Page（｛
                       @import后跟需要导入的外联样式表的相对路径，用；表示语句结束。示例如下：
                       <pre><code class="language-js line-numbers">  &lt;!--pages/list/list.wxml--&gt;
   &lt;view class="small-p"&gt;我采用了公共样式@import导入放松&lt;/view&gt;
-  
+
   /**common.wxsss**/
   .small-p{padding: 5px;}
-  
+
   /**app.wxss**/
   @import '/common/common.wxss';
   .middle-p{padding: 15px;}</code></pre>
@@ -1515,7 +1518,7 @@ Page（｛
           </ol>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>全局配置</h2>
         <div class="ls-cot">
           <p>全局配置文件及常用的配置项</p>
@@ -1817,7 +1820,7 @@ Page（｛
       "list": [{
         "pagePath": "pages/list/list",
         "text": "尾页"
-      },{  
+      },{
         "pagePath": "pages/index/index",
         "text": "首页"
         }]
@@ -1899,7 +1902,7 @@ Page（｛
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part5">
+      <el-card id="part5" shadow="hover">
         <h2>其他</h2>
         <div class="ls-cot">
           <p>网络数据请求</p>
@@ -1944,7 +1947,7 @@ Page（｛
                   调用微信小程序提供的 wx.request（）方法，可以发起GET数据请求，示例代码如下：
                   <pre><code class="language-js line-numbers">  &lt;!--pases/home/home.wxml--&gt;
   &lt;button&gt; bindtap="getInfo"&gt; 发起GET请求&lt;/button&gt;
-  
+
   // pases/home/home.js
   Page（｛
       data: {
@@ -1967,7 +1970,7 @@ Page（｛
               发起Post请求
               <pre><code class="language-js line-numbers">  &lt;!--pases/home/home.wxml--&gt;
   &lt;button&gt; bindtap="postInfo"&gt; 发起Post请求&lt;/button&gt;
-  
+
   // pases/home/home.js
   Page（｛
       data: {
@@ -2003,7 +2006,7 @@ Page（｛
         this.getSwiperList();
         this.getGridList();
     },
-  
+
     // 获取轮播图的数据
     getSwiperList(){},
     // 获取九宫格的数据
@@ -2031,11 +2034,11 @@ Page（｛
           <pre><code class="language-js line-numbers">  // 1. 新建项目并梳理项目结构
   // project.config.json   添加关闭提示选项
   "checkSiteMap": false
-  
+
   {  // app.json 中添加首页文件
     "pages":[
-      "pages/home/home",         
-      "pages/message/message",  
+      "pages/home/home",
+      "pages/message/message",
       "pages/contact/contact"
     ],
   }
@@ -2079,13 +2082,13 @@ Page（｛
           &lt;image src="｛｛ item.image ｝｝"&gt;&lt;/image&gt;
       &lt;/swiper-item&gt;
   &lt;/swiper&gt;
-  
+
   // pages/home/home.js
   Page（｛
       data: {
           swiperList: []  // 定义一个空数组来存放轮播
       },
-  
+
       /* 生命周期函数--监听页面加载 */
       onLoad: function (options) {
           this.getSwiperList();
@@ -2102,12 +2105,12 @@ Page（｛
               }
           });
       },
-    
+
   /* 5. 实现九宫格效果
         接口地址
           获取轮播图数据列表的接口【GET】https://www.escook.cn/slides
           获取九宫格数据列表的接口【GET】https://www.escook.cn/categories */
-  
+
   // 6. 实现图片布局 </code></pre>
           <p>总结</p>
           <ul>
@@ -2244,7 +2247,7 @@ Page（｛
                   </table>
                   <pre><code class="language-html line-numbers">  &lt;!--pages/fTabBar/fTabBar.wxml--&gt;
   &lt;button&gt; bindtap="gotoMessage"&gt;跳转页面&lt;/button&gt;
-  
+
   // pages/contact/contact.js
   Page（｛
       data: {
@@ -2252,7 +2255,7 @@ Page（｛
       gotoMessage(){
         wx.switchTab({
           url: '/pages/home/home',
-        })  
+        })
       },</code></pre>
                 </li>
               </ul>
@@ -2298,7 +2301,7 @@ Page（｛
                   </table>
                   <pre><code class="language-html line-numbers">  &lt;!--pages/fTabBar/fTabBar.wxml--&gt;
   &lt;button bindtap="gotoInfo"&gt;跳转页面&lt;/button&gt;
-  
+
   // pages/contact/contact.js
   Page（｛
       data: {
@@ -2306,7 +2309,7 @@ Page（｛
       gotoInfo(){
         wx.navigateTo({
           url: '/pages/info/info',
-        })  
+        })
       },</code></pre>
                 </li>
               </ul>
@@ -2332,7 +2335,7 @@ Page（｛
                   调用wx.navigateTo（Object object）方法跳转页面时，也可以携带参数，代码示例如下：
                   <pre><code class="language-html line-numbers">  &lt;!--pages/fTabBar/fTabBar.wxml--&gt;
   &lt;button bindtap="gotoInfo2"&gt;跳转页面&lt;/button&gt;
-  
+
   // pages/contact/contact.js
   Page（｛
       data: {
@@ -2340,7 +2343,7 @@ Page（｛
       gotoInfo2(){
         wx.navigateTo({
           url: '/pages/info/info?name=zs&age=20',
-        })  
+        })
       },</code></pre>
                 </li>
               </ul>
@@ -2409,7 +2412,7 @@ Page（｛
                       在页面的，js文件中，通过onPullDownRefresh（）函数即可监听当前页面的下拉刷新事件。
                       <pre><code class="language-js line-numbers">  /* 页面相关事件处理函数--监听用户下拉动作 */
   onPullDownRefresh: function () {
-  
+
   },</code></pre>
                     </li>
                     <li>例如，在页面的wxml中有如下的UI结构，点击按钮可以让count值自增+1：</li>
@@ -2417,7 +2420,7 @@ Page（｛
                       在触发页面的下拉刷新事件的时候，如果要把count的值重置为0，示例代码如下：
                       <pre><code class="language-html line-numbers">  &lt;!--pages/message/message.wxml--&gt;
   &lt;view&gt;count值是：｛｛ count ｝｝&lt;/view&gt;
-  
+
   // pages/message/message.js
   Page（｛
       data: {
@@ -2428,7 +2431,7 @@ Page（｛
               count: this.data.count + 1
           });
       },
-  
+
     /**
        * 页面相关事件处理函数--监听用户下拉动作
        */
@@ -2512,7 +2515,7 @@ Page（｛
   // 3. 渲染UI结构并美化页面效果
   &lt;!--pages/message/message.wxml--&gt;
   &lt;view wx:for="｛｛ colorList ｝｝" wx:key="index" class="num-item" style="background-color: rgba｛｛ item ｝｝;"&gt;&lt;/view&gt;
-  
+
   /* pages/contact/contact.wxss */
   .num-item{
       border: 1rpx solid #efefef;
@@ -2590,7 +2593,7 @@ Page（｛
           },
         /* 生命周期函数--监听页面加载 */
         onLoad: function (options) {this.getColor();},
-        
+
         /* 页面上拉触底事件的处理函数 */
         onReachBottom: function () {
             if(this.data.isLoading) return
@@ -2664,13 +2667,13 @@ Page（｛
      * 当小程序启动，或从后台进入前台显示，会触发 onShow
      */
     onShow: function (options) {
-      
+
     },
     /**
      * 当小程序从前台进入后台，会触发 onHide
      */
     onHide: function () {
-      
+
     },</code></pre>
                     </li>
                     <li>
@@ -2682,7 +2685,7 @@ Page（｛
                       <pre><code class="language-js line-numbers">  Page({
     onLoad: function (options) { }, // 监听页面加载，一个页面只调用1次
     onReady: function () { },       // 监听页面显示，可以修改页面的标题等
-  
+
     onShow: function () { },        // 监听页面初次渲染完成，一个页面只调用1次
     onHide: function () { },        // 监听页面隐藏
     onUnload: function () { }       // 监听页面卸载，一个页面只调用1次
@@ -2738,11 +2741,10 @@ Page（｛
   Page（｛
     data: ｛
         username: "wx",
-  
+
   &lt;!--pages/home/home.wxml--&gt;
   &lt;view&gt;｛｛ m1.toUpper(username) ｝｝&lt;/view&gt;
-  
-  
+
   &lt;wxs module="m1"&gt;
     // 将文本转为大写形式 zs =&gt;  ZS
     module.exports.toUpper = function (str){
@@ -2760,8 +2762,7 @@ Page（｛
   function toLower(str){
     return str.toLowerCase();
   };
-  
-  
+
   module.exports = {
     toLower: toLower   // 不支持简写形式，一定要写全
   }</code></pre>
@@ -2774,7 +2775,7 @@ Page（｛
                       </ol>
                       <pre><code class="language-js line-numbers">  &lt;!--pages/message/message.wxml--&gt;
   &lt;view&gt;｛｛ m2.toLower(country) ｝｝&lt;/view&gt;
-  
+
   &lt;wxs src="../../utils/tools.wxs" module="m2"&gt;&lt;/wxs&gt;</code></pre>
                     </li>
                     <li>
@@ -2916,7 +2917,7 @@ Page（｛
               icon: 'none'
           })
       }
-    }   
+    }
   })</code></pre>
                         </li>
                         <li>
@@ -2932,7 +2933,7 @@ Page（｛
         max: Number  //简化定义属性的方式【不需指定属性默认值时，可以使用简化方式】
     }
   })
-  
+
   &lt;!--components/test1/test.wxml--&gt;
   &lt;my-test1&gt; max="10"&gt;&lt;/my-test1&gt;</code></pre>
                         </li>
@@ -2957,7 +2958,7 @@ Page（｛
           console.log(this.properties)  // 输出结果：{count：0，max：10}
           // 结果为true，证明 data数据和properties属性【在本质上是一样的、都是可读可写的】
           console.log(this.data===this.properties)
-        } 
+        }
     }
   })</code></pre>
                         </li>
@@ -2966,7 +2967,7 @@ Page（｛
                           <pre><code class="language-js line-numbers">  &lt;!--components/test1/test.wxml--&gt;
   &lt;text&gt;components/test1/test.wxml&lt;/text&gt;
   &lt;view&gt; max属性的值为：｛｛ max ｝｝&lt;/view&gt;
-  
+
   // components/test1/test.js
   Component({
       properties: { max: Number},                            // 定义属性
@@ -2999,7 +3000,7 @@ Page（｛
     options:{styleIsolation: 'isolated'},
     /* 组件的属性列表 */
     properties: {},
-  
+
     /* 组件的初始数据 */
     data: { n1: 0, n2: 0, sum: 0 },
     /* 组件的方法列表*/
@@ -3054,10 +3055,10 @@ Page（｛
       "my-test": "/components/test/test"
     }
   }
-  
+
   &lt;!--pages/home/home.wxml--&gt;
   &lt;my-test&gt;&lt;/my-test&gt;
-  
+
   // components/test/test.js
       /* 组件的初始数据*/
       data: {
@@ -3065,7 +3066,7 @@ Page（｛
           },
           fullColor: '0,0,0'
       },
-  
+
   渲染UI结构
   &lt;!--components/test/test.wxml--&gt;
   &lt;view&gt; style="background-color: rgb(｛｛ fullColor ｝｝);" class="colorBox"&gt;
@@ -3073,15 +3074,14 @@ Page（｛
   &lt;button&gt; size="mini" bindtap="changeR" type="default"&gt;R&lt;/button&gt;
   &lt;button&gt; size="mini" bindtap="changeG" type="primary"&gt;G&lt;/button&gt;
   &lt;button&gt; size="mini" bindtap="changeB" type="warn"&gt;B&lt;/button&gt;
-  
-  
+
   // components/test/test.js
   Component({
       /* 组件的属性列表 */
       properties: {
-  
+
       },
-  
+
       /* 组件的初始数据 */
       data: {
           rgb:{
@@ -3091,7 +3091,7 @@ Page（｛
           },
           fullColor: '0, 0, 0'
       },
-  
+
       /* 组件的方法列表 */
       methods: {
           changeR(){ // 修改 rgb 对象上的 r 属性值
@@ -3177,14 +3177,17 @@ Page（｛
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="Applet">
 import { ref } from 'vue';
-let data = ref([
+
+const data = ref([
   { id: 1, h2: '小程序' },
   { id: 2, h2: '小程序步骤' },
   { id: 3, h2: '语法' },
   { id: 4, h2: '全局配置' },
-  { id: 5, h2: '其他' },
+  { id: 5, h2: '其他' }
 ]);
 </script>
+
 <style scoped lang="scss"></style>

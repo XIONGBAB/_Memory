@@ -1,16 +1,19 @@
 <template>
-  <card-container :title="`javascript`" :data="data">
+  <card-container title="javascript" :data="data">
     <template #svg>
-      <svg width="40" height="40" t="1699148574627" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8149">
-        <path d="M64 64h896v896H64z" fill="#F5DE19" p-id="8150"></path>
-        <path d="M665.888 764a91.712 91.712 0 0 0 83.2 51.2c34.88 0 57.184-17.44 57.184-41.6 0-28.8-22.912-39.104-61.312-55.904l-21.056-9.024c-60.8-25.888-101.12-58.304-101.12-126.848 0-63.136 48-111.232 123.296-111.232a124.448 124.448 0 0 1 119.744 67.424L800 580.096A57.248 57.248 0 0 0 745.952 544a36.64 36.64 0 0 0-40.288 36.096c0 25.248 15.648 35.488 51.776 51.2l21.056 9.024c71.552 30.688 112 61.952 112 132.256 0 75.808-59.552 117.344-139.52 117.344a161.76 161.76 0 0 1-153.44-86.112z m-297.44 7.296c13.216 23.456 25.248 43.296 54.176 43.296 27.648 0 45.12-10.816 45.12-52.896v-286.304h84.192v287.424c0 87.168-51.2 126.848-125.728 126.848a130.72 130.72 0 0 1-126.304-76.8z" fill="" p-id="8151"></path>
+      <svg
+        width="40" height="40" t="1699148574627" class="icon" viewBox="0 0 1024 1024"
+        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8149"
+      >
+        <path d="M64 64h896v896H64z" fill="#F5DE19" p-id="8150" />
+        <path d="M665.888 764a91.712 91.712 0 0 0 83.2 51.2c34.88 0 57.184-17.44 57.184-41.6 0-28.8-22.912-39.104-61.312-55.904l-21.056-9.024c-60.8-25.888-101.12-58.304-101.12-126.848 0-63.136 48-111.232 123.296-111.232a124.448 124.448 0 0 1 119.744 67.424L800 580.096A57.248 57.248 0 0 0 745.952 544a36.64 36.64 0 0 0-40.288 36.096c0 25.248 15.648 35.488 51.776 51.2l21.056 9.024c71.552 30.688 112 61.952 112 132.256 0 75.808-59.552 117.344-139.52 117.344a161.76 161.76 0 0 1-153.44-86.112z m-297.44 7.296c13.216 23.456 25.248 43.296 54.176 43.296 27.648 0 45.12-10.816 45.12-52.896v-286.304h84.192v287.424c0 87.168-51.2 126.848-125.728 126.848a130.72 130.72 0 0 1-126.304-76.8z" fill="" p-id="8151" />
       </svg>
     </template>
     <template #describe>
       <p>JavaScript最初是由Netscape的工程师布兰登·艾奇（Brendan Eich）在1995年设计的，最初命名为LiveScript，但为了利用当时流行的Java语言的市场效应，它被改名为JavaScript。</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>前言</h2>
         <div class="ls-cot">
           <p>注意事项</p>
@@ -92,7 +95,7 @@
           </table>
           <p>js组成</p>
           <pre class="pre">
-                  ---javaScript---   
+                  ---javaScript---
   ECMAScript            DOM                   BOM
   js语法           页面文档对象模型      浏览器对象模型
           </pre>
@@ -108,10 +111,10 @@
 
   // 内嵌：
     &lt;script type='text/javascript'&gt;/* 写入想要的代码 */  &lt;/script&gt;                // type 可以省略
-  
+
   // 外部：
      &lt;script src="url"&gt;/* 里面不能再写js代码， 否则不执行这里面的js代码 */&lt;/script&gt;  // 推荐使用
-    
+
   // 引入时加上 defer 属性，表示延迟执行，等到整个页面全部加载完成，再执行js代码，这样页面加载速度会更快。相当于调了onload监听
   &lt;script defer src="url"&gt;&lt;/script&gt;</code></pre>
           <ul>
@@ -123,7 +126,7 @@
   2.多行   /*注释内容*/                    快捷键  shift + alt + a    vscode 可以修改快捷键
   3.解释型文档注释，先写好代码               输入：  /** 然后回车就会生成对应的说明
 
-  /** 
+  /**
   * 说明：对两个操作数进行加法运算
   * @param {number} a 第一个操作数 {}里 写的是类型
   * @param {number} b 第二个操作数 {}里 写的是类型
@@ -167,7 +170,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>变量</h2>
         <div class="ls-cot">
           <p>字面量和变量</p>
@@ -213,9 +216,9 @@
           <p>赋值多个变量 (用逗号隔开)</p>
           <pre><code class="language-js line-numbers">  var age = 18, name = ' 小强', address= 上海;
   /* 注意：
-      var age;  console.log(age);       只声明不赋值            undefined 
+      var age;  console.log(age);       只声明不赋值            undefined
       console.log(age)                  不声明不赋值直接使用     报错
-      age =10; console.log(age);        不声明只赋值            10   变量函数会提升，不声明，为全局变量，log 后还是能拿到 
+      age =10; console.log(age);        不声明只赋值            10   变量函数会提升，不声明，为全局变量，log 后还是能拿到
   */
   &lt;script&gt;
       age = 10;
@@ -247,7 +250,7 @@
         fn();                                                 // 输出 123
       }</code></pre>
           <p>值不能修改的量 称之为常量，const</p>
-          <pre><code class="language-js line-numbers">  const Arr = ['1', '2', '3']; 
+          <pre><code class="language-js line-numbers">  const Arr = ['1', '2', '3'];
   Arr.push('4');
   console.log(Arr);                    // 常量修改数组 不会报错
 
@@ -276,9 +279,9 @@
             <li>允许使用特殊符号开头的 ： $变量名（ $name ） _变量名( _name )</li>
           </ul>
           <p>数据交换</p>
-          <pre><code class="language-js line-numbers">  var temp;                 // 先声明一个临时空变量 
+          <pre><code class="language-js line-numbers">  var temp;                 // 先声明一个临时空变量
   var apple1 = '青苹果',     // 右边值赋予给左边的变量
-      apple2 = '红苹果';        
+      apple2 = '红苹果';
   temp = apple1;            // 把apple1的值赋予给 temp
   apple1 = apple2;          // 此时再把apple2的值赋予给apple
   apple2 = temp;            // 最后把temp的值赋予给apple 2</code></pre>
@@ -329,7 +332,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>数据类型</h2>
         <div class="ls-cot">
           <p>js的变量数据类型是只有程序在运行过程中，根据等号右边的值来确定的</p>
@@ -347,7 +350,7 @@
       String      字符串类型      如张三”注意咱们js里面，字符串都带引号
       Undefined   Undefined     var a;声明了变量a但是没有给值，此时a=undefined
       Null        Null          var a = null;  声明了变量a为空值null
-      object      对象             
+      object      对象
       *Symbol()   Symbol()      ES6增加的新对象数据类型，作用是用于确定一个唯一的数据，通常给对象添加唯一的属性或方法
    */</code></pre>
             </li>
@@ -359,7 +362,7 @@
                 <li>
                   数字型范围 （注意大小写）
                   <pre><code class="language-js line-numbers">  alert(Number.MAX_VALUE);    // 最大值 1.7976931348623157e+308 科学计数法10的308次方
-  alert(Number.MIN_VALUE);    // 最小值 大于0，最小的正值 5e-3   
+  alert(Number.MIN_VALUE);    // 最小值 大于0，最小的正值 5e-3
   alert(Infinity);            // 无穷大 Infinity alert(Number.MIN_VALUE * 2);
   alert(-Infinity);           // 负无穷大 -Infinity alert(-Number.MIN_VALUE * 2);
   alert(NaN);                 // 非数字 Not a Number  ，表示非法的数字，不是一个数字
@@ -371,7 +374,7 @@
             <li>
               字符串 String （在底层字符串是以字符数组的形式保存的，有索引号，也有长度属性length）
               <pre><code class="language-js line-numbers">  str = 'hello';
-  var result = str[2]; 
+  var result = str[2];
 
   // 字符串型可以是引号中的任意文本，其语法为"双引号' '和 '单引号'，不加引号会报错
   // 注意: JS可以用单引号嵌套双引号，或者用双引号嵌套单引号（外双内单，外单内双）</code></pre>
@@ -439,7 +442,7 @@
                 <li>
                   如何将数据类型进行强制转换呢？ Boolean()函数
                   <pre><code class="language-js line-numbers">  var str = "0";
-  var arr = []; 
+  var arr = [];
 
   var res1 = Boolean(str);   /* true */
   var res2 = Boolean(arr);   /* true */</code></pre>
@@ -492,8 +495,8 @@
             <li>
               prompt( ); 中取出来的值是字符型
               <pre><code class="language-js line-numbers">  var num = 0x9;                  // log 输出为9
-  console.log(typeof num);        // number 
-  var str = '你好';      
+  console.log(typeof num);        // number
+  var str = '你好';
   console.log(typeof str);        // string</code></pre>
             </li>
             <li>
@@ -501,7 +504,7 @@
               <pre><code class="language-js line-numbers">  console.log(18);                // 18          绿色代表数字型
   console.log('18');              // 18          黑色代表字符型
   console.log(true);              // true        绿色代表数字类型
-  console.log(undefined);         // undefined   
+  console.log(undefined);         // undefined
   console.log(null);              // null</code></pre>
             </li>
             <li>
@@ -520,28 +523,28 @@
               转换为字符串类型： 注意大小写，重点记住拼接方法，num1 和 num2注意方式
               <pre><code class="language-js line-numbers">  var num1 = 1;
   console.log(num1.toString());         /* 调用谁谁的方法：转成字符串调方法 */
-  num1 = num1.toString()                /* 转换后不会改变原变量，会在内存地址新增一个为1的字符串。重新赋值才会得到字符串1 */   
+  num1 = num1.toString()                /* 转换后不会改变原变量，会在内存地址新增一个为1的字符串。重新赋值才会得到字符串1 */
 
   var num2 = 1;
   console.log(String(num2));            /* 字符串函数：强制转换字符串 */
 
-  var num3 = 1;      
+  var num3 = 1;
   console.log(num3 + "我是字符串");       /* 拼接方法转换 */
 
   // 注意：NaN 和 undefined  是没有  toString 方法的</code></pre>
             </li>
             <li>
               转换为布尔型
-              <pre><code class="language-js line-numbers">  // 代表空、否定的值会被转换为false， 如"、0、NaN、null、undefined  其余值都会被转换为true 
-  console.log(Boolean(""));                  // false 
+              <pre><code class="language-js line-numbers">  // 代表空、否定的值会被转换为false， 如"、0、NaN、null、undefined  其余值都会被转换为true
+  console.log(Boolean(""));                  // false
   console.log(Boolean(" "));                 // true 加了空格表示有字符
-  console.log(Boolean(0));                   // false 
-  console.log(Boolean(NaN));                 // false 
-  console.log(Boolean(null));                // false 
-  console.log(Boolean(undefined));           // false 
-  console.log(Boolean("小白"));               // true 
-  console.log(Boolean(12));                  // true 
-  console.log(Boolean(Infinity));            // true 
+  console.log(Boolean(0));                   // false
+  console.log(Boolean(NaN));                 // false
+  console.log(Boolean(null));                // false
+  console.log(Boolean(undefined));           // false
+  console.log(Boolean("小白"));               // true
+  console.log(Boolean(12));                  // true
+  console.log(Boolean(Infinity));            // true
   console.log(Boolean(Object));              // true </code></pre>
             </li>
             <li>
@@ -564,13 +567,13 @@
               两数相加
               <pre><code class="language-js line-numbers">  var num1 = prompt('请输入您的第一个数值');
   var num2 = prompt('请输入您的第二个数值');
-  var sum = parseInt(num1) + parseInt(num2); 
+  var sum = parseInt(num1) + parseInt(num2);
   alert('总数为：'+sum+'')</code></pre>
             </li>
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>标识符 关键字 保留字</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -598,7 +601,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part5">
+      <el-card id="part5" shadow="hover">
         <h2>运算符</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -621,8 +624,8 @@
   10 - 20 = -10; /* 减 */
   10 * 20 = 200; /* 乘 */
   10 / 20 = 0.5; /* 除 */
-  9 %  2  = 1;   /* 取余 取模就是 除数 / 被除数 = 商 余 几 ， 如果 除数 小于 被除数 ，取模的值为除数本身 */ 
-  5 ** 5 = 3125  /* ** 幂运算，5的5次方 */ 
+  9 %  2  = 1;   /* 取余 取模就是 除数 / 被除数 = 商 余 几 ， 如果 除数 小于 被除数 ，取模的值为除数本身 */
+  5 ** 5 = 3125  /* ** 幂运算，5的5次方 */
   var a = 8;
   var b = 5;
   console.log(a % b); //3 如果 a > b ,值等于b</code></pre>
@@ -639,7 +642,7 @@
             <li>
               递增和递减运算符： ++在前等于原值，++在后等于新值，说的是表达式的值
               <pre><code class="language-js line-numbers">  var a = 10;
-  console.log(a++);  // a++ = 10   a = a+1  
+  console.log(a++);  // a++ = 10   a = a+1
   console.log(a);    // a = 11
   console.log(++a);  // a= a+1   a=a++  a++ = 11
   console.log(a);    // a=11
@@ -656,7 +659,7 @@
   a++     是表达式，a++等于原变量的值
   ++a     是表达式，++a等于原变量自增后的新值
   a - -   是表达式，a- - 是等于自减前的值
-  - -a    是表达式，- -a 是自减后的新值  
+  - -a    是表达式，- -a 是自减后的新值
 
   var a = 10;
   a++;
@@ -676,27 +679,27 @@
               练习--47集 错误的思路：
               <pre><code class="language-js line-numbers">  var a = 10;                //++在前，先加1 后赋值
   ++a;                       //a= 10+1=11  ，返回值等于 11+10 = 21
-  var b = ++a + 2;           //b = 11+1=12  12 + 21 =23  23 + 2           
-  console.log(a);            // a=12           
-  console.log(b);            // b=25           
+  var b = ++a + 2;           //b = 11+1=12  12 + 21 =23  23 + 2
+  console.log(a);            // a=12
+  console.log(b);            // b=25
 
   var c = 10;                //++在后，先赋值 后+1
-  c++;                       //c= 10   ,c++返回值为 11    
-  var d = c++ + 2;           //d= 11+2  
-  console.log(d);            //d= 13              
-  console.log(c);            //c=10        
-  
-  var e = 10;       
-  var f = e++ + ++e;         // 11 + 21       
-  console.log(f);            // f =32  
+  c++;                       //c= 10   ,c++返回值为 11
+  var d = c++ + 2;           //d= 11+2
+  console.log(d);            //d= 13
+  console.log(c);            //c=10
+
+  var e = 10;
+  var f = e++ + ++e;         // 11 + 21
+  console.log(f);            // f =32
   console.log(e);            // 10</code></pre>
             </li>
             <li>
               正确思路：
               <pre><code class="language-js line-numbers">  var a = 10;                // a=10
-  ++a;                       // ++在前，先加1(a= (a+1)=11 ) 后赋值 ++a = a ,所以a++值是11 ;  
+  ++a;                       // ++在前，先加1(a= (a+1)=11 ) 后赋值 ++a = a ,所以a++值是11 ;
   var b = ++a + 2;           // b= (a先加1,之前a是11，所以现在+1了，a =12 ), 再赋值 ++a =12(a),那么  12 + 2
-  console.log(a);            // a=12 
+  console.log(a);            // a=12
   console.log(b);            // b=12+2  b=14
 
   var c = 10;                // c = 10
@@ -705,7 +708,7 @@
   console.log(d);            // 13
   console.log(c);            // 12
 
-  var e = 10;                // e = 10 
+  var e = 10;                // e = 10
   var f = e++ + ++e;         // 先赋值 e++ =10  （e = e+1= 11）   +    先加1(e = e+1= 12)   ++e =12
   console.log(f);            // f = e++ + ++e =   10 +12
   console.log(e);            // 12</code></pre>
@@ -775,9 +778,9 @@
 
   注意：== 会默认转换数据类型          // 数字型（10）和字符型（' 10 '）数字比较，会把字符型数字转化成数字型
 
-  console.log(18 == '18');           // true       字符串型数据会被转换 
+  console.log(18 == '18');           // true       字符串型数据会被转换
   console.log(18 != 18);             // false
-  console.log(18 != '18');           // false      等于,值相等就可以  
+  console.log(18 != '18');           // false      等于,值相等就可以
   console.log(18 === '18');          // false      全等：两侧的值，还有数据类型要完全相等才会true
 
   =                                  // 赋值把右边给左边
@@ -808,7 +811,7 @@
                 <li>第一个为true，此时会看第二个结果，如果为true，返回第二个true，如果为false，则返回false</li>
               </ol>
               <pre><code class="language-js line-numbers">  var res = 2 &gt; 1 && 3 &gt; 1;          var res = 2 &gt; 1 && 3 &gt; 1;
-  //        true     true                      true     false 
+  //        true     true                      true     false
   result:true                        result:false</code></pre>
             </li>
             <li>
@@ -819,7 +822,7 @@
                 <li>第一个为false，则返回第二个结果，不管true还是false</li>
               </ol>
               <pre><code class="language-js line-numbers">  var res = 2 &gt; 3 || 1 &lt; 2;          var res = 2 &gt; 1 || 3 &gt; 1;
-  //        false    true                      false    false 
+  //        false    true                      false    false
   result:true                        result:false</code></pre>
             </li>
             <li>
@@ -865,7 +868,7 @@
                     <li>例子</li>
                   </ol>
                   <pre><code class="language-js line-numbers">  console.log(123 || 456);                // 左边的表达式，除了0，其余的数字都是true，所以这里返回左边的结果 123
-  console.log(0 || 456);                  // 左边的表达式，0是false，则返回表达式2，返回第二个结果   456 
+  console.log(0 || 456);                  // 左边的表达式，0是false，则返回表达式2，返回第二个结果   456
   console.log(0 || 456 || 123+456);       // 左边的表达式，0是false，则返回表达式2，表达式2和表达式3比较，表达式2为true，则中断，结果直接返回表达式2   456
   console.log(0 || null || undefined);    // 三个表达式，全部为false，则返回第三个表达式</code></pre>
                 </li>
@@ -875,7 +878,7 @@
               重要：逻辑中断会影响后面的输出结果
               <pre><code class="language-js line-numbers">  var num = 0;
   console.log(123 || num++);    // 返回结果 123，因为逻辑中断，不执行第二句 num++
-  console.log(num);             // 返回结果 0     
+  console.log(num);             // 返回结果 0
 
   var num = 0;
   console.log(123 && num++);    // 返回结果 0，123为true,但是 num++ num=0，false，所以返回表达式2 , num++,  num = 1
@@ -888,13 +891,13 @@
   var usrName = "我是值";
   var age = 10;            // 直接赋值
   age += 5;                // 15   +=  -=   相当于  age = age + 5;
-  var age = 2;  
+  var age = 2;
   age *= 5;                // 10   *= /= %= 相当于  age = age * 5;
   age ??= 5;               // ??=  空值合并运算符，当左侧为null或者undefined时，返回右侧的值，否则返回左侧的值</code></pre>
           <p>优先级</p>
           <pre><code class="language-js line-numbers">  1    小括号        （）
   2    一元运算符     ++ -- ！
-  3    算术运算符     顺序 *  / %   +  -    
+  3    算术运算符     顺序 *  / %   +  -
   4    关系运算符     &gt;   &gt;=    &lt;    &lt;=
   5    相等运算符     ==    !=    ===    !==
   6    逻辑运算符     顺序  &&   ||
@@ -909,28 +912,28 @@
   // 1、        false    或    true      与    取反 !(false) 与 true     与要比或大，先算与，再对比或
   console.log(4 &gt;= 6 || '人' != '阿凡达' && !(12 * 2 == 144) && true);  // true
   var num = 10;
-  // 3、          true     与     true       结果肯定返回true                   
+  // 3、          true     与     true       结果肯定返回true
   // 2、          true     与     '22'                 === '22'
   // 1、         5 ==  5   与     '22'                 === '22'
   console.log(5 == num / 2 && (2 + 2 * num).toString() === '22');        // true</code></pre>
             </li>
             <li>
               练习2
-              <pre><code class="language-js line-numbers">  //       F    &&   T   &&   F     
+              <pre><code class="language-js line-numbers">  //       F    &&   T   &&   F
   var a = 3 &gt; 5 && 2 &lt; 7 && 3 == 4;           // 大于号(开口向左)  &gt;  小于号（开口向右） &lt;
-  console.log(a);                             // a= false        
+  console.log(a);                             // a= false
   //      F      ||   T   ||   T
   var b = 3 &lt;= 4 || 3 &gt; 1 || 3 != 2;
-  console.log(b);                             // b = true 
-  var c = 2 === "2";   
-  console.log(c);                             // c = false                     
-  var d = !c || b && a;                       // d = !(F) ||  T && F   
+  console.log(b);                             // b = true
+  var c = 2 === "2";
+  console.log(c);                             // c = false
+  var d = !c || b && a;                       // d = !(F) ||  T && F
   console.log(d);                             // d = true ||  F    d= T    </code></pre>
             </li>
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part6">
+      <el-card id="part6" shadow="hover">
         <h2>代码块</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -949,7 +952,7 @@
   }</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part7">
+      <el-card id="part7" shadow="hover">
         <h2>流程控制 -分支</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -966,7 +969,7 @@
   顺序执行       条件执行         循环执行
     A           --判断--          A &lt;-------
     |           |     |           |        |
-    B           A     B          判断------|    条件成立 yes，继续循环 
+    B           A     B          判断------|    条件成立 yes，继续循环
                                   |   no
                                   |
                                 跳出循环</code></pre>
@@ -1010,8 +1013,8 @@
         ...        // 可以写很多个case
     default:
         执行最后一条语句;
-  } 
-  
+  }
+
   // 省略写法
   switch (表达式) {
       case value1:
@@ -1021,10 +1024,10 @@
       case value3:
       case value4:
           console.log(2);
-          break; 
+          break;
       default:
           console.log(3);
-  } 
+  }
   // 当代码相同时候，可以省略重复代码，因为碰到break才会跳出循环，所以会执行下一个case</code></pre>
                 </li>
               </ol>
@@ -1060,7 +1063,7 @@
               <pre><code class="language-js line-numbers">  // 练习1
   var age = prompt('请输入您的年龄');
   var age2 = 18;
-  if (age &gt;= age2) {         
+  if (age &gt;= age2) {
       // 推荐写法， age &gt;= age2  因为这里不需要parseIbt转型，因为等号会转换数据类型
       // 复杂写法： parseInt(age) &gt; age2  这里需要parseInt转型，因为输出的是字符串
       alert('您已经满18岁，可以进入网吧了');
@@ -1131,12 +1134,12 @@
   var num3 = parseInt(prompt('num3 ='));          // 1
 
   if (num1 &lt; num2 & num1 &lt; num3) {                // num1 最小
-      if (num2 &lt; num3) {                          // num2 最小 
+      if (num2 &lt; num3) {                          // num2 最小
           alert(num3 + ',' + num2 + ',' + num1);
       } else
           alert(num2 + ',' + num3 + ',' + num1);
   } else if (num2 &lt; num1 && num2 &lt; num3) {        // num2 最小
-      if (num1 &lt; num3) {                          // num1 最小 
+      if (num1 &lt; num3) {                          // num1 最小
           alert(num3 + ',' + num1 + ',' + num2);
       } else {
           alert(num1 + ',' + num3 + ',' + num2);
@@ -1149,7 +1152,7 @@
       }
   }
 
-  /* 练习8：判断月份有多少天  
+  /* 练习8：判断月份有多少天
       输入年月输出该月份有多少天
       闰年公式：年份能4整除，但不能被100整除；或者年份能被400整除。闰年的2月份是29天，平年前2月份是28天。*/
   var year = parseInt(prompt('请输入年份：'));
@@ -1173,7 +1176,7 @@
   }
   console.log(year + '年' + month + '月有' + days + '天');
 
-  /* 练习9: 判断输入年份得出当天是全年的第几天   
+  /* 练习9: 判断输入年份得出当天是全年的第几天
       输入年月日，第出该日期是金年的着多少天 */
   let year = parseInt(prompt('请输入年份：'));
   let month = parseInt(prompt('请输入月份：'));
@@ -1183,8 +1186,8 @@
   // 比如输入的日期是：2021-8-8。
   // 01.累加整月的天数   整月指的是1月到7月
   let i = 1;                  // 表示从1月开始循环
-  while (i &lt; month) {         // 如装month是8，i可以取值为7 
-      //判i是几，从而确定都个月份有多少天 
+  while (i &lt; month) {         // 如装month是8，i可以取值为7
+      //判i是几，从而确定都个月份有多少天
       switch (i) {
           case 1:
           case 3:
@@ -1209,7 +1212,7 @@
       }
       i++;                     // 每循环一次，i加1
   }
-  // 02.再加上当前月份的天数   当前月份的天数是8 
+  // 02.再加上当前月份的天数   当前月份的天数是8
   sum += day;
   console.log(`${year}-${month}-${day}是全年的第${sum}天`);</code></pre>
             </li>
@@ -1225,13 +1228,13 @@
             <li>
               练习
               <pre><code class="language-js line-numbers">  var num1 = prompt('请输入您的数字');
-  var result = num1 &lt; 10 ? '0' + num1 : num1;    // 需要接收值，给个变量 
+  var result = num1 &lt; 10 ? '0' + num1 : num1;    // 需要接收值，给个变量
   alert(result);</code></pre>
             </li>
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part8">
+      <el-card id="part8" shadow="hover">
         <h2>循环</h2>
         <div class="ls-cot">
           <p>可以重复执行某些代码</p>
@@ -1327,7 +1330,7 @@ for (let i = 100; i &lt;1000; i++) {
       for (var j = 1; j <= 5; j++) { //内层控制个数
           str = str + '⭐';
       }
-     str = str + '\n'; // 如果一行打印完5个星星，就另起一行 
+     str = str + '\n'; // 如果一行打印完5个星星，就另起一行
   }
   console.log(str);</code></pre>
                     </li>
@@ -1405,7 +1408,7 @@ for (let i = 100; i &lt;1000; i++) {
 
   var sum = 0;
   for (var i = 1; i &lt;= 100; i++) {
-      sum += i;                                    // sum = sum + i; 
+      sum += i;                                    // sum = sum + i;
   }
   console.log(sum);
 
@@ -1601,7 +1604,7 @@ for (let i = 100; i &lt;1000; i++) {
 
   // 案例18：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何?
   /* 百钱白鸡
-        1公鸡 = 5元 
+        1公鸡 = 5元
         1母鸡 = 3元
         3小鸡 = 1元
       问：100元买了100只鸡，请问公鸡、母鸡、小鸡买多少只
@@ -1618,7 +1621,7 @@ for (let i = 100; i &lt;1000; i++) {
            }
       }
   }
-  
+
   /* 百钱买百鸡：公鸡5文钱一只，母鸡3文钱一只，小鸡1文钱3只，请问公鸡母鸡小鸡各多少只
      假设会是公鸡：一共有20只
      假设全是母鸡：一共有33只
@@ -1661,11 +1664,11 @@ for (let i = 100; i &lt;1000; i++) {
       let sum = 0; // 表示每个班级的总分
       // 内层新环表示每个班级的学生
       for (let j = 1; j <= 4; j++) {
-          // 接收每个学生的成绩 
+          // 接收每个学生的成绩
           let score = parseInt(prompt(`请输入第${i}个班级第${j}位学生成绩：`));
           // 将营个学生的成绩，员加到他对应的班级总分中
-          sum += score; // sum = sum + score 
-          // 在内层for循环结束后，计算该班级的平均分 
+          sum += score; // sum = sum + score
+          // 在内层for循环结束后，计算该班级的平均分
           let avg = sum / j;
           console.log(`第${i}个班级的平均分是：${avg}`);
       }
@@ -1682,22 +1685,22 @@ for (let i = 100; i &lt;1000; i++) {
                  x = 12
         鸡的数量：（35-x）= 35 - 12 = 23
     答：兔子有12只，鸡有23只
-  
+
     1、（兔的脚数×总只数－总脚数）÷（兔的脚数－鸡的脚数）=鸡的只数： ( 4 * 35 - 94)  / ( 4- 2 ) = 23
           总只数－鸡的只数=兔的只数： 35 - 23 = 12
     2、（总脚数－鸡的脚数×总只数）÷（兔的脚数－鸡的脚数）=兔的只数： （ 94 - 2 * 35） / ( 4- 2 ) = 12
           总只数－兔的只数=鸡的只数： 35-12 = 23
     3、总脚数÷2—总头数=兔的只数    ： 94 / 2 - 35 = 12
           总只数—兔的只数=鸡的只数 ： 35 - 12 = 23
-  
+
     此题目中存在的相等关系有：鸡头数+兔头数=总头数；鸡脚数+兔脚数=总脚数。*/
 
-  /* 代码计算方式 
+  /* 代码计算方式
      35头  94只脚
      假设全部是鸡 一共有35只
      假设全部是兔子 一共有23只，因为不可能有35只，兔子4条腿，94 / 4 会等于23.5，不符合
-     23只的话 23*4 = 92 比较合理，还剩两只脚   
-     1、第一层表示鸡的数量   */ 
+     23只的话 23*4 = 92 比较合理，还剩两只脚
+     1、第一层表示鸡的数量   */
   for (let i = 1; i &lt;= 35; i++) {
       for (let t = 1; t &lt;= 23; t++) {
           if (i + t == 35 && i * 2 + t * 4 === 94) {
@@ -1793,8 +1796,8 @@ for (let i = 100; i &lt;1000; i++) {
             </li>
             <li>
               使用break语句时，可以在break后面跟着一个label,这样break将会结束指定的循环，而不是最近的
-              <pre><code class="language-js line-numbers">  // 循环名称可以自定义 
-  label:           
+              <pre><code class="language-js line-numbers">  // 循环名称可以自定义
+  label:
   for (var i = 1; i &lt; 100; i++) {
       for(var j = 1; j&lt;=i;j++){
           break label;               // 结束哪个循环就写哪个循环名称，这样就不会结束离最近的循环了
@@ -1835,9 +1838,11 @@ for (let i = 100; i &lt;1000; i++) {
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="JavascriptPage">
 import { ref } from 'vue';
-let data = ref([
+
+const data = ref([
   { id: 1, h2: '前言' },
   { id: 2, h2: '变量' },
   { id: 3, h2: '数据类型' },
@@ -1845,7 +1850,8 @@ let data = ref([
   { id: 5, h2: '运算符' },
   { id: 6, h2: '代码块' },
   { id: 7, h2: '流程控制 -分支' },
-  { id: 8, h2: '循环' },
+  { id: 8, h2: '循环' }
 ]);
 </script>
+
 <style scoped lang="scss"></style>

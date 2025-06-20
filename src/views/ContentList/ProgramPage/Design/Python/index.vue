@@ -1,31 +1,36 @@
 <template>
-  <card-container :title="`python`" :data="data">
+  <card-container title="python" :data="data">
     <template #svg>
-      <svg t="1737718400630" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4768" width="40" height="40">
+      <svg
+        t="1737718400630" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="4768" width="40" height="40"
+      >
         <path
           d="M366.635375 495.627875c8.93024999-1.488375 17.8605-2.480625 26.79075-2.48062499h-7.44187499 241.61287499c10.418625 0 20.341125-1.488375 30.26362501-3.969 44.65124999-12.403125 77.3955-52.093125 77.3955-101.20950002V185.053625c0-57.5505-49.116375-101.2095-107.65912501-110.63587501-37.209375-5.9535-91.287-8.93024999-128.00025-8.93024999-36.71325001 0-71.938125 3.472875-103.194 8.93024999C305.115875 90.29374999 288.74374999 123.534125 288.74374999 185.053625v66.48075h223.25625001V288.74374999H216.3095C133.456625 288.74374999 65.983625 387.96874999 65.4875 510.0155v1.9845c0 22.325625 1.9845 43.659 6.449625 63.504C90.29374999 667.78325001 147.84424999 735.25625001 216.3095 735.25625001h35.224875v-106.66687501c0-62.51174999 46.63574999-120.558375 115.101-132.9615z m23.814-283.7835c-22.325625 0-40.68225001-18.356625-40.18612499-40.68225 0-22.325625 17.8605-40.68225001 40.18612499-40.68225s40.68225001 18.356625 40.68225 40.68225c-0.496125 22.82175001-18.356625 40.68225001-40.68225 40.68225z"
           fill="#0075AA"
           p-id="4769"
-        ></path>
+        />
         <path
           d="M949.086125 434.108375C927.75275001 349.271 872.682875 288.74374999 807.6905 288.74374999h-35.224875v94.75987501c0 78.883875-51.597 135.93825001-115.101 145.86075-6.449625 0.99224999-12.89925001 1.488375-19.34887499 1.48837501H396.402875c-10.418625 0-20.341125 1.488375-30.26362499 3.969-44.65124999 11.907-77.3955 48.62025001-77.3955 96.74437499V834.48125001c0 57.5505 58.046625 91.783125 115.10099998 108.15524999 67.969125 19.845 142.387875 23.317875 224.24850002 0 54.077625-15.379875 107.163-46.63574999 107.16299998-108.15525001v-61.5195h-223.25624999V735.25625001h295.6905c58.54275001 0 109.643625-49.6125 134.449875-122.04675001 10.418625-30.263625 16.372125-64.49625001 16.372125-101.2095 0-27.286875-3.472875-53.5815-9.426375-77.891625z m-316.52775 372.58987501c22.325625 0 40.186125 18.356625 40.186125 40.68224999 0 22.325625-18.356625 40.68225001-40.186125 40.68225001-22.325625 0-40.68225001-18.356625-40.68225-40.68225001 0.496125-22.325625 18.356625-40.68225001 40.68225-40.68225001z"
           fill="#FFD400"
           p-id="4770"
-        ></path>
+        />
       </svg>
     </template>
     <template #describe>
       <p>Python是一种高级、解释型、交互式和面向对象的脚本语言。Python是一种功能强大且易于学习的编程语言，具有广泛的应用领域和丰富的生态系统。无论是对于初学者还是资深开发者来说，Python都是一个值得学习和掌握的语言</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>前言</h2>
         <div class="ls-cot">
           <p>安装Python解释器</p>
           <ol>
             <li>
               3.10版本: 一款用于执行Python代码的应用程序，官网
-              <el-link type="primary" icon="Link" target="_blank" href="https://www.python.org/downloads/">https://www.python.org/downloads/</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://www.python.org/downloads/">
+                https://www.python.org/downloads/
+              </el-link>
               <ul>
                 <li>双击安装</li>
                 <li>第一个默认安装，第二个为自定义安装，都要勾选Add 环境变量PATH的选项</li>
@@ -38,7 +43,9 @@
                   <ol>
                     <li>
                       安装官网：
-                      <el-link type="primary" icon="Link" target="_blank" href="https://www.jetbrains.com/">https://www.jetbrains.com/</el-link>
+                      <el-link type="primary" icon="Link" target="_blank" href="https://www.jetbrains.com/">
+                        https://www.jetbrains.com/
+                      </el-link>
                     </li>
                     <li>点击 Choose your tool</li>
                     <li>点击Pycharm 的buy => 再点击右上角的 download</li>
@@ -178,7 +185,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>语法</h2>
         <div class="ls-cot">
           <p>注释</p>
@@ -622,18 +629,18 @@
             </li>
             <li>
               代码
-              <pre><code class="language-python line-numbers">  name = "小明"     
-  weight = 75      
-  height = 170      
-  print('我的名字叫%s,我的体重为%.2f公斤,我的身高为%.2fcm,请关照' % (name,weight,height))  
+              <pre><code class="language-python line-numbers">  name = "小明"
+  weight = 75
+  height = 170
+  print('我的名字叫%s,我的体重为%.2f公斤,我的身高为%.2fcm,请关照' % (name,weight,height))
   # 这里会引用变量 进行输出
-  
-  a = 321      
-  b = 123 
-  print('%d * %d = %d' % (a,b,a * b))    # 321 *123 = 39483      
-  # 可以用字符串的方法来处理      
-  print('{0} * {1} = {2}'.format(a,b,a * b))  # 321 *123 = 39483      
-  # 用f打头，来格式化字符串 注意，只支持 Python 3.6 版本      
+
+  a = 321
+  b = 123
+  print('%d * %d = %d' % (a,b,a * b))    # 321 *123 = 39483
+  # 可以用字符串的方法来处理
+  print('{0} * {1} = {2}'.format(a,b,a * b))  # 321 *123 = 39483
+  # 用f打头，来格式化字符串 注意，只支持 Python 3.6 版本
   print(f'{a} * {b} = {a * b}')   # 321 *123 = 39483  </code></pre>
             </li>
             <li>
@@ -724,48 +731,48 @@
               <pre><code class="language-python line-numbers">  if 要判断的条件：
       条件成立时，要做的事情     # 语法：注意4个空格，缩进 Tab，但不要混用
       .....
-    
+
   # 例子：
   age = 25
   if age >= 30:
-      print("大于30")                   
-  elif age >= 18:           # 相当于else if(){ } 
-      print("大于18")                   
+      print("大于30")
+  elif age >= 18:           # 相当于else if(){ }
+      print("大于18")
   else:                     # 所有条件不成立才会进入到 else
       print("小于18")
-  
+
   age = int(input('请出入年龄：'))
   if age<=0 or age>=120:
-      age1 = int(input('请重新输入年龄:'))                         
-      if not age1 <= 0 or not age1 >= 120:                             
+      age1 = int(input('请重新输入年龄:'))
+      if not age1 <= 0 or not age1 >= 120:
           print("您的年龄是%s岁" % age1)
       else:
-          print("输入错误，结束程序")                     
-  else:                         
+          print("输入错误，结束程序")
+  else:
       print("您的年龄是%s岁" % age)
-    
+
   # 案例：石头 剪刀 布
   # 随机数导入包
-  import random 
-  # 从控制台输入要出的拳 —石头（1）/剪刀（2）/布（3）                     
-  player = int(input("请出拳石头（1）/剪刀（2）/布（3）："))                     
-  # 电脑随机出拳 - 假定电脑永远出石头                     
-  computer= random.randint(1,3)                     
-  if computer == 1:                         
-      print("石头")                     
-  elif computer == 2:                        
-      print("剪刀")                     
-  else:                         
-      print("布")                     
+  import random
+  # 从控制台输入要出的拳 —石头（1）/剪刀（2）/布（3）
+  player = int(input("请出拳石头（1）/剪刀（2）/布（3）："))
+  # 电脑随机出拳 - 假定电脑永远出石头
+  computer= random.randint(1,3)
+  if computer == 1:
+      print("石头")
+  elif computer == 2:
+      print("剪刀")
+  else:
+      print("布")
   # 比较胜负,如果条件判断的内容太长，可以在最外侧的条件增加一对大括号
-  # 再在每一个条件之间，使用回车，PyCharm可以自动增加8个空格                     
-  if ((player == 1 and computer == 2) or                             
-      (player == 2 and computer == 3) or                             
-      (player == 3 and computer   == 1)):                        
-          print ("电脑输了...")                     
-  elif player == computer:                        
-      print("心有灵犀，再来一盘...")                     
-  else:                         
+  # 再在每一个条件之间，使用回车，PyCharm可以自动增加8个空格
+  if ((player == 1 and computer == 2) or
+      (player == 2 and computer == 3) or
+      (player == 3 and computer   == 1)):
+          print ("电脑输了...")
+  elif player == computer:
+      print("心有灵犀，再来一盘...")
+  else:
       print("人输了...")</code></pre>
             </li>
           </ul>
@@ -1057,28 +1064,28 @@
     满足条件，做的事情3
     ...
     处理条件（计数器 + 1）
-  
-  i = 1                       
-  while i <= 5:                           
-      print('hello')                           
+
+  i = 1
+  while i <= 5:
+      print('hello')
       i += 1
-  
+
   自然计数法： 从1开始
   程序计数法： 从0开始
-  
-  result = 0  # 定义一个最终结果的变量                  
-  i = 0       # 定义一个计数器                  
-  while i <= 100:    # 循环 100次                      
-      result += i    # 循环一次 加给 结果变量                      
-      i += 1         # 处理计数器                  
+
+  result = 0  # 定义一个最终结果的变量
+  i = 0       # 定义一个计数器
+  while i <= 100:    # 循环 100次
+      result += i    # 循环一次 加给 结果变量
+      i += 1         # 处理计数器
   print('0~100之间的数字合为%d' % result)
-  
-  result = 0  # 定义一个最终结果的变量                 
-  i = 0       # 定义一个计数器                 
-  while i <= 100:    # 循环 100次                     
-      if not i % 2:                         
-          result += i                     
-      i += 1         # 处理计数器                 
+
+  result = 0  # 定义一个最终结果的变量
+  i = 0       # 定义一个计数器
+  while i <= 100:    # 循环 100次
+      if not i % 2:
+          result += i
+      i += 1         # 处理计数器
   print('0~100之间的偶数合为%d' % result)</code></pre>
                 </li>
               </ol>
@@ -1104,13 +1111,13 @@
       row += 1
 
   九九乘法表  16j
-      row = 1          # 定义起始行                     
-      while row <= 9:  # 最大打印9行                         
-          col = 1      # 定义起始列                         
-          while col <= row:       # 循环 列如果小于等于 行                             
-              print("%d * %d = %d" % (col,row,row*col),end="\t") # 输出* end=""表示输出结束后不换行                            
-              col += 1 # 列数                         
-          print("")    # 一行打印完成后换行                         
+      row = 1          # 定义起始行
+      while row <= 9:  # 最大打印9行
+          col = 1      # 定义起始列
+          while col <= row:       # 循环 列如果小于等于 行
+              print("%d * %d = %d" % (col,row,row*col),end="\t") # 输出* end=""表示输出结束后不换行
+              col += 1 # 列数
+          print("")    # 一行打印完成后换行
           row += 1     # 行数加1</code></pre>
             </li>
           </ul>
@@ -1245,18 +1252,18 @@
             </li>
             <li>
               支持 for variable in list 循环
-              <pre><code class="language-python line-numbers">  info_tuple =()        # 创建空元祖,元组的索引值是从0开始的     
+              <pre><code class="language-python line-numbers">  info_tuple =()        # 创建空元祖,元组的索引值是从0开始的
   info_tuple = (50,)    # 元祖中，只包含一个元素时，需要在元素后面添加逗号
-  info_tuple = (50,'任何数据类型',1.43)    # 元祖中，只包含一个元素时，需要在元素后面添加逗号     
-  len(info_tuple)       # 获取元祖的长度 n + 1     
+  info_tuple = (50,'任何数据类型',1.43)    # 元祖中，只包含一个元素时，需要在元素后面添加逗号
+  len(info_tuple)       # 获取元祖的长度 n + 1
   info_tuple.count(50)  # 数据在元祖中出现的次数,统计
-  info1 =(1,2,3,6,4)     
+  info1 =(1,2,3,6,4)
   print(info1.index(2)) # 获取数据的索引下标   // 1
-  
+
   转换：
-  
-  tuple1 =(1,2,3,6,4)     
-  print(type(list(tuple1)))   # 转换成列表类型     
+
+  tuple1 =(1,2,3,6,4)
+  print(type(list(tuple1)))   # 转换成列表类型
   print(type(tuple(tuple1)))  # 转换成元组类型</code></pre>
             </li>
           </ul>
@@ -1283,127 +1290,126 @@
             </li>
             <li>
               支持 for variable in list 循环
-              <pre><code class="language-python line-numbers">  # 语法：              
-    liSi = {"name": '李四',                 
-            "age": 18,                 
+              <pre><code class="language-python line-numbers">  # 语法：
+    liSi = {"name": '李四',
+            "age": 18,
             "sex": '男'}
-    
-  # 方法：   
-    len(liSi)                    # 获取字典的 键值对数量         
-    liSi.keys()                  # 获取所有的key  键         
-    liSi.values()                # 获取所有value  值         
-    liSi.items()                 # 获取所有key value 元祖的列表         
-    liSi[key]                    # 可以从字典中取值，key不存在会报错         
-    liSi.get(key)                # 可以从字典中取值，key不存在时并不会报错，会返回 None       
-    del liSi[key]                # 删除指定键值对，key不存在会报错,会打印删除的值，需要拿变量接收         
-    liSi.pop(key)                # 删除指定键值对，key不存在会报错         
-    liSi.popitem()               # 随机删除一个键值对         
-    liSi.clear()                 # 清空字典        
-    liSi[key] = value            # 键有就代表修改，没有就代表新建         
-    liSi.setdefault(key,value)   # 如果key存在，不会修改数据，不存在会新建键值对        
+
+  # 方法：
+    len(liSi)                    # 获取字典的 键值对数量
+    liSi.keys()                  # 获取所有的key  键
+    liSi.values()                # 获取所有value  值
+    liSi.items()                 # 获取所有key value 元祖的列表
+    liSi[key]                    # 可以从字典中取值，key不存在会报错
+    liSi.get(key)                # 可以从字典中取值，key不存在时并不会报错，会返回 None
+    del liSi[key]                # 删除指定键值对，key不存在会报错,会打印删除的值，需要拿变量接收
+    liSi.pop(key)                # 删除指定键值对，key不存在会报错
+    liSi.popitem()               # 随机删除一个键值对
+    liSi.clear()                 # 清空字典
+    liSi[key] = value            # 键有就代表修改，没有就代表新建
+    liSi.setdefault(key,value)   # 如果key存在，不会修改数据，不存在会新建键值对
     liSi.updata(字典2)            # 将字典2数据合并到字典 中
-    
-  # 常用：  
+
+  # 常用：
     .clear     .items    .setdefault     .copy     .keys    .updata     .fromkeys   .pop   .values  .get   .popitem
-    
-  # 迭代循环：      
-    for k, v in liSi.items():             
+
+  # 迭代循环：
+    for k, v in liSi.items():
         print(k,v)
-    
-    liSi = {"name": '李四', 
-            "age": 18,                 
-            "sex": '男'}         
-    for k in liSi:             
+
+    liSi = {"name": '李四',
+            "age": 18,
+            "sex": '男'}
+    for k in liSi:
         print("%s: %s" % (k,liSi[k]))</code></pre>
             </li>
           </ul>
           <p>集合 set</p>
-          <pre><code class="language-python line-numbers">  set1 = {1,3,5,1,5,4,2,41,1,1}     
+          <pre><code class="language-python line-numbers">  set1 = {1,3,5,1,5,4,2,41,1,1}
   print(set1)       # {1, 2, 3, 4, 5, 41}  有去重性
-  
-  set1 = set('hello')     
+
+  set1 = set('hello')
   print(set1)       # {'h', 'l', 'e', 'o'}   构造器语法
-  
-  set1 = set([1,2,5,2,1])     
+
+  set1 = set([1,2,5,2,1])
   print(set1)       # {1, 2, 5}  可以将列表转换成集合，并去重
-  
-  set1 = {num for num in range(1,20)}   
-  range(a,b)        # 函数会生成a - b 之间的数，包含a 不包含b     
+
+  set1 = {num for num in range(1,20)}
+  range(a,b)        # 函数会生成a - b 之间的数，包含a 不包含b
   print(set1)       # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
-  
-  set1 = {num for num in range(1,20) if num % 3 ==0 or num % 5==0 }       
+
+  set1 = {num for num in range(1,20) if num % 3 ==0 or num % 5==0 }
   print(set1)       # {3, 5, 6, 9, 10, 12, 15, 18}   加判断条件，  输出能被3或5整除的添加到集合里
-  
 
   #集合的运算
     # 1. 成员运算
-        set1 = {3, 5, 6, 9, 10, 12, 15, 18}                     
+        set1 = {3, 5, 6, 9, 10, 12, 15, 18}
         print( 7 in set1)               # False  7 在set1集合里面吗？  在就返回True 不在返回False
     # 2. 交并差运算
-        set1 = {3, 5, 6, 9, 10, 12, 15, 18}                     
-        set2 = { 5, 7, 1, 2, 6, 15, 18}                     
+        set1 = {3, 5, 6, 9, 10, 12, 15, 18}
+        set2 = { 5, 7, 1, 2, 6, 15, 18}
         print( set1 & set2)             # {18, 5, 6, 15} 交集运算  把相同的数取出来
         print(set1.intersection(set2))  # 方法2 等同于  set1 & set2
-  
+
         # 并集
         set1 = {3, 5, 6, 9, 10, 12, 15, 18}
-        set2 = {5, 7, 1, 2, 6, 15, 18} 
-        print(set1 | set2)              # {1, 2, 3, 5, 6, 7, 9, 10, 12, 15, 18}  并集运算  把所有数合并                     
+        set2 = {5, 7, 1, 2, 6, 15, 18}
+        print(set1 | set2)              # {1, 2, 3, 5, 6, 7, 9, 10, 12, 15, 18}  并集运算  把所有数合并
         print(set1.union(set2))         # 方法2 等同于  set1 | set2
-  
+
     # 3. 对称差
-        set1 = {3, 5, 6, 9, 10, 12, 15, 18}                     
-        set2 = {5, 7, 1, 2, 6, 15, 18}                     
+        set1 = {3, 5, 6, 9, 10, 12, 15, 18}
+        set2 = {5, 7, 1, 2, 6, 15, 18}
         print(set1 ^ set2)                        # {1, 2, 3, 7, 9, 10, 12}  把set1中没有的数取出来
-        print(set1.symmetric_difference(set2))    # 方法2 等同于  set1 ^ set2   
+        print(set1.symmetric_difference(set2))    # 方法2 等同于  set1 ^ set2
         print((set1 | set2) - (set1 & set2 ))     # 方法3 等同于  set1 ^ set2
-  
+
     # 4. 比较运算
-        set1 = {1,3,5,7}                    
-        set2 = {1,3,5,6,7,8}                     
-        set3 = set2                     
-        print(set1 < set2 , set1 <= set2) # 假如set1里的所有数都在set2出现，那么 set1是set2的真子集，子集         
-        print(set2 < set3 , set2 <= set3) # 两个重复，则谁也不是谁的真子集，只能是子集，set3也可以是set2的子集                    
+        set1 = {1,3,5,7}
+        set2 = {1,3,5,6,7,8}
+        set3 = set2
+        print(set1 < set2 , set1 <= set2) # 假如set1里的所有数都在set2出现，那么 set1是set2的真子集，子集
+        print(set2 < set3 , set2 <= set3) # 两个重复，则谁也不是谁的真子集，只能是子集，set3也可以是set2的子集
         print(set1.issubset(set2)) # True set1是set2的真子集，用 .issubset()  判断
-  
-        print(set2.issuperset(set1)) # True set2是set1的超集，用 .issuperset()  判断   
+
+        print(set2.issuperset(set1)) # True set2是set1的超集，用 .issuperset()  判断
         print(set2 > set1)           # True set2是set1的超集</code></pre>
           <p>set 方法</p>
-          <pre><code class="language-python line-numbers">  set1 = set()                   # 创建空集合                     
-  # set2 = set({1,2,3})            此写法会弹出警告                     
-  set1.add(33)                   # 添加元素                     
-  set1.update({1,10,100})        # 添加元素                     
-  print(set1)                    # {33, 10, 100, 1}                     
-  set1.discard(33)               # 删除元素,如果删除没有的数 是不会报错的                     
-  if 1 in set1:                  # 判断是否存在                         
-      set1.remove(1)             # 删除元素，如果不进行潘判断会引发KeyError异常                     
-  print(set1.pop())              # 随机删除一个元素，并返回被删除的该元素  10                     
-  print(set1)                    # {100}                     
-  set1.clear()                   # 删除整个集合                     
+          <pre><code class="language-python line-numbers">  set1 = set()                   # 创建空集合
+  # set2 = set({1,2,3})            此写法会弹出警告
+  set1.add(33)                   # 添加元素
+  set1.update({1,10,100})        # 添加元素
+  print(set1)                    # {33, 10, 100, 1}
+  set1.discard(33)               # 删除元素,如果删除没有的数 是不会报错的
+  if 1 in set1:                  # 判断是否存在
+      set1.remove(1)             # 删除元素，如果不进行潘判断会引发KeyError异常
+  print(set1.pop())              # 随机删除一个元素，并返回被删除的该元素  10
+  print(set1)                    # {100}
+  set1.clear()                   # 删除整个集合
   print(set1)                    # set()
-  
-  set1 = {'A','B','C','D'}                     
-  set2 = {'a','b','c','d'}                     
-  set3 = {'c','V','M','t'}                     
-  set4 = {'A','f','g','h'}                     
+
+  set1 = {'A','B','C','D'}
+  set2 = {'a','b','c','d'}
+  set3 = {'c','V','M','t'}
+  set4 = {'A','f','g','h'}
   print(set1.isdisjoint(set2))   # True 会区分大小写 如果两个合集没有相同元素就会返回True
-  print(set1.isdisjoint(set3))   # True 没有相同就会返回True,有相同的就会返回False 
+  print(set1.isdisjoint(set3))   # True 没有相同就会返回True,有相同的就会返回False
   print(set1.isdisjoint(set4))   # False 区分大小写 没有相同就会返回True,有相同的就会返回False
-  
+
   不可变集合，没有删除和增加的功能，其他跟set 合集 没差别
-      set1 = frozenset({1,3,5,7})                     
-      set2 = frozenset(range(1,7))                     
-      print(set2)                # frozenset({1, 2, 3, 4, 5})                    
-      print(set1 & set2)         # 交集 frozenset({1, 3, 5})                     
-      print(set1 | set2)         # 并集 frozenset({1, 2, 3, 4, 5, 7})                    
-      print(set1 - set2)         # 差集 frozenset({7})                   
+      set1 = frozenset({1,3,5,7})
+      set2 = frozenset(range(1,7))
+      print(set2)                # frozenset({1, 2, 3, 4, 5})
+      print(set1 & set2)         # 交集 frozenset({1, 3, 5})
+      print(set1 | set2)         # 并集 frozenset({1, 2, 3, 4, 5, 7})
+      print(set1 - set2)         # 差集 frozenset({7})
       print(set1 &lt; set2)         # False set1 不是 set2 的真子集和子集，如果是1，8则为true</code></pre>
           <p>函数</p>
           <ul>
             <li>
               语法
               <pre><code class="language-python line-numbers">  def function():    # def 是 define的缩写  定义
-      函数封装的代码                         
+      函数封装的代码
       ...
   """
       注意：跟js 不同，不会函数提升，所以不能调用写在函数前
@@ -1412,26 +1418,26 @@
           函数名称的命名应该符合标识符的命名规则
           可以由穿母、下划线和数字组成， 不能以数字开头，不能与关键字重名
   """
-  
+
     </code></pre>
             </li>
             <li>
               调用：函数名（）
-              <pre><code class="language-python line-numbers">  def function():    # def 是 define的缩写 
-      '''                     
-        函数的注释，选中调用函数，按下ctrl + Q  可以看到此注释                     
-        :return:                    
-      '''                     
-        print('函数执行代码1')                     
-        print('函数执行代码2')                     
-        print('函数执行代码2')                 
+              <pre><code class="language-python line-numbers">  def function():    # def 是 define的缩写
+      '''
+        函数的注释，选中调用函数，按下ctrl + Q  可以看到此注释
+        :return:
+      '''
+        print('函数执行代码1')
+        print('函数执行代码2')
+        print('函数执行代码2')
   function()</code></pre>
             </li>
             <li>
               函数的参数，跟 JS 相同
               <pre><code class="language-python line-numbers">  # 语法：
   def sum(num1,num2):                                # 函数形参
-      result = num1 * num2                    
+      result = num1 * num2
       print('%d * %d = %d' % (num1,num2,result))     # 输出结果 10 * 20 = 200
   sum(10,20)                                         # 函数传参</code></pre>
             </li>
@@ -1443,11 +1449,11 @@
                 <li>在函数中使用return关键字可以返回结果</li>
                 <li>
                   调用函数一方，可以使用变量来接收函数的返回结果
-                  <pre><code class="language-python line-numbers">  def sum(num1,num2):                    
-      '''对两个数求和'''                    
-      return num1 * num2  # 执行返回结果,如果后面还有代码，是不会执行的  
-  
-  result = sum(10,20)   # 拿变量接收函数的返回值                
+                  <pre><code class="language-python line-numbers">  def sum(num1,num2):
+      '''对两个数求和'''
+      return num1 * num2  # 执行返回结果,如果后面还有代码，是不会执行的
+
+  result = sum(10,20)   # 拿变量接收函数的返回值
   print(result)         # 输出结果  200</code></pre>
                 </li>
               </ol>
@@ -1459,14 +1465,14 @@
                 <li>这就是函数嵌套调用，如果函数test2中，调用了另外一个函数 test1</li>
                 <li>那么执行到调用test 函数时，会先把函数test1中的任务都执行完，才会回到test2中调用函数test1的位置，继续执行后续的代码</li>
               </ol>
-              <pre><code class="language-python line-numbers">  def test1():                    
-      print('我是函数1')                                
-  def test2():                    
-      print('我是函数2')                    
-      test1()                    
-      print('函数执行完毕')      
-  
-  test1()      # 输出 我是函数1                
+              <pre><code class="language-python line-numbers">  def test1():
+      print('我是函数1')
+  def test2():
+      print('我是函数2')
+      test1()
+      print('函数执行完毕')
+
+  test1()      # 输出 我是函数1
   test2()      # 按顺序执行，先执行print  然后再执行test1的调用，再执行print</code></pre>
             </li>
             <li>
@@ -1499,32 +1505,32 @@
             </li>
             <li>
               定义类（相当于js的构造函数）：
-              <pre><code class="language-python line-numbers">  class People:                     # 定义类                        
-      def sum(self,num1):           # 类下面的函数称为 类方法                            
-          print(f'幸运数字｛num1｝')                        
-      def sum2(self,num2):                            
-          print(f'幸运数字｛num2｝')                                        
-          
-  peo1 = People()                   # 当前输出的值为实例在内存中的地址，，是一个十六进制的值                    
-  print(peo1)                       # &lt;__main__.People object at 0x0000024129486920&gt; 当前输出的值为实例在内存中的地址 
+              <pre><code class="language-python line-numbers">  class People:                     # 定义类
+      def sum(self,num1):           # 类下面的函数称为 类方法
+          print(f'幸运数字｛num1｝')
+      def sum2(self,num2):
+          print(f'幸运数字｛num2｝')
+
+  peo1 = People()                   # 当前输出的值为实例在内存中的地址，，是一个十六进制的值
+  print(peo1)                       # &lt;__main__.People object at 0x0000024129486920&gt; 当前输出的值为实例在内存中的地址
   print(hex(id(peo1)))              # id()会转成10进制， 用hex()可以转成16进制，查看地址值 0x2143ced6920
-  
-  peo1.sum1(10)                     # 调用类方法1                    
+
+  peo1.sum1(10)                     # 调用类方法1
   People().sum2(20)                 # 调用类方法2
   People.sum2(20)                   # 错误写法，因为需要对当前的类进行实例化</code></pre>
             </li>
           </ul>
           <p>初始化方法</p>
-          <pre><code class="language-python line-numbers">  class People:                                 # 定义类                  
-      def __init__(self,name,age):              # 初始化方法，给对象创建属性                      
-          self.name = name                      # 给当前类添加属性                      
-          self.age = age                        # 给当前类添加属性                  
-      def peo(self,peo_age):                      
-          print(f'{self.name}今年{peo_age}岁')   # 属性使用self进行调用，参数可以直接调用    
-  
-  peo1 = People('小明','18')                     # 实例化对象，传入初始值              
+          <pre><code class="language-python line-numbers">  class People:                                 # 定义类
+      def __init__(self,name,age):              # 初始化方法，给对象创建属性
+          self.name = name                      # 给当前类添加属性
+          self.age = age                        # 给当前类添加属性
+      def peo(self,peo_age):
+          print(f'{self.name}今年{peo_age}岁')   # 属性使用self进行调用，参数可以直接调用
+
+  peo1 = People('小明','18')                     # 实例化对象，传入初始值
   peo1.peo("18")                                # 调用类方法
-  
+
   打印对象
       上面我们通过_init方法在创建对象时为对象绑定了属性并赋予了初始值。在Python中，以两个下划线（读作“dunder"）开头
   和结尾的方法通常都是有特殊用途和意义的方法，我们一般称之为魔术方法或魔法方法。如果我们在打印对象的时候不希望看
@@ -1532,93 +1538,93 @@
   打印对象的时候会显示的内容，代码如下所示。
 
   ....
-  # 使用类中内置的魔术方法来是显示内容              
-  def __repr__(self):                      
-      return f'{self.name}:{self.age}'                            
-  peo1 = People('小明','18')                   
+  # 使用类中内置的魔术方法来是显示内容
+  def __repr__(self):
+      return f'{self.name}:{self.age}'
+  peo1 = People('小明','18')
   print(peo1)     # 小明:18</code></pre>
           <p>可见性和属性装饰器</p>
           <ul>
             <li>
               在很多面向对象编程语言中，对象的属性通常会被设置为私有（private）或受保护（protected）的成员，简单的说就是不允许直 接访问这些属性；对象的方法通常都是公开的（public），因为公开的方法是对象能够接受的消息，也是对象暴露给外界的调用接口 ，这就是所谓的访问可见性。在Python中，可以通过给对象属性名添加前缀下划线的方式来说明属性的访问可见性，例如，可以用 __name表示一个私有属性，_name表示一个受保护属性，代码如下所示。
-              <pre><code class="language-python line-numbers">  class People:                                   # 定义类                  
-      def __init__(self,name,age):                # 初始化方法，给对象创建属性                      
-          self.__name = name                      # 创建私有属性                      
-          self.__age = age                        # 创建私有属性        
-      def peo(self,peo_age):                      # 创建类方法                     
-          print(f'{self.__name}今年{peo_age}岁')   # 属性使用self进行调用，参数可以直接调用    
-  
-  peo1 = People('小明','18')              
-  peo1.peo('19')                                  # 输出 小明今年19岁                      
-  print(peo1.__name)                              # 报错，只能在类里面调用，外面无法调用              
+              <pre><code class="language-python line-numbers">  class People:                                   # 定义类
+      def __init__(self,name,age):                # 初始化方法，给对象创建属性
+          self.__name = name                      # 创建私有属性
+          self.__age = age                        # 创建私有属性
+      def peo(self,peo_age):                      # 创建类方法
+          print(f'{self.__name}今年{peo_age}岁')   # 属性使用self进行调用，参数可以直接调用
+
+  peo1 = People('小明','18')
+  peo1.peo('19')                                  # 输出 小明今年19岁
+  print(peo1.__name)                              # 报错，只能在类里面调用，外面无法调用
   print(peo1._People__name)                       # 这样写可以访问到私有属性，但会有警告</code></pre>
             </li>
             <li>上面代码的最后一行会引发AttributeError（属性错误）异常，异常消息为：‘student'object has no attribute'_name'。由此可见，以__开头的属性_name是私有的，在类的外面无法直接访问，但是类里面的peo方法中可以 通过se1f._name访问该属性。需要提醒大家的是，Python并没有从语法上严格保证私有属性的私密性，它只是给私有的属性和 方法换了一个名字来阻挠对它们的访问，事实上如果你知道更换名字的规则仍然可以访问到它们，我们可以对上面的代码稍作修改 就可以访问到私有的属性。</li>
             <li>Python中有一句名言："We are all consenting adults here”（大家都是成年人）。Python语言的设计者认为程序员要为自己的行为负责 ，而不是由Python语言本身来严格限制访问可见性，而大多数的程序员都认为开放比封闭要好，把对象的属性私有化并不是编程语 言必须的东西，所以Python并没有从语法上做出最严格的限定。Python中可以通过property装饰器为“私有“属性提供读取和修改的方 法，之前我们提到过，装饰器通常会放在类、函数或方法的声明之前，通过一个e符号表示将装饰器应用于类、函数或方法。</li>
             <li>
               装饰器，是函数的高阶应用
-              <pre><code class="language-python line-numbers">  class People:                       # 定义类                  
-      def __init__(self,name,age):    # 初始化方法，给对象创建属性   
-          self.__name = name          # 创建私有属性        
-          self.__age = age            # 创建私有属性                  
-      @property                       # 获取私有属性                  
-      def name(self):                      
-          return self.__name               
+              <pre><code class="language-python line-numbers">  class People:                       # 定义类
+      def __init__(self,name,age):    # 初始化方法，给对象创建属性
+          self.__name = name          # 创建私有属性
+          self.__age = age            # 创建私有属性
+      @property                       # 获取私有属性
+      def name(self):
+          return self.__name
 
-      @name.setter                    # 修改私有属性                 
-      def name(self,name):                      
-          self.__name = name or '为空'                  
-      def peo(self,peo_age):                      
-          print(f'{self.__name}今年{peo_age}岁')  # 属性使用self进行调用，参数可以直接调用 
-      
-  peo1 = People('小明','18')              
+      @name.setter                    # 修改私有属性
+      def name(self,name):
+          self.__name = name or '为空'
+      def peo(self,peo_age):
+          print(f'{self.__name}今年{peo_age}岁')  # 属性使用self进行调用，参数可以直接调用
+
+  peo1 = People('小明','18')
   print(peo1.name)   # 输出 小明，因为没有获取age的私有属性，所以写peo1.age会报错</code></pre>
             </li>
           </ul>
           <p>静态方法和类方法</p>
-          <pre><code class="language-python line-numbers">  class Triangle(object):                  
-      """三角形类"""                  
-      def __init__(self,a,b,c):                      
-          """初始化方法"""                      
-          self.a = a                      
-          self.b = b                      
-          self.c = c                  
-      @staticmethod               # 语法糖装饰器  @classmethod 也是                  
-      def is_valid(a,b,c):                     
-          """判断三条边长能否构成三角形（静态方法）"""                      
-          return a + b > c and b + c > a and a + c > b                  
-      def perimeter(self):                      
-          """ 计算周长 """                      
-          return self.a + self.b + self.c                  
-      def area(self):                      
-          """计算面积"""                      
-          p = self.perimeter() / 2                      
-          return (p * (p - self.a) * (p - self.b) * (p - self.c)) ** 0.5     
-  
-  a = Triangle(5,6,7)              # 通过调用类计算三角形的周长              
-  print(a.perimeter())             # 18              
+          <pre><code class="language-python line-numbers">  class Triangle(object):
+      """三角形类"""
+      def __init__(self,a,b,c):
+          """初始化方法"""
+          self.a = a
+          self.b = b
+          self.c = c
+      @staticmethod               # 语法糖装饰器  @classmethod 也是
+      def is_valid(a,b,c):
+          """判断三条边长能否构成三角形（静态方法）"""
+          return a + b > c and b + c > a and a + c > b
+      def perimeter(self):
+          """ 计算周长 """
+          return self.a + self.b + self.c
+      def area(self):
+          """计算面积"""
+          p = self.perimeter() / 2
+          return (p * (p - self.a) * (p - self.b) * (p - self.c)) ** 0.5
+
+  a = Triangle(5,6,7)              # 通过调用类计算三角形的周长
+  print(a.perimeter())             # 18
   Triangle.is_valid(5,6,7)         # 调用静态方法时，可以不对类实例化， 直接使用类名.方法，
                                       静态方法和类方法的区别：静态方法传入的参数都是普通参数，类方法参数第一位必须class</code></pre>
           <p>动态属性</p>
-          <pre><code class="language-python line-numbers">  class People:  # 定义类                  
-      def __init__(self,name,age): # 初始化方法，给对象创建属性                      
-          self.name = name         # 创建私有属性                      
-          self.age = age           # 创建私有属性              
-  peo1 = People('小明',18)              
-  peo1.sex = '男'                  # 在不修改类的情况下 添加属性  类似js              
-  print(peo1.name,peo1.sex)        # 小明 男      
-  
+          <pre><code class="language-python line-numbers">  class People:  # 定义类
+      def __init__(self,name,age): # 初始化方法，给对象创建属性
+          self.name = name         # 创建私有属性
+          self.age = age           # 创建私有属性
+  peo1 = People('小明',18)
+  peo1.sex = '男'                  # 在不修改类的情况下 添加属性  类似js
+  print(peo1.name,peo1.sex)        # 小明 男
+
   ''' 如果不希望在使用对象时动态的为对象添加属性，可以使用Python的__s1ots__魔法。对于student类来说，
   可以在类中指定      slots=（“name'，‘age'），这样student类的对象只能有name和age属性，
   如果想动态添加其他属性将会引发异常 '''
-  
+
   # 代码如下 :
-  class People:  # 定义类                  
-      __slots__ = ('name','age')   # 使用slots 来限定不能冬天为对象添加属性                  
-      def __init__(self,name,age): # 初始化方法，给对象创建属性                      
-          self.name = name         # 创建私有属性                      
-          self.age = age           # 创建私有属性                            
-  peo1 = People('小明',18)              
+  class People:  # 定义类
+      __slots__ = ('name','age')   # 使用slots 来限定不能冬天为对象添加属性
+      def __init__(self,name,age): # 初始化方法，给对象创建属性
+          self.name = name         # 创建私有属性
+          self.age = age           # 创建私有属性
+  peo1 = People('小明',18)
   peo1.sex = '男'                  # 报错 AttributeError: 'People' object has no attribute 'sex'</code></pre>
           <p>单继承</p>
           <ul>
@@ -1632,37 +1638,36 @@
             </li>
             <li>
               单继承 类似js的原型对象，往原型里填方法，继承
-              <pre><code class="language-python line-numbers">  class A:              # 定义A类，有两个类方法，说话唱歌                   
-      def say(self):                       
-          print('说话')                   
-      def sing(self):                       
-          print('唱歌')   
-  
-  class B(A):           # 继承谁，（）里面就写继承的类名                   
-      def dump(self):                       
-          print('B独有的跳方法')                              
-          
-  me = B()               # 实例化               
-  me.say()               # 没继承前，会报错，如果没有继承，那么无法调用A里面的say方法               
-  me.say()               # 继承后，就可以调用 A的方法
-  
-  # B类是A类的子类，A类是B类的父类，B类从A类继承
-  # B类是A类的派生类，A类是B类的基类，B类从A类派生 
+              <pre><code class="language-python line-numbers">  class A:              # 定义A类，有两个类方法，说话唱歌
+      def say(self):
+          print('说话')
+      def sing(self):
+          print('唱歌')
 
-  继承的传递性 
+  class B(A):           # 继承谁，（）里面就写继承的类名
+      def dump(self):
+          print('B独有的跳方法')
+
+  me = B()               # 实例化
+  me.say()               # 没继承前，会报错，如果没有继承，那么无法调用A里面的say方法
+  me.say()               # 继承后，就可以调用 A的方法
+
+  # B类是A类的子类，A类是B类的父类，B类从A类继承
+  # B类是A类的派生类，A类是B类的基类，B类从A类派生
+
+  继承的传递性
   A  =>  B(A)  => C(B)        # C继承 B ， B 继承 A。  A一直传递下去，就是继承的传递性
 
   注意事项：分清楚类的关系，绑定关系，
 
   方法的重写：父亲的类方法满足不了子的需求，可以在子类下重新写同名方法，但是不会影响父亲类方法
-  A  =>  B(A)  => C(B)          B:  def fly(self):            C:  def fly(self): 
+  A  =>  B(A)  => C(B)          B:  def fly(self):            C:  def fly(self):
                                     print('我是B的类方法')          print('在C类方法里，重写B类的方法，但不影响B类')
 
-  对父类的方法进行扩展： 
-      使用 super() 方法，可以在子类中调用父类方法，在子类方法中写上   super().sing()  
+  对父类的方法进行扩展：
+      使用 super() 方法，可以在子类中调用父类方法，在子类方法中写上   super().sing()
       或者 父类名.方法(self)     B.fly(self)      必须使用参数 ( self )，2.0推荐，3.0版本不推荐
       当前类中的，当前子类名.方法(self)  会出现递归，死循环
-
 
   父类的私有属性和私有方法
       1.子类对象不能在自己的方法内部，直接访问父类的私有属性或私有方法
@@ -1670,15 +1675,15 @@
         私有属性、方法是对象的隐私，不对外公开，外界以及子类都不能直接访问
         私有属性、方法通常用于做一些内部的事倩
 
-  class A:                   
-      def say(self):                       
-          self.name1 = 100                       
-          self.__name1 = 200   
+  class A:
+      def say(self):
+          self.name1 = 100
+          self.__name1 = 200
 
-      def __sing(self,name):              
-          print('私有方法')                      
-          
-  class B(A):                  
+      def __sing(self,name):
+          print('私有方法')
+
+  class B(A):
       pass</code></pre>
               <ol>
                 <li>注意：打印父类中的私有属性会报错，不可以直接打印父类的私有属性。也不可以调用父类的私有方法</li>
@@ -1856,28 +1861,28 @@
             </li>
             <li>
               进制之间的转换
-              <pre><code class="language-python line-numbers">  # (5) 10    10进制的5  转换二进制 ：              (0101)2    二进制的0101  转换十进制 ：        
+              <pre><code class="language-python line-numbers">  # (5) 10    10进制的5  转换二进制 ：              (0101)2    二进制的0101  转换十进制 ：
     2  |_5_    1    5 / 2  上2 余 1                 0    1    0    1                  二进制
     2  |_2_    0    2 / 2  上1 余 0                 3    2    1    0                  序号
     2  |_1_    1    1 / 2  上0 余 1                 0*2^3 + 1*2^2 + 0*2^1 +  1*2^0    公式
          0                                          0 + 4 + 0 + 1 =  5                结果
-  
+
   # 二进制从下往上： (0101) 2     10进制的5转成二进制 0101
-  
+
   (13) 10   10进制的13  转换八进制 ：              (15)8     八进制的15 转换成  10               进制
     8  |_13_    5    13 / 8  上1 余 5               1     5                           八进制
     8  |_1_     1    13 / 2  上0 余 1               1     0                           序号
-         0                                          1*8^1  + 5*8^0                    公式      
+         0                                          1*8^1  + 5*8^0                    公式
                                                     8 + 5 =  13                       结果
-  
-  # 八进制从下往上： (15)8         10进制的13转成八进制 15                              
+
+  # 八进制从下往上： (15)8         10进制的13转成八进制 15
 
   (37) 10   十进制的37   转换16进制 ：             (25)16    十六进制的25 转换成 十进制
     16  |_37_   5    13 / 8  上2 余 5               2    5                            十六进制
     16  |_2_    2    13 / 2  上0 余 2               1    0                            序号
-          0                                         2*16^1  + 5*16^0                  公式  
-                                                    32 + 5 =  37                      结果 
-  
+          0                                         2*16^1  + 5*16^0                  公式
+                                                    32 + 5 =  37                      结果
+
   # 十六进制从下往上： (25)16   10进制的37转成十六进制 25（不是二十五，是二五）</code></pre>
             </li>
           </ul>
@@ -1887,43 +1892,43 @@
           0000   0000   0000   1100
         & 0000   0000   0000   1000
         ------------------------------
-          0000   0000   0000   1000 
-  
+          0000   0000   0000   1000
+
   “位或”运算（|） 两个操作数据的二进制表示，只有对应数位都是0时，结果数位才是0，否则为1
           0000   0000   0000   0100
         | 0000   0000   0000   1000
         ------------------------------
           0000   0000   0000   1100
-  
+
   “位异或”运算（^）两个操作数据的二进制相同（同时为0或同时为1），结果这为0，否则为1
           0000   0000   0001   1111
         ^ 0000   0000   0001   0110
         ------------------------------
           0000   0000   0000   1001
-  
+
   “位取反”运算（~）操作数中对应的二进制数1修改为0，0修改为1
         ~ 0000   0000   0111   1011
         ------------------------------
           1111   1111   1000   0100
-  
+
   “左移位”运算（&lt;&lt;）将一个二进制数向左移动指定的位数，左边（高位端）溢出的位被丢弃，右边（低位端）
       的空位用0补充。左移位运算相当于乘以2的N次幂，比如：   2&lt;&lt;3   2向左移动3位
         &lt;&lt; |   0 0 0 0 0 0 1 0
         ----------------------
         0 0 |   0 0 0 0 1 0 0 0       | 前面代表移位溢出的部分，且不要了，  左移后补0，写法   2 &lt;&lt;2 ，2向左移动2位
-  
+
   “右移位”运算（&gt;&gt;）将一个二进制数向右移动指定的位数，右边（低位端）溢出的位被丢弃，左边（高位端）的空位端，
       如果最高位是0（正数）左侧空位填0，如果最高位是1（负数），左侧空位填1。右移位运算相当于除以2的N次幂
         0 0 0 0 0 0 1 0  | &gt;&gt;
         ----------------------
         0 0 0 0 0 0 1 0  | 0 0        | 后面代表移位溢出的部分，且不要了，  右移前面补0，写法   3 &gt;&gt;2 ，3向右移动2位
-  
+
         1 0 0 0 0 0 1 0  | &gt;&gt;
         ----------------------
         1 1 0 0 0 0 1 0  | 0 0        | 最高位是1（负数），左侧空位填1，相反最高位为0（正数），左侧空位填0</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>其他</h2>
         <div class="ls-cot">
           <p>C / S 架构 （客户端client / 服务端Server）</p>
@@ -2044,51 +2049,50 @@
                     <li>close（） // 关闭套接字</li>
                   </ol>
                   <pre><code class="language-python line-numbers">  #示例代码 -- 客户端 通信 服务端
-  # udp 服务端套接字示例代码                
-  from socket import *                    # 模块导入                
-  ADDR = ("0.0.0.0", 8888)                # 声明服务器IP，端口 ,大写变量                
-  udp_socket = socket(AF_INET,SOCK_DGRAM) # 创建udp套接字,SOCK_DGRAM表示选择的是UDP套接字               
-  udp_socket.bind(ADDR)                   # 调用bind 绑定地址端口                
-  msg,addr = udp_socket.recvfrom(1024)    # 接受消息   1024 一次能接受的最大字节数                
-  print('RECV:',addr,msg.decode())        # 打印消息跟地址  decode（） 解码                
+  # udp 服务端套接字示例代码
+  from socket import *                    # 模块导入
+  ADDR = ("0.0.0.0", 8888)                # 声明服务器IP，端口 ,大写变量
+  udp_socket = socket(AF_INET,SOCK_DGRAM) # 创建udp套接字,SOCK_DGRAM表示选择的是UDP套接字
+  udp_socket.bind(ADDR)                   # 调用bind 绑定地址端口
+  msg,addr = udp_socket.recvfrom(1024)    # 接受消息   1024 一次能接受的最大字节数
+  print('RECV:',addr,msg.decode())        # 打印消息跟地址  decode（） 解码
   udp_socket.close()                      # 关闭套接字
-  
-  
-  # udp 客户端套接字示例代码                
-  from socket import *                    # 导入模块                
-  ADDR = ('127.0.0.1',8888)               # 确定服务器的地址 127.0.0.1 跟 localhost 默认是本机的IP 
-                                          # 客户端默认由操作系统自动分配，绑定就是固定了，所以不需要绑定                
-  udp_socket = socket(AF_INET, SOCK_DGRAM)# 创建udp套接字,SOCK_DGRAM表示选择的是UDP套接字                
-  msg = input('>>:')                      # 接受信息                
-  udp_socket.sendto(msg.encode(), ADDR)   # 发送给服务器                
+
+  # udp 客户端套接字示例代码
+  from socket import *                    # 导入模块
+  ADDR = ('127.0.0.1',8888)               # 确定服务器的地址 127.0.0.1 跟 localhost 默认是本机的IP
+                                          # 客户端默认由操作系统自动分配，绑定就是固定了，所以不需要绑定
+  udp_socket = socket(AF_INET, SOCK_DGRAM)# 创建udp套接字,SOCK_DGRAM表示选择的是UDP套接字
+  msg = input('>>:')                      # 接受信息
+  udp_socket.sendto(msg.encode(), ADDR)   # 发送给服务器
   udp_socket.close()                      # 关闭套接字
-  
+
   udp循环发送
-  # udp 服务端套接字示例代码                
-  from socket import *                        # 模块导入                
-  ADDR = ("0.0.0.0", 8888)                    # 声明服务器IP，端口 ,大写变量                
-  udp_socket = socket(AF_INET,SOCK_DGRAM)     # 创建udp套接字,SOCK_DGRAM表示选择的是UDP套接字                
-  udp_socket.bind(ADDR)                       # 调用bind 绑定地址端口                
-  while True:                                 # 循环接受信息                    
-      msg, addr = udp_socket.recvfrom(1024)   # 接受消息   1024 一次能接受的最大字节数                    
-      print('RECV:', addr, msg.decode())      # 打印消息跟地址  decode（） 解码                    
-      udp_socket.sendto('收到'.encode(),addr)  # 回应消息给客户端                    
-      if msg == b'bye':                       # 约定断开通信的条件                       
-          break                               # 退出循环                
+  # udp 服务端套接字示例代码
+  from socket import *                        # 模块导入
+  ADDR = ("0.0.0.0", 8888)                    # 声明服务器IP，端口 ,大写变量
+  udp_socket = socket(AF_INET,SOCK_DGRAM)     # 创建udp套接字,SOCK_DGRAM表示选择的是UDP套接字
+  udp_socket.bind(ADDR)                       # 调用bind 绑定地址端口
+  while True:                                 # 循环接受信息
+      msg, addr = udp_socket.recvfrom(1024)   # 接受消息   1024 一次能接受的最大字节数
+      print('RECV:', addr, msg.decode())      # 打印消息跟地址  decode（） 解码
+      udp_socket.sendto('收到'.encode(),addr)  # 回应消息给客户端
+      if msg == b'bye':                       # 约定断开通信的条件
+          break                               # 退出循环
   udp_socket.close()                          # 关闭套接字
-  
-  # udp 客户端套接字示例代码                
-  from socket import *                        # 导入模块                
-  ADDR = ('127.0.0.1',8888)                   # 确定服务器的地址 127.0.0.1 跟 localhost 默认是本机的IP 
-  udp_socket = socket(AF_INET, SOCK_DGRAM)    # 创建udp套接字,SOCK_DGRAM表示选择的是UDP套接字             
-  # 客户端默认由操作系统自动分配，绑定就是固定了，所以不需要绑定                
-  while True:                                 # 循环发送信息                    
-      msg = input('>>:')                      # 接受信息                    
-      udp_socket.sendto(msg.encode(), ADDR)   # 发送给服务器                    
-      data,addr = udp_socket.recvfrom(1024)   # 接受服务器的消息                    
-      print('来自服务器的消息',data.decode())                    
-      if msg == 'bye':                        # 终止通信                        
-      break                                   # 退出                
+
+  # udp 客户端套接字示例代码
+  from socket import *                        # 导入模块
+  ADDR = ('127.0.0.1',8888)                   # 确定服务器的地址 127.0.0.1 跟 localhost 默认是本机的IP
+  udp_socket = socket(AF_INET, SOCK_DGRAM)    # 创建udp套接字,SOCK_DGRAM表示选择的是UDP套接字
+  # 客户端默认由操作系统自动分配，绑定就是固定了，所以不需要绑定
+  while True:                                 # 循环发送信息
+      msg = input('>>:')                      # 接受信息
+      udp_socket.sendto(msg.encode(), ADDR)   # 发送给服务器
+      data,addr = udp_socket.recvfrom(1024)   # 接受服务器的消息
+      print('来自服务器的消息',data.decode())
+      if msg == 'bye':                        # 终止通信
+      break                                   # 退出
   udp_socket.close()                          # 关闭套接字</code></pre>
                 </li>
                 <li>
@@ -2148,99 +2152,98 @@
                         <li>send / recv // 发送 / 接受消息</li>
                         <li>close（） // 关闭</li>
                       </ol>
-                      <pre><code class="language-python line-numbers">  # 服务端TCP 1示例代码                 
-  from socket import *                       # 模块导入                
+                      <pre><code class="language-python line-numbers">  # 服务端TCP 1示例代码
+  from socket import *                       # 模块导入
   tcp_socket = socket(AF_INET,SOCK_STREAM)   # 创建udp套接字,不传SOCK_STREAM 会默认是TCP，流式套接字
-  tcp_socket.bind(("0.0.0.0", 8888))         # 调用bind 绑定地址端口                
-  tcp_socket.listen(5)                       # 设置监听 ,最多设置1024 ，linux自动配置，具备了监听的属性，被客户端连接的属性 
-  print('等待客户端连接....')                   # 等待处理客户端的连接                
-  connfd,addr = tcp_socket.accept()          # accept 阻塞函数处理客户端  连接请求没有连接则阻塞 
+  tcp_socket.bind(("0.0.0.0", 8888))         # 调用bind 绑定地址端口
+  tcp_socket.listen(5)                       # 设置监听 ,最多设置1024 ，linux自动配置，具备了监听的属性，被客户端连接的属性
+  print('等待客户端连接....')                   # 等待处理客户端的连接
+  connfd,addr = tcp_socket.accept()          # accept 阻塞函数处理客户端  连接请求没有连接则阻塞
                                               # connfd 处理该连接的专门套接字    addr 客户端地址
-  
-  print('连接的客户端是：',addr)                
-  data = connfd.recv(1024)                    # 接受处理客户端的信息                
-  print('消息：',data.decode())                       
-  tcp_socket.close()                          # 关闭连接                
+
+  print('连接的客户端是：',addr)
+  data = connfd.recv(1024)                    # 接受处理客户端的信息
+  print('消息：',data.decode())
+  tcp_socket.close()                          # 关闭连接
   connfd.close()                              # 关闭连接
-  
-  
-  # tcp 客户端套接字示例代码                
-  from socket import *                        # 导入模块                
-  tcp_socket = socket()                       # 创建udp套接字                
-  tcp_socket.connect(('127.0.0.1',8888))      # 连接服务端                
-  msg = input('>>:')                          # 发送消息                
-  tcp_socket.send(msg.encode())                     
+
+  # tcp 客户端套接字示例代码
+  from socket import *                        # 导入模块
+  tcp_socket = socket()                       # 创建udp套接字
+  tcp_socket.connect(('127.0.0.1',8888))      # 连接服务端
+  msg = input('>>:')                          # 发送消息
+  tcp_socket.send(msg.encode())
   tcp_socket.close()                          # 关闭连接
-  
+
   循环处理
-  # 服务端TCP 1示例代码                
-  from socket import *                        # 模块导入                
-  tcp_socket = socket(AF_INET,SOCK_STREAM)    # 创建udp套接字,不传SOCK_STREAM 会默认是TCP，流式套接字  
-  tcp_socket.bind(("0.0.0.0", 8888))          # 调用bind 绑定地址端口                
-  tcp_socket.listen(5)  # 设置监听 ,最多设置1024 ，linux自动配置，具备了监听的属性，被客户端连接的属性  
-  print('等待客户端连接....')                    # 等待处理客户端的连接                
-  while True:                    
-      connfd, addr = tcp_socket.accept()      # accept 阻塞函数处理客户端  连接请求没有连接则阻塞             
-      print('连接的客户端是：', addr)                   
-      data = connfd.recv(1024)                # 接受处理客户端的信息                    
-      print('消息：', data.decode())                    
-      connfd.send('收到:'.encode())                    
-      connfd.close()                          # 关闭连接                                
+  # 服务端TCP 1示例代码
+  from socket import *                        # 模块导入
+  tcp_socket = socket(AF_INET,SOCK_STREAM)    # 创建udp套接字,不传SOCK_STREAM 会默认是TCP，流式套接字
+  tcp_socket.bind(("0.0.0.0", 8888))          # 调用bind 绑定地址端口
+  tcp_socket.listen(5)  # 设置监听 ,最多设置1024 ，linux自动配置，具备了监听的属性，被客户端连接的属性
+  print('等待客户端连接....')                    # 等待处理客户端的连接
+  while True:
+      connfd, addr = tcp_socket.accept()      # accept 阻塞函数处理客户端  连接请求没有连接则阻塞
+      print('连接的客户端是：', addr)
+      data = connfd.recv(1024)                # 接受处理客户端的信息
+      print('消息：', data.decode())
+      connfd.send('收到:'.encode())
+      connfd.close()                          # 关闭连接
   tcp_socket.close()                          # 关闭连接
-  
-  # tcp 客户端套接字示例代码                
-  from socket import *                        # 导入模块                
-  tcp_socket = socket()                       # 创建udp套接字                
-  tcp_socket.connect(('127.0.0.1',8888))      # 连接服务端                
-  while True:                         
-      msg = input('>>:')                      # 发送消息                    
-      tcp_socket.send(msg.encode())                         
-      data = tcp_socket.recv(1024)            # 接收服务端的消息                    
-      print('服务端',data.decode())                                     
+
+  # tcp 客户端套接字示例代码
+  from socket import *                        # 导入模块
+  tcp_socket = socket()                       # 创建udp套接字
+  tcp_socket.connect(('127.0.0.1',8888))      # 连接服务端
+  while True:
+      msg = input('>>:')                      # 发送消息
+      tcp_socket.send(msg.encode())
+      data = tcp_socket.recv(1024)            # 接收服务端的消息
+      print('服务端',data.decode())
   tcp_socket.close()                          # 关闭连接</code></pre>
                     </li>
                     <li>
                       文件传输客户端/服务端
-                      <pre><code class="language-python line-numbers">  """                
-      顺序：                 
-      文件传输 服务端示例代码                
-          1 建立TCP套接字                
-          2 等待客户端内连接                
-          3 接收图片内容                
-          4 保存图片                
-          5 终止连接                
-  """                                
-    
-    from socket import *             # 导入套接字模块                
-    import time                      # 导入时间模块                                
-    socket = socket()                # 创建套接字                
-    socket.bind(('0.0.0.0',8888))    # 绑定ip                
-    socket.listen(5)                 # 设置监听                
-    connfd,addr = socket.accept()    # 创建connfd 阻塞                
-    data = connfd.recv(1680 * 1680)  # 接收客户端的数据                
-    fileName = '%d-%d-%d.jpg' % time.localtime()[:3]                
-    f = open(fileName,'wb')                
-    f.write(data)                
-    f.close()                                
-    
-    connfd.close()                   # 关闭连接                
+                      <pre><code class="language-python line-numbers">  """
+      顺序：
+      文件传输 服务端示例代码
+          1 建立TCP套接字
+          2 等待客户端内连接
+          3 接收图片内容
+          4 保存图片
+          5 终止连接
+  """
+
+    from socket import *             # 导入套接字模块
+    import time                      # 导入时间模块
+    socket = socket()                # 创建套接字
+    socket.bind(('0.0.0.0',8888))    # 绑定ip
+    socket.listen(5)                 # 设置监听
+    connfd,addr = socket.accept()    # 创建connfd 阻塞
+    data = connfd.recv(1680 * 1680)  # 接收客户端的数据
+    fileName = '%d-%d-%d.jpg' % time.localtime()[:3]
+    f = open(fileName,'wb')
+    f.write(data)
+    f.close()
+
+    connfd.close()                   # 关闭连接
     socket.close()
 
-  """                
-      文件传输 客户端示例代码                
-          1 建立TCP套接字                
-          2 连接服务端                
-          3 读取文件内容                
-          4 发送文件内容                
-          5 关闭连接                
-  """                
-  from socket import *                # 导入模块                
-  socket = socket()                   # 创建套接字                
-  socket.connect(('127.0.0.1',8888))  # 连接服务端                
-  f = open('2.jpg','rb')              # 读取文件内容                
-  data = f.read()                
-  socket.send(data)                   # 发送内容                
-  f.close()                           # 关闭                
+  """
+      文件传输 客户端示例代码
+          1 建立TCP套接字
+          2 连接服务端
+          3 读取文件内容
+          4 发送文件内容
+          5 关闭连接
+  """
+  from socket import *                # 导入模块
+  socket = socket()                   # 创建套接字
+  socket.connect(('127.0.0.1',8888))  # 连接服务端
+  f = open('2.jpg','rb')              # 读取文件内容
+  data = f.read()
+  socket.send(data)                   # 发送内容
+  f.close()                           # 关闭
   socket.close()                      # 关闭连接</code></pre>
                     </li>
                   </ol>
@@ -2339,74 +2342,73 @@
                 <li>
                   6. 注意：
                   <pre><code class="language-python line-numbers">  # windows系统下必须把子进程相关代码放入if，要不然会报错 linux 不需要
-  import multiprocessing                      # 导入模块               
-  from time import  sleep                      
-  
-  def fun():                                  # 创建进程执行的函数                   
-      print('子进程函数开始执行....')                          
-      sleep(2)                                # 睡眠模拟程序执行                   
-      print('子进程函数执行结束....')                              
-    
-  # windows系统下必须把子进程相关代码放入if，要不然会报错   linux 不需要               
-  if __name__ == '__main__':                   
-  p = multiprocessing.Process(target = fun)   # 创建子进程对象                   
-      p.start()                               # 启动子进程，进程诞生并执行fun函数                   
-      print('主进程开始执行...')                 # 主进程执行                   
-      sleep(5)                                # 3秒后执行                   
-      print('主进程执行完毕...')                  
-      p.join()                                # 回收
-  
-  # 传参写法
-  from multiprocessing import Process          # 导入模块               
-  from time import sleep                              
-  def emp(sec,name):                           # 创建包含参数的进程函数                   
-      for i in range(3):                       
-          sleep(sec)                       
-          print('说明：%s' % name)               
-  if __name__ == '__main__':                   
-      p = Process(target=emp,args=(2,'传入参数'))              # 按位置传参                    
-      p.start()                                               # 执行                    
-      p.join()                                                # 回收
-  
-  # 关键字传参写法
-  from multiprocessing import Process  # 导入模块               
-  from time import sleep               
-  def emp(sec,name):   # 创建包含参数的进程函数                   
-      for i in range(3):                       
-          sleep(sec)                       
-          print('说明：%s' % name)              
+  import multiprocessing                      # 导入模块
+  from time import  sleep
 
-  if __name__ == '__main__':                   
-  p = Process(target=emp,kwargs={'name':'传入参数','sec':4})   # 关键字传参                     
-  p.start()                                                   # 执行                     
+  def fun():                                  # 创建进程执行的函数
+      print('子进程函数开始执行....')
+      sleep(2)                                # 睡眠模拟程序执行
+      print('子进程函数执行结束....')
+
+  # windows系统下必须把子进程相关代码放入if，要不然会报错   linux 不需要
+  if __name__ == '__main__':
+  p = multiprocessing.Process(target = fun)   # 创建子进程对象
+      p.start()                               # 启动子进程，进程诞生并执行fun函数
+      print('主进程开始执行...')                 # 主进程执行
+      sleep(5)                                # 3秒后执行
+      print('主进程执行完毕...')
+      p.join()                                # 回收
+
+  # 传参写法
+  from multiprocessing import Process          # 导入模块
+  from time import sleep
+  def emp(sec,name):                           # 创建包含参数的进程函数
+      for i in range(3):
+          sleep(sec)
+          print('说明：%s' % name)
+  if __name__ == '__main__':
+      p = Process(target=emp,args=(2,'传入参数'))              # 按位置传参
+      p.start()                                               # 执行
+      p.join()                                                # 回收
+
+  # 关键字传参写法
+  from multiprocessing import Process  # 导入模块
+  from time import sleep
+  def emp(sec,name):   # 创建包含参数的进程函数
+      for i in range(3):
+          sleep(sec)
+          print('说明：%s' % name)
+
+  if __name__ == '__main__':
+  p = Process(target=emp,kwargs={'name':'传入参数','sec':4})   # 关键字传参
+  p.start()                                                   # 执行
   p.join()                                                    # 回收
-  
-  
+
   # 进程属性
-  import time              
-  from multiprocessing import Process                         # 导入模块                            
-  
-  def fun():                                                  # 创建函数                  
-      for i in range(3):                      
-          print(time.ctime())                                 # 打印时间                          
-          time.sleep(2)                            
-          
-  if __name__ == '__main__':                  
-      p = Process(target=fun)                  
+  import time
+  from multiprocessing import Process                         # 导入模块
+
+  def fun():                                                  # 创建函数
+      for i in range(3):
+          print(time.ctime())                                 # 打印时间
+          time.sleep(2)
+
+  if __name__ == '__main__':
+      p = Process(target=fun)
       p.daemon = True       # 设置True子进程随父进程的退出而退出  在start前设置,
-                              因为父进程没有任何操作，所以直接退出了，把此行注释就会打印时间了      
-  
+                              因为父进程没有任何操作，所以直接退出了，把此行注释就会打印时间了
+
       p.start()
-  
-      print(p.name)         # 查看进程的名字                    
-      print(p.pid)          # ID                   
-      print(p.is_alive())   # 存活状态                                 
-      
-  """              
+
+      print(p.name)         # 查看进程的名字
+      print(p.pid)          # ID
+      print(p.is_alive())   # 存活状态
+
+  """
       import os, sys        # 需要导入模块
-      os.getpid             # 获取子进程              
-      os.getippid           # 获取父进程              
-      sys.exit              # 退出进程              
+      os.getpid             # 获取子进程
+      os.getippid           # 获取父进程
+      sys.exit              # 退出进程
   """</code></pre>
                 </li>
               </ol>
@@ -2414,7 +2416,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>爬虫</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -2445,11 +2447,11 @@
             </li>
             <li>
               案例
-              <pre><code class="language-python line-numbers">  import requests                      # 需要安装   pip install requests                
-  url = 'https://www.baidu.com/'       # 待提取的URL地址                
-  res = requests.get(url)              # 模拟浏览器发请求                
-  res.encoding = 'utf-8'               # 对数据编码                
-  with open('百度.html','wb') as f:     # 保存数据                    
+              <pre><code class="language-python line-numbers">  import requests                      # 需要安装   pip install requests
+  url = 'https://www.baidu.com/'       # 待提取的URL地址
+  res = requests.get(url)              # 模拟浏览器发请求
+  res.encoding = 'utf-8'               # 对数据编码
+  with open('百度.html','wb') as f:     # 保存数据
       f.write(res.content)</code></pre>
             </li>
             <li>
@@ -2522,7 +2524,9 @@
               <ol>
                 <li>
                   参考：
-                  <el-link type="primary" icon="Link" target="_blank" href="https://byvoid.com/zhs/blog/http-keep-alive-header/">https://byvoid.com/zhs/blog/http-keep-alive-header/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="https://byvoid.com/zhs/blog/http-keep-alive-header/">
+                    https://byvoid.com/zhs/blog/http-keep-alive-header/
+                  </el-link>
                 </li>
                 <li>Accept</li>
                 <li>Accept-Language</li>
@@ -2812,19 +2816,19 @@
             </li>
             <li>
               get 方法
-              <pre><code class="language-python line-numbers">  import requests                               
-  r = requests.get('https://wwwbaidu.com/')               
-  res = requests.request('GET','https://www.baidu.com/')                              
-  print(res.status_code)    
-  data = {                   
-    'name':'wang',                   
-    'age': 22               
-  }               
-  res1 = requests.get("http://httpbin.org/get",params = data)               
-  headers = {                   
-    # 'User-Agent':''               
-  }               
-  url = 'https://www.jianshu.com/p/8346143aba53'               
+              <pre><code class="language-python line-numbers">  import requests
+  r = requests.get('https://wwwbaidu.com/')
+  res = requests.request('GET','https://www.baidu.com/')
+  print(res.status_code)
+  data = {
+    'name':'wang',
+    'age': 22
+  }
+  res1 = requests.get("http://httpbin.org/get",params = data)
+  headers = {
+    # 'User-Agent':''
+  }
+  url = 'https://www.jianshu.com/p/8346143aba53'
   res2 = requests.get(url,headers=headers)</code></pre>
             </li>
             <li>
@@ -2844,36 +2848,36 @@
             <li>使用：from lxml import etree</li>
             <li>
               插件：极简插件 => Xpath Helper =>
-              <pre><code class="language-python line-numbers">  """             
-      步骤             
-          1 找地址     
-          2 发送请求       
-          3 提取相应      
-          4 数据入库             
-  """   
-  
-  text = '''             
-      &lt;div&gt;                 
-        &lt;ul&gt;                     
-          &lt;li class="item-0"&gt;&lt;a&gt; href="link1.html"&gt;1 item&lt;/a&gt;&lt;/li&gt;                     
-          &lt;li class="item-1"&gt;&lt;a&gt; href="link1.html"&gt;2 item&lt;/a&gt;&lt;/li&gt;                     
-          &lt;li class="item-2"&gt;&lt;a&gt; href="link1.html"&gt;3 item&lt;/a&gt;&lt;/li&gt;                 
-        &lt;/ul&gt;             
-      &lt;/div&gt;             
-  '''       
-  
-  from lxml import etree             
-  obj = etree.HTML(text)             
-  # print(obj)   # &lt;Element html at 0x1e817c202c0&gt;             
+              <pre><code class="language-python line-numbers">  """
+      步骤
+          1 找地址
+          2 发送请求
+          3 提取相应
+          4 数据入库
+  """
+
+  text = '''
+      &lt;div&gt;
+        &lt;ul&gt;
+          &lt;li class="item-0"&gt;&lt;a&gt; href="link1.html"&gt;1 item&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="item-1"&gt;&lt;a&gt; href="link1.html"&gt;2 item&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="item-2"&gt;&lt;a&gt; href="link1.html"&gt;3 item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+  '''
+
+  from lxml import etree
+  obj = etree.HTML(text)
+  # print(obj)   # &lt;Element html at 0x1e817c202c0&gt;
   print(obj.xpath('//li/a/text()'))  # text()表示拿去里面的文本  ['1 item', '2 item', '3 item']
-  
+
   # 子点提取
-  result = html.xpath("//li/a")             
-  result = html.xpath("//li/a/text（）")      # 提取数据             
+  result = html.xpath("//li/a")
+  result = html.xpath("//li/a/text（）")      # 提取数据
   result = html.xpath('//li/a/chref')        # 属性值
-  
+
   # 指定节点获取
-  result = html.xpath('//li[@class="item-0"]/a/text()')             
+  result = html.xpath('//li[@class="item-0"]/a/text()')
   print(result)</code></pre>
             </li>
           </ul>
@@ -2909,19 +2913,19 @@
             </li>
             <li>
               使用
-              <pre><code class="language-python line-numbers">  import requests                      # 导入模块               
-  url = 'https://mail.qq.com/'               
-  resp = requests.get(url)             # 用变量接收响应               
+              <pre><code class="language-python line-numbers">  import requests                      # 导入模块
+  url = 'https://mail.qq.com/'
+  resp = requests.get(url)             # 用变量接收响应
   print(resp.text)                     # 拿到页面源代码
 
   伪装
-  import requests  # 导入模块              
-  url = 'https://mail.qq.com/'     
-  # 网站会校验使用什么来打开网站，所以会出现 您访问出错了，那么解决办法就是要伪装成浏览器打开              
-  dic = {                  
-    "User-Agent":""              
-  }              
-  resp = requests.get(url,header=dic)  # 用变量接收响应,请求头里伪装写好自己的设备              
+  import requests  # 导入模块
+  url = 'https://mail.qq.com/'
+  # 网站会校验使用什么来打开网站，所以会出现 您访问出错了，那么解决办法就是要伪装成浏览器打开
+  dic = {
+    "User-Agent":""
+  }
+  resp = requests.get(url,header=dic)  # 用变量接收响应,请求头里伪装写好自己的设备
   print(resp.text)                     # 拿到页面源代码</code></pre>
             </li>
             <li>在上一章中，我们基本上掌握了抓取整个网页的基本技能.但是呢，大多数情况下，我们并不需要整个网页的内容，只是需要那么 一小部分.怎么办呢？这就涉及到了数据提取的问题.</li>
@@ -3058,43 +3062,43 @@
             <li>这三种方式可以混合进行使用，完全以结果做导向，只要能拿到你想要的数据.用什么方案并不重要。当你掌握了这些之后.再考虑 性能的问题.</li>
           </ul>
           <p>re 模块</p>
-          <pre><code class="language-python line-numbers">  import re                # 导入re模块                               
-                           # findall 匹配字符串中所有的符合正则的内容              
+          <pre><code class="language-python line-numbers">  import re                # 导入re模块
+                           # findall 匹配字符串中所有的符合正则的内容
   list = re.findall(r"\d+","正则表达式，匹配电话号10086，10010")
   print(list)              # ['10086', '10010']
-  
-  import re                # 导入re模块              
-  it = re.finditer(r"\d+","正则表达式，匹配电话号10086，10010")              
-  # finditer: 匹配字符串中所有的内容【返回的是迭代器】,从迭代器中拿到内容需要用 。group()函数             
-  for i in it:                  
+
+  import re                # 导入re模块
+  it = re.finditer(r"\d+","正则表达式，匹配电话号10086，10010")
+  # finditer: 匹配字符串中所有的内容【返回的是迭代器】,从迭代器中拿到内容需要用 。group()函数
+  for i in it:
       print(i.group())     # 10086  10010
-  
-  import re  # 导入re模块              
-  s = re.search(r"\d+","正则表达式，匹配电话号10086，10010")              
-  # search: 返回的结果是match对象，拿数据需要 。group() ,只检索第一个结果           
+
+  import re  # 导入re模块
+  s = re.search(r"\d+","正则表达式，匹配电话号10086，10010")
+  # search: 返回的结果是match对象，拿数据需要 。group() ,只检索第一个结果
   print(s.group())         # 10086
-  
-  import re                # 导入re模块               
-  m = re.match(r"\d+","正则表达式，匹配电话号10086，10010")             
-  # match: 是从头进行匹配，开头没有匹配到就报错 ，'NoneType' object has no attribute 'group'           
+
+  import re                # 导入re模块
+  m = re.match(r"\d+","正则表达式，匹配电话号10086，10010")
+  # match: 是从头进行匹配，开头没有匹配到就报错 ，'NoneType' object has no attribute 'group'
   print(m.group())         # 必须开头支持正则表达式的结果
-  
-  import re  # 导入re模块                            
-  obj = re.compile(r'\d+') # 预加载正则表达式, 一个正则多个使用             
-  ret = obj.finditer("电话：10086，电话2：10010")  # 调用              
-  for i in ret:            # 迭代获取内容                  
+
+  import re  # 导入re模块
+  obj = re.compile(r'\d+') # 预加载正则表达式, 一个正则多个使用
+  ret = obj.finditer("电话：10086，电话2：10010")  # 调用
+  for i in ret:            # 迭代获取内容
       print(i.group())
-  
+
   # 案例：
-  import re  # 导入re模块              
-  s = """              
-      &lt;div class="jay"&gt;&lt;span id="1"&gt;张三&lt;/span&gt;&lt;/div&gt;              
-  """              
+  import re  # 导入re模块
+  s = """
+      &lt;div class="jay"&gt;&lt;span id="1"&gt;张三&lt;/span&gt;&lt;/div&gt;
+  """
   # （？P&lt;分组名字&gt;正则） 可以单独从正则匹配的内容中进一步提取内容
-  # re.S 让.能匹配换行符              
-  obj = re.compile(r'&lt;div class=".*?"&gt;&lt;span id="\d+"&gt;(?P&lt;variable&gt;.*?)&lt;/span&gt;&lt;/div&gt;',re.S) 
-  result = obj.finditer(s)              
-  for it in result:                  
+  # re.S 让.能匹配换行符
+  obj = re.compile(r'&lt;div class=".*?"&gt;&lt;span id="\d+"&gt;(?P&lt;variable&gt;.*?)&lt;/span&gt;&lt;/div&gt;',re.S)
+  result = obj.finditer(s)
+  for it in result:
       print(it.group('variable'))</code></pre>
           <p>案例</p>
           <ul>
@@ -3106,136 +3110,136 @@
                 <li>start=0 代表获取到第一页https://movie.douban.com/top250?start=0&filter=</li>
                 <li>需要自己调整url 里面的参数，用变量和增加算法，进行爬取数据</li>
               </ol>
-              <pre><code class="language-python line-numbers">  import requests                            # 拿到页面源代码               
-  import re                                  # 通过re来提取想要的有效信息               
+              <pre><code class="language-python line-numbers">  import requests                            # 拿到页面源代码
+  import re                                  # 通过re来提取想要的有效信息
   import csv                                 # 为了存储数据 ，a,b,c,d 格式存储数据，数据分析
-  url = "https://movie.douban.com/top250"    # 网页地址               
-  headers = {                                # 伪造成浏览器               
+  url = "https://movie.douban.com/top250"    # 网页地址
+  headers = {                                # 伪造成浏览器
       "User-Agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)
-      Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0"               
-  }               
-  resp = requests.get(url,headers = headers) # 模拟浏览器发请求               
-  content = resp.text                        # 拿到页面源代码    
-  
-  # 解析数据  源代码分析，拿到数据               
-  obj = re.compile(r'&lt;li&gt;.*?&lt;div class="item"&gt;.*?&lt;span class="title"&gt;(?P&lt;name&gt;.*?)'                       
-                    r'&lt;/span&gt;.*?&lt;p class=""&gt;.*?'                                
-                    r'&lt;br&gt;(?P&lt;year&gt;.*?)&nbsp;.*?&lt;span class="rating_num" property="v'                       
-                    r':average"&gt;(?P&lt;score&gt;.*?)&lt;/span&gt;.*?'                                
-                    r'&lt;span&gt;(?P&lt;evaluate&gt;.*?)人评价&lt;/span&gt;',re.S) 
-  
-  # 开始匹配               
-  result = obj.finditer(content)              # 迭代查找               
-  f = open("data.csv",mode="w")               # 写数据到data文件里              
-  csvWrite = csv.writer(f)                    # 往文件里写               
-  for it in result:                  
-      print(it.group("name"))                 # 拿到名字                   
-      print(it.group("year").strip())         # 拿到年份，但是空白需要单独处理                   
-      print(it.group("score"))                # 得到评分                   
-      print(it.group("evaluate"))             # 得到评价                   
-      dic = it.groupdict()                    # 把数据添加到字典里                  
-      dic['year'] = dic['year'].strip()       # 年份因为有空格，需要单独处理                   
-      csvWrite.writerow(dic.values())         # 往字典里写数据,key只是标识name,year ,要的是结果，用value  
-  
-  f.close()                                   # 写好后关闭文件               
+      Chrome/80.0.3987.87 Safari/537.36 SE 2.X MetaSr 1.0"
+  }
+  resp = requests.get(url,headers = headers) # 模拟浏览器发请求
+  content = resp.text                        # 拿到页面源代码
+
+  # 解析数据  源代码分析，拿到数据
+  obj = re.compile(r'&lt;li&gt;.*?&lt;div class="item"&gt;.*?&lt;span class="title"&gt;(?P&lt;name&gt;.*?)'
+                    r'&lt;/span&gt;.*?&lt;p class=""&gt;.*?'
+                    r'&lt;br&gt;(?P&lt;year&gt;.*?)&nbsp;.*?&lt;span class="rating_num" property="v'
+                    r':average"&gt;(?P&lt;score&gt;.*?)&lt;/span&gt;.*?'
+                    r'&lt;span&gt;(?P&lt;evaluate&gt;.*?)人评价&lt;/span&gt;',re.S)
+
+  # 开始匹配
+  result = obj.finditer(content)              # 迭代查找
+  f = open("data.csv",mode="w")               # 写数据到data文件里
+  csvWrite = csv.writer(f)                    # 往文件里写
+  for it in result:
+      print(it.group("name"))                 # 拿到名字
+      print(it.group("year").strip())         # 拿到年份，但是空白需要单独处理
+      print(it.group("score"))                # 得到评分
+      print(it.group("evaluate"))             # 得到评价
+      dic = it.groupdict()                    # 把数据添加到字典里
+      dic['year'] = dic['year'].strip()       # 年份因为有空格，需要单独处理
+      csvWrite.writerow(dic.values())         # 往字典里写数据,key只是标识name,year ,要的是结果，用value
+
+  f.close()                                   # 写好后关闭文件
   print("关闭文件结束")
-  
+
   # 2、电影天堂 https://www.dytt89.com/
-  # coding:utf-8               
-    # 1.定位到2020必看片               
-    # 2.从2020必看片中提取到子页面的链接地址               
-    # 3.请求子页面的链接地址。拿到我们想要的下载地址...               
-  import requests               
-  import re                              
-  url = "https://www.dytt89.com/"              # 存储url               
+  # coding:utf-8
+    # 1.定位到2020必看片
+    # 2.从2020必看片中提取到子页面的链接地址
+    # 3.请求子页面的链接地址。拿到我们想要的下载地址...
+  import requests
+  import re
+  url = "https://www.dytt89.com/"              # 存储url
   # 发送请求,因为有加密校验，request也会校验，解决办法就是用verify=False,去掉安全验证
-  resp = requests.get(url,verify=False)               
-  resp.encoding = 'gbk'                        # 指定字符集               
-      # print(request.text)                    # 拿到页面源代码               
-      obj1 = re.compile(r'2022必看热片.*?&lt;ul&gt;(?P&lt;ul&gt;.*?)&lt;/ul&gt;',re.S)    # 写正则匹配，先取到ul里的内容               
-      obj2 = re.compile(r"&lt;a href='(?P&lt;href&gt;.*?)'",re.S)               
-      obj3 = re.compile(r'◎片　　名(?P&lt;movie&gt;.*?)&lt;br /&gt;.*?&lt;td '                                 
+  resp = requests.get(url,verify=False)
+  resp.encoding = 'gbk'                        # 指定字符集
+      # print(request.text)                    # 拿到页面源代码
+      obj1 = re.compile(r'2022必看热片.*?&lt;ul&gt;(?P&lt;ul&gt;.*?)&lt;/ul&gt;',re.S)    # 写正则匹配，先取到ul里的内容
+      obj2 = re.compile(r"&lt;a href='(?P&lt;href&gt;.*?)'",re.S)
+      obj3 = re.compile(r'◎片　　名(?P&lt;movie&gt;.*?)&lt;br /&gt;.*?&lt;td '
                         r'style="WORD-WRAP: break-word" bgcolor="#fdfddf"&gt;&lt;a '
-                        r'href="(?P&lt;downl&gt;.*?)"&gt;',re.S)              
-  result1 = obj1.finditer(resp.text) # 将源代码存在result1里               
-  childHrefList= []# 定义一个列表来存放新的url地址               
-  for it in result1:                   
-      ul = it.group('ul')     # 拿到ul里面的li                   
-      # 提取子页面链接：                   
-      result2 = obj2.finditer(ul)  # 将源代码存在result1里                   
-      for itt in result2:                       
-          # 拼接子页面的url地址： 域名 + 子页面                         
-          child_href = url + itt.group("href").strip("/")                       
-          childHrefList.append(child_href)  # 把拼接的链接添加到列表里                              
-          
-  # 提取子页面内容               
-  for href in childHrefList:                   
-      child_resp = requests.get(href,verify=False)                   
-      child_resp.encoding = 'gbk'                   
-      result3 = obj3.search(child_resp.text)                   
-      print(result3.group("movie"))                   
-      print(result3.group("downl"))                   
+                        r'href="(?P&lt;downl&gt;.*?)"&gt;',re.S)
+  result1 = obj1.finditer(resp.text) # 将源代码存在result1里
+  childHrefList= []# 定义一个列表来存放新的url地址
+  for it in result1:
+      ul = it.group('ul')     # 拿到ul里面的li
+      # 提取子页面链接：
+      result2 = obj2.finditer(ul)  # 将源代码存在result1里
+      for itt in result2:
+          # 拼接子页面的url地址： 域名 + 子页面
+          child_href = url + itt.group("href").strip("/")
+          childHrefList.append(child_href)  # 把拼接的链接添加到列表里
+
+  # 提取子页面内容
+  for href in childHrefList:
+      child_resp = requests.get(href,verify=False)
+      child_resp.encoding = 'gbk'
+      result3 = obj3.search(child_resp.text)
+      print(result3.group("movie"))
+      print(result3.group("downl"))
       break  # 测试用，得到第一个结果就跳出循环，解开则获取所有数据
-  
+
   # 2、bs4解析
   # bs4解析比较简单，但是呢，首先你需要了解一丢丢的html知识.然后再去使用bs4去提取，逻辑和编写难度就会非常简单和清晰
     # 安装：
-        pip install bs4 -i 
+        pip install bs4 -i
 
     # 实例：http://www.xinfadi.com.cn/priceDetail.html
-        # 安装 pip install bs4 -i                   
-        # 1.拿到页面源代码                   
-        # 2.使用bs4进行解析。拿到数据                   
-        import requests                   
-        from bs4 import BeautifulSoup       # 从bs4中把BeautifulSoup 导入进来 
-        url = 'http://xinfadi.com.cn/priceDetail.html'                   
-        resp = requests.get(url)                   
-        print(resp.text)             
-  
-        # 解析数据                   
-        # 1.把页面源代码交给BeautifukSoup进行处理，生成bs对象                   
-            page = BeautifulSoup(resp.text,'html.parser') # 实际出的警告不影响，也可以告诉解析器这是html     
-        # 2.从bs对象中查找数据  find（标签，属性=值）     find_all（标签，属性=值）                   
-            table = page.find("table",class_="hq_table") # class是python中的关键字,可以在后面加一个下划线 _     
-        # table = page.find("table",attrs={"class_":"hq_table"})   或者用字典来解决关键字    
-        # 拿到所有数据行                   
-        trs = table.find_all("tr")[1:]                   
-        for tr in trs:                     # 每一行                        
-            tds = tr.find_all("td")        # 拿到每行中的所有td                       
-            var = tds[0].text              # 表示拿到被标签标记的内容                         
+        # 安装 pip install bs4 -i
+        # 1.拿到页面源代码
+        # 2.使用bs4进行解析。拿到数据
+        import requests
+        from bs4 import BeautifulSoup       # 从bs4中把BeautifulSoup 导入进来
+        url = 'http://xinfadi.com.cn/priceDetail.html'
+        resp = requests.get(url)
+        print(resp.text)
+
+        # 解析数据
+        # 1.把页面源代码交给BeautifukSoup进行处理，生成bs对象
+            page = BeautifulSoup(resp.text,'html.parser') # 实际出的警告不影响，也可以告诉解析器这是html
+        # 2.从bs对象中查找数据  find（标签，属性=值）     find_all（标签，属性=值）
+            table = page.find("table",class_="hq_table") # class是python中的关键字,可以在后面加一个下划线 _
+        # table = page.find("table",attrs={"class_":"hq_table"})   或者用字典来解决关键字
+        # 拿到所有数据行
+        trs = table.find_all("tr")[1:]
+        for tr in trs:                     # 每一行
+            tds = tr.find_all("td")        # 拿到每行中的所有td
+            var = tds[0].text              # 表示拿到被标签标记的内容
             var2 = tds[1].text             # 表示拿到被标签标记的内容
-  
+
   # 3、案例https://www.umei.cc/bizhitupian/weimeibizhi/
-      # 1.拿到主页面源代码，然后提取到子页面的链接地址，href                   
-      # 2.通过href拿到子页面的内容。从子页面中找到图片的下载地址  img =&gt; src                   
-      # 3.下载图片                                      
-      import requests                   
-      from bs4 import  BeautifulSoup                   
+      # 1.拿到主页面源代码，然后提取到子页面的链接地址，href
+      # 2.通过href拿到子页面的内容。从子页面中找到图片的下载地址  img =&gt; src
+      # 3.下载图片
+      import requests
+      from bs4 import  BeautifulSoup
       import time                          # 一直去访问，防止锁IP，利用time对爬虫进行休息间隔爬取
-      url = "https://www.umei.cc/bizhitupian/weimeibizhi/"                   
-      resp = requests.get(url)             # 获取链接                   
-      resp.encoding = 'utf-8'              # 指定字符集                   
-      print(resp.text)                     # 把源码交给bs                   
-      main_page = BeautifulSoup(resp.text,'html.parser')                   
-      alist = main_page.find("div",class_="TypeList").find_all("a")                   
-      for a in alist:                       
-          href = a.get("href")             # 直接通过get就可以拿到链接                       
-          # 拿到子页面的源代码                      
-          child_page_resp = requests.get(href)                      
-          child_page_resp.encoding = "utf-8"                      
-          child_page_text = child_page_resp.text                     
-          # 从子页面中拿到图片的下载路径                       
-          child_page = BeautifulSoup("","html.parser")                      
-          p = child_page.find('p',align="center") # 一般用class 或者 ID 来找，更准确 
-          img = p.find("img")                      
-          src = img.get("src")              # 拿到下载路径 ,标签的属性                       
-          # 下载图片                       
-          img_resp = requests.get(src)                      
-          img_resp.content                  # 这里拿到的是字节                       
-          img_name = src.split("/")[-1]     # 拿到url的最后一个/以后的内容，来命名                       
-          with open("img/"+img_name,mode="wb") as f:  # 创建一个img文件夹，并让下载到img文件夹下  
-              f.write(img_resp.content)     # 图片内容写入文件                       
-          print("完成下载",img_name)                     
+      url = "https://www.umei.cc/bizhitupian/weimeibizhi/"
+      resp = requests.get(url)             # 获取链接
+      resp.encoding = 'utf-8'              # 指定字符集
+      print(resp.text)                     # 把源码交给bs
+      main_page = BeautifulSoup(resp.text,'html.parser')
+      alist = main_page.find("div",class_="TypeList").find_all("a")
+      for a in alist:
+          href = a.get("href")             # 直接通过get就可以拿到链接
+          # 拿到子页面的源代码
+          child_page_resp = requests.get(href)
+          child_page_resp.encoding = "utf-8"
+          child_page_text = child_page_resp.text
+          # 从子页面中拿到图片的下载路径
+          child_page = BeautifulSoup("","html.parser")
+          p = child_page.find('p',align="center") # 一般用class 或者 ID 来找，更准确
+          img = p.find("img")
+          src = img.get("src")              # 拿到下载路径 ,标签的属性
+          # 下载图片
+          img_resp = requests.get(src)
+          img_resp.content                  # 这里拿到的是字节
+          img_name = src.split("/")[-1]     # 拿到url的最后一个/以后的内容，来命名
+          with open("img/"+img_name,mode="wb") as f:  # 创建一个img文件夹，并让下载到img文件夹下
+              f.write(img_resp.content)     # 图片内容写入文件
+          print("完成下载",img_name)
           time.sleep(1)                     # 进行睡眠1秒，然后再爬取</code></pre>
             </li>
             <li></li>
@@ -3248,49 +3252,51 @@
             <li>pip install lxml</li>
             <li>
               实例
-              <pre><code class="language-python line-numbers">  from lxml import etree  # 因为etree才包含了xpath的功能                                
-  xml = """   
-    &lt;book&gt;                    
-      &lt;id&gt;1&lt;/id&gt;                    
-      &lt;name&gt;野花遍地香&lt;/name&gt;                    
-      &lt;price&gt;1.23&lt;/price&gt;                    
-      &lt;nick&gt;臭豆腐&lt;/nick&gt;                    
-      &lt;author&gt;                        
-        &lt;nick id="10086"&gt;周大强&lt;/nick&gt;                        
-        &lt;nick id="10010"&gt;周芷若&lt;/nick&gt;                        
-        &lt;nick class="joy"&gt;周杰伦&lt;/nick&gt;                        
-        &lt;nick class="jolin"&gt;蔡依林&lt;/nick&gt;                        
-        &lt;div&gt;                            
-          &lt;nick&gt;惹了&lt;/nick&gt;                        
-        &lt;/div&gt;                       
-      &lt;/author&gt;                   
-      &lt;partner&gt;                        
-        &lt;nick id="ppc"&gt;胖胖陈&lt;/nick&gt;                        
-        &lt;nick id="ppbc"&gt;胖胖不陈&lt;/nick&gt;                     
-      &lt;/partner&gt;                
-    &lt;/book&gt;                
-  """                
-    tree = etree.XML(xml)                                              # 把xml加载成etree对象                
-    result1 = tree.xpath("/book")                                      # 这样才能正常使用xpath的功能,表示从根节点找东西 
-    result2 = tree.xpath("/book/name")                                 # 从book下找name                
-    result3 = tree.xpath("/book/name/text()")                          # 从book下找name中用text()拿文本                
-    result4 = tree.xpath("/book/author//nick/text()")                  # // 表示后代全部找出来                
+              <pre><code class="language-python line-numbers">  from lxml import etree  # 因为etree才包含了xpath的功能
+  xml = """
+    &lt;book&gt;
+      &lt;id&gt;1&lt;/id&gt;
+      &lt;name&gt;野花遍地香&lt;/name&gt;
+      &lt;price&gt;1.23&lt;/price&gt;
+      &lt;nick&gt;臭豆腐&lt;/nick&gt;
+      &lt;author&gt;
+        &lt;nick id="10086"&gt;周大强&lt;/nick&gt;
+        &lt;nick id="10010"&gt;周芷若&lt;/nick&gt;
+        &lt;nick class="joy"&gt;周杰伦&lt;/nick&gt;
+        &lt;nick class="jolin"&gt;蔡依林&lt;/nick&gt;
+        &lt;div&gt;
+          &lt;nick&gt;惹了&lt;/nick&gt;
+        &lt;/div&gt;
+      &lt;/author&gt;
+      &lt;partner&gt;
+        &lt;nick id="ppc"&gt;胖胖陈&lt;/nick&gt;
+        &lt;nick id="ppbc"&gt;胖胖不陈&lt;/nick&gt;
+      &lt;/partner&gt;
+    &lt;/book&gt;
+  """
+    tree = etree.XML(xml)                                              # 把xml加载成etree对象
+    result1 = tree.xpath("/book")                                      # 这样才能正常使用xpath的功能,表示从根节点找东西
+    result2 = tree.xpath("/book/name")                                 # 从book下找name
+    result3 = tree.xpath("/book/name/text()")                          # 从book下找name中用text()拿文本
+    result4 = tree.xpath("/book/author//nick/text()")                  # // 表示后代全部找出来
     result5 = tree.xpath("/book/author/*/nick/text()")                 # * 表示通配符，任意节点
     result6 = tree.xpath("/book/author[1]/nick/text()")                # [1]表示取第一个结果，xpath顺序是从1开始
     result7 = tree.xpath("/book/author/nick[@href="属性选择"]/text()")   # [里面写属性名和属性值]
-    result8 = tree.xpath("/book/name/li")                              # 先获取所有li元素          
-        for li in result8:              
+    result8 = tree.xpath("/book/name/li")                              # 先获取所有li元素
+        for li in result8:
             result9 = li.xpath("./a/text()")     # 再从每个li中提取到文字信息,再li中继续去寻找，相对查找
-            result10 = li.xpath("./a/@href")     # 想拿到属性就用@   
-    print(result1)          # [&lt;Element book at 0x1e224518d40&gt;]                
-    print(result2)          # [&lt;Element name at 0x1f665b847c0&gt;]                
-    print(result3)          # ['野花遍地香']                
+            result10 = li.xpath("./a/@href")     # 想拿到属性就用@
+    print(result1)          # [&lt;Element book at 0x1e224518d40&gt;]
+    print(result2)          # [&lt;Element name at 0x1f665b847c0&gt;]
+    print(result3)          # ['野花遍地香']
     print(result4)          # ['周大强', '周芷若', '周杰伦', '蔡依林', '惹了']</code></pre>
             </li>
             <li>技巧：想拿xpath ，直接网页审查元素，在代码行上右键 => copy => copy XPath</li>
             <li>
               案例，猪八戒网：
-              <el-link type="primary" icon="Link" target="_blank" href="https://sanming.zbj.com/search/f/?kw=saas">https://sanming.zbj.com/search/f/?kw=saas</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://sanming.zbj.com/search/f/?kw=saas">
+                https://sanming.zbj.com/search/f/?kw=saas
+              </el-link>
             </li>
             <li>
               需求：
@@ -3304,28 +3310,28 @@
               <ol>
                 <li>先确定要的信息是否在源代码里面，拿名字在源码里面ctrl + f 搜素关键词</li>
               </ol>
-              <pre><code class="language-python line-numbers">  # 拿到页面源代码                
-  # 提取和解析数据                
-  import requests                
-  from lxml import etree                                
-  
-  url = "https://sanming.zbj.com/search/f/?kw=saas"                
-  resp = requests.get(url)                
-  print(resp.text)                 # 获取源码                
+              <pre><code class="language-python line-numbers">  # 拿到页面源代码
+  # 提取和解析数据
+  import requests
+  from lxml import etree
+
+  url = "https://sanming.zbj.com/search/f/?kw=saas"
+  resp = requests.get(url)
+  print(resp.text)                 # 获取源码
   html = etree.HTML(resp.text)     # 把html加载成etree对象，并且不能混用，是什么语言就用什么语言，
-                                   # xml就写xml()               
-  # /html/body/div[6]/div/div/div[2]/div[5]/div[1]/div[1]  
-    先要在网页确定第一个信息盒子，因为盒子都一样，用循环区值                
+                                   # xml就写xml()
+  # /html/body/div[6]/div/div/div[2]/div[5]/div[1]/div[1]
+    先要在网页确定第一个信息盒子，因为盒子都一样，用循环区值
   divs = html.xpath("/html/body/div[6]/div/div/div[2]/div[5]/div[1]/div") # 复制的xpath是第一个，
-                                                                            直接去掉[1]就是获取所有 
-  # 再写循环来获取所有                
-  for div in divs:                 # 拿到每一个服务商信息                    
-      # 再拿到想要的数据，这里拿的是价格,拿完价格后从列表中取出数据，并且去除¥ 符号                    
-      price = div.xpath("./div/div/a[2]/div[2]/div[1]/span[1]/text()")[0].strip("¥") 
-      # 因为标题里面会有&lt;h1&gt;SaaS&lt;/h1&gt;进行分割，所用利用这个进行拼接                    
-      title = "saas".join(div.xpath("./div/div/a[2]/div[2]/div[2]/p/text()"))                   
-      """... 一直写需要拿到的数据"""                    
-      print(price)                    
+                                                                            直接去掉[1]就是获取所有
+  # 再写循环来获取所有
+  for div in divs:                 # 拿到每一个服务商信息
+      # 再拿到想要的数据，这里拿的是价格,拿完价格后从列表中取出数据，并且去除¥ 符号
+      price = div.xpath("./div/div/a[2]/div[2]/div[1]/span[1]/text()")[0].strip("¥")
+      # 因为标题里面会有&lt;h1&gt;SaaS&lt;/h1&gt;进行分割，所用利用这个进行拼接
+      title = "saas".join(div.xpath("./div/div/a[2]/div[2]/div[2]/p/text()"))
+      """... 一直写需要拿到的数据"""
+      print(price)
       print(title)</code></pre>
             </li>
           </ul>
@@ -3333,34 +3339,34 @@
           <ul>
             <li>
               cookie
-              <pre><code class="language-python line-numbers">  # 登录 -> 得到cookie                 
-  # 带着cookie  去请求到书架urL -> 书架上的内容                 
-  # 必须得把上面的两个操作连起来                 
-  # 我们可以使用session进行请求 -> session你可以认为是一连串的请求。在这个过程中的cookie不会丢失\  
-  
-  import requests                 
-  session = requests.session()  # 等于会话，并记录说话的过程                                  
-  
-  # 1.登录                 
-    url = "https://passport.17k.com/ck/user/login"                 
-    data = {                     
-      "loginName":"18614075987",                     
-      "password":"q6035945"                 
-    }                 
-    session.post(url,data=data)                 
-    # print(resp.text)                 
-    # print(resp.cookies) # 看cookie的数据                                  
-  # 2.拿书架上的数据                 
-    # 干才的那个session中是有cookie的                 
-    resp = session.get('https://user.17k.com/ck/author/sheLf?page=1&appKey=2406394919')  
-    print(resp.json())                                  
-    
-    """                 
+              <pre><code class="language-python line-numbers">  # 登录 -> 得到cookie
+  # 带着cookie  去请求到书架urL -> 书架上的内容
+  # 必须得把上面的两个操作连起来
+  # 我们可以使用session进行请求 -> session你可以认为是一连串的请求。在这个过程中的cookie不会丢失\
+
+  import requests
+  session = requests.session()  # 等于会话，并记录说话的过程
+
+  # 1.登录
+    url = "https://passport.17k.com/ck/user/login"
+    data = {
+      "loginName":"18614075987",
+      "password":"q6035945"
+    }
+    session.post(url,data=data)
+    # print(resp.text)
+    # print(resp.cookies) # 看cookie的数据
+  # 2.拿书架上的数据
+    # 干才的那个session中是有cookie的
+    resp = session.get('https://user.17k.com/ck/author/sheLf?page=1&appKey=2406394919')
+    print(resp.json())
+
+    """
       如果没有用session,需要先登录,然后找到cookie复制出来，再写在请求里,其实session也是这种原理，是正规拿到cookie
       resp = session.get('https://user.17k.com/ck/author/sheLf?page=1&appKey=2406394919'，
-      headers={                     
-        "Cookie":"......"                 
-      })                                  
+      headers={
+        "Cookie":"......"
+      })
     """</code></pre>
             </li>
             <li>
@@ -3368,55 +3374,55 @@
               <ol>
                 <li>有些&lt;video&gt; 标签是二次加载的数据，就需要进入谷歌开发者工具的Network =&gt; 选中XHR =&gt; 刷新后看到访问的视频地址 =&gt; 在Preview 中可以找到 VideoInfo信息 =&gt; 但是srcUrl 中的地址是错误的，所以需要处理</li>
               </ol>
-              <pre><code class="language-python line-numbers">  # 防盗链                 
-  # 1、先拿到原始url，并拿到contID                 
-  # 2、拿到videoStatus返回的json.->srcURL                 
-  # 3.srcURL里面的内容进行修整                 
-  # 4.下载视频                 
-  import requests                                  
-  
-  url = "https://www.pearvideo.com/video_1764233"                 
-  contId = url.split("_")[1]   # 分割，并拿到后面的 1764233 数据                                  
-  
-  # 这是在开发者工具中Netword => XHR => Headers 中拿到的  Request URL                 
+              <pre><code class="language-python line-numbers">  # 防盗链
+  # 1、先拿到原始url，并拿到contID
+  # 2、拿到videoStatus返回的json.->srcURL
+  # 3.srcURL里面的内容进行修整
+  # 4.下载视频
+  import requests
+
+  url = "https://www.pearvideo.com/video_1764233"
+  contId = url.split("_")[1]   # 分割，并拿到后面的 1764233 数据
+
+  # 这是在开发者工具中Netword => XHR => Headers 中拿到的  Request URL
   videoStatusUrl = f"https://www.pearvideo.com/videoStatus.jsp?contId={contId}&mrd=0.1914366
-                    9352323123"                 
-                    
-  headers = {                     
-      "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, 
-      like Gecko) Chrome/102.0.5005.63 Safari/537.36",                     
-      # 防盗链会找到溯源， 1 => 2 => 3 是顺序查找，当你直接用2时，向上查找1查不到，说明2有问题 
-      # 解决办法，在headers 里，把防盗链地址添加上去即可，                     
-      "Referer":url                 
-  }                 
-  
-  resp = requests.get(videoStatusUrl,headers=headers)   # 获取url地址                 
-  print(resp.text) 
-      # 打印时当出现文章已下线，但是文章还是存在，就要考虑是不是加了反爬                            
-      # 先伪造成浏览器headers ，再处理防盗链  Referer:https://www.pearvideo.com/video_1764233  
-  dic = resp.json()                 
-  srcUrl = dic["videoInfo"]["videos"]["srcUrl"]         # 拿到字典中找videInfo下的videos下的srcUrl  
-  systemTime = dic["systemTime"]                        # 拿到错误信息                 
-  srcUrl = srcUrl.replace(systemTime,f"cont-{contId}")  # 替换systemTime,做正确视频地址的拼接      
-  print(srcUrl)                                         
-  
-  # 下载视频                 
-  with open("a.mp4",mode="wb") as f:                     
+                    9352323123"
+
+  headers = {
+      "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+      like Gecko) Chrome/102.0.5005.63 Safari/537.36",
+      # 防盗链会找到溯源， 1 => 2 => 3 是顺序查找，当你直接用2时，向上查找1查不到，说明2有问题
+      # 解决办法，在headers 里，把防盗链地址添加上去即可，
+      "Referer":url
+  }
+
+  resp = requests.get(videoStatusUrl,headers=headers)   # 获取url地址
+  print(resp.text)
+      # 打印时当出现文章已下线，但是文章还是存在，就要考虑是不是加了反爬
+      # 先伪造成浏览器headers ，再处理防盗链  Referer:https://www.pearvideo.com/video_1764233
+  dic = resp.json()
+  srcUrl = dic["videoInfo"]["videos"]["srcUrl"]         # 拿到字典中找videInfo下的videos下的srcUrl
+  systemTime = dic["systemTime"]                        # 拿到错误信息
+  srcUrl = srcUrl.replace(systemTime,f"cont-{contId}")  # 替换systemTime,做正确视频地址的拼接
+  print(srcUrl)
+
+  # 下载视频
+  with open("a.mp4",mode="wb") as f:
       f.write(requests.get(srcUrl).content)             # 直接把内容拿出来</code></pre>
             </li>
             <li>
               代理
-              <pre><code class="language-python line-numbers">  # 原理 。通过第三方的一个机器去发送请求，可以多个代理                
-  import requests                
-  # 先要找到能做中间代理的IP，https://www.zdaye.com/，拿到IP和端口号：218.60.8.83:3129                
-  proxies = {                    
-    # "http":"" 支持什么就用什么协议                    
-    "https":"https://218.60.8.83:3129"                
-  }                
-  url = "https://www.baidu.com"                
+              <pre><code class="language-python line-numbers">  # 原理 。通过第三方的一个机器去发送请求，可以多个代理
+  import requests
+  # 先要找到能做中间代理的IP，https://www.zdaye.com/，拿到IP和端口号：218.60.8.83:3129
+  proxies = {
+    # "http":"" 支持什么就用什么协议
+    "https":"https://218.60.8.83:3129"
+  }
+  url = "https://www.baidu.com"
   resp = requests.get(url,proxies=proxies)  # 使用代理，先把访问请求发给代理，然后让代理去访问url,
-                                              再返回给你结果                
-  resp.encoding = "utf-8"                
+                                              再返回给你结果
+  resp.encoding = "utf-8"
   print(resp.text)</code></pre>
             </li>
           </ul>
@@ -3430,12 +3436,12 @@
                 <li>在Initiator 中可以看到 Request call stack 意思是调用的站，点进去之后，左下角点下 ｛｝ 图标进行格式化</li>
                 <li>
                   this.sX3x.send(gz8r.data) 在发送的代码行中下断点，就能看到右侧的函数信息，找到e6c:下的request , 注意看url
-                  <pre><code class="language-python line-numbers">  request: 
-  cookie: true 
-  data: "params=pCzQ16YVz0m6bavCVsmWHQhp14DmYSv1ApouUX8YbE%%2FR6pWwYvrf9BD0jj4KtRYNg%2BJFf%noescape: false... 
-  sync: false 
-  timeout: 60000 
-  type: "json" 
+                  <pre><code class="language-python line-numbers">  request:
+  cookie: true
+  data: "params=pCzQ16YVz0m6bavCVsmWHQhp14DmYSv1ApouUX8YbE%%2FR6pWwYvrf9BD0jj4KtRYNg%2BJFf%noescape: false...
+  sync: false
+  timeout: 60000
+  type: "json"
   url: https://music.163.com/weapi/comment/resource/comments/get?csrf_token=</code></pre>
                 </li>
                 <li>
@@ -3450,7 +3456,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part5">
+      <el-card id="part5" shadow="hover">
         <h2>多线程、进程池</h2>
         <div class="ls-cot">
           <p>多线程 和 多进程</p>
@@ -3459,76 +3465,79 @@
             <li>线程就是执行单位</li>
             <li>
               需要导入threading 包
-              <pre><code class="language-python line-numbers">  # 多线程                 
-  from threading import Thread                                  
-  def func(name):            # 传参，用来区分多个线程                     
-      for i in range(1000):                         
-      print("func",i)                                  
-      
-  if __name__ == "__main__":                    
-  t1 = Thread(target=func，args=("名字1"，))   # 安排func的任务给线程，传递的参数必须是元组      
+              <pre><code class="language-python line-numbers">  # 多线程
+  from threading import Thread
+  def func(name):            # 传参，用来区分多个线程
+      for i in range(1000):
+      print("func",i)
+
+  if __name__ == "__main__":
+  t1 = Thread(target=func，args=("名字1"，))   # 安排func的任务给线程，传递的参数必须是元组
   t1.start()                                  # 并且要求开始执行,就是给个状态，多线程状态为可以开始工作，执行时间由CPU决定
   t2 = Thread(target=func，args=("名字2"，))   # 安排func的任务给线程，如果要多个线程就再写一个
   t2.start()                                  # 并且要求开始执行,就是给个状态，多线程状态为可以开始工作，执行时间由CPU决定
-  for i in range(1000):                       # 主线程和子线程分别一起执行自己的工作                         
-      print("main",i)                        
-      
-  # 另一种写法                 
-  class MyThread(Thread):                     
-      def run(self):                         
-          for i in range(1000):                             
-              print("子线程", i)                                  
-              
+  for i in range(1000):                       # 主线程和子线程分别一起执行自己的工作
+      print("main",i)
+
+  # 另一种写法
+  class MyThread(Thread):
+      def run(self):
+          for i in range(1000):
+              print("子线程", i)
+
   if __name__ == "__main__":
       t = Thread(target=func)  # 安排func的任务给线程，如果要多个线程就再写一个
-      t.start()   # 开启线程                     
-      for i in range(1000):                             
+      t.start()   # 开启线程
+      for i in range(1000):
           print("主线程",i)</code></pre>
             </li>
             <li>
               多进程
-              <pre><code class="language-python line-numbers">  from multiprocessing import Process  
-  def func():                                   
-      for i in range(1000):                         
-          print("子进程",i)                                  
-          
-  if __name__ == '__main__':                     
-      p = Process(target=func)                     
-      p.start()                     
-      for i in range(1000):                         
+              <pre><code class="language-python line-numbers">  from multiprocessing import Process
+  def func():
+      for i in range(1000):
+          print("子进程",i)
+
+  if __name__ == '__main__':
+      p = Process(target=func)
+      p.start()
+      for i in range(1000):
           print("主进程", i)</code></pre>
             </li>
             <li>class 和 线程一样</li>
           </ul>
           <p>线程池 和 进程池</p>
-          <pre><code class="language-python line-numbers">  #线程池：一次性开辟一些线程。我们用户直接给线程池子提交任务。线程任务的调度交给线程池来完成                  
-  from concurrent.futures import ThreadPoolExecutor,ProcessPoolExecutor  
-  # 进程就是ProcessPoolExecutor，两个都写，想用哪个用哪个       
-  
-  def fnc(name):                      
-      for i in range(1000):                          
-      print(name,i)                                   
-      
-  if __name__ == '__main__':                      
-      # 创建50个线程池                      
-      with ThreadPoolExecutor(50) as t:                          
-          for i in range(100):                              
-              t.submit(fnc,name=f"线程{i}")                      
-      # 等待线程池中的任务全部执行完毕。才继续执行（守护）                      
+          <pre><code class="language-python line-numbers">  #线程池：一次性开辟一些线程。我们用户直接给线程池子提交任务。线程任务的调度交给线程池来完成
+  from concurrent.futures import ThreadPoolExecutor,ProcessPoolExecutor
+  # 进程就是ProcessPoolExecutor，两个都写，想用哪个用哪个
+
+  def fnc(name):
+      for i in range(1000):
+      print(name,i)
+
+  if __name__ == '__main__':
+      # 创建50个线程池
+      with ThreadPoolExecutor(50) as t:
+          for i in range(100):
+              t.submit(fnc,name=f"线程{i}")
+      # 等待线程池中的任务全部执行完毕。才继续执行（守护）
       print("123")</code></pre>
         </div>
       </el-card>
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="Python">
 import { ref } from 'vue';
-let data = ref([
+
+const data = ref([
   { id: 1, h2: '前言' },
   { id: 2, h2: '语法' },
   { id: 3, h2: '其他' },
   { id: 4, h2: '爬虫' },
-  { id: 5, h2: '多线程、进程池' },
+  { id: 5, h2: '多线程、进程池' }
 ]);
 </script>
+
 <style scoped lang="scss"></style>

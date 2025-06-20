@@ -1,25 +1,28 @@
 <template>
-  <card-container :title="`jQuery`" :data="data">
+  <card-container title="jQuery" :data="data">
     <template #svg>
-      <svg width="40" height="40" t="1699148394151" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5368">
+      <svg
+        width="40" height="40" t="1699148394151" class="icon" viewBox="0 0 1024 1024"
+        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5368"
+      >
         <path
           d="M121.3 283.3c-79.3 113.9-69.5 262-8.8 383 1.4 2.9 2.9 5.7 4.4 8.5 0.9 1.9 1.8 3.7 2.9 5.6 0.5 1 1.1 2.1 1.8 3.1l3 5.7 5.9 9.9c1.1 1.8 2.1 3.6 3.4 5.5 2 3.5 4.5 7 6.6 10.5 1 1.5 1.9 2.9 2.9 4.4 4.1 6.5 8 11.9 12 17.1l-0.4-0.6c2.9 4 5.8 7.9 9 11.8 1 1.4 2.1 2.8 3.2 4.3l8.3 10.1c1 1.1 2 2.5 3.1 3.7 3.7 4.4 7.5 8.7 11.4 13 0 0.1 0.1 0.1 0.2 0.3 4.8 6.1 10 11.5 15.7 16.3l0.2 0.1c3 3.1 6 6.1 9.2 9.1l3.8 3.6c4.1 3.9 8.3 7.8 12.7 11.5 0.1 0 0.1 0.1 0.2 0.1l2.1 1.9c3.8 3.3 7.6 6.6 11.6 9.7l4.7 3.9c3.2 2.5 6.5 5 9.7 7.5l5.1 3.9c3.5 2.6 7.2 5.2 10.7 7.7 1.3 0.9 2.6 1.9 3.9 2.7l1.1 0.9 10.5 6.9 4.5 3c5.5 3.5 11 6.8 16.4 10.1 1.6 0.8 3.1 1.7 4.6 2.5 4 2.3 8.2 4.7 12.3 6.8 2.2 1.3 4.6 2.4 6.9 3.5 2.8 1.6 5.7 3.1 8.7 4.7 0.7 0.2 1.5 0.5 2.2 0.9h-0.1c1.2 0.6 2.4 1.1 3.6 1.8 4.5 2.2 9.2 4.4 14 6.5 0.9 0.4 1.9 0.8 2.8 1.3 5.4 2.4 10.8 4.6 16.3 6.8 1.3 0.4 2.6 1 3.9 1.5 5 1.9 10.2 3.8 15.3 5.7l1.9 0.7c5.7 1.9 11.3 3.8 17.1 5.6 1.3 0.4 2.7 0.9 4.1 1.2 5.9 1.8 11.7 3.9 17.7 5.1 383.1 69.8 494.5-230.3 494.5-230.3C844.2 824 678.2 856.1 521 820.4c-5.8-1.3-11.7-3.2-17.5-4.9-8.3-2.4-16.6-5-24.7-7.8l3.5 1.1-2.3-0.9c-5.1-1.7-10-3.6-14.9-5.5-1.2-0.5-2.4-1-3.7-1.4l-0.4-0.1c-5.5-2.2-10.8-4.5-16.1-6.8-1.1-0.4-2.1-0.9-3.3-1.3-6.3-2.7-12.5-5.6-18.6-8.6l5.2 2.3c-1.4-0.6-2.6-1.2-3.9-1.9-3.5-1.7-7-3.5-10.4-5.3-2.6-1.2-5.2-2.6-7.7-4l0.8 0.4c-4.2-2.2-8.4-4.7-12.7-7-1.3-0.9-2.7-1.7-4.2-2.5-6.3-3.7-12.6-7.5-18.7-11.5l2.4 1.4c-1.6-1-3.1-2-4.6-3.1l0.2 0.2c-4.2-2.6-8.3-5.3-12.3-8.1l0.7 0.5c-1.3-0.9-2.5-1.8-3.8-2.7-4.8-3.3-8.3-5.9-11.9-8.6l0.9 0.6c-1.6-1.3-3.2-2.5-4.9-3.7-3.3-2.6-6.6-5-9.9-7.8l-4.4-3.5c-4.9-3.9-8.9-7.4-12.9-10.9l0.4 0.4c-0.4-0.4-0.9-0.8-1.3-1.1l-13-11.8-3.7-3.5c-3.1-3.1-6.2-6.1-9.3-9.2l-3.6-3.7c-3.9-3.8-7.6-7.8-11.3-11.8l-0.2-0.3-0.6-0.6c-4-4.4-7.8-8.8-11.7-13.2-1-1.1-1.9-2.4-3-3.6l-8.4-10.3c-3.8-4.8-7.5-9.7-11.2-14.6l-1.5-2.1c-87.2-119.1-118.7-283.3-49-418.1l-62.2 77.8z"
           fill="#0769AD"
           p-id="5369"
-        ></path>
+        />
         <path
           d="M367.3 187.4c-57.5 82.5-54.2 192.8-9.5 280 8.3 16.4 16.7 30.2 26 43.3l-0.7-1.1c8.6 12.3 18.1 26.9 29.6 36.8 4.1 4.6 8.4 9.1 12.9 13.4l3.4 3.4c4.3 4.1 8.6 8.1 13.1 12.1l0.6 0.5c4.5 3.9 9.5 8.1 14.7 12.2l0.8 0.6c1.3 0.9 2.4 1.9 3.6 2.7 5.2 4 10.5 7.9 15.9 11.8l0.6 0.3c2.3 1.7 4.8 3.2 7.4 4.8 1 0.7 2.2 1.6 3.4 2.2 3.9 2.5 7.8 4.9 11.8 7.4l1.8 0.9c3.4 2 7 4 10.5 5.9 1.2 0.8 2.4 1.3 3.7 2 2.5 1.2 5 2.5 7.4 3.8l1.2 0.5c5 2.5 10.2 4.8 15.2 7.1 5.3 2.3 10.6 4.5 16 6.6 1.9 0.6 3.6 1.4 5.4 1.9 3.8 1.4 7.8 2.7 11.6 4l5.2 1.7c5.5 1.7 11 3.9 16.7 4.8 295.7 49 364.2-178.8 364.2-178.8-61.6 88.7-180.9 131-308.1 98-6.3-1.6-12.6-3.4-18.8-5.5l2.1 0.6c-1.8-0.5-3.4-1-5.1-1.6-3.9-1.3-7.9-2.7-11.7-4.1l-5.4-2c-4.2-1.7-8.4-3.2-12.5-5-1.3-0.6-2.4-0.9-3.4-1.5-5.2-2.4-10.5-4.7-15.6-7.2l-7.7-4-4.5-2.2c-3.4-1.8-6.6-3.7-9.9-5.6-0.8-0.4-1.6-0.8-2.4-1.3l0.1 0.1c-3.9-2.5-8.1-4.8-11.8-7.4-1.3-0.7-2.4-1.6-3.6-2.3l-7.8-5.1c-5.4-3.7-10.6-7.8-15.9-11.7-1.2-1.1-2.4-2-3.5-2.9-55.9-43.9-100-104-120.9-172.1-22-70.7-17.2-150 20.9-214.4l-47 66.4z"
           fill="#0769AD"
           p-id="5370"
-        ></path>
-        <path d="M574.1 115.7C540.2 165.4 537 227.2 560.3 282c24.8 58.3 75.5 104 134.6 125.7 2.4 0.9 4.8 1.7 7.3 2.6l3.3 1c3.4 1.1 6.9 2.4 10.4 3.1 163.4 31.5 207.6-83.9 219.5-100.8-38.9 55.9-104.2 69.3-184.2 49.8-7-1.7-13.8-3.8-20.5-6.4l1.2 0.4c-8.3-2.9-16.5-6.3-24.4-10.1l1.4 0.6c-14.4-7-28.2-15.4-40.9-25.1l0.6 0.4c-71.7-54.3-116.1-158-69.3-242.4l-25.2 34.9z" fill="#0769AD" p-id="5371"></path>
+        />
+        <path d="M574.1 115.7C540.2 165.4 537 227.2 560.3 282c24.8 58.3 75.5 104 134.6 125.7 2.4 0.9 4.8 1.7 7.3 2.6l3.3 1c3.4 1.1 6.9 2.4 10.4 3.1 163.4 31.5 207.6-83.9 219.5-100.8-38.9 55.9-104.2 69.3-184.2 49.8-7-1.7-13.8-3.8-20.5-6.4l1.2 0.4c-8.3-2.9-16.5-6.3-24.4-10.1l1.4 0.6c-14.4-7-28.2-15.4-40.9-25.1l0.6 0.4c-71.7-54.3-116.1-158-69.3-242.4l-25.2 34.9z" fill="#0769AD" p-id="5371" />
       </svg>
     </template>
     <template #describe>
       <p>jQuery是一个在现代Web开发中广泛应用的JavaScript库，它以其简洁的语法和丰富的功能极大地提高了开发效率.其设计宗旨是“Write Less, Do More”（写得更少，做得更多），即倡导开发者用更少的代码实现更多的功能。</p>
     </template>
     <template #content>
-      <el-card shadow="hover" id="part1">
+      <el-card id="part1" shadow="hover">
         <h2>简介与下载</h2>
         <div class="ls-cot">
           <p>jQuery概述</p>
@@ -73,11 +76,15 @@
           <ul>
             <li>
               下载官网：
-              <el-link type="primary" icon="Link" target="_blank" href="https://jquery.com/">https://jquery.com/</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://jquery.com/">
+                https://jquery.com/
+              </el-link>
             </li>
             <li>
               各个版本的下载：
-              <el-link type="primary" icon="Link" target="_blank" href="https://code.jquery.com/">https://code.jquery.com/</el-link>
+              <el-link type="primary" icon="Link" target="_blank" href="https://code.jquery.com/">
+                https://code.jquery.com/
+              </el-link>
             </li>
             <li>
               版本：
@@ -97,7 +104,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part2">
+      <el-card id="part2" shadow="hover">
         <h2>jQuery的使用步骤</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -125,7 +132,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part3">
+      <el-card id="part3" shadow="hover">
         <h2>jQuery和 DOM</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -176,7 +183,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part4">
+      <el-card id="part4" shadow="hover">
         <h2>jQuery API</h2>
         <div class="ls-cot">
           <p>jQuery选择器</p>
@@ -190,28 +197,28 @@
   $(".class")                      /* 类选择器 获取同一类class的元素 */
   $("div")                         /* 标签选择器 获取同一类标签的所有元素 选取多个元素*/
   $("div,p,li")                    /* 并集选择器*/
-  $("li.current")                  /* 交集选择器 交集元素 */ 
+  $("li.current")                  /* 交集选择器 交集元素 */
   $("ul>1i")                       /* 子代选择器 使用>号，获取亲儿子层级的元素；注意，并不会获取孙子层级的元素 */
   $("ul 1i")                       /* 后代选择器 使用空格，代表后代选择器，获取ul下的所有元素，包括孙子等 */</code></pre>
             </li>
           </ul>
           <p>jQuery筛选选择器</p>
-          <pre><code class="language-js line-numbers">  $('#id');                        // ID选择器  获取指定ID的元素 
-  $('li:last')                     // 获取第一个li元素 
-  $('li:eq(2)')                    // 获取到的li元素中，选择索引号为2的元素，索引号index从0开始 
-  $('li:odd')                      // 获取到的li元素中，选择索引号为奇数的元素 
-  $('li:even')                     // 获取到的li元素中，选择索引号为偶数的元素 
-  $('li').parent();                // 查找父级 
-  $('ul').children("li");          // 相当于$("ul>li") 最近一级（亲儿子） 
-  $('ul').find("li");              // 相当于$("ul li") 后代选择器 
-  $('.first').siblings("li");      // 查找兄弟节点，不包括自己本身 
-  $('.first').nextAll();           // 查找当前元素之后所有的同辈元素 
-  $('.last').prevAll();            // 查找当前元素之前所有的同辈元素 
-  $('div').hasClass("protected");  // 检查当前的元素是否含有某个特定的类，如果有，则返回true 
-  $('li').eq(2);                   // 相当于$("li:eq(2)"),index 从 0 开始 
-  $('li').parents();               // 添加上祖先选择器名称，可以返回指定祖先元素  
+          <pre><code class="language-js line-numbers">  $('#id');                        // ID选择器  获取指定ID的元素
+  $('li:last')                     // 获取第一个li元素
+  $('li:eq(2)')                    // 获取到的li元素中，选择索引号为2的元素，索引号index从0开始
+  $('li:odd')                      // 获取到的li元素中，选择索引号为奇数的元素
+  $('li:even')                     // 获取到的li元素中，选择索引号为偶数的元素
+  $('li').parent();                // 查找父级
+  $('ul').children("li");          // 相当于$("ul>li") 最近一级（亲儿子）
+  $('ul').find("li");              // 相当于$("ul li") 后代选择器
+  $('.first').siblings("li");      // 查找兄弟节点，不包括自己本身
+  $('.first').nextAll();           // 查找当前元素之后所有的同辈元素
+  $('.last').prevAll();            // 查找当前元素之前所有的同辈元素
+  $('div').hasClass("protected");  // 检查当前的元素是否含有某个特定的类，如果有，则返回true
+  $('li').eq(2);                   // 相当于$("li:eq(2)"),index 从 0 开始
+  $('li').parents();               // 添加上祖先选择器名称，可以返回指定祖先元素
 
-  // 重点记住：（记得要加引号） 
+  // 重点记住：（记得要加引号）
   parent();                        // 返回的是最近一级的父亲，爷爷是找不到的
   children();                      // 返回的是亲儿子 ul>li ，孙子找不到
   find();                          // 查找子孙后代 ul li ，可以指定哪个元素
@@ -225,7 +232,7 @@
     .nav li ul li {border: 1px solid rgb(143, 58, 241);}
   &lt;/style&gt;
   &lt;/head&gt;
-  
+
   &lt;body&gt;
   &lt;ul class="nav"&gt;
       &lt;li&gt;
@@ -243,19 +250,19 @@
       $(function() { //入口函数
           // 1、选中nav下的亲儿子li,孙子li 不要选中.当hover的时候,不要加on
           $('.nav&gt;li').mouseover(function() {
-                  // 2、当鼠标经过当前的li时，他的孩子ul,show();显示出来 
+                  // 2、当鼠标经过当前的li时，他的孩子ul,show();显示出来
                   $(this).children('ul').show();
               })
               // 3、鼠标离开，其他影藏
           $('.nav&gt;li').mouseout(function() {
-              // 4、当鼠标离开当前的li时，hide();影藏显示 
+              // 4、当鼠标离开当前的li时，hide();影藏显示
               $(this).children('ul').hide();
           })
       })
   &lt;/script&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part5">
+      <el-card id="part5" shadow="hover">
         <h2>jQuery设置样式</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -284,14 +291,14 @@
           </ol>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part6">
+      <el-card id="part6" shadow="hover">
         <h2>排他思想</h2>
         <div class="ls-cot">
           <p>代码</p>
           <pre><code class="language-html line-numbers">  &lt;!-- 想要多选一的效果，排他思想：当前元素设置样式，其余的兄弟元素清除样式 --&gt;
   &lt;button&gt;按钮1&lt;/button&gt;&lt;button&gt;按钮2&lt;/button&gt;&lt;button&gt;按钮3&lt;/button&gt;
   &lt;button&gt;按钮4&lt;/button&gt;&lt;button&gt;按钮5&lt;/button&gt;
-  
+
   &lt;script&gt;
       $(function() {  //入口函数
           // 1、获取元素，添加处理程序
@@ -303,8 +310,8 @@
           })
       })
   &lt;/script&gt;
-  
-  &lt;!-- 案例：TAB栏切换 
+
+  &lt;!-- 案例：TAB栏切换
   1、核心原理：鼠标经过左侧盒子某个小li,就让内容区盒子相对应图片显示，其余的图片影藏
   2、需要得到当前i的索引号，就可以显示对应索引号的图片
   3、jQuery得到当前元素索引号$（this）.index（）
@@ -346,7 +353,7 @@
   &lt;/body&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part7">
+      <el-card id="part7" shadow="hover">
         <h2>链式编程</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -354,7 +361,7 @@
   &lt;button&gt;快速&lt;/button&gt;&lt;button&gt;快速&lt;/button&gt;&lt;button&gt;快速&lt;/button&gt;
   &lt;button&gt;快速&lt;/button&gt;&lt;button&gt;快速&lt;/button&gt;
   &lt;script&gt;
-      $(function() { 
+      $(function() {
           $('button').click(function() {
               // 之前的写法
               $(this).css('background', 'pink');
@@ -367,7 +374,7 @@
   &lt;/script&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part8">
+      <el-card id="part8" shadow="hover">
         <h2>操作css方法</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -427,8 +434,8 @@
       })
   &lt;/script&gt;
 
-  &lt;script&gt;        // 原生js tab切换栏 
-      // 获取元素  
+  &lt;script&gt;        // 原生js tab切换栏
+      // 获取元素
       var tab_list = document.querySelector(".tab_list");
       var lis = tab_list.querySelectorAll("li");
       var items = document.querySelectorAll(".item");
@@ -476,7 +483,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part9">
+      <el-card id="part9" shadow="hover">
         <h2>jQuery效果</h2>
         <div class="ls-cot">
           <p>表格</p>
@@ -572,8 +579,8 @@
             </li>
             <li>
               显示影藏效果（一般不跟参数，直接显示影藏就行）, 语法规范:
-              <pre><code class="language-js line-numbers">  show([speed],[easing],[fn])   
-  hide([speed],[easing],[fn])   
+              <pre><code class="language-js line-numbers">  show([speed],[easing],[fn])
+  hide([speed],[easing],[fn])
   toggle([speed],[easing],[fn])   </code></pre>
             </li>
             <li>
@@ -588,7 +595,7 @@
           </ol>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part10">
+      <el-card id="part10" shadow="hover">
         <h2>事件切换</h2>
         <div class="ls-cot">
           <p>hover( [over,]out );</p>
@@ -598,7 +605,7 @@
               out：鼠标移出元素要触发的函数（相当于mouseleave）
               <pre><code class="language-js line-numbers">  &lt;script&gt;
       //第一个函数是鼠标经过的，第二个函数是鼠标离开的
-      $("div").hover(function () {}, function () {}); 
+      $("div").hover(function () {}, function () {});
   &lt;/script&gt;
 
   &lt;script&gt;
@@ -642,7 +649,7 @@
               })
           })
       &lt;/script&gt;
-  
+
       &lt;!-- 再改进，只写一个函数的时候： --&gt;
       &lt;script&gt;
           $(function() {
@@ -656,7 +663,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part11">
+      <el-card id="part11" shadow="hover">
         <h2>jQuery事件</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -698,7 +705,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part12">
+      <el-card id="part12" shadow="hover">
         <h2>动画队列及其停止排队方法</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -709,8 +716,8 @@
           <pre><code class="language-js line-numbers">  $("div").hover(function () {
       $(this).children("ul").stop().slideToggle();            // stop 方法必须写到动画的前面，谁做动画就写在谁的前面
   })
-  
-  // 注意：stop()写到动画或者效果的前面，相当于停止结束上一次的动画。写到后面则出错，停止效果。 
+
+  // 注意：stop()写到动画或者效果的前面，相当于停止结束上一次的动画。写到后面则出错，停止效果。
   $(function() {
       $('.nav li').hover(function() {
           $(this).children('ul').stop().slideToggle(200);     // stop()方法用于停止动画或效果。
@@ -748,7 +755,7 @@
   &lt;/script&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part13">
+      <el-card id="part13" shadow="hover">
         <h2>jQuery 属性操作</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -775,7 +782,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part14">
+      <el-card id="part14" shadow="hover">
         <h2>数据缓存 data( )</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -798,7 +805,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part15">
+      <el-card id="part15" shadow="hover">
         <h2>全选按钮</h2>
         <div class="ls-cot">
           <p>思路</p>
@@ -827,7 +834,7 @@
   // 判断条件中，  === 3 ，3可以设置成变量，就是小复选框的个数，$( '.j-checkbox' ) .length</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part16">
+      <el-card id="part16" shadow="hover">
         <h2>jQuery文本属性值</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -850,7 +857,7 @@
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part17">
+      <el-card id="part17" shadow="hover">
         <h2>jQuery元素操作</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -865,11 +872,11 @@
                   <pre><code class="language-html line-numbers">  &lt;script&gt;&gt;
       $("div").each(function (index, domEle) {xxx;}); // index是可以自定义的，比如 i
   &lt;/script&gt;
-  
+
   &lt;body&gt;
       &lt;!--
-          1.each0方法遍历匹配的每一个元素。主要用DOM处理。each每一个 
-          2.里面的回调函数有2个参数：index是每个元素的索引号；demEle是每个DOM元素对象，不是jquery对象 
+          1.each0方法遍历匹配的每一个元素。主要用DOM处理。each每一个
+          2.里面的回调函数有2个参数：index是每个元素的索引号；demEle是每个DOM元素对象，不是jquery对象
           3.所以要想使用jquery方法，需要给这个dom元素转换为jquery对象$（domE1e）
       --&gt;
       &lt;div&gt;盒子1&lt;/div&gt;
@@ -890,10 +897,10 @@
                 </li>
                 <li>
                   遍历方法2 语法
-                  <pre><code class="language-js line-numbers">  $.each(object,function(index,element){xxx;}) 
+                  <pre><code class="language-js line-numbers">  $.each(object,function(index,element){xxx;})
 
 // 1.$.each（）方法可用于遍历任何对象。主要用于数据处理，比如数组，对象
-// 2.里面的函数有2个参数：index是每个元素的索引号；element 遍历内容，如果是对象，index相当于属性名，ele是属性值 
+// 2.里面的函数有2个参数：index是每个元素的索引号；element 遍历内容，如果是对象，index相当于属性名，ele是属性值
 $.each($('div'),function(i,domEle){ // 遍历元素
     console.log(i);
 })
@@ -902,7 +909,7 @@ $.each(arr,function(i,domEle){      // 遍历数组
 })
 $.each({                            // 遍历对象
     name: 'uname', age: 18
-},function(i,domEle){     
+},function(i,domEle){
     console.log(i);
     console.log(domEle);
 })</code></pre>
@@ -912,7 +919,7 @@ $.each({                            // 遍历对象
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part18">
+      <el-card id="part18" shadow="hover">
         <h2>购物车模块，删减数量</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -947,7 +954,7 @@ $.each({                            // 遍历对象
           </ol>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part19">
+      <el-card id="part19" shadow="hover">
         <h2>购物车总计</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -965,7 +972,7 @@ $.each({                            // 遍历对象
   };</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part20">
+      <el-card id="part20" shadow="hover">
         <h2>创建 添加 删除</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -980,7 +987,7 @@ $.each({                            // 遍历对象
       element.append("内容");    // 把内容放入匹配元素内部最后面，类似原生appendChild.
       element.prepend("内容");   // 把内容放入匹配元素内部最前面
   &lt;/script&gt;
-  
+
   &lt;!-- 使用html 创建元素 会覆盖原来内容 --&gt;
   &lt;body&gt;
     &lt;button id="btn"&gt;1&lt;/button&gt;
@@ -992,7 +999,7 @@ $.each({                            // 遍历对象
                 var list = [];
                 for (let i = 0; i &lt; data.length; i++) {
                     list.push("&lt;tr&gt;");               // 生成tr
-                    for (var key in data[i]) { 
+                    for (var key in data[i]) {
                         list.push("&lt;td&gt;");           // 生成td
                         list.push(data[i][key]);
                         list.push("&lt;/td&gt;");
@@ -1004,7 +1011,7 @@ $.each({                            // 遍历对象
         });
     &lt;/script&gt;
   &lt;/body&gt;
-  
+
   &lt;!-- 使用$（） 创建元素 会追加，不会覆盖 --&gt;
   &lt;body&gt;
     &lt;button id="btn"&gt;1&lt;/button&gt;
@@ -1016,7 +1023,7 @@ $.each({                            // 遍历对象
                 for (let i = 0; i &lt; data.length; i++) {
                     let $tr = $(`&lt;tr&gt;
                         /* 对象的属性名记得用引号，要不然会报错 a is mot defined */
-                        &lt;td&gt;${data[i]["a"]}&lt;/td&gt; 
+                        &lt;td&gt;${data[i]["a"]}&lt;/td&gt;
                         &lt;td&gt;${data[i]["b"]}&lt;/td&gt;
                         &lt;td&gt;${data[i]["c"]}&lt;/td&gt;
                     &lt;/tr&gt;`);
@@ -1031,7 +1038,7 @@ $.each({                            // 遍历对象
               添加元素-外部
               <pre><code class="language-js line-numbers">  element.after("内容")        // 把内容放入目标元素内部最后面
   element.before("内容")       // 把内容放入目标元素内部最前面
-  
+
   // 1. 内部添加元素，生成之后，它们是父子关系。
   // 2. 外部添加元素，生成之后，他们是兄弟关系。</code></pre>
             </li>
@@ -1063,7 +1070,7 @@ $.each({                            // 遍历对象
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part21">
+      <el-card id="part21" shadow="hover">
         <h2>尺寸和位置操作</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -1071,7 +1078,7 @@ $.each({                            // 遍历对象
   innerWidth() / innerHight()                     // 取得匹配元素宽度和高度值包含padding
   outerWidth() / outerHeight()                    // 取得匹配元素宽度和高度值包含padding、border
   outerWidth(true) / outerHeight(true)            // 取得匹配元素宽度和高度值包含padding、border、margin
-  
+
   // 以上参数为空，则是获取相应值，返回的是数字型。
   // 如果参数为数字，则是修改相应值。参数可以不必写单位。
   // 位置主要有三个：offset()、position()、scrollTop() / scrollLeft() </code></pre>
@@ -1120,8 +1127,8 @@ $.each({                            // 遍历对象
       } else{
           $(".fixedTool").fadeOut();
       }
-  }) 
-  
+  })
+
   // 点击电梯导航页面可以滚动到相应内容区域
   $(".fixedTool li").click(function(){
       var current = $(".floor .w").eq($(this).index()).offset().top;
@@ -1146,7 +1153,7 @@ $.each({                            // 遍历对象
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part22">
+      <el-card id="part22" shadow="hover">
         <h2>事情注册</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -1227,14 +1234,14 @@ $.each({                            // 遍历对象
           </ol>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part23">
+      <el-card id="part23" shadow="hover">
         <h2>解绑事件</h2>
         <div class="ls-cot">
           <p>代码</p>
           <pre><code class="language-js line-numbers">  // off（）方法可以移除通过on（）方法添加的事件处理程序。
   // 1、如果（）里面参数为空，比如 $( ' div' ) .off( ) ; 就会 解绑所有 的绑定事件
   // 2、如果（）里面有参数，比如 $( ' div' ) .off( ' click' ) ; 表示 解绑了点击 事件
-  // 3、可以跟两个参数，比如ul绑定了事件委托，ul下的li 触发，解除方法如下： 
+  // 3、可以跟两个参数，比如ul绑定了事件委托，ul下的li 触发，解除方法如下：
   $(function() {
       $('ul').on('click','li',function(){});
       //解除事件写法
@@ -1242,7 +1249,7 @@ $.each({                            // 遍历对象
   })</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part24">
+      <el-card id="part24" shadow="hover">
         <h2>事件对象</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -1267,7 +1274,7 @@ $.each({                            // 遍历对象
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part25">
+      <el-card id="part25" shadow="hover">
         <h2>jQuery其他方法</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -1303,7 +1310,7 @@ $.each({                            // 遍历对象
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part26">
+      <el-card id="part26" shadow="hover">
         <h2>多库共存</h2>
         <div class="ls-cot">
           <p>共存1</p>
@@ -1351,11 +1358,15 @@ $.each({                            // 遍历对象
               <ol>
                 <li>
                   jQuery插件库
-                  <el-link type="primary" icon="Link" target="_blank" href="http://www.jq22.com/">http://www.jq22.com/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="http://www.jq22.com/">
+                    http://www.jq22.com/
+                  </el-link>
                 </li>
                 <li>
                   jQuery之家(推荐)
-                  <el-link type="primary" icon="Link" target="_blank" href="http://www.htmleaf.com/">http://www.htmleaf.com/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="http://www.htmleaf.com/">
+                    http://www.htmleaf.com/
+                  </el-link>
                 </li>
               </ol>
             </li>
@@ -1399,11 +1410,15 @@ $.each({                            // 遍历对象
               <ol>
                 <li>
                   gitHub:
-                  <el-link type="primary" icon="Link" target="_blank" href="https://github.com/alvarotrigo/fullPage.js">https://github.com/alvarotrigo/fullPage.js</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="https://github.com/alvarotrigo/fullPage.js">
+                    https://github.com/alvarotrigo/fullPage.js
+                  </el-link>
                 </li>
                 <li>
                   中文翻译网站：
-                  <el-link type="primary" icon="Link" target="_blank" href="http://www.dowebok.com/demo/2014/77/">http://www.dowebok.com/demo/2014/77/</el-link>
+                  <el-link type="primary" icon="Link" target="_blank" href="http://www.dowebok.com/demo/2014/77/">
+                    http://www.dowebok.com/demo/2014/77/
+                  </el-link>
                 </li>
               </ol>
             </li>
@@ -1425,7 +1440,7 @@ $.each({                            // 遍历对象
           li.html($('.text').val() + "&lt;a&gt; href='javascript:;'&gt;删除&lt;/a&gt;");
           if ($('.text').val() != '') {          // 判断如果内容为空则发布不了
               $('ul').prepend(li);
-              li.slideDown();                    // 先影藏，再有滑动效果 
+              li.slideDown();                    // 先影藏，再有滑动效果
               $('.text').val('');
           } else {
               return false;
@@ -1442,7 +1457,7 @@ $.each({                            // 遍历对象
           </ul>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part27">
+      <el-card id="part27" shadow="hover">
         <h2>toDoList 分析</h2>
         <div class="ls-cot">
           <p>前言</p>
@@ -1493,7 +1508,7 @@ $.each({                            // 遍历对象
         Copyright &copy; 2021 toDoList
     &lt;/footer&gt;
   &lt;/body&gt;
-  
+
   // css
   &lt;style&gt;
   body {margin: 0;padding: 0;font-size: 16px;background-color: #dfdfdf;}
@@ -1590,7 +1605,7 @@ $.each({                            // 遍历对象
         // 7.4 重新渲染页面
         load();
     })
-  
+
     // 1.3获取本地存储数据的函数
     function getDate() {
         var data = localStorage.getItem('todolist');
@@ -1636,7 +1651,7 @@ $.each({                            // 遍历对象
   &lt;/script&gt;</code></pre>
         </div>
       </el-card>
-      <el-card shadow="hover" id="part28">
+      <el-card id="part28" shadow="hover">
         <h2>移动端的轮播图</h2>
         <div class="ls-cot">
           <p>代码</p>
@@ -1658,13 +1673,17 @@ $.each({                            // 遍历对象
   &lt;/div&gt;</code></pre>
         </div>
       </el-card>
-      <div style="height: 200px">1</div>
+      <div style="height: 200px">
+        1
+      </div>
     </template>
   </card-container>
 </template>
+
 <script setup lang="ts" name="jQueryPage ">
 import { ref } from 'vue';
-let data = ref([
+
+const data = ref([
   { id: 1, h2: '简介与下载' },
   { id: 2, h2: 'jQuery的使用步骤' },
   { id: 3, h2: 'jQuery和 DOM' },
@@ -1692,7 +1711,8 @@ let data = ref([
   { id: 25, h2: 'jQuery其他方法' },
   { id: 26, h2: '多库共存' },
   { id: 27, h2: 'toDoList 分析' },
-  { id: 28, h2: '移动端的轮播图' },
+  { id: 28, h2: '移动端的轮播图' }
 ]);
 </script>
+
 <style scoped lang="scss"></style>

@@ -1,5 +1,11 @@
 <template>
-  <CardContainer />
+  <CardContainer>
+    <template #svg>
+    </template>
+    <template #describe>
+      <p>HTML（HyperText Markup Language）全称为超文本标记语言，是一种用于创建和组织网页结构及内容的描述性标记语言。HTML不是一种编程语言，它使用标签来描述网页中的元素，如文本、图片、链接、表格等，并定义这些元素的显示方式。</p>
+    </template>
+  </CardContainer>
 </template>
 
 <script setup lang="ts" name="HtmlPage">
