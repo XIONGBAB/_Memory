@@ -1,5 +1,24 @@
 <template>
-  <div class="card-container">
+  <div class="content-main-page">
+    <div class="c-card">
+      <div ref="containerRef" class="c-card-left">
+        <div v-for="i in 100" :id="`part${i}`" :key="i">
+          {{ i }}
+        </div>
+        <div id="part60">
+          111
+        </div>
+      </div>
+      <div class="c-card-anchor" @click="handleClick">
+        <el-anchor type="underline" :offset="70">
+          <el-anchor-link href="#part1" title="part1" />
+          <el-anchor-link href="#part2" title="part2" />
+          <el-anchor-link href="#part60" title="part60" />
+        </el-anchor>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="card-container">
     <div class="card-container-text">
       <div class="card-container-information">
         <div class="card-container-logo">
@@ -486,103 +505,124 @@
         </el-anchor-link>
       </el-anchor>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script setup lang="ts" name="CardContainer">
 import { ref } from 'vue';
 
+// const containerRef = ref<HTMLElement | null>(null);
 const containerRef = ref<HTMLElement | null>(null);
-
 function handleClick(e: MouseEvent) {
   e.preventDefault();
 }
 
-const data = ref([
-  {
-    id: 1,
-    h2: '制作项目步骤'
-  },
-  {
-    id: 2,
-    h2: 'web服务器'
-  },
-  {
-    id: 3,
-    h2: 'HTML'
-  },
-  {
-    id: 4,
-    h2: '内核'
-  },
-  {
-    id: 5,
-    h2: 'Web标准的构成'
-  },
-  {
-    id: 6,
-    h2: 'html的文档结构'
-  },
-  {
-    id: 7,
-    h2: '常用标签'
-  },
-  {
-    id: 8,
-    h2: 'img标签'
-  },
-  {
-    id: 9,
-    h2: '滚动标记'
-  },
-  {
-    id: 10,
-    h2: '多媒体标记'
-  },
-  {
-    id: 11,
-    h2: '超链接标签与锚点链接'
-  },
-  {
-    id: 12,
-    h2: '表格'
-  },
-  {
-    id: 13,
-    h2: '普通框架(已废弃)'
-  },
-  {
-    id: 14,
-    h2: '列表'
-  },
-  {
-    id: 15,
-    h2: '表单'
-  },
-  {
-    id: 16,
-    h2: '小结'
-  },
-  {
-    id: 17,
-    h2: 'HTML5新增语义化标签'
-  },
-  {
-    id: 18,
-    h2: 'HTML5新增多媒体标签'
-  },
-  {
-    id: 19,
-    h2: 'HTML5新增input类型'
-  },
-  {
-    id: 20,
-    h2: '插件地址'
-  }
-]);
+// const data = ref([
+//   {
+//     id: 1,
+//     h2: '制作项目步骤'
+//   },
+//   {
+//     id: 2,
+//     h2: 'web服务器'
+//   },
+//   {
+//     id: 3,
+//     h2: 'HTML'
+//   },
+//   {
+//     id: 4,
+//     h2: '内核'
+//   },
+//   {
+//     id: 5,
+//     h2: 'Web标准的构成'
+//   },
+//   {
+//     id: 6,
+//     h2: 'html的文档结构'
+//   },
+//   {
+//     id: 7,
+//     h2: '常用标签'
+//   },
+//   {
+//     id: 8,
+//     h2: 'img标签'
+//   },
+//   {
+//     id: 9,
+//     h2: '滚动标记'
+//   },
+//   {
+//     id: 10,
+//     h2: '多媒体标记'
+//   },
+//   {
+//     id: 11,
+//     h2: '超链接标签与锚点链接'
+//   },
+//   {
+//     id: 12,
+//     h2: '表格'
+//   },
+//   {
+//     id: 13,
+//     h2: '普通框架(已废弃)'
+//   },
+//   {
+//     id: 14,
+//     h2: '列表'
+//   },
+//   {
+//     id: 15,
+//     h2: '表单'
+//   },
+//   {
+//     id: 16,
+//     h2: '小结'
+//   },
+//   {
+//     id: 17,
+//     h2: 'HTML5新增语义化标签'
+//   },
+//   {
+//     id: 18,
+//     h2: 'HTML5新增多媒体标签'
+//   },
+//   {
+//     id: 19,
+//     h2: 'HTML5新增input类型'
+//   },
+//   {
+//     id: 20,
+//     h2: '插件地址'
+//   }
+// ]);
 </script>
 
 <style scoped lang="scss">
+.c-card {
+  display: flex;
+  justify-content: center;
+  .c-card-left {
+    min-width: 750px;
+    max-width: 1200px;
+    div {
+      width: 100%;
+      height: 500px;
+    }
+  }
+  .c-card-anchor {
+    position: sticky;
+    top: 90px;
+    right: 0;
+    width: 240px;
+    height: 500px;
+    border-right: 1px solid red;
+  }
+}
+
 .card-container {
   display: flex;
   width: 100%;

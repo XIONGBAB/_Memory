@@ -1,110 +1,122 @@
 <template>
-  <div class="aside-menu" :class="{ 'aside-menu-active': isCollapse }">
-    <div class="aside-menu-top">
-      <svg
-        t="1750147474497"
-        class="icon aside-menu-top-logo"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        p-id="13340"
-        width="36"
-        height="36"
-      >
-        <path
-          d="M896 234.666667V298.666667c0 11.946667-9.386667 21.333333-21.333333 21.333333S853.333333 310.613333 853.333333 298.666667V213.333333h-59.733333c-37.546667 0-68.266667-30.72-68.266667-68.266666V85.333333H170.666667c-23.466667 0-42.666667 19.2-42.666667 42.666667v768c0 23.466667 19.2 42.666667 42.666667 42.666667h533.333333c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H170.666667c-46.933333 0-85.333333-38.4-85.333334-85.333333V128c0-46.933333 38.4-85.333333 85.333334-85.333333h582.826666L896 184.32V234.666667z"
-          fill=""
-          p-id="13341"
-        />
-        <path
-          d="M661.333333 341.333333h-384c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333h384c11.946667 0 21.333333 9.386667 21.333334 21.333333s-9.386667 21.333333-21.333334 21.333333z m-384 85.333334h341.333334c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-341.333334c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z m0 128h170.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-170.666667c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z"
-          fill=""
-          p-id="13342"
-        />
-        <path
-          d="M960 810.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v85.333334h106.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v21.333334c0 11.946667-9.386667 21.333333-21.333333 21.333333s-21.333333-9.386667-21.333333-21.333333v-322.133334c-72.106667-10.24-128-72.106667-128-147.2 0-82.346667 66.986667-149.333333 149.333333-149.333333s149.333333 66.986667 149.333333 149.333333c0 75.093333-55.893333 136.96-128 147.2V810.666667h106.666667z m-26.88-277.333334a101.12 101.12 0 0 0-101.546667-101.12c-55.893333 0-101.546667 45.226667-101.546666 101.12s45.226667 101.546667 101.546666 101.546667a101.802667 101.802667 0 0 0 101.546667-101.546667z"
-          fill="#CC8752"
-          p-id="13343"
-        />
-      </svg>
-      <div class="aside-menu-top-title">
-        <h2>XIONGBAB丶</h2>
-        <p>A rookie who can write code</p>
+  <div class="aside-container">
+    <div
+      class="aside-menu-toggle" :class="{ active: isCollapse }"
+      @click="changeMenu"
+    >
+      <el-icon><ArrowRight /></el-icon>
+    </div>
+    <div class="aside" :class="{ active: isCollapse }">
+      <div class="aside-menu-top">
+        <svg
+          t="1750147474497"
+          class="icon aside-menu-top-logo"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="13340"
+          width="36"
+          height="36"
+        >
+          <path
+            d="M896 234.666667V298.666667c0 11.946667-9.386667 21.333333-21.333333 21.333333S853.333333 310.613333 853.333333 298.666667V213.333333h-59.733333c-37.546667 0-68.266667-30.72-68.266667-68.266666V85.333333H170.666667c-23.466667 0-42.666667 19.2-42.666667 42.666667v768c0 23.466667 19.2 42.666667 42.666667 42.666667h533.333333c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H170.666667c-46.933333 0-85.333333-38.4-85.333334-85.333333V128c0-46.933333 38.4-85.333333 85.333334-85.333333h582.826666L896 184.32V234.666667z"
+            fill=""
+            p-id="13341"
+          />
+          <path
+            d="M661.333333 341.333333h-384c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333h384c11.946667 0 21.333333 9.386667 21.333334 21.333333s-9.386667 21.333333-21.333334 21.333333z m-384 85.333334h341.333334c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-341.333334c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z m0 128h170.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333h-170.666667c-11.946667 0-21.333333-9.386667-21.333333-21.333333s9.386667-21.333333 21.333333-21.333333z"
+            fill=""
+            p-id="13342"
+          />
+          <path
+            d="M960 810.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v85.333334h106.666667c11.946667 0 21.333333 9.386667 21.333333 21.333333s-9.386667 21.333333-21.333333 21.333333H853.333333v21.333334c0 11.946667-9.386667 21.333333-21.333333 21.333333s-21.333333-9.386667-21.333333-21.333333v-322.133334c-72.106667-10.24-128-72.106667-128-147.2 0-82.346667 66.986667-149.333333 149.333333-149.333333s149.333333 66.986667 149.333333 149.333333c0 75.093333-55.893333 136.96-128 147.2V810.666667h106.666667z m-26.88-277.333334a101.12 101.12 0 0 0-101.546667-101.12c-55.893333 0-101.546667 45.226667-101.546666 101.12s45.226667 101.546667 101.546666 101.546667a101.802667 101.802667 0 0 0 101.546667-101.546667z"
+            fill="#CC8752"
+            p-id="13343"
+          />
+        </svg>
+        <div class="aside-menu-top-title">
+          <h2>XIONGBAB丶</h2>
+          <p>A rookie who can write code</p>
+        </div>
       </div>
-      <div
-        class="nav-toggle"
-        :class="{ 'nav-toggle-active': isCollapse }"
-        @click="changeMenu"
-      >
-        <el-icon><ArrowRight /></el-icon>
+      <div class="aside-menu-search">
+        <el-autocomplete
+          v-model="state"
+          clearable
+          :fetch-suggestions="querySearchAsync"
+          placeholder="Search "
+          @select="handleSelect"
+        >
+          <template #prefix>
+            <el-icon><Search /></el-icon>
+          </template>
+          <template #loading>
+            <el-icon class="is-loading">
+              <svg class="circular" viewBox="0 0 20 20">
+                <g
+                  class="path2 loading-path"
+                  stroke-width="0"
+                  style="animation: none; stroke: none"
+                >
+                  <circle r="3.375" class="dot1" rx="0" ry="0" />
+                  <circle r="3.375" class="dot2" rx="0" ry="0" />
+                  <circle r="3.375" class="dot4" rx="0" ry="0" />
+                  <circle r="3.375" class="dot3" rx="0" ry="0" />
+                </g>
+              </svg>
+            </el-icon>
+          </template>
+        </el-autocomplete>
       </div>
-    </div>
-    <div class="aside-search">
-      <el-autocomplete
-        v-model="state"
-        clearable
-        :fetch-suggestions="querySearchAsync"
-        placeholder="Search "
-        @select="handleSelect"
-      >
-        <template #prefix>
-          <el-icon><Search /></el-icon>
-        </template>
-        <template #loading>
-          <el-icon class="is-loading">
-            <svg class="circular" viewBox="0 0 20 20">
-              <g
-                class="path2 loading-path"
-                stroke-width="0"
-                style="animation: none; stroke: none"
-              >
-                <circle r="3.375" class="dot1" rx="0" ry="0" />
-                <circle r="3.375" class="dot2" rx="0" ry="0" />
-                <circle r="3.375" class="dot4" rx="0" ry="0" />
-                <circle r="3.375" class="dot3" rx="0" ry="0" />
-              </g>
-            </svg>
-          </el-icon>
-        </template>
-      </el-autocomplete>
-    </div>
-    <div class="aside-collapse scroll">
-      <el-menu
-        default-active="/data"
-        unique-opened
-        :collapse="isCollapse"
-        class="el-menu-vertical-demo aside-collapse-menu"
-      >
-        <MenuTree :menuList="menuStore.menuRoutes" />
-      </el-menu>
-    </div>
-    <div class="aside-footer">
-      <el-icon><Open /></el-icon>
-      <span>Lights on</span>
+      <div class="aside-menu-collapse">
+        <el-scrollbar>
+          <el-menu
+            default-active="/data"
+            :collapse="isCollapse"
+            class="el-menu-vertical-demo aside-menu-collapse"
+            @open="handleOpen"
+            @close="handleClose"
+          >
+            <MenuTree :menuList="menuStore.menuRoutes" />
+          </el-menu>
+        </el-scrollbar>
+      </div>
+      <div class="aside-menu-footer" @click="changeLights">
+        <el-icon><component :is="textChange ? Open : TurnOff" /></el-icon>
+        <span class="aside-menu-footer-text">{{ textChange ? 'Lights on' : 'Lights off' }}</span>
+      </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts" name="AsideMenu">
-import { onMounted, ref } from "vue";
-import useMenuStore from "@/store/modules/menu";
-import MenuTree from "@/views/DocumentPage/AsideMenu/MenuTree/index.vue";
+<script setup lang='ts' name='AsideMenu'>
+import { Open, TurnOff } from '@element-plus/icons-vue';
+import { onMounted, ref } from 'vue';
+import useMenuStore from '@/store/modules/menu';
+import MenuTree from '@/views/DocumentPage/AsideMenu/MenuTree/index.vue';
 
-// #region btn click change width start
-const $emit = defineEmits(["sendIsCollapse"]);
-
+// #region btn click change width
 const menuStore = useMenuStore();
+const isCollapse = ref<boolean>(false);
+const textChange = ref<boolean>(true);
 
-const isCollapse = ref(false);
+function changeLights() {
+  textChange.value = !textChange.value;
+}
 function changeMenu() {
-  $emit("sendIsCollapse", isCollapse.value);
   isCollapse.value = !isCollapse.value;
 }
+// #endregion btn click change width
 
-// #endregion btn click change width end
+function handleOpen(key: string, keyPath: string[]) {
+  console.log(key, keyPath);
+}
+function handleClose(key: string, keyPath: string[]) {
+  console.log(key, keyPath);
+}
 
-// #region search start
-const state = ref("");
+// #region search
+const state = ref('');
 interface LinkItem {
   value: string;
   link: string;
@@ -112,8 +124,8 @@ interface LinkItem {
 const links = ref<LinkItem[]>([]);
 function loadAll() {
   return [
-    { value: "vue", link: "https://github.com/vuejs/vue" },
-    { value: "element", link: "https://github.com/ElemeFE/element" },
+    { value: 'vue', link: 'https://github.com/vuejs/vue' },
+    { value: 'element', link: 'https://github.com/ElemeFE/element' }
   ];
 }
 let timeout: ReturnType<typeof setTimeout>;
@@ -134,9 +146,9 @@ function createFilter(queryString: string) {
   };
 }
 function handleSelect(item: Record<string, any>) {
-  console.log(item);
+  return [item];
 }
-// #endregion search end
+// #endregion search
 
 onMounted(() => {
   // search
@@ -144,125 +156,131 @@ onMounted(() => {
 });
 </script>
 
-<style scoped lang="scss">
-.aside-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
+<style scoped lang='scss'>
+.aside-container {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 240px;
-  height: 100vh;
-  padding: 10px;
-  background: $bg-aside-gray;
   border-right: 1px solid $bd-color-light;
   box-shadow: 2px 0 5px rgba(145, 145, 145, 0.12);
-  z-index: 1;
-  transition: width 0.35s ease;
-}
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 219px;
-  min-height: auto;
-}
-.aside-menu-active {
-  width: 84px;
-  .aside-menu-top {
-    .aside-menu-top-title {
-      opacity: 0;
-      width: 0;
+  .aside-menu-toggle {
+    position: absolute;
+    top: 76px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(226, 226, 226);
+    background: rgb(240, 240, 240);
+    border-radius: $bd-radius-circle;
+    z-index: 10;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    &.active {
+      transform: rotate(180deg);
     }
   }
-  .aside-footer {
-    span {
-      display: none;
+}
+
+.aside {
+  flex: 0 0 240px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  max-width: 240px;
+  background: $bg-aside-gray;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  &.active {
+    flex: 0 0 84px;
+    .aside-menu-top-title {
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+    }
+    .aside-menu-footer {
+      .aside-menu-footer-text {
+        opacity: 0;
+        width: 0;
+        padding: 0;
+      }
     }
   }
   :deep(.el-input__prefix-inner) {
     padding-left: 10px;
     transition: padding $transition-base;
   }
+
   :deep(.el-input__inner) {
-    padding-left: 8px;
+    padding-left: 10px;
     transition: padding $transition-base;
   }
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 220px;
+    min-height: auto;
+  }
 }
+
 .aside-menu-top {
-  position: relative;
-  width: 100%;
-  flex: 0 0 80px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  height: 80px;
   .aside-menu-top-logo {
-    width: 36px;
+    flex: 0 0 36px;
     min-width: 20px;
     min-height: 20px;
     height: 40px;
-    margin-right: 10px;
+    margin: 0 10px;
   }
   .aside-menu-top-title {
-    display: flex;
-    flex-direction: column;
-    @include ellipsis();
-    transition: all 0.3s ease-in-out;
-    h2 {
+    flex: 1;
+    overflow: hidden;
+    h2,
+    p {
+      transition: all 0.3s ease-in-out;
       margin: 0;
+      @include ellipsis;
+    }
+    h2 {
+      min-width: 164px;
       font-family: $font-family-pla;
       font-weight: 400;
     }
     p {
-      margin: 0;
+      min-width: 164px;
       color: $text-aside-gray;
       font-family: $font-family-ari;
     }
   }
-  .nav-toggle {
-    position: absolute;
-    right: -24px;
-    top: 70px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(245, 245, 245);
-    border-radius: 50%;
-    border: 1px solid rgb(226, 226, 226);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  .nav-toggle-active {
-    transform: rotate(180deg);
-  }
 }
-
-.aside-search {
-  width: 100%;
+.aside-menu-search {
   flex: 0 0 40px;
-  margin-top: 20px;
-  transition: $transition-all;
+  margin: 20px 0 10px 0;
+  // transition: width $transition-base;
 }
-.aside-collapse {
+.aside-menu-collapse {
   flex: 1;
-  overflow: hidden;
-  border-radius: $bd-radius-base;
-  margin: 10px 0;
-  .aside-collapse-menu {
+  height: 100%;
+  border-radius: 5px;
+  overflow-y: auto;
+  .aside-menu-collapse {
+    border-right: none;
+  }
+  :deep(.el-scrollbar__view) {
     height: 100%;
-    border: none;
-    overflow-y: auto;
   }
 }
-.aside-footer {
-  width: 100%;
+.aside-menu-footer {
   flex: 0 0 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $text-aside-gray;
-  transition: all 0.3s;
+
+  margin-top: 10px;
   cursor: pointer;
   &:hover {
     background: #e6e6e6;
@@ -272,13 +290,16 @@ onMounted(() => {
     font-size: 18px;
   }
   span {
+    width: 50px;
     white-space: nowrap;
     color: $text-aside-gray;
     font-size: 14px;
     padding: 0 0 3px 10px;
+    transition: all 0.3s ease-in-out;
   }
 }
-// #region search start
+
+// #region search
 :deep(.el-autocomplete) {
   --el-border-radius-base: 18px;
 }
@@ -347,5 +368,5 @@ onMounted(() => {
     opacity: 1;
   }
 }
-// #endregion search end
+// #endregion search
 </style>

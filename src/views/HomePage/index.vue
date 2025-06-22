@@ -13,7 +13,9 @@
           </div>
           <div class="home-bg-main-b5-3"></div>
           <div class="home-bg-main-b5-4">
-            <h1 @click="goToHome">Hi, I'm XIONGBAB.</h1>
+            <h1 @click="goToHome">
+              Hi, I'm XIONGBAB.
+            </h1>
             <p>
               I am an amateur developer and learning programming is my hobby. At
               present, I have learned HTML, CSS, Javascript, and Vue3, but of
@@ -44,12 +46,12 @@
 </template>
 
 <script setup lang="ts" name="HomePage">
-import { useRouter } from "vue-router";
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
 function goToHome() {
-  router.push("/data");
+  router.push('/doc');
 }
 </script>
 
@@ -73,7 +75,7 @@ function goToHome() {
 
   .home-bg-circle {
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       bottom: 0;
@@ -87,7 +89,7 @@ function goToHome() {
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       bottom: 0;
@@ -192,13 +194,13 @@ function goToHome() {
     min-width: 140px;
     width: 140px;
     height: 140px;
-    background: url("@/assets/images/avatar.png") no-repeat center center;
+    background: url('@/assets/images/avatar.png') no-repeat center center;
     background-size: 85%;
     border-radius: $bd-radius-circle;
     box-shadow: 0 0 0 2px $bd-color-white;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;
@@ -228,7 +230,7 @@ function goToHome() {
     border-right: 1px dashed $bd-bg-line;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;

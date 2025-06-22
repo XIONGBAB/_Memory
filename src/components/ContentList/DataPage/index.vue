@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-empty description="暂无数据" image-size="260" />
+  <div class="content-main-page">
+    data
   </div>
 </template>
 

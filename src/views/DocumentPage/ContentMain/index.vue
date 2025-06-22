@@ -1,14 +1,28 @@
 <template>
-  <router-view v-slot="{ Component }">
-    <transition name="fade">
-      <component :is="Component" />
-    </transition>
-  </router-view>
+  <div class="content-main">
+    <slot></slot>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <script setup lang="ts" name="ContentMain"></script>
 
 <style scoped lang="scss">
+.content-main {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+[class^='content-main-page'] {
+  flex: 1;
+  padding: 60px 060px 0;
+}
 // transition
 .fade-enter-active,
 .fade-leave-active {
