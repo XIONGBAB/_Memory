@@ -10,6 +10,8 @@
 // :root
 :root {
   --scrollbar-width: 6px;
+  --aside-min-width: 84px;
+  --aside-max-width: 240px;
 }
 
 #app {
@@ -21,6 +23,7 @@ body {
   font-family: $font-family;
   background-color: $bg-color-base;
   font-size: $font-size-base;
+  overflow: clip auto;
 }
 
 .container{
