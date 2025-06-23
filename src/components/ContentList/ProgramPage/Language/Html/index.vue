@@ -1,7 +1,6 @@
 <template>
   <CardContainer>
-    <template #svg>
-    </template>
+    <template #svg> </template>
     <template #describe>
       <p>
         HTML（HyperText Markup

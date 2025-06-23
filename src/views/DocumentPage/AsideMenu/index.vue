@@ -31,7 +31,11 @@
         <h2>XIONGBAB丶</h2>
         <p>A rookie who can write code</p>
       </div>
-      <div class="aside-menu-top-toggle" :class="{ active: isCollapse }" @click="changeMenu">
+      <div
+        class="aside-menu-top-toggle"
+        :class="{ active: isCollapse }"
+        @click="changeMenu"
+      >
         <el-icon><ArrowRight /></el-icon>
       </div>
     </div>
@@ -70,8 +74,6 @@
           default-active="/data"
           :collapse="isCollapse"
           class="el-menu-vertical-demo aside-menu-collapse"
-          @open="handleOpen"
-          @close="handleClose"
         >
           <MenuTree :menuList="menuStore.menuRoutes" />
         </el-menu>
@@ -79,16 +81,18 @@
     </div>
     <div class="aside-menu-footer" @click="changeLights">
       <el-icon><component :is="textChange ? Open : TurnOff" /></el-icon>
-      <span class="aside-menu-footer-text">{{ textChange ? 'Lights on' : 'Lights off' }}</span>
+      <span class="aside-menu-footer-text">{{
+        textChange ? "Lights on" : "Lights off"
+      }}</span>
     </div>
   </div>
 </template>
 
-<script setup lang='ts' name='AsideMenu'>
-import { Open, TurnOff } from '@element-plus/icons-vue';
-import { onMounted, ref } from 'vue';
-import useMenuStore from '@/store/modules/menu';
-import MenuTree from '@/views/DocumentPage/AsideMenu/MenuTree/index.vue';
+<script setup lang="ts" name="AsideMenu">
+import { Open, TurnOff } from "@element-plus/icons-vue";
+import { onMounted, ref } from "vue";
+import useMenuStore from "@/store/modules/menu";
+import MenuTree from "@/views/DocumentPage/AsideMenu/MenuTree/index.vue";
 
 // #region btn click change width
 const menuStore = useMenuStore();
@@ -99,19 +103,13 @@ function changeLights() {
   textChange.value = !textChange.value;
 }
 function changeMenu() {
-  isCollapse.value = !isCollapse.value;
+  menuStore.toggleCollapse(); // 直接调用无需打印返回值
+  isCollapse.value = menuStore.isCollapse;
 }
 // #endregion btn click change width
 
-function handleOpen(key: string, keyPath: string[]) {
-  console.log(key, keyPath);
-}
-function handleClose(key: string, keyPath: string[]) {
-  console.log(key, keyPath);
-}
-
 // #region search
-const state = ref('');
+const state = ref("");
 interface LinkItem {
   value: string;
   link: string;
@@ -119,8 +117,8 @@ interface LinkItem {
 const links = ref<LinkItem[]>([]);
 function loadAll() {
   return [
-    { value: 'vue', link: 'https://github.com/vuejs/vue' },
-    { value: 'element', link: 'https://github.com/ElemeFE/element' }
+    { value: "vue", link: "https://github.com/vuejs/vue" },
+    { value: "element", link: "https://github.com/ElemeFE/element" },
   ];
 }
 let timeout: ReturnType<typeof setTimeout>;
@@ -151,7 +149,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .aside {
   position: fixed;
   top: 0;

@@ -4,7 +4,10 @@
       {{ i }}
     </div>
   </div> -->
-  <div class="content">
+  <div
+    class="content"
+    :style="{ marginLeft: menuStore.isCollapse ? '144px' : '300px' }"
+  >
     <router-view v-slot="{ Component }">
       <transition name="fade">
         <component :is="Component" />
@@ -13,14 +16,16 @@
   </div>
 </template>
 
-<script setup lang="ts" name="ContentMain"></script>
+<script setup lang="ts" name="ContentMain">
+import useMenuStore from "@/store/modules/menu";
+
+const menuStore = useMenuStore();
+</script>
 
 <style scoped lang="scss">
 .content {
-  margin-top: 120px;
-  margin-right: 30px;
-  margin-left: 300px;
-  margin-bottom: 30px;
+  margin: 120px 30px 30px 300px;
+  transition: all 0.3s ease-in-out;
 }
 // transition
 .fade-enter-active,

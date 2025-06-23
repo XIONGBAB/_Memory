@@ -1,15 +1,9 @@
 <template>
   <div class="content-nav-bar">
     <div class="nav-list">
-      <div class="nav-list-item">
-        首页
-      </div>
-      <div class="nav-list-item">
-        组件
-      </div>
-      <div class="nav-list-item">
-        资源
-      </div>
+      <div class="nav-list-item">首页</div>
+      <div class="nav-list-item">组件</div>
+      <div class="nav-list-item">资源</div>
     </div>
     <div class="nav-information">
       <el-popover class="box-item" content="Error" placement="bottom">
@@ -85,7 +79,7 @@ const errorHandler = () => true;
       color: $primary-base;
     }
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 50%;
       bottom: 0;

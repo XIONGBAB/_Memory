@@ -5,9 +5,7 @@
         <div v-for="i in 100" :id="`part${i}`" :key="i">
           {{ i }}
         </div>
-        <div id="part60">
-          111
-        </div>
+        <div id="part60">111</div>
       </div>
       <div class="c-card-anchor" @click="handleClick">
         <el-anchor type="underline" :offset="70">
@@ -509,7 +507,7 @@
 </template>
 
 <script setup lang="ts" name="CardContainer">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 // const containerRef = ref<HTMLElement | null>(null);
 const containerRef = ref<HTMLElement | null>(null);
@@ -677,7 +675,7 @@ function handleClick(e: MouseEvent) {
 }
 .card-container-main {
   position: relative;
-  [id^='part'] {
+  [id^="part"] {
     margin-bottom: 45px;
   }
   .card-container-style {
@@ -711,7 +709,7 @@ function handleClick(e: MouseEvent) {
       position: absolute;
       top: 6px;
       left: 0;
-      content: '';
+      content: "";
       display: block;
       width: 4px;
       height: 24px;

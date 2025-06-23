@@ -5,9 +5,14 @@ const useMenuStore = defineStore("Menu", {
   state: () => {
     return {
       menuRoutes: constantRoute, // 存储菜单路由
+      isCollapse: false, // 菜单中isCollapse
     };
   },
-  actions: {},
+  actions: {
+    toggleCollapse() {
+      this.isCollapse = !this.isCollapse;
+    },
+  },
   getters: {},
 });
 

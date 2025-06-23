@@ -5,9 +5,7 @@
         <div v-for="i in 100" :id="`part${i}`" :key="i">
           {{ i }}
         </div>
-        <div id="part60">
-          111
-        </div>
+        <div id="part60">111</div>
       </div>
       <div class="c-card-anchor" @click="handleClick">
         <el-anchor type="underline" :offset="70">
@@ -21,7 +19,7 @@
 </template>
 
 <script setup lang="ts" name="DataPage">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 // const containerRef = ref<HTMLElement | null>(null);
 const containerRef = ref<HTMLElement | null>(null);
