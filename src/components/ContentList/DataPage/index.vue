@@ -58,7 +58,7 @@ function handleClick(e: MouseEvent) {
     margin: 0;
   }
 }
-.c-card-anchor {
+.c-card-dis .c-card-anchor {
   flex: 0 0 240px;
   margin: 0 20px 0 40px;
   position: sticky;

@@ -491,7 +491,7 @@
 </template>
 
 <script setup lang="ts" name="CardContainer">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 // const containerRef = ref<HTMLElement | null>(null);
 const containerRef = ref<HTMLElement | null>(null);
@@ -583,6 +583,4 @@ function handleClick(e: MouseEvent) {
 // ]);
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
