@@ -89,10 +89,10 @@
 </template>
 
 <script setup lang="ts" name="AsideMenu">
-import { Open, TurnOff } from "@element-plus/icons-vue";
-import { onMounted, ref } from "vue";
-import useMenuStore from "@/store/modules/menu";
-import MenuTree from "@/views/DocumentPage/AsideMenu/MenuTree/index.vue";
+import { Open, TurnOff } from '@element-plus/icons-vue';
+import { onMounted, ref } from 'vue';
+import useMenuStore from '@/store/modules/menu';
+import MenuTree from '@/views/DocumentPage/AsideMenu/MenuTree/index.vue';
 
 // #region btn click change width
 const menuStore = useMenuStore();
@@ -109,7 +109,7 @@ function changeMenu() {
 // #endregion btn click change width
 
 // #region search
-const state = ref("");
+const state = ref('');
 interface LinkItem {
   value: string;
   link: string;
@@ -117,8 +117,8 @@ interface LinkItem {
 const links = ref<LinkItem[]>([]);
 function loadAll() {
   return [
-    { value: "vue", link: "https://github.com/vuejs/vue" },
-    { value: "element", link: "https://github.com/ElemeFE/element" },
+    { value: 'vue', link: 'https://github.com/vuejs/vue' },
+    { value: 'element', link: 'https://github.com/ElemeFE/element' }
   ];
 }
 let timeout: ReturnType<typeof setTimeout>;
@@ -163,6 +163,7 @@ onMounted(() => {
   transition: all 0.3s ease-in-out;
   border-right: 1px solid $bd-color-light;
   box-shadow: 2px 0 5px rgba(145, 145, 145, 0.12);
+  z-index: 2;
   &.active {
     width: var(--aside-min-width);
     .aside-menu-top-title {

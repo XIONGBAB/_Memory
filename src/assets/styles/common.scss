@@ -60,7 +60,7 @@ body {
 // scroll
 @media (prefers-color-scheme: dark) {
   ::-webkit-scrollbar-thumb {
-    background: #929292;
+    background: #adadad;
   }
   ::-webkit-scrollbar-track {
     background: #3d3d3d;
@@ -69,29 +69,27 @@ body {
 /* 所有浏览器：设置滚动条基本尺寸 */
 html {
   scrollbar-width: thin; 
-  scrollbar-color: #c0c0c0 #f1f1f1; 
+  scrollbar-color: #dddddd #fcfcfc; 
 }
 ::-webkit-scrollbar {
-  width: 12px; 
-  height: 12px; 
+  width: 6px;
 }
 
-/* Webkit：滚动条轨道 */
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; 
-  border-radius: 10px;
-  border: 2px solid #f1f1f1; 
+  background-color: rgb(204, 204, 204);
+  border-radius: 0.2667rem;
+  transition: all 0.2s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-
-::-webkit-scrollbar-corner {
-  background: #f1f1f1;
+  cursor: pointer;
+  background-color: rgb(178, 178, 178);
 }

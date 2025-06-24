@@ -1,9 +1,4 @@
 <template>
-  <!-- <div class="content">
-    <div v-for="i in 100">
-      {{ i }}
-    </div>
-  </div> -->
   <div
     class="content"
     :style="{ marginLeft: menuStore.isCollapse ? '144px' : '300px' }"
@@ -17,7 +12,7 @@
 </template>
 
 <script setup lang="ts" name="ContentMain">
-import useMenuStore from "@/store/modules/menu";
+import useMenuStore from '@/store/modules/menu';
 
 const menuStore = useMenuStore();
 </script>
@@ -26,6 +21,8 @@ const menuStore = useMenuStore();
 .content {
   margin: 120px 30px 30px 300px;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
 }
 // transition
 .fade-enter-active,

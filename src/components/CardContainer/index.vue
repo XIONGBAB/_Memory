@@ -1,21 +1,5 @@
 <template>
-  <div class="content-main-page">
-    <div class="c-card">
-      <div ref="containerRef" class="c-card-left">
-        <div v-for="i in 100" :id="`part${i}`" :key="i">
-          {{ i }}
-        </div>
-        <div id="part60">111</div>
-      </div>
-      <div class="c-card-anchor" @click="handleClick">
-        <el-anchor type="underline" :offset="70">
-          <el-anchor-link href="#part1" title="part1" />
-          <el-anchor-link href="#part2" title="part2" />
-          <el-anchor-link href="#part60" title="part60" />
-        </el-anchor>
-      </div>
-    </div>
-  </div>
+  1
   <!-- <div class="card-container">
     <div class="card-container-text">
       <div class="card-container-information">
@@ -507,7 +491,7 @@
 </template>
 
 <script setup lang="ts" name="CardContainer">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 // const containerRef = ref<HTMLElement | null>(null);
 const containerRef = ref<HTMLElement | null>(null);
@@ -600,137 +584,5 @@ function handleClick(e: MouseEvent) {
 </script>
 
 <style scoped lang="scss">
-.c-card {
-  display: flex;
-  justify-content: center;
-  .c-card-left {
-    min-width: 750px;
-    max-width: 1200px;
-    div {
-      width: 100%;
-      height: 500px;
-    }
-  }
-  .c-card-anchor {
-    position: sticky;
-    top: 90px;
-    right: 0;
-    width: 240px;
-    height: 500px;
-    border-right: 1px solid red;
-  }
-}
 
-.card-container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  .card-container-text {
-    flex: 1;
-    min-width: 750px;
-  }
-
-  .card-container-anchor {
-    flex: 0 0 240px;
-    margin-left: 60px;
-    position: sticky;
-    top: 0;
-    right: 0;
-    padding-bottom: 30px;
-    overflow-y: auto;
-    & {
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE/Edge */
-    }
-    &::-webkit-scrollbar {
-      display: none; /* Chrome/Safari */
-    }
-  }
-}
-.card-container-information {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 40px;
-  .card-container-logo {
-    display: flex;
-    font-size: 40px;
-    font-weight: 700;
-    align-items: center;
-    color: $text-primary;
-    .card-container-title {
-      margin-left: 10px;
-    }
-  }
-  .card-container-introduce {
-    color: $text-color-p;
-    font-size: 14px;
-    width: 100%;
-    min-width: 750px;
-    text-indent: 2em;
-    text-align: justify;
-    @include ellipsis-more;
-  }
-}
-.card-container-main {
-  position: relative;
-  [id^="part"] {
-    margin-bottom: 45px;
-  }
-  .card-container-style {
-    i {
-      position: absolute;
-      top: 10px;
-      left: var(--i);
-      width: 10px;
-      height: 10px;
-      border-radius: $bd-radius-circle;
-      background-color: var(--color);
-    }
-  }
-  .card-container-content {
-    margin-top: 20px;
-    font-size: 16px;
-    line-height: 2em;
-  }
-}
-// #region  main cardContainerContent text style
-.c-content-box {
-  margin-left: 20px;
-  font-family: $font-family-pla;
-  color: $text-card;
-  .c-content-h2 {
-    position: relative;
-    font-size: 24px;
-    padding-left: 20px;
-
-    &::before {
-      position: absolute;
-      top: 6px;
-      left: 0;
-      content: "";
-      display: block;
-      width: 4px;
-      height: 24px;
-      background-color: $text-placeholder;
-    }
-  }
-  p {
-    margin-bottom: 10px;
-    color: $text-primary;
-  }
-  ul {
-    margin-top: 0;
-    margin-bottom: 30px;
-    padding-left: 20px;
-  }
-}
-
-// #endregion main cardContainerContent text style
-
-.card-container-empty {
-  width: 100%;
-  height: 50px;
-}
 </style>
