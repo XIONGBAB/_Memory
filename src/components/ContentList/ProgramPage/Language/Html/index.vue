@@ -126,11 +126,11 @@
                 <ul>
                   <li>
                     采用两个字符的国家或地区代号。如
-                    <dl>
+                    <ul>
                       <li>cn 为中国</li>
                       <li>kr 为韩国</li>
                       <li>us 为美国</li>
-                    </dl>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -158,8 +158,7 @@
         <p>前言</p>
         <ul>
           <li>
-            HTML指的是 超文本标记语言（Hyper Text Markup Language）
-            ，它是用来描述网页的一种语言。
+            HTML指的是 超文本标记语言（Hyper Text Markup Language），它是用来描述网页的一种语言。
           </li>
           <li>
             国际通用浏览器：
@@ -235,8 +234,8 @@
       &lt;meta http-equiv="pragma" content="no-cache"&gt;                     &lt;!-- 禁止浏览器从本地机的缓存中调阅页面内容 --&gt;
       &lt;meta http-equiv="window-target" content="_top"&gt;                  &lt;!-- 用来防止别人在框架里调用你的页面 --&gt;
       &lt;meta http-equiv="Refresh" content="5;URL=http://www.baidu.com"&gt;  &lt;!-- 自动跳转 5指5秒 url不写就是刷新--&gt;
-      &lt;!-- 网页搜索机器人向导。用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。 
-            CONTENT的参数有all,none,index,noindex,follow,nofollow。默认是all。 --&gt;
+      &lt;!-- 网页搜索机器人向导。用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。
+          CONTENT的参数有all,none,index,noindex,follow,nofollow。默认是all。 --&gt;
       &lt;meta name="robots" content="none"&gt;
       &lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"&gt;
       &lt;link rel="Shortcut Icon" href=""&gt;    &lt;!-- 收藏夹图标 --&gt;
@@ -255,108 +254,98 @@
           <li>Utf-8：多国语言编码，什么国家的语言都可以正常显示。</li>
         </ul>
       </el-card>
-
-      <!--
-
       <el-card id="part7" shadow="hover">
         <h2>常用标签</h2>
-        <div class="ls-cot">
-          <p>表格</p>
-          <table>
-            <tbody>
-              <tr>
-                <th>标签</th>
-                <th>解释</th>
-              </tr>
-              <tr>
-                <td>&lt;h1&gt;&lt;/h1&gt;</td>
-                <td>1-6，1最大标题，是行内块元素</td>
-              </tr>
-              <tr>
-                <td>&lt;h1&gt;&lt;/h1&gt;</td>
-                <td>1-6，1最大标题，是行内块元素</td>
-              </tr>
-              <tr>
-                <td>&lt;p&gt;&lt;/p&gt;</td>
-                <td>段落标签</td>
-              </tr>
-              <tr>
-                <td>&lt;br /&gt;</td>
-                <td>单标签 换行</td>
-              </tr>
-              <tr>
-                <td>&lt;pre&gt;&lt;/pre&gt;</td>
-                <td>保存代码样式</td>
-              </tr>
-              <tr>
-                <td>&lt;strong&gt;&lt;/strong&gt;或者&lt;b&gt;&lt;/b&gt;</td>
-                <td>加粗 更推荐使用&lt;strong&gt;标签加粗语义更强烈</td>
-              </tr>
-              <tr>
-                <td>&lt;em&gt;&lt;/em&gt;或者&lt;i&gt;&lt;/i&gt;</td>
-                <td>倾斜 更推荐使用&lt;em&gt;标签加租语义更强烈</td>
-              </tr>
-              <tr>
-                <td>&lt;del&gt;&lt;/del&gt;或者&lt;s&gt;&lt;/s&gt;</td>
-                <td>删除线 更推荐使用&lt;del&gt;标签加粗语义更强烈</td>
-              </tr>
-              <tr>
-                <td>&lt;ins&gt;&lt;/ins&gt;或者&lt;u&gt;&lt;/u&gt;</td>
-                <td>下划线更推荐使用&lt;ins&gt;标签加租语义更强烈</td>
-              </tr>
-              <tr>
-                <td>&lt;sub&gt;&lt;/sub&gt;</td>
-                <td>上标</td>
-              </tr>
-              <tr>
-                <td>&lt;sup&gt;&lt;/sup&gt;</td>
-                <td>下标</td>
-              </tr>
-              <tr>
-                <td>&lt;div&gt;&lt;/div&gt;</td>
-                <td>无语义盒子 一行只能放一个，css后可以浮动，块元素</td>
-              </tr>
-              <tr>
-                <td>&lt;span&gt;&lt;/span&gt;</td>
-                <td>无语义盒子 一行可以多放 用来布局 ， 行内元素</td>
-              </tr>
-              <tr>
-                <td>&lt;!--content--&gt;</td>
-                <td>注释</td>
-              </tr>
-              <tr>
-                <td>& nbsp;</td>
-                <td>空格</td>
-              </tr>
-              <tr>
-                <td>&lt;font&gt;&lt;/font&gt;：</td>
-                <td>文本的修饰 ，例：&lt;font&gt;文本&lt;/font&gt;</td>
-              </tr>
-              <tr>
-                <td>&lt;blink&gt;&lt;/blink&gt;</td>
-                <td>里面的文字会闪烁 ，被废弃</td>
-              </tr>
-              <tr>
-                <td>UTF-8常用符号</td>
-                <td>
-                  参考文档
-                  <el-link type="primary" icon="Link" target="_blank" href="https://www.runoob.com/charsets/ref-utf-punctuation.html">
-                    https://www.runoob.com/charsets/ref-utf-punctuation.html
-                  </el-link>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <p>表格</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>标签</th>
+              <th>解释</th>
+            </tr>
+            <tr>
+              <td>&lt;h1&gt;&lt;/h1&gt;</td>
+              <td>1-6，1最大标题，是行内块元素</td>
+            </tr>
+            <tr>
+              <td>&lt;p&gt;&lt;/p&gt;</td>
+              <td>段落标签</td>
+            </tr>
+            <tr>
+              <td>&lt;br /&gt;</td>
+              <td>单标签 换行</td>
+            </tr>
+            <tr>
+              <td>&lt;pre&gt;&lt;/pre&gt;</td>
+              <td>保存代码样式</td>
+            </tr>
+            <tr>
+              <td>&lt;strong&gt;&lt;/strong&gt;或者&lt;b&gt;&lt;/b&gt;</td>
+              <td>加粗 更推荐使用&lt;strong&gt;标签加粗语义更强烈</td>
+            </tr>
+            <tr>
+              <td>&lt;em&gt;&lt;/em&gt;或者&lt;i&gt;&lt;/i&gt;</td>
+              <td>倾斜 更推荐使用&lt;em&gt;标签加租语义更强烈</td>
+            </tr>
+            <tr>
+              <td>&lt;del&gt;&lt;/del&gt;或者&lt;s&gt;&lt;/s&gt;</td>
+              <td>删除线 更推荐使用&lt;del&gt;标签加粗语义更强烈</td>
+            </tr>
+            <tr>
+              <td>&lt;ins&gt;&lt;/ins&gt;或者&lt;u&gt;&lt;/u&gt;</td>
+              <td>下划线更推荐使用&lt;ins&gt;标签加租语义更强烈</td>
+            </tr>
+            <tr>
+              <td>&lt;sub&gt;&lt;/sub&gt;</td>
+              <td>上标</td>
+            </tr>
+            <tr>
+              <td>&lt;sup&gt;&lt;/sup&gt;</td>
+              <td>下标</td>
+            </tr>
+            <tr>
+              <td>&lt;div&gt;&lt;/div&gt;</td>
+              <td>无语义盒子 一行只能放一个，css后可以浮动，块元素</td>
+            </tr>
+            <tr>
+              <td>&lt;span&gt;&lt;/span&gt;</td>
+              <td>无语义盒子 一行可以多放 用来布局 ， 行内元素</td>
+            </tr>
+            <tr>
+              <td>&lt;!-- content --&gt;</td>
+              <td>注释</td>
+            </tr>
+            <tr>
+              <td>&amp;nbsp;</td>
+              <td>空格，一个字符</td>
+            </tr>
+            <tr>
+              <td>&lt;font&gt;&lt;/font&gt;</td>
+              <td>文本的修饰 ，例：&lt;font&gt;文本&lt;/font&gt;</td>
+            </tr>
+            <tr>
+              <td>&lt;blink&gt;&lt;/blink&gt;</td>
+              <td>里面的文字会闪烁 ，被废弃</td>
+            </tr>
+            <tr>
+              <td>UTF-8常用符号</td>
+              <td>
+                参考文档
+                <el-link type="primary" icon="Link" target="_blank" href="https://www.runoob.com/charsets/ref-utf-punctuation.html">
+                  https://www.runoob.com/charsets/ref-utf-punctuation.html
+                </el-link>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </el-card>
       <el-card id="part8" shadow="hover">
         <h2>img标签</h2>
-        <div class="ls-cot">
-          <p>样式用css控制，样式与结构分离，更好控制</p>
-          <pre><code class="language-html line-numbers">  &lt;img src="./img/jpg|png|gif" alt="替换文本，当图像不存在" title="鼠标放上显示文字" width="" height="" border="边框"
+        <p>样式用css控制，样式与结构分离，更好控制</p>
+        <pre><code class="language-html line-numbers">  &lt;img src="./img/jpg|png|gif" alt="替换文本，当图像不存在" title="鼠标放上显示文字" width="" height="" border="边框"
   align="left|center|right 直接给图片是不起作用，需要块元素包裹，方法用于图文混排" hspace="左右边距 值为数字" vspace="上下边距 值为数字" &gt;</code></pre>
-          <p>图片热点-功能：在图片中添加可以点击的链接</p>
-          <pre><code class="language-html line-numbers">  &lt;img src="url路径" usemap="#图片名称"&gt;
+        <p>图片热点-功能：在图片中添加可以点击的链接</p>
+        <pre><code class="language-html line-numbers">  &lt;img src="url路径" usemap="#图片名称"&gt;
   &lt;map name="图片名称"&gt;
       &lt;area shape="rect" coords="251,413,413,467" href="www.baidu.com" target="_blank"&gt;
       &lt;area shape="circle" coords="230,304,45" href="拖动到一个文件以创建链接"&gt;
@@ -370,98 +359,84 @@
       href：跳转链接的地址
       target：打开新链接的方式 值：_blank（新窗口）、_self（原窗口--默认）、_parent（父窗口-框架）、_top（顶级窗口--框架）--&gt;
   &lt;/map&gt;</code></pre>
-        </div>
       </el-card>
       <el-card id="part9" shadow="hover">
         <h2>滚动标记</h2>
         <div class="ls-cot">
-          <p>废弃，用css3动画来做</p>
+          <p>废弃，建议用css3动画来做</p>
           <pre><code class="language-html line-numbers">  &lt;marquee&gt;要滚动的元素&lt;/marquee&gt;
   &lt;!-- 常用的属性：
-      direction：滚动方向       值：up、down、left、right
-      width：滚动的宽度
-      height：滚动的高度
-      bgcolor：背景颜色
-      scrollamount：滚动步长值，值越大，滚动越快
-      scrolldelay：两步的停留时间，以毫秒为单位，1秒=1000毫秒
+  direction：滚动方向 值：up、down、left、right
+  width：滚动的宽度
+  height：滚动的高度
+  bgcolor：背景颜色
+  scrollamount：滚动步长值，值越大，滚动越快
+  scrolldelay：两步的停留时间，以毫秒为单位，1秒=1000毫秒
   loop：滚动次数--&gt;</code></pre>
         </div>
       </el-card>
       <el-card id="part10" shadow="hover">
         <h2>多媒体标记</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;embed src="./img/j.png|mp4|mp3|swf" width="712" height="429"&gt;&lt;/embed&gt;
+        <p>代码</p>
+        <pre><code class="language-html line-numbers">  &lt;embed src="./img/j.png|mp4|mp3|swf" width="712" height="429"&gt;&lt;/embed&gt;
   &lt;!-- 语法常用的属性：
-      src：多媒体的地址                值：路径
-      width：调整多媒体宽度            值：数字
-      height：调整高度                值：数字
-  --&gt;</code></pre>
-        </div>
+  src：多媒体的地址                值：路径
+  width：调整多媒体宽度            值：数字
+  height：调整高度                值：数字 --&gt;</code></pre>
       </el-card>
       <el-card id="part11" shadow="hover">
         <h2>超链接标签与锚点链接</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;a href="#" target="_blank" alt="图片" this="img" name="锚点名称"&gt;&lt;/a&gt;
+        <p>代码</p>
+        <pre><code class="language-html line-numbers">  &lt;a href="#" target="_blank" alt="图片" this="img" name="锚点名称"&gt;&lt;/a&gt;
   &lt;a href="#锚点名称"&gt;返回顶部&lt;/a&gt;
   &lt;!-- 常用的属性：
       href：  链接的网址或ip或地址 值：就是具体的地址
       target：打开新链接方式值：_blank(新窗口)、_self(当前页面)、_parent(父窗口)、_top(顶级-框架)、content(跳转链接页面内容)
       alt:    当图片不加载的时候出现文字
       title： 鼠标放上会显示文字
-      name：  锚点链接(当点击链接时进行的跳转--回到顶部)       值：锚点的名称
-  --&gt;
+      name：  锚点链接(当点击链接时进行的跳转--回到顶部)  值：锚点的名称--&gt;
 
   &lt;a href="文件名#锚点名称"&gt;。。。。。。&lt;/a&gt;
   &lt;!-- 文件名：可有可无，如果是同一个网页的不同部分跳转，不需要文件名,如果是跳到另一个网页的不同部分，这时必须要有文件名 --&gt;
 
   &lt;a href=#top2&gt;返回顶部&lt;/a&gt;                    &lt;!-- 例1：跳转到同一个网页的不同部分 --&gt;
   &lt;a href="news.html#bottom"&gt;返回底部&lt;/a&gt;       &lt;!-- 例2：跳转到news.html文件的底部 --&gt;
-
-  &lt;a name="bottom"&gt;&lt;/a&gt;                        &lt;!-- 例2：在另一个文档添加跳转锚点标记 --&gt;
+  &lt;a name="bottom"&gt;&lt;/a&gt;                        &lt;!-- 例3：在另一个文档添加跳转锚点标记 --&gt;
 
   //  锚点  --------------------------------------------------------------------
-      &lt;a href="#" name="here"&gt;头部&lt;/a&gt;
-      &lt;!-- 内容区域 --&gt;
-      &lt;!-- 内容区域 --&gt;
-      &lt;!-- 内容区域 --&gt;
-      &lt;div&gt;&lt;a href="#here"&gt;点我回头部&lt;/a&gt;&lt;/div&gt;
+  &lt;a href="#" name="here"&gt;头部&lt;/a&gt;
+  &lt;!-- 内容区域 --&gt;
+  &lt;div&gt;&lt;a href="#here"&gt;点我回头部&lt;/a&gt;&lt;/div&gt;
 
-      &lt;!-- 但是注意：以上方法 html5去掉了name，只有在a标签上才能使用name ,其他标签使用id作为标识 --&gt;
-
-      &lt;div id="abc" name="abc"&gt;&lt;/div&gt; &lt;!-- 非a标签，使用name="锚点名称" 是不起作用的  --&gt;
-      &lt;!-- 内容区域 --&gt;
-      &lt;!-- 内容区域 --&gt;
-      &lt;!-- 内容区域 --&gt;
-      &lt;a href="#abc"&gt;返回&lt;/a&gt;</code></pre>
-          <p>路径</p>
-          <ul>
-            <li>
-              绝对路径：
-              <ol>
-                <li>有一个具体的地址（位置），某个盘某个文件夹某个文件 如：d:/itull/xxxx/xxx.xx</li>
-                <li>本地的绝对路径显示： file:///D:/itbull/lesson/PHP07/day02/code/01.超链接.html</li>
-                <li>远程的绝对路径： http://www.baidu.com</li>
-              </ol>
-            </li>
-            <li>相对路径：就是要访问的文件相对于当前的文件的位置</li>
-            <li>
-              注意事项：
-              <ol>
-                <li>当前文件与目标文件在同一个目录（文件夹）中，直接写文件名就可以了，建议写 ./ (表示当前目录)</li>
-                <li>目标文件所在的文件夹与当前文件同一个目录中，当前文件直接找到文件夹名下再找文件 ./news/01.news.html</li>
-                <li>目标文件在当前的文件的上级，最高3级，上级表示方式：../ (表示当期那目录的上一级目录)</li>
-              </ol>
-            </li>
-          </ul>
-        </div>
+  &lt;!-- 但是注意：以上方法 html5去掉了name，只有在a标签上才能使用name ,其他标签使用id作为标识 --&gt;
+  &lt;div id="abc" name="abc"&gt;&lt;/div&gt; &lt;!-- 非a标签，使用name="锚点名称" 是不起作用的  --&gt;
+  &lt;!-- 内容区域 --&gt;
+  &lt;a href="#abc"&gt;返回&lt;/a&gt;</code></pre>
+        <p>路径</p>
+        <ul>
+          <li>
+            绝对路径：
+            <ul>
+              <li>有一个具体的地址（位置），某个盘某个文件夹某个文件 如：d:/xx/xxxx/xxx.xx</li>
+              <li>本地的绝对路径显示： file://D:/xx/lesson/PHP07/day02/code/01.超链接.html</li>
+              <li>远程的绝对路径： http://www.baidu.com</li>
+            </ul>
+          </li>
+          <li>相对路径：就是要访问的文件相对于当前的文件的位置</li>
+          <li>
+            注意事项：
+            <ul>
+              <li>当前文件与目标文件在同一个目录（文件夹）中，直接写文件名就可以了，建议写 ./ (表示当前目录)</li>
+              <li>目标文件所在的文件夹与当前文件同一个目录中，当前文件直接找到文件夹名下再找文件 ./news/01.news.html</li>
+              <li>目标文件在当前的文件的上级，最高3级，上级表示方式：../ (表示当期那目录的上一级目录)</li>
+            </ul>
+          </li>
+        </ul>
       </el-card>
       <el-card id="part12" shadow="hover">
         <h2>表格</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;table border="1"&gt;                 &lt;!-- 表格标签 --&gt;
+        <p>代码</p>
+        <pre><code class="language-html line-numbers">  &lt;table border="1"&gt;               &lt;!-- 表格标签 --&gt;
     &lt;caption&gt;&lt;/caption&gt;            &lt;!-- 表格标题&lt;caption&gt;标记是table的子标记，放在table开始标记之后 --&gt;
     &lt;thead&gt;                        &lt;!-- 表格头部 用来放标题之类的东西 --&gt;
         &lt;tr&gt;
@@ -505,18 +480,16 @@
     rowspan：跨行合并                 值：要合并的数量 注意把原来被合并的单元格删除
     colspan：跨列合并                 值：要合并的列数 注意把原来被合并的单元格删除
   --&gt;</code></pre>
-        </div>
       </el-card>
       <el-card id="part13" shadow="hover">
         <h2>普通框架(已废弃)</h2>
-        <div class="ls-cot">
-          <p>
-            使用html框架网站：
-            <el-link type="primary" icon="Link" target="_blank" href="https://www.runoob.com/w3cnote/16-best-free-responsive-html5-frameworks.html">
-              https://www.runoob.com/w3cnote/16-best-free-responsive-html5-frameworks.html
-            </el-link>
-          </p>
-          <pre><code class="language-html line-numbers">  &lt;frameset&gt;  &lt;!-- 划分用的 --&gt;
+        <p>
+          使用html框架网站：
+          <el-link type="primary" icon="Link" target="_blank" href="https://www.runoob.com/w3cnote/16-best-free-responsive-html5-frameworks.html">
+            https://www.runoob.com/w3cnote/16-best-free-responsive-html5-frameworks.html
+          </el-link>
+        </p>
+        <pre><code class="language-html line-numbers">  &lt;frameset&gt;  &lt;!-- 划分用的 --&gt;
     &lt;frame /&gt; &lt;!-- 显示用的 --&gt;
     &lt;frame /&gt;
     ..................
@@ -549,23 +522,21 @@
     name：要把显示页面显示到那个窗口，给这个窗口起一个名称
     target：打开方式 值：_blank,_self,_top,_parent
   --&gt;</code></pre>
-          <p>内嵌框架</p>
-          <pre><code class="language-html line-numbers">  &lt;iframe loading="lazy" src="other.html" width="200" height="200"&gt;&lt;/iframe&gt;
-
-    &lt;!--
-    常用的属性：
-        align：水平对齐方式           值：left|center|right
-        给外层块元素使用align可以对iframe进行位置的移动
-        Scrolling：滚动条            值：yes或no
-        src：要显示到窗口的页面的路径
-        width：窗口的宽度             值：数字
-        height：窗口的高度            值：数字
-        frameborder：框架边框         值：0或1，yes或no
-    --&gt;
+        <p>内嵌框架</p>
+        <pre><code class="language-html line-numbers">  &lt;iframe loading="lazy" src="other.html" width="200" height="200"&gt;&lt;/iframe&gt;
+  &lt;!--
+  常用的属性：
+      align：水平对齐方式           值：left|center|right
+      给外层块元素使用align可以对iframe进行位置的移动
+      Scrolling：滚动条            值：yes或no
+      src：要显示到窗口的页面的路径
+      width：窗口的宽度             值：数字
+      height：窗口的高度            值：数字
+      frameborder：框架边框         值：0或1，yes或no
+  --&gt;
 
   &lt;iframe src="text.html" name="iframe_a"&gt;&lt;/iframe&gt;
   &lt;p&gt;&lt;a href="https://www.bilibili.com/" target="iframe_a"&gt;点我之后框架内容就会跳转到其他网页&lt;/a&gt;&lt;/p&gt;</code></pre>
-        </div>
       </el-card>
       <el-card id="part14" shadow="hover">
         <h2>列表</h2>
@@ -573,51 +544,44 @@
           <p>代码</p>
           <pre><code class="language-html line-numbers">  &lt;ul type="disc|square|circle"&gt;
     &lt;li&gt;无序列表1&lt;/li&gt;
-    &lt;li&gt;无序列表1&lt;/li&gt;
-    &lt;li&gt;无序列表1&lt;/li&gt;
   &lt;/ul&gt;
 
   &lt;ol type="i I 1 A a " start="5"&gt;
-    &lt;li&gt;无序列表1&lt;/li&gt;
-    &lt;li&gt;无序列表1&lt;/li&gt;
-    &lt;li&gt;无序列表1&lt;/li&gt;
+    &lt;li&gt;y有序列表1&lt;/li&gt;
   &lt;/ol&gt;
 
   &lt;dl&gt;
-    &lt;dt&gt;自定义列表&lt;/dt&gt;
-      &lt;dd&gt;自定义列表&lt;/dd&gt;
-    &lt;dt&gt;自定义列表&lt;/dt&gt;
-      &lt;dd&gt;自定义列表&lt;/dd&gt;
+    &lt;dt&gt;自定义列表项目&lt;/dt&gt;
+    &lt;dd&gt;自定义列表项目描述&lt;/dd&gt;
   &lt;/dl&gt;</code></pre>
         </div>
       </el-card>
       <el-card id="part15" shadow="hover">
         <h2>表单</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;form action="url服务器地址" method="get|post提交方式" name="表单域名称区多个表单域"&gt;
-    文本框： &lt;input type="text" name="名称" value="不写默认为空" id="" readonly autocomplete="off"&gt;
-            &lt;!-- readonly表示只读，填写不了内容 autocomplete="off" 关闭自动补全 disabled 只读，禁用的意思autofocus 自动获取焦点--&gt;
-    密码框： &lt;input type="password" name="" id="" value="" &gt;
-    单选按钮： &lt;input type="radio" name="单选一组名称" id="" checked&gt; &lt;!-- 默认单选 checked="checked" --&gt;
-    复选框： &lt;input type="checkbox" name="多选一组名称" id="" value=""&gt;
-    上传： &lt;input type="file" name="" id=""&gt; &lt;!--  上传必须在form属性中设置，而且必须是post方式--&gt;
-    提交： &lt;input type="submit" value="显示到按钮上名称" /&gt;
-    图片提交： &lt;input type="image" src="图片的地址" value="" /&gt;
-    普通按钮： &lt;input type="button" /&gt; &lt;!-- 没有任何意义的按钮，和js关联使用 --&gt;
-    重置按钮： &lt;input type="reset" name="值" value="名称" /&gt;
-    隐藏域： &lt;input type="hidden" name="值" value="值" /&gt; &lt;!-- 在浏览器中看不到的传递数据表单 --&gt;
+        <p>代码</p>
+        <pre><code class="language-html line-numbers">  &lt;form action="url服务器地址" method="get|post提交方式" name="表单域名称区多个表单域"&gt;
+    文本框：    &lt;input type="text" name="名称" value="不写默认为空" id="" readonly autocomplete="off"&gt;
+               &lt;!-- readonly表示只读，填写不了内容 autocomplete="off" 关闭自动补全 disabled 只读，禁用的意思autofocus 自动获取焦点--&gt;
+    密码框：    &lt;input type="password" name="" id="" value="" &gt;
+    单选按钮：  &lt;input type="radio" name="单选一组名称" id="" checked&gt; &lt;!-- 默认单选 checked="checked" --&gt;
+    复选框：    &lt;input type="checkbox" name="多选一组名称" id="" value=""&gt;
+    上传：      &lt;input type="file" name="" id=""&gt;                    &lt;!-- 上传必须在form属性中设置，而且必须是post方式--&gt;
+    提交：      &lt;input type="submit" value="显示到按钮上名称" /&gt;
+    图片提交：  &lt;input type="image" src="图片的地址" value="" /&gt;
+    普通按钮：  &lt;input type="button" /&gt;                              &lt;!-- 没有任何意义的按钮，和js关联使用 --&gt;
+    重置按钮：  &lt;input type="reset" name="值" value="名称" /&gt;
+    隐藏域：    &lt;input type="hidden" name="值" value="值" /&gt;         &lt;!-- 在浏览器中看不到的传递数据表单 --&gt;
     多行文本域：&lt;textarea rows="行" cols="列" value="值" name="名称"&gt;&lt;/textarea&gt;
     &lt;style&gt;
         textarea { width: 500px;height: 100px;resize: none; /* 控制多行文本域不能拖动大小 */}
     &lt;/style&gt;
 
-    &lt;select name="" id="" multiple size="2"&gt;&lt;!-- select 可以用multiple进行显示内容并多选 size显示行数 --&gt;
-        &lt;option value=""&gt;下拉列表1&lt;/option&gt; &lt;!-- select中至少包含一对标签 --&gt;
+    &lt;select name="" id="" multiple size="2"&gt;                   &lt;!-- select 可以用multiple进行显示内容并多选 size显示行数 --&gt;
+        &lt;option value=""&gt;下拉列表1&lt;/option&gt;                     &lt;!-- select中至少包含一对标签 --&gt;
         &lt;option value="" selected="selected"&gt;下拉列表2&lt;/option&gt; &lt;!-- 默认显示用selected --&gt;
-        &lt;option value=""&gt;下拉列表2&lt;/option&gt; &lt;!-- 默认显示用selected --&gt;
-        &lt;option value=""&gt;下拉列表2&lt;/option&gt; &lt;!-- 默认显示用selected --&gt;
-        &lt;option value=""&gt;下拉列表2&lt;/option&gt; &lt;!-- 默认显示用selected --&gt;
+        &lt;option value=""&gt;下拉列表2&lt;/option&gt;                     &lt;!-- 默认显示用selected --&gt;
+        &lt;option value=""&gt;下拉列表2&lt;/option&gt;                     &lt;!-- 默认显示用selected --&gt;
+        &lt;option value=""&gt;下拉列表2&lt;/option&gt;                     &lt;!-- 默认显示用selected --&gt;
     &lt;/select&gt;
   &lt;/form&gt;
 
@@ -626,8 +590,8 @@
     原因是form的属性中有：提交方式(get和post)、提交地址(具体提交页面)、上传文件的设置(如果不设置无法上传)
     提交地址：action="具体提交地址"
     提交方式method 值： get 和 post （在网站中数据直接的传递，只有get和post方式）
-    D:/itull/getuserinfo.php?user_name=itbullwyt&pass_word=123456789
-    &lt;a href="d:/itull/getuserinfo.php?"&gt;你好 &lt;/a&gt;
+    D:/xx/xxx.php?user_name=xx&pass_word=123456789
+    &lt;a href="d:/xx/xxx.php?"&gt;你好 &lt;/a&gt;
     Get方式传递数据有表单和超链接,表单是用户自己添写的数据。超链接是管理员规定要传递的数据。
     get方式：数据以浏览器地址栏的方式（明文）提交到另一个页面中。
               要提交到的页面路径和名称?参数名称=值&参数名称=值&参数名称=值.......
@@ -644,22 +608,290 @@
     1、name 和value是每个表单元素都有的属性值，主要给后台人员使用
     2、name 表单元素的名字，要求单选按钮和复选框要有相同的name值
   --&gt;</code></pre>
-          <p>label标签</p>
-          <pre><code class="language-html line-numbers">  &lt;input type="radio" name="sex" value="男" id="nan"&gt;&lt;label for="nan"&gt; 男&lt;/label&gt;
+        <p>label标签</p>
+        <pre><code class="language-html line-numbers">  &lt;input type="radio" name="sex" value="男" id="nan"&gt;&lt;label for="nan"&gt; 男&lt;/label&gt;
   &lt;input type="radio" name="sex" value="女" id="nv"&gt;&lt;label for="nv"&gt;女 &lt;/label&gt;
   &lt;!--
       &lt;label&gt;标签为input元素定义标注（标签）。
-      &lt;label&gt;标签用于绑定一个表单元素当点击&lt;label&gt;标签内的文本时，浏览器就会自动将焦点
-          （光标转到或者选择对应的表单元素上，用来增加用户体验。
+      &lt;label&gt;标签用于绑定一个表单元素当点击&lt;label&gt;
+      标签内的文本时，浏览器就会自动将焦点（光标转到或者选择对应的表单元素上，用来增加用户体验。
       注意：for不能一样，否则会只能点中第一个，后面的则选不中
   --&gt;</code></pre>
-        </div>
       </el-card>
       <el-card id="part16" shadow="hover">
-        <h2>小结</h2>
+        <h2>HTML5新增语义化标签</h2>
+        <p>标签</p>
+        <pre><code class="language-html line-numbers">  &lt;header&gt;            &lt;!-- 头部标签 --&gt;
+  &lt;nav&gt;               &lt;!-- 导航标签 --&gt;
+  &lt;article&gt;           &lt;!-- 内容标签 --&gt;
+  &lt;section&gt;           &lt;!-- 定义文档某个区域 --&gt;
+  &lt;aside&gt;             &lt;!-- 侧边栏标签 --&gt;
+  &lt;footer&gt;            &lt;!-- 尾部标签 --&gt;</code></pre>
+        <p>注意</p>
+        <ul>
+          <li>这种语义化标准主要是针对搜索引擎的</li>
+          <li>这些新标签页面中可以使用多次</li>
+          <li>在IE9中,需要把这些元素转换为块级元素</li>
+          <li>其实,我们移动端更喜欢使用这些标签</li>
+          <li>HTML5还增加了很多其他标签,我们后面再慢慢学</li>
+        </ul>
+      </el-card>
+      <el-card id="part17" shadow="hover">
+        <h2>HTML5新增多媒体标签</h2>
         <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;!--迭代
+          <p>前言</p>
+          <ul>
+            <li>
+              简介
+              <ul>
+                <li>使用它们可以很方便的在页面中嵌入音频和视频,而不再去使用flash和其他浏览器插件</li>
+                <li>HTML5在不使用插件的情况下,也可以原生的支持音频格式文件的播放,当然,支持的格式是有限的。</li>
+                <li>谷歌浏览器把音频和视频自动播放禁止了</li>
+              </ul>
+            </li>
+            <li>
+              音频标签
+              <ul>
+                <li>
+                  语法: 当前元素支持三种音频格式( WAV Ogg MP3 (IE Safari 不支持Ogg , IE 不支持WAV))
+                  <pre><code class="language-html line-numbers">  &lt;!-- 语法1： --&gt;
+  &lt;audio&gt; src="./videos/v.mp3" controls="controls"&gt;&lt;/audio&gt;
+
+  &lt;!-- 语法2： --&gt;
+  &lt;audio controls="controls"&gt;
+      &lt;source src="music.ogg" type="audio/ogg"&gt;
+      &lt;source src="music.mp3" type="audio/mpeg"&gt;
+      您的浏览器暂不支持&gt;audio&gt;&lt;标签   &lt;!-- 这段如果支撑是不会显示,不支持则会出现 --&gt;
+  &lt;/audio&gt; </code></pre>
+                </li>
+                <li>
+                  属性
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>属性</th>
+                        <th>值</th>
+                        <th>描述</th>
+                      </tr>
+                      <tr>
+                        <td>autoplay</td>
+                        <td>controls</td>
+                        <td>如果出现该属性,则音频在就绪后马上播放</td>
+                      </tr>
+                      <tr>
+                        <td>controls</td>
+                        <td>controls</td>
+                        <td>如果出现该属性,则向用户显示控件,比如播放按钮</td>
+                      </tr>
+                      <tr>
+                        <td>loop</td>
+                        <td>loop</td>
+                        <td>如果出现该属性,音频结束时会重复播放</td>
+                      </tr>
+                      <tr>
+                        <td>src</td>
+                        <td>url</td>
+                        <td>音频url地址</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul>
+            </li>
+            <li>
+              视频标签
+              <ul>
+                <li>
+                  语法: 当前元素支持三种视频格式（WebM Ogg MP4 (尽量使用mp4格式,其它考虑兼容性)）
+                  <pre><code class="language-html line-numbers">  &lt;!-- 语法1： --&gt;
+  &lt;video src="./videos/v.mp4" controls="controls"&gt;&lt;/video&gt;
+
+  &lt;!-- 语法2： --&gt;
+  &lt;video width="300" controls="controls"&gt;
+      &lt;source src="move.ogg" type="video/ogg"&gt;
+      &lt;source src="move.mp4" type="video/mp4"&gt;
+      您的浏览器暂不支持&gt;video&gt;&lt;视频标签   &lt;!-- 这段如果支撑是不会显示,不支持则会出现 --&gt;
+  &lt;/video&gt; </code></pre>
+                </li>
+                <li>
+                  属性
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>属性</th>
+                        <th>值</th>
+                        <th>描述</th>
+                      </tr>
+                      <tr>
+                        <td>autoplay</td>
+                        <td>autoplay</td>
+                        <td>视频就绪自动播放(谷歌浏览器需要添加muted来解决自动播放问题)</td>
+                      </tr>
+                      <tr>
+                        <td>controls</td>
+                        <td>controls</td>
+                        <td>向用户显示播放控件</td>
+                      </tr>
+                      <tr>
+                        <td>width</td>
+                        <td>pixels(像素)</td>
+                        <td>设置播放器宽度</td>
+                      </tr>
+                      <tr>
+                        <td>height</td>
+                        <td>pixels(像素)</td>
+                        <td>设置播放器高度</td>
+                      </tr>
+                      <tr>
+                        <td>loop</td>
+                        <td>loop</td>
+                        <td>播放完是否继续插放该视频,循环播放</td>
+                      </tr>
+                      <tr>
+                        <td>preload</td>
+                        <td>auto/none</td>
+                        <td>规定是否预加载视频(如果有了autoplay 就忽略该属性,none为不加载)</td>
+                      </tr>
+                      <tr>
+                        <td>src</td>
+                        <td>url</td>
+                        <td>视频url地址</td>
+                      </tr>
+                      <tr>
+                        <td>poster</td>
+                        <td>imgUrl</td>
+                        <td>加载等待的画面图片</td>
+                      </tr>
+                      <tr>
+                        <td>muted</td>
+                        <td>muted</td>
+                        <td>静音插放,部分浏览器需要加上此属性</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul>
+            </li>
+            <li>
+              配合js
+              <pre><code class="language-js line-numbers">  &lt;audio src="./sound/game_music.mp3" id="startMusic"&gt;&lt;/audio&gt;  // 路径
+  &lt;audio src="./sound/bullet.mp3" id="bulletMusic"&gt;&lt;/audio&gt;     // 路径
+
+  let startMusic = document.getElementById("startMusic");       // 获取音频元素
+  let bulletMusic = document.getElementById("bulletMusic");     // 获取元素
+  startMusic.play();                                            // 调用音频播放方法
+  bulletMusic.play();                                           // 调用音频播放方法
+  startMusic.pause();                                           // 调用音频暂停播放方法
+
+  /* audio不仅是一个标签,也是window下的一个对象,作为对象,具有一些对象属性和对象方法：
+  对象属性：
+      currentTime：获取当前播放时间
+      duration：获取歌曲的总时间
+      pause：是否暂停,返回布尔值
+  对象方法：
+      play()：播放
+      pause()：暂停
+      load()：重新加载 */ </code></pre>
+            </li>
+          </ul>
+        </div>
+      </el-card>
+      <el-card id="part18" shadow="hover">
+        <h2>HTML5新增input类型</h2>
+        <p>前言</p>
+        <ul>
+          <li>
+            标签：我们验证的时候必须添加form表单域
+            <pre><code class="language-html line-numbers">  &lt;li&gt;邮箱： &lt;input type="email"&gt;&lt;/li&gt;          &lt;!-- 限制用户输入必须为 Email 类型 --&gt;
+  &lt;li&gt;网址：&lt;input type="url"&gt;&lt;/li&gt;             &lt;!-- 限制用户输入必须为 URL 类型 --&gt;
+  &lt;li&gt;日期：&lt;input type="date"&gt;&lt;/li&gt;            &lt;!-- 限制用户输入必须为 日期 类型 --&gt;
+  &lt;li&gt;月：&lt;input type="month"&gt;&lt;/li&gt;             &lt;!-- 限制用户输入必须为 月 类型 --&gt;
+  &lt;li&gt;周：&lt;input type="week"&gt;&lt;/li&gt;              &lt;!-- 限制用户输入必须为 周 类型 --&gt;
+  &lt;li&gt;时间：&lt;input type="time"&gt;&lt;/li&gt;            &lt;!-- 限制用户输入必须为 时间 类型 --&gt;
+  &lt;li&gt;数量：&lt;input type="number"&gt;&lt;/li&gt;          &lt;!-- 限制用户输入必须为 数字 类型 --&gt;
+  &lt;li&gt;手机号码：&lt;input type="tel"&gt;&lt;/li&gt;          &lt;!-- 手机号码 --&gt;
+  &lt;li&gt;搜索：&lt;input type="search"&gt;&lt;/li&gt;          &lt;!-- 搜索框 --&gt;
+  &lt;li&gt;颜色：&lt;input type="color"&gt;&lt;/li&gt;           &lt;!-- 生成颜色选择表单--&gt;
+  &lt;li&gt;&lt;input type="submit" value="提交"&gt;&lt;/li&gt;   &lt;!-- 提交--&gt;  </code></pre>
+          </li>
+          <li>
+            属性
+            <table>
+              <tbody>
+                <tr>
+                  <th>属性</th>
+                  <th>值</th>
+                  <th>描述</th>
+                </tr>
+                <tr>
+                  <td>required</td>
+                  <td>required</td>
+                  <td>表单拥有该属性表示其内容不能为空,必填</td>
+                </tr>
+                <tr>
+                  <td>placeholder</td>
+                  <td>placeholder</td>
+                  <td>表单的提示信息,存在默认值将不显示</td>
+                </tr>
+                <tr>
+                  <td>autofocus</td>
+                  <td>autofocus</td>
+                  <td>自动聚焦属性,页面加载完成自动聚焦到指定表单</td>
+                </tr>
+                <tr>
+                  <td>autocomplete</td>
+                  <td>off/on</td>
+                  <td>当用户在字段开始键入时,浏览器基于之前键入过的值,应该显示出在字段中填写的选项。 默认已经打开,如autocomplete="on",关闭 autocomplete ="off",需要放在表单内,同时加上name属性,同时成功提交</td>
+                </tr>
+                <tr>
+                  <td>multiple</td>
+                  <td>multiple</td>
+                  <td>可以多选文件提交</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            样式
+            <pre><code class="language-css line-numbers">  input::placeholder{color: pink;}    /* 可以通过伪类修改提示信息的字体颜色 */
+  outline: none;                      /* 去除鼠标点后的轮廓线 */ </code></pre>
+          </li>
+        </ul>
+      </el-card>
+      <el-card id="part19" shadow="hover">
+        <h2>插件地址</h2>
+        <p>链接</p>
+        <ul>
+          <li>
+            swiper网站：
+            <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">
+              https://www.swiper.com.cn/
+            </el-link>
+          </li>
+          <li>
+            lib-flexible.js：
+            <el-link type="primary" icon="Link" target="_blank" href="https://github.com/amfe/lib-flexible">
+              https://github.com/amfe/lib-flexible
+            </el-link>
+          </li>
+          <li>
+            bootstrap：
+            <el-link type="primary" icon="Link" target="_blank" href="https://bootstrap.css88.com/">
+              https://bootstrap.css88.com/
+            </el-link>
+          </li>
+          <li>
+            amazeui：
+            <el-link type="primary" icon="Link" target="_blank" href="amazeui.shopxo.net">
+              amazeui.shopxo.net
+            </el-link>
+          </li>
+        </ul>
+      </el-card>
+      <el-card id="part20" shadow="hover">
+        <h2>小结</h2>
+        <p>代码</p>
+        <pre><code class="language-html line-numbers">  &lt;!--迭代
   网页的版本
       HTML4
       XHTML2.0
@@ -741,7 +973,6 @@
       - &lt;section&gt;  独立的区块
       - &lt;div&gt;      块元素
       - &lt;span&gt;     行内元素
-
   列表list
       - &lt;ul&gt;       无序列表
         &lt;li&gt;       列表
@@ -755,380 +986,100 @@
       - &lt;img&gt;      src  title  alt
   内联框架
       - &lt;iframe&gt;   双标签  src  frameborder   很少用，SEO
-
   媒体标签
       - &lt;audio&gt;    双标器  src  controls  autoplay  loop
         &lt;source&gt;   这里填写 src路径，可避免支持的浏览器显示播放控件，不支持的显示audi标签下的文字，可指定多个
       - &lt;video&gt;
   --&gt;</code></pre>
-        </div>
       </el-card>
-      <el-card id="part17" shadow="hover">
-        <h2>HTML5新增语义化标签</h2>
-        <div class="ls-cot">
-          <p>标签</p>
-          <pre><code class="language-html line-numbers">  &lt;header&gt;            &lt;!-- 头部标签 --&gt;
-  &lt;nav&gt;               &lt;!-- 导航标签 --&gt;
-  &lt;article&gt;           &lt;!-- 内容标签 --&gt;
-  &lt;section&gt;           &lt;!-- 定义文档某个区域 --&gt;
-  &lt;aside&gt;             &lt;!-- 侧边栏标签 --&gt;
-  &lt;footer&gt;            &lt;!-- 尾部标签 --&gt;</code></pre>
-          <p>注意</p>
-          <ul>
-            <li>这种语义化标准主要是针对搜索引擎的</li>
-            <li>这些新标签页面中可以使用多次</li>
-            <li>在IE9中,需要把这些元素转换为块级元素</li>
-            <li>其实,我们移动端更喜欢使用这些标签</li>
-            <li>HTML5还增加了很多其他标签,我们后面再慢慢学</li>
-          </ul>
-        </div>
-      </el-card>
-      <el-card id="part18" shadow="hover">
-        <h2>HTML5新增多媒体标签</h2>
-        <div class="ls-cot">
-          <p>前言</p>
-          <ul>
-            <li>
-              简介
-              <ol>
-                <li>使用它们可以很方便的在页面中嵌入音频和视频,而不再去使用flash和其他浏览器插件</li>
-                <li>HTML5在不使用插件的情况下,也可以原生的支持音频格式文件的播放,当然,支持的格式是有限的。</li>
-                <li>谷歌浏览器把音频和视频自动播放禁止了</li>
-              </ol>
-            </li>
-            <li>
-              音频标签
-              <ol>
-                <li>
-                  语法: 当前元素支持三种音频格式( WAV Ogg MP3 (IE Safari 不支持Ogg , IE 不支持WAV))
-                  <pre><code class="language-html line-numbers">  &lt;!-- 语法1： --&gt;
-  &lt;audio&gt; src="./videos/v.mp3" controls="controls"&gt;&lt;/audio&gt;
-
-  &lt;!-- 语法2： --&gt;
-  &lt;audio controls="controls"&gt;
-      &lt;source src="music.ogg" type="audio/ogg"&gt;
-      &lt;source src="musci.mp3" type="audio/mpeg"&gt;
-      您的浏览器暂不支持&gt;audio&gt;&lt;标签   &lt;!-- 这段如果支撑是不会显示,不支持则会出现 --&gt;
-  &lt;/audio&gt; </code></pre>
-                </li>
-                <li>
-                  属性
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>属性</th>
-                        <th>值</th>
-                        <th>描述</th>
-                      </tr>
-                      <tr>
-                        <td>autoplay</td>
-                        <td>controls</td>
-                        <td>如果出现该属性,则音频在就绪后马上播放</td>
-                      </tr>
-                      <tr>
-                        <td>controls</td>
-                        <td>controls</td>
-                        <td>如果出现该属性,则向用户显示控件,比如播放按钮</td>
-                      </tr>
-                      <tr>
-                        <td>loop</td>
-                        <td>loop</td>
-                        <td>如果出现该属性,音频结束时会重复播放</td>
-                      </tr>
-                      <tr>
-                        <td>src</td>
-                        <td>url</td>
-                        <td>音频url地址</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </li>
-              </ol>
-            </li>
-            <li>
-              视频标签
-              <ol>
-                <li>
-                  语法: 当前元素支持三种视频格式（WebM Ogg MP4 (尽量使用mp4格式,其它考虑兼容性)）
-                  <pre><code class="language-html line-numbers">  &lt;!-- 语法1： --&gt;
-  &lt;video src="./videos/v.mp4" controls="controls"&gt;&lt;/video&gt;
-
-  &lt;!-- 语法2： --&gt;
-  &lt;video width="300" controls="controls"&gt;
-      &lt;source src="move.ogg" type="video/ogg"&gt;
-      &lt;source src="move.mp4" type="video/mp4"&gt;
-      您的浏览器暂不支持&gt;video&gt;&lt;视频标签   &lt;!-- 这段如果支撑是不会显示,不支持则会出现 --&gt;
-  &lt;/video&gt; </code></pre>
-                </li>
-                <li>
-                  属性
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>属性</th>
-                        <th>值</th>
-                        <th>描述</th>
-                      </tr>
-                      <tr>
-                        <td>autoplay</td>
-                        <td>autoplay</td>
-                        <td>视频就绪自动播放(谷歌浏览器需要添加muted来解决自动播放问题)</td>
-                      </tr>
-                      <tr>
-                        <td>controls</td>
-                        <td>controls</td>
-                        <td>向用户显示播放控件</td>
-                      </tr>
-                      <tr>
-                        <td>width</td>
-                        <td>pixels(像素)</td>
-                        <td>设置播放器宽度</td>
-                      </tr>
-                      <tr>
-                        <td>height</td>
-                        <td>pixels(像素)</td>
-                        <td>设置播放器高度</td>
-                      </tr>
-                      <tr>
-                        <td>loop</td>
-                        <td>loop</td>
-                        <td>播放完是否继续插放该视频,循环播放</td>
-                      </tr>
-                      <tr>
-                        <td>preload</td>
-                        <td>auto/none</td>
-                        <td>规定是否预加载视频(如果有了autoplay 就忽略该属性,none为不加载)</td>
-                      </tr>
-                      <tr>
-                        <td>src</td>
-                        <td>url</td>
-                        <td>视频url地址</td>
-                      </tr>
-                      <tr>
-                        <td>poster</td>
-                        <td>imgurl</td>
-                        <td>加载等待的画面图片</td>
-                      </tr>
-                      <tr>
-                        <td>muted</td>
-                        <td>muted</td>
-                        <td>静音插放,部分浏览器需要加上此属性</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </li>
-              </ol>
-            </li>
-            <li>
-              配合js
-              <pre><code class="language-js line-numbers">  &lt;audio src="./sound/game_music.mp3" id="startMusic"&gt;&lt;/audio&gt;  // 路径
-  &lt;audio src="./sound/bullet.mp3" id="bulletMusic"&gt;&lt;/audio&gt;     // 路径
-
-  let startMusic = document.getElementById("startMusic");       // 获取音频元素
-  let bulletMusic = document.getElementById("bulletMusic");     // 获取元素
-  startMusic.play();                                            // 调用音频播放方法
-  bulletMusic.play();                                           // 调用音频播放方法
-  startMusic.pause();                                           // 调用音频暂停播放方法
-
-  /* audio不仅是一个标签,也是window下的一个对象,作为对象,具有一些对象属性和对象方法：
-  对象属性：
-      currentTime：获取当前播放时间
-      duration：获取歌曲的总时间
-      pause：是否暂停,返回布尔值
-  对象方法：
-      play()：播放
-      pause()：暂停
-      load()：重新加载 */ </code></pre>
-            </li>
-          </ul>
-        </div>
-      </el-card>
-      <el-card id="part19" shadow="hover">
-        <h2>HTML5新增input类型</h2>
-        <div class="ls-cot">
-          <p>前言</p>
-          <ul>
-            <li>
-              标签：我们验证的时候必须添加form表单域
-              <pre><code class="language-html line-numbers">  &lt;li&gt;邮箱： &lt;input type="email"&gt;&lt;/li&gt;          &lt;!-- 限制用户输入必须为 Email 类型 --&gt;
-  &lt;li&gt;网址：&lt;input type="url"&gt;&lt;/li&gt;             &lt;!-- 限制用户输入必须为 URL 类型 --&gt;
-  &lt;li&gt;日期：&lt;input type="date"&gt;&lt;/li&gt;            &lt;!-- 限制用户输入必须为 日期 类型 --&gt;
-  &lt;li&gt;月：&lt;input type="month"&gt;&lt;/li&gt;             &lt;!-- 限制用户输入必须为 月 类型 --&gt;
-  &lt;li&gt;周：&lt;input type="week"&gt;&lt;/li&gt;              &lt;!-- 限制用户输入必须为 周 类型 --&gt;
-  &lt;li&gt;时间：&lt;input type="time"&gt;&lt;/li&gt;            &lt;!-- 限制用户输入必须为 时间 类型 --&gt;
-  &lt;li&gt;数量：&lt;input type="number"&gt;&lt;/li&gt;          &lt;!-- 限制用户输入必须为 数字 类型 --&gt;
-  &lt;li&gt;手机号码：&lt;input type="tel"&gt;&lt;/li&gt;          &lt;!-- 手机号码 --&gt;
-  &lt;li&gt;搜索：&lt;input type="search"&gt;&lt;/li&gt;          &lt;!-- 搜索框 --&gt;
-  &lt;li&gt;颜色：&lt;input type="color"&gt;&lt;/li&gt;           &lt;!-- 生成颜色选择表单--&gt;
-  &lt;li&gt;&lt;input type="submit" value="提交"&gt;&lt;/li&gt;   &lt;!-- 提交--&gt;  </code></pre>
-            </li>
-            <li>
-              属性
-              <table>
-                <tbody>
-                  <tr>
-                    <th>属性</th>
-                    <th>值</th>
-                    <th>描述</th>
-                  </tr>
-                  <tr>
-                    <td>required</td>
-                    <td>required</td>
-                    <td>表单拥有该属性表示其内容不能为空,必填</td>
-                  </tr>
-                  <tr>
-                    <td>placeholder</td>
-                    <td>placeholder</td>
-                    <td>表单的提示信息,存在默认值将不显示</td>
-                  </tr>
-                  <tr>
-                    <td>autofocus</td>
-                    <td>autofocus</td>
-                    <td>自动聚焦属性,页面加载完成自动聚焦到指定表单</td>
-                  </tr>
-                  <tr>
-                    <td>autocomplete</td>
-                    <td>off/on</td>
-                    <td>当用户在字段开始键入时,浏览器基于之前键入过的值,应该显示出在字段中填写的选项。 , 默认已经打开,如autocomplete="on",关闭 autocomplete ='of”,需要放在表单内,同时加上name属性,同时成功提交</td>
-                  </tr>
-                  <tr>
-                    <td>multiple</td>
-                    <td>multiple</td>
-                    <td>可以多选文件提交</td>
-                  </tr>
-                </tbody>
-              </table>
-            </li>
-            <li>
-              样式
-              <pre><code class="language-html line-numbers">  input::placeholder{color: pink;}    /* 可以通过伪类修改提示信息的字体颜色 */
-  outline: none;                      /* 去除鼠标点后的轮廓线 */ </code></pre>
-            </li>
-          </ul>
-        </div>
-      </el-card>
-      <el-card id="part20" shadow="hover">
-        <h2>插件地址</h2>
-        <div class="ls-cot">
-          <p>链接</p>
-          <ul>
-            <li>
-              swiper网站：
-              <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">
-                https://www.swiper.com.cn/
-              </el-link>
-            </li>
-            <li>
-              lib-flexible.js：
-              <el-link type="primary" icon="Link" target="_blank" href="https://github.com/amfe/lib-flexible">
-                https://github.com/amfe/lib-flexible
-              </el-link>
-            </li>
-            <li>
-              bootstrap：
-              <el-link type="primary" icon="Link" target="_blank" href="https://bootstrap.css88.com/">
-                https://bootstrap.css88.com/
-              </el-link>
-            </li>
-            <li>
-              amazeui：
-              <el-link type="primary" icon="Link" target="_blank" href="amazeui.shopxo.net">
-                amazeui.shopxo.net
-              </el-link>
-            </li>
-          </ul>
-        </div>
-      </el-card>
-      </el-card>
-      -->
     </template>
   </card-container>
 </template>
 
 <script setup lang="ts" name="DataPage">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const data = ref([
   {
     id: 1,
-    h2: "制作项目步骤",
+    h2: '制作项目步骤'
   },
   {
     id: 2,
-    h2: "web服务器",
+    h2: 'web服务器'
   },
   {
     id: 3,
-    h2: "HTML",
+    h2: 'HTML'
   },
   {
     id: 4,
-    h2: "内核",
+    h2: '内核'
   },
   {
     id: 5,
-    h2: "Web标准的构成",
+    h2: 'Web标准的构成'
   },
   {
     id: 6,
-    h2: "html的文档结构",
+    h2: 'html的文档结构'
   },
   {
     id: 7,
-    h2: "常用标签",
+    h2: '常用标签'
   },
   {
     id: 8,
-    h2: "img标签",
+    h2: 'img标签'
   },
   {
     id: 9,
-    h2: "滚动标记",
+    h2: '滚动标记'
   },
   {
     id: 10,
-    h2: "多媒体标记",
+    h2: '多媒体标记'
   },
   {
     id: 11,
-    h2: "超链接标签与锚点链接",
+    h2: '超链接标签与锚点链接'
   },
   {
     id: 12,
-    h2: "表格",
+    h2: '表格'
   },
   {
     id: 13,
-    h2: "普通框架(已废弃)",
+    h2: '普通框架(已废弃)'
   },
   {
     id: 14,
-    h2: "列表",
+    h2: '列表'
   },
   {
     id: 15,
-    h2: "表单",
+    h2: '表单'
   },
   {
     id: 16,
-    h2: "小结",
+    h2: 'HTML5新增语义化标签'
   },
   {
     id: 17,
-    h2: "HTML5新增语义化标签",
+    h2: 'HTML5新增多媒体标签'
   },
   {
     id: 18,
-    h2: "HTML5新增多媒体标签",
+    h2: 'HTML5新增input类型'
   },
   {
     id: 19,
-    h2: "HTML5新增input类型",
+    h2: '插件地址'
   },
   {
     id: 20,
-    h2: "插件地址",
-  },
+    h2: '小结'
+  }
 ]);
 </script>
 

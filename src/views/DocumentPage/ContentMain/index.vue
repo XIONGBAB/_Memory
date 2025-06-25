@@ -4,7 +4,7 @@
     :style="{ marginLeft: menuStore.isCollapse ? '144px' : '300px' }"
   >
     <router-view v-slot="{ Component }">
-      <transition name="fade">
+      <transition name="fade" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts" name="ContentMain">
-import useMenuStore from "@/store/modules/menu";
+import useMenuStore from '@/store/modules/menu';
 
 const menuStore = useMenuStore();
 </script>

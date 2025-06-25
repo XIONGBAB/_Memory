@@ -2,8 +2,8 @@
   <card-container title="css" :data="data">
     <template #svg>
       <svg
-        width="40"
-        height="40"
+        width="48"
+        height="48"
         t="1699148624812"
         class="icon"
         viewBox="0 0 1024 1024"
@@ -17,6 +17,7 @@
           p-id="9116"
         />
       </svg>
+      <h1>Css</h1>
     </template>
     <template #describe>
       <p>
@@ -27,9 +28,8 @@
     <template #content>
       <el-card id="part1" shadow="hover">
         <h2>基本样式</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-css line-numbers"> div{
+        <p>代码</p>
+        <pre><code class="language-css line-numbers"> div{
       opacity:1;                       /* 透明度,0-1之间取值 */
       filter: alpha(opacity=50);       /* 兼容IE的透明度 */
 
@@ -39,14 +39,14 @@
       font-size: 10px;                 /* 像素(px)、em(倍数)、百分比(%) */
       font-family:serif;               /* serif衬线字体  sans-serif非衬线字体 monospace 等宽字体 */
       @font-face{                      /* 自定义 */
-         font-family:'zidingyi';       /* 指定字体的名字 */
+         font-family:'xxx';            /* 指定字体的名字 */
          src:url('./font/xxxx.ttf');   /* 写路径 */
       }
       font: font-style font-weight font-size/line-height font-family;
       /* 复合写法,不能更换顺序,属性空格隔开,不写可省略取默认值,但必须写 size和family属性 */
 
     文本:
-      color: red;                      /* 字体颜色:可以写英文、16进制、RGB */
+      color: red;                    /* 字体颜色:可以写英文、16进制、RGB */
       text-align: center;              /* 只能水平对齐方式,必须在块元素中, Left|center|right */
       text-align-last: justify;        /* 多行时最后一行被调整为两端对齐,也就是居中了,单行的话,会两端对齐,相当于平铺 */
       word-break: break-all;           /* 适应英文或数字换行用 */
@@ -68,15 +68,15 @@
       -webkit-font-smoothing: antialiased; /* CSS3 抗锯齿形 让文字显示的更加清晰 */
 
     背景:
-      background-color: transparent;               /* 背景颜色 transparent(透明)/other(其他颜色) */
+      background-color: transparent;             /* 背景颜色 transparent(透明)/other(其他颜色) */
       background-size: 500px 500px;                /* 大小 移动端内容 50%(盒子的一半) cover(铺满) contain(宽或高铺满) */
       background-image: url(images/img.png);       /* 背景图片 */
       background-repeat:no-repeat;                 /* 平铺方式 repeat(平铺)/(不平铺) /repeat-x | -y/;(x和Y轴平铺) */
       background-position:center;                  /* 背景图片定位 (x y坐标)  单词 center left 、像素px 、百分比% */
       background-attachment: scroll;               /* 背景固定 scroll(滚动) / fixed(固定); */
-      background-clip:content-box;                 /* 背景裁切,置顶背景图像的绘画区域 内容区 border-box默认 paddng-box内边距 */
-      background-origin:;                          /* 背景图像的定位区域,偏移量,内容区 border-box默认 paddng-box内边距*/
-      background: rgba(0,0,0,0.3);                 /* 半透明背景 前面是rgb颜色值(0-255),最后一位是透明值,取值是0-1 */
+      background-clip:content-box;                 /* 背景裁切,置顶背景图像的绘画区域 内容区 border-box默认 padding-box内边距 */
+      background-origin:;                          /* 背景图像的定位区域,偏移量,内容区 border-box默认 padding-box内边距*/
+      background: rgba(0,0,0,0.3);               /* 半透明背景 前面是rgb颜色值(0-255),最后一位是透明值,取值是0-1 */
       background:hsl(hue, saturation, lightness)   /*  HSL值:H色相(0-360)  S饱和度(0%-100%)  L亮度(0%-100%) */
       background:hsla(hue, saturation, lightness, alpha)  /*  HSL值:H色相  S饱和度  L亮度  A透明度 */
       background:;                                 /* 背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置   复合写法 */
@@ -93,21 +93,20 @@
       list-style-image:url(./li01.jpg);            /* 列表图片 */
       list-style-position:Inside;                  /* 列表符号的位置,只对li用,Inside(内)、outside(外) */
       list-style: none url(./li01.jpg) inside;     /* 把三个属性的值都写到一个属性中 */
-
       /* 如果三个属性都没有,那就单个单个写,如果其中有一个没有,可以不写,如:none url
          常用属性none 去掉小圆点, disc  circle  square  decimal .... 其他样式可以查文档 */
 
     表格:
-      border-collapse:collapse;                    /* 边框是否折叠 */
-      border: 1px solid black;                     /* 设置边框 */
-      text-align:right;                            /* 文字对齐 */
+      border-collapse:collapse;                           /* 边框是否折叠 */
+      border: 1px solid black;                          /* 设置边框 */
+      text-align:right;                                   /* 文字对齐 */
       vertical-align: baseline | top | middle | bottom;   /* 对齐方式 */
-      pointer-events:none;                         /* 禁止长按图片保存 */
+      pointer-events:none;                                /* 禁止长按图片保存 */
 
     图片:
       vertical-align: top;                         /* 图片与文字垂直对齐方式 */
-      filter: gray;                                /* 使用滤镜让图片全部变黑白照 */
-      a:link img{filter: gray;}                    /* 可以做的小效果,默认的是灰白照 ,当鼠标放上的时候 是彩色 */
+      filter: gray;                              /* 使用滤镜让图片全部变黑白照 */
+      a:link img{filter: gray;}                  /* 可以做的小效果,默认的是灰白照 ,当鼠标放上的时候 是彩色 */
       a:hover img{filter: "";}
 
     鼠标:
@@ -117,8 +116,8 @@
     边框:
       border-width: 1px;                           /* 边框粗细 */
       border-style: solid;                         /* 边框样式 solid(实线) dashed(虚线) dotted(点线) double(双线) */
-      border-color: red;                           /* 边框颜色 */
-      border: 1px solid red;                       /* 复合写法,没有顺序要求 */
+      border-color: red;                         /* 边框颜色 */
+      border: 1px solid red;                     /* 复合写法,没有顺序要求 */
       border-collapse: collapse;                   /* 控制相邻单元格的边框  collapse合并 */
       border-radius: 10px;                         /* 设置圆角 (盒子高 + 上下边框) / 2 */
       outline: none;                               /* 一般用于表单的蓝色边框线 */
@@ -128,13 +127,11 @@
       outline: none;                               /* input表单光标点后轮廓去除,可以设置的属性是(按顺序) 相关值参考菜鸟编程
                                                       不影响页面布局  outline-color,outline-style,outline-width     */
   }</code></pre>
-        </div>
       </el-card>
       <el-card id="part2" shadow="hover">
         <h2>技巧</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-css line-numbers">  A
+        <p>代码</p>
+        <pre><code class="language-css line-numbers">  A
       :root {                               /* :root 相当于 html 定义颜色变量 */
           --primary-color: #ff434f;
           --secondary-color: #e3e3e3;
@@ -195,8 +192,8 @@
 
   G
       /* 定义变量css定义变量可分多种情况: */
-      :root {--borderColor: #ccc;}             /* 1、定义全局变量 */
-      .look{--borderColor: #ccc;}              /* 2、定义某元素下的变量 */
+      :root {--borderColor: #ccc;}           /* 1、定义全局变量 */
+      .look{--borderColor: #ccc;}            /* 2、定义某元素下的变量 */
       @media screen and (min-width: 1025px) {  /* 3、定义媒体查询下的变量  */
           :root {--borderColor: #ccc;}
       }
@@ -221,8 +218,8 @@
       让后面一个盒子向左移动1px的距离,重叠后就会覆盖前一个的1px
 
       1.让每个盒子margin往左侧移动-1px正好压住相邻盒子边框
-      2.鼠标经过某个盒子的时候,提高当前盒子的层级即可(如果没有有定位,则加相对定位(保留位置),如果有定位,则加z-index) */
-      3.巧妙运用浮动元素不会压住文字的特性,可以让文字围绕
+      2.鼠标经过某个盒子的时候,提高当前盒子的层级即可(如果没有有定位,则加相对定位(保留位置),如果有定位,则加z-index)
+      3.巧妙运用浮动元素不会压住文字的特性,可以让文字围绕  */
 
   K
       img{ pointer-events:none;}              /* 禁止长按出现保存图片 ,但是也会阻止点击链接 */
@@ -235,60 +232,53 @@
 
       -moz-border-radius:10px;                /* 私有前缀提倡写法: */
       -webkit-border-radius:10px;</code></pre>
-        </div>
       </el-card>
       <el-card id="part3" shadow="hover">
         <h2>Unicode编码字体</h2>
-        <div class="ls-cot">
-          <p>前言</p>
-          <ul>
-            <li>
-              把中文字体的名称用相应的Unicode编码来代替,这样就可以有效的避免浏览器解释CSS代码时候出现乱码的问题
-              <ol>
-                <li>黑体 \9ED1\4F53</li>
-                <li>宋体 \5B88\4F53</li>
-                <li>微软雅黑 5FAE\8F6F\96C59ED1</li>
-              </ol>
-            </li>
-            <li>Unicode编码需要用转义符 "\" 来转义</li>
-          </ul>
-        </div>
+        <p>前言</p>
+        <ul>
+          <li>
+            把中文字体的名称用相应的Unicode编码来代替,这样就可以有效的避免浏览器解释CSS代码时候出现乱码的问题
+            <ul>
+              <li>黑体 \9ED1\4F53</li>
+              <li>宋体 \5B88\4F53</li>
+              <li>微软雅黑 5FAE\8F6F\96C59ED1</li>
+            </ul>
+          </li>
+          <li>Unicode编码需要用转义符 "\" 来转义</li>
+        </ul>
       </el-card>
       <el-card id="part4" shadow="hover">
         <h2>浏览器中可以看到部分</h2>
-        <div class="ls-cot">
-          <p>前言</p>
-          <ul>
-            <li>
-              HTML(结构):“超文本标记语言”,主要作用把内容(文字、图片、视频等)放入网页中
-            </li>
-            <li>
-              CSS(样式):“层叠样式表”,主要作用给HTML进行样式的显示,如何的布局
-            </li>
-            <li>
-              Javascript(行为):“浏览器的脚本语言”,主要作用给HTML加动态效果(特效)
-            </li>
-            <li>
-              CSS特点:可以非常精准的定位,定位某个或某些标记,给这些标记加样式。HTML和CSS代码分离,减少后期工作量(单独写css文件)
-            </li>
-          </ul>
-        </div>
+        <p>前言</p>
+        <ul>
+          <li>
+            HTML(结构):“超文本标记语言”,主要作用把内容(文字、图片、视频等)放入网页中
+          </li>
+          <li>
+            CSS(样式):“层叠样式表”,主要作用给HTML进行样式的显示,如何的布局
+          </li>
+          <li>
+            Javascript(行为):“浏览器的脚本语言”,主要作用给HTML加动态效果(特效)
+          </li>
+          <li>
+            CSS特点:可以非常精准的定位,定位某个或某些标记,给这些标记加样式。HTML和CSS代码分离,减少后期工作量(单独写css文件)
+          </li>
+        </ul>
       </el-card>
       <el-card id="part5" shadow="hover">
         <h2>CSS引入方式</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;link rel="stylesheet" href="style.css"&gt;    &lt;!-- head标签里引入css文件 --&gt;
+        <p>代码</p>
+        <pre><code class="language-html line-numbers">  &lt;link rel="stylesheet" href="style.css"&gt;    &lt;!-- head标签里引入css文件 --&gt;
   @import url("other.css");                   &lt;!-- @import:可以在一个css文件中再次引入一个css文件 --&gt;
-  &lt;div style="color: bisque">&lt;/div&gt;           &lt;!-- 行内样式, 把CSS样式当成HTML的一个属性来写 --&gt;
+  &lt;div style="color: bisque">&lt;/div&gt;         &lt;!-- 行内样式, 把CSS样式当成HTML的一个属性来写 --&gt;
   &lt;style&gt; &lt;/style&gt;                            &lt;!-- style标签内写入样式,style可以插入到任意位置,规范是写在head标签里  --&gt;</code></pre>
-        </div>
       </el-card>
       <el-card id="part6" shadow="hover">
         <h2>选择器</h2>
         <div class="ls-cot">
           <p>代码</p>
-          <pre><code class="language-css line-numbers">  .div{color: red!important;}   /* 无穷大 不推荐使用 */
+          <pre><code class="language-css line-numbers">  .div{color: red!important;} /* 无穷大 不推荐使用 */
   style=""                      /* 行内样式 权重   1000 */
   #id{}                         /* ID选择器 权重   100 */
   .div{}                        /* 类选择器 权重    10 */
@@ -377,9 +367,8 @@
       </el-card>
       <el-card id="part7" shadow="hover">
         <h2>文字代替</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;!-- 当图片加载不了时可以用文字代替 --&gt;
+        <p>代码</p>
+        <pre><code class="language-html line-numbers">  &lt;!-- 当图片加载不了时可以用文字代替 --&gt;
   &lt;head&gt;
   &lt;style&gt;
       a {
@@ -389,156 +378,146 @@
       }
   &lt;/style&gt;
   &lt;/head&gt;
-  &lt;body&gt;
-      &lt;a&gt; href="http://www.taobao.com" target="_blank"&gt;淘宝网&lt;/a&gt;
-  &lt;/body&gt;
+  &lt;body&gt; &lt;a&gt; href="http://www.taobao.com" target="_blank"&gt;淘宝网&lt;/a&gt;&lt;/body&gt;
+
   &lt;style&gt; /* 淘宝写法 */
       a {
-      display: inline-block;text-decoration: none;color: #424242; width: 190px;
-      height: 0px;padding-top: 90px;overflow: hidden;border: 1px solid black;
-      background-image: url(./images/logo.jpg);background-size: 190px 90px;
-      /* text-indent:200px;white-space: nowrap;overflow: hidden; */
+        display: inline-block;text-decoration: none;color: #424242; width: 190px;
+        height: 0px;padding-top: 90px;overflow: hidden;border: 1px solid black;
+        background-image: url(./images/logo.jpg);background-size: 190px 90px;
+        /* text-indent:200px;white-space: nowrap;overflow: hidden; */
       }
   &lt;/style&gt;
   &lt;/head&gt;
-  &lt;body&gt;
-      &lt;a&gt; href="http://www.taobao.com" target="_blank"&gt;淘宝网&lt;/a&gt;
-  &lt;/body&gt;</code></pre>
-        </div>
+  &lt;body&gt; &lt;a&gt; href="http://www.taobao.com" target="_blank"&gt;淘宝网&lt;/a&gt; &lt;/body&gt;</code></pre>
       </el-card>
       <el-card id="part8" shadow="hover">
         <h2>行元素、块元素、转换</h2>
-        <div class="ls-cot">
-          <p>
-            常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;等,其中&lt;div&gt;标签是最典型的块元素。
-          </p>
-          <ul>
-            <li>
-              块级元素的特点:
-              <ol>
-                <li>比较霸道,自己独占一行。</li>
-                <li>高度,宽度、外边距以及内边距都可以控制。</li>
-                <li>宽度默认是容器(父级宽度)的100%</li>
-                <li>是一个容器及盒子,里面可以放行内或者块级元素。</li>
-              </ol>
-            </li>
-            <li>
-              注意：
-              <ol>
-                <li>文字类的元素内不能使用块级元素</li>
-                <li>
-                  &lt;p&gt;标签主要用于存放文字,因此&lt;p&gt;里面不能放块级元素,特别是不能放&lt;div&gt;
-                </li>
-                <li>
-                  同理,&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签,里面也不能放其他块级元素
-                </li>
-              </ol>
-            </li>
-          </ul>
-          <p>
-            常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等,行内元素也称为联元素
-          </p>
-          <ul>
-            <li>
-              行内元素的特点:
-              <ol>
-                <li>相邻行内元素在一行上,一行可以显示多个。</li>
-                <li>高、宽直接设置是无效的。 必须转换</li>
-                <li>默认宽度就是它本身内容的宽度。</li>
-                <li>行内元素只能容纳文本或其他行内元素。</li>
-              </ol>
-            </li>
-          </ul>
-          <p>
-            在行内元素中有几个特殊的标签—&lt;img/&gt;、&lt;input/&gt;、&lt;td&gt;,它们同时具有块元素和行内元素的特点,称为行内块元素
-          </p>
-          <ul>
-            <li>
-              行内块元素的特点:
-              <ol>
-                <li>
-                  相邻行内元素(行内块)在一行上,但是他们之间会有空白缝隙,一行可以显示多个(行内元素特点)。
-                </li>
-                <li>默认宽度就是它本身内容的宽度(行内元素特点)。</li>
-                <li>高度,行高、外边距以及内边距都可以控制(块级元素特点)。</li>
-              </ol>
-            </li>
-          </ul>
-          <p>转换:</p>
-          <ul>
-            <li>转换为块元素: display: block;</li>
-            <li>转换为行内元素: display: inline;</li>
-            <li>转换为行内块: display: inline-block;</li>
-          </ul>
-        </div>
+        <p>
+          常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;等,其中&lt;div&gt;标签是最典型的块元素。
+        </p>
+        <ul>
+          <li>
+            块级元素的特点:
+            <ul>
+              <li>比较霸道,自己独占一行。</li>
+              <li>高度,宽度、外边距以及内边距都可以控制。</li>
+              <li>宽度默认是容器(父级宽度)的100%</li>
+              <li>是一个容器及盒子,里面可以放行内或者块级元素。</li>
+            </ul>
+          </li>
+          <li>
+            注意：
+            <ul>
+              <li>文字类的元素内不能使用块级元素</li>
+              <li>
+                &lt;p&gt;标签主要用于存放文字,因此&lt;p&gt;里面不能放块级元素,特别是不能放&lt;div&gt;
+              </li>
+              <li>
+                同理,&lt;h1&gt;~&lt;h6&gt;等都是文字类块级标签,里面也不能放其他块级元素
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等,行内元素也称为联元素
+        </p>
+        <ul>
+          <li>
+            行内元素的特点:
+            <ul>
+              <li>相邻行内元素在一行上,一行可以显示多个。</li>
+              <li>高、宽直接设置是无效的。 必须转换</li>
+              <li>默认宽度就是它本身内容的宽度。</li>
+              <li>行内元素只能容纳文本或其他行内元素。</li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          在行内元素中有几个特殊的标签—&lt;img/&gt;、&lt;input/&gt;、&lt;td&gt;,它们同时具有块元素和行内元素的特点,称为行内块元素
+        </p>
+        <ul>
+          <li>
+            行内块元素的特点:
+            <ul>
+              <li>
+                相邻行内元素(行内块)在一行上,但是他们之间会有空白缝隙,一行可以显示多个(行内元素特点)。
+              </li>
+              <li>默认宽度就是它本身内容的宽度(行内元素特点)。</li>
+              <li>高度,行高、外边距以及内边距都可以控制(块级元素特点)。</li>
+            </ul>
+          </li>
+        </ul>
+        <p>转换:</p>
+        <ul>
+          <li>转换为块元素: display: block;</li>
+          <li>转换为行内元素: display: inline;</li>
+          <li>转换为行内块: display: inline-block;</li>
+        </ul>
       </el-card>
       <el-card id="part9" shadow="hover">
         <h2>层级</h2>
-        <div class="ls-cot">
-          <p>前言</p>
-          <ol>
-            <li>
-              CSS有三个非常重要的三个特性:层叠性、继承性、优先级。(相当于覆盖)
-            </li>
-            <li>
-              层叠性：相同选择器给设置相同的样式,此时一个样式就会覆盖另一个冲突的样式。层叠性主要解决样式冲突的问题
-              <ul>
-                <li>
-                  层叠性原则：
-                  <ol>
-                    <li>
-                      样式冲突,遵循的原则是就近原则,哪个样式离结构近,就执行哪个样式
-                    </li>
-                    <li>样式不冲突,不会层叠</li>
-                  </ol>
-                </li>
-              </ul>
-            </li>
-            <li>
-              继承性：CSS中的继承,子标签会继承父标签的某些样式,如文本颜色和字号。简单的理解就是:子承父业。
-              <ul>
-                <li>恰当地使用继承可以简化代码,降低CSS样式的复杂性</li>
-                <li>
-                  子元素可以继承父元素的样式(text-,font-,line-这些元素开头的可以继承,以及color属性),
-                </li>
-              </ul>
-            </li>
-            <li>
-              行高的继承：
-              <ul>
-                <li>body{font:12px/1.5 Microsoft YaHei;}</li>
-                <li>行高可以跟单位也可以不跟单位</li>
-                <li>
-                  如果子元素没有设置行高，则会继承父元素的行高为1.5，此时子元素的行高是:当前子元素的文字大小*1.5
-                </li>
-                <li>
-                  body行高1.5这样写法最大的优势就是里面子元素可以根据自己文字大小自动调整行高
-                </li>
-              </ul>
-            </li>
-            <li>
-              优先级：
-              <pre class="pre">
+        <p>前言</p>
+        <ul>
+          <li>
+            CSS有三个非常重要的三个特性:层叠性、继承性、优先级。(相当于覆盖)
+          </li>
+          <li>
+            层叠性：相同选择器给设置相同的样式,此时一个样式就会覆盖另一个冲突的样式。层叠性主要解决样式冲突的问题
+            <ul>
+              <li>
+                层叠性原则：
+                <ul>
+                  <li>
+                    样式冲突,遵循的原则是就近原则,哪个样式离结构近,就执行哪个样式
+                  </li>
+                  <li>样式不冲突,不会层叠</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            继承性：CSS中的继承,子标签会继承父标签的某些样式,如文本颜色和字号。简单的理解就是:子承父业。
+            <ul>
+              <li>恰当地使用继承可以简化代码,降低CSS样式的复杂性</li>
+              <li>
+                子元素可以继承父元素的样式(text-,font-,line-这些元素开头的可以继承,以及color属性),
+              </li>
+            </ul>
+          </li>
+          <li>
+            行高的继承：
+            <ul>
+              <li>body{font:12px/1.5 Microsoft YaHei;}</li>
+              <li>行高可以跟单位也可以不跟单位</li>
+              <li>
+                如果子元素没有设置行高，则会继承父元素的行高为1.5，此时子元素的行高是:当前子元素的文字大小*1.5
+              </li>
+              <li>
+                body行高1.5这样写法最大的优势就是里面子元素可以根据自己文字大小自动调整行高
+              </li>
+            </ul>
+          </li>
+          <li>
+            优先级：
+            <pre class="pre">
 0,0,0,0           * 继承的权重为null *号权重为0
 0,0,0,1           元素选择器
 0,0,1,0           类选择器,伪类选择器
 0,1,0,0           ID选择器
 1,0,0,0           行内样式 style=""
-!important        重要的 无穷大</pre
-              >
-            </li>
-          </ol>
-        </div>
+!important        重要的 无穷大</pre>
+          </li>
+        </ul>
       </el-card>
       <el-card id="part10" shadow="hover">
         <h2>盒子模型</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-css line-numbers">  /* 内边距 padding 外边距 margin */
+        <p>代码</p>
+        <pre><code class="language-css line-numbers">  /* 内边距 padding 外边距 margin */
   border-width: 1px;           /* 边框粗细 */
   border-style: solid;         /* 边框样式 solid(实线) dashed(虚线) dotted(点线) */
-  border-color: red;           /* 边框颜色 */
-  border: 1px solid red;       /* 复合写法 */
+  border-color: red;         /* 边框颜色 */
+  border: 1px solid red;     /* 复合写法 */
   border-collapse: collapse;   /* 控制相邻单元格的边框  collapse合并 */
 
   /* padding 属性用于设置内边距，即边框与内容之间的距离。及简写方式*/
@@ -562,29 +541,27 @@
      注意:以上方法是让块级元素水平居中,行内元素或者行内块元素水平居中给其父元素添加 text-align: center;即可。 */
 
   /* Margin 塌陷解决方案(BFC,是CSS中一个隐含的属性,也称块级格式化)  可开启BFC:
-     1、float                  * 可以为父元素定义上边框。
-     2、display                * 可以为父元素定义上内边距。
-     3、overflow:hidden(推荐)   * 可以为父元素添加overflow: hidden; */
+     1、float                  可以为父元素定义上边框。
+     2、display                可以为父元素定义上内边距。
+     3、overflow:hidden(推荐)  可以为父元素添加overflow: hidden; */
 
   /* 网页元素很多都带有默认的内外边距,而且不同浏览器默认的也不一致。因此我们在布局前,首先要清除下网页元素的内外边距。*/
   padding: 0;                  /* 清除内边距 */
   margin: 0;                   /* 清除外边距 */
 
-  /* 注意:行内元素为了照顾兼容性,尽量只设置左右内外边距,不要设置上下内外边距。但是转换为块级和行内块元素就可以了
-     为了满足等式,只有width  margin-left  margin-right  可以设置 auto
+  /* 注意:行内元素为了照顾兼容性,尽量只设置左右内外边距,不要设置上下内外边距。
+     但是转换为块级和行内块元素就可以了 为了满足等式,只有width  margin-left  margin-right  可以设置 auto
   公式(必须满足其元素内容区的宽度):
   margin-left+border-left+padding-left+width+padding-right+border-right+margin-right = 其元素内容区的宽度 */</code></pre>
-        </div>
       </el-card>
       <el-card id="part11" shadow="hover">
         <h2>清除浮动</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-css line-numbers">  float: left|right;            /* 左浮动 右浮动 */
+        <p>代码</p>
+        <pre><code class="language-css line-numbers">  float: left|right;            /* 左浮动 右浮动 */
   clear: left|right|both;       /* 清除浮动 一般用both */
 
   /* :after 伪元素法,给父级添加clearfix这个类名 */
-    .clearfix:after{  content:"";display: block;height: 0;clear: both;visibility: hidden;}
+    .clearfix:after{ content:"";display: block;height: 0;clear: both;visibility: hidden;}
     .clearfix {*zoom: 1;}       /* *zoom是兼容低版本浏览器 */
 
   /* 双伪元素法 */
@@ -592,7 +569,7 @@
     .clearfix {*zoom: 1;}       /* *zoom是兼容低版本浏览器 */
 
   /* 总结
-    1、额外标签法也称为隔墙法,是W3C推荐的做法。(用伪元素来做),必须用在块元素身上,行内元素不起作用
+    1.额外标签法也称为隔墙法,是W3C推荐的做法。(用伪元素来做),必须用在块元素身上,行内元素不起作用
     2.父级添加overflow属性  hidden(推荐)、auto或scroll
     3.父级添加after伪元素
     4.父级添加双伪元素 */
@@ -608,13 +585,11 @@
       一个盒子里面有多个子盒子,如果其中一个盒子浮动了,那么其他兄弟也应该浮动,以防止引起问题。
       浮动的盒子只会影响浮动盒子后面的标准流,不会影响前面的标准流
     5.双伪元素记得是display: table  table是表格的意思,一行显示,如果值是block,是上下显示,不要混淆了 */</code></pre>
-        </div>
       </el-card>
       <el-card id="part12" shadow="hover">
         <h2>定位</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-css line-numbers">  /* 定位模式决定元素的定位方式,它通过CSS的position属性来设置,其值可以分为四个: */
+        <p>代码</p>
+        <pre><code class="language-css line-numbers">  /* 定位模式决定元素的定位方式,它通过CSS的position属性来设置,其值可以分为四个: */
   position: static;            /* 静态定位 标准文档流,元素的top  bottom  left  right 不会受影响 */
   position: relative;          /* 相对定位元素的定位是相对其正常位置 移动后 位置保留 */
   position: absolute;          /* 绝对定位,子绝父相,就近原则,父元素有相对定位,位置就取决于父亲,没有就到顶级html */
@@ -648,18 +623,18 @@
   }
 
   /* 在移动端,让固定定位的盒子居中对齐用以下代码 */
-    .div {position: fixed;top: 0;}            /* 默认的话就是在中间 */
+  .div {position: fixed;top: 0;}            /* 默认的话就是在中间 */
   /* 保险做法: 先走屏幕的一半,然后自身移动一半   先写兼容老版本的 */
-    .div {position: fixed;top: 0;left: 50%;   /* 先走屏幕的一半 */
-         -webkit-transform: translateX(-50%); /* 先写兼容老版本的 */
-         transform: translateX(-50%);         /* 然后再移动自身的负50% */
-    }
+  .div {position: fixed;top: 0;left: 50%;   /* 先走屏幕的一半 */
+       -webkit-transform: translateX(-50%); /* 先写兼容老版本的 */
+       transform: translateX(-50%);         /* 然后再移动自身的负50% */
+  }
   /* 让绝对定位的盒子居中
     position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -盒子自身的宽一半px;
-    margin-top: -盒子自身的高一半px;
+    margin-top: -盒子自身的高一半px;  */
 
   /* 固定定位小技巧:固定在版心右侧位置。小算法:
     1.让固定定位的盒子left:50%.走到浏览器可视区(也可以看做版心)的一半位置。
@@ -670,37 +645,36 @@
     1.以浏览器的可视窗口为参照点移动元素(固定定位特点)
     2.粘性定位占有原先的位置(相对定位特点)
     3.必须添加top、left、right、bottom其中一个才有效 */</code></pre>
-          <p>层级</p>
-          <ul>
-            <li>z-index: 999;</li>
-            <li>
-              在使用定位布局时,可能会出现盒子重叠的情况。此时,可以使用z-index来控制盒子的前后次序(z轴)
-              <ol>
-                <li>
-                  数值可以是正整数、负整数或0,默认是auto,数值越大,盒子越靠上
-                </li>
-                <li>如果属性值相同,则按照书写顺序,后来居上</li>
-                <li>数字后面不能加单位</li>
-                <li>只有定位的盒子才有z-index属性</li>
-              </ol>
-            </li>
-          </ul>
-          <p>总结</p>
-          <ul>
-            <li>
-              标准流:
-              可以让盒子上下排列或者左右排列,垂直的块级盒子显示就用标准流布局。
-            </li>
-            <li>
-              浮动:
-              可以让多个块级元素一行显示或者左右对齐盒子,多个块级盒子水平显示就用浮动布局。
-            </li>
-            <li>
-              定位:
-              定位最大的特点是有层叠的概念,就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。
-            </li>
-          </ul>
-        </div>
+        <p>层级</p>
+        <ul>
+          <li>z-index: 999;</li>
+          <li>
+            在使用定位布局时,可能会出现盒子重叠的情况。此时,可以使用z-index来控制盒子的前后次序(z轴)
+            <ul>
+              <li>
+                数值可以是正整数、负整数或0,默认是auto,数值越大,盒子越靠上
+              </li>
+              <li>如果属性值相同,则按照书写顺序,后来居上</li>
+              <li>数字后面不能加单位</li>
+              <li>只有定位的盒子才有z-index属性</li>
+            </ul>
+          </li>
+        </ul>
+        <p>总结</p>
+        <ul>
+          <li>
+            标准流:
+            可以让盒子上下排列或者左右排列,垂直的块级盒子显示就用标准流布局。
+          </li>
+          <li>
+            浮动:
+            可以让多个块级元素一行显示或者左右对齐盒子,多个块级盒子水平显示就用浮动布局。
+          </li>
+          <li>
+            定位:
+            定位最大的特点是有层叠的概念,就是可以让多个盒子前后叠压来显示。如果元素自由在某个盒子内移动就用定位布局。
+          </li>
+        </ul>
       </el-card>
       <el-card id="part13" shadow="hover">
         <h2>元素的显示与隐藏</h2>
@@ -1286,32 +1260,32 @@
 </template>
 
 <script setup lang="ts" name="CssPage">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const data = ref([
-  { id: 1, h2: "基本样式" },
-  { id: 2, h2: "技巧" },
-  { id: 3, h2: "Unicode编码字体" },
-  { id: 4, h2: "浏览器中可以看到部分" },
-  { id: 5, h2: "CSS引入方式" },
-  { id: 6, h2: "选择器" },
-  { id: 7, h2: "文字代替" },
-  { id: 8, h2: "行元素、块元素、转换" },
-  { id: 9, h2: "层级" },
-  { id: 10, h2: "盒子模型" },
-  { id: 11, h2: "清除浮动" },
-  { id: 12, h2: "定位" },
-  { id: 13, h2: "元素的显示与隐藏" },
-  { id: 14, h2: "精灵图" },
-  { id: 15, h2: "制作favicon图标" },
-  { id: 16, h2: "字体图标" },
-  { id: 17, h2: "文字溢出 三个点" },
-  { id: 18, h2: "解决图片底部空白缝隙" },
-  { id: 19, h2: "滚动条" },
-  { id: 20, h2: "label 冲突" },
-  { id: 21, h2: "prism主题样式" },
-  { id: 22, h2: "规范" },
-  { id: 23, h2: "seo优化网站TDK标签" },
+  { id: 1, h2: '基本样式' },
+  { id: 2, h2: '技巧' },
+  { id: 3, h2: 'Unicode编码字体' },
+  { id: 4, h2: '浏览器中可以看到部分' },
+  { id: 5, h2: 'CSS引入方式' },
+  { id: 6, h2: '选择器' },
+  { id: 7, h2: '文字代替' },
+  { id: 8, h2: '行元素、块元素、转换' },
+  { id: 9, h2: '层级' },
+  { id: 10, h2: '盒子模型' },
+  { id: 11, h2: '清除浮动' },
+  { id: 12, h2: '定位' },
+  { id: 13, h2: '元素的显示与隐藏' },
+  { id: 14, h2: '精灵图' },
+  { id: 15, h2: '制作favicon图标' },
+  { id: 16, h2: '字体图标' },
+  { id: 17, h2: '文字溢出 三个点' },
+  { id: 18, h2: '解决图片底部空白缝隙' },
+  { id: 19, h2: '滚动条' },
+  { id: 20, h2: 'label 冲突' },
+  { id: 21, h2: 'prism主题样式' },
+  { id: 22, h2: '规范' },
+  { id: 23, h2: 'seo优化网站TDK标签' }
 ]);
 </script>
 

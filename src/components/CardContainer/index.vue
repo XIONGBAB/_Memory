@@ -12,7 +12,6 @@
         <div class="c-card-lef-empty"></div>
       </div>
     </div>
-
     <div class="c-card-anchor" @click="handleClick">
       <el-anchor type="underline" :offset="120">
         <el-anchor-link
@@ -24,14 +23,17 @@
         </el-anchor-link>
       </el-anchor>
     </div>
+    <el-backtop :right="100" :bottom="100">
+      <el-icon><Position /></el-icon>
+    </el-backtop>
   </div>
 </template>
 
 <script setup lang="ts" name="CardContainer">
-import Prism from "prismjs";
-import { onMounted, onUpdated, ref } from "vue";
+import Prism from 'prismjs';
+import { onMounted, onUpdated, ref } from 'vue';
 
-defineProps(["data"]);
+defineProps(['data']);
 
 const containerRef = ref<HTMLElement | null>(null);
 function handleClick(e: MouseEvent) {
@@ -64,7 +66,7 @@ onUpdated(() => {
     position: sticky;
     top: 125px;
     right: 0;
-    max-height: calc(100vh - 100px - 100px);
+    max-height: calc(100vh - 100px - 180px);
     overflow-y: auto;
     scrollbar-width: none;
     transition: all 0.3s ease-in-out;
@@ -116,7 +118,7 @@ onUpdated(() => {
     color: $text-color-h;
     font-family: $font-family;
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;
@@ -140,20 +142,20 @@ onUpdated(() => {
     height: 100%;
     border: 1px solid rgb(90, 90, 90);
     border-collapse: collapse;
-    margin: 0.5333rem 0;
+    margin: 20px 0;
 
     th {
       flex-grow: 1;
       background-color: #474747;
       color: #fff;
       line-height: 2em;
-      padding-left: 0.2667rem;
+      padding-left: 10px;
     }
 
     tr,
     td {
       border: 1px solid #aaa;
-      padding: 0.1333rem 0.2667rem;
+      padding: 5px 10px;
     }
     tr:nth-child(even) {
       background-color: #f5f5f5;
@@ -164,6 +166,17 @@ onUpdated(() => {
   width: 100%;
   height: 60px;
 }
+.el-backtop {
+  transition: all 0.3s ease-in-out;
+  .el-icon {
+    margin-top: 3px;
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    transform: scale(1.2);
+    background: none;
+  }
+}
 
 //code theme
 pre:not(.pre) {
@@ -172,13 +185,13 @@ pre:not(.pre) {
 
   code {
     display: inline-block;
-    padding-bottom: 0.5333rem;
+    padding-bottom: 20px;
     position: relative;
     top: 16px;
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     background: red;
     width: 10px;
@@ -190,7 +203,7 @@ pre:not(.pre) {
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     background: sandybrown;
     width: 10px;
@@ -203,7 +216,7 @@ pre:not(.pre) {
 
   code:first-child {
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       background: limegreen;
       width: 10px;
