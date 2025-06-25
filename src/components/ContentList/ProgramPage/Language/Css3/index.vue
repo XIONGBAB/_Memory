@@ -1057,29 +1057,29 @@
 </template>
 
 <script setup lang="ts" name="Css3Page ">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: 'CSS3 圆角边' },
-  { id: 2, h2: 'CSS3盒子阴影' },
-  { id: 3, h2: 'CSS3文字阴影' },
-  { id: 4, h2: 'CSS3三角' },
-  { id: 5, h2: 'CSS3盒子模型' },
-  { id: 6, h2: 'CSS3函数' },
-  { id: 7, h2: '选择器' },
-  { id: 8, h2: '过渡(重点)' },
-  { id: 9, h2: '转换transform (重点)' },
-  { id: 10, h2: '动画' },
-  { id: 11, h2: '3D' },
-  { id: 12, h2: '透视 perspective' },
-  { id: 13, h2: '背景线性渐变' },
-  { id: 14, h2: 'common.less' },
-  { id: 15, h2: 'swiper插件使用' },
-  { id: 16, h2: '网页一屏一屏滚动' },
-  { id: 17, h2: '图片裁切,保留原始比例' },
-  { id: 18, h2: '移动端vw适配公式' },
-  { id: 19, h2: 'grid布局 (弹性盒模型)' },
-  { id: 20, h2: 'flex布局 (弹性盒模型)' }
+  { id: 1, h2: "CSS3 圆角边" },
+  { id: 2, h2: "CSS3盒子阴影" },
+  { id: 3, h2: "CSS3文字阴影" },
+  { id: 4, h2: "CSS3三角" },
+  { id: 5, h2: "CSS3盒子模型" },
+  { id: 6, h2: "CSS3函数" },
+  { id: 7, h2: "选择器" },
+  { id: 8, h2: "过渡(重点)" },
+  { id: 9, h2: "转换transform (重点)" },
+  { id: 10, h2: "动画" },
+  { id: 11, h2: "3D" },
+  { id: 12, h2: "透视 perspective" },
+  { id: 13, h2: "背景线性渐变" },
+  { id: 14, h2: "common.less" },
+  { id: 15, h2: "swiper插件使用" },
+  { id: 16, h2: "网页一屏一屏滚动" },
+  { id: 17, h2: "图片裁切,保留原始比例" },
+  { id: 18, h2: "移动端vw适配公式" },
+  { id: 19, h2: "grid布局 (弹性盒模型)" },
+  { id: 20, h2: "flex布局 (弹性盒模型)" },
 ]);
 </script>
 

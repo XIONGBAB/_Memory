@@ -158,7 +158,8 @@
         <p>前言</p>
         <ul>
           <li>
-            HTML指的是 超文本标记语言（Hyper Text Markup Language），它是用来描述网页的一种语言。
+            HTML指的是 超文本标记语言（Hyper Text Markup
+            Language），它是用来描述网页的一种语言。
           </li>
           <li>
             国际通用浏览器：
@@ -331,7 +332,12 @@
               <td>UTF-8常用符号</td>
               <td>
                 参考文档
-                <el-link type="primary" icon="Link" target="_blank" href="https://www.runoob.com/charsets/ref-utf-punctuation.html">
+                <el-link
+                  type="primary"
+                  icon="Link"
+                  target="_blank"
+                  href="https://www.runoob.com/charsets/ref-utf-punctuation.html"
+                >
                   https://www.runoob.com/charsets/ref-utf-punctuation.html
                 </el-link>
               </td>
@@ -417,8 +423,14 @@
           <li>
             绝对路径：
             <ul>
-              <li>有一个具体的地址（位置），某个盘某个文件夹某个文件 如：d:/xx/xxxx/xxx.xx</li>
-              <li>本地的绝对路径显示： file://D:/xx/lesson/PHP07/day02/code/01.超链接.html</li>
+              <li>
+                有一个具体的地址（位置），某个盘某个文件夹某个文件
+                如：d:/xx/xxxx/xxx.xx
+              </li>
+              <li>
+                本地的绝对路径显示：
+                file://D:/xx/lesson/PHP07/day02/code/01.超链接.html
+              </li>
               <li>远程的绝对路径： http://www.baidu.com</li>
             </ul>
           </li>
@@ -426,9 +438,18 @@
           <li>
             注意事项：
             <ul>
-              <li>当前文件与目标文件在同一个目录（文件夹）中，直接写文件名就可以了，建议写 ./ (表示当前目录)</li>
-              <li>目标文件所在的文件夹与当前文件同一个目录中，当前文件直接找到文件夹名下再找文件 ./news/01.news.html</li>
-              <li>目标文件在当前的文件的上级，最高3级，上级表示方式：../ (表示当期那目录的上一级目录)</li>
+              <li>
+                当前文件与目标文件在同一个目录（文件夹）中，直接写文件名就可以了，建议写
+                ./ (表示当前目录)
+              </li>
+              <li>
+                目标文件所在的文件夹与当前文件同一个目录中，当前文件直接找到文件夹名下再找文件
+                ./news/01.news.html
+              </li>
+              <li>
+                目标文件在当前的文件的上级，最高3级，上级表示方式：../
+                (表示当期那目录的上一级目录)
+              </li>
             </ul>
           </li>
         </ul>
@@ -485,7 +506,12 @@
         <h2>普通框架(已废弃)</h2>
         <p>
           使用html框架网站：
-          <el-link type="primary" icon="Link" target="_blank" href="https://www.runoob.com/w3cnote/16-best-free-responsive-html5-frameworks.html">
+          <el-link
+            type="primary"
+            icon="Link"
+            target="_blank"
+            href="https://www.runoob.com/w3cnote/16-best-free-responsive-html5-frameworks.html"
+          >
             https://www.runoob.com/w3cnote/16-best-free-responsive-html5-frameworks.html
           </el-link>
         </p>
@@ -644,8 +670,12 @@
             <li>
               简介
               <ul>
-                <li>使用它们可以很方便的在页面中嵌入音频和视频,而不再去使用flash和其他浏览器插件</li>
-                <li>HTML5在不使用插件的情况下,也可以原生的支持音频格式文件的播放,当然,支持的格式是有限的。</li>
+                <li>
+                  使用它们可以很方便的在页面中嵌入音频和视频,而不再去使用flash和其他浏览器插件
+                </li>
+                <li>
+                  HTML5在不使用插件的情况下,也可以原生的支持音频格式文件的播放,当然,支持的格式是有限的。
+                </li>
                 <li>谷歌浏览器把音频和视频自动播放禁止了</li>
               </ul>
             </li>
@@ -653,7 +683,8 @@
               音频标签
               <ul>
                 <li>
-                  语法: 当前元素支持三种音频格式( WAV Ogg MP3 (IE Safari 不支持Ogg , IE 不支持WAV))
+                  语法: 当前元素支持三种音频格式( WAV Ogg MP3 (IE Safari
+                  不支持Ogg , IE 不支持WAV))
                   <pre><code class="language-html line-numbers">  &lt;!-- 语法1： --&gt;
   &lt;audio&gt; src="./videos/v.mp3" controls="controls"&gt;&lt;/audio&gt;
 
@@ -702,7 +733,8 @@
               视频标签
               <ul>
                 <li>
-                  语法: 当前元素支持三种视频格式（WebM Ogg MP4 (尽量使用mp4格式,其它考虑兼容性)）
+                  语法: 当前元素支持三种视频格式（WebM Ogg MP4
+                  (尽量使用mp4格式,其它考虑兼容性)）
                   <pre><code class="language-html line-numbers">  &lt;!-- 语法1： --&gt;
   &lt;video src="./videos/v.mp4" controls="controls"&gt;&lt;/video&gt;
 
@@ -725,7 +757,9 @@
                       <tr>
                         <td>autoplay</td>
                         <td>autoplay</td>
-                        <td>视频就绪自动播放(谷歌浏览器需要添加muted来解决自动播放问题)</td>
+                        <td>
+                          视频就绪自动播放(谷歌浏览器需要添加muted来解决自动播放问题)
+                        </td>
                       </tr>
                       <tr>
                         <td>controls</td>
@@ -750,7 +784,10 @@
                       <tr>
                         <td>preload</td>
                         <td>auto/none</td>
-                        <td>规定是否预加载视频(如果有了autoplay 就忽略该属性,none为不加载)</td>
+                        <td>
+                          规定是否预加载视频(如果有了autoplay
+                          就忽略该属性,none为不加载)
+                        </td>
                       </tr>
                       <tr>
                         <td>src</td>
@@ -841,7 +878,11 @@
                 <tr>
                   <td>autocomplete</td>
                   <td>off/on</td>
-                  <td>当用户在字段开始键入时,浏览器基于之前键入过的值,应该显示出在字段中填写的选项。 默认已经打开,如autocomplete="on",关闭 autocomplete ="off",需要放在表单内,同时加上name属性,同时成功提交</td>
+                  <td>
+                    当用户在字段开始键入时,浏览器基于之前键入过的值,应该显示出在字段中填写的选项。
+                    默认已经打开,如autocomplete="on",关闭 autocomplete
+                    ="off",需要放在表单内,同时加上name属性,同时成功提交
+                  </td>
                 </tr>
                 <tr>
                   <td>multiple</td>
@@ -864,25 +905,45 @@
         <ul>
           <li>
             swiper网站：
-            <el-link type="primary" icon="Link" target="_blank" href="https://www.swiper.com.cn/">
+            <el-link
+              type="primary"
+              icon="Link"
+              target="_blank"
+              href="https://www.swiper.com.cn/"
+            >
               https://www.swiper.com.cn/
             </el-link>
           </li>
           <li>
             lib-flexible.js：
-            <el-link type="primary" icon="Link" target="_blank" href="https://github.com/amfe/lib-flexible">
+            <el-link
+              type="primary"
+              icon="Link"
+              target="_blank"
+              href="https://github.com/amfe/lib-flexible"
+            >
               https://github.com/amfe/lib-flexible
             </el-link>
           </li>
           <li>
             bootstrap：
-            <el-link type="primary" icon="Link" target="_blank" href="https://bootstrap.css88.com/">
+            <el-link
+              type="primary"
+              icon="Link"
+              target="_blank"
+              href="https://bootstrap.css88.com/"
+            >
               https://bootstrap.css88.com/
             </el-link>
           </li>
           <li>
             amazeui：
-            <el-link type="primary" icon="Link" target="_blank" href="amazeui.shopxo.net">
+            <el-link
+              type="primary"
+              icon="Link"
+              target="_blank"
+              href="amazeui.shopxo.net"
+            >
               amazeui.shopxo.net
             </el-link>
           </li>
@@ -997,89 +1058,89 @@
 </template>
 
 <script setup lang="ts" name="DataPage">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
   {
     id: 1,
-    h2: '制作项目步骤'
+    h2: "制作项目步骤",
   },
   {
     id: 2,
-    h2: 'web服务器'
+    h2: "web服务器",
   },
   {
     id: 3,
-    h2: 'HTML'
+    h2: "HTML",
   },
   {
     id: 4,
-    h2: '内核'
+    h2: "内核",
   },
   {
     id: 5,
-    h2: 'Web标准的构成'
+    h2: "Web标准的构成",
   },
   {
     id: 6,
-    h2: 'html的文档结构'
+    h2: "html的文档结构",
   },
   {
     id: 7,
-    h2: '常用标签'
+    h2: "常用标签",
   },
   {
     id: 8,
-    h2: 'img标签'
+    h2: "img标签",
   },
   {
     id: 9,
-    h2: '滚动标记'
+    h2: "滚动标记",
   },
   {
     id: 10,
-    h2: '多媒体标记'
+    h2: "多媒体标记",
   },
   {
     id: 11,
-    h2: '超链接标签与锚点链接'
+    h2: "超链接标签与锚点链接",
   },
   {
     id: 12,
-    h2: '表格'
+    h2: "表格",
   },
   {
     id: 13,
-    h2: '普通框架(已废弃)'
+    h2: "普通框架(已废弃)",
   },
   {
     id: 14,
-    h2: '列表'
+    h2: "列表",
   },
   {
     id: 15,
-    h2: '表单'
+    h2: "表单",
   },
   {
     id: 16,
-    h2: 'HTML5新增语义化标签'
+    h2: "HTML5新增语义化标签",
   },
   {
     id: 17,
-    h2: 'HTML5新增多媒体标签'
+    h2: "HTML5新增多媒体标签",
   },
   {
     id: 18,
-    h2: 'HTML5新增input类型'
+    h2: "HTML5新增input类型",
   },
   {
     id: 19,
-    h2: '插件地址'
+    h2: "插件地址",
   },
   {
     id: 20,
-    h2: '小结'
-  }
+    h2: "小结",
+  },
 ]);
 </script>
 

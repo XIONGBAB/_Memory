@@ -30,10 +30,10 @@
 </template>
 
 <script setup lang="ts" name="CardContainer">
-import Prism from 'prismjs';
-import { onMounted, onUpdated, ref } from 'vue';
+import Prism from "prismjs";
+import { onMounted, onUpdated, ref } from "vue";
 
-defineProps(['data']);
+defineProps(["data"]);
 
 const containerRef = ref<HTMLElement | null>(null);
 function handleClick(e: MouseEvent) {
@@ -118,7 +118,7 @@ onUpdated(() => {
     color: $text-color-h;
     font-family: $font-family;
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;
@@ -191,7 +191,7 @@ pre:not(.pre) {
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     background: red;
     width: 10px;
@@ -203,7 +203,7 @@ pre:not(.pre) {
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background: sandybrown;
     width: 10px;
@@ -216,7 +216,7 @@ pre:not(.pre) {
 
   code:first-child {
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       background: limegreen;
       width: 10px;
