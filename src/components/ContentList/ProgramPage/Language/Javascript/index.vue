@@ -22,7 +22,8 @@
     </template>
     <template #describe>
       <p>
-        JavaScript最初是由Netscape的工程师布兰登·艾奇（Brendan Eich）在1995年设计的，最初命名为LiveScript，但为了利用当时流行的Java语言的市场效应，它被改名为JavaScript。
+        JavaScript最初是由Netscape的工程师布兰登·艾奇（Brendan
+        Eich）在1995年设计的，最初命名为LiveScript，但为了利用当时流行的Java语言的市场效应，它被改名为JavaScript。
       </p>
     </template>
     <template #content>
@@ -131,11 +132,11 @@
                   ---javaScript---
   ECMAScript            DOM                   BOM
   js语法           页面文档对象模型      浏览器对象模型
-          </pre>
+          </pre
+        >
         <ul>
           <li>
-            ECMAScript是由ECMA国际（ECMA（Europe Computer Manufacure
-            Association
+            ECMAScript是由ECMA国际（ECMA（Europe Computer Manufacure Association
             ）原欧洲计算机制造商联盟）进行标准化的一门编程语言，这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMAScript语言的实现和扩展。，使用最多的是ECMAScript5（ES5），最新版本：ES6采用类似强类型。（因为javascript的网景公司捐献出来，由ECMA来统一标准，所以现在遵循的是ECMAS的语法规则，也简称
             ES）ECMAScript:
             ECMAScript规定了JS的编程语法和基础核心知识，是所有浏览器厂商共同遵守的一套JS语法工业标准。
@@ -230,7 +231,8 @@
         <p>字面量和变量</p>
         <ul>
           <li>
-            字面量，都是一些不可改变的值，常亮，比如1 2 3 4 5 6，1不可能变为2，是不可变的
+            字面量，都是一些不可改变的值，常亮，比如1 2 3 4 5
+            6，1不可能变为2，是不可变的
             <ul>
               <li>本质：可以直接使用，但是一般不会直接使用字面量</li>
             </ul>
@@ -261,9 +263,7 @@
           <li>
             赋值 : age = 10 ;
             <ul>
-              <li>
-                =: 用来把右边的值赋给左边的变量空间中，此处代表赋值的意思
-              </li>
+              <li>=: 用来把右边的值赋给左边的变量空间中，此处代表赋值的意思</li>
               <li>10: 变量值是程序员保存到变量空间里的值</li>
             </ul>
           </li>
@@ -354,9 +354,7 @@
             遵守驼峰命名法。首字母小写，后面单词的首字母需要大写。myFirstName
           </li>
           <li>推荐翻译网站：有道 爱词霸</li>
-          <li>
-            允许使用特殊符号开头的 ： $变量名（ $name ） _变量名( _name )
-          </li>
+          <li>允许使用特殊符号开头的 ： $变量名（ $name ） _变量名( _name )</li>
         </ul>
         <p>数据交换</p>
         <pre><code class="language-js line-numbers">  var temp;                 // 先声明一个临时空变量
@@ -417,9 +415,7 @@
       </el-card>
       <el-card id="part3" shadow="hover">
         <h2>数据类型</h2>
-        <p>
-          js的变量数据类型是只有程序在运行过程中，根据等号右边的值来确定的
-        </p>
+        <p>js的变量数据类型是只有程序在运行过程中，根据等号右边的值来确定的</p>
         <ul>
           <li>
             js是动态语言变量的数据类型是可以变化的
@@ -587,8 +583,8 @@
         <ul>
           <li>
             typeof
-            可用来获取检测变量的数据类型，返回的结果是一个字符串。最后一个
-            null 是对象
+            可用来获取检测变量的数据类型，返回的结果是一个字符串。最后一个 null
+            是对象
           </li>
           <li>
             prompt( ); 中取出来的值是字符型
@@ -731,8 +727,7 @@
                     。不是number值的数字会转换为数字，和字符串+则会拼接
                   </li>
                   <li>
-                    运算符 - ： 数字和任何相减，都会被转为数字，与 运算符 +
-                    不同
+                    运算符 - ： 数字和任何相减，都会被转为数字，与 运算符 + 不同
                   </li>
                 </ul>
               </li>
@@ -767,8 +762,7 @@
           <li>一元运算符只需要一个操作数 + - 例如： -1 + 123</li>
           <li>三元运算符需要三个操作数 例如： 1&gt;2 ？1 ：2</li>
           <li>
-            递增和递减运算符：
-            ++在前等于原值，++在后等于新值，说的是表达式的值
+            递增和递减运算符： ++在前等于原值，++在后等于新值，说的是表达式的值
             <pre><code class="language-js line-numbers">  var a = 10;
   console.log(a++);  // a++ = 10   a = a+1
   console.log(a);    // a = 11
@@ -869,7 +863,8 @@
               <li>后置：先原值运算，后自加（先人后己）</li>
               <li>前置：先自加，后运算（先已后人）</li>
               <li>
-                开发时，大多使用后置递增/减，并且代码独占一行，例如：num++; 或者num--;
+                开发时，大多使用后置递增/减，并且代码独占一行，例如：num++;
+                或者num--;
               </li>
             </ul>
           </li>
@@ -889,9 +884,7 @@
         </ul>
         <p>比较运算符</p>
         <ul>
-          <li>
-            比较运算符（关系运算符）是两个数据进行比较时所使用的运算符，
-          </li>
+          <li>比较运算符（关系运算符）是两个数据进行比较时所使用的运算符，</li>
           <li>
             比较运算后，会返回一个布尔值（true/false）作为比较运算的结果。
           </li>
@@ -905,7 +898,8 @@
             编码大小，如果字符串数量不一样，则会一位一位比
           </li>
           <li>
-            例如: “abc” &lt; “b” 此时会第一位相比较，因为没有第二位，如果两侧都有三位，则一位一位比第一位都一样，则比较下一位
+            例如: “abc” &lt; “b”
+            此时会第一位相比较，因为没有第二位，如果两侧都有三位，则一位一位比第一位都一样，则比较下一位
           </li>
           <li>
             小知识
@@ -938,9 +932,7 @@
             *补充
             <ul>
               <li>如果写两个&， && ，左边遇到false就不会执行右边！</li>
-              <li>
-                如果 &写一个，&左边false后，右边还会执行，但依然返回false
-              </li>
+              <li>如果 &写一个，&左边false后，右边还会执行，但依然返回false</li>
             </ul>
           </li>
           <li>
@@ -978,9 +970,7 @@
           <li>
             ！：
             <ul>
-              <li>
-                如果不是true，则结果为false，如果不是false，则结果为true
-              </li>
+              <li>如果不是true，则结果为false，如果不是false，则结果为true</li>
               <li>
                 逻辑非（！）也叫作取反符，用来取一个布尔值相反的值，如true的相反值是false
               </li>
@@ -1122,9 +1112,7 @@
           <li>
             在一个程序执行的过程中，各条代码的执行顺序对程序的结果是有直接影响的。
           </li>
-          <li>
-            很多时候我们要通过控制代码的执行顺序来实现我们要完成的功能。
-          </li>
+          <li>很多时候我们要通过控制代码的执行顺序来实现我们要完成的功能。</li>
           <li>
             简单理解：
             <ul>
@@ -1233,8 +1221,8 @@
               </li>
               <li>
                 如果不写 break;
-                来退出循环语句，则会执行下面的代码。执行完所有没带 break 的
-                case 和最后的 default：
+                来退出循环语句，则会执行下面的代码。执行完所有没带 break 的 case
+                和最后的 default：
               </li>
             </ul>
           </li>
@@ -1422,8 +1410,8 @@
           </li>
           <li>
             如果条件表达式结果为真，则返回 表达式1
-            的值，如果条件表达式为假，则返回 表达式2 的值， 语法结构
-            条件表达式 ？ 表达式1：表达式2
+            的值，如果条件表达式为假，则返回 表达式2 的值， 语法结构 条件表达式
+            ？ 表达式1：表达式2
             <pre><code class="language-js line-numbers">  var num = 10 ;
   var result = num > 5 ? ' true ' : ' false'        // 表达式是有返回值的，所以初始化一个变量接收</code></pre>
           </li>
@@ -1452,9 +1440,7 @@
           <li>
             for循环:
             <ul>
-              <li>
-                for 循环主要用于把某些代码循环若干次，通常跟计数有关系。
-              </li>
+              <li>for 循环主要用于把某些代码循环若干次，通常跟计数有关系。</li>
               <li>
                 初始化变量就是用var声明的一个普通变量，通常用于作为计数器使用
               </li>
@@ -1560,12 +1546,8 @@ for (let i = 100; i &lt;1000; i++) {
                 小结
                 <ul>
                   <li>for 循环可以重复执行某些相同代码</li>
-                  <li>
-                    for 循环可以重复执行些许不同的代码，因为我们有计数器
-                  </li>
-                  <li>
-                    for 循环可以重复执行某些操作，比如算术运算符加法操作
-                  </li>
+                  <li>for 循环可以重复执行些许不同的代码，因为我们有计数器</li>
+                  <li>for 循环可以重复执行某些操作，比如算术运算符加法操作</li>
                   <li>随着需求增加，双重for循环可以做更多、更好看的效果</li>
                   <li>双重for循环，外层循环一次，内层for循环全部执行</li>
                   <li>for 循环是循环条件和数字直接相关的循环</li>
@@ -2028,9 +2010,7 @@ for (let i = 100; i &lt;1000; i++) {
   }
   console.log(sum);</code></pre>
           </li>
-          <li>
-            break 关键字 ,break 关键字用于立即跳出整个循环（循环结束）。
-          </li>
+          <li>break 关键字 ,break 关键字用于立即跳出整个循环（循环结束）。</li>
           <li>
             例如，吃5个包子，吃到第3个发现里面有半个虫子，其余的不吃了，其代码实现如下：
             <pre><code class="language-js line-numbers">  var sum = 0;
@@ -2537,9 +2517,7 @@ for (let i = 100; i &lt;1000; i++) {
                   <li>构造函数： new 构造函数名() new a()</li>
                   <li>绑定事件函数： 点击或者其他操作事件就可以直接调用</li>
                   <li>定时器函数： 定时器自动调用</li>
-                  <li>
-                    立即执行函数： ( function() {} ()) (function(){})();
-                  </li>
+                  <li>立即执行函数： ( function() {} ()) (function(){})();</li>
                 </ul>
               </li>
               <li>
@@ -2558,12 +2536,8 @@ for (let i = 100; i &lt;1000; i++) {
         </ul>
         <p>形参，实参</p>
         <ul>
-          <li>
-            形参： 形式上的参数函数定义的时候传递的参数当前并不知道是什么
-          </li>
-          <li>
-            实参： 实际上的参数函数调用的时候传递的参数实参是传递给形参的
-          </li>
+          <li>形参： 形式上的参数函数定义的时候传递的参数当前并不知道是什么</li>
+          <li>实参： 实际上的参数函数调用的时候传递的参数实参是传递给形参的</li>
           <li>
             参数的作用：在函数内部某些值不能固定，我们可以通过参数在调用函数时传递不同的值进去。
           </li>
@@ -2685,9 +2659,7 @@ for (let i = 100; i &lt;1000; i++) {
             break，continue，return的区别
             <ul>
               <li>break：结束当前的循环体（如for、while）</li>
-              <li>
-                continue：跳出本次循环，继续执行下次循环（如for、while）
-              </li>
+              <li>continue：跳出本次循环，继续执行下次循环（如for、while）</li>
               <li>
                 return：不仅可以退出循环，还能够返回return语句中的值，同时还可以结束当前的函数体内的代码
               </li>
@@ -2954,9 +2926,7 @@ for (let i = 100; i &lt;1000; i++) {
         </ul>
         <p>变量作用域</p>
         <ul>
-          <li>
-            在JavaScript中，根据作用域的不同，变量可以分为两种:全局和局部
-          </li>
+          <li>在JavaScript中，根据作用域的不同，变量可以分为两种:全局和局部</li>
           <li>
             注意：在函数中没有声明的变量也是全局变量！！！
             <ul>
@@ -3005,9 +2975,7 @@ for (let i = 100; i &lt;1000; i++) {
         <ul>
           <li>只要是代码，就至少有一个作用域</li>
           <li>写在函数内部的局部作用域</li>
-          <li>
-            如果函数中还有函数，那么在这个作用域中就又可以诞生一个作用域
-          </li>
+          <li>如果函数中还有函数，那么在这个作用域中就又可以诞生一个作用域</li>
           <li>
             根据在内部函数可以访问外部函数变量的这种机制，用链式查找决定哪些数据能被内部函数访问，
           </li>
@@ -3196,16 +3164,13 @@ for (let i = 100; i &lt;1000; i++) {
   obj1.movie.call(obj2, '3', '北京'); // call 可以改变this的指向，第一个参数需要传一个对象，后面的参数依次传入方法的实参</code></pre>
           </li>
           <li>使用apply() apply(对象，数组实参)</li>
-          <li>
-            使用数学中 Math.max 最大值 和 apply 配合使用寻找数组中最大值
-          </li>
+          <li>使用数学中 Math.max 最大值 和 apply 配合使用寻找数组中最大值</li>
           <li>
             使用bind() bind(对象,实参)()
             <ul>
               <li>bind 可以为新函数绑定this 且不被改变</li>
               <li>
-                bind
-                也可以为新函数绑定实数，且会固定，不可改变，且不影响原函数
+                bind 也可以为新函数绑定实数，且会固定，不可改变，且不影响原函数
               </li>
             </ul>
           </li>
@@ -3673,8 +3638,7 @@ for (let i = 100; i &lt;1000; i++) {
   console.log(result);</code></pre>
           </li>
           <li>
-            *数组的高阶函数 map()
-            用于表示数组里面的数据,根据指定规则的返回数据
+            *数组的高阶函数 map() 用于表示数组里面的数据,根据指定规则的返回数据
             <pre><code class="language-js line-numbers">  let arr = [11, 22, 33, 44, 55, 66, 77, 88, 99, 100, 110];
   1、let result = arr.map(item => item * 2);        // 所有元素都 *2 返回新数组结果
   2、let result = arr.map(item => item % 4);        // 所有元素都取余运算，返回新数组结果
@@ -3863,8 +3827,7 @@ for (let i = 100; i &lt;1000; i++) {
       console.log(sum);</code></pre>
           </li>
           <li>
-            *数组的高阶函数 includes()
-            表示某个数组是否包含给定的值，返回布尔值
+            *数组的高阶函数 includes() 表示某个数组是否包含给定的值，返回布尔值
             <pre><code class="language-js line-numbers">  let arr = [11, 22, 33, 44, 5];
   let a = arr.includes(5);          // true
   let b = arr.includes(510);        // false 因为数组中没有
@@ -3875,8 +3838,8 @@ for (let i = 100; i &lt;1000; i++) {
             *this 指向问题 （一百五十一项有说明）
             <ul>
               <li>
-                函数中，谁调用，this就指向谁，fun1是window的方法，所以this
-                指向 window
+                函数中，谁调用，this就指向谁，fun1是window的方法，所以this 指向
+                window
                 <pre><code class="language-js line-numbers">  // 采用var 关键字声明的变量，都会成为Window对象的属性或者方法
     var a = 'asdasdasdasasasasasasda';
     var b = 20;
@@ -4083,9 +4046,7 @@ for (let i = 100; i &lt;1000; i++) {
               <li>
                 JS中的对象表达结构更清晰，更强大。张三疯的个人信息在对象中的表达结构如下：
                 <ul>
-                  <li>
-                    张三疯.姓名 = '张三疯'； == person.name = ' 张三疯'；
-                  </li>
+                  <li>张三疯.姓名 = '张三疯'； == person.name = ' 张三疯'；</li>
                   <li>张三疯.性别 = '男'； == person.sex = ' 男' ；</li>
                   <li>张三疯.年龄 = 128； == person.age = 128;</li>
                   <li>张三疯.身高 = 154； == person.height = 154;</li>
@@ -4222,8 +4183,7 @@ for (let i = 100; i &lt;1000; i++) {
                 </ul>
               </li>
               <li>
-                使用原型
-                prototype，创建每一个函数时，解析器都会向函数内添加一个
+                使用原型 prototype，创建每一个函数时，解析器都会向函数内添加一个
                 prototype 属性
                 <ul>
                   <li>语法: 函数名.prototype</li>
@@ -4253,9 +4213,7 @@ for (let i = 100; i &lt;1000; i++) {
                   <li>
                     以后在创建构造函数时，可以将这些对象共有的属性和方法，统一添加到构造函数的原型对象中
                   </li>
-                  <li>
-                    这样不用分别为每一个对象添加，也不会影响到全局作用域
-                  </li>
+                  <li>这样不用分别为每一个对象添加，也不会影响到全局作用域</li>
                   <li>语法： 函数名 . prototype . 属性名 = ‘属性值’；</li>
                   <li>
                     prototype（A.prototype是访问构造函数实例的原型）
@@ -4284,8 +4242,7 @@ for (let i = 100; i &lt;1000; i++) {
   Object.hasOwn(a,"name")   // 等同于 </code></pre>
               </li>
               <li>
-                原型对象中还有原型对象, 原型的原型就是直接找到 Object
-                对象的原型
+                原型对象中还有原型对象, 原型的原型就是直接找到 Object 对象的原型
               </li>
               <li>
                 Object 对象的原型没有原型，如果Object中依然没有找到，则会返回
@@ -4497,9 +4454,7 @@ for (let i = 100; i &lt;1000; i++) {
           <li>
             原型对象this的指向
             <ul>
-              <li>
-                构造函数中，this的指向是对象实例，就是创建出来实例化对象
-              </li>
+              <li>构造函数中，this的指向是对象实例，就是创建出来实例化对象</li>
               <li>
                 构造函数原型对象中的this
                 指向的是创建出来的实例对象，谁调用this就指向谁
@@ -4593,8 +4548,7 @@ for (let i = 100; i &lt;1000; i++) {
             对象[变量]，这样可以找到属性值
           </li>
           <li>
-            方法2： Object.keys(obj)
-            循环出对象中所有的属性名，并返回一个新数组
+            方法2： Object.keys(obj) 循环出对象中所有的属性名，并返回一个新数组
             <pre><code class="language-js line-numbers">  let obj1 = {
     name: "张三",
     "age": 20,
@@ -4818,9 +4772,7 @@ for (let i = 100; i &lt;1000; i++) {
           <li>
             构造函数泛指某一大类，比如苹果，不管是红色苹果还是绿色苹果，都统称为苹果。
           </li>
-          <li>
-            对象实例特指一个事物，比如这个苹果、正在给你们讲课的老师等。
-          </li>
+          <li>对象实例特指一个事物，比如这个苹果、正在给你们讲课的老师等。</li>
           <li>for..in 语句用于对对象的属性进行循环操作。</li>
         </ul>
         <p>内置对象</p>
@@ -5671,9 +5623,7 @@ console.log(str.slice(0, 5));
           <li>
             值类型：
             <ul>
-              <li>
-                简单数据类型/基本数据类型，在存储时变量中存储的是值本身，
-              </li>
+              <li>简单数据类型/基本数据类型，在存储时变量中存储的是值本身，</li>
               <li>因此叫做值类型string，number，boolean，undefined，</li>
               <li>null ( typeof(返回的是一个空的对象))</li>
               <li>
@@ -5727,9 +5677,7 @@ console.log(str.slice(0, 5));
           <li>
             值类型变量的数据直接存放在变量（栈空间）中
             <ul>
-              <li>
-                简单数据类型是存放在栈里面里面直接开辟一个空间存放的是值
-              </li>
+              <li>简单数据类型是存放在栈里面里面直接开辟一个空间存放的是值</li>
               <li>
                 复杂数据类型首先在栈里面存放 地址 十六进制表示
                 然后这个地址指向堆里面的数据
@@ -5792,9 +5740,7 @@ console.log(str.slice(0, 5));
               <li>
                 现阶段我们主要针对于浏览器讲解常用的API，主要针对浏览器做交互效果。
               </li>
-              <li>
-                比如我们想要浏览器弹出一个警示框，直接使用alert（‘弹出’）
-              </li>
+              <li>比如我们想要浏览器弹出一个警示框，直接使用alert（‘弹出’）</li>
             </ul>
           </li>
           <li>
@@ -5879,8 +5825,8 @@ console.log(str.slice(0, 5));
                 document对象的原型链，父类的所有方法document对象都能使用（__proto__）
                 <ul>
                   <li>
-                    HTMLDocument ==&gt; Document ==&gt; Node ==&gt;
-                    EventTarget ==&gt; Object.prototype ==&gt; null
+                    HTMLDocument ==&gt; Document ==&gt; Node ==&gt; EventTarget
+                    ==&gt; Object.prototype ==&gt; null
                   </li>
                   <li>
                     查询文档：
@@ -6013,8 +5959,7 @@ console.log(str.slice(0, 5));
             都可以产生某些可以触发JavaScript的事件，例如，我们可以在用户点击某按钮时产生一个事件
           </li>
           <li>
-            事件是由三部分组成 事件源 事件类型 事件处理程序
-            我们也称为事件三要素
+            事件是由三部分组成 事件源 事件类型 事件处理程序 我们也称为事件三要素
             <pre><code class="language-js line-numbers">  // 事件源：事件被触发的对象，谁？ 比如按钮
     var btn = document . getElementById ( ' btn ' ) ;
 
@@ -7058,9 +7003,8 @@ var lis = ul.querySelector('li');
             解决方案：
             <ul>
               <li>
-                实际开发中，firstChild 和 lastChild
-                包含其他节点，操作不方便，而 firstElementChild 和
-                lastElementChi1d
+                实际开发中，firstChild 和 lastChild 包含其他节点，操作不方便，而
+                firstElementChild 和 lastElementChi1d
                 又有兼容性问题，那么我们如何获取第一个子元素节点或最后一个子元素节点呢？
                 <pre><code class="language-js line-numbers">  // 解决方案: 实际开发的写法既没有兼容性问题又返回第一个子元素
   console.log(ul.children[0]);                       // 因为是伪数组，所以想拿第几个 []里写索引号
@@ -7480,8 +7424,7 @@ var lis = ul.querySelector('li');
                 IE9之前的IE不支持此方法，可使用 attachEvent（）代替
               </li>
               <li>
-                特点：同一个元素同一个事件可以注册多个监听器
-                按注册顺序依次执行
+                特点：同一个元素同一个事件可以注册多个监听器 按注册顺序依次执行
               </li>
               <li>
                 监听
@@ -7665,9 +7608,7 @@ var lis = ul.querySelector('li');
               <li>
                 当前目标阶段
                 <ul>
-                  <li>
-                    当找到element div 时发现有绑定事件，此时称为目标阶段
-                  </li>
+                  <li>当找到element div 时发现有绑定事件，此时称为目标阶段</li>
                 </ul>
               </li>
               <li>
@@ -7701,9 +7642,7 @@ var lis = ul.querySelector('li');
                   <li>
                     addEventListener（type，listener[，useCapture]）第三个参数如果是true，表示在事件捕获阶段调用事件处理程序；如果是false（不写默认就是false），表示在事件冒泡阶段调用事件处理程序。
                   </li>
-                  <li>
-                    实际开发中我们很少使用事件捕获，我们更关注事件冒泡。
-                  </li>
+                  <li>实际开发中我们很少使用事件捕获，我们更关注事件冒泡。</li>
                   <li>
                     有些事件是没有冒泡的，比如onblur、onfocus、onmouseenter、onmouseleave
                   </li>
@@ -7720,8 +7659,8 @@ var lis = ul.querySelector('li');
                 document
               </li>
               <li>
-                true 执行顺序 ： document -&gt; html -> body -&gt; father
-                -&gt; son
+                true 执行顺序 ： document -&gt; html -> body -&gt; father -&gt;
+                son
               </li>
             </ul>
           </li>
@@ -7920,8 +7859,8 @@ var lis = ul.querySelector('li');
             <ul>
               <li>标准写法：利用事件对象里面的 el.stopPropagation（）方法</li>
               <li>
-                非标准写法： IE6 - 8 利用事件对象 cancelBubble 属性 cancel
-                取消 Bubble 泡泡 ，取消冒泡
+                非标准写法： IE6 - 8 利用事件对象 cancelBubble 属性 cancel 取消
+                Bubble 泡泡 ，取消冒泡
               </li>
             </ul>
           </li>
@@ -8262,9 +8201,7 @@ var lis = ul.querySelector('li');
             必然影响用户的体验，此时用DOMContentLoaded事件比较合适。
           </li>
           <li>总结</li>
-          <li>
-            load等页面内容全部加载完毕，包含页面dom元素图片flash css等等
-          </li>
+          <li>load等页面内容全部加载完毕，包含页面dom元素图片flash css等等</li>
           <li>
             DOMContentLoaded 是DOM加载完毕，不包含图片flash
             css等就可以执行,加载速度比 load 更快一些
@@ -8295,9 +8232,7 @@ var lis = ul.querySelector('li');
                     setTimeout()
                     方法用于设置一个定时器，该定时器在定时器到期后执行调用函数。
                   </li>
-                  <li>
-                    setTimeout() 这个调用函数我们也称为 回调函数callback
-                  </li>
+                  <li>setTimeout() 这个调用函数我们也称为 回调函数callback</li>
                   <li>
                     因为：普通函数是按照代码顺序直接调用。而这个函数，需要等待时间，
                     时间到了才去调用这个函数，因此称为回调函数。
@@ -8951,8 +8886,7 @@ var lis = ul.querySelector('li');
           </li>
           <li>
             但是火狐中，有个特点，有个往返缓存”，这个缓存中不仅保存着页面数据，还保存了DOM和JavaScript的状态；
-            实际上是将整个页面都保存在了内存里。
-            所以此时后退按钮不能刷新页面。
+            实际上是将整个页面都保存在了内存里。 所以此时后退按钮不能刷新页面。
           </li>
           <li>
             此时可以使用pageshow事件来触发。，这个事件在页面显示时间触发，无论页面是否来自缓存。在重新加载页面中，
@@ -9024,8 +8958,7 @@ var lis = ul.querySelector('li');
               <li>当页面滚动到一定位置，侧边栏改为固定定位</li>
               <li>页面继续滚动，会让返回顶部显示出来</li>
               <li>
-                需要用到页面滚动事件scroll
-                因为是页面滚动，所以事件源是document
+                需要用到页面滚动事件scroll 因为是页面滚动，所以事件源是document
               </li>
               <li>滚动到某个位置，就是判断页面被卷去的上部值。</li>
               <li>
@@ -9463,17 +9396,13 @@ var lis = ul.querySelector('li');
                 鼠标点击，切换（移动）图片
                 ，小圆点也要进行切换，并且点击小圆点可以实现切换效果
               </li>
-              <li>
-                鼠标离开，轮播图会自动播放，鼠标经过，停止轮播，切换手动
-              </li>
+              <li>鼠标离开，轮播图会自动播放，鼠标经过，停止轮播，切换手动</li>
             </ul>
           </li>
           <li>
             分析
             <ul>
-              <li>
-                因为js较多，我们单独新建文件夹，再新建文件，引入页面中。
-              </li>
+              <li>因为js较多，我们单独新建文件夹，再新建文件，引入页面中。</li>
               <li>
                 此时需要添加 load 事件。
                 <pre><code class="language-js line-numbers">  window.addEventListener('load', function() {})</code></pre>
@@ -9499,8 +9428,8 @@ var lis = ul.querySelector('li');
               <li>使用动画函数的前提，该元素必须有定位</li>
               <li>注意是u山移动而不是小li</li>
               <li>
-                滚动图片的核心算法：点击某个小圆圈，就让图片滚动
-                小圆圈的索引号 x 图片的宽度 = ul 移动负值距离
+                滚动图片的核心算法：点击某个小圆圈，就让图片滚动 小圆圈的索引号
+                x 图片的宽度 = ul 移动负值距离
               </li>
               <li>
                 此时需要知道小圆圈的索引号，我们可以在生成小圆圈的时候，给它设置一个自定义属性，点击的时候获取这个自定义属
@@ -9510,8 +9439,7 @@ var lis = ul.querySelector('li');
                 声明一个变量num，点击一次，自增1，让这个变量乘以图片宽度，就是ul的滚动距离。
               </li>
               <li>
-                因为li
-                加了定位，所以脱离文档流，左右箭头层级需要提高（z-index）
+                因为li 加了定位，所以脱离文档流，左右箭头层级需要提高（z-index）
               </li>
               <li>图片无缝滚动原理</li>
               <li>把ul第一个li复制一份，放到ul的最后面</li>
@@ -9764,9 +9692,7 @@ var lis = ul.querySelector('li');
           <li>
             返回顶部
             <ul>
-              <li>
-                Window. scroll (x , y) 要到达网页的坐标， X Y的值不跟单位
-              </li>
+              <li>Window. scroll (x , y) 要到达网页的坐标， X Y的值不跟单位</li>
               <li>带有动画的返回顶部</li>
               <li>此时可以继续使用我们封装的动画函数</li>
               <li>
@@ -9888,9 +9814,7 @@ var lis = ul.querySelector('li');
               <li>
                 移动端拖动的原理：手指移动中，计算出手指移动的距离。然后用盒子原来的位置+手指移动的距离
               </li>
-              <li>
-                手指移动的距离：手指滑动中的位置减去手指刚开始触摸的位置
-              </li>
+              <li>手指移动的距离：手指滑动中的位置减去手指刚开始触摸的位置</li>
             </ul>
             <pre><code class="language-html line-numbers"> /* 拖动元素三步曲：
       触摸元素touchstart：获取手指初始坐标，同时获得盒子原来的位置
@@ -10177,8 +10101,8 @@ var lis = ul.querySelector('li');
         <p>click 延时300mm 解决方案</p>
         <ul>
           <li>
-            动端click事件会有300ms的延时，原因是移动端屏幕双击会缩放（double
-            tap to zoom）页面。
+            动端click事件会有300ms的延时，原因是移动端屏幕双击会缩放（double tap
+            to zoom）页面。
           </li>
           <li>
             解决方案1：
@@ -10237,9 +10161,7 @@ var lis = ul.querySelector('li');
                   https://github.com/ftlabs/fastclick/lib/fastclick.js
                 </el-link>
                 <ul>
-                  <li>
-                    打开网址，进入项目，找到文件，复制里面的封装函数代码
-                  </li>
+                  <li>打开网址，进入项目，找到文件，复制里面的封装函数代码</li>
                   <li>新建fastClick.js文件.粘贴代码</li>
                   <li>引入js 文件，调用</li>
                   <li>
@@ -10341,8 +10263,8 @@ var lis = ul.querySelector('li');
             不懂可以点击 API文档进行swiper查询代码
             <ul>
               <li>
-                &gt; 点击获取Swiper &gt; 下载Swiper &gt; 点击版本自动会下载
-                &gt; 得到swiper-6.6.2
+                &gt; 点击获取Swiper &gt; 下载Swiper &gt; 点击版本自动会下载 &gt;
+                得到swiper-6.6.2
               </li>
               <li>
                 &gt; 解压压缩包 &gt; package &gt; 复制 swiper-bundle.min.js +
@@ -10904,9 +10826,7 @@ var lis = ul.querySelector('li');
               <li>
                 给原型对象添加属性（一般都是方法）
                 <ul>
-                  <li>
-                    作用：函数的所有实例对象自动拥有原型中的属性（方法）
-                  </li>
+                  <li>作用：函数的所有实例对象自动拥有原型中的属性（方法）</li>
                 </ul>
                 <pre><code class="language-js line-numbers">  // 1 、每个函数function都有一个prototype，即显示原型属性，默认只想一个空的Object对象
   console.log ( Fn. prototype)
@@ -11080,9 +11000,8 @@ var lis = ul.querySelector('li');
         <p>解决防盗链OOS</p>
         <ul>
           <li>
-            先说说防盗链的原理，http
-            协议中，如果从一个网页跳到另一个网页，http 头字段里面会带个
-            Referer。这里的Referer是由于历史原因导致了拼写错误
+            先说说防盗链的原理，http 协议中，如果从一个网页跳到另一个网页，http
+            头字段里面会带个 Referer。这里的Referer是由于历史原因导致了拼写错误
             后来也就一直沿用。图片服务器通过检测 Referer
             是否来自规定域名，来进行防盗链。如果盗用网站是 https 的
             protocol，而图片链接是 http 的话，则从 https 向 http
@@ -11103,9 +11022,7 @@ var lis = ul.querySelector('li');
             ECMA （European Computer Manufacturers
             Association）中文名称为欧洲计算机制造商协会，这个组织的目标是评估、开发和认可电信和计算机标准。1994年后该组织改名为Ecma国际。
           </li>
-          <li>
-            ECMAScript 是由Ecma国际通过ECMA-262标准化的脚本程序设计语言。
-          </li>
+          <li>ECMAScript 是由Ecma国际通过ECMA-262标准化的脚本程序设计语言。</li>
           <li>
             ECMA-262历史版本
             <el-link
@@ -11181,8 +11098,8 @@ var lis = ul.querySelector('li');
             值不能修改的量 称之为常量，const
             <ul>
               <li>
-                一定要赋初始值 ，不能 const a; 会报错 // index.html:27
-                Uncaught SyntaxError: Missing initializer in const declaration
+                一定要赋初始值 ，不能 const a; 会报错 // index.html:27 Uncaught
+                SyntaxError: Missing initializer in const declaration
               </li>
               <li>常量使用大写（潜规则） const A = '大写';</li>
               <li>
@@ -11405,9 +11322,7 @@ var lis = ul.querySelector('li');
           <li>
             总结：
             <ul>
-              <li>
-                箭头函数适合与this无关的回调函数，定时器，数组的方法回调
-              </li>
+              <li>箭头函数适合与this无关的回调函数，定时器，数组的方法回调</li>
               <li>箭头函数不适合与 this 有关的回调，事件回调，对象的方法</li>
             </ul>
           </li>
@@ -11457,8 +11372,8 @@ var lis = ul.querySelector('li');
             </ul>
           </li>
           <li>
-            ES6 引入 rest 参数，用于获取函数的实参，用来代替
-            arguments，rest参数 一定要放最后，否则报错
+            ES6 引入 rest 参数，用于获取函数的实参，用来代替 arguments，rest参数
+            一定要放最后，否则报错
             <pre><code class="language-js line-numbers">  function get() {
     console.log(arguments);         // 是以对象方式管理  1，2，3，4，5
   }
@@ -12706,8 +12621,7 @@ var lis = ul.querySelector('li');
         <p>动态import</p>
         <ul>
           <li>
-            import 返回的结果是一个 Promise
-            对象，成功的值就是暴露出来的模块对象
+            import 返回的结果是一个 Promise 对象，成功的值就是暴露出来的模块对象
           </li>
         </ul>
         <p>BigInt</p>
@@ -12989,8 +12903,7 @@ var lis = ul.querySelector('li');
               </li>
               <li>
                 【完整写法】然后就可以通过 echarts.init 方法初始化一个 echarts
-                实例并通过 setOption
-                方法生成一个简单的柱状图，下面是完整代码。
+                实例并通过 setOption 方法生成一个简单的柱状图，下面是完整代码。
                 <pre><code class="language-html line-numbers">  &lt;!DOCTYPE html&gt;
   &lt;html&gt;
     &lt;head&gt;
@@ -13034,8 +12947,7 @@ var lis = ul.querySelector('li');
               </li>
               <li>
                 写script，
-                初始化容器（官网下载模版，复制option配置项），并配置，最后
-                显示
+                初始化容器（官网下载模版，复制option配置项），并配置，最后 显示
               </li>
             </ul>
             <pre><code class="language-html line-numbers">  &lt;!DOCTYPE html&gt;
@@ -13070,31 +12982,31 @@ var lis = ul.querySelector('li');
 </template>
 
 <script setup lang="ts" name="JavascriptPage">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: '前言' },
-  { id: 2, h2: '变量' },
-  { id: 3, h2: '数据类型' },
-  { id: 4, h2: '标识符 关键字 保留字' },
-  { id: 5, h2: '运算符' },
-  { id: 6, h2: '代码块' },
-  { id: 7, h2: '流程控制 -分支' },
-  { id: 8, h2: '循环' },
-  { id: 9, h2: '小结' },
-  { id: 10, h2: '数组' },
-  { id: 11, h2: '函数' },
-  { id: 12, h2: '对象' },
-  { id: 13, h2: '正则表达式' },
-  { id: 14, h2: '其他' },
-  { id: 15, h2: 'DOM' },
-  { id: 16, h2: 'BOM' },
-  { id: 17, h2: '网页效果' },
-  { id: 18, h2: '其他拓展' },
-  { id: 19, h2: '本地存储' },
-  { id: 20, h2: '高级js' },
-  { id: 21, h2: 'ES6' },
-  { id: 22, h2: 'SVG' }
+  { id: 1, h2: "前言" },
+  { id: 2, h2: "变量" },
+  { id: 3, h2: "数据类型" },
+  { id: 4, h2: "标识符 关键字 保留字" },
+  { id: 5, h2: "运算符" },
+  { id: 6, h2: "代码块" },
+  { id: 7, h2: "流程控制 -分支" },
+  { id: 8, h2: "循环" },
+  { id: 9, h2: "小结" },
+  { id: 10, h2: "数组" },
+  { id: 11, h2: "函数" },
+  { id: 12, h2: "对象" },
+  { id: 13, h2: "正则表达式" },
+  { id: 14, h2: "其他" },
+  { id: 15, h2: "DOM" },
+  { id: 16, h2: "BOM" },
+  { id: 17, h2: "网页效果" },
+  { id: 18, h2: "其他拓展" },
+  { id: 19, h2: "本地存储" },
+  { id: 20, h2: "高级js" },
+  { id: 21, h2: "ES6" },
+  { id: 22, h2: "SVG" },
 ]);
 </script>
 
