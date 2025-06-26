@@ -23,17 +23,17 @@
         </el-anchor-link>
       </el-anchor>
     </div>
-    <el-backtop :right="100" :bottom="100">
+    <el-backtop :right="60" :bottom="80">
       <el-icon><Position /></el-icon>
     </el-backtop>
   </div>
 </template>
 
 <script setup lang="ts" name="CardContainer">
-import Prism from "prismjs";
-import { onMounted, onUpdated, ref } from "vue";
+import Prism from 'prismjs';
+import { onMounted, onUpdated, ref } from 'vue';
 
-defineProps(["data"]);
+defineProps(['data']);
 
 const containerRef = ref<HTMLElement | null>(null);
 function handleClick(e: MouseEvent) {
@@ -64,15 +64,17 @@ onUpdated(() => {
     flex: 0 0 220px;
     margin: 0 20px 0 60px;
     position: sticky;
-    top: 125px;
+    top: 140px;
     right: 0;
     max-height: calc(100vh - 100px - 180px);
-    overflow-y: auto;
+    overflow-y: scroll;
     scrollbar-width: none;
     transition: all 0.3s ease-in-out;
     border: 1px solid transparent;
     font-size: 16px;
-    @include ellipsis();
+    .el-anchor__list {
+      @include ellipsis();
+    }
     &:hover {
       scrollbar-width: thin;
     }
@@ -118,7 +120,7 @@ onUpdated(() => {
     color: $text-color-h;
     font-family: $font-family;
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0;
@@ -191,7 +193,7 @@ pre:not(.pre) {
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     background: red;
     width: 10px;
@@ -203,7 +205,7 @@ pre:not(.pre) {
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     background: sandybrown;
     width: 10px;
@@ -216,7 +218,7 @@ pre:not(.pre) {
 
   code:first-child {
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       background: limegreen;
       width: 10px;

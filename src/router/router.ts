@@ -1,161 +1,183 @@
-import type { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw } from 'vue-router';
 
 export const constantRoute: Array<RouteRecordRaw> = [
   {
-    path: "/login",
-    component: () => import("@/views/LoginPage/index.vue"),
-    name: "login",
+    path: '/login',
+    component: () => import('@/views/LoginPage/index.vue'),
+    name: 'login',
     meta: {
-      title: "登录",
-      hidden: true, // hide in the menu
-    },
+      title: '登录',
+      hidden: true // hide in the menu
+    }
   },
   {
-    path: "/404",
-    component: () => import("@/views/ErrorsPage/index.vue"),
-    name: "404",
+    path: '/404',
+    component: () => import('@/views/ErrorsPage/index.vue'),
+    name: '404',
     meta: {
-      title: "404",
-      hidden: true,
-    },
+      title: '404',
+      hidden: true
+    }
   },
   {
-    path: "/:pathMatch(.*)*",
-    redirect: "/404",
-    name: "Any",
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
+    name: 'Any',
     meta: {
-      title: "任意路由",
-      hidden: true,
-    },
+      title: '任意路由',
+      hidden: true
+    }
   },
   {
-    path: "/",
-    component: () => import("@/views/HomePage/index.vue"),
-    name: "homePage",
+    path: '/',
+    component: () => import('@/views/HomePage/index.vue'),
+    name: 'homePage',
     meta: {
-      title: "Home",
-      icon: "HomeFilled",
-      hidden: true,
-    },
+      title: 'Home',
+      icon: 'HomeFilled',
+      hidden: true
+    }
   },
   {
-    path: "/doc",
-    component: () => import("@/views/DocumentPage/index.vue"),
-    redirect: "/data", // redirect to the first child route
+    path: '/doc',
+    component: () => import('@/views/DocumentPage/index.vue'),
+    redirect: '/data', // redirect to the first child route
     children: [
       {
-        path: "/data",
-        component: () => import("@/components/ContentList/DataPage/index.vue"),
-        name: "Data",
+        path: '/data',
+        component: () => import('@/components/ContentList/DataPage/index.vue'),
+        name: 'Data',
         meta: {
-          title: "Data",
-          icon: "Coin",
-        },
-      },
-    ],
+          title: 'Data',
+          icon: 'Coin'
+        }
+      }
+    ]
   },
   {
-    path: "/program",
-    component: () => import("@/views/DocumentPage/index.vue"),
-    name: "Program",
+    path: '/program',
+    component: () => import('@/views/DocumentPage/index.vue'),
+    name: 'Program',
     meta: {
-      title: "Program",
-      icon: "MostlyCloudy",
+      title: 'Program',
+      icon: 'MostlyCloudy'
     },
     children: [
       {
-        path: "/program/html",
+        path: '/program/html',
         component: () =>
           import(
-            "@/components/ContentList/ProgramPage/Language/Html/index.vue"
+            '@/components/ContentList/ProgramPage/Language/Html/index.vue'
           ),
-        name: "Html",
+        name: 'Html',
         meta: {
-          title: "Html",
-        },
+          title: 'Html',
+          icon: 'Tickets'
+        }
       },
       {
-        path: "/program/css",
+        path: '/program/css',
         component: () =>
-          import("@/components/ContentList/ProgramPage/Language/Css/index.vue"),
-        name: "Css",
+          import('@/components/ContentList/ProgramPage/Language/Css/index.vue'),
+        name: 'Css',
         meta: {
-          title: "Css",
-        },
+          title: 'Css',
+          icon: 'Tickets'
+        }
       },
-    ],
+      {
+        path: '/program/css3',
+        component: () =>
+          import('@/components/ContentList/ProgramPage/Language/Css3/index.vue'),
+        name: 'Css3',
+        meta: {
+          title: 'Css3',
+          icon: 'Tickets'
+        }
+      },
+      {
+        path: '/program/javascript',
+        component: () =>
+          import('@/components/ContentList/ProgramPage/Language/Javascript/index.vue'),
+        name: 'Javascript',
+        meta: {
+          title: 'Javascript',
+          icon: 'Tickets'
+        }
+      }
+    ]
   },
   {
-    path: "/design",
-    component: () => import("@/views/DocumentPage/index.vue"),
-    name: "design",
+    path: '/design',
+    component: () => import('@/views/DocumentPage/index.vue'),
+    name: 'design',
     meta: {
-      title: "Design",
-      icon: "EditPen",
+      title: 'Design',
+      icon: 'EditPen'
     },
     children: [
       {
-        path: "/design/vue2",
+        path: '/design/vue2',
         component: () =>
-          import("@/components/ContentList/ProgramPage/Design/Vue2/index.vue"),
-        name: "vue2",
+          import('@/components/ContentList/ProgramPage/Design/Vue2/index.vue'),
+        name: 'vue2',
         meta: {
-          title: "Vue2",
-        },
+          title: 'Vue2'
+        }
       },
       {
-        path: "/design/vue3",
+        path: '/design/vue3',
         component: () =>
-          import("@/components/ContentList/ProgramPage/Design/Vue3/index.vue"),
-        name: "vue3",
+          import('@/components/ContentList/ProgramPage/Design/Vue3/index.vue'),
+        name: 'vue3',
         meta: {
-          title: "Vue3",
-        },
+          title: 'Vue3'
+        }
       },
       {
-        path: "/design/applet",
+        path: '/design/applet',
         component: () =>
           import(
-            "@/components/ContentList/ProgramPage/Design/Applet/index.vue"
+            '@/components/ContentList/ProgramPage/Design/Applet/index.vue'
           ),
-        name: "applet",
+        name: 'applet',
         meta: {
-          title: "Applet",
-        },
-      },
-    ],
+          title: 'Applet'
+        }
+      }
+    ]
   },
   {
-    path: "/frames",
-    component: () => import("@/views/DocumentPage/index.vue"),
-    name: "frames",
+    path: '/frames',
+    component: () => import('@/views/DocumentPage/index.vue'),
+    name: 'frames',
     meta: {
-      title: "Frames",
-      icon: "FullScreen",
-    },
+      title: 'Frames',
+      icon: 'FullScreen'
+    }
   },
   {
-    path: "/service",
-    component: () => import("@/views/DocumentPage/index.vue"),
-    name: "service",
+    path: '/service',
+    component: () => import('@/views/DocumentPage/index.vue'),
+    name: 'service',
     meta: {
-      title: "Service",
-      icon: "Monitor",
-    },
+      title: 'Service',
+      icon: 'Monitor'
+    }
   },
   {
-    path: "/link",
-    component: () => import("@/views/DocumentPage/index.vue"),
+    path: '/link',
+    component: () => import('@/views/DocumentPage/index.vue'),
     children: [
       {
-        path: "/link",
-        name: "Link",
-        component: () => import("@/components/ContentList/LinkPage/index.vue"),
+        path: '/link',
+        name: 'Link',
+        component: () => import('@/components/ContentList/LinkPage/index.vue'),
         meta: {
-          title: "Link",
-          icon: "Link",
-        },
-      },
-    ],
-  },
+          title: 'Link',
+          icon: 'Link'
+        }
+      }
+    ]
+  }
 ];

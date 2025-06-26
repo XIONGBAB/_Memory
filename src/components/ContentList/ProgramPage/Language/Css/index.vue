@@ -506,8 +506,7 @@
 0,0,1,0           类选择器,伪类选择器
 0,1,0,0           ID选择器
 1,0,0,0           行内样式 style=""
-!important        重要的 无穷大</pre
-            >
+!important        重要的 无穷大</pre>
           </li>
         </ul>
       </el-card>
@@ -679,14 +678,12 @@
       </el-card>
       <el-card id="part13" shadow="hover">
         <h2>元素的显示与隐藏</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-css line-numbers">  display: none | block;                        /* 影藏元素后,不再占有原来的位置 */
+        <p>代码</p>
+        <pre><code class="language-css line-numbers">  display: none | block;                        /* 影藏元素后,不再占有原来的位置 */
   visibility: visible | hidden;                 /* 影藏元素后,继续占有原来的位置 */
   overflow: hidden | visible | scroll | auto ;  /* 参数:影藏 | 溢出不剪切也不添加滚动条 | 不管超不超出都显示滚动条 | 自动 */
 
   /* 切记不要在body上加overflow:hidden;这样加上,如果内容超出屏幕会直接裁切掉,导致不出现滑动条 */</code></pre>
-        </div>
       </el-card>
       <el-card id="part14" shadow="hover">
         <h2>精灵图</h2>
@@ -695,7 +692,7 @@
           <ul>
             <li>
               使用精灵图核心总结
-              <ol>
+              <ul>
                 <li>精灵图主要针对于小的背景图片使用。</li>
                 <li>
                   主要借助于背景位置来实现 background-position: -5px -6px 。 //
@@ -704,12 +701,12 @@
                 <li>
                   一般情况下精灵图都是负值。(千万注意网页中的坐标:x轴右边走是正值,左边走是负值,y轴同理。)
                 </li>
-              </ol>
+              </ul>
             </li>
             <li>
               使用方法:
               软件用FW精确测量精灵图的坐标,精灵图坐标不要加逗号,鼠标对着图片上的左上角
-              <ol>
+              <ul>
                 <li>
                   FW打开图片(千万不要移动图片),然后在图层面板,锁住图片,让图片不能移动
                 </li>
@@ -722,7 +719,7 @@
       height: 60px;
       background: url(...) no-repeat -100px 0;
   }</code></pre>
-              </ol>
+              </ul>
             </li>
             <li>用ps工具 F8打开信息 也可以看到xy的坐标</li>
           </ul>
@@ -749,69 +746,66 @@
       </el-card>
       <el-card id="part16" shadow="hover">
         <h2>字体图标</h2>
-        <div class="ls-cot">
-          <p>前言</p>
-          <ul>
-            <li>
-              下载
-              <ol>
-                <li>
-                  icomoon宇库：
-                  <el-link
-                    type="primary"
-                    icon="Link"
-                    target="_blank"
-                    href="http://icomoon.io"
-                  >
-                    http://icomoon.io
-                  </el-link>
-                  国外服务器,打开慢
-                </li>
-                <li>
-                  阿里iconFont字库：
-                  <el-link
-                    type="primary"
-                    icon="Link"
-                    target="_blank"
-                    href="http://www.iconfontcn/"
-                  >
-                    http://www.iconfontcn/
-                  </el-link>
-                  国内免费可制作上传
-                </li>
-                <li>
-                  <el-link
-                    type="primary"
-                    icon="Link"
-                    target="_blank"
-                    href="fontawesome.com"
-                  >
-                    fontawesome.com
-                  </el-link>
-                </li>
-              </ol>
-            </li>
-            <li>
-              引入
-              <ol>
-                <li>把下载包里面的 fonts文件 夹放入页面根目录下</li>
-                <li>
-                  在CSS样式中全局声明字体:简单理解把这些字体文件通过css引入到我们页面中。
-                </li>
-                <li>
-                  引入的时候一定要注意src路径的问题,是否同级./还是上一级../
-                </li>
-                <li>可查看帮助文档</li>
-              </ol>
-            </li>
-          </ul>
-        </div>
+        <p>前言</p>
+        <ul>
+          <li>
+            下载
+            <ul>
+              <li>
+                icomoon宇库：
+                <el-link
+                  type="primary"
+                  icon="Link"
+                  target="_blank"
+                  href="http://icomoon.io"
+                >
+                  http://icomoon.io
+                </el-link>
+                国外服务器,打开慢
+              </li>
+              <li>
+                阿里iconFont字库：
+                <el-link
+                  type="primary"
+                  icon="Link"
+                  target="_blank"
+                  href="http://www.iconfontcn/"
+                >
+                  http://www.iconfontcn/
+                </el-link>
+                国内免费可制作上传
+              </li>
+              <li>
+                <el-link
+                  type="primary"
+                  icon="Link"
+                  target="_blank"
+                  href="fontawesome.com"
+                >
+                  fontawesome.com
+                </el-link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            引入
+            <ul>
+              <li>把下载包里面的 fonts文件 夹放入页面根目录下</li>
+              <li>
+                在CSS样式中全局声明字体:简单理解把这些字体文件通过css引入到我们页面中。
+              </li>
+              <li>
+                引入的时候一定要注意src路径的问题,是否同级./还是上一级../
+              </li>
+              <li>可查看帮助文档</li>
+            </ul>
+          </li>
+        </ul>
       </el-card>
       <el-card id="part17" shadow="hover">
         <h2>文字溢出三个点</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-css line-numbers">  /* 单行文本溢出 */
+        <p>代码</p>
+        <pre><code class="language-css line-numbers">  /* 单行文本溢出 */
   white-space: nowrap;             /* 1.强制一行内显示文本,默认是normal自动 */
   overflow: hidden;                /* 2.溢出的部分影藏 */
   text-overflow: ellipsis;         /* 3.文字用省略号代替超出的部分 */
@@ -822,28 +816,24 @@
   text-overflow: ellipsis;         /* 文字用省略号代替超出的部分 */
   -webkit-box-orient: vertical;    /* 设置或检索伸缩盒子对象的子元素排列方式 */
   -webkit-line-clamp: 2;           /* 限制在一个块元素显示的文本的行数 */</code></pre>
-        </div>
       </el-card>
       <el-card id="part18" shadow="hover">
         <h2>解决图片底部空白缝隙</h2>
-        <div class="ls-cot">
-          <p>
-            bug：图片底侧会有一个空白缝隙,原因是行内块元素会和文字的基线对齐。
-          </p>
-          <ul>
-            <li>
-              解决方法1：给图片添加vertical-align:middle | top |
-              bottom等。(提倡使用的)
-            </li>
-            <li>解决方法2：把图片转换为块级元素 display:block;</li>
-          </ul>
-        </div>
+        <p>
+          bug：图片底侧会有一个空白缝隙,原因是行内块元素会和文字的基线对齐。
+        </p>
+        <ul>
+          <li>
+            解决方法1：给图片添加vertical-align:middle | top |
+            bottom等。(提倡使用的)
+          </li>
+          <li>解决方法2：把图片转换为块级元素 display:block;</li>
+        </ul>
       </el-card>
       <el-card id="part19" shadow="hover">
         <h2>滚动条</h2>
-        <div class="ls-cot">
-          <p>给固定定位的盒子添加滚动条,需要添加一个最大高度和一个Y轴滚动条</p>
-          <pre><code class="language-css line-numbers">  max-height: 100%;                     /* 给个最大高度 */
+        <p>给固定定位的盒子添加滚动条,需要添加一个最大高度和一个Y轴滚动条</p>
+        <pre><code class="language-css line-numbers">  max-height: 100%;                     /* 给个最大高度 */
   overflow-y: scroll;                   /* 添加y轴的滚动条 */
 
   div::-webkit-scrollbar:;              /* 滚动条整体部分,其中的属性: width,height,background,border等 */
@@ -854,17 +844,17 @@
   div::-webkit-scrollbar-corner:;       /* 边角,两个滚动条交汇处 */
   div::-webkit-resizer:;                /* 两个滚动条交汇处用于拖动调整元素大小的小控件(基本用不上) */
 </code></pre>
-          <p>样式1：只有在webkit内核的浏览器才支持修改滚动条</p>
-          <pre><code class="language-css line-numbers">  &::-webkit-scrollbar { width: 10px;}
+        <p>样式1：只有在webkit内核的浏览器才支持修改滚动条</p>
+        <pre><code class="language-css line-numbers">  &::-webkit-scrollbar { width: 10px;}
   &::-webkit-scrollbar-thumb {
       background: linear-gradient(rgb(17, 157, 212), rgb(17, 212, 105)); border-radius: 5px;
       transition: 1s;}
 
   &::-webkit-scrollbar-thumb:hover {
       background: linear-gradient(rgb(17, 212, 105), rgb(17, 157, 212));}</code></pre>
-          <p>样式2</p>
-          <pre><code class="language-css line-numbers">  .beauty-scroll{
-      scrollbar-color:  #1890FF #91D5FF;    /* 第一个方块颜色,第二个轨道颜色(用于更改火狐浏览器样式) */
+        <p>样式2</p>
+        <pre><code class="language-css line-numbers">  .beauty-scroll
+      scrollbar-color: #1890FF #91D5FF; /* 第一个方块颜色,第二个轨道颜色(用于更改火狐浏览器样式) */
       scrollbar-width: thin;                /* 火狐滚动条无法自定义宽度,只能通过此属性使滚动条宽度变细 */
       -ms-overflow-style:none;              /* 隐藏滚动条(在IE和Edge两个浏览器中很难更改样式,固采取隐藏方式) */
 
@@ -878,8 +868,8 @@
           -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
           border-radius: 3px;
           background: #91D5FF;}</code></pre>
-          <p>盒子超出部分溢出自动</p>
-          <pre><code class="language-css line-numbers">  /* 超出内容加滚动条 */
+        <p>盒子超出部分溢出自动</p>
+        <pre><code class="language-css line-numbers">  /* 超出内容加滚动条 */
       div{width: 300px;height: 500px;border: 1px solid red;overflow: scroll;}
   /* 方式一:去除滚动条显示 */
       div::-webkit-scrollbar{display:none}
@@ -889,15 +879,12 @@
       div::-webkit-scrollbar-thumb {border-radius: 5px;background: #cecece;}
   /* 滚动条里面轨道 */
       div::-webkit-scrollbar-track {background: #fff;}</code></pre>
-        </div>
       </el-card>
       <el-card id="part20" shadow="hover">
         <h2>label 冲突</h2>
-        <div class="ls-cot">
-          <p>label 中用了A标签不起作用解决办法</p>
-          <pre><code class="language-html line-numbers">  &lt;!-- 给A标签添加这个样式 ,取消A的行为,否则使用  el:checked ~ .navSecondLabel 点击后不生效 --&gt;
+        <p>label 中用了A标签不起作用解决办法</p>
+        <pre><code class="language-html line-numbers">  &lt;!-- 给A标签添加这个样式 ,取消A的行为,否则使用  el:checked ~ .navSecondLabel 点击后不生效 --&gt;
   &lt;style&gt;.navSubMenuATag { pointer-events: none}&lt;/style&gt;
-
   &lt;li class="secondSubMenuLiTag"&gt;
       &lt;input type="checkbox" name="" id="navSecond1" /&gt;
       &lt;label class="navSecondLabel" for="navSecond1"&gt;
@@ -907,13 +894,11 @@
           &lt;/a&gt;
       &lt;/label&gt;
   &lt;/li&gt;</code></pre>
-        </div>
       </el-card>
       <el-card id="part21" shadow="hover">
         <h2>prism主题样式</h2>
-        <div class="ls-cot">
-          <p>代码</p>
-          <pre><code class="language-html line-numbers">  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" /&gt;
+        <p>代码</p>
+        <pre><code class="language-html line-numbers">  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" /&gt;
   &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-coy.min.css" /&gt;
   &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-dark.min.css" /&gt;
   &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-funky.min.css" /&gt;
@@ -929,99 +914,96 @@
   &lt;script&gt;
       document.addEventListener("DOMContentLoaded", function (event) {Prism.highlightAll();});
   &lt;/script&gt;</code></pre>
-        </div>
       </el-card>
       <el-card id="part22" shadow="hover">
         <h2>规范</h2>
-        <div class="ls-cot">
-          <p>前言</p>
-          <ol>
-            <li>
-              目录命名
-              <ul>
-                <li>项目文件夹:shopping</li>
-                <li>样式文件夹:css</li>
-                <li>脚本文件夹:js</li>
-                <li>样式类图片文件夹:img</li>
-                <li>产品类图片文件夹:upload</li>
-                <li>字体类文件夹:fonts</li>
-              </ul>
-            </li>
-            <li>
-              ClassName命名
-              <ul>
-                <li>
-                  ClassName的命名应该尽量精短、明确,必须以字母开头命名,且全部字母为小写,单词之间统一使用下划线连接nav_top
-                </li>
-                <li>
-                  注意:ad、banner、gg、guanggao等有机会和广告挂勾的不建议直接用来做ClassName,因为有些浏览器插件(Chrome的广告拦截插件等)会直接过滤这些类名
-                </li>
-                <li>另外,敏感不和谐字眼也不应该出现</li>
-                <li>
-                  参考
-                  <ol>
-                    <li>
-                      about关于、 account账户、 arrow箭头图标、 article文章、
-                      aside边栏、 audio音频
-                    </li>
-                    <li>
-                      avatar头像、 bg,background背景、 bar工具栏、 branding品牌
-                      ...
-                    </li>
-                    <li>等等 用英文代替,不懂的用翻译软件</li>
-                  </ol>
-                </li>
-              </ul>
-            </li>
-            <li>
-              用以下来规范类名
-              <ul>
-                <li>快捷导航栏 shortcut</li>
-                <li>头部 header</li>
-                <li>标志 logo</li>
-                <li>购物车 shopcar</li>
-                <li>搜素 search</li>
-                <li>热点词 hotwords</li>
-                <li>导航左侧 dropdown包含dd dt</li>
-                <li>导航右侧 navItems</li>
-                <li>页面底部 footer</li>
-                <li>页面底部服务模块 mod service</li>
-                <li>页面底部帮助模块 mod help</li>
-                <li>页面底部版权模块 mod.copyright</li>
-              </ul>
-            </li>
-            <li>
-              Css书写顺序
-              <ul>
-                <li>
-                  布局定位属性:display/position/float/clear/visibility/overflow(建议display第一个写,毕竟关系到模式)
-                </li>
-                <li>自身属性:width/height/margin/padding/border/background</li>
-                <li>
-                  文本属性:color/font/text-decoration/text-align/vertical-align/white-space/break-word
-                </li>
-                <li>
-                  其他属性(CSS3):content/cursor/border-radius/box-shadow/text-shadow/background:linear-gradient...
-                </li>
-              </ul>
-            </li>
-            <li>
-              创建文件
-              <ul>
-                <li>
-                  index.html 首页、 base.css 初始化样式、 common.css 公共样式
-                  (写首页 列表页 详情页等)
-                </li>
-              </ul>
-            </li>
-          </ol>
-        </div>
+        <p>前言</p>
+        <ul>
+          <li>
+            目录命名
+            <ul>
+              <li>项目文件夹:shopping</li>
+              <li>样式文件夹:css</li>
+              <li>脚本文件夹:js</li>
+              <li>样式类图片文件夹:img</li>
+              <li>产品类图片文件夹:upload</li>
+              <li>字体类文件夹:fonts</li>
+            </ul>
+          </li>
+          <li>
+            ClassName命名
+            <ul>
+              <li>
+                ClassName的命名应该尽量精短、明确,必须以字母开头命名,且全部字母为小写,单词之间统一使用下划线连接nav_top
+              </li>
+              <li>
+                注意:ad、banner、gg、guanggao等有机会和广告挂勾的不建议直接用来做ClassName,因为有些浏览器插件(Chrome的广告拦截插件等)会直接过滤这些类名
+              </li>
+              <li>另外,敏感不和谐字眼也不应该出现</li>
+              <li>
+                参考
+                <ol>
+                  <li>
+                    about关于、 account账户、 arrow箭头图标、 article文章、
+                    aside边栏、 audio音频
+                  </li>
+                  <li>
+                    avatar头像、 bg,background背景、 bar工具栏、 branding品牌
+                    ...
+                  </li>
+                  <li>等等 用英文代替,不懂的用翻译软件</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+          <li>
+            用以下来规范类名
+            <ul>
+              <li>快捷导航栏 shortcut</li>
+              <li>头部 header</li>
+              <li>标志 logo</li>
+              <li>购物车 shopcar</li>
+              <li>搜素 search</li>
+              <li>热点词 hotwords</li>
+              <li>导航左侧 dropdown包含dd dt</li>
+              <li>导航右侧 navItems</li>
+              <li>页面底部 footer</li>
+              <li>页面底部服务模块 mod service</li>
+              <li>页面底部帮助模块 mod help</li>
+              <li>页面底部版权模块 mod.copyright</li>
+            </ul>
+          </li>
+          <li>
+            Css书写顺序
+            <ul>
+              <li>
+                布局定位属性:display/position/float/clear/visibility/overflow(建议display第一个写,毕竟关系到模式)
+              </li>
+              <li>自身属性:width/height/margin/padding/border/background</li>
+              <li>
+                文本属性:color/font/text-decoration/text-align/vertical-align/white-space/break-word
+              </li>
+              <li>
+                其他属性(CSS3):content/cursor/border-radius/box-shadow/text-shadow/background:linear-gradient...
+              </li>
+            </ul>
+          </li>
+          <li>
+            创建文件
+            <ul>
+              <li>
+                index.html 首页、 base.css 初始化样式、 common.css 公共样式
+                (写首页 列表页 详情页等)
+              </li>
+            </ul>
+          </li>
+        </ul>
       </el-card>
       <el-card id="part23" shadow="hover">
         <h2>seo优化网站TDK标签</h2>
         <div class="ls-cot">
           <p>前言</p>
-          <ol>
+          <ul>
             <li>
               作用
               <ul>
@@ -1045,7 +1027,7 @@
               <ul>
                 <li>
                   title网站标题
-                  <ol>
+                  <ul>
                     <li>
                       title具有不可替代性,是我们内页的第一个重要标签,是搜索引擎了解网页的入口和对网页主题归属的最佳判断点。
                     </li>
@@ -1055,11 +1037,11 @@
                     <li>
                       例如:京东JD.COM综合网购首选正品低价、品质保障、配送及时、轻松购物！小米商城一小米5s、红米Note4、小米MIX、小米笔记本官方网站
                     </li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   description网站说明
-                  <ol>
+                  <ul>
                     <li>简要说明我们网站主要是做什么的。</li>
                     <li>
                       我们提倡,description作为网站的总体业务和主题概括,多采用“我们是..”、“我们提供…”、“xxx网作为…”、“电话:010..”之类语句。
@@ -1068,28 +1050,28 @@
                       例如:&lt;meta
                       name="description"content=“京东JD.COM-专业的综合网上购物商城销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务,为您提供愉悦的网上购物体验！"/&gt;
                     </li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   logo标题优化,让搜索引擎更好搜索
                   <pre><code class="language-css line-numbers">  .h2 {
-    text-indent: -999px;                  /* 属性是首行缩进,这里负值是为了隐藏 */
-    overflow: hidden;                     /* 溢出影藏 */
+    text-indent: -999px;                /* 属性是首行缩进,这里负值是为了隐藏 */
+    overflow: hidden;                   /* 溢出影藏 */
   }</code></pre>
                 </li>
                 <li>
                   网站关键词排名的流程
-                  <ol>
+                  <ul>
                     <li>放出蜘蛛 (百度叫蜘蛛,就是代码)</li>
                     <li>蜘蛛来访抓取 数据</li>
                     <li>页面的收录</li>
                     <li>算法计算得分</li>
                     <li>排名</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   网站爬虫的管理规则:如果爬虫到你的网页获取数据,认为对百度没用,就不会浪费资源再来爬取
-                  <ol>
+                  <ul>
                     <li>链接长度 ,长度越长蜘蛛就是少去,不允许出现中文</li>
                     <li>网站识别回访, 打开速度快,识别难度</li>
                     <li>有效收录,有价值</li>
@@ -1097,11 +1079,11 @@
                       爬虫越多,越容易收录,一个页面起码要20-30个链接才是合格的页面
                     </li>
                     <li>访问日志 ,可以百度搜素怎么访问百度爬虫来站日志</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   怎么提高收录
-                  <ol>
+                  <ul>
                     <li>
                       在网站搜索不出来。百度提示:很抱歉,没有找到与" url "
                       相关的网页时,可以点击提交网站给我们
@@ -1119,114 +1101,114 @@
                     </li>
                     <li>站长工具</li>
                     <li>收录越多,排名不一定越大,取决于质量和概率</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>数据来提升权重:大量排名,追求高质量关键词</li>
                 <li>百度运营排名的核心思维:SMP 竞价</li>
                 <li>
                   高级SEO的核心数据计算
-                  <ol>
+                  <ul>
                     <li>展现量</li>
                     <li>点击量</li>
                     <li>点击率 = 点击次数 / 展现量</li>
                     <li>访问量,跳出率 = 访问后立刻关闭 / 访问总人数</li>
                     <li>停留时间:让用户喜欢</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   关键词选择的4大技巧
-                  <ol>
+                  <ul>
                     <li>指数</li>
                     <li>相关结果</li>
                     <li>广告位</li>
                     <li>首页数量</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   网站TDK优化
-                  <ol>
+                  <ul>
                     <li>书写格式: 关键词1-关键词2-关键词3-品牌词 32字符</li>
                     <li>描述: 字符60-80 ,用处,行业优势,包含关键词</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   网站高阶栏目打造： 导航栏
-                  <ol>
+                  <ul>
                     <li>引导用户点击</li>
                     <li>栏目数量不超过9,不少于6,吸引用户点击</li>
                     <li>栏目的顺序</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   利用锚本提升网站的收录
-                  <ol>
+                  <ul>
                     <li>锚本就是可以点击跳转的文字(链接)</li>
                     <li>作用:增加网页点击率,增加用户停留时间</li>
                     <li>
                       增加蜘蛛的爬行率,当爬虫进入网页爬取数据,看到链接会进去再爬取,一层一层
                     </li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   高质量文本的书写要求
-                  <ol>
+                  <ul>
                     <li>文字于链接内容匹配</li>
                     <li>文字最好为排名关键字</li>
                     <li>文本的设置密度不能超过1% 1000数字文章 4个,不能多</li>
                     <li>不能多个链接指向一篇文章 回链</li>
                     <li>站在用户需求(百度检测)</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   网站的文章书写技巧
-                  <ol>
+                  <ul>
                     <li>
                       虽然鼓励原创,但写伪原创更受喜欢,将原创获取进行修改,达到用户需求
                     </li>
                     <li>
                       文章的写作技巧,图文结合 1-3张,字符800字,不能乱写,有效收录
                     </li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   外链算法
-                  <ol>
+                  <ul>
                     <li>别人的网站放置自己的链接</li>
                     <li>文章引用法则</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   外链发布技巧
-                  <ol>
+                  <ul>
                     <li>文字,链接,图片</li>
                     <li>选择高质量外链平台,对链接有文字描速(引导点击)</li>
                     <li>一段文字不要发布多个平台,知乎</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   利用友情链接带动网站数据
-                  <ol>
+                  <ul>
                     <li>30个,同行业或周边</li>
                     <li>权重高,选择优质站点</li>
                     <li>友情链接写在网页最底下,内页和首页换是比较亏的</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   闪电算法:秒排的数据要求
-                  <ol>
+                  <ul>
                     <li>
                       网页打开速度 大于3秒减分,2-3秒不加分不减分 小于2秒 加分
                     </li>
                     <li>css js文件少,图片,文件太大,影响打开速度</li>
                     <li>服务器</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   第一印象规则
-                  <ol>
+                  <ul>
                     <li>发布的时候先优化,再上线</li>
                     <li>域名、服务器</li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   选择一个符合SEO的网站域名:主题 域名好记,关键词,后缀 好记
@@ -1236,7 +1218,7 @@
                 <li>标签的细节优化:标题H标签,关键词</li>
                 <li>
                   nofollow
-                  <ol>
+                  <ul>
                     <li>
                       a 标签 里设置属性 rel="nofollow"
                       标签设置上了之后,爬虫不会爬取
@@ -1245,7 +1227,7 @@
                       不需要的外连接挂上 nofollow , 比如
                       广告,QQ客服链接,其他平台链接
                     </li>
-                  </ol>
+                  </ul>
                 </li>
                 <li>
                   网站图片: alt 属性的优化:对图片做说明,alt 和 title
@@ -1253,7 +1235,7 @@
                 </li>
               </ul>
             </li>
-          </ol>
+          </ul>
         </div>
       </el-card>
     </template>
@@ -1261,32 +1243,32 @@
 </template>
 
 <script setup lang="ts" name="CssPage">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const data = ref([
-  { id: 1, h2: "基本样式" },
-  { id: 2, h2: "技巧" },
-  { id: 3, h2: "Unicode编码字体" },
-  { id: 4, h2: "浏览器中可以看到部分" },
-  { id: 5, h2: "CSS引入方式" },
-  { id: 6, h2: "选择器" },
-  { id: 7, h2: "文字代替" },
-  { id: 8, h2: "行元素、块元素、转换" },
-  { id: 9, h2: "层级" },
-  { id: 10, h2: "盒子模型" },
-  { id: 11, h2: "清除浮动" },
-  { id: 12, h2: "定位" },
-  { id: 13, h2: "元素的显示与隐藏" },
-  { id: 14, h2: "精灵图" },
-  { id: 15, h2: "制作favicon图标" },
-  { id: 16, h2: "字体图标" },
-  { id: 17, h2: "文字溢出 三个点" },
-  { id: 18, h2: "解决图片底部空白缝隙" },
-  { id: 19, h2: "滚动条" },
-  { id: 20, h2: "label 冲突" },
-  { id: 21, h2: "prism主题样式" },
-  { id: 22, h2: "规范" },
-  { id: 23, h2: "seo优化网站TDK标签" },
+  { id: 1, h2: '基本样式' },
+  { id: 2, h2: '技巧' },
+  { id: 3, h2: 'Unicode编码字体' },
+  { id: 4, h2: '浏览器中可以看到部分' },
+  { id: 5, h2: 'CSS引入方式' },
+  { id: 6, h2: '选择器' },
+  { id: 7, h2: '文字代替' },
+  { id: 8, h2: '行元素、块元素、转换' },
+  { id: 9, h2: '层级' },
+  { id: 10, h2: '盒子模型' },
+  { id: 11, h2: '清除浮动' },
+  { id: 12, h2: '定位' },
+  { id: 13, h2: '元素的显示与隐藏' },
+  { id: 14, h2: '精灵图' },
+  { id: 15, h2: '制作favicon图标' },
+  { id: 16, h2: '字体图标' },
+  { id: 17, h2: '文字溢出 三个点' },
+  { id: 18, h2: '解决图片底部空白缝隙' },
+  { id: 19, h2: '滚动条' },
+  { id: 20, h2: 'label 冲突' },
+  { id: 21, h2: 'prism主题样式' },
+  { id: 22, h2: '规范' },
+  { id: 23, h2: 'seo优化网站TDK标签' }
 ]);
 </script>
 
