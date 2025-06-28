@@ -1,9 +1,9 @@
 <template>
-  <card-container title="vue3" :data="data">
+  <card-container :data="data">
     <template #svg>
       <svg
-        width="40"
-        height="40"
+        width="48"
+        height="48"
         t="1699148478737"
         class="icon"
         viewBox="0 0 1024 1024"
@@ -22,6 +22,7 @@
           p-id="6336"
         />
       </svg>
+      <h1>Vue3</h1>
     </template>
     <template #describe>
       <p>
@@ -33,8 +34,7 @@
     </template>
     <template #content>
       <el-card id="part1" shadow="hover">
-        <h2></h2>
-        <div class="ls-cot"></div>
+        <h2><</h2>
       </el-card>
     </template>
   </card-container>

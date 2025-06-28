@@ -69,7 +69,7 @@ export const constantRoute: Array<RouteRecordRaw> = [
           import(
             "@/components/ContentList/ProgramPage/Language/Html/index.vue"
           ),
-        name: "Html",
+        name: "html",
         meta: {
           title: "Html",
           icon: "Tickets",
@@ -79,7 +79,7 @@ export const constantRoute: Array<RouteRecordRaw> = [
         path: "/program/css",
         component: () =>
           import("@/components/ContentList/ProgramPage/Language/Css/index.vue"),
-        name: "Css",
+        name: "css",
         meta: {
           title: "Css",
           icon: "Tickets",
@@ -91,9 +91,21 @@ export const constantRoute: Array<RouteRecordRaw> = [
           import(
             "@/components/ContentList/ProgramPage/Language/Css3/index.vue"
           ),
-        name: "Css3",
+        name: "css3",
         meta: {
           title: "Css3",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/program/jQuery",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Language/JQuery/index.vue"
+          ),
+        name: "jQuery",
+        meta: {
+          title: "JQuery",
           icon: "Tickets",
         },
       },
@@ -103,7 +115,7 @@ export const constantRoute: Array<RouteRecordRaw> = [
           import(
             "@/components/ContentList/ProgramPage/Language/Javascript/index.vue"
           ),
-        name: "Javascript",
+        name: "javascript",
         meta: {
           title: "Javascript",
           icon: "Tickets",
@@ -127,6 +139,7 @@ export const constantRoute: Array<RouteRecordRaw> = [
         name: "vue2",
         meta: {
           title: "Vue2",
+          icon: "Tickets",
         },
       },
       {
@@ -136,6 +149,7 @@ export const constantRoute: Array<RouteRecordRaw> = [
         name: "vue3",
         meta: {
           title: "Vue3",
+          icon: "Tickets",
         },
       },
       {
@@ -147,6 +161,31 @@ export const constantRoute: Array<RouteRecordRaw> = [
         name: "applet",
         meta: {
           title: "Applet",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/design/uni-app",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Design/Uni_app/index.vue"
+          ),
+        name: "uni-app",
+        meta: {
+          title: "Uni-app",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/design/python",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Design/Python/index.vue"
+          ),
+        name: "python",
+        meta: {
+          title: "Python",
+          icon: "Tickets",
         },
       },
     ],
@@ -159,6 +198,54 @@ export const constantRoute: Array<RouteRecordRaw> = [
       title: "Frames",
       icon: "FullScreen",
     },
+    children: [
+      {
+        path: "/frames/frame",
+        component: () =>
+          import("@/components/ContentList/ProgramPage/Frames/Frame/index.vue"),
+        name: "frame",
+        meta: {
+          title: "Frame",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/frames/mobile",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Frames/Mobile/index.vue"
+          ),
+        name: "mobile",
+        meta: {
+          title: "Mobile",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/frames/standard",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Frames/Standard/index.vue"
+          ),
+        name: "standard",
+        meta: {
+          title: "Standard",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/frames/codeEffect",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Frames/CodeEffect/index.vue"
+          ),
+        name: "codeEffect",
+        meta: {
+          title: "CodeEffect",
+          icon: "Tickets",
+        },
+      },
+    ],
   },
   {
     path: "/service",
@@ -168,6 +255,105 @@ export const constantRoute: Array<RouteRecordRaw> = [
       title: "Service",
       icon: "Monitor",
     },
+    children: [
+      {
+        path: "/service/sass",
+        component: () =>
+          import("@/components/ContentList/ProgramPage/Service/Sass/index.vue"),
+        name: "sass",
+        meta: {
+          title: "Sass",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/service/ajax",
+        component: () =>
+          import("@/components/ContentList/ProgramPage/Service/Ajax/index.vue"),
+        name: "ajax",
+        meta: {
+          title: "Ajax",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/service/mysql",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Service/Mysql/index.vue"
+          ),
+        name: "mysql",
+        meta: {
+          title: "Mysql",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/service/regexp",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Service/Regexp/index.vue"
+          ),
+        name: "regexp",
+        meta: {
+          title: "Regexp",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/service/webpack",
+        component: () =>
+          import(
+            "@/components/ContentList/ProgramPage/Service/Webpack/index.vue"
+          ),
+        name: "webpack",
+        meta: {
+          title: "Webpack",
+          icon: "Tickets",
+        },
+      },
+    ],
+  },
+  {
+    path: "/classify",
+    component: () => import("@/views/DocumentPage/index.vue"),
+    name: "classify",
+    meta: {
+      title: "Classify",
+      icon: "Star",
+    },
+    children: [
+      {
+        path: "/classify/plugin",
+        component: () =>
+          import("@/components/ContentList/ClassifyPage/Plugin/index.vue"),
+        name: "plugin",
+        meta: {
+          title: "Plugin",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/classify/system",
+        component: () =>
+          import("@/components/ContentList/ClassifyPage/System/index.vue"),
+        name: "system",
+        meta: {
+          title: "System",
+          icon: "Tickets",
+        },
+      },
+      {
+        path: "/classify/document",
+        component: () =>
+          import("@/components/ContentList/ClassifyPage/Document/index.vue"),
+        name: "document",
+        meta: {
+          title: "Document",
+          icon: "Tickets",
+        },
+      },
+    ],
   },
   {
     path: "/link",

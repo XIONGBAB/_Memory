@@ -1,7 +1,7 @@
 <template>
   <div class="content-nav-bar">
     <div class="nav-list">
-      <div class="nav-list-item">首页</div>
+      <div class="nav-list-item" @click="backHome">首页</div>
       <div class="nav-list-item">组件</div>
       <div class="nav-list-item">资源</div>
     </div>
@@ -41,7 +41,12 @@
 </template>
 
 <script setup lang="ts" name="NavBar">
+import router from "@/router";
+
 const errorHandler = () => true;
+function backHome() {
+  router.push({ path: "/" });
+}
 </script>
 
 <style scoped lang="scss">

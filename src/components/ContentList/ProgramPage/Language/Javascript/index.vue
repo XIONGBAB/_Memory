@@ -1,5 +1,5 @@
 <template>
-  <card-container title="javascript" :data="data">
+  <card-container :data="data">
     <template #svg>
       <svg
         width="48"
@@ -1994,9 +1994,9 @@ for (let i = 100; i &lt;1000; i++) {
             <pre><code class="language-js line-numbers">  // continue关键字退出本次（当前次的循环）继续执行剩余次数循环
   for (var i = 1; i &lt;= 5; i++) {
       if (i == 3) {
-          continue; //只要遇见continue就退出本次循环直接跳到i++
+          continue; // 只要遇见continue就退出本次循环直接跳到i++
       }
-      console.log('我正在吃第' + i + '个包子');        //这里除了3不显示
+      console.log('我正在吃第' + i + '个包子');        // 这里除了3不显示
   }</code></pre>
           </li>
           <li>
@@ -2016,7 +2016,7 @@ for (let i = 100; i &lt;1000; i++) {
             <pre><code class="language-js line-numbers">  var sum = 0;
   for (var i = 1; i &lt;= 100; i++) {
       if (i % 7 == 0) {
-          break;      //只要遇见break 就退出循环
+          break;      // 只要遇见break 就退出循环
       }
       sum = sum + i;
   }
@@ -2091,7 +2091,7 @@ for (let i = 100; i &lt;1000; i++) {
           <li>
             利用 new创建数组
             <pre><code class="language-js line-numbers">  var 数组名 = new Array();
-  var arr = new Array(10,20,30,40); //创建一个新的数组，并传入参数 zzz
+  var arr = new Array(10,20,30,40); // 创建一个新的数组，并传入参数
 
   // 这种方式暂且了解，等学完对象再看。  注意Array(), A要大写
   // 我们数组里面的数据一定用逗号分隔
@@ -2172,7 +2172,7 @@ for (let i = 100; i &lt;1000; i++) {
                 <pre><code class="language-js line-numbers">  var arr = [2, 6, 1, 7, 4]
   var max = arr[0];
   for (var i = 1; i &lt; arr.length; i++) {
-      if (arr[i] > max) {     //相反，取最小值就是  arr[i] &lt; max;
+      if (arr[i] > max) {     // 相反，取最小值就是  arr[i] &lt; max;
           max = arr[i]
       }
   }
@@ -2228,8 +2228,8 @@ for (let i = 100; i &lt;1000; i++) {
   // 循环中的计数器i可以作为数组元素存入。
   var arr = [];
   for (var i = 0; i &lt; 10; i++) {
-      arr[i] = i + 1; //因为是1- 10，所以从1开始，要加1
-      //  arr = i + 1；    //不能写arr =i,这样每次循环都会覆盖数组
+      arr[i] = i + 1;      // 因为是1- 10，所以从1开始，要加1
+      //  arr = i + 1；    // 不能写arr =i,这样每次循环都会覆盖数组
   }
   console.log(arr);
 
@@ -2240,7 +2240,7 @@ for (let i = 100; i &lt;1000; i++) {
       var newArr = [];
       var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
       var max = arr[0];
-      var j = 0; //用来存储数组索引号，当判断的时候，第一个索引是0，判断完j++，索引就是1，以此类推
+      var j = 0;           // 用来存储数组索引号，当判断的时候，第一个索引是0，判断完j++，索引就是1，以此类推
       for (var i = 0; i &lt; arr.length; i++) {
           if (arr[i] > 10) {
               newArr[j] = arr[i];
@@ -2252,10 +2252,10 @@ for (let i = 100; i &lt;1000; i++) {
   // 方法2
       var newArr = [];
       var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
-      //刚开始的newArr.length 的长度是为0
+      // 刚开始的newArr.length 的长度是为0
       for (var i = 0; i &lt; arr.length; i++) {
           if (arr[i] > 10) {
-              //新数组的索引号是从0开始，依次递增，length会自动检测长度
+              // 新数组的索引号是从0开始，依次递增，length会自动检测长度
               newArr[newArr.length] = arr[i];
           }
       }
@@ -2283,12 +2283,12 @@ for (let i = 100; i &lt;1000; i++) {
           <li>
             将数组['red'，'green'，'blue'，'pink'，'purple']的内容反过来存放
             <ul>
-              <li>1、声明一个新数组 newArr</li>
+              <li>声明一个新数组 newArr</li>
               <li>
-                2、把旧数组索引号最后一个取过来（arr.length -
+                把旧数组索引号最后一个取过来（arr.length -
                 1），给新数组索引号第一个元素（newArr.length）
               </li>
-              <li>3、我们采取递减的方式 i --</li>
+              <li>我们采取递减的方式 i --</li>
             </ul>
             <pre><code class="language-js line-numbers">  var newArr = [];
   var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
@@ -2315,9 +2315,9 @@ for (let i = 100; i &lt;1000; i++) {
           <li>
             第四趟交换一次， 5 - 3 - 1=1
             <pre><code class="language-js line-numbers">  var arr = [5, 4, 3, 2, 1];
-  for (var i = 1; i &lt;= arr.length - 1; i++) { // 外层循环管躺数
-      for (var j = 0; j &lt;= arr.length - i - 1; j++) { // 里层循环次数
-          if (arr[j] > arr[j + 1]) {   // 取反的话 就看大于 还是小于
+  for (var i = 1; i &lt;= arr.length - 1; i++) {          // 外层循环管躺数
+      for (var j = 0; j &lt;= arr.length - i - 1; j++) {  // 里层循环次数
+          if (arr[j] > arr[j + 1]) {                      // 取反的话 就看大于 还是小于
               var temp = arr[j];
               arr[j] = arr[j + 1];
               arr[j + 1] = temp;
@@ -2333,9 +2333,9 @@ for (let i = 100; i &lt;1000; i++) {
   for (let i = 0; i &lt; arr.length - 1; i++) {      // 数组长度要减1，有一位被取出来做比较
       // 内层循环，表示参与比较的数组元素
       for (let j = i + 1; j &lt; arr.length; j++) {  // j=j+1 : 当前数需要和下一个数进行比较  所以i+1
-                                                     // 当j=8 时，那么i+1 就是8的下一位 9来进行比较，依次（i++)+1
+                                                  // 当j=8 时，那么i+1 就是8的下一位 9来进行比较，依次（i++)+1
           // 参与比较的数，挨个跟选择的数进行比较
-          if (arr[i] > arr[j]) {                     // 如果选择的那个数 大于了当前数，就进行位置调换 假设9大于8， 那么8排在前面，9就在后面
+          if (arr[i] > arr[j]) {                  // 如果选择的那个数 大于了当前数，就进行位置调换 假设9大于8， 那么8排在前面，9就在后面
               let temp = arr[i];
               arr[i] = arr[j];
               arr[j] = temp;
@@ -2347,11 +2347,11 @@ for (let i = 100; i &lt;1000; i++) {
         </ul>
         <p>数组去重</p>
         <pre><code class="language-js line-numbers">  var arr = [1, 2, 3, 2, 2, 1, 3, 4, 2, 5]; // 去除数组中重复的数字
-  //获取数组中的每一个元素
+  // 获取数组中的每一个元素
   function deleArr() {
       for (var i = 0; i &lt; arr.length; i++) {
           console.log(arr[i]);
-          //获取当前元素后的所有元素。 j=i的话 ,因为i就是第一位，没必要第一位和第一位相比,所以+1
+          // 获取当前元素后的所有元素。 j=i的话 ,因为i就是第一位，没必要第一位和第一位相比,所以+1
           for (var j = i + 1; j &lt; arr.length; j++) {
               // console.log('.........' + arr[j]);
               if (arr[i] == arr[j]) {   // 判断两个元素是否相等
@@ -2409,7 +2409,6 @@ for (let i = 100; i &lt;1000; i++) {
           我们可以在sort()添加一个回调函数，来指定 排序规则
           回调函数中需要定义两个形参，
           浏览器将会分别使用数组中的元素作为实参去调用回调函数使用哪个元素调用不确定， 但是肯定的是在数组中a一定在b前边
-
       浏览器会根据回调函数的返回值来决定元素的顺序
           如果返回一个大于0的值， 则元素会交换位置
           如果返一个小于0的值， 则元素位置不变
@@ -2436,7 +2435,7 @@ for (let i = 100; i &lt;1000; i++) {
   }
   console.log(arr);
 
-  // 案例3：数组练习 --- 双色球  // 随机生成一组双色球号码，存放到数组中
+  // 案例3：数组练习 --- 双色球   随机生成一组双色球号码，存放到数组中
   // 双色球号码的规则是：前六组号码是1-32之间不重复的随机数，第七组号码是1-16之间的随机数
   let arr = [];
   // 循环并生成前六组号码
@@ -2498,7 +2497,7 @@ for (let i = 100; i &lt;1000; i++) {
                 <pre><code class="language-js line-numbers">  const a = function () {     // 不写函数名的函数称为匿名函数,但是可以创建一个变量来接收匿名函数
     alert(' 我是一个匿名函数');
   };
-  a();                      // 调用的时候就可以直接用变量名来调用</code></pre>
+  a();                        // 调用的时候就可以直接用变量名来调用</code></pre>
               </li>
               <li>
                 new Function() 记得要大写 与 new 关键字
@@ -3835,13 +3834,13 @@ for (let i = 100; i &lt;1000; i++) {
   console.log(a);</code></pre>
           </li>
           <li>
-            *this 指向问题 （一百五十一项有说明）
+            *this 指向问题
             <ul>
               <li>
                 函数中，谁调用，this就指向谁，fun1是window的方法，所以this 指向
                 window
                 <pre><code class="language-js line-numbers">  // 采用var 关键字声明的变量，都会成为Window对象的属性或者方法
-    var a = 'asdasdasdasasasasasasda';
+    var a = 'abcdefg';
     var b = 20;
     var fun1 = function () {
         console.log(a, b);
@@ -3856,9 +3855,9 @@ for (let i = 100; i &lt;1000; i++) {
         a: "张三",
         b: 30,
         // zs.fun1 = fun1   就是在zs里面添加了一个fun1方法
-        /*   fun1:function(){
-                console.log(this.a, this.b);
-             }
+        /*  fun1:function(){
+              console.log(this.a, this.b);
+            }
         */
     }
     zs.fun1 = fun1;                         // 将fun1的方法赋值给zs对象，
@@ -4359,10 +4358,10 @@ for (let i = 100; i &lt;1000; i++) {
   console.log(a1);
 
   // 私有属性
-  class Person {         // 创建一个构造函数
-    #name;             // 必须封闭类中声明私有字段“#name”
-    #age;              // 必须封闭类中声明私有字段“#gae”
-    #sex;              // 必须封闭类中声明私有字段“#sex”
+  class Person {             // 创建一个构造函数
+    #name;                   // 必须封闭类中声明私有字段“#name”
+    #age;                    // 必须封闭类中声明私有字段“#gae”
+    #sex;                    // 必须封闭类中声明私有字段“#sex”
     constructor(name, age, sex,money) {
         this.#name = name;   // 私有属性，只能通过方法get获取和方法set设置
         this.#age = age;     // 私有属性
@@ -5313,7 +5312,7 @@ for (let i = 100; i &lt;1000; i++) {
   console.log(str.indexOf('是', 4));     // 11   查找的字符，从第四位开始查找</code></pre>
           </li>
           <li>
-            案例：查找字符串”abcoefoxyozzopp”中所有0出现的位置以及次数
+            案例：查找字符串”abcdefg”中所有0出现的位置以及次数
             <ul>
               <li>核心算法：先查找第一个o出现的位置</li>
               <li>然后只要indexOf返回的结果不是-1就继续往后查找</li>
@@ -5321,7 +5320,7 @@ for (let i = 100; i &lt;1000; i++) {
                 因为indexOf只能查找到第一个，所以后面的查找，利用第二个参数，当前索引加1，从而继续查找
               </li>
             </ul>
-            <pre><code class="language-js line-numbers">  var str = 'abcoefoxyozzopp';
+            <pre><code class="language-js line-numbers">  var str = 'abcdefg';
   var index = str.indexOf('o');
   var res = 0;
   while (index != -1) {
@@ -5353,14 +5352,14 @@ for (let i = 100; i &lt;1000; i++) {
             判断对象里面是否有该属性： 对象[ '属性名' ]
             <ul>
               <li>
-                判断一个字符串abcoefoxyozzopp'中出现次数最多的字符，并统计其次数。
+                判断一个字符串abcdefg'中出现次数最多的字符，并统计其次数。
               </li>
             </ul>
             <pre><code class="language-js line-numbers">  /* 核心算法：
       利用charAt（）遍历这个字符串
       把每个字符都存储给对象，如果对象没有该属性，就为1，如果存在了就+1
       遍历对象，得到最大值和该字符 */
-  var str = 'abcdefgqcfgseaeaa';
+  var str = 'abcdefg';
   var o = {};
   for (var i = 0; i &lt; str.length; i++) {
       var chars = str.charAt(i);      // 是字符串的每一个字符
@@ -5395,7 +5394,7 @@ for (let i = 100; i &lt;1000; i++) {
           </li>
           <li>
             替换字符串 replace（‘被替换的字符’，‘替换为的字符’）
-            <pre><code class="language-js line-numbers">  var str = 'abcdefgqcfgseaeaa';
+            <pre><code class="language-js line-numbers">  var str = 'abcdefg';
   console.log(str.replace('c', 'x'));       // 只会替换第一个满足条件的
   while (str.indexOf('c') != -1) {          // 使用循环，遍历字符串，如果找到不等于 -1
       str = str.replace('c', 'x');          // 则替换
@@ -5404,20 +5403,20 @@ for (let i = 100; i &lt;1000; i++) {
           </li>
           <li>
             把字符串转换成数组 split（'分隔符‘）
-            <pre><code class="language-js line-numbers">  var str = 'abcd,efgqc,fgseae,aa';
+            <pre><code class="language-js line-numbers">  var str = 'abcd,abcdefg,abcdefg,aa';
   console.log(str.split(','));              // 用对应的分隔符来划分数组
-  var str = 'abcd&efgqc&fgseae&aa';
+  var str = 'abcd&abcdefg&abcdefg&aa';
   console.log(str.split('&'));              // 用对应的分隔符来划分数组</code></pre>
           </li>
           <li>
             转换成大写 toUpperCase () ; 和 小写 toLowerCase () ;
-            <pre><code class="language-js line-numbers">  var str = 'abcd,efgqc,fgseae,aa';
+            <pre><code class="language-js line-numbers">  var str = 'abcd,abcdefg,abcdefg,aa';
   console.log(str.toUpperCase());            // 转换成 大写
   console.log(str.toLowerCase());            // 转换成 小写</code></pre>
           </li>
           <li>
             案例
-            <pre><code class="language-js line-numbers">  var str = 'abaasdffggghhjkkgfddsssss3444343';
+            <pre><code class="language-js line-numbers">  var str = 'abcdefg3444343';
 
 // 1、字符串的长度
 console.log(str.length); //32
@@ -5443,7 +5442,7 @@ console.log(str);
 console.log(str.slice(0, 5));
 
 // 6、找出以上字符串中出现次数最多的字符和出现的次数
-  var str = 'abaasdffggghhjkkgfddsssss3444343';
+  var str = 'abcdefg3444343';
   var o = {};
   for (var i = 0; i &lt; str.length; i++) {
       var chars = str.charAt(i);
@@ -5500,7 +5499,6 @@ console.log(str.slice(0, 5));
       </el-card>
       <el-card id="part13" shadow="hover">
         <h2>正则表达式</h2>
-
         <p>前言</p>
         <ul>
           <li>
@@ -5547,8 +5545,8 @@ console.log(str.slice(0, 5));
   [a-z]                       // 查找任何从小写a到小写z的字符。
   [A-Z]                       // 查找任何从大写A至到大写z的字符。
   [A-z]                       // 查找任何从大写A到小写z的字符。
-  [adgk]                      // 查找给定集合内的任何字符。
-  [^adgk]                     // 查找给定集合外的任何字符。
+  [abcd]                      // 查找给定集合内的任何字符。
+  [^abcd]                     // 查找给定集合外的任何字符。
   (red|blue|green)            // 查找任何指定的选项。
 
   \w                          // 匹配字母或数字或下划线或汉字 等价于 '[^A-Za-z0-9_]'。 \W大写就是反过来
@@ -5627,7 +5625,6 @@ console.log(str.slice(0, 5));
               <li>因此叫做值类型string，number，boolean，undefined，</li>
               <li>null ( typeof(返回的是一个空的对象))</li>
               <li>
-                //
                 如果有个变量我们以后打算存储为对象，暂时没想好放啥，这个时候就给null
               </li>
             </ul>
@@ -6083,7 +6080,7 @@ console.log(str.slice(0, 5));
               var Hours = a.getHours();
               var Minutes = a.getMinutes();
               var Seconds = a.getSeconds();
-              return '今天是：' + Year + '年' + Month + '月' + mDate + '日，' + arr[day] + '' + Hours + ':' + Minutes + ':' + Senconds;;
+              return '今天是：' + Year + '年' + Month + '月' + mDate + '日，' + arr[day] + '' + Hours + ':' + Minutes + ':' + Seconds;;
               return
           }
       &lt;script&gt;
@@ -6796,7 +6793,7 @@ console.log(str.slice(0, 5));
               var flag = true; //新建一个存储变量
               // 每次点击下面的复选框都要循环检查4个小按钮是否全被选中
               for (var i = 0; i &lt; j_tbs.length; i++) {
-                  // 判断，取反，如果j_tbs里的复选框没有被选中，那么变量为flase
+                  // 判断，取反，如果j_tbs里的复选框没有被选中，那么变量为false
                   if (!j_tbs[i].checked) {
                       flag = false;
                       break; // 如果有一个没有选中，则退出此循环，提高执行效率
@@ -7008,7 +7005,7 @@ var lis = ul.querySelector('li');
                 又有兼容性问题，那么我们如何获取第一个子元素节点或最后一个子元素节点呢？
                 <pre><code class="language-js line-numbers">  // 解决方案: 实际开发的写法既没有兼容性问题又返回第一个子元素
   console.log(ul.children[0]);                       // 因为是伪数组，所以想拿第几个 []里写索引号
-  console.log(ul.children[ul.children.length - 1]);  // 取最后一个<</code></pre>
+  console.log(ul.children[ul.children.length - 1]);  // 取最后一个</code></pre>
               </li>
               <li>
                 兄弟节点需要自己封装一个兼容性的函数
@@ -7091,7 +7088,7 @@ var lis = ul.querySelector('li');
   /* 删除留言：
       1、当我们把文本域里面的值赋值给li的时候，多添加一个删除的链接
       2、需要把所有的链接获取过来，当我们点击当前的链接的时候，删除当前链接所在的li
-      3、阻止链接跳转需要添加javascrip：tvoid（0）；或者 javascript：； 用后面一个更简单 */
+      3、阻止链接跳转需要添加javascript：void（0）;或者 javascript：; 用后面一个更简单 */
   &lt;textarea&gt; name="" id="" cols="30" rows="10"&gt;&lt;/textarea&gt;
   &lt;button&gt;发布&lt;/button&gt;
   &lt;ul&gt;
@@ -8105,7 +8102,7 @@ var lis = ul.querySelector('li');
     &lt;input type="text" placeholder="请输入您的快递单号" class="jd"&gt;
   &lt;/div&gt;
   &lt;script&gt;
-      // 快递单号输入内容时， 上面的大号字体盒子（con）显示(这里面的字号更大）
+      // 快递单号输入内容时， 上面的大号字体盒子（con）显示（这里面的字号更大）
       // 表单检测用户输入： 给表单添加键盘事件
       // 同时把快递单号里面的值（value）获取过来赋值给 con盒子（innerText）做为内容
       // 如果快递单号里面内容为空，则隐藏大号字体盒子(con)盒子
@@ -8618,7 +8615,6 @@ var lis = ul.querySelector('li');
       </el-card>
       <el-card id="part17" shadow="hover">
         <h2>网页效果</h2>
-
         <p>网页特效 （PC端网页特效 元素偏移量offset系列）</p>
         <ul>
           <li>
@@ -9852,7 +9848,6 @@ var lis = ul.querySelector('li');
       </el-card>
       <el-card id="part18" shadow="hover">
         <h2>其他拓展</h2>
-
         <p>classList 属性</p>
         <ul>
           <li>
@@ -10043,7 +10038,7 @@ var lis = ul.querySelector('li');
                   // 12、 如果小于了50像素，则回弹
                   var translateX = -index * w;
                   ul.style.transition = 'all .3s';                     // 12.2 加上过渡效果
-                  ul.style.transform = 'translateX(' + translatex + 'px)'; // 12.1、加上CSS3移动效果
+                  ul.style.transform = 'translateX(' + translateX + 'px)'; // 12.1、加上CSS3移动效果
               }
               //13、手指离开的时候就重新开启定时器
           }
@@ -10385,7 +10380,6 @@ var lis = ul.querySelector('li');
       </el-card>
       <el-card id="part19" shadow="hover">
         <h2>本地存储</h2>
-
         <p>重点</p>
         <ul>
           <li>
@@ -10526,7 +10520,6 @@ var lis = ul.querySelector('li');
       </el-card>
       <el-card id="part20" shadow="hover">
         <h2>高级js</h2>
-
         <p>前言</p>
         <ul>
           <li>
@@ -10954,9 +10947,6 @@ var lis = ul.querySelector('li');
   redirect();
 </code></pre>
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
         </ul>
         <p>双击禁止选中文字</p>
         <pre><code class="language-js line-numbers">  window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();</code></pre>
@@ -11453,9 +11443,6 @@ var lis = ul.querySelector('li');
   var a = Array.from(obj, item => item * 2);   // 第二个参数是一个回调函数，数组中元素有几个就会调用几次
   console.log(a);                              // [30, 36, 60]</code></pre>
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
         </ul>
         <p>Symbol 基本使用</p>
         <ul>

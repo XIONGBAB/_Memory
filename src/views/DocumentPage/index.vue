@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    1
     <NavBar />
     <AsideMenu />
     <ContentMain />

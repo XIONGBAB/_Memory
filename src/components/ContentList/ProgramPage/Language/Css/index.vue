@@ -1,5 +1,5 @@
 <template>
-  <card-container title="css" :data="data">
+  <card-container :data="data">
     <template #svg>
       <svg
         width="48"

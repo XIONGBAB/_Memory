@@ -73,6 +73,7 @@
         <el-menu
           default-active="/data"
           :collapse="isCollapse"
+          unique-opened
           class="el-menu-vertical-demo aside-menu-collapse"
         >
           <MenuTree :menuList="menuStore.menuRoutes" />
@@ -259,6 +260,7 @@ onMounted(() => {
   }
   :deep(.el-scrollbar__view) {
     height: 100%;
+    overflow-x: hidden;
   }
 }
 .aside-menu-footer {

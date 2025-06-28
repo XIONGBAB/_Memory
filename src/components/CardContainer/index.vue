@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="c-card-anchor" @click="handleClick">
-      <el-anchor type="underline" :offset="120">
+      <el-anchor type="underline" :offset="120" duration="1000">
         <el-anchor-link
           v-for="link in data"
           :key="link.id"

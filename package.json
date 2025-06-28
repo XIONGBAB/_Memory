@@ -33,6 +33,7 @@
     "@types/node": "^24.0.1",
     "@types/nprogress": "^0.2.3",
     "@types/postcss-pxtorem": "^6.1.0",
+    "@types/prismjs": "^1.26.5",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/tsconfig": "^0.7.0",
     "amfe-flexible": "^2.2.1",
