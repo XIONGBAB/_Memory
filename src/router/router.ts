@@ -289,6 +289,16 @@ export const constantRoute: Array<RouteRecordRaw> = [
         },
       },
       {
+        path: "/service/other",
+        component: () =>
+          import("@/components/ContentList/ProgramPage/Other/index.vue"),
+        name: "other",
+        meta: {
+          title: "Other",
+          icon: "Tickets",
+        },
+      },
+      {
         path: "/service/regexp",
         component: () =>
           import(

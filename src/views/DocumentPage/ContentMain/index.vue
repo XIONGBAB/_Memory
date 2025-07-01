@@ -30,7 +30,7 @@ watch(
     setTimeout(() => {
       loading.value = false;
       document.body.style.overflow = "";
-    }, 2000);
+    }, 1500);
   },
 );
 </script>

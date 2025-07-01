@@ -138,6 +138,7 @@ onUpdated(() => {
   }
   ul li {
     margin-top: 6px;
+    text-align: justify;
   }
   table {
     width: 100%;
