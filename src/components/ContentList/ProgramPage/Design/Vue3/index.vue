@@ -86,7 +86,6 @@
               <li>......</li>
             </ul>
           </li>
-          <li></li>
         </ul>
       </el-card>
       <el-card id="part2" shadow="hover">
@@ -157,12 +156,12 @@
               </li>
             </ul>
           </li>
-          <p>Composition API 的优势</p>
-          <ul>
-            <li>
-              可以用函数的方式，更加优雅的组织代码，让相关功能的代码更加有序的组织在一起。
-            </li>
-          </ul>
+        </ul>
+        <p>Composition API 的优势</p>
+        <ul>
+          <li>
+            可以用函数的方式，更加优雅的组织代码，让相关功能的代码更加有序的组织在一起。
+          </li>
         </ul>
         <p>setup 概述</p>
         <ul>
@@ -179,7 +178,7 @@
                 setup函数会在beforeCreate之前调用，它是“领先”所有钩子执行的。
               </li>
             </ul>
-            <pre><code class="language-js line-numbers">  &lt;template&gt;
+            <pre><code class="language-javascript line-numbers">  &lt;template&gt;
     &lt;div class="person"&gt;
       &lt;h2&gt;姓名：｛｛ name ｝｝&lt;/h2&gt;
       &lt;h2&gt;年龄：｛｛ age ｝｝&lt;/h2&gt;
@@ -557,7 +556,7 @@
         <ul>
           <li>作用：监视数据的变化（和Vue2中的watch作用一致）</li>
           <li>
-            - 特点：Vue3中的watch只能监视以下四种数据：
+            特点：Vue3中的watch只能监视以下四种数据：
             <ul>
               <li>1. ref定义的数据。</li>
               <li>2. reactive定义的数据。</li>
@@ -787,7 +786,6 @@
                   <li>
                     watchEffect：不用明确指出监视的数据（函数中用到哪些属性，那就监视哪些属性）。
                   </li>
-                  <li></li>
                 </ul>
               </li>
               <li>示例代码：</li>
@@ -3195,26 +3193,2721 @@
       </el-card>
       <el-card id="part11" shadow="hover">
         <h2>项目配置参数</h2>
+        <p>项目初始化</p>
+        <pre><code class="language-powershell line-numbers">  npm i -g pnpm                // 采用pnpm包管理 如果有全局安装则省略
+  pnpm create vite             // 创建项目
+      > 项目名称
+      > Vue
+      > TypeScript
+  cd 项目名称
+  pnpm install
+  npm run dev
+
+  // 或者采用模版指定命令 快捷
+  pnpm create vite@latest 项目名称 --template vue-ts
+
+  // 新版出现找不到node:path时执行命令行
+  import path from 'path';
+  pnpm install --save-dev @types/node</code></pre>
+        <p>配置package.json</p>
+        <pre><code class="language-js line-numbers">  // 项目运行后自动打开浏览器，无需手动
+  "scripts": {
+      "dev": "vite --open",
+  },
+
+  // 或者 配置 vite.config.ts  二选一，建议配置vite
+  export default defineConfig({
+    plugins: [vue()],
+    server: { open: true, host: '0.0.0.0' }
+  });
+
+  // 2024.10.31配置版本(参考)
+  {
+    "name": "memory","private": true,"version": "0.0.0","type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "vue-tsc -b && vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {"vue": "^3.5.12"},
+    "devDependencies": {
+      "@vitejs/plugin-vue": "^5.1.4",
+      "typescript": "~5.6.2",
+      "vite": "^5.4.9",
+      "vue-tsc": "^2.1.6"
+    }
+  }</code></pre>
+        <p>Eslint新配置</p>
+        <pre><code class="language-js line-numbers">  // Anthony Fu作者通用配置方案
+  // 注意，使用eslint配置后，可以不使用prettier来格式化代码，但是css需要
+
+  ## 项目地址https://github.com/antfu/eslint-config
+  ## 安装anthfu的eslint
+  pnpm i -D eslint @antfu/eslint-config
+
+  ## 添加 package.json
+    "scripts": {
+      "lint": "eslint",
+      "lint:fix": "eslint --fix"
+    }
+
+  ## 创建eslint.config.mjs
+  import antfu from '@antfu/eslint-config'
+  export default antfu()
+
+  ## VS Code 自动修复配置 安装 ESLint 插件，然后在 .vscode/settings.json 添加以下配置：
+    // Disable the default formatter, use eslint instead
+    "prettier.enable": false,         ## 禁用默认格式化程序，使用 ESLint 替代
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {     ## Auto fix 自动修复
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "never"
+    },
+
+  ## 在 IDE 中静默样式规则，但仍然自动修复
+    // Silent the stylistic rules in you IDE, but still auto fix them
+    "eslint.rules.customizations": [
+      { "rule": "style/*", "severity": "off", "fixable": true },
+      { "rule": "format/*", "severity": "off", "fixable": true },
+      { "rule": "*-indent", "severity": "off", "fixable": true },
+      { "rule": "*-spacing", "severity": "off", "fixable": true },
+      { "rule": "*-spaces", "severity": "off", "fixable": true },
+      { "rule": "*-order", "severity": "off", "fixable": true },
+      { "rule": "*-dangle", "severity": "off", "fixable": true },
+      { "rule": "*-newline", "severity": "off", "fixable": true },
+      { "rule": "*quotes", "severity": "off", "fixable": true },
+      { "rule": "*semi", "severity": "off", "fixable": true }
+    ],
+
+  ## 为所有支持的语言启用 ESLint
+   // Enable eslint for all supported languages
+    "eslint.validate": [
+      "javascript","javascriptreact","typescript","typescriptreact","vue",
+      "html","markdown","json","jsonc","yaml","toml","xml","gql","graphql",
+      "astro","svelte","css","less","scss","pcss","postcss"
+    ]
+
+  ## 执行命令 检查 和 修复
+  pnpm run lint
+  pnpm run lint:fix
+
+  ## 在使用ts校验忽略的时候需要加上注解就不会报错了
+  // @ts-expect-error
+
+  ## 后语法，可以转化
+  to-function：将箭头函数转换为普通函数
+  to-arrow：将普通函数转换为箭头函数
+  to-for-each：将 for-in/for-of 循环转换为 .forEach（）
+  to-for-of：将 .forEach（） 转换为 for-of 循环
+  keep-sorted： 对对象/数组/接口进行排序
+
+  ## 配置完ctrl + shift + p 重置下
+  &gt; ESLint:Restart Eslint Server
+
+  ## 只需运行以下命令，即可快速查看当前项目中启用的规则,会生成一个窗口看自己的配置
+  ## 里面可以选择以及配置需要的参数
+  npx @eslint/config-inspector
+
+  ############################################
+  ## 以上代码已经可以正常使用，以下代码是定制代码 ##
+  ############################################
+
+  ##  导入 Antfu 的 ESLint 配置 eslint.config.mjs
+  // 导出配置对象，通过 antfu() 函数生成最终配置
+  import antfu from '@antfu/eslint-config';
+  export default antfu(
+    {
+      // 配置需要忽略的文件和目录
+      ignores: [
+        '.vscode',               // 忽略 VS Code 配置目录
+        '**/.vscode/**',         // 递归忽略所有 .vscode 目录下的文件
+        'build/*.js',            // 忽略 build 目录下的所有 JS 文件
+        'build/*.js/**',         // 递归忽略 build 目录下 JS 文件的子目录
+        'src/assets',            // 忽略 src/assets 目录
+        'src/assets/**',         // 递归忽略 src/assets 目录下的所有文件
+        'public',                // 忽略 public 目录
+        '**/public/**',          // 递归忽略所有 public 目录下的文件
+        'dist',                  // 忽略打包输出目录
+        '**/dist/**',            // 递归忽略所有 dist 目录下的文件
+        'node_modules',          // 忽略依赖包目录
+        '**/node_modules/**',    // 递归忽略所有 node_modules 目录下的文件
+        'pnpm-lock.yaml',        // 忽略 pnpm 锁文件
+        '**/pnpm-lock.yaml/**',  // 递归忽略所有 pnpm-lock.yaml 目录下的文件
+        '**/*.d.ts'              // 忽略所有类型声明文件
+      ],
+      // 启用代码格式化（在eslint处理不了情况下如 Prettier来处理）
+      formatters: { css: true, html: true },
+      // 启用 Vue 支持
+      vue: true,
+      // 启用 TypeScript 支持
+      typescript: true,
+      // 代码风格配置
+      stylistic: {
+        indent: 2,              // 使用 2 个空格缩进（可选值：4 或 'tab'）
+        quotes: 'single',       // 使用单引号（可选值：'double'）
+        semi: true              // 强制使用分号结尾（可选值：false）
+      },
+      // 自定义 ESLint 规则
+      rules: {
+        'no-unused-vars': 'error',  // 未使用的变量视为错误
+        'no-undef': 'off',          // 关闭未定义变量检查（通常由 TypeScript 处理）
+        'no-console': 'warn',       // 生产环境中警告 console 语句
+        'antfu/if-newline': 'off',  // 关闭 Antfu 自定义的 if 语句换行规则
+        'style/comma-dangle': ['error', 'never'],  // 禁止尾随逗号
+        'vue/attribute-hyphenation': 'off',  // 禁用连字符修改传参
+        'vue/max-attributes-per-line': ['error', {  // 强制每行最大属性数
+          singleline: {   // 单行情况下最大10个属性
+            max: 5
+          },
+          multiline: {    // 多行情况下每行最大10个属性
+            max: 5
+          }
+        }],
+        'vue/block-order': ['error', { // 标签的排序问题
+          order: ['docs', 'template', 'script', 'style']
+        }],
+        'vue/html-self-closing': ['error', {  // 标签自闭合  div svg 组件等
+          html: {
+            normal: 'never',
+            void: 'always',
+            component: 'always'
+          },
+          svg: 'always',
+          math: 'always'
+        }],
+        // 可以处理html标签内容换行问题，忽略div
+        'vue/singleline-html-element-content-newline': ['error',
+          {
+            externalIgnores: ['div,span'],
+          }
+        ]
+      }
+    }
+  );
+
+  ## 注意，顶级的箭头函数会强制转换成用函数关键字声明
+  ## 当变量被分配类型时，规则将忽略它。
+  interface MyFunction {(...args: any[]): any;}
+  const onSearch: MyFunction = (v: string | number) => {
+    console.log('====search', v);
+  };
+  ## 这样就不会被强制转成这种了
+  function onSearch(v: string | number) {
+    console.log('====search', v);
+  }
+
+        </code></pre>
+        <p>vite插件配置组件name</p>
+        <pre><code class="language-js line-numbers">  // 1. 代码中，需要编写一个不写setup的script标签，去指定组件名字，比较麻烦，我们可以借助vite中的插件简化
+  // 2. 第一步：pnpm i vite-plugin-vue-setup-extend -D
+  // 3. 第二步：vite.config.ts
+  import VueSetupExtend from 'vite-plugin-vue-setup-extend'
+  export default defineConfig({
+    plugins: [ VueSetupExtend() ]
+  })
+
+  // 4. 第三步：&lt;script setup lang="ts" name="Person"&gt;&lt;/script&gt;
+
+  // 5. Vite组件名自动注册插件 (未测试)
+  import { defineConfig } from 'vite'
+  import vue from '@vitejs/plugin-vue'
+  export default defineConfig({
+    plugins: [
+      vue({
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => tag.startsWith('swiper-')
+          }
+        }
+      })
+    ]
+  })</code></pre>
+        <p>配置 stylelint </p>
+        <pre><code class="language-js line-numbers">  // 不推荐但适合不喜欢用原子化的人可以配置 (因为没必要使用，自己书写正确，浪费资源，采用原子化css)
+  // 1. 老配置 需要安装prettier插件
+  // 2. stylelint为css的lint工具。可格式化css代码，检査css语法错误与不合理的写法，指定css书写顺序等。
+  // 3. 官网:https://stylelint.bootcss.com/
+  // 4. 安装
+  ## 旧版本
+  pnpm add sass sass-loader stylelint postcss postcss-scss postcss-html stylelint-config-prettier stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-standard stylelint-config-standard-vue stylelint-scss stylelint-order stylelint-config-standard-scss -D
+
+  ## 2025.06.10 优化  (推荐)
+  pnpm add -D stylelint postcss postcss-scss postcss-html stylelint-config-standard-scss stylelint-order stylelint-config-recommended-vue postcss-html postcss-scss stylelint-config-recess-order stylelint-config-prettier stylelint-config-standard
+  ## 安装prettier
+  pnpm add -D prettier
+
+  // 5. 创建.stylelintrc.cjs配置文件  官网 @see https://stylelint.bootcss.com/
+  module.exports = {
+    extends: [
+     'stylelint-config-standard', // 配置stylelint拓展插件
+     'stylelint-config-html/vue', // 配置 vue 中 template 样式格式化
+     'stylelint-config-standard-scss', // 配置stylelint scss插件
+     'stylelint-config-recommended-vue/scss', // 配置vue中 scss 样式格式化
+     'stylelint-config-recess-order', // 配置stylelint css属性书写顺序插件,
+     'stylelint-config-prettier', // 配置stylelint和prettier兼容
+    ],
+    overrides: [
+      {files: ['**/*.(scss|css|vue|html)'],customSyntax: 'postcss-scss',},
+      {files: ['**/*.(html|vue)'],customSyntax: 'postcss-html',},
+    ],
+    ignoreFiles: ['**/*.js','**/*.jsx','**/*.tsx','**/*.ts','**/*.json','**/*.md','**/*.yaml',],
+    /**
+     * null  => 关闭该规则
+     * always => 必须
+     */
+    rules: {
+      'value-keyword-case': null, // 在 css 中使用 v-bind，不报错
+      // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器
+      'no-descending-specificity': null,
+      // 要求或禁止 URL 的引号 "always(必须加上引号)"|"never(没有引号)"
+      'function-url-quotes': 'always',
+      'no-empty-source': null, // 关闭禁止空源码
+      'selector-class-pattern': null, // 关闭强制选择器类名的格式
+      'property-no-unknown': null, // 禁止未知的属性(true 为不允许)
+      //大括号之前必须有一个空格或不能有空白符
+      'block-opening-brace-space-before': 'always',
+      'value-no-vendor-prefix': null, // 关闭 属性值前缀 --webkit-box
+      'property-no-vendor-prefix': null, // 关闭 属性前缀 -webkit-mask
+      'selector-pseudo-class-no-unknown': [  // 不允许未知的选择器
+        true,
+        { // 忽略属性，修改element默认样式的时候能使用到
+          ignorePseudoClasses: ['global', 'v-deep', 'deep'],
+        },
+      ],
+    },
+  }
+
+  // 6. 创建.stylelintignore忽略文件
+  /node_modules/*
+  /dist/*
+  /html/*
+  /public/*
+  /vite.config.ts
+  /tsconfig.json
+  /tsconfig.app.json
+  /tsconfig.node.json
+  /README.md
+  /.prettierrc.json
+  /package.json
+  /README.md
+  /vite-env.d.ts
+
+  /.github/*
+  /.vscode/*
+  *.config.*
+
+  // 7. 运行脚本
+  "scripts": {
+    "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
+    "lint:eslint": "eslint src/**/*.{ts,vue} --cache --fix",
+    "lint:style": "stylelint src/**/*.{css,scss,vue} --cache --fix"
+  },
+
+  // 8. 当我们运行的时候，会把代码直接格式化
+  ##  最后需要执行
+  pnpm run lint:style
+  pnpm run lint:eslint
+  pnpm run format
+
+  // 9. 警告：Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+  /* 原因是 sass提供的某些 js api 即将在 v2.0.0 的新版本中废弃了，提醒你及时更新
+  解决办法：
+  1、降级sass到1.32.13
+  pnpm uninstall sass -D
+  pnpm install sass@1.78 -D
+  2、在vite.config.ts 中关闭警告
+  export default defineConfig({
+    css:{
+      preprocessorOptions:{
+        scss:{
+          // quietDeps:true  此方法在高版本中不起作用
+          silenceDeprecations:['legacy-js-api'],
+        }
+      }
+    }
+  })
+  3.解决办法(实测降级最为有效)
+  css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler', // or 'modern
+        },
+      },
+  },  */</code></pre>
+        <p>配置husky</p>
+        <pre><code class="language-js line-numbers">  /* 1. 项目已经集成好了代码校验工具，但需要每次手动的去执行命令才会格式化代码。
+  如果有人没有格式化就提交了远程仓库中，那这个规范就没什么用。
+  所以我们需要强制让开发人员按照代码规范来提交。要做到这件事情，
+  就需要利用husky在代码提交之前触发git hook(git在客户端的钩子)，
+  然后执行pnpm run format 来自动的格式化我们的代码。 */
+
+  // 2. 安装husky
+  pnpm install -D husky
+  // 3. 先要初始化git 仓库，后执行
+  npx husky-init
+  // 4. 在.husky/pre-commit文件添加如下命令：
+  #!/usr/bin/env sh
+  . "$(dirname -- "$0")/_/husky.sh"
+
+  pnpm run format                       // 删除 test 添加此行</code></pre>
+        <p>配置commitlint</p>
+        <pre><code class="language-js line-numbers">  // 1. 对于我们的commit信息，也是有统一规范的，不能随便写,要让每个人都按照统一的标准来执行，我们可以利用commitlint来实现。
+  // 2. 安装包
+  pnpm add @commitlint/config-conventional @commitlint/cli -D
+  // 3. 创建 commitlint.config.cjs ，并添加配置代码
+  module.exports = {
+    extends: ['@commitlint/config-conventional'],
+    // 校验规则
+    rules: {
+      'type-enum': [2,'always',
+        ['feat','fix','docs','style','refactor','perf','test','chore','revert','build',],
+      ],
+      'type-case': [0],
+      'type-empty': [0],
+      'scope-empty': [0],
+      'scope-case': [0],
+      'subject-full-stop': [0, 'never'],
+      'subject-case': [0, 'never'],
+      'header-max-length': [0, 'always', 72],
+    },
+  }
+
+  // 4. 配置 package.json
+  # 在scrips中添加下面的代码
+  {
+    "scripts": {
+      "commitlint": "commitlint --config commitlint.config.cjs -e -V"
+    },
+  }
+      // 1. 配置结束后，提交代码前面就需要带着下面的subject
+      'feat',    // 新特性、新功能
+      'fix',     // 修改bug
+      'docs',    // 文档修改
+      'style',   // 代码格式修改, 注意不是 css 修改
+      'refactor',// 代码重构
+      'perf',    // 优化相关，比如提升性能、体验
+      'test',    // 测试用例修改
+      'chore',   // 其他修改, 比如改变构建流程、或者增加依赖库、工具等
+      'revert',  // 回滚到上一个版本
+      'build',   // 编译相关的修改，例如发布版本、对项目构建或者依赖的改动
+
+      // 2. 配置husky
+      npx husky add .husky/commit-msg
+
+      // 3. 在生成的commit-msg文件中添加下面的命令
+      #!/usr/bin/env sh
+      . "$(dirname -- "$0")/_/husky.sh"
+      pnpm commitlint
+
+      /* 当我们 commit 提交信息时，就不能再随意写了，必须是 git commit -m 'fix: xxx' 符合类型的才可以，
+      (需要注意的是类型的后面需要用英文的 :，并且冒号后面是需要空一格的，这个是不能省略的) */
+
+      // 4. 提交示例
+      // 没配置前
+      git add .
+      git commit -m xxxxx
+      git push                     // 提交失败，需要引用commitlint关键字
+
+      // 配置后
+      git add .
+      git commit -m 'feat: 新增功能提交'
+      git push</code></pre>
+        <p>强制使用pnpm包管理器工具</p>
+        <pre><code class="language-js line-numbers">  // 1. 在根目录创建scripts/preinstall.js文件，添加下面的内容
+  /*
+  if (!/pnpm/.test(process.env.npm_execpath || '')) {
+    console.warn(
+      `\u001b[33mThis repository must using pnpm as the package manager ` +
+      ` for scripts to work properly.\u001b[39m\n`,
+    )
+    process.exit(1)
+  }
+  */
+
+  //  如果不允许未声明而使用变量可以使用下面
+  const process = require('node:process');
+  if (!/pnpm/.test(process.env.npm_execpath || '')) {
+    console.warn(
+      `\u001B[33mThis repository must using pnpm as the package manager `
+      + ` for scripts to work properly.\u001B[39m\n`
+    );
+    process.exit(1);
+  }
+
+  // 2. 配置package.json
+  "scripts": {
+    "preinstall": "node ./scripts/preinstall.js"
+  }</code></pre>
+        <p>src别名的配置</p>
+        <pre><code class="language-js line-numbers">  // 在开发项目的时候文件与文件关系可能很复杂，因此我们需要给src文件夹配置一个别名
+  // 1.1 方式一：配置 vite.config.ts
+  import path from 'path'
+  export default defineConfig({
+      plugins: [vue()],
+      resolve: {
+          alias: {
+              "@": path.resolve(__dirname, "./src"), // 相对路径别名配置，使用 @ 代替 src
+          }
+      }
+  })
+  // 1.2 配置 tsconfig.json中添加，如果是最新Ts，直接写在tsconfig.app.json里
+  {
+    "compilerOptions": {
+      "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
+      "paths": {
+        // 路径映射，相对于baseUrl
+        "@/*": ["src/*"]
+      }
+    }
+  }
+  // 1.3 vetur插件卸载（检测代码插件，可禁用，禁用后 '@/components/Test.vue' 不会有红色波浪线提示了）
+
+  // 2.1 方式二： vite.config.ts
+  import path from "path";
+  export default defineConfig({
+      plugins: [vue()],
+      resolve: {
+          alias: {
+              "@": path.resolve(__dirname, "src"),
+          },
+      },
+  });
+  // 2.2 如果红色语法提示请安装@types/node 是Typescript 的一个声明文件包，用于描述 Node.js 核心模块和常用 。终端输入
+  pnpm i @types/node --save-dev
+  // 2.3 配置 tsconfig.app.json中添加
+  {
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]
+      }
+    }
+  }</code></pre>
+        <p>集成element-plus</p>
+        <pre><code class="language-js line-numbers">  // 1. 完整导入（不推荐） 官网地址:https://element-plus.gitee.io/zh-CN/
+  // 不推荐
+  pnpm i element-plus
+
+  // 入口文件配置 `main.ts`
+  import ElementPlus from 'element-plus';
+  import 'element-plus/dist/index.css';
+  const app = createApp(App);
+  app.use(ElementPlus);
+
+  // 配置国际化 `main.ts`
+  app.use(ElementPlus, {
+    // 添加一个locale
+    locale: zhCn,
+  });
+
+  // 2. 可采用完整导入和按需导入（推荐）
+  // 安装插件  按需插件  icon图标
+  pnpm install element-plus
+  pnpm install -D unplugin-vue-components unplugin-auto-import
+  pnpm install @element-plus/icons-vue
+
+  // 配置 vite.config.ts
+  import AutoImport from 'unplugin-auto-import/vite';
+  import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+  import Components from 'unplugin-vue-components/vite';
+  export default defineConfig({
+    // ...
+    plugins: [
+      // ...
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+      }),
+    ],
+  });
+
+  // icon 图标 全局注册 main.ts`
+  // element plus ui icon
+  import * as ElementPlusIconsVue from '@element-plus/icons-vue';
+  import 'element-plus/dist/index.css'; // 样式
+  const app = createApp(App);
+  for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component);
+  }
+  app.mount('#app');
+
+  // 重启项目，加载组件即可
+
+  // 按需引入如果需要用到 warning alert 提示组件时，需要在当前vue文件下按需加载
+  import { ElMessage } from 'element-plus'</code></pre>
+        <p>注册全局组件</p>
+        <pre><code class="language-js line-numbers">  // 前提：使用自定义插件 注册成全局组件 （推荐，因为如果大量使用全局组件需要写很多次）
+  // 1. main.ts 引入自定义插件对象：注册整个项目全局组件
+  import globalComponent from '@/components';
+  app.use(globalComponent);
+  // 2. src/components/index.ts 创建
+  import SvgIcon from './SvgIcon/index.vue';
+  import Xxx from './Xxx/index.vue';
+  import type { App, Component } from 'vue';
+  const components: { [name: string]: Component } = { SvgIcon,Xxx };   // 有几个需要注册的引入几个
+  export default {
+    install(app: App) {
+      Object.keys(components).forEach((key: string) => {
+        app.component(key, components[key]);
+      });
+    },
+  };
+  // 3. 注册完，在任意组件中都可以使用全局组件
+  // 4. 解决报错
+  单行忽略
+  // @ts-ignore
+
+  忽略全文
+  // @ts-nocheck
+
+  取消忽略全文
+  // @ts-check
+
+  eslint+ts 忽略
+  /* eslint-disable */
+  // @ts-igonre
+  const a = 1;
+  /* eslint-enable */
+
+  import 'virtual:svg-icons-register';
+  // 提示找不到模块“virtual:svg-icons-register”或其相应的类型声明
+
+  解决方法 eslint + ts 忽略：
+  /* eslint-disable */
+  // @ts-ignore
+  import 'virtual:svg-icons-register';
+  /* eslint-enable */</code></pre>
+        <p>环境变量的配置（按需）</p>
+        <pre><code class="language-js line-numbers">  /* 1. 项目开发过程中，至少会经历开发环境、测试环境和生产环境(即正式环境)三个阶段。
+  不同阶段请求的状态(如接口地址等)不尽相同，若手动切换接口地址是相当繁琐且易出错的。
+  于是环境变量配置的需求就应运而生，我们只需做简单的配置，把环境状态切换的工作交给代码。 */
+
+  // 2. 根目录下新建 相对应文件
+  .env.development                 // 开发环境（development）
+  .env.production                  // 生产环境（production）
+  .env.test                        // 测试环境（testing）
+  // 3. 相对应文件的内容
+  # 变量必须以 VITE_ 为前缀才能暴露给外部读取
+  NODE_ENV = 'development'
+  VITE_APP_TITLE = '硅谷甄选运营平台'
+  VITE_APP_BASE_API = '/dev-api'
+  VITE_SERVE="HTTP://XXX.com"
+
+  NODE_ENV = 'production'
+  VITE_APP_TITLE = '硅谷甄选运营平台'
+  VITE_APP_BASE_API = '/prod-api'
+
+  NODE_ENV = 'test'
+  VITE_APP_TITLE = '硅谷甄选运营平台'
+  VITE_APP_BASE_API = '/test-api'
+
+  // 4. 配置package.json
+  "scripts": {
+      "dev": "vite --open",
+      "build": "vue-tsc && vite build",
+      "build:test": "vue-tsc && vite build --mode test",
+      "build:pro": "vue-tsc && vite build --mode production",
+    },
+
+  // 5. 可以通过 import.meta.env 获取环境变量
+  console.log(import.meta.env);
+  // 会得到一个对象，对象里面有之前定义好的变量</code></pre>
+        <p>SVG集成图标配置（按需）</p>
+        <pre><code class="language-js line-numbers">  // 1. 安装
+  pnpm install vite-plugin-svg-icons -D
+  // 2. 在vite.config.ts中配置插件
+  import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+  export default () => {
+    return {
+      plugins: [
+        createSvgIconsPlugin({
+          // Specify the icon folder to be cached
+          iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+          // Specify symbolId format
+          symbolId: 'icon-[dir]-[name]',
+        }),
+      ],
+    }
+  }
+  // 3. 在入口文件导入配置项 main.ts 中配置
+  import 'virtual:svg-icons-register'
+  // 4. 使用
+  // 先把下好的book svg图标放在指定了路径（src/assets/icons），然后在组件中使用
+  &lt;svg style="width: 50px; height: 50px"&gt;
+     &lt;use&gt; xlink:href="#icon-book"&gt;&lt;/use&gt;   // 路径用 #icon- svg图标文件名
+  &lt;/svg&gt;
+
+  // use 参数
+     xlink:href= "#icon- "  // svg图标名
+     fill="yellow"          // 填充颜色
+
+  // 5. 将svg 封装为全局组件
+  // 5.1 src/components/SvgIcon/index.vue 创建
+  &lt;template&gt;
+    &lt;div&gt;
+      &lt;svg :style="{ width: width, height: height }"&gt;
+        &lt;use :xlink:href="prefix + name" :fill="color"&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+
+  &lt;script setup lang="ts"&gt;
+  defineProps({
+    // xlink:href属性值的前缀
+    prefix: {type: String,default: '#icon-'},
+    // svg矢量图的名字
+    name: String,
+    //svg图标的颜色
+    color: {type: String,default: ""},
+    // svg宽度
+    width: {type: String,default: '16px'},
+    // svg高度
+    height: {type: String,default: '16px'}
+  })
+  &lt;/script&gt;
+  // 5.2 使用 src/App.vue
+  &lt;template&gt;
+    &lt;div&gt;
+      &lt;SvgIcon name="book" color="red" width="50px" height="50px" /&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;script&gt; setup lang="ts"&gt;
+  import SvgIcon from '@/components/SvgIcon/index.vue';
+  &lt;/script&gt;
+
+  &lt;style&gt; scoped&gt;&lt;/style&gt;</code></pre>
+        <p>样式初始化</p>
+        <pre><code class="language-js line-numbers">  // 1. 样式用normalize.css + 集成sass(源)
+  // 1.1 步骤
+  ## 安装normalize.css
+  pnpm install normalize.css
+  pnpm install sass -D
+
+  ## scr/App.vue
+  @import 'normalize.css';
+  #app {
+    /** 让字体可以抗锯齿，字体更清晰 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  // 2. 样式用sanitize.css+ 集成sass（改良normalize.css）
+  // 2.1 使用
+  pnpm install sanitize.css
+
+  ## 在main.js 引入、
+  import 'sanitize.css';</code></pre>
+        <p>mock server 模拟数据接口（推荐使用）</p>
+        <pre><code class="language-js line-numbers">  // 1. 使用json-server：https://github.com/typicode/json-server
+  // 2. 操作步骤
+  ## 创建文件夹
+  mkdir 项目名-server
+  cd 项目名-server
+  pnpm init
+
+  ## 安装包
+  pnpm install json-server -S
+  ##报错就降级
+  pnpm add json-server@0.17.4 --save
+
+  ## 用编辑器打开 并创建目录
+  # data > test.js
+      module.exports = () => {
+        return {name: 'test', desc: '测试数据'};
+      };
+
+  # public
+
+  # src > controller (文件夹) > test.js
+      const test = require('../../data/test');
+      module.exports = (req, res, next) => {
+        const testData = test();
+        testData.desc = '自定义测试数据';
+        res.success(testData);
+      };
+
+  # src > service (文件夹)
+
+  # src > app.js
+      const path = require('path');
+      const jsonServer = require('json-server');
+      const router = require('./router');
+      const db= require('./db')()
+      const server = jsonServer.create();
+      const middlewares = jsonServer.defaults({
+        static: path.join(__dirname, '../public')
+      });
+      server.use(middlewares);
+      // req.body
+      server.use(jsonServer.bodyParser);
+      server.use((req, res, next) => {
+        const json =res.json.bind(res);
+        res.success =(data)=>{
+          return json({
+            code: 0,
+            msg: 'success',
+            data
+          })
+        }
+        res.fail =(msg,code= -1,data) =>{
+          return json({
+            code,
+            msg,
+            data
+          })
+        }
+        next();
+      })
+      router(server);
+      const jsonRouter = jsonServer.router(db);
+      server.use('/api',jsonRouter);
+      server.listen(8000, () => {
+        console.log('JSON Server is running on port 8000');
+      });
+
+  # src > db.js
+      const test = require('../data/test');
+      module.exports = () => {
+        return {
+          testJson: test()
+        };
+      };
+  # src > router.js
+      const test = require('./controller/test');
+      module.exports = (app) => {
+        app.use('/api/test', test);
+      };
+
+  ## 配置完后启动
+  node ./src/app.js
+  地址栏：http://localhost:8000/api/test
+
+  ## 自动保存工具
+  pnpm install nodemon -D -S
+
+  ## 修改packgaes.json
+    "scripts": {
+      "server": "nodemon --delay 1000ms ./src/app.js"
+    },
+
+  ## 执行
+  pnpm run server
+
+  ## vite.config.ts  代理服务器，然后配置axios发送前端请求
+  server: {
+      open: true,
+      host: '0.0.0.0',
+    port: 3000, // 端口号
+    proxy: {
+        '/api': 'http://localhost:8000',
+      '/imgs': 'http://localhost:8000'
+    }
+  }
+
+  // 3. axios配置
+  ## 安装
+  pnpm install axios -S
+  pnpm install vant --save
+
+  ## 创建src/api/base.ts
+  import axios from 'axios';
+  import { Dialog } from 'vant'
+
+  const instance = axios.create({
+    baseURL: '/api'
+  });
+
+  instance.interceptors.response.use((response) => {
+    const { data: _data } = response;
+    const { code, data, msg } = _data;
+    if (code !== 0) {
+      Dialog.alert({
+        message: msg
+      }).then(() => {
+        // 关闭弹窗的逻辑
+      });
+      return Promise.reject(msg);
+    }
+    return data;
+  });
+  instance.interceptors.request.use(
+    (config) => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    }
+  );
+  export default instance;
+
+  ## 创建src/api/test.ts
+  import axios from './base';
+  export function fetchTest() {
+    return axios.get('test');
+  }
+
+  // 4. 后续需要接口时配置，详细看_Elm-server 项目
+  // 项目-search/data/home_search.js
+  module.exports = () => {
+    return {
+      list: [
+        {/**
+          type: number,             1为查询结果，2为店铺
+          label: string,            关键字
+          resultCount：string       为搜索出来多少个结果
+        */type: 1,label: '披萨',resultCount: 453},
+        {type: 2,label: '必胜客',resultCount: 2},
+        {type: 2,label: '必胜客2',resultCount: 2},
+        ...
+      ]
+    };
+  };
+
+  // 项目-search/src/controller/home_search.js
+  const getHomeSearchData = require('../../data/home_search');
+  module.exports = (req,res) => {
+    const { _label_like } = req.query
+    const allData = getHomeSearchData()
+    const list = allData.list.filter((v)=>v.label.includes(_label_like))
+
+    setTimeout(() => {
+        return res.success({
+            list,
+        });
+    }, 1000);
+  };
+
+  // 项目-search/src/router.js
+  const home_search = require('./controller/home_search');
+  module.exports = (app) => {
+    app.use('/api/home_search',home_search)
+  };</code></pre>
+        <p>axios（按需）</p>
+        <pre><code class="language-js line-numbers">  // 1. 安装
+  pnpm i axios
+  // 2. 测试mock接口，入口文件main.ts，看network 看返回的login 参数是否有显示 200
+  import axios from 'axios';
+  axios({
+    url: '/api/user/login',
+    method: 'post',
+    data: {
+      username: 'admin',
+      password: '111211',
+    },
+  });
+  // 3. src/utils/request.ts 创建 ，进行 axios 二次封装
+  /*
+  目的:
+    1:使用请求拦截器，可以在请求拦截器中处理一些业务(开始进度条、请求头携带公共参数:token)
+    2:使用响应拦截器，可以在响应拦截器中处理一些业务(进度条结束、简化服务器返回的数据、 处理http网络错误)
+
+  */
+  import axios from 'axios';
+  import { ElMessage } from 'element-plus';
+  const request = axios.create({
+    baseURL: import.meta.env.VITE_APP_BASE_API,
+    timeout: 5000,
+  });
+  // 添加请求拦截器
+  request.interceptors.request.use(
+    function (config) {    //config:请求拦截器回调注入的对象(配置对象)
+      return config;
+    },
+    function (error) {
+      // 对请求错误做些什么
+      return Promise.reject(error);
+    },
+  );
+  // 添加响应拦截器
+  request.interceptors.response.use(
+    function (response) {
+      // 2xx 范围内的状态码都会触发该函数。
+      // 对响应数据做点什么
+      return response.data;
+    },
+    function (error) {
+      // 超出 2xx 范围的状态码都会触发该函数。
+      // 对响应错误做点什么
+      let msg = '';
+      const status = error.response.status;
+      switch (status) {
+        case 401:
+          msg = 'token过期';
+          break;
+        case 403:
+          msg = '无权访问';
+          break;
+        case 404:
+          msg = '请求地址错误';
+          break;
+        case 500:
+          msg = '服务器异常';
+          break;
+        default:
+          msg = '网络异常';
+          break;
+      }
+      ElMessage.error(msg);
+      return Promise.reject(error);
+    },
+  );
+  export default request;
+
+  // 箭头函数写法
+      // 添加请求拦截器
+      request.interceptors.request.use((config)=>{
+          return config
+      })
+
+      // 响应拦截器
+      request.interceptors.response.use((response) => {
+          return response.data;      // 成功回调
+      }, (error) => {
+          // 处理网络错误
+          return Promise.reject(error);
+      });
+      export default request;
+
+  // 其他写法
+      import axios from "axios";
+      let baseURL = "/api";
+      const service = axios.create({baseURL,timeout: 10000,});
+
+      // 请求拦截器
+      service.interceptors.request.use(
+          config => {
+              const token = localStorage.getItem("token");
+              if (token) {config.headers["x-acess-token"] = token;}
+              return config;
+          },
+          error => {return Promise.reject(error);}
+      );
+
+      // 响应拦截器
+      service.interceptors.response.use(
+          response => {
+              const res = response.data;
+              if (response.status !== 200) {
+                  return Promise.reject(new Error(res.success || "error"));
+              } else {
+                  if (res.code == 200) { return res.result;} else { alert(res.success);}
+              }
+          },
+          error => {return Promise.reject(error);}
+      );
+      export default service;
+      // 创建src/api文件夹
+      user.ts                     // 用户接口</code></pre>
+        <p>跨域代理 （按需）</p>
+        <pre><code class="language-js line-numbers">  // vite.config.js
+  export default defineConfig({
+      plugins: [vue()],
+      // 线上接口，跨域代理
+      server: {
+          port: 8002,
+          open: true,
+          proxy: {
+              "/api": "http://xx.com",
+          },
+          cors: true,
+      },
+      // 本地接口  或者使用线上接口，二选一
+      // server: {
+      //     proxy: {
+      //         "/api": "http://localhost:5080/",
+      //     },
+      // },
+  });</code></pre>
+        <p>安装api 插件</p>
+        <pre><code class="language-js line-numbers">  // 安装
+  pnpm i @vueuse/core -S   // -S生产环境下会使用，-D只在开发过程中是必需的
+  pnpm i axios -s
+    &gt; src/utils/require.ts
+          </code></pre>
+        <p>API接口统一管理</p>
+        <pre><code class="language-js line-numbers">  // 1. 在开发项目的时候,接口可能很多需要统一管理。在src目录下去创建api文件夹去统一管理项目的接口；
+  // 2. 在src 目录下，创建 api文件夹
+  api/alc
+  api/product
+  api/user
+      &gt; type.ts
+      &gt; index.ts
+  // 2.1 api/user/index.ts 创建
+  import request from '@/utils/request'
+  import type { loginFormData, loginResponseData, userInfoResponseData } from './type'
+
+  // 定义枚举类统一管理接口
+  enum API {
+    LOGIN_URL = '/admin/acl/index/login',
+    USERINFO_URL = '/admin/acl/index/info',
+    LOGOUT_URL = '/admin/acl/index/logout'
+  }
+  // 暴露请求函数
+  // 登录接口方法
+  export const reqLogin = (data: loginFormData) =&gt; request.post&lt;any, loginResponseData&gt;(API.LOGIN_URL, data)
+  // 获取用户信息接口方法
+  export const reqUserInfo = () =&gt; request.get&lt;any, userInfoResponseData&gt;(API.USERINFO_URL)
+  // 退出登录
+  export const reqLogout = () =&gt; request.post&lt;any, any&gt;(API.LOGOUT_URL)
+
+  // 2.2 api/user/type.ts 创建
+  //登录携带参数类型
+  export interface loginFormData {
+    username: string,
+    password: string
+  }
+  //全部接口返回数据都拥有的ts类型
+  export interface responseData {
+    code: number,
+    message: string,
+    ok: string
+  }
+  //登录接口返回数据类型
+  export interface loginResponseData extends responseData {
+    data: string
+  }
+  //获取用户信息返回数据类型
+  export interface userInfoResponseData extends responseData {
+    data: {
+      routes: string[],
+      buttons: string[],
+      roles: string[],
+      name: string,
+      avatar: string
+    }
+  } </code></pre>
+        <p>路由</p>
+        <pre><code class="language-js line-numbers">  // 1. 安装
+  pnpm install vue-router
+
+  // 2. 引用
+  // 2.1 src/router/index.ts 创建
+  import { createRouter, createWebHashHistory } from 'vue-router';
+  import { constantRoute } from './router';
+  const router = createRouter({
+    history: createWebHashHistory(),
+    routes: constantRoute, // 创建router.ts 统一管理
+    scrollBehavior() {
+      // 滚动行为
+      return {
+        left: 0,
+        top: 0,
+      };
+    },
+  });
+  export default router;
+
+  // 2.2 src/router/router.ts 创建。箭头函数为懒加载模式
+  import { RouteRecordRaw } from 'vue-router';
+  export const constantRoute: Array&lt;RouteRecordRaw&gt;  = [
+    {
+      path: '/login',
+      component: () => import('@/views/login/index.vue'),
+      name: 'login',
+    },
+    {
+      path: '/',
+      component: () => import('@/views/home/index.vue'),
+      name: 'layout',
+    },
+    {
+      path: '/404',
+      component: () => import('@/views/404/index.vue'),
+      name: '404',
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/404',
+      name: 'Any',
+    },
+  ];
+  /* 或者 修改router.ts
+     createRouter 是创建vue-router实例对象
+     RouteRecordRaw  用于规范，路由规则，增加路由对象类型限制
+     createWebHashHistory 路由工作模式，路由规则 Hash  */
+  import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+  // 引入store的user仓库
+  import { useUserStore } from "../store/modules/user.ts";
+  // 创建路由规则
+  const routes: Array&lt;RouteRecordRaw&gt; = [
+      {
+          path: "/",
+          component: () => import("../components/HelloWorld.vue"),
+      },
+  ];
+  // 创建 路由的示例对象
+  const router = createRouter({
+      history: createWebHashHistory(),
+      routes: routes,
+  });
+  // 路由导航守卫
+  router.beforeEach((to, from, next) => {
+      const store = useUserStore();
+      if (store.token) {
+          next();
+      } else {
+          if (to.path) {
+              console.log(to.path);
+          }
+      }
+  });
+  export default router;
+
+  // 3. 入口文件注册 main.ts
+  import router from './router';
+  app.use(router);
+
+  // 4. 使用路由
+  &lt;template&gt;
+    &lt;div class="app"&gt;
+      &lt;h1&gt;标题&lt;/h1&gt;
+      &lt;div class="nav"&gt;
+        &lt;h2&gt;导航区&lt;/h2&gt;
+        &lt;RouterLink to="/login" active-class="此处是被激活时的类名"&gt;去登录页面&lt;/RouterLink&gt;
+        &lt;RouterLink to="/404" active-class="此处是被激活时的类名"&gt;去404页面&lt;/RouterLink&gt;
+      &lt;/div&gt;
+      &lt;div class="show"&gt;
+        &lt;h2&gt;展示区&lt;/h2&gt;
+        &lt;RouterView /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;script setup lang="ts"&gt;
+  import { RouterView, RouterLink } from 'vue-router';
+  &lt;/script&gt;</code></pre>
+        <p>pinia 仓库</p>
+        <pre><code class="language-js line-numbers">  // 1. 安装
+  pnpm i pinia
+
+  // 2. src/store/index.ts 创建
+  // 引入仓库
+  import { createPinia } from 'pinia';
+  // 创建仓库
+  const pinia = createPinia();
+  // 对外暴露
+  export default pinia;
+
+  // 3. 引入 main.ts
+  import pinia from './store';
+  app.use(pinia);
+
+  // 4. 创建小仓库 src/store/modules/user.ts
+  import { defineStore } from 'pinia';
+  let useUserStore = defineStore('User', {
+    state: () => {
+      return {};
+    },
+    actions: {},
+    getters: {},
+  });
+  export default useUserStore;
+
+  // 或者定义好用户仓库
+  import { defineStore } from 'pinia';
+  interface UserInfo {
+    token: string;
+    user_info: string;
+  }
+  export const useUserStore = defineStore('user', {
+    state: () => {
+      // 数据
+      return {
+        token: localStorage.getItem('token') || '',
+        userInfo: localStorage.getItem('userInfo') || ''
+      };
+    },
+    actions: {
+      // 方法
+      setUserInfo(data: UserInfo) {
+        this.token = data.token;
+        this.userInfo = data.user_info;
+        localStorage.setItem('token', this.token);
+        localStorage.setItem('userInfo', JSON.stringify(this.userInfo));
+      }
+    }
+  });
+  export default useUserStore;</code></pre>
+        <p>进度条插件</p>
+        <pre><code class="language-js line-numbers">  // 1. 安装
+pnpm i nprogress -s
+
+// 2. 使用，可以npm上查询方法 src/assets/js/permission.ts
+// 在鉴权文件里处理
+import router from  '@/router'
+import nprogress from 'nprogress';
+import 'nprogress/nprogress.css';
+router.beforeEach((to: any, from: any, next: any) => {
+  nprogress.start();
+  next();
+});
+//全局后置守卫
+router.afterEach((to: any, from: any, next: any) => {
+  nprogress.done();
+});
+
+// 3. 调样式可以到源码里面修改
+// 4. 'nprogress' 会飘红 报错
+pnpm i --save-dev @types/nprogress
+// 5. 在main.ts 中引入
+import ‘@/utils/permission.ts’</code></pre>
+        <p>接口文档</p>
+        <pre><code class="language-js line-numbers">  // 1. 服务器域名： http://sph-api.atguigu.cn
+
+  // 2. swgger文档
+      2.1 http://39.98.123.211:8510/swagger-ui.html
+      2.2 http://139.198.104.58:8212/swagger-ui.html
+      2.3 新http://139.198.104.58:8209/swagger-ui.html
+
+  // 3. 使用服务器要解决代理跨域问题
+  // 3.1 引入loadEnv方法
+  import { loadEnv } from 'vite';
+
+  // 3.2 配置 vite.config.ts
+  export default defineConfig(({ command, mode }) => {
+    // 1. 获取各种环境下的对应变量， .env.development .env.production .env.text 下的变量
+    // 2. vite提供的loadEnv方法
+    let env = loadEnv(mode, process.cwd());
+    return {
+      ...
+      // 代理跨域 可查询vite官网服务器文档
+      server: {
+        proxy: {
+          [env.VITE_APP_BASE_API]: {
+            // 服务器地址
+            target: env.VITE_SERVE,
+            // 是否代理跨域
+            changeOrigin: true,
+            // 路径重写
+            rewrite: (path) => path.replace(/^\/api/, ''),
+          },
+        },
+      },
+    }
+  });
+
+  // 3.3 注意；如果路径上需要带api就不要写路径重写
+  server: {
+      proxy: {
+          "/api": {
+              // 服务器地址
+              target: "http://jsonplaceholder.typicode.com",
+              // 是否代理跨域
+              changeOrigin: true,
+          },
+      },
+  },</code></pre>
+        <p>时间插件</p>
+        <pre><code class="language-js line-numbers">  // 1. 安装
+  pnpm i  moment
+
+  // 2. 使用
+  &lt;span&gt; class="time"&gt;当前时间:｛｛ time ｝｝&lt;/span&gt;
+
+  &lt;script&gt; setup lang="ts"&gt;
+  import moment from 'moment'
+  let time = ref(moment().format('YYYY年MM月DD日 hh:mm:ss'))
+  let timer = ref(0)
+  timer.value = setInterval(() =&gt; {
+      time.value = moment().format('YYYY年MM月DD日 hh:mm:ss')
+  }, 1000)
+
+  onBeforeUnmount(() =&gt; {
+    clearInterval(timer.value)
+  })
+  &lt;/script&gt;</code></pre>
+        <p>echarts 图形</p>
+        <pre><code class="language-js line-numbers">  // 1. 国内镜像地址：isqqw.com/echarts-doc
+
+  // 2. 安装
+  pnpm i echarts
+  pnpm i echarts-liquidfill
+
+  // 3. npmjs 搜索可以使用扩展水球图和地图 组件
+
+  // 4. 使用
+  &lt;!-- 盒子将来echarts展示图形图标的节点 --&gt;
+  &lt;div class="charts" ref="charts"&gt;123&lt;/div&gt;
+
+  &lt;script setup lang="ts"&gt;
+  import { ref, onMounted } from 'vue'
+  import * as echarts from 'echarts'
+  import 'echarts-liquidfill'
+
+  //获取节点
+  let charts = ref()
+  onMounted(() =&gt; {
+    //获取echarts类的实例
+    let mycharts = echarts.init(charts.value)
+    //设置实例的配置项
+    mycharts.setOption({
+      //标题组件
+      title: {
+        text: '水球图',
+      },
+      //x|y轴组件
+      xAxis: {},
+      yAxis: {},
+      //系列:决定你展示什么样的图形图标
+      series: {
+        type: 'liquidFill', //系列
+        data: [0.6, 0.4, 0.2], //展示的数据
+        waveAnimation: true, //动画
+        animationDuration: 3,
+        animationDurationUpdate: 0,
+        radius: '100%', //半径
+        outline: {
+          //外层边框颜色设置
+          show: true,
+          borderDistance: 8,
+          itemStyle: {
+            color: 'skyblue',
+            borderColor: '#294D99',
+            borderWidth: 8,
+            shadowBlur: 20,
+            shadowColor: 'rgba(0, 0, 0, 0.25)',
+          },
+        },
+      },
+      //布局组件
+      grid: {
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+      },
+    })
+  })
+  &lt;/script&gt;
+
+  // 中国地图json
+  http://datav.aliyun.com/portal/school/atlas/area_selector </code></pre>
+        <p>菜单权限</p>
+        <pre><code class="language-js line-numbers">  // 1. 拆分路由
+      /* 1. 1. 静态(常量)路由： 大家都可以拥有的路由
+            1. 如：login 、 首页、数据大屏、404
+         2. 异步路由：不同身份拥有不同的路由
+            1. 如：权限管理 、 商品管理
+         3. 任意路由： 任意路由
+            1. 如：404  */
+  // 2. 代码
+      // 静态路由
+      export const constantRoute = []
+      // 异步路由
+      export const asyncRoute = []
+      // 任意路由
+      // export const anyRoute = []</code></pre>
+        <p>lodash</p>
+        <pre><code class="language-js line-numbers">  // 1. js库，有很多方法，包括深拷贝
+  // 2. 安装
+  pnpm i lodash
+  // 3. 使用
+  //@ts-ignore
+  import cloneDeep from 'lodash/cloneDeep';   // 需要忽略ts校验
+  // 调用
+  cloneDeep(xxx)</code></pre>
+        <p>发布前校验</p>
+        <pre><code class="language-js line-numbers">  // 执行命令行
+  pnpm run lint
+  pnpm run format
+  pnpm run fix</code></pre>
+        <p>打包流程 并优化</p>
+        <pre><code class="language-js line-numbers">  // 1. 执行
+  npm run build
+
+  // 2. vite.config.js 配置路径
+  export default defineConfig((command) => {
+    return {
+      base: './',
+      ...
+    }
+  })
+
+  // 3. 到2就配置完成了，发给后端就可以了，如果本地运行，需要配置本地服务器
+  报错请先执行这段 pnpm setup ，执行完后关闭终端重新打开终端
+
+  pnpm install -g live-server
+  # 或者
+  pnpm install -g http-server
+
+  // 启动服务器.在 dist 文件夹中打开终端，并运行以下命令之一来启动服务器：
+  live-server
+  # 或者
+  http-server
+
+  // 方法2 使用node.js创建简单的服务器
+  // 在 dist 文件夹中运行以下命令来安装 Express：
+  pnpm install express
+
+  // 创建服务器脚本  server.js
+  const express = require('express');
+  const { exec } = require('child_process');  // 新增
+  const app = express();
+  const port = 3000;
+
+  app.use(express.static('./'));
+
+  app.listen(port, () => {
+    const url = `http://localhost:${port}`;
+    console.log(`Server is running at ${url}`);
+    const cmd = process.platform === 'win32' ? 'start' : process.platform === 'darwin' ? 'open' : 'xdg-open';
+    exec(`${cmd} ${url}`);
+  });
+
+  // 在 dist 文件夹中运行以下命令来启动服务器：node server.js
+  // 在浏览器中打开 http://localhost:3000。
+  node server.js
+
+  // 4. 打包优化
+  // 可视化模块加载
+  pnpm install rollup-plugin-visualizer -D
+
+  // 配置：vite.config.js 打包后，会在根目录下生成一个 stats.html文件，用浏览器打开
+
+  import { defineConfig } from 'vite'
+  import {visualizer} from 'rollip-plugin-visualizer';
+
+  export default defineConfig({
+    plugins: [
+      visualizer({   // 配置项
+        open: true, // 是否在分析完成后自动打开报告
+        gzipSize: true, // 是否显示gzip大小
+        brotliSize: true, // 是否显示brotli大小
+
+        // 其他参数
+        emitFile: false,
+        file:"stats.html",
+        open:true
+      }),
+    ],
+  });
+  // 配置文件中引入插件并配置后，运行Vite构建命令（例如npm run build），构建完成后，插件会生成一个包含打包大小可视化报告的HTML文件。你可以根据这个报告来优化你的项目，减少包的大小。
+  // 蓝色代表资金写下的js文件项
+  // 绿色表示依赖的文件项
+  // 其他颜色可以根据文件名进行判断</code></pre>
+        <p>发布</p>
+        <ul>
+          <li>发布到github上的参考说明地址：https://blog.csdn.net/Lil_y1/article/details/140348430</li>
+          <li>
+            本项目视频教程：
+            <ul>
+              <li>https://www.bilibili.com/video/BV1Xh411V7b5/?p=144&spm_id_from=pageDriver&vd_source=6561c812c04b13e391c4f22fc92fc077</li>
+            </ul>
+          </li>
+          <li>运行dist文件，会发现一片空白，什么也显示不出来。打开文件发现引入地址是错的。应该用"."开头而不是/ 开头。</li>
+          <li>
+            此时我们只需要在和package.json同级的地方新增一个vue.config.ts文件，将路径修改为相对路径’./’。
+            <pre><code class="language-js line-numbers">  // vue.config.ts
+  module.exports ={
+      publicPath:'./,
+  }</code></pre>
+          </li>
+          <li>然后此时打包会发现文件的路由还是出问题，现在我们只需要改一下路由模式，找到router/index.js文件,将history修改hash,再进行打包!</li>
+          <li>
+            如果你想将该项目发布到aithub的page服务上，此时的dist文件看似没问题，当你创建paae并进入github给你page地址时，会发现axios发送的api接口全都没用了。控制台弹出一些htp ur之类的错误，具体原因自行搜索。所以在推送之前要在dist文件的lIndex.html上添加如下代码
+            <pre><code class="language-js line-numbers">  &lt;meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"&gt;&lt;/meta&gt;</code></pre>
+          </li>
+          <li>
+            现在项目已经推送完毕，要使用page服务的话。还需建立一条hb-page分支
+            <pre><code class="language-js line-numbers">  git subtree push --prefix dist origin gh-pages</code></pre>
+          </li>
+        </ul>
+      </el-card>
+      <el-card id="12" shadow="hover">
+        <h2>其他配置</h2>
+        <p>超大屏适配方案</p>
+        <pre><code class="language-js line-numbers">  // 使用了scale方案
+  // 1. 是利用transform 的 scale 属性
+  // 2. 问题1：因为是根据 ui 稿等比缩放，当大屏跟 ui 稿的比例不一样时会出现周边留白情况
+  // 3. 问题2：当缩放比例过大时候，字体会有一点点模糊，就一点点
+  // 4. 问题3：当缩放比例过大时候，事件热区会偏移
+  &lt;!doctype html&gt;
+  &lt;html lang="en"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8" /&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+      &lt;title&gt;Document&lt;/title&gt;
+      &lt;style&gt;&gt;
+        * {margin: 0;padding: 0;}
+        .container {width: 100vw;height: 100vh;background: url(./src/assets/images/bg.png) no-repeat;background-size: cover;}
+        .box {position: fixed;left: 50%;top: 50%;width: 1920px;height: 1080px;background-color: #eec6c6;transform-origin: left top;}
+        .top {width: 100px;height: 100px;background-color: #b14646;margin-left: 50px;}
+        .bottom {width: 100px;height: 100px;background-color: #256aeb;margin-left: 50px;margin-top: 100px;}
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="box"&gt;
+          &lt;div&gt; class="top"&gt;&lt;/div&gt;
+          &lt;div&gt; class="bottom"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;script&gt;&gt;
+        let box = document.querySelector('.box');
+        box.style.transform = `scale(${getScale()}) translate(-50%,-50%)`;
+        function getScale(w = 1920, h = 1080) {
+          const ww = window.innerWidth / w;
+          const wh = window.innerHeight / h;
+          return ww &lt; wh ? ww : wh;
+        }
+        window.onresize = () =&gt; {
+          box.style.transform = `scale(${getScale()}) translate(-50%,-50%)`;
+        };
+      &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+
+  // vw 和 vh 适配
+  // 1. 按照设计稿的尺寸，将px按比例计算转为vw和vh
+  // 2. 转换公式如下
+  /*
+      1. 假设设计稿尺寸为1920*1080(做之前一定问清楚UI设计稿的尺寸)即:
+          网页宽度 = 1920px
+          网页高度 = 1080pX
+          网页宽度 = 100vw
+          网页高度 = 100vh
+
+      2. 所以，在1920x * 1080px 的屏幕分辨率下
+          1920pX = 100vw
+          1080px = 100vh
+
+      2. 这样一来，以一个宽300px和200px的div来说，其作所占的宽高以vw和vh为单位，计算方式为：
+          vw = (300px / 1920px) * 100VW
+          vh = (200px / 1080px) * 100vh
+
+      4. 所以，就在1920*1080的屏幕分辨率下，计算出了单个div的宽高
+      5.当屏幕放大或者缩小时，div还是以vw和vh作为宽高的，就会自动适应不同分辨率的屏幕
+
+      6. 定义函数来计算
+        Sass的math模块提供了一系列的数学函数，比如加法（add）、减法（subtract）、乘法（multiply）、除法（divide）、取模（mod）、取幂（pow）、取平方根（sqrt）、最大值（max）、最小值（min）等
+  */
+
+  // 1、 styles/computed.scss
+  @use 'sass:math'
+  // 屏幕宽高 分辨率  4k: 5200*1976    8k: 7680*4320
+  $designWidth: 5200;
+  $designHeight: 1976;
+
+  @function vw($px) { @return math.div($px, $designWidth) * 100vw; }       // 宽度
+  @function vh($px) { @return math.div($px, $designHeight) * 100vh; }      // 高度
+  @function px2font($px) { @return math.div($px, $designWidth) * 100vw; }  // 字体
+
+  // 2、 styles/index.scss   中使用
+  .element {width: vw(100);height: vh(100);font-size: px2font(16);}
+
+  // 3、 在配置文件需要引入全局css   vite.config.js
+  export default defineConfig(({ command, mode }) => {
+      return {
+        css: {loaderOptions: {sass: {prependData: `@import "@/assets/styles/computed.scss"`,},},},
+      }
+  })
+
+  // 4、 还需要注意一点是，css是动态生成的dom上，需要定义js方法  src/utils/styleUtil.js
+  const designWidth = 5200;      // 定义设计稿尺寸
+  const designHeight = 1976;     // 定义设计稿尺寸
+  let styleUtil = {              // px 转vw vh 换算
+    px2vw:function(_px){return (_px * 100.0) / designWidth + 'vw'},
+    px2vh:function(_px){return (_px * 100.0) / designHeight + 'vh'},
+    px2font:function(_px){return (_px * 100.0) / designWidth + 'vw'}
+  }
+  export default styleUtil;      // 默认导出
+
+  // 5、 如果是动态创建使用时，需要单独设置宽高等属性
+  import styleUtil from "@/src/utils/styleUtil.js"
+  let element = document.createElement("div")
+  element.style.width = styleUtil.px2vw(300)
+  element.style.height = styleUtil.px2vh(100)
+  element.style.fontSize = styleUtil.px2font(16)
+
+  // 5.1、 当屏幕发生变化后，需要手动刷新下才能自适应调整
+
+  // 6、 关于EChart  图标，也需要自定义函数处理
+  // src/utils/dataUtil.js
+  export const fitChartSizeVh = (size, defaultHeight = 1920) =>{
+    let clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    if(!clientHeight) return size / 2
+    let scale = clientHeight / defaultHeight;
+    return Number(((size / 2 ) * scale ).toFixed(3));
+  }
+
+  // 6.1、 使用
+  import {fitChartSizeVh} from "@/utils/dataUtil"
+  const legend ={
+      orient: "vertical",
+      textStyle:{fontSize: fitChartSizeVh(28)}
+  }
+
+  // 7、 第二种方案也可以使用插件  转成vm rem
+  // 8、 使用第三方库npmjs比如 postcss-plugin-px2rem</code></pre>
+        <p>使用 vant UI 库 (移动端的)</p>
+        <ul>
+          <li>1. Vant是一个轻量、可靠的移动端Vue组件库，适用于开发移动端应用</li>
+          <li>2. 官网http://mui.ucmed.cn/#/zh-CN/intro</li>
+          <li>3. Element UI是一个为开发电脑浏览器页面的组件库，适用于桌面应用开发</li>
+          <li>4. 安装: pnpm add vant </li>
+        </ul>
+        <p>使用vite 按需加载vant组件</p>
+        <pre><code class="language-js line-numbers">  // 1. 操作（演示）
+  // src/main.ts  注册全局组件
+  import { Tabbar, TabbarItem } from 'vant';
+  import 'vant/lib/index.css';
+  const app = createApp(App);
+
+  // 使用的话 组件前缀需要加Van  例如
+  // 原先：
+    &lt;Tabbar v-model="active"&gt;&lt;/Tabbar&gt;
+
+  // 现在：
+    &lt;VanTabbar v-model="active"&gt;
+      &lt;VanTabbarItem name="home" icon="home-o"&gt;
+        首页
+      &lt;/VanTabbarItem&gt;
+    &lt;/VanTabbar&gt;
+
+  // 2. 使用插件，注册全局组件
+  // 安装插件
+  pnpm i unplugin-vue-components -D
+
+  // vite.config.ts 配置插件
+  import { VantResolver } from 'unplugin-vue-components/resolvers';
+  import Components from 'unplugin-vue-components/vite';
+  export default defineConfig({
+    plugins: [vue(), Components({
+      resolvers: [VantResolver()]
+    })],
+  });
+
+  // 运行dev 后项目下会出现一个components.d.ts文件</code></pre>
+        <p>post-css 移动端适配，这个方法只适用于移动端（推荐使用）</p>
+        <ul>
+          <li>
+            常用适配方案
+            <ul>
+              <li>不同端使用不同代码，比如 PC端一套代码，移动端一套代码</li>
+              <li>不同端使用同一套代码，一般使用 CSS 样式来控制。@media</li>
+              <li>
+                移动端屏幕适配
+                <ul>
+                  <li>利用 rem 根节点 的字体大小来缩放</li>
+                  <li>利用vh/vw按屏幕高度和宽度来缩放</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            post-css 是一个css转换工具
+            <ul>
+              <li>原理： css  =>   AST   =>  插件   =>  css</li>
+              <li>autoprefixer:自动管理 CSS 属性的浏览器前缀</li>
+              <li>postcss-pxtotem :  px 转换为rem</li>
+            </ul>
+          </li>
+          <li>
+            配置 https://postcss.org/
+            <pre><code class="language-js line-numbers">  ## 安装
+  pnpm i postcss autoprefixer postcss-pxtorem -D
+
+  ## 项目根目录创建 postcss.config.cjs
+  module.exports = {
+    plugins: {
+      'autoprefixer': {
+        overrideBrowserslist: ['Android >= 4.0', 'iOS >= 7']
+      },
+      'postcss-pxtorem': {
+        rootValue: 16, // 根节点的fontSize值
+        propList: ['*'], // 需要转换的属性
+        selectorBlackList: [':root'] // 不需要转换的类名
+      }
+    }
+  };
+
+  ## src/main.ts
+  const rootValue = 16;
+  const rootWidth = 390;
+  const deviceWidth = document.documentElement.clientWidth;
+  document.documentElement.style.fontSize = `${(rootValue * deviceWidth) / rootWidth}px`;</code></pre>
+          </li>
+        </ul>
+        <p>rem适配方案（推荐组合 amfe-flexible + postcss-pxtorem）</p>
+        <pre><code class="language-js line-numbers">  // amfe-flexible：动态计算根元素font-size
+  // amfe-flexiable.js的源码 以2.2.1版本为例
+  (function flexible (window, document) {
+    var docEl = document.documentElement
+    var dpr = window.devicePixelRatio || 1
+    // adjust body font size
+    function setBodyFontSize () {
+      if (document.body) {
+        document.body.style.fontSize = (12 * dpr) + 'px'
+      }
+      else {
+        document.addEventListener('DOMContentLoaded', setBodyFontSize)
+      }
+    }
+    setBodyFontSize();
+    // set 1rem = viewWidth / 10
+    function setRemUnit () {
+      var rem = docEl.clientWidth / 10
+      docEl.style.fontSize = rem + 'px'
+    }
+    setRemUnit()
+    // reset rem unit on page resize
+    window.addEventListener('resize', setRemUnit)
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) {
+        setRemUnit()
+      }
+    })
+    // detect 0.5px supports
+    if (dpr >= 2) {
+      var fakeBody = document.createElement('body')
+      var testElement = document.createElement('div')
+      testElement.style.border = '.5px solid transparent'
+      fakeBody.appendChild(testElement)
+      docEl.appendChild(fakeBody)
+      if (testElement.offsetHeight === 1) {
+        docEl.classList.add('hairlines')
+      }
+      docEl.removeChild(fakeBody)
+    }
+  }(window, document))
+
+  // postcss-pxtorem：将px转换为rem 注意事项：
+  /* 1. 不能使用行内样式：对于行内样式，阿里手淘并不能将px转rem，所以对于需要自适应的样式，如font-size、width、
+  height等请不要写在行内。同理，对于不需要转化的样式可以写在行内，或者使用PX（大写）作为单位。
+     2. 字号不使用rem： 我们都知道chrome的最小显示的字体是12px，如果字体用rem，计算出来小于12px，那么就也会以12px显示，
+     而且我们不希望出现13px或者15px这样的奇葩尺寸，所以字体最好是用PX（大写）来表示，至于适应，我们可以写媒体查询。 */
+
+  // 移动端
+  .item {
+      border-bottom: 1PX #8d8d8d dashed;
+      font-size: 12PX;
+      line-height: 16PX;
+      @media screen and (min-width: 576PX) {
+          font-size: 14PX;
+          line-height: 18PX;
+      }
+      @media screen and (min-width: 768PX) {
+          font-size: 16PX;
+          line-height: 28PX;
+      }
+      @media screen and (min-width: 992PX) {
+          font-size: 16PX;
+          line-height: 32PX;
+      }
+      @media screen and (min-width: 1200PX) {
+          font-size: 18PX;
+          line-height: 64PX;
+      }
+  }
+  // PC端响应式媒体断点： 记得用大写的PX common.scss
+      @media (min-width: 1024px){ body{ font-size: 18px} }
+      @media (min-width: 1100px) { body{font-size: 20px} }
+      @media (min-width: 1280px) { body{font-size: 22px;} }
+      @media (min-width: 1366px) { body{font-size: 24px;} }
+      @media (min-width: 1440px) { body{font-size: 25px !important;} }
+      @media (min-width: 1680px) { body{font-size: 28px;} }
+      @media (min-width: 1920px) { body{font-size: 33px;} }
+
+  /* amfe-flexible不是已经给html自动设置了font-size，为什么还需要它通过pxtorem设置rootValue?
+  pxtorem是将代码中的px转为rem，转换比例就是根据rootValue来计算的（1rem = rootValue的值+‘px’）
+  这样可以根据设计图量的的尺寸px，直接写到代码中，而不需要计算并手动折算成rem。
+
+  比如设计图宽度是750px，那么rootValue=75，即按照75px=1rem，在编译的时候，将px转为rem单位，保证尺寸大小
+  是个相对值渲染到页面上时，需要再将编译后的rem值转为px，这时候的转换比例就是1rem = 实际展示容器html的font-size值。
+
+  简言之：pxtorem是方便我们"按照相对值复刻"设计图上的尺寸，即把px绝对值转为相对值rem（转换比例就是rootValue），
+  保证比例不失真，渲染时需要再将相对值rem转为绝对值px（转换比例就是amfe-flexible自动设置的html的font-size） */
+
+  // 插件使用
+      // 安装和使用
+      pnpm install amfe-flexible postcss-pxtorem -D
+
+      // main.ts 中引入amfe-flexible
+      import 'amfe-flexible'
+
+      // vite.config.ts
+      import postCssPxToRem from 'postcss-pxtorem'
+      export default defineConfig(() => {
+          return {
+            ...,
+            css: {
+              preprocessorOptions: {
+                scss: {
+                  additionalData: `@use "@/assets/styles/variable.scss" as *;`
+                }
+              },
+              postcss: {
+                plugins: [
+                  postCssPxToRem({
+                    // 配置在将px转化为rem时 1rem等于多少px(因为我们搭配使用了amfe-flexible插件 此处我们需要设置的值应是UI设计稿全屏基准宽度的十分之一)
+                    // 当UI设计稿的全屏基准宽度是1920px时 此处设置的值为192
+                    rootValue: 75,  // 设计稿宽度 / 10  例如1920设计稿设为192
+                    // 需要做转化处理的属性，如`hight`、`width`、`margin`等，`*`表示全部
+                    // vant默认是37.5，如果是使用了vant的话可以像下面这样写
+                    // rootValue(res) {
+                    //   return res.file.indexOf("vant") !== -1 ? 37.5 : 75;
+                    // },
+                    // 除 border和font-size外 所有px均转化为rem
+                    // propList: ["*", "!border","!font*"], 排除字体 边框相关属性
+                    propList: ['*', '!font-size'],
+                    // selectorBlackList: ['.norem','van-'],  忽略.norem开头的类名
+                    // 过滤掉-nopx结尾的class 不进行转换
+                    selectorBlackList: ['-nopx'],
+                    mediaQuery: false, // 是否在媒体查询中转换 px
+                    minPixelValue: 2,  // 最小的转换数值
+                    // 忽略node_modules
+                    exclude: /node_modules/i
+                    // replace: true, 强制覆盖原单位
+                  })
+                ]
+              }
+            },
+          }
+      })
+
+      /* 官方说明文档
+          rootValue（数字 |函数）表示根元素字体大小或根据输入参数返回根元素字体大小
+          unitPrecision（数字）允许 REM 单位增长到的十进制数。
+          propList（数组）可以从 px 更改为 rem 的属性。
+          值需要完全匹配。
+          使用通配符启用所有属性。例：*['*']
+          在单词的开头或结尾使用。( 将匹配*['*position*']background-position-y)
+          用于不匹配属性。例：!['*', '!letter-spacing']
+          将 “not” 前缀与其他前缀组合。例：['*', '!font*']
+          selectorBlackList（数组）要忽略并保留为 px 的选择器。
+          如果 value 是 string，它会检查 selector 是否包含字符串。
+          ['body']将匹配.body-class
+          如果 value 是 regexp，它会检查 selector 是否与 regexp 匹配。
+          [/^body$/]将匹配，但不匹配body.body
+          replace（布尔值）替换包含 rems 的规则，而不是添加回退。
+          mediaQuery（布尔值）允许在媒体查询中转换 px。
+          minPixelValue（数字）设置要替换的最小像素值。
+          exclude（字符串、正则表达式、函数）要忽略并保留为 px 的文件路径。
+          如果 value 是 string，它会检查文件路径是否包含字符串。
+          'exclude'将匹配\project\postcss-pxtorem\exclude\path
+          如果 value 为 regexp，则检查文件路径是否与 regexp 匹配。
+          unit（字符串）设置要转换的默认单位，默认为 。px
+          /exclude/i将匹配\project\postcss-pxtorem\exclude\path
+          如果 value 是 function，则可以使用 exclude 函数返回 true，并且该文件将被忽略。
+          回调会将文件路径作为参数传递，它应该返回一个布尔值结果。
+          function (file) { return file.indexOf('exclude') !== -1; }
+          忽略单个文件例如：
+              exclude: 'src/assets/styles/common.scss'
+              exclude: /^src\/styles\/common\.scss$/
+              exclude: function (file) {
+                return file === 'src/styles/common.scss';
+              }
+
+          忽略目录例如：
+              exclude: /^src\/styles\/.*/
+              exclude: /^(src\/styles\/common\.scss|src\/styles\/reset\.scss)$/
+              exclude: function (file) {
+                return file.startsWith('src/styles/');
+              }
+          忽略多个文件：
+              exclude: /(node_modules|src\/assets)/i
+
+          */
+
+          // index.html
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"&gt;
+
+          // 目前在用，pc端大于750px 固定root字体大小 因为是换分了10份
+          @media screen and (min-width:750px) {
+              html {font-size: 75px!important;}
+          }
+
+          // 使用方式
+          .box {width: 375px; /* 转换为10rem（rootValue=37.5时） */}
+
+          // 忽略转换的样式 添加.norem前缀或注释：
+          .norem-box {width: 100px; /* 不转换 */}
+          /* postcss-pxtorem-disable-next-line */
+          .fixed-box {width: 100px; /* 不转换 */}
+          // TypeScript类型支持 若出现amfe-flexible类型报错，在src/env.d.ts中添加：
+          declare module 'amfe-flexible'
+          // vite提示 import postCssPxToRem from 'postcss-pxtorem'; 无法找到模块
+          pnpm install @types/postcss-pxtorem -D
+          // 当项目内引入了vantUI组件库，vant的UI设计稿基准宽度是375px，如果与我们开发时UI给出的设计稿基准宽度不同，使用下述配置方法（移动端有时会引入vant组件库）
+          // 当UI设计稿的全屏基准宽度是750px时 此处设置的值为75 但项目中使用了vant组件库 vant的设计稿总宽度是375px 其十分之一应是37.5(需要区分设置)
+          rootValue ({ file }) {
+              return file.indexOf('vant') !== -1 ? 37.5 : 75
+          },
+          // 设计稿适配
+          移动：设计稿375px → rootValue: 37.536
+          PC：设计稿1920px → rootValue: 19
+          // rem单位的特点，是1rem对应的px值等于html的font-size值。也就是说，当html的font-size值变化时，1rem的值会跟随着动态变化。比如：有一个div，他的高度设置为1rem，当页面内html的font-size为16px时，这个div的高度就是16px；当页面内html的font-size为32px时，这个div的高度就是32px。html自由飞，rem永相随！
+          // postcss-pxtorem插件会将我们写在样式中的px根据我们在vite.config.ts中设置的rootValue值，按比例转化为rem。（要注意哦，行内样式中的px不会被转化为rem）
+          // amfe-flexible插件会根据当前可展示区域的实际宽度，动态设置的font-size为可展示区域宽度的十分之一。（这也就是为什么我们在vite.config.ts中设置rootValue值时需要设置为UI设计稿的十分之一，是为了与此插件对font-size的设置相对应）</code></pre>
+        <p>vw适配方案(适合移动端)</p>
+        <ul>
+          <li>
+            postcss-px-to-viewport
+            <ul>
+              <li>直接转换px为vw单位112</li>
+              <li>可配置viewportWidth等参数12</li>
+              <li>支持排除特定文件</li>
+            </ul>
+          </li>
+        </ul>
+        <p>自适应 flexible.js (用以上插件适配)</p>
+        <pre><code class="language-js line-numbers">  // 1. 全局引入  main.ts
+
+// 2. 项目地址：https://github.com/amfe/lib-flexible
+
+// 3. 代码
+  // 1. 设计稿750px
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"&gt;
+  &lt;script&gt; src="./node_modules/amfe-flexible/index.js"&gt;&lt;/script&gt;
+  &lt;style&gt;&gt;
+      body{
+        min-width: 320px;
+        max-width: 750px;
+        width: 10rem;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f2f2f2;
+      }
+  &lt;/style&gt;
+
+  // 2. 使用插件转换rem : px to rem& rpx vw   默认插件会将html定义为16px
+  1rem 应该是75px  所以要设置里修改root font-size
+  设置 &gt; setting &gt; root font size  &gt; 修改成 设计稿尺寸/10
+  例如： 1920/10=192   750/10=75    375/10=37.5
+
+  如果flexible.js 是划分20等份的，那就 设计稿 / 20
+  例如： 1920/20=96  750/20=37.5   375/10=18.75
+
+  超过的像素用媒体查询限定
+  @media screen and (min-width: 750px){
+    html{
+       font-size: 75px!important;  // 如果是划分成20等份，要写成37.5
+    }
+  } </code></pre>
+        <p>api</p>
+        <ul>
+          <li>狗狗接口：https://dog.ceo/api/breed/pembroke/images/random  返回img地址</li>
+          <li>土味情话：https://api.uomg.com/api/rand.qinghua?format=json  返回message</li>
+        </ul>
+        <p>nanoid</p>
+        <pre><code class="language-js line-numbers">  // 1. 安装(也可以使用uuid)
+  npm i nanoid
+
+  // 2. 使用
+  import {nanoid} from ‘nanoid’
+  let obj = {id:nanoid() ,title: xxxx}</code></pre>
+        <p>nginx 配置</p>
+        <pre><code class="language-js line-numbers">  // nginx官方文档 http://nginx.org
+  // 下载地址（稳定版本 Stable version） http://nginx.org/en/download.html
+  // 解压 nginx-1.26.2
+  conf
+  contrib
+  docs
+  html
+  logs
+  temp
+  nginx.exe
+
+  // 打包自己的项目，得到dist文件夹
+  pnpm run build
+
+  // 把打包好的dist 复制到 nginx/html
+
+  // 进入nginx-1.26.2/conf/nginx.conf 配置
+  server {
+    listen  80;                            // 端口号
+    server_name  localhost dev.local.com;  // 定义域名，dev..演示用
+
+    location / {                           // 定义资源的访问目录
+        root   D://Document/Study/Study_programming/Prom_Nginx/nginx-1.26.2/html/dist;
+        index  index.html index.htm;       // 只留一个就行
+    }
+  }
+
+  // 双击目录下 nginx.exe 启动服务，右键资源管理看见两个nginx.exe(32位)则服务启动成功，
+  // 如果没有看到,则到根目录nginx-1.26.2/logs/error.log，查看报错原因并修复
+
+  // 在浏览器上，直接访问，在地址栏输入localhost即可，就可以看到项目部署成功了
+  server_name  localhost dev.local.com;
+  // 同时，如果配置了虚拟域名，在浏览器上输入虚拟域名也可以直接访问
+  // 不能访问时，配置hosts文件 C:\Windows\System32\drivers\etc\hosts 文件
+  // 127.0.0.1  dev.local.com
+
+  // nginx常用命令
+  # nginx安装目录/usr/local/nginx/sbin 下执行
+  # 启动
+  ./nginx
+  # 热重载
+  ./nginx -s reload
+  # 停止
+  ./nginx -s stop
+
+  // finalShell 安装 ，官网https://www.hostbuf.com/
+  // 注册：XIONGBAB 密码：qwer1031，邮箱：2770949518@qq.com
+  // 下载对应系统后，默认安装
+  // 快捷键
+  alt 命令历史
+  ctrl 切换到命令输入框
+
+  命令输入框:
+  alt 命令历史
+  tab 补全
+  ctrl 切换到终端
+
+  列表窗口:
+  alt/tab/esc 关闭窗口
+  上下箭头 选择行
+
+  // 创建虚拟机
+  1. 点击文件夹，[连接管理器]，点 文件夹 图标添加 > SSH连接(linux)
+  2. 填写信息：
+        名称: 随意
+        主机: 云主机ip地址
+        端口: 云主机端口
+        用户名:  root
+        密码: 云主机登录密码
+  3. 确定 > 右键创建好的虚拟机 >  链接
+
+  // 注册云主机 https://host.fuxsto.cn/（此方法不通，但是得到一个虚拟主机）
+  QQ2770949518
+  qwer17181910
+
+  账号:9w7cwycp4m
+  密码:v2pgwl8i03lwrt4
+  到期:2024-11-30
+
+  名称: 随意
+  主机: 38.55.233.203
+  端口: 21
+  用户名: 9w7cwycp4m
+  密码: v2pgwl8i03lwrt4
+
+  数据库地址：localhost
+  数据库端口：3306
+  数据库名：9w7cwycp4m
+  数据库用户名：9w7cwycp4m  // 初始密码同FTP密码
+  密码: v2pgwl8i03lwrt4
+
+  修改FTP密码：root1031
+  修改数据库密码：1031
+
+  // 注册免费liunx服务器 （用此方法）
+  // https://linuxone.cloud.marist.edu/#/register?flag=VM
+  // 登录：https://linuxone.cloud.marist.edu/#/login
+  // 登录后，点击home 旁边的vitual servers 创建实例
+  // 1. 点击create
+  // 2. instance name : server
+  // 3. Select an Image : 选择4个系统  乌班图
+  // 4. Select a Flavor : 选配置
+  // 5. Select a SSH Key Pair : 秘钥自己创建 ，名称随意，然后会下载秘钥
+  // 6. 点击创建
+  // 7. 等待3-5分钟，后可以点开配置进行连接
+  /*
+  1.无法登录
+  解决方法：登录名linux1，密码：密钥文件
+  2.用户无权限
+  解决方法：sudo su
+  3.sftp无权限
+  解决方法：#给用户linux1授权目录/var/www/html
+  chown linux1 /var/www/html
+  4.外网无法访问端口
+  解决方法：sudo iptables -I INPUT -p tcp --dport &lt;port#&gt; -j ACCEPT
+  */
+
+  邮箱：xiongbab95@icloud.com
+  密码：Qwer1031
+  root 密码 qwer1031
+  first name:xiong
+  last name:bab
+
+  // 或者 linux 上安装centOS7</code></pre>
+        <p>VM + centOS7 安装</p>
+        <pre><code class="language-js line-numbers">  // 1. 百度网盘下载安装vm17.5，许可证：MC60H-DWHD5-H80U9-6V85M-8280D，帮助查看注册
+  // 2. 进入centOS阿里镜像下载 4.4G的iso文件，用IDE下载 https://mirrors.aliyun.com/centos/7/isos/x86_64/
+  // 3. 百度搜索怎么安装centos：https://blog.csdn.net/2401_87299120/article/details/142420961
+  // 4. 防火墙配置（一定要配置，不然访问不到）https://www.cnblogs.com/xluoc/p/17511664.html
+  // 检查nginx是否启动成功，如图所示则是启动成功
+  ps aux|grep nginx
+  //查看80-端口是否被分配给了Nginx
+  netstat -ntlp
+
+  // 对80端口进行防火墙配置
+  firewall-cmd --zone=public --add-port=80/tcp --permanent
+  // 重启防火墙服务
+  systemctl restart firewalld.service、
+
+  //完结浏览器输入ip即可显示
+  ip addr    查看ip
+  用finalShell连接
+  root 用户名，密码0
+
+  // 解决方案(Cannot find a valid baseurl for repo: base/7/x86_64)
+  手动指定镜像源：
+  由于 CentOS 7 已经停止官方支持，官方镜像可能不再可用。您可以尝试将 yum 仓库配置更改为一个仍然提供 CentOS 7 包的镜像源。编辑 /etc/yum.repos.d/CentOS-Base.repo 文件，将 mirrorlist URL 替换为一个具体的镜像 URL。例如，使用阿里云的镜像：
+  ini
+  [base]
+  name=CentOS-$releasever - Base - mirrors.aliyun.com
+  baseurl=http://mirrors.aliyun.com/centos/$releasever/os/$basearch/
+  gpgcheck=1
+  gpgkey=http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+
+  #released updates
+  [updates]
+  name=CentOS-$releasever - Updates - mirrors.aliyun.com
+  baseurl=http://mirrors.aliyun.com/centos/$releasever/updates/$basearch/
+  gpgcheck=1
+  gpgkey=http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+
+  #additional packages that may be useful
+  [extras]
+  name=CentOS-$releasever - Extras - mirrors.aliyun.com
+  baseurl=http://mirrors.aliyun.com/centos/$releasever/extras/$basearch/
+  gpgcheck=1
+  gpgkey=http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
+  清理和更新 yum 缓存：
+  在修改完仓库配置后，运行以下命令来清理和更新 yum 缓存：
+  bash
+  yum clean all
+  yum makecache
+  再次尝试安装：
+  使用修改后的配置，再次尝试安装 pcre 和 pcre-devel：
+  bash
+  yum install -y pcre pcre-devel</code></pre>
+        <p>Vscode 左侧文件嵌套折叠 插件（File Nesting Updater）</p>
+        <pre><code class="language-js line-numbers">  // 1. 打开vscode，setting.json，将下面配置文件粘贴即可
+  // 2. 自己配置,也可以参考官网
+  // 这行代码的意思是启用文件嵌套显示功能。
+  "explorer.fileNesting.enabled": true,
+  // 启用文件嵌套显示功能的同时，保持文件夹默认是折叠的状态。
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+      "vite.config.ts": "*.json,*.yaml,*.js,*.html,*.ts,*.cjs,*ignore,*.md"
+  }
+
+  // 官网配置
+  // updated 2024-10-28 14:43
+  // https://github.com/antfu/vscode-file-nesting-config </code></pre>
+        <p>影藏input 搜索框的清除按钮</p>
+        <pre><code class="language-js line-numbers">  input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  input[type='search'] {
+    -moz-appearance: textfield;
+  }
+  input[type='search']::-moz-search-cancel-button {
+    display: none;
+  }</code></pre>
+        <p>网站制作参考</p>
+        <ul>
+          <li>https://demo.downdemo.com/e09193d4eb874058a806164c7090b9f1/fd71eb7d9941461da4a48c82f7f1fcfc/page-login.html</li>
+          <li>https://demo.downdemo.com/4f3981d0989b4d2e8c59a96e1f861006/349fa3000db44387a91eb90534084793/#index</li>
+          <li>https://demo.downdemo.com/4182e054b79941388df2652621e159f3/e10fdb50973a4369aab9d55bb63e58dc/</li>
+          <li>https://demo.downdemo.com/7a09ed6bf7a14c4b93fb8b6f2aa357f5/c624937277c2421d9eac8df947cd674e/</li>
+          <li>https://sqliteonline.com/</li>
+          <li>https://demo.downdemo.com/a7e96be0a55748b8b01f71d32ea549b3/375956306f5c43f99fbef2015089723c/</li>
+          <li>https://demo.downdemo.com/39f7d39aba6d4c9db3b6f3efa003f002/c645721f015c4a76aa742217715c4902/index.html</li>
+          <li>https://demo.downdemo.com/3131d99fb9b7498bb9fcb981dcffff8d/221b757ecf604da9a68cbbc234dbd087/</li>
+        </ul>
+        <p>使用prismjs</p>
+        <pre><code class="language-js line-numbers">
+  pnpm install prismjs -S
+  pnpm install vite-plugin-prismjs -D
+  pnpm install --save-dev @types/prismjs
+
+  // vite.config.ts
+  import { prismjsPlugin } from 'vite-plugin-prismjs'
+  export default defineConfig({
+    plugins: [
+        prismjsPlugin({
+          languages: 'all',
+          plugins: ['line-numbers', 'show-language', 'copy-to-clipboard', 'inline-color'],
+          theme: 'Tomorrow',
+          css: true,
+        }),
+    ]
+  })
+
+  // 组件
+  &lt;template&gt;
+    &lt;pre&gt;&lt;code :class="`language-${language} line-numbers`"&gt;｛｛ code ｝｝&lt;/code&gt;&lt;/pre&gt;
+  &lt;/template&gt;
+
+  &lt;script setup lang="ts"&gt;
+  import { onMounted } from 'vue'
+  import Prism from 'prismjs'
+
+  const props = defineProps&lt;{
+    code: string
+    language: string
+  }&gt;()
+
+  onMounted(() =&gt; {
+    Prism.highlightAll()
+  })
+
+  onUpdated(() =&gt; Prism.highlightAll())
+  &lt;/script&gt;
+
+  // mac 定制 css样式
+  pre:not(.pre) {
+    font-size: 16px;
+    border-radius: 6px;
+
+    code { display: inline-block; padding-bottom: 20px; position: relative; top: 16px;}
+
+    &::before {
+      content: ''; position: absolute; background: red; width: 10px; height: 10px;
+      border-radius: 50%; top: 10px; left: 15px; transform: translate(-50%);
+    }
+
+    &::after {
+      content: ''; position: absolute; background: sandybrown; width: 10px; height: 10px;
+      border-radius: 50%; top: 10px; left: 30px; transform: translate(-50%);
+    }
+
+    code:first-child {
+      &::after {
+        content: ''; position: absolute; background: limegreen; width: 10px; height: 10px;
+        border-radius: 50%; top: -22px; left: -15px;transform: translate(-50%);
+      }
+    }
+  }</code></pre>
+        <p>组件动画时</p>
+        <pre><code class="language-js line-numbers">  // mode="out-in" 可以保证先销毁旧组件再渲染新组件，避免并排。
+  &lt;transition name="fade" mode="out-in"&gt;
+    &lt;component&gt; :is="currentComponent"&gt;&lt;/component&gt;
+  &lt;/transition&gt;</code></pre>
+      </el-card>
+      <el-card id="13" shadow="hover">
+        <h2>忽略配置</h2>
+        <p>配置语法检查 eslint （可忽略）</p>
+        <pre><code class="language-js line-numbers">  // 看官方文档配置https://zh-hans.eslint.org/ || https://eslint.org/
+  // 推荐使用固定版本
+  pnpm install eslint@8.22.0 -D
+  pnpm install eslint-plugin-vue@8.6.0 -D
+  pnpm install eslint-config-prettier@8.5.0 -D
+  pnpm install eslint-plugin-prettier@4.0.0 -D
+  pnpm install prettier@2.6.2 -D
+
+  // 创建.eslintrc.js 文件
+  module.exports = {
+    // 指定环境
+    env: {
+      // 可以使用浏览器的全局变量
+      browser: true,
+      // 添加所有 ECMAScript 2021 的全局变量，并自动将解析器选项 ecmaVersion 设置为 12
+      es2021: true,
+      // 添加node全局变量
+      node: true
+    },
+    // 自定义全局变量
+    globals: {
+      defineProps: 'readonly',
+      defineEmits: 'readonly',
+      defineExpose: 'readonly',
+      $confirm: 'readonly',
+      $message: 'readonly',
+      $notify: 'readonly',
+      $alert: 'readonly',
+      $storage: 'readonly',   // 使用这个代替 localStorage
+      $loading: 'readonly',
+      // localStorage: 'off',   // 禁用原生  不是必须
+      // sessionStorage: 'off'
+    },
+    // vue文件解析器
+    parser: 'vue-eslint-parser',
+    parserOptions: {
+      // es 语法的版本
+      ecmaVersion: 'latest',
+      // 代码类型
+      sourceType: 'module'
+    },
+    extends: [
+      // 全部规则默认是关闭的,这个配置项开启推荐规则,推荐规则参照文档
+      // 比如:函数不能重名、对象不能出现重复key
+      './.eslintrc-auto-import.json',
+      // https://zh-hans.eslint.org/docs/latest/rules/ 推荐配置
+      'eslint:recommended',
+      // https://eslint.vuejs.org/
+      // vue3语法规则
+      'plugin:vue/vue3-essential',
+      'plugin:vue/vue3-strongly-recommended',
+      // https://github.com/prettier/eslint-plugin-prettier
+      'plugin:prettier/recommended',
+    ],
+    // 要为特定类型的文件指定处理器
+    "overrides": [
+    ],
+    plugins: ['vue', 'prettier'],
+    rules: {
+      // eslint（https://eslint.bootcss.com/docs/rules/）
+      'prettier/prettier': 'warn',   // 校验prettier规则 只给警告，不给报错
+      'no-var': 'error', // 要求使用 let 或 const 而不是 var
+      'arrow-body-style': 'off',   // 箭头函数规范
+      'prefer-arrow-callback': 'off',// 使用箭头函数作为参数传递
+      'no-debugger': 'off',    // debugger
+      'no-empty': 'off',   // 为空的代码块
+      'no-unused-vars': 'off',    // 未使用的变量
+      eqeqeq: ['error', 'always'],    // 强制使用===
+      'vue/multi-word-component-names': 'off',    // 组件命名格式
+      'vue/no-unused-components': 'off',
+      'vue/no-unused-vars': 'off',
+      'vue/max-attributes-per-line': 'off',    // 组件参数格式
+      'vue/singleline-html-element-content-newline':'off'//单个标签内容格式
+    }
+  }
+
+  // 创建.eslintignore 文件
+  dist
+  node_modules
+  package.json
+
+  // 在vscode 插件搜索 Eslint ，并右键设置，进入setting.json文件，添加规则
+  "eslint.codeActionsOnSave.rules": null,
+  "eslint.validate": ["javascript",  "vue", "html"],
+
+  // 1. 以下是硅谷项目 eslint 配置（推荐）
+  pnpm i eslint -D             // 安装
+
+  npx eslint --init            // 生成配置文件
+    > to check .. and find...
+    > javascript modules
+    > vuejs
+    > yes
+    > browser   // 如果后续有用到node可以按住空格把node选择上后回车
+      node
+    > yes
+    > pnpm
+
+  // 2. 执行 (按需安装)
+  // vue3环境代码校验插件
+  # 让所有与prettier规则存在冲突的Eslint rules失效，并使用prettier进行代码检查
+  "eslint-config-prettier": "^8.6.0",
+  "eslint-plugin-import": "^2.27.5",
+  "eslint-plugin-node": "^11.1.0",
+  # 运行更漂亮的Eslint，使prettier规则优先级更高，Eslint优先级低
+  "eslint-plugin-prettier": "^4.2.1",
+  # vue.js的Eslint插件（查找vue语法错误，发现错误指令，查找违规风格指南
+  "eslint-plugin-vue": "^9.9.0",
+  # 该解析器允许使用Eslint校验所有babel code
+  "@babel/eslint-parser": "^7.19.1",
+  // 安装
+  pnpm install -D eslint-plugin-import eslint-plugin-vue eslint-plugin-node eslint-plugin-prettier
+  eslint-config-prettier eslint-plugin-node @babel/eslint-parser
+
+  // 3. 添加 .eslintignore 忽略文件
+  dist
+  node_modules
+  package.json
+
+  // 最新语法需要到eslint.config.js 中配置
+  export default [
+    {ignores: ["**/temp.js", "config/*"]}
+  ];
+
+  // 4. 运行脚本  packjson.js 添加两行
+  "scripts": {
+      "lint": "eslint src",         // 检查src下的语法
+      "fix": "eslint src --fix"     // 检查语法后，可执行修复
+  },
+  > pnpm run fix              // 终端执行后会修复出错的代码
+
+  // 5. 配置规则 eslint.config.js
+  export default [
+    {rules: {
+     // eslint（https://eslint.bootcss.com/docs/rules/）
+     // v9.13.0版本https://eslint.org/docs/latest/use/configure/rules
+
+      'no-var': 'error', // 要求使用 let 或 const 而不是 var
+      'no-multiple-empty-lines': ['warn', { max: 1 }], // 不允许多个空行
+      // 无控制台
+      'no-console':process.env.NODE_ENV==='production'?'error':'off',
+      // 无调试器
+      'no-debugger':process.env.NODE_ENV==='production'?'error':'off',
+      'no-unexpected-multiline': 'error', // 禁止空余的多行
+      'no-useless-escape': 'off', // 禁止不必要的转义字符
+
+      '@typescript-eslint/no-unused-vars': 'error', // 禁止定义未使用的变量
+       // 禁止使用 @ts-ignore
+      '@typescript-eslint/prefer-ts-expect-error': 'error',
+      '@typescript-eslint/no-explicit-any': 'off', // 禁止使用 any 类型
+      // 无等式为空 例如if (foo == null) {bar();}
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      // 禁止使用自定义 TypeScript 模块和命名空间。
+      '@typescript-eslint/no-namespace': 'off',
+      // JavaScript 允许在表达式和结束分号之间放置不必要的空格。
+      '@typescript-eslint/semi': 'off',
+
+      // 要求组件名称始终为 “-” 链接的单词
+      'vue/multi-word-component-names': 'off',
+      // 防止&lt;script setup&gt;使用的变量&lt;template&gt;被标记为未使用
+      'vue/script-setup-uses-vars': 'error',
+      // 不允许组件 prop的改变
+      'vue/no-mutating-props': 'off',
+      // 对模板中的自定义组件强制执行属性命名样式
+      'vue/attribute-hyphenation': 'off',
+      // 允许使用 any类型,不允许可以删除或者用true
+      "noImplicitAny": false,
+      // 关闭已声明但未使用变量的检查
+      "noUnusedLocals": false
+      },}
+    // 配置忽略文件
+    {ignores: ['dist', 'node_modules'],},
+  ];</code></pre>
+        <p>配置prettier（可忽略）</p>
+        <pre><code class="language-js line-numbers">  // 用了antfu作者的eslint包时可以省略这步，且可卸载prettier和相关配置参数
+  // 1. 安装
+  pnpm install -D eslint-plugin-prettier prettier eslint-config-prettier
+  // 如果使用固定版本的eslint 则执行以下prettier 安装
+  pnpm install prettier -D
+  // 且配置 .prettierrc 参考下面 第2项里的配置
+
+  // 2. 配置 -- 创建 .prettierrc.json文件 添加规则
+  {
+      "singleQuote": true,              // 字符串都是单引号
+      "semi": true,                     // 分号不是必须的
+      "bracketSpacing": true,           // 对象大括号带空格
+      // 确保HTML标签之间的空格不会被不必要地删除或添加
+      "htmlWhitespaceSensitivity": "ignore",
+      "endOfLine": "auto",              // 换行符lf  window是crlf
+      "trailingComma": "all",           // 对象末尾始终逗号
+      "tabWidth": 2,                    // 缩进
+      "useTabs":false,                  // 是否使用制表符Tab键来代替空格缩进
+      "printWidth": 800,                // 超过多少字符才换行
+      "arrowParens":"always"            // 箭头符号参数始终带括号
+  }
+
+  // 3. 创建.prettierignore添加忽略文件
+  /dist/*
+  /html/*
+  .local
+  /node_modules/**
+  **/*.svg
+  **/*.sh
+  /public/*
+
+  /.eslintignore
+  /.prettierignore
+  /.eslintrc.js
+  /.prettierrc.js
+
+  // 4. 检查及修复
+  pnpm run lint
+  pnpm run fix </code></pre>
+        <p>集成sass（不推荐 但可以使用全局变量）</p>
+        <pre><code class="language-js line-numbers">  // 1. 如果提示sass not found则需要 安装sass。如果未提示则忽略
+  pnpm i sass -D
+
+  // 2. 简单 用法
+  // src/styles/define.scss
+  $color: blue;
+
+  // src/views/home/index.html
+  &lt;style&gt; scoped lang="scss"&gt;
+    @import '@/styles/define.scss'
+    .box{ color:$color; }
+  &lt;/style&gt;
+
+  // 3. 组件内部已经可以使用scss样式，引入
+  &lt;style scoped lang="scss"&gt;&lt;/style&gt;
+
+  // 4. 在根目录下index.html配置全局变量
+  &lt;head&gt;
+      &lt;style&gt;&gt;
+        :root{
+          --el-color:#ccc;
+        }
+      &lt;/style&gt;
+  &lt;/head&gt;
+
+  &lt;!-- 其他组件下 --&gt;
+  &lt;style&gt; scoped lang="scss"&gt;
+      .box {
+          background: var(--el-color);
+      }
+  &lt;/style&gt;
+
+  // 5. 全局用法  入口文件 main.ts 引入
+  import '@/styles/index.scss'
+  // 去npm 找到 reset.scss 拷贝清除样式css，网址https://www.npmjs.com/package/scss-reset
+  /**
+   * ENGINE
+   * v0.2 | 20150615
+   * License: none (public domain)
+   */
+  ......
+  // src/styles/index.scss 创建后引入reset.scss
+  @import './reset.scss';
+  // src/style/variable.scss 创建 全局变量
+  $color: #cccccc;
+  // 如果不能引用scss中的变量，则需要在 vite.config.ts 中配置
+  export default defineConfig((config)=>{
+    plugins:[],
+    ...
+    css: {
+      preprocessorOptions: {
+        scss: {
+          javascriptEnabled: true,  // 开启了代表能在scss用js表达式
+          additionalData:`
+            @import "./src/styles/variable.scss";
+            @import "xxxxx.scss"   // 可以引入多个全局演示
+          `,
+        },
+      },
+    },
+  })
+  // 例如 根据一个 JavaScript 变量来动态设置背景颜色：
+  $bg-color: #{`#${Math.floor(Math.random()*16777215).toString(16)}`};
+
+  // 报错解决
+  // Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+  pnpm uninstalll sass -D
+  pnpm install sass@1.78 -D
+
+  // 全局 mixin.scss和全局变量一样
+  // vite.config.js
+  additionalData:`
+            @import "./src/styles/variable.scss";
+            @import "./src/scss/mixin.scss"; `,
+
+  // mixin.scss
+  @mixin ellipsis(){
+      text-overflow:ellipsis;
+      overflow:hidden;
+      white-space:nowrap;
+  }
+
+  // App.vue
+  &lt;style scoped lang="scss"&gt;
+      @include ellipsis()
+      width:$--el-width;
+  &lt;/style&gt; </code></pre>
+        <p>mock数据 （用mock-server方法更好）</p>
+        <pre><code class="language-js line-numbers">  // 1. mock造假的信息，开发中会有真实数据，只在开发阶段使用
+  // 2. 参考及安装依赖:https://www.npmjs.com/package/vite-plugin-mock
+  pnpm install -D vite-plugin-mock mockjs
+  // 3. 在 vite.config.js 配置文件启用插件。
+  import { viteMockServe } from 'vite-plugin-mock';
+  export default ({ command }) => {
+    return {
+      plugins: [
+        vue(),
+        viteMockServe({
+          /*
+            localEnabled: command === 'serve',  // 案例中使用
+          */
+          mockPath: 'mock', // 官方默认配置
+          enable: true, // 官方默认配置
+        }),
+      ],
+    };
+  };
+  // 以上写法结构
+  export default defineConfig((参数command会检测环境，只在开发中使用)=>{
+      retun  {之前写的配置对象}
+  })
+  // 4. 在根目录创建mock文件夹，去创建我们需要mock数据与接口，mock/user.ts
+  // 此函数执行会返回一个数组,数组里面包含两个用户信息，假接口
+  function createUserList() {
+    return [
+      {
+        userId: 1,
+        avatar:
+          'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+        username: 'admin',
+        password: '111111',
+        desc: '平台管理员',
+        roles: ['平台管理员'],
+        buttons: ['cuser.detail'],
+        routes: ['home'],
+        token: 'Admin Token',
+      },
+      {
+        userId: 2,
+        avatar:
+          'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+        username: 'system',
+        password: '111111',
+        desc: '系统管理员',
+        roles: ['系统管理员'],
+        buttons: ['cuser.detail', 'cuser.user'],
+        routes: ['home'],
+        token: 'System Token',
+      },
+    ];
+  }
+
+  // 对外暴露一个数组，数组里面包含登录和获取用户信息接口。官网写法
+  export default [
+    // 用户登录接口
+    {
+      url: '/api/user/login', //请求地址
+      method: 'post', //请求方式
+      response: ({ body }) => {
+        //获取请求体携带过来的用户名与密码
+        const { username, password } = body;
+        //调用获取用户信息函数,用于判断是否有此用户
+        const checkUser = createUserList().find(
+          (item) => item.username === username && item.password === password,
+        );
+        //没有用户返回失败信息
+        if (!checkUser) {
+          return { code: 201, data: { message: '账号或者密码不正确' } };
+        }
+        //如果有返回成功信息
+        const { token } = checkUser;
+        return { code: 200, data: { token } };
+      },
+    },
+    // 获取用户信息
+    {
+      url: '/api/user/info',
+      method: 'get',
+      response: (request) => {
+        //获取请求头携带token
+        const token = request.headers.token;
+        //查看用户信息是否包含有次token用户
+        const checkUser = createUserList().find(
+          (item) => item.token === token,
+        );
+        //没有返回失败的信息
+        if (!checkUser) {
+          return { code: 201, data: { message: '获取用户信息失败' } };
+        }
+        //如果有返回成功信息
+        return { code: 200, data: { checkUser } };
+      },
+    },
+  ];
+  // 5. 注意，这个mock数据是在开发阶段测试用的，生产环境要用真实数据</code></pre>
       </el-card>
     </template>
   </card-container>
 </template>
 
 <script setup lang="ts" name="vue3">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const data = ref([
-  { id: 1, h2: "Vue3" },
-  { id: 2, h2: "创建Vue3工程" },
-  { id: 3, h2: "Vue3核心语法" },
-  { id: 4, h2: "路由" },
-  { id: 5, h2: "Pinia" },
-  { id: 6, h2: "组件通信" },
-  { id: 7, h2: "Slot" },
-  { id: 8, h2: "其它 API" },
-  { id: 9, h2: "Vue3新组件" },
-  { id: 10, h2: "其他技巧" },
-  { id: 11, h2: "目配置参数" },
+  { id: 1, h2: 'Vue3' },
+  { id: 2, h2: '创建Vue3工程' },
+  { id: 3, h2: 'Vue3核心语法' },
+  { id: 4, h2: '路由' },
+  { id: 5, h2: 'Pinia' },
+  { id: 6, h2: '组件通信' },
+  { id: 7, h2: 'Slot' },
+  { id: 8, h2: '其它 API' },
+  { id: 9, h2: 'Vue3新组件' },
+  { id: 10, h2: '其他技巧' },
+  { id: 11, h2: '项目配置参数' },
+  { id: 12, h2: '其他配置' },
+  { id: 13, h2: '忽略配置' }
 ]);
 </script>
 
