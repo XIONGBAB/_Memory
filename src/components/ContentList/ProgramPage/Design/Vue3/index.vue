@@ -3422,7 +3422,7 @@
       })
     ]
   })</code></pre>
-        <p>配置 stylelint </p>
+        <p>配置 stylelint</p>
         <pre><code class="language-js line-numbers">  // 不推荐但适合不喜欢用原子化的人可以配置 (因为没必要使用，自己书写正确，浪费资源，采用原子化css)
   // 1. 老配置 需要安装prettier插件
   // 2. stylelint为css的lint工具。可格式化css代码，检査css语法错误与不合理的写法，指定css书写顺序等。
@@ -4692,14 +4692,21 @@ import ‘@/utils/permission.ts’</code></pre>
   // 其他颜色可以根据文件名进行判断</code></pre>
         <p>发布</p>
         <ul>
-          <li>发布到github上的参考说明地址：https://blog.csdn.net/Lil_y1/article/details/140348430</li>
+          <li>
+            发布到github上的参考说明地址：https://blog.csdn.net/Lil_y1/article/details/140348430
+          </li>
           <li>
             本项目视频教程：
             <ul>
-              <li>https://www.bilibili.com/video/BV1Xh411V7b5/?p=144&spm_id_from=pageDriver&vd_source=6561c812c04b13e391c4f22fc92fc077</li>
+              <li>
+                https://www.bilibili.com/video/BV1Xh411V7b5/?p=144&spm_id_from=pageDriver&vd_source=6561c812c04b13e391c4f22fc92fc077
+              </li>
             </ul>
           </li>
-          <li>运行dist文件，会发现一片空白，什么也显示不出来。打开文件发现引入地址是错的。应该用"."开头而不是/ 开头。</li>
+          <li>
+            运行dist文件，会发现一片空白，什么也显示不出来。打开文件发现引入地址是错的。应该用"."开头而不是/
+            开头。
+          </li>
           <li>
             此时我们只需要在和package.json同级的地方新增一个vue.config.ts文件，将路径修改为相对路径’./’。
             <pre><code class="language-js line-numbers">  // vue.config.ts
@@ -4707,9 +4714,12 @@ import ‘@/utils/permission.ts’</code></pre>
       publicPath:'./,
   }</code></pre>
           </li>
-          <li>然后此时打包会发现文件的路由还是出问题，现在我们只需要改一下路由模式，找到router/index.js文件,将history修改hash,再进行打包!</li>
           <li>
-            如果你想将该项目发布到aithub的page服务上，此时的dist文件看似没问题，当你创建paae并进入github给你page地址时，会发现axios发送的api接口全都没用了。控制台弹出一些htp ur之类的错误，具体原因自行搜索。所以在推送之前要在dist文件的lIndex.html上添加如下代码
+            然后此时打包会发现文件的路由还是出问题，现在我们只需要改一下路由模式，找到router/index.js文件,将history修改hash,再进行打包!
+          </li>
+          <li>
+            如果你想将该项目发布到aithub的page服务上，此时的dist文件看似没问题，当你创建paae并进入github给你page地址时，会发现axios发送的api接口全都没用了。控制台弹出一些htp
+            ur之类的错误，具体原因自行搜索。所以在推送之前要在dist文件的lIndex.html上添加如下代码
             <pre><code class="language-js line-numbers">  &lt;meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"&gt;&lt;/meta&gt;</code></pre>
           </li>
           <li>
@@ -4846,10 +4856,14 @@ import ‘@/utils/permission.ts’</code></pre>
   // 8、 使用第三方库npmjs比如 postcss-plugin-px2rem</code></pre>
         <p>使用 vant UI 库 (移动端的)</p>
         <ul>
-          <li>1. Vant是一个轻量、可靠的移动端Vue组件库，适用于开发移动端应用</li>
+          <li>
+            1. Vant是一个轻量、可靠的移动端Vue组件库，适用于开发移动端应用
+          </li>
           <li>2. 官网http://mui.ucmed.cn/#/zh-CN/intro</li>
-          <li>3. Element UI是一个为开发电脑浏览器页面的组件库，适用于桌面应用开发</li>
-          <li>4. 安装: pnpm add vant </li>
+          <li>
+            3. Element UI是一个为开发电脑浏览器页面的组件库，适用于桌面应用开发
+          </li>
+          <li>4. 安装: pnpm add vant</li>
         </ul>
         <p>使用vite 按需加载vant组件</p>
         <pre><code class="language-js line-numbers">  // 1. 操作（演示）
@@ -4902,9 +4916,9 @@ import ‘@/utils/permission.ts’</code></pre>
           <li>
             post-css 是一个css转换工具
             <ul>
-              <li>原理： css  =>   AST   =>  插件   =>  css</li>
+              <li>原理： css => AST => 插件 => css</li>
               <li>autoprefixer:自动管理 CSS 属性的浏览器前缀</li>
-              <li>postcss-pxtotem :  px 转换为rem</li>
+              <li>postcss-pxtotem : px 转换为rem</li>
             </ul>
           </li>
           <li>
@@ -5192,8 +5206,14 @@ import ‘@/utils/permission.ts’</code></pre>
   } </code></pre>
         <p>api</p>
         <ul>
-          <li>狗狗接口：https://dog.ceo/api/breed/pembroke/images/random  返回img地址</li>
-          <li>土味情话：https://api.uomg.com/api/rand.qinghua?format=json  返回message</li>
+          <li>
+            狗狗接口：https://dog.ceo/api/breed/pembroke/images/random
+            返回img地址
+          </li>
+          <li>
+            土味情话：https://api.uomg.com/api/rand.qinghua?format=json
+            返回message
+          </li>
         </ul>
         <p>nanoid</p>
         <pre><code class="language-js line-numbers">  // 1. 安装(也可以使用uuid)
@@ -5405,14 +5425,28 @@ import ‘@/utils/permission.ts’</code></pre>
   }</code></pre>
         <p>网站制作参考</p>
         <ul>
-          <li>https://demo.downdemo.com/e09193d4eb874058a806164c7090b9f1/fd71eb7d9941461da4a48c82f7f1fcfc/page-login.html</li>
-          <li>https://demo.downdemo.com/4f3981d0989b4d2e8c59a96e1f861006/349fa3000db44387a91eb90534084793/#index</li>
-          <li>https://demo.downdemo.com/4182e054b79941388df2652621e159f3/e10fdb50973a4369aab9d55bb63e58dc/</li>
-          <li>https://demo.downdemo.com/7a09ed6bf7a14c4b93fb8b6f2aa357f5/c624937277c2421d9eac8df947cd674e/</li>
+          <li>
+            https://demo.downdemo.com/e09193d4eb874058a806164c7090b9f1/fd71eb7d9941461da4a48c82f7f1fcfc/page-login.html
+          </li>
+          <li>
+            https://demo.downdemo.com/4f3981d0989b4d2e8c59a96e1f861006/349fa3000db44387a91eb90534084793/#index
+          </li>
+          <li>
+            https://demo.downdemo.com/4182e054b79941388df2652621e159f3/e10fdb50973a4369aab9d55bb63e58dc/
+          </li>
+          <li>
+            https://demo.downdemo.com/7a09ed6bf7a14c4b93fb8b6f2aa357f5/c624937277c2421d9eac8df947cd674e/
+          </li>
           <li>https://sqliteonline.com/</li>
-          <li>https://demo.downdemo.com/a7e96be0a55748b8b01f71d32ea549b3/375956306f5c43f99fbef2015089723c/</li>
-          <li>https://demo.downdemo.com/39f7d39aba6d4c9db3b6f3efa003f002/c645721f015c4a76aa742217715c4902/index.html</li>
-          <li>https://demo.downdemo.com/3131d99fb9b7498bb9fcb981dcffff8d/221b757ecf604da9a68cbbc234dbd087/</li>
+          <li>
+            https://demo.downdemo.com/a7e96be0a55748b8b01f71d32ea549b3/375956306f5c43f99fbef2015089723c/
+          </li>
+          <li>
+            https://demo.downdemo.com/39f7d39aba6d4c9db3b6f3efa003f002/c645721f015c4a76aa742217715c4902/index.html
+          </li>
+          <li>
+            https://demo.downdemo.com/3131d99fb9b7498bb9fcb981dcffff8d/221b757ecf604da9a68cbbc234dbd087/
+          </li>
         </ul>
         <p>使用prismjs</p>
         <pre><code class="language-js line-numbers">
@@ -5892,22 +5926,22 @@ import ‘@/utils/permission.ts’</code></pre>
 </template>
 
 <script setup lang="ts" name="vue3">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: 'Vue3' },
-  { id: 2, h2: '创建Vue3工程' },
-  { id: 3, h2: 'Vue3核心语法' },
-  { id: 4, h2: '路由' },
-  { id: 5, h2: 'Pinia' },
-  { id: 6, h2: '组件通信' },
-  { id: 7, h2: 'Slot' },
-  { id: 8, h2: '其它 API' },
-  { id: 9, h2: 'Vue3新组件' },
-  { id: 10, h2: '其他技巧' },
-  { id: 11, h2: '项目配置参数' },
-  { id: 12, h2: '其他配置' },
-  { id: 13, h2: '忽略配置' }
+  { id: 1, h2: "Vue3" },
+  { id: 2, h2: "创建Vue3工程" },
+  { id: 3, h2: "Vue3核心语法" },
+  { id: 4, h2: "路由" },
+  { id: 5, h2: "Pinia" },
+  { id: 6, h2: "组件通信" },
+  { id: 7, h2: "Slot" },
+  { id: 8, h2: "其它 API" },
+  { id: 9, h2: "Vue3新组件" },
+  { id: 10, h2: "其他技巧" },
+  { id: 11, h2: "项目配置参数" },
+  { id: 12, h2: "其他配置" },
+  { id: 13, h2: "忽略配置" },
 ]);
 </script>
 
