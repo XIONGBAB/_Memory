@@ -4728,7 +4728,7 @@ import ‘@/utils/permission.ts’</code></pre>
           </li>
         </ul>
       </el-card>
-      <el-card id="12" shadow="hover">
+      <el-card id="part12" shadow="hover">
         <h2>其他配置</h2>
         <p>超大屏适配方案</p>
         <pre><code class="language-js line-numbers">  // 使用了scale方案
@@ -5518,7 +5518,7 @@ import ‘@/utils/permission.ts’</code></pre>
     &lt;component&gt; :is="currentComponent"&gt;&lt;/component&gt;
   &lt;/transition&gt;</code></pre>
       </el-card>
-      <el-card id="13" shadow="hover">
+      <el-card id="part13" shadow="hover">
         <h2>忽略配置</h2>
         <p>配置语法检查 eslint （可忽略）</p>
         <pre><code class="language-js line-numbers">  // 看官方文档配置https://zh-hans.eslint.org/ || https://eslint.org/
@@ -5926,22 +5926,22 @@ import ‘@/utils/permission.ts’</code></pre>
 </template>
 
 <script setup lang="ts" name="vue3">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 const data = ref([
-  { id: 1, h2: "Vue3" },
-  { id: 2, h2: "创建Vue3工程" },
-  { id: 3, h2: "Vue3核心语法" },
-  { id: 4, h2: "路由" },
-  { id: 5, h2: "Pinia" },
-  { id: 6, h2: "组件通信" },
-  { id: 7, h2: "Slot" },
-  { id: 8, h2: "其它 API" },
-  { id: 9, h2: "Vue3新组件" },
-  { id: 10, h2: "其他技巧" },
-  { id: 11, h2: "项目配置参数" },
-  { id: 12, h2: "其他配置" },
-  { id: 13, h2: "忽略配置" },
+  { id: 1, h2: 'Vue3' },
+  { id: 2, h2: '创建Vue3工程' },
+  { id: 3, h2: 'Vue3核心语法' },
+  { id: 4, h2: '路由' },
+  { id: 5, h2: 'Pinia' },
+  { id: 6, h2: '组件通信' },
+  { id: 7, h2: 'Slot' },
+  { id: 8, h2: '其它 API' },
+  { id: 9, h2: 'Vue3新组件' },
+  { id: 10, h2: '其他技巧' },
+  { id: 11, h2: '项目配置参数' },
+  { id: 12, h2: '其他配置' },
+  { id: 13, h2: '忽略配置' }
 ]);
 </script>
 
