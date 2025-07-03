@@ -5926,22 +5926,22 @@ import ‘@/utils/permission.ts’</code></pre>
 </template>
 
 <script setup lang="ts" name="vue3">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const data = ref([
-  { id: 1, h2: 'Vue3' },
-  { id: 2, h2: '创建Vue3工程' },
-  { id: 3, h2: 'Vue3核心语法' },
-  { id: 4, h2: '路由' },
-  { id: 5, h2: 'Pinia' },
-  { id: 6, h2: '组件通信' },
-  { id: 7, h2: 'Slot' },
-  { id: 8, h2: '其它 API' },
-  { id: 9, h2: 'Vue3新组件' },
-  { id: 10, h2: '其他技巧' },
-  { id: 11, h2: '项目配置参数' },
-  { id: 12, h2: '其他配置' },
-  { id: 13, h2: '忽略配置' }
+  { id: 1, h2: "Vue3" },
+  { id: 2, h2: "创建Vue3工程" },
+  { id: 3, h2: "Vue3核心语法" },
+  { id: 4, h2: "路由" },
+  { id: 5, h2: "Pinia" },
+  { id: 6, h2: "组件通信" },
+  { id: 7, h2: "Slot" },
+  { id: 8, h2: "其它 API" },
+  { id: 9, h2: "Vue3新组件" },
+  { id: 10, h2: "其他技巧" },
+  { id: 11, h2: "项目配置参数" },
+  { id: 12, h2: "其他配置" },
+  { id: 13, h2: "忽略配置" },
 ]);
 </script>
 
