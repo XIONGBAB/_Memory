@@ -1,8 +1,6 @@
 <template>
   <div class="data-background">
-    <div class="data-dashboard">
-      Dashboard
-    </div>
+    <div class="data-dashboard">Dashboard</div>
     <div class="data-progress">
       <div class="statistic-card">
         <el-statistic :value="98500">
@@ -181,9 +179,7 @@
     </div>
     <div class="data-table">
       <div class="data-table-left">
-        <div class="left-title">
-          Development Activity
-        </div>
+        <div class="left-title">Development Activity</div>
         <div class="left-text" title="日历组件待开发">
           <span>代码是上午写的，人是下午开除的</span>
           <svg
@@ -206,14 +202,8 @@
                 id="Home---Desktop"
                 transform="translate(-155.5727, -10579.6159)"
               >
-                <g
-                  id="Group-18"
-                  transform="translate(101.4126, 10288.9861)"
-                >
-                  <g
-                    id="seabed-bg"
-                    transform="translate(54.8945, 291.3799)"
-                  >
+                <g id="Group-18" transform="translate(101.4126, 10288.9861)">
+                  <g id="seabed-bg" transform="translate(54.8945, 291.3799)">
                     <g id="Group-25">
                       <path
                         id="Fill-1"
@@ -390,10 +380,7 @@
                         stroke-linejoin="round"
                       />
                     </g>
-                    <g
-                      id="Group-13"
-                      transform="translate(769.1383, 94.3205)"
-                    >
+                    <g id="Group-13" transform="translate(769.1383, 94.3205)">
                       <path
                         id="Fill-1"
                         d="M37.3854784,51.6761445 C28.3284784,52.3311445 10.9654784,53.6651445 17.0424784,58.3191445 C23.7984784,63.4931445 48.7594784,62.7011445 59.0354784,61.8981445 C64.2964784,61.4871445 69.6574784,60.7091445 74.3204784,58.2401445 C74.9684784,57.8971445 75.6814784,57.3911445 75.6834841,56.6581445 C75.6864784,55.6781445 74.4894784,55.2221445 73.5274784,55.0371445 C67.6864784,53.9101445 61.8274784,52.8711445 55.9544784,51.9201445 C55.4464784,51.8381445 54.9394784,51.7571445 54.4314784,51.6761445 C50.9434784,51.1211445 47.8544784,55.6861445 42.0034784,54.6601445 C39.8614784,54.2841445 37.9604784,53.7731445 37.3854784,51.6761445"
@@ -497,10 +484,7 @@
                         stroke-linejoin="round"
                       />
                     </g>
-                    <g
-                      id="Group-12"
-                      transform="translate(171.1055, 109.4883)"
-                    >
+                    <g id="Group-12" transform="translate(171.1055, 109.4883)">
                       <path
                         id="Fill-1"
                         d="M24.7255,18.0537743 C24.6045,20.9357743 25.1065,23.8027743 25.6065,26.6427743 C25.7495,27.4577743 25.9175,28.3207743 26.4825,28.9237743 C27.3055,29.8017743 28.6635,29.8337743 29.8655,29.7987743 C33.5975,29.6927743 37.3275,29.5407743 41.0565,29.3427743 C41.4665,29.3207743 41.8945,29.2937743 42.2495,29.0867743 C43.0165,28.6397743 43.1235,27.5937743 43.1305,26.7057743 C43.1655,22.2537743 42.8955,17.7987743 42.3235,13.3827743 C42.2095,12.5047743 42.0565,11.5677743 41.4515,10.9217743 C40.8455,10.2767743 39.6265,10.1447743 39.1485,10.8907743 C38.9045,11.2717743 38.9175,11.7567743 38.9395,12.2087743 C39.0955,15.4847743 39.2525,18.7607743 39.4085,22.0367743 C39.4375,22.6547743 39.4625,23.2977743 39.2115,23.8627743 C38.6435,25.1407743 36.9925,25.4507743 35.5945,25.5057743 C34.0265,25.5667743 32.4535,25.5257743 30.8905,25.3827743 C30.6875,25.3637743 30.4705,25.3377743 30.3175,25.2027743 C30.1075,25.0177743 30.0925,24.7017743 30.0935,24.4227743 C30.1025,21.0127743 30.1115,17.6017743 30.1205,14.1907743 C30.1255,12.3557743 29.4315,9.36277433 27.0275,10.8937743 C25.1675,12.0777743 24.8075,16.1037743 24.7255,18.0537743"
@@ -588,7 +572,9 @@
       <div class="data-table-icon">
         <div class="icon-notice">
           <el-icon><ChatDotRound /></el-icon>
-          <span>Data refresh is not timely, please contact the administrator!</span>
+          <span
+            >Data refresh is not timely, please contact the administrator!</span
+          >
         </div>
       </div>
     </div>
@@ -596,8 +582,8 @@
 </template>
 
 <script setup lang="ts" name="DataPage">
-import { useTransition } from '@vueuse/core';
-import { ref } from 'vue';
+import { useTransition } from "@vueuse/core";
+import { ref } from "vue";
 
 const source = ref(0);
 const outputValue = useTransition(source, { duration: 1500 });
@@ -605,7 +591,7 @@ source.value = 172000;
 const source2 = ref(0);
 const outputValue2 = useTransition(source2, {
   duration: 1000,
-  transition: [0.42, 0, 1, 1]
+  transition: [0.42, 0, 1, 1],
 });
 source2.value = 3080;
 const source3 = ref(0);
@@ -671,7 +657,7 @@ source3.value = 88888;
   gap: 30px;
   height: 500px;
 }
-[class^='data-table-'] {
+[class^="data-table-"] {
   height: 100%;
   border-radius: 10px;
 }
