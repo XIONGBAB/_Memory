@@ -1,8 +1,6 @@
 <template>
   <div class="data-background">
-    <div class="data-dashboard">
-      Dashboard
-    </div>
+    <div class="data-dashboard">Dashboard</div>
     <div class="data-progress">
       <div class="statistic-card">
         <el-statistic :value="98500">
@@ -181,9 +179,7 @@
     </div>
     <div class="data-table">
       <div class="data-table-left">
-        <div class="left-title">
-          Development Activity
-        </div>
+        <div class="left-title">Development Activity</div>
         <svg
           class="tag_flower"
           xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +187,6 @@
           viewBox="0 0 863.258623 175.384073"
           version="1.1"
         >
-
           <title>seabed bg</title>
           <g
             id="Final"
@@ -572,15 +567,15 @@
         </svg>
         <div class="left-calendar">
           <div class="calendar-header">
-            <span id="month-picker" class="month-picker" @click="showMonthList = true">{{ monthNames[currMonth] }}</span>
-            <el-button class="today-btn" @click="goToday">
-              Now
-            </el-button>
+            <span
+              id="month-picker"
+              class="month-picker"
+              @click="showMonthList = true"
+              >{{ monthNames[currMonth] }}</span
+            >
+            <el-button class="today-btn" @click="goToday"> Now </el-button>
             <div class="year-picker">
-              <el-input-number
-                v-model="currYear" :min="1900"
-                :max="2100"
-              >
+              <el-input-number v-model="currYear" :min="1900" :max="2100">
                 <template #decrease-icon>
                   <el-icon><ArrowLeft /></el-icon>
                 </template>
@@ -592,7 +587,10 @@
           </div>
           <div class="calendar_body">
             <div class="calendar_week_day">
-              <div v-for="d in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']" :key="d">
+              <div
+                v-for="d in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']"
+                :key="d"
+              >
                 {{ d }}
               </div>
             </div>
@@ -602,7 +600,7 @@
                 :key="idx"
                 class="calendar_day_hover"
                 :class="{
-                  'curr_date': day.isToday,
+                  curr_date: day.isToday,
                   'not-current': !day.isCurrentMonth,
                 }"
               >
@@ -611,7 +609,11 @@
               </div>
             </div>
             <div class="month_list" :class="{ show: showMonthList }">
-              <div v-for="(name, idx) in monthNames" :key="name" @click="selectMonth(idx)">
+              <div
+                v-for="(name, idx) in monthNames"
+                :key="name"
+                @click="selectMonth(idx)"
+              >
                 <div>{{ name }}</div>
               </div>
             </div>
@@ -621,14 +623,16 @@
       <div class="data-table-icon">
         <div class="icon-notice">
           <el-icon><ChatDotRound /></el-icon>
-          <span>Data refresh is not timely, please contact the administrator!</span>
+          <span
+            >Data refresh is not timely, please contact the administrator!</span
+          >
         </div>
         <div class="icon-charts">
           <!-- <e-charts class="chart" :option="option" /> -->
-          <div><e-charts class="chart" :option="option"   autoresize /></div>
-          <div><e-charts class="chart" :option="option"   autoresize /></div>
-          <div><e-charts class="chart" :option="option"   autoresize /></div>
-          <div><e-charts class="chart" :option="option"   autoresize /></div>
+          <div><e-charts class="chart" :option="option" autoresize /></div>
+          <div><e-charts class="chart" :option="option" autoresize /></div>
+          <div><e-charts class="chart" :option="option" autoresize /></div>
+          <div><e-charts class="chart" :option="option" autoresize /></div>
         </div>
       </div>
     </div>
@@ -636,8 +640,8 @@
 </template>
 
 <script setup lang="ts" name="DataPage">
-import { useTransition } from '@vueuse/core';
-import { computed, ref } from 'vue';
+import { useTransition } from "@vueuse/core";
+import { computed, ref } from "vue";
 
 // Dashboard
 const source = ref(0);
@@ -646,7 +650,7 @@ source.value = 172000;
 const source2 = ref(0);
 const outputValue2 = useTransition(source2, {
   duration: 1000,
-  transition: [0.42, 0, 1, 1]
+  transition: [0.42, 0, 1, 1],
 });
 source2.value = 3080;
 const source3 = ref(0);
@@ -655,25 +659,28 @@ source3.value = 88888;
 // Dashboard
 // calendar
 const monthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 const today = new Date();
 const currYear = ref(today.getFullYear());
 const currMonth = ref(today.getMonth());
 const showMonthList = ref(false);
 function isLeapYear(year: number) {
-  return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 === 0);
+  return (
+    (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) ||
+    (year % 100 === 0 && year % 400 === 0)
+  );
 }
 function getFebDays(year: number) {
   return isLeapYear(year) ? 29 : 28;
@@ -694,10 +701,11 @@ const daysOfMonth = computed(() => [
   30,
   31,
   30,
-  31
+  31,
 ]);
 const calendarDays = computed(() => {
-  const days: { date: number; isToday: boolean; isCurrentMonth: boolean }[] = [];
+  const days: { date: number; isToday: boolean; isCurrentMonth: boolean }[] =
+    [];
   const firstDay = new Date(currYear.value, currMonth.value, 1).getDay();
   const totalDays = daysOfMonth.value[currMonth.value];
 
@@ -710,20 +718,20 @@ const calendarDays = computed(() => {
     days.push({
       date: prevMonthDays - i,
       isToday: false,
-      isCurrentMonth: false
+      isCurrentMonth: false,
     });
   }
 
   // 本月
   for (let d = 1; d <= totalDays; d++) {
-    const isToday
-      = d === today.getDate()
-        && currYear.value === today.getFullYear()
-        && currMonth.value === today.getMonth();
+    const isToday =
+      d === today.getDate() &&
+      currYear.value === today.getFullYear() &&
+      currMonth.value === today.getMonth();
     days.push({
       date: d,
       isToday,
-      isCurrentMonth: true
+      isCurrentMonth: true,
     });
   }
 
@@ -733,7 +741,7 @@ const calendarDays = computed(() => {
     days.push({
       date: i,
       isToday: false,
-      isCurrentMonth: false
+      isCurrentMonth: false,
     });
   }
 
@@ -755,46 +763,46 @@ function selectMonth(idx: number) {
 
 const option = computed(() => {
   return {
-      // grid: { left: 10, right: 10, top: 10, bottom: 10, containLabel: true },
+    // grid: { left: 10, right: 10, top: 10, bottom: 10, containLabel: true },
     tooltip: {
-      trigger: 'item'
+      trigger: "item",
     },
     legend: {
-      top: '5%',
-      left: 'center'
+      top: "5%",
+      left: "center",
     },
     series: [
       {
-        name: 'Access From',
-        type: 'pie',
-        radius: ['50%', '20%'], //
+        name: "Access From",
+        type: "pie",
+        radius: ["50%", "20%"], //
         avoidLabelOverlap: false,
         padAngle: 5,
         itemStyle: {
-          borderRadius: 10
+          borderRadius: 10,
         },
         label: {
           show: false,
-          position: 'center'
+          position: "center",
         },
         emphasis: {
           label: {
             show: true,
             fontSize: 10,
-            fontWeight: 'bold'
-          }
+            fontWeight: "bold",
+          },
         },
         labelLine: {
-          show: false
+          show: false,
         },
         data: [
-          { value: 1048, name: 'A' },
-          { value: 735, name: 'B' },
-          { value: 580, name: 'C' },
-          { value: 484, name: 'D' }
-        ]
-      }
-    ]
+          { value: 1048, name: "A" },
+          { value: 735, name: "B" },
+          { value: 580, name: "C" },
+          { value: 484, name: "D" },
+        ],
+      },
+    ],
   };
 });
 </script>
@@ -856,7 +864,7 @@ const option = computed(() => {
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   gap: 30px;
 }
-[class^='data-table-'] {
+[class^="data-table-"] {
   height: 500px;
   border-radius: 10px;
 }
