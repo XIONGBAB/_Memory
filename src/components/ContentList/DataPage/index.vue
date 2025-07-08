@@ -1,8 +1,6 @@
 <template>
   <div class="data-background">
-    <div class="data-dashboard">
-      Dashboard
-    </div>
+    <div class="data-dashboard">Dashboard</div>
     <div class="data-progress">
       <div class="statistic-card">
         <el-statistic :value="98500">
@@ -181,9 +179,7 @@
     </div>
     <div class="data-table">
       <div class="data-table-left">
-        <div class="left-title">
-          Development Activity
-        </div>
+        <div class="left-title">Development Activity</div>
         <svg
           class="tag_flower"
           xmlns="http://www.w3.org/2000/svg"
@@ -575,10 +571,9 @@
               id="month-picker"
               class="month-picker"
               @click="showMonthList = true"
-            >{{ monthNames[currMonth] }}</span>
-            <el-button class="today-btn" @click="goToday">
-              Now
-            </el-button>
+              >{{ monthNames[currMonth] }}</span
+            >
+            <el-button class="today-btn" @click="goToday"> Now </el-button>
             <div class="year-picker">
               <el-input-number v-model="currYear" :min="1900" :max="2100">
                 <template #decrease-icon>
@@ -605,7 +600,7 @@
                 :key="idx"
                 class="calendar_day_hover"
                 :class="{
-                  'curr_date': day.isToday,
+                  curr_date: day.isToday,
                   'not-current': !day.isCurrentMonth,
                 }"
               >
@@ -628,7 +623,9 @@
       <div class="data-table-icon">
         <div class="icon-notice">
           <el-icon><ChatDotRound /></el-icon>
-          <span>Data refresh is not timely, please contact the administrator!</span>
+          <span
+            >Data refresh is not timely, please contact the administrator!</span
+          >
         </div>
         <div class="icon-charts">
           <!-- <e-charts class="chart" :option="option" /> -->
@@ -643,8 +640,8 @@
 </template>
 
 <script setup lang="ts" name="DataPage">
-import { useTransition } from '@vueuse/core';
-import { computed, ref } from 'vue';
+import { useTransition } from "@vueuse/core";
+import { computed, ref } from "vue";
 
 // Dashboard
 const source = ref(0);
@@ -653,7 +650,7 @@ source.value = 172000;
 const source2 = ref(0);
 const outputValue2 = useTransition(source2, {
   duration: 1000,
-  transition: [0.42, 0, 1, 1]
+  transition: [0.42, 0, 1, 1],
 });
 source2.value = 3080;
 const source3 = ref(0);
@@ -662,18 +659,18 @@ source3.value = 88888;
 // Dashboard
 // calendar
 const monthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 const today = new Date();
 const currYear = ref(today.getFullYear());
@@ -681,8 +678,8 @@ const currMonth = ref(today.getMonth());
 const showMonthList = ref(false);
 function isLeapYear(year: number) {
   return (
-    (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0)
-    || (year % 100 === 0 && year % 400 === 0)
+    (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) ||
+    (year % 100 === 0 && year % 400 === 0)
   );
 }
 function getFebDays(year: number) {
@@ -704,11 +701,11 @@ const daysOfMonth = computed(() => [
   30,
   31,
   30,
-  31
+  31,
 ]);
 const calendarDays = computed(() => {
-  const days: { date: number; isToday: boolean; isCurrentMonth: boolean }[]
-    = [];
+  const days: { date: number; isToday: boolean; isCurrentMonth: boolean }[] =
+    [];
   const firstDay = new Date(currYear.value, currMonth.value, 1).getDay();
   const totalDays = daysOfMonth.value[currMonth.value];
 
@@ -721,20 +718,20 @@ const calendarDays = computed(() => {
     days.push({
       date: prevMonthDays - i,
       isToday: false,
-      isCurrentMonth: false
+      isCurrentMonth: false,
     });
   }
 
   // 本月
   for (let d = 1; d <= totalDays; d++) {
-    const isToday
-      = d === today.getDate()
-        && currYear.value === today.getFullYear()
-        && currMonth.value === today.getMonth();
+    const isToday =
+      d === today.getDate() &&
+      currYear.value === today.getFullYear() &&
+      currMonth.value === today.getMonth();
     days.push({
       date: d,
       isToday,
-      isCurrentMonth: true
+      isCurrentMonth: true,
     });
   }
 
@@ -744,7 +741,7 @@ const calendarDays = computed(() => {
     days.push({
       date: i,
       isToday: false,
-      isCurrentMonth: false
+      isCurrentMonth: false,
     });
   }
 
@@ -768,44 +765,44 @@ const option = computed(() => {
   return {
     // grid: { left: 10, right: 10, top: 10, bottom: 10, containLabel: true },
     tooltip: {
-      trigger: 'item'
+      trigger: "item",
     },
     legend: {
-      top: '5%',
-      left: 'center'
+      top: "5%",
+      left: "center",
     },
     series: [
       {
-        name: 'Access From',
-        type: 'pie',
-        radius: ['30%', '60%'], //
+        name: "Access From",
+        type: "pie",
+        radius: ["30%", "60%"], //
         avoidLabelOverlap: false,
         padAngle: 10,
         itemStyle: {
-          borderRadius: 10
+          borderRadius: 10,
         },
         label: {
           show: false,
-          position: 'center'
+          position: "center",
         },
         emphasis: {
           label: {
             show: true,
             fontSize: 18,
-            fontWeight: 'bold'
-          }
+            fontWeight: "bold",
+          },
         },
         labelLine: {
-          show: false
+          show: false,
         },
         data: [
-          { value: 1048, name: 'A' },
-          { value: 735, name: 'B' },
-          { value: 580, name: 'C' },
-          { value: 484, name: 'D' }
-        ]
-      }
-    ]
+          { value: 1048, name: "A" },
+          { value: 735, name: "B" },
+          { value: 580, name: "C" },
+          { value: 484, name: "D" },
+        ],
+      },
+    ],
   };
 });
 const data: number[][] = [];
@@ -820,24 +817,24 @@ const option1 = computed(() => {
   return {
     polar: {},
     tooltip: {
-      trigger: 'axis',
+      trigger: "axis",
       axisPointer: {
-        type: 'cross'
-      }
+        type: "cross",
+      },
     },
     angleAxis: {
-      type: 'value',
-      startAngle: 0
+      type: "value",
+      startAngle: 0,
     },
     radiusAxis: {},
     series: [
       {
-        coordinateSystem: 'polar',
-        name: 'line',
-        type: 'line',
-        data
-      }
-    ]
+        coordinateSystem: "polar",
+        name: "line",
+        type: "line",
+        data,
+      },
+    ],
   };
 });
 
@@ -846,18 +843,18 @@ const option2 = computed(() => {
     graphic: {
       elements: [
         {
-          type: 'text',
-          left: 'center',
-          top: 'center',
+          type: "text",
+          left: "center",
+          top: "center",
           style: {
-            text: 'XIONGBAB',
+            text: "XIONGBAB",
             fontSize: 40,
-            fontWeight: 'bold',
+            fontWeight: "bold",
             lineDash: [0, 200],
             lineDashOffset: 0,
-            fill: 'transparent',
-            stroke: 'skyblue',
-            lineWidth: 1
+            fill: "transparent",
+            stroke: "skyblue",
+            lineWidth: 1,
           },
           keyframeAnimation: {
             duration: 8000,
@@ -866,22 +863,22 @@ const option2 = computed(() => {
               {
                 percent: 0.3,
                 style: {
-                  fill: 'transparent',
+                  fill: "transparent",
                   lineDashOffset: 200,
-                  lineDash: [200, 0]
-                }
+                  lineDash: [200, 0],
+                },
               },
               {
                 percent: 1,
                 style: {
-                  fill: 'transparent'
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
+                  fill: "transparent",
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
   };
 });
 function func(x) {
@@ -902,54 +899,54 @@ const option3 = computed(() => {
       top: 40,
       left: 50,
       right: 40,
-      bottom: 50
+      bottom: 50,
     },
     xAxis: {
-      name: 'x',
+      name: "x",
       minorTick: {
-        show: true
+        show: true,
       },
       minorSplitLine: {
-        show: true
-      }
+        show: true,
+      },
     },
     yAxis: {
-      name: 'y',
+      name: "y",
       min: -100,
       max: 100,
       minorTick: {
-        show: true
+        show: true,
       },
       minorSplitLine: {
-        show: true
-      }
+        show: true,
+      },
     },
     dataZoom: [
       {
         show: true,
-        type: 'inside',
-        filterMode: 'none',
+        type: "inside",
+        filterMode: "none",
         xAxisIndex: [0],
         startValue: -20,
-        endValue: 20
+        endValue: 20,
       },
       {
         show: true,
-        type: 'inside',
-        filterMode: 'none',
+        type: "inside",
+        filterMode: "none",
         yAxisIndex: [0],
         startValue: -20,
-        endValue: 20
-      }
+        endValue: 20,
+      },
     ],
     series: [
       {
-        type: 'line',
+        type: "line",
         showSymbol: false,
         clip: true,
-        data: generateData()
-      }
-    ]
+        data: generateData(),
+      },
+    ],
   };
 });
 </script>
@@ -1011,7 +1008,7 @@ const option3 = computed(() => {
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   gap: 30px;
 }
-[class^='data-table-'] {
+[class^="data-table-"] {
   height: 500px;
   border-radius: 10px;
 }
