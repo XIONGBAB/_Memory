@@ -1,0 +1,17 @@
+/node_modules/*
+/dist/*
+/html/*
+/public/*
+/vite.config.ts
+/tsconfig.json
+/tsconfig.app.json
+/tsconfig.node.json
+/README.md
+/.prettierrc.json
+/package.json
+/README.md
+/vite-env.d.ts 
+
+/.github/*
+/.vscode/*
+*.config.*

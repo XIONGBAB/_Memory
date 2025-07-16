@@ -1,0 +1,13 @@
+// media screen
+@media screen and (min-width:750px) {
+  html {
+    font-size: 75px !important;
+  }
+};
+
+#app {
+  /** 让字体可以抗锯齿，字体更清晰 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

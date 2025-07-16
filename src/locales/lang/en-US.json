@@ -1,0 +1,6 @@
+{
+  "welcome": "Hello, {name}!",
+  "button": {
+    "save": "Save"
+  }
+}
