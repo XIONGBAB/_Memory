@@ -1,7 +1,7 @@
-import nprogress from 'nprogress';
+import nprogress from "nprogress";
 // 在鉴权文件里处理
-import router from '@/router';
-import 'nprogress/nprogress.css';
+import router from "@/router";
+import "nprogress/nprogress.css";
 
 router.beforeEach((_to: any, _from: any, next: any) => {
   nprogress.start();

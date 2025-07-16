@@ -2,10 +2,6 @@
   <div>svg</div>
 </template>
 
-<script setup lang='ts' name='SvgIcon'>
+<script setup lang="ts" name="SvgIcon"></script>
 
-</script>
-
-<style scoped lang='scss'>
-
-</style>
+<style scoped lang="scss"></style>
