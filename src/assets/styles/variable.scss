@@ -26,16 +26,48 @@ $color-danger:#FF5F4E;
 $color-info:#0283EF; 
 
 // text color
-$color-text-primary:#111111;
-$color-text-regular:#333333;
-$color-text-assist:#666666; 
-$color-text-secondary:#999999;
-$color-text-placeholder:#B2B2B2;
-$color-text-empty:#6C7D8F;
+$text-primary:#111111;
+$text-title: #4d4d4d;
+$text-regular:#333333;
+$text-assist:#666666; 
+$text-secondary:#999999;
+$text-placeholder:#B2B2B2;
+$text-empty:#6C7D8F;
+
+// border color
+$bd-border:#CDCDCD; 
+$bd-line:#E2E2E2;
+$bd-gray: #c0c4cc;
+$bd-light: #e4e7ed;
+$bd-white:white;
 
 // border
-$color-border:#CDCDCD; 
-$color-line:#E2E2E2;
+$bd-radius-xl:20px;
+$bd-radius-circle:50%;
+
+
+// padding and margin
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-base: 12px;
+$spacing-lg: 18px;
+$spacing-xl: 20px;
+$spacing-2xl: 24px;
+$spacing-3xl: 30px;
+$spacing-4xl: 36px;
+
+// transition
+$transition-base: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+$transition-all: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// box shadow
+$box-shadow-base: 0 2px 4px 0 rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.04);
+$box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.12);
+$box-shadow-white:0 0 0 5px white;
+$box-shadow-gray: 0 2px 4px 0 rgba(145, 145, 145, 0.12);
 
 
 /*! 
@@ -52,4 +84,7 @@ $color-line:#E2E2E2;
   --bg-white:#FFFFFF;
   --bg-black:#000000; 
   --bg-transparent:transparent;
+  --text-white:#F6F6F6;
+  --text-black: #4d4d4d;
+  --bg-gray:rgba(218, 218, 218, 0.4);
 }

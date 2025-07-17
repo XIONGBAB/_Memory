@@ -13,10 +13,13 @@
 
 body{
   font-family:var(--system-font);
-  transition: font-family 0.3s ease;
-  color: $color-text-regular;
+  transition: font-family $transition-base;
+  color: $text-regular;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+
+
+

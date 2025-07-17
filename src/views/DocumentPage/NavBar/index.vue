@@ -64,7 +64,7 @@ const toggleDark = useToggle(isDark);
   padding-right: 60px;
   width: 100%;
   height: 60px;
-  background: $bg-color-base;
+  background: var(--bg-white);
   border-bottom: 1px solid $bd-color-light;
   box-shadow: $box-shadow-gray;
   font-size: 14px;

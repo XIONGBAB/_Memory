@@ -47,7 +47,8 @@ export default defineConfig((_command) => {
       proxy: {
         '/api': 'http://xx.com'
       },
-      cors: true
+      cors: true,
+      strictPort: true
     },
     resolve: {
       alias: {
