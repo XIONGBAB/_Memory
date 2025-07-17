@@ -9,3 +9,47 @@ $font-family-rob: 'Roboto', 'Arial', serif;
 $font-family-sha: 'Shalimar', 'Arial', serif;
 $font-family-pla: 'Playpen Sans', 'Arial', serif;
 $font-family-ari: 'Arial', serif,Helvetica;
+
+// font size
+$text-xs: 12px;
+$text-sm: 14px;
+$text-base: 16px;
+$text-lg: 18px;
+$text-xl: 20px;
+$text-2xl: 24px;
+$text-3xl: 30px;
+$text-4xl: 36px;
+
+// color 
+$color-warning:#FF7B35;
+$color-danger:#FF5F4E; 
+$color-info:#0283EF; 
+
+// text color
+$color-text-primary:#111111;
+$color-text-regular:#333333;
+$color-text-assist:#666666; 
+$color-text-secondary:#999999;
+$color-text-placeholder:#B2B2B2;
+$color-text-empty:#6C7D8F;
+
+// border
+$color-border:#CDCDCD; 
+$color-line:#E2E2E2;
+
+
+/*! 
+ * @description: Define global variables;
+ * @time: 2025-07-17;
+ * @device: PC, Mobile;
+ */
+:root{
+  // font family
+  --system-font: -apple-system, BlinkMacSystemFont,  "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  // background
+  --bg-color:#F6F6F6;
+  --bg-white:#FFFFFF;
+  --bg-black:#000000; 
+  --bg-transparent:transparent;
+}
