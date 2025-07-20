@@ -1,6 +1,7 @@
 {
-  "welcome": "Hello, {name}!",
-  "button": {
-    "save": "Save"
+  "home": {
+    "introduce": "I am an amateur developer and learning programming is my hobby. At present, I have learned HTML, CSS, Javascript, and Vue3, but of course, this is still in the learning stage. If you can, you can provide me with some guidance on optimization on the website I have written. Thank you!",
+    "time": "development time June 6th, 2025",
+    "title": "Hi, I'm XIONGBAB."
   }
 }
