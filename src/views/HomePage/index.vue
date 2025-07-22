@@ -14,10 +14,10 @@
                         :class="c.class"
                       ></div>
                       <h1 v-if="c.class === 'home-item-h1'" @click="goToHome">
-                        {{ $t(c.content || '') }}
+                        {{ $t(c.content || "") }}
                       </h1>
                       <p v-if="c.class === 'home-item-h2'">
-                        {{ $t(c.content || '') }}
+                        {{ $t(c.content || "") }}
                       </p>
                     </template>
                   </template>
@@ -56,8 +56,8 @@
               v-model="value2"
               inline-prompt
               style="
-                --el-switch-on-color:rgba(218, 218, 218, 0.4);
-                --el-switch-off-color:  rgba(77, 77, 77, 0.4);
+                --el-switch-on-color: rgba(218, 218, 218, 0.4);
+                --el-switch-off-color: rgba(77, 77, 77, 0.4);
               "
               active-icon="Sunny"
               inactive-icon="Moon"
@@ -70,10 +70,10 @@
 </template>
 
 <script setup lang="ts" name="HomePage">
-import { useDark, useToggle } from '@vueuse/core';
-import { computed, ref } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useRouter } from 'vue-router';
+import { useDark, useToggle } from "@vueuse/core";
+import { computed, ref } from "vue";
+import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
 
 // change button
 const value2 = ref(false);
@@ -82,29 +82,29 @@ const value2 = ref(false);
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 const changeTheme = computed(() =>
-  isDark.value ? 'var(--bg-black)' : 'var(--bg-white)'
+  isDark.value ? "var(--bg-black)" : "var(--bg-white)",
 );
 const changeColor = computed(() =>
-  isDark.value ? 'var(--text-white)' : 'var(--text-black)'
+  isDark.value ? "var(--text-white)" : "var(--text-black)",
 );
 const bgColor = computed(() =>
-  isDark.value ? 'var(--bg-transparent)' : 'var(--bg-gray)'
+  isDark.value ? "var(--bg-transparent)" : "var(--bg-gray)",
 );
 
 // link router
 const router = useRouter();
 function goToHome() {
-  router.push('/doc');
+  router.push("/doc");
 }
 
 // toggle language
 const { locale } = useI18n();
-const targetLang = computed(() => (locale.value === 'en' ? 'zh' : 'en'));
+const targetLang = computed(() => (locale.value === "en" ? "zh" : "en"));
 
 function toggleLang() {
   const newLang = targetLang.value;
   locale.value = newLang;
-  localStorage.setItem('lang', newLang);
+  localStorage.setItem("lang", newLang);
 }
 
 interface Item {
@@ -115,42 +115,42 @@ interface Item {
 }
 // forEach item
 const items = ref<Item[]>([
-  { id: 1, class: 'home-item-b1' },
-  { id: 2, class: 'home-item-b2 home-item-circle' },
-  { id: 3, class: 'home-item-b3' },
-  { id: 4, class: 'home-item-b4' },
+  { id: 1, class: "home-item-b1" },
+  { id: 2, class: "home-item-b2 home-item-circle" },
+  { id: 3, class: "home-item-b3" },
+  { id: 4, class: "home-item-b4" },
   {
     id: 5,
-    class: 'home-item-b5 home-item-circle',
+    class: "home-item-b5 home-item-circle",
     children: [
-      { id: 1, class: 'home-item-b5-1' },
+      { id: 1, class: "home-item-b5-1" },
       {
         id: 2,
-        class: 'home-item-b5-2',
-        children: [{ id: 1, class: 'home-item-avatar' }]
+        class: "home-item-b5-2",
+        children: [{ id: 1, class: "home-item-avatar" }],
       },
-      { id: 3, class: 'home-item-b5-3' },
+      { id: 3, class: "home-item-b5-3" },
       {
         id: 4,
-        class: 'home-item-b5-4',
+        class: "home-item-b5-4",
         children: [
           {
             id: 1,
-            class: 'home-item-h1',
-            content: 'home.title'
+            class: "home-item-h1",
+            content: "home.title",
           },
           {
             id: 2,
-            class: 'home-item-h2',
-            content: 'home.introduce'
-          }
-        ]
-      }
-    ]
+            class: "home-item-h2",
+            content: "home.introduce",
+          },
+        ],
+      },
+    ],
   },
-  { id: 6, class: 'home-item-b6' },
-  { id: 7, class: 'home-item-b7' },
-  { id: 8, class: 'home-item-b8' }
+  { id: 6, class: "home-item-b6" },
+  { id: 7, class: "home-item-b7" },
+  { id: 8, class: "home-item-b8" },
 ]);
 </script>
 
@@ -174,7 +174,7 @@ const items = ref<Item[]>([
 }
 .home-item-circle {
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0;
@@ -188,7 +188,7 @@ const items = ref<Item[]>([
   }
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     bottom: 0;
@@ -294,13 +294,13 @@ const items = ref<Item[]>([
   min-width: 140px;
   width: 140px;
   height: 140px;
-  background: url('@/assets/images/avatar.png') no-repeat center center;
+  background: url("@/assets/images/avatar.png") no-repeat center center;
   background-size: 85%;
   border-radius: $bd-radius-circle;
   box-shadow: 0 0 0 2px $bd-white;
   transition: all $transition-base;
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -326,7 +326,7 @@ const items = ref<Item[]>([
   position: relative;
   border-right: 1px dashed $bd-line;
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;

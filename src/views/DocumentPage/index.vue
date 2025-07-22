@@ -31,8 +31,8 @@
           </svg>
         </div>
         <div class="aside-top-introduce">
-          <h2>{{ $t('doc.introduce') }}</h2>
-          <p>{{ $t('doc.describe') }}</p>
+          <h2>{{ $t("doc.introduce") }}</h2>
+          <p>{{ $t("doc.describe") }}</p>
         </div>
       </div>
       <div class="aside-search grid">
@@ -71,9 +71,9 @@
             v-model="themeValue"
             inline-prompt
             style="
-                --el-switch-on-color:rgba(218, 218, 218, 0.4);
-                --el-switch-off-color:  rgba(77, 77, 77, 0.4);
-              "
+              --el-switch-on-color: rgba(218, 218, 218, 0.4);
+              --el-switch-off-color: rgba(77, 77, 77, 0.4);
+            "
             active-icon="Sunny"
             inactive-icon="Moon"
           />
@@ -83,9 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="main">
-      1
-    </div>
+    <div class="main">1</div>
     <!-- <NavBar />
     <AsideMenu />
     <ContentMain /> -->
@@ -93,17 +91,17 @@
 </template>
 
 <script setup lang="ts" name="DocumentPage">
-import { useDark, useToggle } from '@vueuse/core';
-import dayjs from 'dayjs';
-import { onMounted, ref } from 'vue';
+import { useDark, useToggle } from "@vueuse/core";
+import dayjs from "dayjs";
+import { onMounted, ref } from "vue";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 // menu variable
-const menuWidth = ref('240px');
+const menuWidth = ref("240px");
 
 // #region search
-const state = ref('');
+const state = ref("");
 interface LinkItem {
   value: string;
   link: string;
@@ -111,8 +109,8 @@ interface LinkItem {
 const links = ref<LinkItem[]>([]);
 function loadAll() {
   return [
-    { value: 'vue', link: 'https://github.com/vuejs/vue' },
-    { value: 'element', link: 'https://github.com/ElemeFE/element' }
+    { value: "vue", link: "https://github.com/vuejs/vue" },
+    { value: "element", link: "https://github.com/ElemeFE/element" },
   ];
 }
 let timeout: ReturnType<typeof setTimeout>;
@@ -141,7 +139,7 @@ function handleSelect(item: Record<string, any>) {
 const themeValue = ref(false);
 // date format
 
-const value2 = dayjs().format('YYYY-MM-DD');
+const value2 = dayjs().format("YYYY-MM-DD");
 
 onMounted(() => {
   // search
