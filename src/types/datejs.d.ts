@@ -1,4 +1,4 @@
-declare module 'datajs' {
+declare module "datajs" {
   export function parseJSON(str: string): any;
   export function toQueryString(obj: object): string;
   export const storage: {
