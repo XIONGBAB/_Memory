@@ -17,6 +17,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow: clip auto;
 }
 
 // common styles
@@ -29,4 +30,60 @@ body{
 .grid{
   display: grid;
 }
+// mixin
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@mixin ellipsis-more() {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
 
+// theme
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;  
+}
+.dark::view-transition-old(root) {
+  z-index: 9999;
+  
+}
+
+// scroll
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: #adadad;
+  }
+  ::-webkit-scrollbar-track {
+    background: #3d3d3d;
+  }
+}
+/* 所有浏览器：设置滚动条基本尺寸 */
+html {
+  transition: color $transition-base;
+  scrollbar-width: thin; 
+  scrollbar-color: #dddddd rgba(255, 255, 255, 0.05); 
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 204, 204);
+  border-radius: 0.2667rem;
+  transition: all 0.2s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color: rgb(178, 178, 178);
+}

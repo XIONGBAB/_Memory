@@ -93,7 +93,7 @@
 import { Open, TurnOff } from "@element-plus/icons-vue";
 import { onMounted, ref } from "vue";
 import useMenuStore from "@/store/modules/menu";
-import MenuTree from "@/views/DocumentPage/AsideMenu/MenuTree/index.vue";
+// import MenuTree from "@/views/DocumentPage/AsideMenu/MenuTree/index.vue";
 
 // #region btn click change width
 const menuStore = useMenuStore();

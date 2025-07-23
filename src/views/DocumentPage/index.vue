@@ -64,9 +64,19 @@
           </template>
         </el-autocomplete>
       </div>
-      <div class="aside-menu"></div>
+      <div class="aside-menu">
+        <el-scrollbar>
+          <el-menu
+            default-active="/data"
+            unique-opened
+            class="el-menu-vertical-demo aside-menu-collapse"
+          >
+            <MenuTree :menuList="menuStore.menuRoutes" />
+          </el-menu>
+        </el-scrollbar>
+      </div>
       <div class="aside-toggle grid">
-        <div class="aside-toggle-switch" @click="toggleDark()">
+        <div class="aside-toggle-switch" @click="toggleTheme">
           <el-switch
             v-model="themeValue"
             inline-prompt
@@ -83,7 +93,13 @@
         </div>
       </div>
     </div>
-    <div class="main">1</div>
+    <div class="main  ">
+      <ul v-infinite-scroll="load" class="infinite-list" style="overflow: auto">
+        <li v-for="i in count" :key="i" class="infinite-list-item">
+          {{ i }}
+        </li>
+      </ul>
+    </div>
     <!-- <NavBar />
     <AsideMenu />
     <ContentMain /> -->
@@ -91,17 +107,50 @@
 </template>
 
 <script setup lang="ts" name="DocumentPage">
-import { useDark, useToggle } from "@vueuse/core";
-import dayjs from "dayjs";
-import { onMounted, ref } from "vue";
+import { useDark, useToggle } from '@vueuse/core';
+import dayjs from 'dayjs';
+import { onMounted, ref } from 'vue';
+import useMenuStore from '@/store/modules/menu';
+import MenuTree from '@/views/DocumentPage/MenuTree/index.vue';
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+
+// 切换主题
+function toggleTheme(e: MouseEvent) {
+  const transition = document.startViewTransition(() => {
+    toggleDark(); // 实际切换主题
+  });
+  transition.ready.then(() => {
+    const x = e.clientX;
+    const y = e.clientY;
+    // 从点击点到窗口最远边缘的距离，这个距离即为圆的半径，用于确定一个圆形裁剪路径 (clip path) 的最大尺寸，以便覆盖整个视窗。
+    // 勾股定理：a² + b² = c²
+    const radius = Math.sqrt(
+      Math.max(x, window.innerWidth - x) ** 2 + Math.max(y, window.innerHeight - y) ** 2
+    ); // 一个数的平方根
+
+    const clipPath = [`circle(0 at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`];
+    // 实现过渡的过程 circle
+    document.documentElement.animate(
+      {
+        clipPath: isDark.value ? clipPath.reverse() : clipPath
+      },
+      {
+        duration: 500,
+        easing: 'ease-in',
+        pseudoElement: isDark.value ? '::view-transition-old(root)' : '::view-transition-new(root)'
+      }
+    );
+  });
+}
+
 // menu variable
-const menuWidth = ref("240px");
+const menuWidth = ref('240px');
+const menuStore = useMenuStore();
 
 // #region search
-const state = ref("");
+const state = ref('');
 interface LinkItem {
   value: string;
   link: string;
@@ -109,8 +158,8 @@ interface LinkItem {
 const links = ref<LinkItem[]>([]);
 function loadAll() {
   return [
-    { value: "vue", link: "https://github.com/vuejs/vue" },
-    { value: "element", link: "https://github.com/ElemeFE/element" },
+    { value: 'vue', link: 'https://github.com/vuejs/vue' },
+    { value: 'element', link: 'https://github.com/ElemeFE/element' }
   ];
 }
 let timeout: ReturnType<typeof setTimeout>;
@@ -138,8 +187,14 @@ function handleSelect(item: Record<string, any>) {
 // toggle Them button
 const themeValue = ref(false);
 // date format
+const value2 = dayjs().format('YYYY-MM-DD');
 
-const value2 = dayjs().format("YYYY-MM-DD");
+// test
+const count = ref(0);
+function load() {
+  count.value += 10;
+}
+// test
 
 onMounted(() => {
   // search
@@ -148,10 +203,17 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+
+
 .container {
+  position: relative;
   grid-template-columns: v-bind(menuWidth) 1fr;
 }
 .aside {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
   padding: 10px;
   grid-template-rows: 80px 60px 1fr 40px;
   .aside-top,
@@ -185,9 +247,17 @@ onMounted(() => {
   }
   .aside-menu {
     margin: 10px 0;
-    width: inherit;
-    min-width: max-content;
-    min-height: max-content;
+    border-radius: 5px;
+    overflow-y: auto;
+    :deep(.el-scrollbar__view) {
+      height: inherit;
+      overflow-x: hidden;
+      border: 1px solid var(--el-border-color);
+    }
+    .aside-menu-collapse {
+      border-right: none;
+      border-radius: 5px;
+    }
   }
   .aside-toggle {
     grid-template-columns: 1fr 1fr;
@@ -195,14 +265,42 @@ onMounted(() => {
     align-items: center;
     font-size: $text-base;
     color: $text-secondary;
+    .aside-toggle-date{
+      justify-self: start;
+    }
   }
 }
 .main {
   width: 100%;
   min-width: 1200px;
-  background-color: var(--bg-gray);
+  // background-color: var(--bg-gray);
+  .infinite-list {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow-y: scroll;
+  }
 }
-
+// .infinite-list {
+//   width: 100%;
+//   max-height: min-content;
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+// }
+// .infinite-list .infinite-list-item {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 900px;
+//   background: var(--bg-white);
+//   margin: 1px;
+//   color: var(--el-color-primary);
+// }
+// .infinite-list .infinite-list-item + .list-item {
+//   margin-top: 10px;
+// }
 // #region search
 :deep(.el-autocomplete) {
   --el-border-radius-base: 18px;
