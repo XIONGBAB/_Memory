@@ -1,7 +1,7 @@
 <template>
   <div class="container grid">
     <div class="aside grid">
-      <div class="aside-top grid">
+      <div class="aside-top grid" style="overflow: hidden;">
         <div class="aside-top-icon">
           <svg
             t="1750147474497"
@@ -30,9 +30,20 @@
             />
           </svg>
         </div>
-        <div class="aside-top-introduce">
-          <h2>{{ $t("doc.introduce") }}</h2>
-          <p>{{ $t("doc.describe") }}</p>
+        <transition name="el-zoom-in-center">
+          <div
+            v-if="!isCollapse " class="aside-top-introduce"
+          >
+            <h2>{{ $t("doc.introduce") }}</h2>
+            <p>{{ $t("doc.describe") }}</p>
+          </div>
+        </transition>
+        <div
+          class="aside-top-toggle"
+          :class="{ active: isCollapse }"
+          @click="toggleMenu"
+        >
+          <el-icon><ArrowRight /></el-icon>
         </div>
       </div>
       <div class="aside-search grid">
@@ -67,6 +78,7 @@
       <div class="aside-menu">
         <el-scrollbar>
           <el-menu
+            :collapse="isCollapse"
             default-active="/data"
             unique-opened
             class="el-menu-vertical-demo aside-menu-collapse"
@@ -76,7 +88,7 @@
         </el-scrollbar>
       </div>
       <div class="aside-toggle grid">
-        <div class="aside-toggle-switch" @click="toggleTheme">
+        <!-- <div class="aside-toggle-switch" @click="toggleTheme">
           <el-switch
             v-model="themeValue"
             inline-prompt
@@ -87,10 +99,12 @@
             active-icon="Sunny"
             inactive-icon="Moon"
           />
-        </div>
-        <div class="aside-toggle-date">
-          {{ value2 }}
-        </div>
+        </div> -->
+        <transition name="el-zoom-in-bottom">
+          <div v-show="!isCollapse" class="aside-toggle-date">
+            {{ value2 }}
+          </div>
+        </transition>
       </div>
     </div>
     <div class="main  ">
@@ -148,6 +162,7 @@ function toggleTheme(e: MouseEvent) {
 // menu variable
 const menuWidth = ref('240px');
 const menuStore = useMenuStore();
+const menuCollapse = ref('219px');
 
 // #region search
 const state = ref('');
@@ -184,12 +199,27 @@ function handleSelect(item: Record<string, any>) {
 }
 // #endregion search
 
+// menu collapse
+const isCollapse = ref<boolean>(false);
+function toggleMenu() {
+  menuStore.toggleCollapse();
+  isCollapse.value = menuStore.isCollapse;
+  if (isCollapse.value) {
+    menuWidth.value = '84px';
+    menuCollapse.value = '64px';
+  }
+  else {
+    menuWidth.value = '240px';
+    menuCollapse.value = '219px';
+  }
+}
+
 // toggle Them button
 const themeValue = ref(false);
 // date format
 const value2 = dayjs().format('YYYY-MM-DD');
 
-// test
+//  main test
 const count = ref(0);
 function load() {
   count.value += 10;
@@ -203,19 +233,17 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-
-
 .container {
   position: relative;
   grid-template-columns: v-bind(menuWidth) 1fr;
+  transition: all $transition-base;
 }
 .aside {
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: relative;
   height: 100vh;
   padding: 10px;
   grid-template-rows: 80px 60px 1fr 40px;
+  border-right: 1px solid var(--bg-gray);
   .aside-top,
   .aside-search,
   .aside-toggle {
@@ -236,43 +264,71 @@ onMounted(() => {
     h2,
     p {
       margin: 0;
+      @include ellipsis;
     }
     p {
       color: $text-assist;
       font-family: $font-family-ari;
     }
+    // &.active {
+    //   overflow: hidden;
+    //   transition: all 0.3s ease-in-out;
+    //   opacity: 0;
+    // }
+  }
+  .aside-top-toggle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--bg-gray);
+    background: var(--bg-gray);
+    border-radius: $bd-radius-circle;
+    z-index: 10;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    &.active {
+      transform: rotate(180deg);
+    }
   }
   .aside-search {
     align-self: end;
+    width: v-bind(menuCollapse);
+    transition: all $transition-base;
   }
   .aside-menu {
     margin: 10px 0;
     border-radius: 5px;
     overflow-y: auto;
     :deep(.el-scrollbar__view) {
+      width: v-bind(menuCollapse);
       height: inherit;
       overflow-x: hidden;
-      border: 1px solid var(--el-border-color);
+      border: 1px solid var(--bg-gray);
+      transition: all $transition-base;
     }
     .aside-menu-collapse {
       border-right: none;
-      border-radius: 5px;
     }
   }
   .aside-toggle {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
     font-size: $text-base;
     color: $text-secondary;
-    .aside-toggle-date{
-      justify-self: start;
-    }
   }
 }
+
 .main {
   width: 100%;
   min-width: 1200px;
+  padding-left: 60px;
   // background-color: var(--bg-gray);
   .infinite-list {
     height: 100vh;
@@ -302,6 +358,14 @@ onMounted(() => {
 //   margin-top: 10px;
 // }
 // #region search
+:deep(.el-input__prefix-inner) {
+  padding-left: 10px;
+  transition: padding $transition-base;
+}
+:deep(.el-input__inner) {
+  padding-left: 10px;
+  transition: padding $transition-base;
+}
 :deep(.el-autocomplete) {
   --el-border-radius-base: 18px;
 }
